@@ -184,10 +184,26 @@ def news_patterns(universe):
     return pats
 
 
-def fetch_feeds(news, feeds, errors):
+REFUSED = re.compile(r"HTTP (401|403|429|503)\b")
+
+
+def refused_by(host, refused, e):
+    """Remember a site that refused us (cloud IPs get 403 / 503), so the run stops asking it."""
+    if REFUSED.search(str(e)):
+        refused.add(host)
+
+
+def host_of(url):
+    return urllib.parse.urlsplit(url).netloc
+
+
+def fetch_feeds(news, feeds, errors, refused):
     fetcher = news.Fetcher(pause=0.4)
     items = []
     for src, url in feeds:
+        if host_of(url) in refused:
+            errors.append("%s feed: skipped, %s refused earlier in this run" % (src, host_of(url)))
+            continue
         try:
             got = news.parse_rss(fetcher.get(url, "feed"), "")
             for it in got:
@@ -200,6 +216,7 @@ def fetch_feeds(news, feeds, errors):
             items += got
         except Exception as e:                       # noqa: BLE001 - one feed down is not the run down
             errors.append("%s feed: %s" % (src, e))
+            refused_by(host_of(url), refused, e)
     return items
 
 
@@ -277,7 +294,8 @@ def stage_pre(now_utc, cfg, sk):
     hours = rank_cfg.get("news_hours", 24)
     cutoff = now_utc - datetime.timedelta(hours=hours)
     log("news: %d market feeds" % len(FEEDS))
-    items = tag_items(news, fetch_feeds(news, FEEDS, errors))
+    refused = set()
+    items = tag_items(news, fetch_feeds(news, FEEDS, errors, refused))
     pats = news_patterns([(s, n) for s, n in universe if s in liquid])
     by_sym = match_items(items, pats, cutoff)
     log("news: %d headlines, %d liquid stocks named" % (len(items), len(by_sym)))
@@ -296,14 +314,27 @@ def stage_pre(now_utc, cfg, sk):
     pool = order[:max(30, rank_cfg.get("shortlist", 20) + 10)]
 
     # each company's own news (Google News, last day) for the pool
-    log("news: company headlines for %d stocks" % len(pool))
     fetcher = news.Fetcher(pause=0.5)
-    for sym in pool:
+    if host_of(COMPANY_NEWS) in refused:
+        log("news: company headlines skipped, %s refused this run" % host_of(COMPANY_NEWS))
+        errors.append("company news: skipped for %d stocks, %s refused earlier in this run"
+                      % (len(pool), host_of(COMPANY_NEWS)))
+        pool_news = []
+    else:
+        log("news: company headlines for %d stocks" % len(pool))
+        pool_news = pool
+    for i, sym in enumerate(pool_news):
+        if host_of(COMPANY_NEWS) in refused:
+            errors.append("company news: skipped the other %d stocks, %s refused"
+                          % (len(pool_news) - i, host_of(COMPANY_NEWS)))
+            break
         q = '"%s" share when:1d' % (ALIASES.get(sym, [short_name(names[sym])])[0])
+        url = COMPANY_NEWS % urllib.parse.quote(q)
         try:
-            got = news.parse_rss(fetcher.get(COMPANY_NEWS % urllib.parse.quote(q), "company"), sym)
+            got = news.parse_rss(fetcher.get(url, "company"), sym)
         except Exception as e:                       # noqa: BLE001
             errors.append("company news for %s: %s" % (sym, e))
+            refused_by(host_of(url), refused, e)
             continue
         for it in got:
             it["source"] = "Google News"
