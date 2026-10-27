@@ -46,6 +46,9 @@ jobs:
           if [ "$(TZ=Asia/Kolkata date +%u)" = "1" ]; then python nse/universe.py || echo "universe refresh skipped"; fi
 
       - name: Run
+        env:
+          # optional: Upstox Analytics Token (read-only). Without it, or if Upstox refuses it, Yahoo is used.
+          UPSTOX_ANALYTICS_TOKEN: ${{ secrets.UPSTOX_ANALYTICS_TOKEN }}
         run: python nse/morning.py ${{ steps.stage.outputs.stage }}
 
       - name: Save the dashboard

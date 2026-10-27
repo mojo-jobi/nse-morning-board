@@ -17,11 +17,17 @@ replays, not a forecast. Nothing here places an order.
 GitHub's scheduler can start a few minutes late at busy times. On an NSE holiday the page says
 the market is closed (the holiday is read from the NIFTY 50's trading period on Yahoo).
 
+**Refresh** on the dashboard runs both stages again now (`refresh`), and marks which stocks came
+into or dropped out of the top 10 since the last board. It starts the workflow through the GitHub
+API with your own fine-grained token (Actions read/write on this repo only), kept in that browser.
+With live Upstox prices, a refresh reuses the day's saved setups (`trader/setups-DATE.json`).
+
 ## Run it yourself
 
 ```bash
 python nse/morning.py pre
 python nse/morning.py orb
+python nse/morning.py refresh     # what the dashboard's Refresh button runs
 python nse/universe.py            # refresh the NSE stock list (the workflow does it on Mondays)
 ```
 
@@ -43,6 +49,21 @@ leaves 1 to 3 five-minute bars of most NSE days empty, so a day with at most 3 e
 the 9:15 bar) is kept with each gap filled flat at the previous close.
 
 ## Data
+
+**Upstox first, Yahoo as the backup** (`nse/upstox.py`). With an Upstox Analytics Token, live
+quotes for every NSE stock come from Upstox (500 a request), and so do the 5-minute bars behind
+each trade plan (today plus about 58 past sessions). Anything Upstox does not answer falls back
+to Yahoo, stock by stock; a rejected token switches the whole run to Yahoo and the page says so.
+The five daily setups always use Yahoo's daily closes (Upstox serves those one stock at a time).
+When Upstox priced a stock, its price is checked against Yahoo's and a gap over 1 % is flagged.
+
+To turn Upstox on:
+1. Upstox Developer Apps > **Analytics** tab > Generate Token (free, read-only, valid 12 months,
+   no static IP needed for Market Quote and Historical Data).
+2. Add it as the repository secret `UPSTOX_ANALYTICS_TOKEN` (Settings > Secrets and variables >
+   Actions), or run `gh secret set UPSTOX_ANALYTICS_TOKEN -R mojo-jobi/nse-morning-board`,
+   which asks for the value. Never commit it. To run locally, set the same environment variable.
+3. Make a new one before it expires; the page warns when Upstox rejects it.
 
 Yahoo Finance's chart and spark endpoints are free and unofficial, and their data is delayed.
 News comes from the RSS feeds of Economic Times, Moneycontrol, Mint and Business Standard, plus

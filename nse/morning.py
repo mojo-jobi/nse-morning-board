@@ -3,7 +3,12 @@
     python nse/morning.py pre        # 9:00 IST: news across the market, the daily scan, the shortlist
     python nse/morning.py orb        # 9:35 IST: opening range, entry, exit, time machine, size, risk
     python nse/morning.py all        # both, one after the other (testing)
+    python nse/morning.py refresh    # the dashboard's Refresh button: all, compared with the board it replaces
     python nse/morning.py orb --now "2026-10-27 10:15"   # pin the clock (India time)
+
+Data: Upstox first (live quotes and 5-minute bars, when UPSTOX_ANALYTICS_TOKEN is set),
+Yahoo as the backup for anything Upstox does not answer, and always for the daily
+closes behind the five setups. See upstox.py.
 
 What each trader skill does here:
   trader-scanner      daily closes of every NSE stock, the five setups, liquidity
@@ -39,6 +44,7 @@ from decimal import Decimal
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import market  # noqa: E402
+import upstox  # noqa: E402
 
 ROOT = market.ROOT
 OUT = os.path.join(ROOT, "docs")                 # GitHub Pages serves /docs
@@ -158,6 +164,121 @@ def inr(x, dp=0):
     return round(float(x), dp)
 
 
+# ---------------------------------------------------------------- data sources: Upstox first, Yahoo backup
+
+class Sources(object):
+    """Which source answered. Upstox when its token is set and it answers; Yahoo for
+    anything it does not. A rejected token stops every later Upstox call this run."""
+
+    def __init__(self, errors):
+        self.errors = errors
+        self.keys = None
+        self.status = "set, not needed yet" if upstox.token() else "no token"
+        self.charts = {"Upstox": 0, "Yahoo": 0}
+
+    def ready(self):
+        if self.status in ("no token", "token rejected", "instrument list failed"):
+            return False
+        if self.keys is None:
+            try:
+                self.keys = upstox.instrument_keys()
+            except Exception as e:                   # noqa: BLE001 - Yahoo carries the run
+                self.errors.append("Upstox instrument list: %s; used Yahoo" % e)
+                self.status = "instrument list failed"
+                return False
+        return bool(self.keys)
+
+    def _rejected(self, e):
+        self.status = "token rejected"
+        self.errors.append(str(e))
+
+    def quotes(self, symbols):
+        if not self.ready():
+            return {}
+        try:
+            q = upstox.quotes(symbols, self.keys)
+        except upstox.TokenError as e:
+            self._rejected(e)
+            return {}
+        except Exception as e:                       # noqa: BLE001
+            self.errors.append("Upstox quotes: %s; used Yahoo" % e)
+            self.status = "quotes failed"
+            return {}
+        self.status = "ok"
+        return q
+
+    def chart(self, sym, now_utc, tm, prev_close=None):
+        """Yahoo-shaped chart text and who supplied it."""
+        if self.ready() and sym in self.keys:
+            try:
+                text = upstox.chart_text(sym, self.keys[sym], now_utc, prev_close)
+                self.charts["Upstox"] += 1
+                if self.status != "quotes failed":
+                    self.status = "ok"
+                return text, "Upstox"
+            except upstox.TokenError as e:
+                self._rejected(e)
+            except Exception as e:                   # noqa: BLE001
+                self.errors.append("Upstox bars for %s: %s; used Yahoo" % (sym, e))
+        text = tm.fetch_chart(sym)
+        self.charts["Yahoo"] += 1
+        return text, "Yahoo"
+
+
+def daily_setups(symbols, now_utc, sc, scan_cfg, cache_path, use_cache):
+    """trader-scanner's five setups on daily closes (Yahoo, 20 stocks a request), plus each stock's
+    last price, volume and close before today. Saved once a day: a refresh with live Upstox
+    quotes reuses it, since the setups use completed days only and do not change during the day."""
+    cached = read_json(cache_path) if use_cache else None
+    if cached:
+        return cached
+    data, failed = sc.fetch_spark(symbols, "3mo", "1d", 0.3, None)
+    hits, counts, last_date = sc.scan_daily(data, symbols, now_utc, scan_cfg.get("min_price", 20),
+                                            scan_cfg.get("min_volume", 100000))
+    today = market.to_ist(now_utc).date()
+    last = {}
+    for sym in symbols:
+        s = data.get(sym)
+        if not s:
+            continue
+        meta = s.get("meta") or {}
+        # during the session the last daily bar is today's, so take the last close before today
+        prev = [c for t, c in zip(s.get("t") or [], s.get("c") or [])
+                if c and market.to_ist(datetime.datetime.fromtimestamp(t, datetime.timezone.utc)).date() < today]
+        last[sym] = {"price": meta.get("regularMarketPrice"), "volume": meta.get("regularMarketVolume") or 0,
+                     "prev_close": prev[-1] if prev else None}
+    doc = {"created_ist": market.to_ist(now_utc).strftime("%Y-%m-%d %H:%M"),
+           "closes_through": last_date.isoformat() if last_date else None,
+           "counts": {"fetched": counts["fetched"], "scanned": counts["scanned"]}, "failed": len(failed),
+           "hits": {h["symbol"]: {"setups": h["setups"], "rsi": h.get("rsi")} for h in hits}, "last": last}
+    write_json(cache_path, doc)
+    for name in os.listdir(STATE):                   # only today's is ever read; keep the repo small
+        if name.startswith("setups-") and name != os.path.basename(cache_path):
+            os.remove(os.path.join(STATE, name))
+    return doc
+
+
+def cross_check(rows, sc, errors, limit_pct=1.0):
+    """Upstox's price against Yahoo's for the shortlist (one Yahoo request for 20 stocks)."""
+    live = [r["symbol"] for r in rows if r.get("price_source") == "Upstox"]
+    if not live:
+        return
+    try:
+        data, _ = sc.fetch_spark(live, "1d", "5m", 0.3, None)
+    except Exception as e:                           # noqa: BLE001
+        errors.append("cross-check with Yahoo: %s" % e)
+        return
+    for r in rows:
+        meta = ((data.get(r["symbol"]) or {}).get("meta") or {})
+        y, t = meta.get("regularMarketPrice"), meta.get("regularMarketTime")
+        if not y or r.get("price_source") != "Upstox":
+            continue
+        gap = abs(r["price"] - y) / r["price"] * 100
+        r["cross_check"] = {"yahoo": round(y, 2), "gap_pct": round(gap, 2), "flag": gap > limit_pct,
+                            "yahoo_time": market.to_ist(datetime.datetime.fromtimestamp(t, datetime.timezone.utc))
+                            .strftime("%H:%M") if t else None}
+
+
 # ---------------------------------------------------------------- news (trader-news parsing, Indian feeds)
 
 # "ITC Hotels", "SBI Life", "APOLLO TUBES": a short name followed by another capitalised
@@ -187,10 +308,17 @@ def news_patterns(universe):
 REFUSED = re.compile(r"HTTP (401|403|429|503)\b")
 
 
+REFUSALS = 2                    # one bad feed is not the whole site: stop after the second refusal
+
+
 def refused_by(host, refused, e):
-    """Remember a site that refused us (cloud IPs get 403 / 503), so the run stops asking it."""
+    """Count a site's refusals (cloud IPs get 403 / 503), so the run stops asking it."""
     if REFUSED.search(str(e)):
-        refused.add(host)
+        refused[host] = refused.get(host, 0) + 1
+
+
+def blocked(host, refused):
+    return refused.get(host, 0) >= REFUSALS
 
 
 def host_of(url):
@@ -201,7 +329,7 @@ def fetch_feeds(news, feeds, errors, refused):
     fetcher = news.Fetcher(pause=0.4)
     items = []
     for src, url in feeds:
-        if host_of(url) in refused:
+        if blocked(host_of(url), refused):
             errors.append("%s feed: skipped, %s refused earlier in this run" % (src, host_of(url)))
             continue
         try:
@@ -259,7 +387,7 @@ def public_item(it):
 
 # ---------------------------------------------------------------- stage 1: pre-open
 
-def stage_pre(now_utc, cfg, sk):
+def stage_pre(now_utc, cfg, sk, src):
     t0 = time.time()
     errors = []
     universe = read_universe()
@@ -267,36 +395,46 @@ def stage_pre(now_utc, cfg, sk):
     symbols = [s for s, _ in universe]
     scan_cfg = cfg.get("scan", {})
     rank_cfg = cfg.get("rank", {})
+    ist = market.to_ist(now_utc)
+    min_price, min_volume = scan_cfg.get("min_price", 20), scan_cfg.get("min_volume", 100000)
 
-    # trader-scanner: daily closes of every NSE stock
-    log("scanner: daily closes for %d NSE stocks" % len(symbols))
+    # live prices from the open on: Upstox, every NSE stock in about 5 requests
+    live = {}
+    if ist.time() >= market.OPEN:
+        live = src.quotes(symbols)
+        if live:
+            log("upstox: live quotes for %d of %d stocks" % (len(live), len(symbols)))
+
+    # trader-scanner: daily closes of every NSE stock (Yahoo), saved for the day's refreshes
     sc = sk["scanner"]
-    data, failed = sc.fetch_spark(symbols, "3mo", "1d", 0.3, None)
-    hits, counts, last_date = sc.scan_daily(data, symbols, now_utc, scan_cfg.get("min_price", 20),
-                                            scan_cfg.get("min_volume", 100000))
-    setups = {h["symbol"]: h for h in hits}
-    today = market.to_ist(now_utc).date()
+    cache_path = os.path.join(STATE, "setups-%s.json" % ist.date().isoformat())
+    use_cache = len(live) >= 0.9 * len(symbols)
+    if not (use_cache and os.path.exists(cache_path)):
+        log("scanner: daily closes for %d NSE stocks" % len(symbols))
+    daily = daily_setups(symbols, now_utc, sc, scan_cfg, cache_path, use_cache)
+    setups, last, counts = daily["hits"], daily["last"], daily["counts"]
     liquid = {}
     for sym in symbols:
-        s = data.get(sym)
-        if not s:
+        u, y = live.get(sym), last.get(sym) or {}
+        q = u or y
+        p, v = q.get("price"), q.get("volume") or 0
+        # liquid on the larger of today's volume so far and the last session's, so the list
+        # does not shrink to nothing at 9:20; ranked on the volume the price source reports
+        if not p or p < min_price or max(v, y.get("volume") or 0) < min_volume:
             continue
-        meta = s.get("meta") or {}
-        p, v = meta.get("regularMarketPrice"), meta.get("regularMarketVolume")
-        if p and v and p >= scan_cfg.get("min_price", 20) and v >= scan_cfg.get("min_volume", 100000):
-            # during the session the last daily bar is today's, so compare with the last close before today
-            prev = [c for t, c in zip(s.get("t") or [], s.get("c") or [])
-                    if c and market.to_ist(datetime.datetime.fromtimestamp(t, datetime.timezone.utc)).date() < today]
-            liquid[sym] = {"price": p, "volume": v, "turnover": p * v,
-                           "chg_pct": round((p / prev[-1] - 1) * 100, 2) if prev else None}
-    log("scanner: %d of %d fetched, %d liquid, %d setups" % (counts["fetched"], len(symbols), len(liquid), len(hits)))
+        prev = q.get("prev_close") or y.get("prev_close")
+        liquid[sym] = {"price": p, "volume": v, "turnover": p * v, "source": "Upstox" if u else "Yahoo",
+                       "chg_pct": round((p / prev - 1) * 100, 2) if prev else None}
+    log("scanner: %d of %d fetched, %d liquid, %d setups%s" % (
+        counts["fetched"], len(symbols), len(liquid), len(setups),
+        " (setups saved at %s)" % daily["created_ist"][11:] if daily["created_ist"] != ist.strftime("%Y-%m-%d %H:%M") else ""))
 
     # trader-news: market-wide Indian feeds, matched to every ticker
     news = sk["news"]
     hours = rank_cfg.get("news_hours", 24)
     cutoff = now_utc - datetime.timedelta(hours=hours)
     log("news: %d market feeds" % len(FEEDS))
-    refused = set()
+    refused = {}
     items = tag_items(news, fetch_feeds(news, FEEDS, errors, refused))
     pats = news_patterns([(s, n) for s, n in universe if s in liquid])
     by_sym = match_items(items, pats, cutoff)
@@ -317,7 +455,7 @@ def stage_pre(now_utc, cfg, sk):
 
     # each company's own news (Google News, last day) for the pool
     fetcher = news.Fetcher(pause=0.5)
-    if host_of(COMPANY_NEWS) in refused:
+    if blocked(host_of(COMPANY_NEWS), refused):
         log("news: company headlines skipped, %s refused this run" % host_of(COMPANY_NEWS))
         errors.append("company news: skipped for %d stocks, %s refused earlier in this run"
                       % (len(pool), host_of(COMPANY_NEWS)))
@@ -326,7 +464,7 @@ def stage_pre(now_utc, cfg, sk):
         log("news: company headlines for %d stocks" % len(pool))
         pool_news = pool
     for i, sym in enumerate(pool_news):
-        if host_of(COMPANY_NEWS) in refused:
+        if blocked(host_of(COMPANY_NEWS), refused):
             errors.append("company news: skipped the other %d stocks, %s refused"
                           % (len(pool_news) - i, host_of(COMPANY_NEWS)))
             break
@@ -363,17 +501,24 @@ def stage_pre(now_utc, cfg, sk):
             "volume": int(liquid[sym]["volume"]), "turnover_cr": round(liquid[sym]["turnover"] / 1e7, 1),
             "news_count": len(its), "news_tags": tags, "news": [public_item(i) for i in its[:6]],
             "setups": h["setups"] if h else [], "rsi": h["rsi"] if h else None,
-            "earnings_flag": "earnings" in tags,
+            "earnings_flag": "earnings" in tags, "price_source": liquid[sym]["source"],
         })
-    ist = market.to_ist(now_utc)
+    cross_check(rows, sc, errors)
+    if not market.OPEN <= ist.time():
+        basis = "last session"
+    elif ist.time() < market.CLOSE:
+        basis = "today so far"
+    else:
+        basis = "today" if live else "last session"
     doc = {
         "stage": "pre", "market": "NSE", "created_ist": ist.strftime("%Y-%m-%d %H:%M"),
-        "volume_basis": "today so far" if market.OPEN <= ist.time() < market.CLOSE else "last session",
-        "closes_through": last_date.isoformat() if last_date else None,
-        "scan": {"universe": len(symbols), "fetched": counts["fetched"], "failed": len(failed),
-                 "liquid": len(liquid), "scanned": counts["scanned"], "setups": len(hits),
-                 "min_price": scan_cfg.get("min_price", 20), "min_volume": scan_cfg.get("min_volume", 100000)},
+        "volume_basis": basis, "closes_through": daily["closes_through"],
+        "scan": {"universe": len(symbols), "fetched": counts["fetched"], "failed": daily["failed"],
+                 "liquid": len(liquid), "scanned": counts["scanned"], "setups": len(setups),
+                 "min_price": min_price, "min_volume": min_volume},
         "news": {"feeds": len(FEEDS), "headlines": len(items), "stocks_named": len(by_sym), "hours": hours},
+        "sources": {"quotes": "Upstox" if live else "Yahoo", "quotes_upstox": len(live),
+                    "setups_saved_ist": daily["created_ist"]},
         "shortlist": rows, "errors": errors, "seconds": round(time.time() - t0),
     }
     log("pre: shortlist of %d in %ds" % (len(rows), doc["seconds"]))
@@ -386,19 +531,19 @@ def tick_up(x, tick=0.05):
     return round(math.ceil(round(x / tick, 6)) * tick + tick, 2)
 
 
-def plan_one(sym, cfg, now_utc, sk):
+def plan_one(sym, cfg, now_utc, sk, src, prev_close=None):
     """entry -> exit -> time machine -> budget -> risk -> alerts, for one stock."""
     pc = cfg.get("plan", {})
     or_min = pc.get("or_minutes", 15)
     target_r = Decimal(str(pc.get("target_r", 2)))
     tm, ent, ex, bud, rk, al = (sk[k] for k in ("timemachine", "entry", "exit", "budget", "risk", "alerts"))
-    text = tm.fetch_chart(sym)                                   # 60 days of 5-minute bars, one request
+    text, source = src.chart(sym, now_utc, tm, prev_close)      # ~60 days of 5-minute bars
     chart = ent.parse_chart(text, sym)
     ecfg = {"no_entries_before": cfg.get("no_entries_before", "09:30"),
             "no_entries_after": cfg.get("no_entries_after", "14:45")}
     res = ent.evaluate(chart, now_utc, setup="orb", or_minutes=or_min, interval="5m", cfg=ecfg)
     out = {"status": res["status"], "phase": res.get("phase"), "reason": res.get("reason"),
-           "opening_range": res.get("opening_range"), "last": res.get("last")}
+           "opening_range": res.get("opening_range"), "last": res.get("last"), "bars_source": source}
     orr = res.get("opening_range")
     if res["status"] == "no-data" or not orr or not (orr.get("complete")):
         return out
@@ -482,13 +627,16 @@ def plan_one(sym, cfg, now_utc, sk):
     return out
 
 
-def stage_orb(now_utc, cfg, sk, pre):
+def stage_orb(now_utc, cfg, sk, pre, src):
     t0 = time.time()
     rows = pre.get("shortlist") or []
     log("orb: %d stocks from the %s shortlist" % (len(rows), pre.get("created_ist")))
     for r in rows:
+        prev = None
+        if r.get("price") and r.get("chg_pct") is not None:
+            prev = round(r["price"] / (1 + r["chg_pct"] / 100), 2)
         try:
-            r["trade"] = plan_one(r["symbol"], cfg, now_utc, sk)
+            r["trade"] = plan_one(r["symbol"], cfg, now_utc, sk, src, prev)
         except Exception as e:                       # noqa: BLE001 - one stock failing is a row, not the run
             r["trade"] = {"status": "error", "reason": str(e)}
         log("  %-16s %s" % (r["symbol"], r["trade"].get("status")))
@@ -545,14 +693,17 @@ def main(argv=None):
     before = read_json(os.path.join(OUT, "data.json"), {})
     if a.stage == "refresh":
         a.stage = "all"
+    src_errors = []
+    src = Sources(src_errors)
+    log("upstox: %s" % src.status)
     if a.stage in ("pre", "all"):
-        doc = stage_pre(now_utc, cfg, sk)
+        doc = stage_pre(now_utc, cfg, sk, src)
         write_json(pre_path, doc)
     else:
         doc = read_json(pre_path)
         if not doc:
             log("no pre-open run for %s yet: running it now" % day)
-            doc = stage_pre(now_utc, cfg, sk)
+            doc = stage_pre(now_utc, cfg, sk, src)
             write_json(pre_path, doc)
     if a.stage in ("orb", "all"):
         if a.stage == "all" and not a.now:
@@ -560,9 +711,14 @@ def main(argv=None):
             if ist.time() < datetime.time(9, 30):
                 log("orb: the opening range is not complete before 9:30 IST; skipped")
             else:
-                doc = stage_orb(now_utc, cfg, sk, doc)
+                doc = stage_orb(now_utc, cfg, sk, doc, src)
         else:
-            doc = stage_orb(now_utc, cfg, sk, doc)
+            doc = stage_orb(now_utc, cfg, sk, doc, src)
+    doc["errors"] = list(dict.fromkeys((doc.get("errors") or []) + src_errors))
+    doc.setdefault("sources", {}).update(upstox=src.status, bars=src.charts)
+    log("sources: upstox %s, quotes from %s, 5-minute bars %s" % (
+        src.status, doc["sources"].get("quotes", "Yahoo"),
+        ", ".join("%s %d" % kv for kv in src.charts.items() if kv[1]) or "not fetched"))
     compare_boards(doc, before, day, cfg.get("rank", {}).get("show", 10))
     doc["config"] = {k: cfg.get(k) for k in ("budget", "max_loss_per_trade_usd", "max_daily_loss_usd",
                                               "max_trades_per_day", "min_reward_risk", "flat_by", "plan")}

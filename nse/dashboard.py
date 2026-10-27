@@ -6,7 +6,8 @@ import os
 import sys
 
 SKILL_ROWS = [
-    ("trader-scanner", "used", "Daily closes of every NSE EQ stock; 20-day breakout, bull flag, 20-day average, oversold"),
+    ("trader-scanner", "used", "Daily closes of every NSE EQ stock (Yahoo); 20-day breakout, bull flag, 20-day average, "
+                               "oversold. Live prices and volume from Upstox when its token is set"),
     ("trader-news", "used", "Headline parsing and tags over Indian market feeds (ET, Moneycontrol, Mint, BS, Google News)"),
     ("trader-entry", "used", "15-minute opening range (9:15-9:30) and the first 5-minute close above its high"),
     ("trader-exit", "used", "Stop at the opening-range midpoint, target at 2R"),
@@ -228,18 +229,26 @@ def card(r, basis="last session", show=10):
     chips += "".join('<span class="chip">%s</span>' % e(s.replace("_", " ")) for s in r.get("setups") or [])
     if r.get("earnings_flag"):
         chips += '<span class="chip" style="color:var(--warn);border-color:var(--warn)">results in the news</span>'
+    cc = r.get("cross_check")
+    if cc and cc.get("flag"):
+        chips += ('<span class="chip" style="color:var(--warn);border-color:var(--warn)">prices differ: Yahoo %s%s, '
+                  '%.1f%% apart</span>' % (rs(cc["yahoo"], 2), " at " + e(cc["yahoo_time"]) if cc.get("yahoo_time") else "",
+                                           cc["gap_pct"]))
     news = "".join('<li><a href="%s" target="_blank" rel="noopener">%s</a> <span class="src">%s%s</span></li>' % (
         e(n.get("link")), e(n.get("title")), e(n.get("source")), (", " + e(n["time"])) if n.get("time") else "")
         for n in r.get("news") or [])
     return ('<div class="card"><div class="top"><span class="rank">#%d</span><span class="sym">%s</span>%s'
             '<span class="name">%s</span><span class="px">%s</span>%s</div>'
-            '<div class="sub">%d headlines &middot; traded %s cr %s (%s shares) &middot; score %s</div>'
+            '<div class="sub">%d headlines &middot; traded %s cr %s (%s shares) &middot; score %s%s</div>'
             '<div class="chips">%s</div>%s'
             '<details><summary>Headlines (%d)</summary><ul class="news">%s</ul></details></div>'
             % (r["rank"], e(r["symbol"].replace(".NS", "")), move_badge(r, show), e(r.get("name")),
                rs(r.get("price"), 2), chg_s, r.get("news_count", 0), rs(r.get("turnover_cr"), 1),
-               "today so far" if basis == "today so far" else "in the last session",
+               {"today so far": "today so far", "today": "today"}.get(basis, "in the last session"),
                "{:,}".format(r.get("volume") or 0), r.get("score"),
+               " &middot; price from %s%s" % (e(r.get("price_source") or "Yahoo"),
+                                              ", bars from %s" % e(r["trade"]["bars_source"])
+                                              if (r.get("trade") or {}).get("bars_source") else ""),
                chips, trade_block(r.get("trade")), len(r.get("news") or []), news))
 
 
@@ -259,7 +268,20 @@ def render(doc, path):
                  ("Headlines read (last %sh)" % nw.get("hours"), "{:,}".format(nw.get("headlines", 0))),
                  ("Stocks named in the news", "{:,}".format(nw.get("stocks_named", 0))),
                  ("Max loss a trade / a day", "%s / %s" % (rs(cfg.get("max_loss_per_trade_usd")), rs(cfg.get("max_daily_loss_usd"))))]
-        body = '<div class="tiles">%s</div>' % "".join(
+        srcs = doc.get("sources") or {}
+        if srcs:
+            live = srcs.get("quotes_upstox") or 0
+            bars = ", ".join("%s %d" % kv for kv in (srcs.get("bars") or {}).items() if kv[1])
+            tiles.insert(0, ("Prices: Upstox live for %s stocks" % "{:,}".format(live) if live else
+                             "Prices: Yahoo (Upstox %s)" % srcs.get("upstox", "not set"),
+                             "Upstox" if live else "Yahoo"))
+            if bars:
+                tiles.insert(1, ("5-minute bars for the trade numbers", bars))
+        body = ""
+        if srcs.get("upstox") == "token rejected":
+            body += ('<div class="note">Upstox rejected the token, so this board used Yahoo. Make a new Analytics '
+                     'Token in Upstox Developer Apps and update the UPSTOX_ANALYTICS_TOKEN secret on GitHub.</div>')
+        body += '<div class="tiles">%s</div>' % "".join(
             '<div class="tile"><b>%s</b><span>%s</span></div>' % (e(v), e(k)) for k, v in tiles)
         stage = ("Pre-open run at %s IST. Trade numbers are added at 9:35 IST." % e(doc.get("created_ist"))
                  if doc.get("stage") == "pre" else
