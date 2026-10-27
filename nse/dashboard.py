@@ -58,6 +58,88 @@ ul.news a{color:var(--ink)}ul.news .src{color:var(--muted)}
 .why{font-size:12px;color:var(--muted);margin-top:4px}
 table{width:100%;border-collapse:collapse;font-size:13px}td,th{text-align:left;padding:6px 8px;border-bottom:1px solid var(--line)}
 th{color:var(--muted);font-weight:600}.st-used{color:var(--good)}.st-partial{color:var(--warn)}.st-not{color:var(--muted)}
+.head{display:flex;gap:12px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
+button{font:inherit;font-size:14px;font-weight:600;border-radius:8px;padding:7px 14px;cursor:pointer;
+border:1px solid var(--accent);background:var(--accent);color:var(--bg)}
+button.ghost{background:transparent;color:var(--accent)}button:disabled{opacity:.55;cursor:wait}
+.rstatus{font-size:13px;color:var(--muted);margin-top:6px;text-align:right;max-width:340px}.rstatus.bad{color:var(--bad)}
+.rstatus.ok{color:var(--good)}
+#rsetup ol{margin:8px 0;padding-left:20px;font-size:13px}#rsetup li{margin:3px 0}
+#rsetup input{font:inherit;font-size:14px;padding:7px 10px;border:1px solid var(--line);border-radius:8px;
+background:var(--bg);color:var(--ink);width:min(100%,360px);margin:4px 8px 8px 0}
+a{color:var(--accent)}
+.move{font-size:12px;font-weight:700;border-radius:6px;padding:1px 7px}
+.move.new{background:var(--good-bg);color:var(--good)}.move.upr{color:var(--good)}.move.dnr{color:var(--bad)}
+.changes{font-size:13px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin-top:10px}
+"""
+
+# The page is static (GitHub Pages) and Yahoo will not answer a browser, so Refresh asks
+# GitHub to run the same scan (workflow_dispatch, stage=refresh), waits for that run, then
+# loads the board it committed. It needs the viewer's own GitHub token, kept in this browser.
+REFRESH_JS = r"""
+(function(){
+var REPO = __REPO__, KEY = "nse_gh_token";
+var btn = document.getElementById("refresh"), st = document.getElementById("rstatus"),
+    setup = document.getElementById("rsetup"), input = document.getElementById("rtoken");
+function get(){try{return localStorage.getItem(KEY)}catch(e){return null}}
+function put(v){try{if(v)localStorage.setItem(KEY,v);else localStorage.removeItem(KEY)}catch(e){}}
+function say(t,cls,link){st.className="rstatus "+(cls||"");st.textContent=t;
+  if(link){var a=document.createElement("a");a.href=link;a.target="_blank";a.rel="noopener";a.textContent=" Open the run";st.appendChild(a)}}
+function sleep(ms){return new Promise(function(r){setTimeout(r,ms)})}
+function clock(s){return Math.floor(s/60)+":"+("0"+(s%60)).slice(-2)}
+function api(path,opt){opt=opt||{};
+  var h={"Accept":opt.accept||"application/vnd.github+json","Authorization":"Bearer "+get(),"X-GitHub-Api-Version":"2022-11-28"};
+  if(opt.body)h["Content-Type"]="application/json";
+  return fetch("https://api.github.com/repos/"+REPO+path,{method:opt.method||"GET",headers:h,cache:"no-store",
+    body:opt.body?JSON.stringify(opt.body):undefined});}
+try{var done=sessionStorage.getItem("nse_refreshed");if(done){sessionStorage.removeItem("nse_refreshed");
+  say("Refreshed just now (took "+clock(+done)+").","ok")}}catch(e){}
+async function refresh(){
+  if(!REPO){say("No GitHub repository is set in config.json.","bad");return}
+  if(!get()){setup.hidden=false;input.focus();return}
+  setup.hidden=true;btn.disabled=true;
+  var id=Math.random().toString(36).slice(2,10), t0=Date.now(), run=null;
+  say("Asking GitHub to rescan…");
+  try{
+    var r=await api("/actions/workflows/morning.yml/dispatches",{method:"POST",
+      body:{ref:"main",inputs:{stage:"refresh",request:id}}});
+    if(r.status===401||r.status===403||r.status===404){
+      say("GitHub refused the token ("+r.status+"): it needs Actions read and write on "+REPO+".","bad");
+      setup.hidden=false;btn.disabled=false;return}
+    if(!r.ok){say("GitHub answered "+r.status+". Try again in a minute.","bad");btn.disabled=false;return}
+    for(;;){
+      await sleep(5000);
+      var el=clock(Math.round((Date.now()-t0)/1000));
+      if(!run){
+        var l=await api("/actions/runs?event=workflow_dispatch&per_page=10");
+        if(l.ok){var j=await l.json();run=(j.workflow_runs||[]).filter(function(x){
+          return (x.display_title||"").indexOf(id)>=0})[0]||null}
+        if(!run){say("Waiting for GitHub to start the run… "+el);continue}
+      }
+      var g=await api("/actions/runs/"+run.id);
+      if(g.ok)run=await g.json();
+      if(run.status!=="completed"){
+        say((run.status==="in_progress"?"Rescanning every NSE stock and the news…":
+             "Queued: another run is ahead of it…")+" "+el,"",run.html_url);continue}
+      if(run.conclusion!=="success"){say("The run ended: "+run.conclusion+".","bad",run.html_url);
+        btn.disabled=false;return}
+      break;
+    }
+    say("Done. Loading the new board…");
+    var h=await api("/contents/docs/index.html?ref=main",{accept:"application/vnd.github.raw"});
+    if(!h.ok){say("Updated on GitHub. Reload the page in a minute to see it.","ok");btn.disabled=false;return}
+    var page=await h.text();
+    try{sessionStorage.setItem("nse_refreshed",String(Math.round((Date.now()-t0)/1000)))}catch(e){}
+    document.open();document.write(page);document.close();
+  }catch(e){say("Could not reach GitHub: "+e.message,"bad");btn.disabled=false}
+}
+btn.addEventListener("click",refresh);
+document.getElementById("rsave").addEventListener("click",function(){
+  var v=(input.value||"").trim();if(!v){input.focus();return}put(v);input.value="";refresh()});
+document.getElementById("rcancel").addEventListener("click",function(){setup.hidden=true});
+document.getElementById("rforget").addEventListener("click",function(ev){ev.preventDefault();put(null);
+  say("Saved token removed from this browser.")});
+})();
 """
 
 
@@ -126,7 +208,20 @@ def trade_block(t):
     return '<div style="margin-top:8px">%s</div><div class="grid">%s</div>%s%s' % (head, grid, odds, risk)
 
 
-def card(r):
+def move_badge(r, show):
+    if "prev_rank" not in r:
+        return ""
+    p = r["prev_rank"]
+    if not p or p > show:
+        return '<span class="move new">NEW%s</span>' % (" (was #%d)" % p if p else "")
+    if p > r["rank"]:
+        return '<span class="move upr">&#9650; from #%d</span>' % p
+    if p < r["rank"]:
+        return '<span class="move dnr">&#9660; from #%d</span>' % p
+    return ""
+
+
+def card(r, basis="last session", show=10):
     chg = r.get("chg_pct")
     chg_s = "" if chg is None else '<span class="%s">%+.2f%%</span>' % ("up" if chg >= 0 else "dn", chg)
     chips = "".join('<span class="chip tag">%s</span>' % e(t) for t in r.get("news_tags") or [])
@@ -136,18 +231,21 @@ def card(r):
     news = "".join('<li><a href="%s" target="_blank" rel="noopener">%s</a> <span class="src">%s%s</span></li>' % (
         e(n.get("link")), e(n.get("title")), e(n.get("source")), (", " + e(n["time"])) if n.get("time") else "")
         for n in r.get("news") or [])
-    return ('<div class="card"><div class="top"><span class="rank">#%d</span><span class="sym">%s</span>'
+    return ('<div class="card"><div class="top"><span class="rank">#%d</span><span class="sym">%s</span>%s'
             '<span class="name">%s</span><span class="px">%s</span>%s</div>'
-            '<div class="sub">%d headlines &middot; traded %s cr yesterday (%s shares) &middot; score %s</div>'
+            '<div class="sub">%d headlines &middot; traded %s cr %s (%s shares) &middot; score %s</div>'
             '<div class="chips">%s</div>%s'
             '<details><summary>Headlines (%d)</summary><ul class="news">%s</ul></details></div>'
-            % (r["rank"], e(r["symbol"].replace(".NS", "")), e(r.get("name")), rs(r.get("price"), 2), chg_s,
-               r.get("news_count", 0), rs(r.get("turnover_cr"), 1), "{:,}".format(r.get("volume") or 0), r.get("score"),
+            % (r["rank"], e(r["symbol"].replace(".NS", "")), move_badge(r, show), e(r.get("name")),
+               rs(r.get("price"), 2), chg_s, r.get("news_count", 0), rs(r.get("turnover_cr"), 1),
+               "today so far" if basis == "today so far" else "in the last session",
+               "{:,}".format(r.get("volume") or 0), r.get("score"),
                chips, trade_block(r.get("trade")), len(r.get("news") or []), news))
 
 
 def render(doc, path):
     cfg = doc.get("config") or {}
+    repo = doc.get("repo") or ""
     show = 10
     rows = (doc.get("shortlist") or [])[:show]
     if doc.get("stage") == "closed":
@@ -168,7 +266,21 @@ def render(doc, path):
                  "News and scan at %s IST, opening range and trade numbers at %s IST." % (e(doc.get("created_ist")), e(doc.get("orb_ist"))))
         body += '<h2>Top %d by news and volume</h2><div class="sub">%s Daily closes through %s.</div>' % (
             len(rows), stage, e(doc.get("closes_through")))
-        body += "".join(card(r) for r in rows) or '<div class="card">No liquid stock was named in the news.</div>'
+        prev = doc.get("previous")
+        if prev:
+            names = {r["symbol"]: r for r in rows}
+            if prev.get("entered") or prev.get("dropped"):
+                inn = ", ".join("%s (#%d)" % (e(s.replace(".NS", "")), names[s]["rank"])
+                                for s in prev.get("entered") or [] if s in names) or "none"
+                out = ", ".join("%s (was #%d)" % (e(d["symbol"].replace(".NS", "")), d["rank"])
+                                for d in prev.get("dropped") or []) or "none"
+                body += ('<div class="changes"><b>Changed since the %s board.</b> Came into the top %d: %s. '
+                         'Dropped out: %s.</div>' % (e((prev.get("created_ist") or "")[11:]), show, inn, out))
+            else:
+                body += '<div class="changes">Same top %d as the %s board; arrows show any change in order.</div>' % (
+                    show, e((prev.get("created_ist") or "")[11:]))
+        basis = doc.get("volume_basis") or "last session"
+        body += "".join(card(r, basis, show) for r in rows) or '<div class="card">No liquid stock was named in the news.</div>'
         if doc.get("errors"):
             body += '<details><summary>%d feed problems</summary><ul class="news">%s</ul></details>' % (
                 len(doc["errors"]), "".join("<li>%s</li>" % e(x) for x in doc["errors"]))
@@ -177,14 +289,27 @@ def render(doc, path):
     page = """<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"><title>NSE Morning Board</title>
 <style>%s</style></head><body><div class="wrap">
-<h1>NSE Morning Board</h1><div class="sub">%s &middot; budget %s, max loss %s a trade, %s trades a day, flat by %s IST</div>
+<div class="head"><div><h1>NSE Morning Board</h1><div class="sub">Updated %s IST &middot; budget %s, max loss %s a trade, %s trades a day, flat by %s IST</div></div>
+<div><button id="refresh" type="button">Refresh</button><div id="rstatus" class="rstatus">Rescans every NSE stock and the news (about 2 minutes)</div></div></div>
+<div id="rsetup" class="card" hidden><b>Let this page start a rescan on GitHub</b>
+<ol><li>Open <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">GitHub &rarr; new fine-grained token</a>.</li>
+<li>Repository access: <b>Only select repositories</b> &rarr; <b>%s</b>.</li>
+<li>Permissions &rarr; Repository: <b>Actions: Read and write</b> and <b>Contents: Read-only</b>. Nothing else.</li>
+<li>Pick an expiry (30 days is plenty), generate it, and paste it here.</li></ol>
+<input type="password" id="rtoken" placeholder="github_pat_..." autocomplete="off" spellcheck="false">
+<button id="rsave" type="button">Save and refresh</button> <button id="rcancel" type="button" class="ghost">Cancel</button>
+<div class="why">The token is kept only in this browser and sent only to api.github.com. It can start and read runs of this one repository, nothing else.
+<a href="#" id="rforget">Forget the saved token</a>. No token? <a href="https://github.com/%s/actions/workflows/morning.yml" target="_blank" rel="noopener">Run it on GitHub</a>
+(Run workflow &rarr; stage <b>refresh</b>) and reload this page when it finishes.</div></div>
 <div class="note">Ranked by how much news a stock got and how much of it traded, not by how good a trade it is.
 The odds are replays of each stock's own last 60 days, not a forecast: results, news and halts can do what those days never did.
 A stop can fill worse than planned on a gap. Paper trade first. Nothing on this page places an order.</div>
 %s
 <h2>The 11 trader skills</h2><div class="card" style="overflow-x:auto"><table><tr><th>Skill</th><th>Status</th><th>What it does here</th></tr>%s</table></div>
-</div></body></html>""" % (CSS, e(doc.get("created_ist")), rs(cfg.get("budget")), rs(cfg.get("max_loss_per_trade_usd")),
-                           e(cfg.get("max_trades_per_day")), e(cfg.get("flat_by")), body, skills)
+</div><script>%s</script></body></html>""" % (
+        CSS, e(doc.get("created_ist")), rs(cfg.get("budget")), rs(cfg.get("max_loss_per_trade_usd")),
+        e(cfg.get("max_trades_per_day")), e(cfg.get("flat_by")), e(repo.split("/")[-1]), e(repo), body, skills,
+        REFRESH_JS.replace("__REPO__", json.dumps(repo or None)))
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8") as fh:
         fh.write(page)

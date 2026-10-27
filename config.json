@@ -1,6 +1,7 @@
 {
   "_note": "Amounts are in rupees. The trader skills call the keys *_usd; here they mean INR.",
   "market": "NSE",
+  "repo": "mojo-jobi/nse-morning-board",
   "budget": 100000,
   "cash_buffer_pct": 10,
   "max_position_pct": 75,

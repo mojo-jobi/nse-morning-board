@@ -275,6 +275,7 @@ def stage_pre(now_utc, cfg, sk):
     hits, counts, last_date = sc.scan_daily(data, symbols, now_utc, scan_cfg.get("min_price", 20),
                                             scan_cfg.get("min_volume", 100000))
     setups = {h["symbol"]: h for h in hits}
+    today = market.to_ist(now_utc).date()
     liquid = {}
     for sym in symbols:
         s = data.get(sym)
@@ -283,10 +284,11 @@ def stage_pre(now_utc, cfg, sk):
         meta = s.get("meta") or {}
         p, v = meta.get("regularMarketPrice"), meta.get("regularMarketVolume")
         if p and v and p >= scan_cfg.get("min_price", 20) and v >= scan_cfg.get("min_volume", 100000):
-            prev = meta.get("chartPreviousClose") or meta.get("previousClose")
-            closes = [c for c in (s.get("c") or []) if c]
+            # during the session the last daily bar is today's, so compare with the last close before today
+            prev = [c for t, c in zip(s.get("t") or [], s.get("c") or [])
+                    if c and market.to_ist(datetime.datetime.fromtimestamp(t, datetime.timezone.utc)).date() < today]
             liquid[sym] = {"price": p, "volume": v, "turnover": p * v,
-                           "chg_pct": round((closes[-1] / closes[-2] - 1) * 100, 2) if len(closes) >= 2 else None}
+                           "chg_pct": round((p / prev[-1] - 1) * 100, 2) if prev else None}
     log("scanner: %d of %d fetched, %d liquid, %d setups" % (counts["fetched"], len(symbols), len(liquid), len(hits)))
 
     # trader-news: market-wide Indian feeds, matched to every ticker
@@ -363,8 +365,10 @@ def stage_pre(now_utc, cfg, sk):
             "setups": h["setups"] if h else [], "rsi": h["rsi"] if h else None,
             "earnings_flag": "earnings" in tags,
         })
+    ist = market.to_ist(now_utc)
     doc = {
-        "stage": "pre", "market": "NSE", "created_ist": market.to_ist(now_utc).strftime("%Y-%m-%d %H:%M"),
+        "stage": "pre", "market": "NSE", "created_ist": ist.strftime("%Y-%m-%d %H:%M"),
+        "volume_basis": "today so far" if market.OPEN <= ist.time() < market.CLOSE else "last session",
         "closes_through": last_date.isoformat() if last_date else None,
         "scan": {"universe": len(symbols), "fetched": counts["fetched"], "failed": len(failed),
                  "liquid": len(liquid), "scanned": counts["scanned"], "setups": len(hits),
@@ -494,11 +498,30 @@ def stage_orb(now_utc, cfg, sk, pre):
     return doc
 
 
+def compare_boards(doc, before, day, show):
+    """Mark each top-`show` row new / up / down against today's previous board, and list who dropped out."""
+    if (before.get("created_ist") or "")[:10] != day or not before.get("shortlist"):
+        return
+    old = {r["symbol"]: r["rank"] for r in before["shortlist"]}
+    top = doc.get("shortlist") or []
+    for r in top:
+        r["prev_rank"] = old.get(r["symbol"])
+    now_top = {r["symbol"] for r in top[:show]}
+    doc["previous"] = {
+        "created_ist": before.get("created_ist"),
+        "entered": [r["symbol"] for r in top[:show] if not r["prev_rank"] or r["prev_rank"] > show],
+        "dropped": [{"symbol": r["symbol"], "rank": r["rank"], "name": r.get("name")}
+                    for r in before["shortlist"][:show] if r["symbol"] not in now_top],
+    }
+
+
 # ---------------------------------------------------------------- main
 
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("stage", choices=("pre", "orb", "all"))
+    ap.add_argument("stage", choices=("pre", "orb", "all", "refresh"),
+                    help="refresh = the whole scan and news again now, plus trade numbers after 9:30 IST, "
+                         "compared with the board it replaces")
     ap.add_argument("--now", help='pin the clock, India time: "2026-10-27 09:35"')
     ap.add_argument("--force", action="store_true", help="run on a holiday or weekend anyway (testing)")
     a = ap.parse_args(argv)
@@ -519,6 +542,9 @@ def main(argv=None):
         log(why)
     sk = market.skills()
     pre_path = os.path.join(STATE, "pre-%s.json" % day)
+    before = read_json(os.path.join(OUT, "data.json"), {})
+    if a.stage == "refresh":
+        a.stage = "all"
     if a.stage in ("pre", "all"):
         doc = stage_pre(now_utc, cfg, sk)
         write_json(pre_path, doc)
@@ -537,8 +563,10 @@ def main(argv=None):
                 doc = stage_orb(now_utc, cfg, sk, doc)
         else:
             doc = stage_orb(now_utc, cfg, sk, doc)
+    compare_boards(doc, before, day, cfg.get("rank", {}).get("show", 10))
     doc["config"] = {k: cfg.get(k) for k in ("budget", "max_loss_per_trade_usd", "max_daily_loss_usd",
                                               "max_trades_per_day", "min_reward_risk", "flat_by", "plan")}
+    doc["repo"] = os.environ.get("GITHUB_REPOSITORY") or cfg.get("repo")
     write_json(os.path.join(OUT, "data.json"), doc)
     write_json(os.path.join(STATE, "watchlist.json"),
                {"mode": "nse-morning", "as_of": doc["created_ist"], "hits": [{"symbol": r["symbol"]} for r in doc["shortlist"]]})

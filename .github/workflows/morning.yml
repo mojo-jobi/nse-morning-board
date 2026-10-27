@@ -7,8 +7,13 @@ on:
   workflow_dispatch:
     inputs:
       stage:
-        description: "pre, orb or all"
+        description: "pre, orb, all or refresh (the dashboard's Refresh button sends refresh)"
         default: "all"
+      request:
+        description: "id the dashboard uses to find its own run (leave empty)"
+        default: ""
+
+run-name: "NSE board ${{ github.event.inputs.stage || 'scheduled' }} ${{ github.event.inputs.request }}"
 
 permissions:
   contents: write
