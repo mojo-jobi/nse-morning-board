@@ -1,5 +1,5 @@
 {
- "created_ist": "2026-10-27 16:33",
+ "created_ist": "2026-10-27 17:12",
  "closes_through": "2026-10-27",
  "counts": {
   "fetched": 2364,
@@ -3072,7 +3072,7 @@
   "ACEVECTOR.NS": {
    "price": 20.43,
    "volume": 7787326,
-   "prev_close": null
+   "prev_close": 20.92
   },
   "ACGL.NS": {
    "price": 1838.2,
@@ -3587,7 +3587,7 @@
   "AONESTEELS.NS": {
    "price": 380.65,
    "volume": 64210,
-   "prev_close": null
+   "prev_close": 369.95
   },
   "APARINDS.NS": {
    "price": 15153.0,
@@ -4637,7 +4637,7 @@
   "BONFIG.NS": {
    "price": 625.4,
    "volume": 5733281,
-   "prev_close": null
+   "prev_close": 614.4
   },
   "BONLON.NS": {
    "price": 33.64,
@@ -5882,7 +5882,7 @@
   "ELEVATE.NS": {
    "price": 289.9,
    "volume": 431126,
-   "prev_close": null
+   "prev_close": 287.1
   },
   "ELGIEQUIP.NS": {
    "price": 521.85,
@@ -6327,7 +6327,7 @@
   "FUSIONCX.NS": {
    "price": 286.3,
    "volume": 623814,
-   "prev_close": null
+   "prev_close": 287.9
   },
   "GABRIEL.NS": {
    "price": 1449.7,
@@ -6477,7 +6477,7 @@
   "GERMAN.NS": {
    "price": 103.53,
    "volume": 1162414,
-   "prev_close": null
+   "prev_close": 98.67
   },
   "GESHIP.NS": {
    "price": 1550.9,
@@ -7392,7 +7392,7 @@
   "ICICILIFE.NS": {
    "price": 409.55,
    "volume": 2668494,
-   "prev_close": 413.35
+   "prev_close": 422.2
   },
   "ICIL.NS": {
    "price": 416.0,
@@ -10147,7 +10147,7 @@
   "NITYAS.NS": {
    "price": 66.81,
    "volume": 371392,
-   "prev_close": null
+   "prev_close": 69.21
   },
   "NIVABUPA.NS": {
    "price": 71.54,
@@ -10417,7 +10417,7 @@
   "ORIENTCABL.NS": {
    "price": 354.45,
    "volume": 341259,
-   "prev_close": null
+   "prev_close": 345.45
   },
   "ORIENTCEM.NS": {
    "price": 112.83,
@@ -12577,7 +12577,7 @@
   "SMT.NS": {
    "price": 492.7,
    "volume": 4271896,
-   "prev_close": null
+   "prev_close": 410.6
   },
   "SNOWMAN.NS": {
    "price": 34.25,
@@ -12757,7 +12757,7 @@
   "SSRETAIL.NS": {
    "price": 653.9,
    "volume": 722313,
-   "prev_close": null
+   "prev_close": 658.25
   },
   "SSWL.NS": {
    "price": 528.9,
@@ -13127,7 +13127,7 @@
   "SWASTIKAIN.NS": {
    "price": 198.56,
    "volume": 142165,
-   "prev_close": null
+   "prev_close": 195.35
   },
   "SWELECTES.NS": {
    "price": 610.9,
@@ -13597,7 +13597,7 @@
   "TONBO.NS": {
    "price": 1284.2,
    "volume": 5961114,
-   "prev_close": null
+   "prev_close": 1212.85
   },
   "TORNTPHARM.NS": {
    "price": 4625.0,
@@ -13702,7 +13702,7 @@
   "TRIVENIPT.NS": {
    "price": 452.15,
    "volume": 278423,
-   "prev_close": null
+   "prev_close": 458.3
   },
   "TRU.NS": {
    "price": 3.99,
@@ -14302,7 +14302,7 @@
   "VNL.NS": {
    "price": 93.88,
    "volume": 2603726,
-   "prev_close": null
+   "prev_close": 104.31
   },
   "VOEPL.NS": {
    "price": 477.8,
@@ -14647,7 +14647,7 @@
   "ZETWERK.NS": {
    "price": 161.69,
    "volume": 55866876,
-   "prev_close": null
+   "prev_close": 143.69
   },
   "ZFCVINDIA.NS": {
    "price": 2134.0,

@@ -1,12 +1,12 @@
 {
  "mode": "nse-morning",
- "as_of": "2026-10-27 16:33",
+ "as_of": "2026-10-27 17:12",
  "hits": [
   {
-   "symbol": "INFY.NS"
+   "symbol": "ATHERENERG.NS"
   },
   {
-   "symbol": "ATHERENERG.NS"
+   "symbol": "INFY.NS"
   },
   {
    "symbol": "ACUTAAS.NS"
@@ -21,10 +21,16 @@
    "symbol": "BHARTIARTL.NS"
   },
   {
+   "symbol": "SONACOMS.NS"
+  },
+  {
    "symbol": "HDFCBANK.NS"
   },
   {
-   "symbol": "SONACOMS.NS"
+   "symbol": "TATACONSUM.NS"
+  },
+  {
+   "symbol": "COFORGE.NS"
   },
   {
    "symbol": "PAYTM.NS"
@@ -36,31 +42,25 @@
    "symbol": "TCS.NS"
   },
   {
-   "symbol": "APOLLO.NS"
-  },
-  {
-   "symbol": "COFORGE.NS"
-  },
-  {
    "symbol": "RELIANCE.NS"
+  },
+  {
+   "symbol": "APOLLO.NS"
   },
   {
    "symbol": "BAJAJ-AUTO.NS"
   },
   {
-   "symbol": "ITCHOTELS.NS"
-  },
-  {
    "symbol": "HCLTECH.NS"
   },
   {
+   "symbol": "MAZDOCK.NS"
+  },
+  {
+   "symbol": "ITCHOTELS.NS"
+  },
+  {
    "symbol": "KFINTECH.NS"
-  },
-  {
-   "symbol": "AEQUS.NS"
-  },
-  {
-   "symbol": "HAL.NS"
   }
  ]
 }
