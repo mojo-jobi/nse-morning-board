@@ -1,66 +1,66 @@
 {
  "mode": "nse-morning",
- "as_of": "2026-10-27 13:46",
+ "as_of": "2026-10-27 15:53",
  "hits": [
-  {
-   "symbol": "ATHERENERG.NS"
-  },
   {
    "symbol": "INFY.NS"
   },
   {
-   "symbol": "APOLLO.NS"
-  },
-  {
-   "symbol": "RELIANCE.NS"
+   "symbol": "ATHERENERG.NS"
   },
   {
    "symbol": "BHARTIARTL.NS"
   },
   {
-   "symbol": "ONESOURCE.NS"
+   "symbol": "TCS.NS"
+  },
+  {
+   "symbol": "RELIANCE.NS"
   },
   {
    "symbol": "HDFCBANK.NS"
   },
   {
-   "symbol": "ETERNAL.NS"
-  },
-  {
-   "symbol": "TCS.NS"
-  },
-  {
-   "symbol": "ITCHOTELS.NS"
-  },
-  {
-   "symbol": "PAYTM.NS"
-  },
-  {
    "symbol": "MANKIND.NS"
   },
   {
-   "symbol": "AEQUS.NS"
-  },
-  {
-   "symbol": "TATACONSUM.NS"
-  },
-  {
-   "symbol": "ACUTAAS.NS"
-  },
-  {
-   "symbol": "SONACOMS.NS"
-  },
-  {
-   "symbol": "CIPLA.NS"
-  },
-  {
-   "symbol": "MARUTI.NS"
+   "symbol": "HAL.NS"
   },
   {
    "symbol": "HCLTECH.NS"
   },
   {
-   "symbol": "KFINTECH.NS"
+   "symbol": "AEQUS.NS"
+  },
+  {
+   "symbol": "BAJAJ-AUTO.NS"
+  },
+  {
+   "symbol": "BEL.NS"
+  },
+  {
+   "symbol": "SONACOMS.NS"
+  },
+  {
+   "symbol": "TATASTEEL.NS"
+  },
+  {
+   "symbol": "TATACONSUM.NS"
+  },
+  {
+   "symbol": "APOLLO.NS"
+  },
+  {
+   "symbol": "PAYTM.NS"
+  },
+  {
+   "symbol": "MARUTI.NS"
+  },
+  {
+   "symbol": "ETERNAL.NS"
+  },
+  {
+   "symbol": "NETWEB.NS"
   }
  ]
 }
