@@ -1,0 +1,52 @@
+name: NSE morning board
+
+on:
+  schedule:
+    - cron: "30 3 * * 1-5"   # 9:00 IST: news + daily scan + shortlist
+    - cron: "5 4 * * 1-5"    # 9:35 IST: opening range + trade numbers
+  workflow_dispatch:
+    inputs:
+      stage:
+        description: "pre, orb or all"
+        default: "all"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: morning
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Pick the stage
+        id: stage
+        run: |
+          if [ -n "${{ github.event.inputs.stage }}" ]; then s="${{ github.event.inputs.stage }}";
+          elif [ "${{ github.event.schedule }}" = "30 3 * * 1-5" ]; then s=pre; else s=orb; fi
+          echo "stage=$s" >> "$GITHUB_OUTPUT"
+
+      - name: Refresh the NSE list (Mondays, keeps the old one if NSE refuses)
+        if: steps.stage.outputs.stage == 'pre'
+        run: |
+          if [ "$(TZ=Asia/Kolkata date +%u)" = "1" ]; then python nse/universe.py || echo "universe refresh skipped"; fi
+
+      - name: Run
+        run: python nse/morning.py ${{ steps.stage.outputs.stage }}
+
+      - name: Save the dashboard
+        run: |
+          git config user.name "nse-morning"
+          git config user.email "nse-morning@users.noreply.github.com"
+          git add docs trader
+          git diff --cached --quiet || git commit -m "NSE board $(TZ=Asia/Kolkata date '+%Y-%m-%d %H:%M') IST (${{ steps.stage.outputs.stage }})"
+          git push

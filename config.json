@@ -1,0 +1,28 @@
+{
+  "_note": "Amounts are in rupees. The trader skills call the keys *_usd; here they mean INR.",
+  "market": "NSE",
+  "budget": 100000,
+  "cash_buffer_pct": 10,
+  "max_position_pct": 75,
+  "max_order_usd": 75000,
+  "min_order_usd": 500,
+  "max_loss_per_trade_usd": 1000,
+  "max_daily_loss_usd": 3000,
+  "max_trades_per_day": 3,
+  "max_orders_per_day": 10,
+  "min_reward_risk": 1.5,
+  "require_stop": true,
+  "no_entries_before": "09:30",
+  "no_entries_after": "14:45",
+  "flat_by": "15:15",
+  "paper": true,
+  "blocked": [],
+  "allow_options": false,
+  "allow_margin": false,
+  "allow_short": false,
+
+  "scan": {"min_price": 20, "min_volume": 100000},
+  "rank": {"shortlist": 20, "show": 10, "news_hours": 24},
+  "plan": {"or_minutes": 15, "stop": "or_mid", "target_r": 2},
+  "holidays": []
+}
