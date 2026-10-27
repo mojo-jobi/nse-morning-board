@@ -1,7 +1,7 @@
 {
  "stage": "pre",
  "market": "NSE",
- "created_ist": "2026-10-27 16:20",
+ "created_ist": "2026-10-27 16:33",
  "volume_basis": "last session",
  "closes_through": "2026-10-27",
  "scan": {
@@ -16,21 +16,109 @@
  },
  "news": {
   "feeds": 12,
-  "headlines": 466,
-  "stocks_named": 111,
+  "headlines": 492,
+  "stocks_named": 108,
   "hours": 24
+ },
+ "sources": {
+  "quotes": "Yahoo",
+  "quotes_upstox": 0,
+  "setups_saved_ist": "2026-10-27 16:33"
  },
  "shortlist": [
   {
    "rank": 1,
+   "symbol": "INFY.NS",
+   "name": "Infosys Limited",
+   "score": 98,
+   "price": 1163.0,
+   "chg_pct": -0.26,
+   "volume": 20116414,
+   "turnover_cr": 2339.5,
+   "news_count": 24,
+   "news_tags": [
+    "analyst",
+    "capital",
+    "deal",
+    "earnings",
+    "legal",
+    "regulatory"
+   ],
+   "news": [
+    {
+     "title": "Infosys cuts FY27 guidance while Infosys stock costs EUR 11.00 - ad-hoc-news.de",
+     "source": "Google News",
+     "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOekx6ckFxRU9SdGhreXZxc0VyUXpjT3d2WmlReVMzQlRXVHN5SXZzMkF2VGoza1RGTGxZZGozbnV6NlRfZ0tqMVE1amw4b0ZPcFVQV0s1TjVUOUkxODFtYXBOcEFYeWl1YWM3cGVqeFhBYVR0dXlyWjhtbHF5SWRjdXVaZzcxYmMyMmswN3dORE9pM21odDczVlVoNlZTRm5QU2RpMllmdzhtdlhiM2k0QWRjXzh2eldzd1BjSllzX0Iwc1U?oc=5",
+     "time": "27 Oct 14:16",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "Infosys, TCS, Coforge shares: IT stocks fall after Anthropic IPO filing; here's why -",
+     "source": "IndiaIPO",
+     "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNa2lJSlFMbVdUeHgxUWhMdGhlcEZidWZIaThLS3liZnZNUVFNZU5uWGo4TUxZTmhKSXdwYl9YR3VnVmdKV3ZDYnVYSWo0XzR0dncwanFPZWFNdEV5OWx0VTFGMjczbDA3OFJic0JiMkNZQXE1WU1lT1dDYzliWW56c1AxQXl6Vklod0UybDJUUVZrelQxdzRyUTJHa2ZvZi1sUWNEQXhBdjJUQTFCYTVnV240OXQ?oc=5",
+     "time": "27 Oct 12:09",
+     "tags": [
+      "capital"
+     ]
+    },
+    {
+     "title": "Nifty IT falls 1.5% as AI trade bounces back on Anthropic IPO filing; TCS, Infosys lead losses",
+     "source": "Moneycontrol.com",
+     "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNNmFkWWtYcGxzUjZwWnJWV0UxSy1VVEtwOUwtZUdyYkZ6V2tJTWlZZDlsQ2dkUnJLMlM5N3h2SGlMNG9YcnMxenVVUlM1RmQwa0xPQV9xQUFqMDNaQWxHX3psYUptOGlXVWdkMU0tUWRRczNuUHdhZWFtNF9NREpyaERZRVo4UW5Tckp3ck9pUjc5eWhJMXZBVXMzcDNvSENtTDk2OUYyZkxZZW83SHJIci0wV3pXNTlmRHFaRzZpT2RtSDlCU3VtM19nTXdDT1JhSkJQN2F3UF9FM05YQkk4VmZxd2dGWk1RRkk0eFFVVFVvd9IB8gFBVV95cUxNNmFkWWtYcGxzUjZwWnJWV0UxSy1VVEtwOUwtZUdyYkZ6V2tJTWlZZDlsQ2dkUnJLMlM5N3h2SGlMNG9YcnMxenVVUlM1RmQwa0xPQV9xQUFqMDNaQWxHX3psYUptOGlXVWdkMU0tUWRRczNuUHdhZWFtNF9NREpyaERZRVo4UW5Tckp3ck9pUjc5eWhJMXZBVXMzcDNvSENtTDk2OUYyZkxZZW83SHJIci0wV3pXNTlmRHFaRzZpT2RtSDlCU3VtM19nTXdDT1JhSkJQN2F3UF9FM05YQkk4VmZxd2dGWk1RRkk0eFFVVFVvdw?oc=5",
+     "time": "27 Oct 11:38",
+     "tags": [
+      "capital"
+     ]
+    },
+    {
+     "title": "Infosys in talks with US DOJ over H-1B employee classification probe",
+     "source": "The Economic Times",
+     "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNVTFCOU5XS0gwNThQQ0FoVW12NzZ3TVBKbWtGY3E5eWExWllLXzZvQ05KVzhGTnJtOUxua1ZVeWtVTEtSQi1MendRa3htRWQxek83WVlTamNiOXZYajRqd094U2M5WmxLam5xb2hNbHZNS21XcEtnSU1JTmdsRVRxRDJCQldKVUlzS2VlazU1UGt4eE4tRGpYeUdRa0ZTNW9sWUk1UFRxRUh0RWlzNGRYMmFvaEl2VkNRS1VVcGJoaGp6TEx4dndYLTlLdXhjUlg0UTl3ZTlwSlJMZHp3ZFHSAd4BQVVfeXFMTVUxQjlOV0tIMDU4UENBaFVtdjc2d01QSm1rRmNxOXlhMVpZS182b0NOSlc4Rk5ybTlMbmtWVXlrVUxLUkItTHp3UWt4bUVkMXpPN1lZU2pjYjl2WGo0andPeFNjOVpsS2pucW9oTWx2TUttV3BLZ0lNSU5nbEVUcUQyQkJXSlVJc0tlZWs1NVBreHhOLURqWHlHUWtGUzVvbFlJNVBUcUVIdEVpczRkWDJhb2hJdlZDUUtVVXBiaGhqekxMeHZ3WC05S3V4Y1JYNFE5d2U5cEpSTGR6d2RR?oc=5",
+     "time": "27 Oct 11:34",
+     "tags": [
+      "legal",
+      "regulatory"
+     ]
+    },
+    {
+     "title": "Infosys’s $5.2 Billion Deal Wins Fail to Lift FY27 Outlook",
+     "source": "Analytics India Magazine",
+     "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOMHdCRGlPS2NsVmNrWi1XVmdSXzYtdmNhZ0kzbkxySnM1ZzZicG85VnBPQUJIckxjb05zNS13NXFhOUkwTWpUd1RzTW85UDVacy1zamRMUnJaV2VTcS1Qb0h3Rlh0UWpLc1h4aDAyX1pQdWtYaXJmQVhSVVFlUHdxX3NJTDdwa3I3c1d1Z2RGVjlNRjV2VEVwNzN6b25XQQ?oc=5",
+     "time": "27 Oct 11:06",
+     "tags": [
+      "deal"
+     ]
+    },
+    {
+     "title": "IT stocks crash! Infosys, TCS, Wipro, HCL Tech - Nifty IT tanks over 2% today, biggest sectoral loser - What lies ahead?",
+     "source": "Mint",
+     "link": "https://www.livemint.com/market/stock-market-news/it-stocks-crash-infosys-tcs-wipro-hcl-tech-nifty-it-tanks-over-2-today-biggest-sectoral-loser-what-lies-ahead-11793077366586.html",
+     "time": "27 Oct 11:06",
+     "tags": [
+      "earnings",
+      "analyst"
+     ]
+    }
+   ],
+   "setups": [
+    "bull_flag"
+   ],
+   "rsi": 65.0,
+   "earnings_flag": true,
+   "price_source": "Yahoo"
+  },
+  {
+   "rank": 2,
    "symbol": "ATHERENERG.NS",
    "name": "Ather Energy Limited",
-   "score": 98,
+   "score": 97,
    "price": 1674.0,
    "chg_pct": 6.29,
    "volume": 13018271,
    "turnover_cr": 2179.3,
-   "news_count": 35,
+   "news_count": 26,
    "news_tags": [
     "analyst",
     "earnings"
@@ -90,88 +178,8 @@
     "breakout_20d"
    ],
    "rsi": 66.5,
-   "earnings_flag": true
-  },
-  {
-   "rank": 2,
-   "symbol": "INFY.NS",
-   "name": "Infosys Limited",
-   "score": 97,
-   "price": 1163.0,
-   "chg_pct": -0.26,
-   "volume": 20116414,
-   "turnover_cr": 2339.5,
-   "news_count": 25,
-   "news_tags": [
-    "analyst",
-    "capital",
-    "deal",
-    "earnings",
-    "legal",
-    "regulatory"
-   ],
-   "news": [
-    {
-     "title": "Infosys share price analysis amid analysts' downgrades: is it a contrarian buy?",
-     "source": "Invezz",
-     "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPTFBXdU5NSWQtWFd1YmpMMVhzM1BPSHJBbDRybEQ5QktIUmh6VFBPSTc1bjNycmJZSmhTVDNqMlE0dzRwSktVTnVjRldNMndXcXRfUGh0YnN0ekpDT2t3Y19jMnZvbVNFOEN1ZXVjTzdhZVBwQmYyT3BGYkZLMk9fUUxmaTdUbG0tTVREQTlJY19hNXlvdWxUMmJDZ3ZZVUJlc24wV3AyNThyZnJfLUhocEpUcXBlZw?oc=5",
-     "time": "27 Oct 15:36",
-     "tags": [
-      "analyst"
-     ]
-    },
-    {
-     "title": "Infosys cuts FY27 guidance while Infosys stock costs EUR 11.00 - ad-hoc-news.de",
-     "source": "Google News",
-     "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOekx6ckFxRU9SdGhreXZxc0VyUXpjT3d2WmlReVMzQlRXVHN5SXZzMkF2VGoza1RGTGxZZGozbnV6NlRfZ0tqMVE1amw4b0ZPcFVQV0s1TjVUOUkxODFtYXBOcEFYeWl1YWM3cGVqeFhBYVR0dXlyWjhtbHF5SWRjdXVaZzcxYmMyMmswN3dORE9pM21odDczVlVoNlZTRm5QU2RpMllmdzhtdlhiM2k0QWRjXzh2eldzd1BjSllzX0Iwc1U?oc=5",
-     "time": "27 Oct 14:16",
-     "tags": [
-      "earnings"
-     ]
-    },
-    {
-     "title": "Infosys, TCS, Coforge shares: IT stocks fall after Anthropic IPO filing; here's why -",
-     "source": "IndiaIPO",
-     "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNa2lJSlFMbVdUeHgxUWhMdGhlcEZidWZIaThLS3liZnZNUVFNZU5uWGo4TUxZTmhKSXdwYl9YR3VnVmdKV3ZDYnVYSWo0XzR0dncwanFPZWFNdEV5OWx0VTFGMjczbDA3OFJic0JiMkNZQXE1WU1lT1dDYzliWW56c1AxQXl6Vklod0UybDJUUVZrelQxdzRyUTJHa2ZvZi1sUWNEQXhBdjJUQTFCYTVnV240OXQ?oc=5",
-     "time": "27 Oct 12:09",
-     "tags": [
-      "capital"
-     ]
-    },
-    {
-     "title": "Nifty IT falls 1.5% as AI trade bounces back on Anthropic IPO filing; TCS, Infosys lead losses",
-     "source": "Moneycontrol.com",
-     "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNNmFkWWtYcGxzUjZwWnJWV0UxSy1VVEtwOUwtZUdyYkZ6V2tJTWlZZDlsQ2dkUnJLMlM5N3h2SGlMNG9YcnMxenVVUlM1RmQwa0xPQV9xQUFqMDNaQWxHX3psYUptOGlXVWdkMU0tUWRRczNuUHdhZWFtNF9NREpyaERZRVo4UW5Tckp3ck9pUjc5eWhJMXZBVXMzcDNvSENtTDk2OUYyZkxZZW83SHJIci0wV3pXNTlmRHFaRzZpT2RtSDlCU3VtM19nTXdDT1JhSkJQN2F3UF9FM05YQkk4VmZxd2dGWk1RRkk0eFFVVFVvd9IB8gFBVV95cUxNNmFkWWtYcGxzUjZwWnJWV0UxSy1VVEtwOUwtZUdyYkZ6V2tJTWlZZDlsQ2dkUnJLMlM5N3h2SGlMNG9YcnMxenVVUlM1RmQwa0xPQV9xQUFqMDNaQWxHX3psYUptOGlXVWdkMU0tUWRRczNuUHdhZWFtNF9NREpyaERZRVo4UW5Tckp3ck9pUjc5eWhJMXZBVXMzcDNvSENtTDk2OUYyZkxZZW83SHJIci0wV3pXNTlmRHFaRzZpT2RtSDlCU3VtM19nTXdDT1JhSkJQN2F3UF9FM05YQkk4VmZxd2dGWk1RRkk0eFFVVFVvdw?oc=5",
-     "time": "27 Oct 11:38",
-     "tags": [
-      "capital"
-     ]
-    },
-    {
-     "title": "Infosys in talks with US DOJ over H-1B employee classification probe",
-     "source": "The Economic Times",
-     "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNVTFCOU5XS0gwNThQQ0FoVW12NzZ3TVBKbWtGY3E5eWExWllLXzZvQ05KVzhGTnJtOUxua1ZVeWtVTEtSQi1MendRa3htRWQxek83WVlTamNiOXZYajRqd094U2M5WmxLam5xb2hNbHZNS21XcEtnSU1JTmdsRVRxRDJCQldKVUlzS2VlazU1UGt4eE4tRGpYeUdRa0ZTNW9sWUk1UFRxRUh0RWlzNGRYMmFvaEl2VkNRS1VVcGJoaGp6TEx4dndYLTlLdXhjUlg0UTl3ZTlwSlJMZHp3ZFHSAd4BQVVfeXFMTVUxQjlOV0tIMDU4UENBaFVtdjc2d01QSm1rRmNxOXlhMVpZS182b0NOSlc4Rk5ybTlMbmtWVXlrVUxLUkItTHp3UWt4bUVkMXpPN1lZU2pjYjl2WGo0andPeFNjOVpsS2pucW9oTWx2TUttV3BLZ0lNSU5nbEVUcUQyQkJXSlVJc0tlZWs1NVBreHhOLURqWHlHUWtGUzVvbFlJNVBUcUVIdEVpczRkWDJhb2hJdlZDUUtVVXBiaGhqekxMeHZ3WC05S3V4Y1JYNFE5d2U5cEpSTGR6d2RR?oc=5",
-     "time": "27 Oct 11:34",
-     "tags": [
-      "legal",
-      "regulatory"
-     ]
-    },
-    {
-     "title": "Infosys’s $5.2 Billion Deal Wins Fail to Lift FY27 Outlook",
-     "source": "Analytics India Magazine",
-     "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOMHdCRGlPS2NsVmNrWi1XVmdSXzYtdmNhZ0kzbkxySnM1ZzZicG85VnBPQUJIckxjb05zNS13NXFhOUkwTWpUd1RzTW85UDVacy1zamRMUnJaV2VTcS1Qb0h3Rlh0UWpLc1h4aDAyX1pQdWtYaXJmQVhSVVFlUHdxX3NJTDdwa3I3c1d1Z2RGVjlNRjV2VEVwNzN6b25XQQ?oc=5",
-     "time": "27 Oct 11:06",
-     "tags": [
-      "deal"
-     ]
-    }
-   ],
-   "setups": [
-    "bull_flag"
-   ],
-   "rsi": 65.0,
-   "earnings_flag": true
+   "earnings_flag": true,
+   "price_source": "Yahoo"
   },
   {
    "rank": 3,
@@ -209,7 +217,7 @@
     {
      "title": "Acutaas Chemicals rallies 13%; hits record high on strong Q2 results",
      "source": "Business Standard",
-     "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNdXZYMVZYMnBNM1NZb2ZFTXVDOWY4d2Q3cmduREdRQ0Q0M2NQaFZKLUhXMWpXemo4T3plNkNpZi1mU2t5LUNzR1NwT0JrRnRMRmw2UW44eHAwLWlKSTZIcFFVYUVvN0NydGRxYUNSc2JETFYzWURhMmduSVFZQXJET1hncUF6akp1cFUtTTg5Ti02cmFmREltLW9nQVhmbnNlQW5DRjUwVTJyUDJwTG1sUXZiUmFPbnRIU2RVaWJiTG5abnIxRklsM29PeExsdw?oc=5",
+     "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOM1pfWWdQVFpXTWZNLUZIdGtyZk5vWTI3NV9qTGZ6WkY5M2h3UUFmOWpNcHJSc1piNU1Mc1JKeEtxank5TVljYnduNlRRbVhwVDg1WlhLcURjOFJib0tzNTJhVktNTmVVRlRXbEZMNS1UaEJFdk1tV2dnS1gxVUg4UG1Lc0ZGV1c2ck5PRHhObmRuY21hQlZWT001YmQ2Yk51NVFKdDk0SUFZcURjLVJJaHpUQWJNak03ZzdjR1lBMzZnWWE3bEEzNmZUMExnSDFhVjNF0gHTAUFVX3lxTE4zWl9ZZ1BUWldNZk0tRkh0a3JmTm9ZMjc1X2pMZnpaRjkzaHdRQWY5ak1wclJzWmI1TUxzUkp4S3FqeTlNWWNid242VFFtWHBUODVaWEtxRGM4UmJvS3M1MmFWS01OZVVGVFdsRkw1LVRoQkV2TW1XZ2dLWDFVSDhQbUtzRkZXVzZyTk9EeE5uZG5jbWFCVlZPTTViZDZiTnU1UUp0OTRJQVlxRGMtUkloelRBYk1qTTdnN2NHWUEzNmdZYTdsQTM2ZlQwTGdIMWFWM0U?oc=5",
      "time": "27 Oct 14:09",
      "tags": [
       "earnings"
@@ -245,7 +253,8 @@
     "breakout_20d"
    ],
    "rsi": 70.8,
-   "earnings_flag": true
+   "earnings_flag": true,
+   "price_source": "Yahoo"
   },
   {
    "rank": 4,
@@ -256,7 +265,7 @@
    "chg_pct": 8.24,
    "volume": 3030527,
    "turnover_cr": 758.4,
-   "news_count": 36,
+   "news_count": 35,
    "news_tags": [
     "analyst",
     "earnings",
@@ -315,155 +324,14 @@
     "reclaim_ma20"
    ],
    "rsi": 59.7,
-   "earnings_flag": true
+   "earnings_flag": true,
+   "price_source": "Yahoo"
   },
   {
    "rank": 5,
-   "symbol": "BHARTIARTL.NS",
-   "name": "Bharti Airtel Limited",
-   "score": 89,
-   "price": 1978.8,
-   "chg_pct": 3.2,
-   "volume": 13052774,
-   "turnover_cr": 2582.9,
-   "news_count": 10,
-   "news_tags": [
-    "capital",
-    "earnings"
-   ],
-   "news": [
-    {
-     "title": "SENSEX, NIFTY50 end rangebound session on a flat note; Tata Consumer, Bharti Airtel top gainers",
-     "source": "Upstox",
-     "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQUmREREJuOHVRNmlyZG9rbTZfQXl3OW91YTJXZzVFNDZRRVdNV2NqZS1PWDVBTUhKS2pEeVM1di1sdkJzWG5GclNueTRnNC1vTzdrci1DVEJpM013YTZ4SVF6T2JVXzVQR3NnLUdUZmVMLVp3T3ZLU3Fsa1FuSDNpdmkzb1RRc0Y3cDJyN1czbkR2Q3RsZnROX05JelZ4a1o4RGV4VTZuS1VfcWVkSDZ5RDVUVmE4Ykx3Y2xMYkJzZ0xlMnIweVJkNVJjcE5yU1NyTzZscTdEMXM1LUI4YmowbUYwV2dKZTA?oc=5",
-     "time": "27 Oct 16:03",
-     "tags": []
-    },
-    {
-     "title": "Bharti Airtel Ltd Sees High-Value Trading Amid Narrow Price Range and Institutional Interest",
-     "source": "MarketsMojo",
-     "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPcmJ0SnNKUDZ1Xzg2Y05nRTNqdEpZeDRncEMyV1Z0Wl9KYzA2c1RhdmFPNXBuQ2x3OHJmRGszaFVJenBZNDM3MmE4Znh5SG9NOERlcnFueHFoVmtyZDRkdHpTU0o3WDVXQk5TYTlFMDFNdjFMVWViNEVRd2c5b3o0eTJPZl9lbGtOVHZsWG5hcUFIaDFxZndYMmo2Ry1iQ25PUVFfaUI2S2RHM2JnMG83SkxLSGdmUlZQNTNmQjdOZnhFVVRtZ241Y1h5Z0JvTmRBaXhsUS1MVFpMMjA0SVQwQi10OTg?oc=5",
-     "time": "27 Oct 15:02",
-     "tags": []
-    },
-    {
-     "title": "Rs 1,900 Puts Draw 2,014 Contracts on Bharti Airtel Ltd as Stock Holds Above Key Moving Averages",
-     "source": "MarketsMojo",
-     "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQMk1FeG1ZRGtnMjRzY3plU2dLcm9JbnFxVTdndWtLazAyTTBHTjU1V3A5NFVQN2NXMmtfNFVodURmd2xnWnlaUXlva04yUDhKNG1keTc1ZzVhOXFLeVpuTFBGem4zbVd5Vk4yWTMwb25TX3lvc3VSczBDVHhLQUhJdEVveGVCZmNCWVdpY3lIeWxaWUdKVHhXMDh1OUZZMUlXLXkyMnJNMnE0YzZCbXJSeVJyVVk5eXJ3a0pXY1R3OGd4d0k?oc=5",
-     "time": "27 Oct 15:00",
-     "tags": []
-    },
-    {
-     "title": "Bharti Airtel share price up 3%; rallies 12% in October, outperforms market",
-     "source": "Business Standard",
-     "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNc0M3a29UYWNtY0wtT2JBRWlvMEVVRjJGb3ZoeTh3cDdrU2hPWVRCN2xPdjFuQi1YZ0ptVV9VeFhHckQ1QUpMYzhhQzhyUHJyc3I4MTc3cFNVeFhUdlgta2NOT3VEU2FiRTZPcE11UTk1d1JSYzlwdWdTU2UyUmdHZnRxaE55aUFaYTRzdHZGejM5WkpFb2k1YjhpeWs1cUo3NzRSVXRucS02cXAzcVZ2cUZXNzJMeGhCazMzOHRvdzl0N0IzNzgtUEh3elZsR3RNdGoyWNIB2gFBVV95cUxPQU5MZTVZRkkyeW1HX04xN3haaTdLa3NkTFlMUTdyZjFTZXI2XzJ2MEhHLUM4OHFhamc2d3VjU1ItUXRJU2hPODJjd2dIRVE1S2VOQ1d3RUZJanFtXzBkMVhIRFBMRFl6MDF3aUY2QmxudlpLSmF4RHAxVjRSbTFaMC0yMXpOaWllMi1TVmFWMElXRk4xRmRwZEdDREVuUVh4N2VST2RhQ3ZVMjhMblpjUkpaNFdKbW56MGtZdGx6TE4zMmI3NXF6U0RVZEpVNEpZSksxbzFneGpxQQ?oc=5",
-     "time": "27 Oct 13:16",
-     "tags": []
-    },
-    {
-     "title": "Jio’s big-bang listing may give it stock market’s No.2 crown after Reliance Industries",
-     "source": "Economic Times",
-     "link": "https://economictimes.indiatimes.com/markets/stocks/news/jios-big-bang-listing-may-give-it-stock-markets-no-2-crown-after-reliance-industries/articleshow/135227418.cms",
-     "time": "27 Oct 12:46",
-     "tags": [
-      "capital"
-     ]
-    },
-    {
-     "title": "Bharti Airtel Share Price Live Updates: Bharti Airtel's Current Price",
-     "source": "Economic Times",
-     "link": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/bharti-airtel-stock-price-live-updates-27-oct-2026/liveblog/135223743.cms",
-     "time": "27 Oct 09:05",
-     "tags": []
-    }
-   ],
-   "setups": [
-    "breakout_20d"
-   ],
-   "rsi": 68.7,
-   "earnings_flag": true
-  },
-  {
-   "rank": 6,
-   "symbol": "HDFCBANK.NS",
-   "name": "HDFC Bank Limited",
-   "score": 88,
-   "price": 680.2,
-   "chg_pct": -1.14,
-   "volume": 40290698,
-   "turnover_cr": 2740.6,
-   "news_count": 28,
-   "news_tags": [
-    "analyst",
-    "earnings",
-    "legal",
-    "people"
-   ],
-   "news": [
-    {
-     "title": "HDFC Bank Shares Fall 2.3% After Q2 Results; Jefferies, PL, JM, Emkay See Up To 44% Upside, Better Than FDs?",
-     "source": "Goodreturns",
-     "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQdC16UkxuYXZFWmxJYndGX1plcVBCS2pzSkhnTnRPNG03RDdmQl82TEJBM0Zob3hBMnQyM0pqUE9kLUttR3h1MlREWFB0dWgzOFI2ZThyekgyWEJNaFdHXzMxLXhuVU50SHN2eVhJZWtEbjQyZ0lxRzZtUmZoV0loZVpwSEoxRk9ldUFaZnlYR0FrSjQ3MHI5aTBOZE84V2JzSkRHTHFvRUs1RU5aWEZ3ZTctQzVnMHQxWEdESlU0anhyUU9Fc0hKbnNmT3BrT1FlSDl2RmpyRHRvaUhoR0E?oc=5",
-     "time": "27 Oct 14:22",
-     "tags": [
-      "earnings",
-      "analyst"
-     ]
-    },
-    {
-     "title": "Anup Bagchi takes charge as HDFC Bank CEO amid governance concerns, internal probe and leadership changes",
-     "source": "IBTimes India",
-     "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQRGVSaFZ3WnJoMkZURTJsWHg4WVkzeHhObDRxZndsQ3Jhd2p6Q1hYTUVZY3JfVWk5eUZmRnpXV0dLOWwxMWI3Rm9lZGFNVGhPQjg3cEZBWXpqNWpkbEhBS0YwSUZtZnBMZEVoVnJxUlc2Z0VPRXdwMUNPTTk2MnZjeDNMTFNWRnoyT0J0c2RySml6SlBVUFkycjZhSk5qT3NVZGR4dENrTlF0RllaakVDX1pDNkNXT3JsSlhaa3ZXMHVfQkYxZl9UWkJB?oc=5",
-     "time": "27 Oct 13:19",
-     "tags": [
-      "legal",
-      "people"
-     ]
-    },
-    {
-     "title": "A banking giant, a battered stock: Can HDFC Bank’s new chief turn the tide?",
-     "source": "Economic Times",
-     "link": "https://economictimes.indiatimes.com/markets/stocks/a-banking-giant-a-battered-stock-can-hdfc-banks-new-chief-turn-the-tide/videoshow/135227258.cms",
-     "time": "27 Oct 12:35",
-     "tags": []
-    },
-    {
-     "title": "HDFC Bank appoints Anup Bagchi as MD & CEO from October 27; Sashidhar Jagdishan Exits",
-     "source": "Storyboard18",
-     "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPVHZKZF9hYWhoeloyb201UjBwcllneE1BaEU1U2FIUTNWY0J5cG1WMDZPck10QWJHWmRkZlhrNDE1MDZGVWNxc0s5dk13SW8xXzBBMW9uWTh1eGI5SFJuTGxLLWpQVkxDbWpCTlphVjNMeFhSY0V3ZWNkWHVCZEI3SkVicWtQVkc1QnFyQktTMTVKT25vdFlvLThOdjVVT0o3b09qUktxODVlZ9IBqgFBVV95cUxPVHZKZF9hYWhoeloyb201UjBwcllneE1BaEU1U2FIUTNWY0J5cG1WMDZPck10QWJHWmRkZlhrNDE1MDZGVWNxc0s5dk13SW8xXzBBMW9uWTh1eGI5SFJuTGxLLWpQVkxDbWpCTlphVjNMeFhSY0V3ZWNkWHVCZEI3SkVicWtQVkc1QnFyQktTMTVKT25vdFlvLThOdjVVT0o3b09qUktxODVlZw?oc=5",
-     "time": "27 Oct 12:22",
-     "tags": [
-      "people"
-     ]
-    },
-    {
-     "title": "Anup Bagchi takes charge as HDFC Bank MD & CEO - Here are 5 big challenges ahead",
-     "source": "ET Now",
-     "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxONG9GdEVLZ0JRTVlIT2hnclpNSGxVUWhjMTlyUHhZUDI4dGRyMnVLcUtpODB0MkxfQTdnOUJRcGZpbG9ndDVja1JvVkVBNnIwUTJSVGVoR3pkVDg5dGRBT3VtX19oelptcnZJRzhyTWlGbE5SSVR1RXBRc25sRURFRXNDZnVaOWJRVElFbktIRWVlWE9fWjhzU3RXeFpOcjTSAaQBQVVfeXFMUEF6ZGVMU1d4WGtsTnJXXzJkdkxGX0ZvWGx6aktadVFHZ05CaGtndjZWNWVSeW56UEtNRnVPSVVhT3FjbjdOODQ5Rmk3aTloV2dfZ1BScmJtek5wUERPTTJ3Zkd6ekJDMXBlQmRoeDdrS21aZkdNV3ZRZi1QTWZuYU5fQU1oT3pEckZiaTN6NjYyelJkZVVxSExPb2dFaXJYRUdyOHk?oc=5",
-     "time": "27 Oct 12:11",
-     "tags": [
-      "people"
-     ]
-    },
-    {
-     "title": "Anup Bagchi takes charge as HDFC Bank MD & CEO amid growth, governance challenges",
-     "source": "Fortune India",
-     "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQTHhMdGF0d0VTN2l1YnZfZmM2T1d5QU1yYWtVcUVPcEZfMXlXNDlXQVlMNnZvZHJiQ0FIVjhadkp2cXZPZUpvbERkRlBraU12Vk5ZR29JamFSSjhBWHdOWTRFMUZJU0N0YUVocWRzSnRmZ0xmTDBXZTg4N3V6bGJuWEljN3NicmZ1dnpHTnVfcVdGQjVHMGpIRGxUbjVfNWlWOGtpMkZVV3J4a1RvVFdrUGRab0NBU3dvbkd2cnpBbVZRMTV1OHFFUDZKNlkydXNiQndpSdIB1AFBVV95cUxQTHhMdGF0d0VTN2l1YnZfZmM2T1d5QU1yYWtVcUVPcEZfMXlXNDlXQVlMNnZvZHJiQ0FIVjhadkp2cXZPZUpvbERkRlBraU12Vk5ZR29JamFSSjhBWHdOWTRFMUZJU0N0YUVocWRzSnRmZ0xmTDBXZTg4N3V6bGJuWEljN3NicmZ1dnpHTnVfcVdGQjVHMGpIRGxUbjVfNWlWOGtpMkZVV3J4a1RvVFdrUGRab0NBU3dvbkd2cnpBbVZRMTV1OHFFUDZKNlkydXNiQndpSQ?oc=5",
-     "time": "27 Oct 12:05",
-     "tags": [
-      "people"
-     ]
-    }
-   ],
-   "setups": [],
-   "rsi": null,
-   "earnings_flag": true
-  },
-  {
-   "rank": 7,
    "symbol": "ONESOURCE.NS",
    "name": "Onesource Specialty Pharma Limited",
-   "score": 88,
+   "score": 90,
    "price": 1589.8,
    "chg_pct": 13.78,
    "volume": 7801471,
@@ -529,85 +397,157 @@
     "reclaim_ma20"
    ],
    "rsi": 61.4,
-   "earnings_flag": true
+   "earnings_flag": true,
+   "price_source": "Yahoo"
   },
   {
-   "rank": 8,
-   "symbol": "TATACONSUM.NS",
-   "name": "TATA CONSUMER PRODUCTS LIMITED",
-   "score": 86,
-   "price": 1000.0,
-   "chg_pct": 6.78,
-   "volume": 7576093,
-   "turnover_cr": 757.6,
-   "news_count": 14,
+   "rank": 6,
+   "symbol": "BHARTIARTL.NS",
+   "name": "Bharti Airtel Limited",
+   "score": 89,
+   "price": 1978.8,
+   "chg_pct": 3.2,
+   "volume": 13052774,
+   "turnover_cr": 2582.9,
+   "news_count": 10,
    "news_tags": [
-    "analyst",
+    "capital",
     "earnings"
    ],
    "news": [
     {
-     "title": "Top Gainers and Losers Today, 27 October 2026 at 3:30 PM IST: Tata Consumer Products Leads Gainers",
-     "source": "HDFC Sky",
-     "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNU0x5YnlaVDhHRkRuX3VTZTRXMGtyOVA4UzFBYVp3SUZ5RWtlVExoR1JTMW44c3djU1FpMUxlenJYZHdyOFBZbXhDRWhjakJrNDNWandmRHhxd1hLaWVJU042RWlYRzNONGV5TlpFdG5QeDlJQW51cXVEZ3lhdG9RYW1oRzdLeE0?oc=5",
-     "time": "27 Oct 15:50",
+     "title": "SENSEX, NIFTY50 end rangebound session on a flat note; Tata Consumer, Bharti Airtel top gainers",
+     "source": "Upstox",
+     "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQUmREREJuOHVRNmlyZG9rbTZfQXl3OW91YTJXZzVFNDZRRVdNV2NqZS1PWDVBTUhKS2pEeVM1di1sdkJzWG5GclNueTRnNC1vTzdrci1DVEJpM013YTZ4SVF6T2JVXzVQR3NnLUdUZmVMLVp3T3ZLU3Fsa1FuSDNpdmkzb1RRc0Y3cDJyN1czbkR2Q3RsZnROX05JelZ4a1o4RGV4VTZuS1VfcWVkSDZ5RDVUVmE4Ykx3Y2xMYkJzZ0xlMnIweVJkNVJjcE5yU1NyTzZscTdEMXM1LUI4YmowbUYwV2dKZTA?oc=5",
+     "time": "27 Oct 16:03",
      "tags": []
     },
     {
-     "title": "TATA CONSUMER PRODUCTS LIMITED (TATACONSUM) share price — eduinvesting",
-     "source": "Howl.Link",
-     "link": "https://news.google.com/rss/articles/CBMiO0FVX3lxTE9LRVpZbDBRZUpQMGUzdnpMVm9qeGg1VDQyYy1mQlJBUG44TFJvc2hhMUVtTzMtUldxUzRN?oc=5",
-     "time": "27 Oct 11:40",
+     "title": "Bharti Airtel Ltd Sees High-Value Trading Amid Narrow Price Range and Institutional Interest",
+     "source": "MarketsMojo",
+     "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPcmJ0SnNKUDZ1Xzg2Y05nRTNqdEpZeDRncEMyV1Z0Wl9KYzA2c1RhdmFPNXBuQ2x3OHJmRGszaFVJenBZNDM3MmE4Znh5SG9NOERlcnFueHFoVmtyZDRkdHpTU0o3WDVXQk5TYTlFMDFNdjFMVWViNEVRd2c5b3o0eTJPZl9lbGtOVHZsWG5hcUFIaDFxZndYMmo2Ry1iQ25PUVFfaUI2S2RHM2JnMG83SkxLSGdmUlZQNTNmQjdOZnhFVVRtZ241Y1h5Z0JvTmRBaXhsUS1MVFpMMjA0SVQwQi10OTg?oc=5",
+     "time": "27 Oct 15:02",
      "tags": []
     },
     {
-     "title": "Tata Consumer Products shares jump 6% after Q2 results, but here's why brokerages trim target prices",
-     "source": "ET Now",
-     "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNUDgzMjA3ZklxNjRmQmt2TWU4UDRpRnpEbV9mZjlPYkhoakV4OERrd21PY0VVaU1ZdERfQWF1bk5IcDB3WHNvWDhfTzh3b1Vja2RIWGtWVjV0SGdPZUlNTDhEUm9wMExXUzB6MFhNalBYR1lYbUJDdy1BbHE4S1RMYnVZemFSNWVzS2xLblZIMnQzVWZzckgxY1g5SFJiOUFIdGQ1VDE3NzdVeVdwNVZCbjE4bU9VQS1paUc0ak9XVkZ6RTYxamI3cWZfNVBtWWFNQU1aajN4VlhWMzlDSmM4NzM3SWVsaEpaQzA40gHwAUFVX3lxTFBVS0x4azhOeWtjNkQtTHJ5aWVINzlfWTMwYzVqUUhSUDZsMW9Ua1pZRllhdFpLSnJKdWR3a0ExLWUtdHBpQXVOSWRIdDZZVmxSOW01dXpGQVZoN2o0UkpLc3BWQVhGZnh5dDJ6bUY1WVJjMG9qd2lqdUR4N0ZGX3RZSlFUbU1qZkEwSXNaNmJUR2hYUWl6WkZIZVNkLWlzUEZuS25kWEJ6Y2pMc0xnd0M0bWxxX0M2R0lUdjQxQlk2dnRkYXpGai04cTdReGRBZ2hrMV9iSmxBc205akhQa2JQc292c3hBX0lXNlQwNUxjQg?oc=5",
-     "time": "27 Oct 10:26",
-     "tags": [
-      "earnings"
-     ]
+     "title": "Rs 1,900 Puts Draw 2,014 Contracts on Bharti Airtel Ltd as Stock Holds Above Key Moving Averages",
+     "source": "MarketsMojo",
+     "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQMk1FeG1ZRGtnMjRzY3plU2dLcm9JbnFxVTdndWtLazAyTTBHTjU1V3A5NFVQN2NXMmtfNFVodURmd2xnWnlaUXlva04yUDhKNG1keTc1ZzVhOXFLeVpuTFBGem4zbVd5Vk4yWTMwb25TX3lvc3VSczBDVHhLQUhJdEVveGVCZmNCWVdpY3lIeWxaWUdKVHhXMDh1OUZZMUlXLXkyMnJNMnE0YzZCbXJSeVJyVVk5eXJ3a0pXY1R3OGd4d0k?oc=5",
+     "time": "27 Oct 15:00",
+     "tags": []
     },
     {
-     "title": "Tata Consumer Products gains 4% after Q2 show; margin recovery keenly eyed",
+     "title": "Bharti Airtel share price up 3%; rallies 12% in October, outperforms market",
      "source": "Business Standard",
-     "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPZ1Nnd0lNRVp6X3dKV3JGLWlWZmFRSWxxZW5EWURMZFJaeERuRFViZEpyZExKRGIxX0lhbDJ2NWdWYkFiNXQ5NURNcGN5NHJITWZfd2thT2FsRkVyQVQ0NVVHNDl2bHpsbmtPcXItU243dXI0SWhaUDV3b3d6UDFiZnNZanE0bVlfZXhPY1FHcFY2eVJ0WTNwdU5TTzNXeXItMFk0R1JzR24zZDJ2bkkyQ3QyT3VRbHVVNlprTllld181RkxUWHJuTzd1ZEw3Sm5ldTF6SDJQb0VKcXRHNlR6RzNhdnAwQdIB6wFBVV95cUxQUzNFTk43M2o1MWtSd21ITGJ3TXBYaVVzSjRLR3NrWnZhQnhzX1U0b3FQNFVlU2pKY1k1QkZmSEJqTEtYcWdHdkRYaWFFaUV5Q1dSc1M5Z290QUhheEt3UEZnOFB6eVhJblZidmdpWGVrUnVuOXdXX1ROaWlxNGFwd1Nhd3pRa0NPeWtOYXNWVWZZWnd0LVQ0Uk56NDQ1eTdzdTF0NHJFQ3ZRc3p0ZjlPUE14b0d4TmZYWERTWjlfcjRmNTNVRXdIWjNxX205c1ZSUnNEbU9rbHVjdWRHcEs1ZVZRUGhNeEFkeEE4?oc=5",
-     "time": "27 Oct 09:49",
+     "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNc0M3a29UYWNtY0wtT2JBRWlvMEVVRjJGb3ZoeTh3cDdrU2hPWVRCN2xPdjFuQi1YZ0ptVV9VeFhHckQ1QUpMYzhhQzhyUHJyc3I4MTc3cFNVeFhUdlgta2NOT3VEU2FiRTZPcE11UTk1d1JSYzlwdWdTU2UyUmdHZnRxaE55aUFaYTRzdHZGejM5WkpFb2k1YjhpeWs1cUo3NzRSVXRucS02cXAzcVZ2cUZXNzJMeGhCazMzOHRvdzl0N0IzNzgtUEh3elZsR3RNdGoyWNIB2gFBVV95cUxPQU5MZTVZRkkyeW1HX04xN3haaTdLa3NkTFlMUTdyZjFTZXI2XzJ2MEhHLUM4OHFhamc2d3VjU1ItUXRJU2hPODJjd2dIRVE1S2VOQ1d3RUZJanFtXzBkMVhIRFBMRFl6MDF3aUY2QmxudlpLSmF4RHAxVjRSbTFaMC0yMXpOaWllMi1TVmFWMElXRk4xRmRwZEdDREVuUVh4N2VST2RhQ3ZVMjhMblpjUkpaNFdKbW56MGtZdGx6TE4zMmI3NXF6U0RVZEpVNEpZSksxbzFneGpxQQ?oc=5",
+     "time": "27 Oct 13:16",
+     "tags": []
+    },
+    {
+     "title": "Jio’s big-bang listing may give it stock market’s No.2 crown after Reliance Industries",
+     "source": "Economic Times",
+     "link": "https://economictimes.indiatimes.com/markets/stocks/news/jios-big-bang-listing-may-give-it-stock-markets-no-2-crown-after-reliance-industries/articleshow/135227418.cms",
+     "time": "27 Oct 12:46",
      "tags": [
-      "earnings"
+      "capital"
      ]
     },
     {
-     "title": "Tata Consumer shares rally over 4% after Q2 results. Why brokerages remain bullish despite target price cuts",
+     "title": "Bharti Airtel Share Price Live Updates: Bharti Airtel's Current Price",
      "source": "Economic Times",
-     "link": "https://economictimes.indiatimes.com/markets/stocks/news/tata-consumer-shares-in-focus-as-q2-net-profit-rises-16-yoy-why-jefferies-other-brokerages-are-bullish-despite-target-price-cuts/articleshow/135223973.cms",
-     "time": "27 Oct 09:30",
+     "link": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/bharti-airtel-stock-price-live-updates-27-oct-2026/liveblog/135223743.cms",
+     "time": "27 Oct 09:05",
+     "tags": []
+    }
+   ],
+   "setups": [
+    "breakout_20d"
+   ],
+   "rsi": 68.7,
+   "earnings_flag": true,
+   "price_source": "Yahoo"
+  },
+  {
+   "rank": 7,
+   "symbol": "HDFCBANK.NS",
+   "name": "HDFC Bank Limited",
+   "score": 87,
+   "price": 680.2,
+   "chg_pct": -1.14,
+   "volume": 40290698,
+   "turnover_cr": 2740.6,
+   "news_count": 22,
+   "news_tags": [
+    "analyst",
+    "deal",
+    "earnings",
+    "people"
+   ],
+   "news": [
+    {
+     "title": "HDFC Bank Shares Fall 2.3% After Q2 Results; Jefferies, PL, JM, Emkay See Up To 44% Upside, Better Than FDs?",
+     "source": "Goodreturns",
+     "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQdC16UkxuYXZFWmxJYndGX1plcVBCS2pzSkhnTnRPNG03RDdmQl82TEJBM0Zob3hBMnQyM0pqUE9kLUttR3h1MlREWFB0dWgzOFI2ZThyekgyWEJNaFdHXzMxLXhuVU50SHN2eVhJZWtEbjQyZ0lxRzZtUmZoV0loZVpwSEoxRk9ldUFaZnlYR0FrSjQ3MHI5aTBOZE84V2JzSkRHTHFvRUs1RU5aWEZ3ZTctQzVnMHQxWEdESlU0anhyUU9Fc0hKbnNmT3BrT1FlSDl2RmpyRHRvaUhoR0E?oc=5",
+     "time": "27 Oct 14:22",
      "tags": [
       "earnings",
       "analyst"
      ]
     },
     {
-     "title": "Stocks to watch, Oct 27: Waaree Energies, Paytm, L&T, REC, Tata Consumer Products, Maruti, JBM Auto",
-     "source": "Upstox",
-     "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNYm1xcTZ2SnJwSzl3bHpOLTMtNk91UlNfYzZwR1hwc0h2bERHWV9LSzRfTDNFdXVYaWU4X0FJdHBOZmxtQUxYZTF6cWR1dEkxeGdHTUFwNF8wcFZqWHRabl9jc0F0LU5hLVN4YWRSeDJXdE1CbzJVWmE2aVlldmdxMVhSc2VQN1cydzBkVW1HSEotOE1iYkpCYk9rXzBUNS1LXzUzZm5RVzhCVzBGbk1CdDd1ZVMzbGl0QkszWEVNTWNMZGdDa05YOGFHRGpVaS1aNjBmZjNGSklXT3hSNDBqWTdjRHc1VDdNZUE?oc=5",
-     "time": "27 Oct 08:15",
+     "title": "A banking giant, a battered stock: Can HDFC Bank’s new chief turn the tide?",
+     "source": "Economic Times",
+     "link": "https://economictimes.indiatimes.com/markets/stocks/a-banking-giant-a-battered-stock-can-hdfc-banks-new-chief-turn-the-tide/videoshow/135227258.cms",
+     "time": "27 Oct 12:35",
      "tags": []
+    },
+    {
+     "title": "Anup Bagchi takes charge as HDFC Bank MD & CEO - Here are 5 big challenges ahead",
+     "source": "ET Now",
+     "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxONG9GdEVLZ0JRTVlIT2hnclpNSGxVUWhjMTlyUHhZUDI4dGRyMnVLcUtpODB0MkxfQTdnOUJRcGZpbG9ndDVja1JvVkVBNnIwUTJSVGVoR3pkVDg5dGRBT3VtX19oelptcnZJRzhyTWlGbE5SSVR1RXBRc25sRURFRXNDZnVaOWJRVElFbktIRWVlWE9fWjhzU3RXeFpOcjTSAaQBQVVfeXFMUEF6ZGVMU1d4WGtsTnJXXzJkdkxGX0ZvWGx6aktadVFHZ05CaGtndjZWNWVSeW56UEtNRnVPSVVhT3FjbjdOODQ5Rmk3aTloV2dfZ1BScmJtek5wUERPTTJ3Zkd6ekJDMXBlQmRoeDdrS21aZkdNV3ZRZi1QTWZuYU5fQU1oT3pEckZiaTN6NjYyelJkZVVxSExPb2dFaXJYRUdyOHk?oc=5",
+     "time": "27 Oct 12:11",
+     "tags": [
+      "people"
+     ]
+    },
+    {
+     "title": "Anup Bagchi takes charge as HDFC Bank MD & CEO amid growth, governance challenges",
+     "source": "Fortune India",
+     "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQTHhMdGF0d0VTN2l1YnZfZmM2T1d5QU1yYWtVcUVPcEZfMXlXNDlXQVlMNnZvZHJiQ0FIVjhadkp2cXZPZUpvbERkRlBraU12Vk5ZR29JamFSSjhBWHdOWTRFMUZJU0N0YUVocWRzSnRmZ0xmTDBXZTg4N3V6bGJuWEljN3NicmZ1dnpHTnVfcVdGQjVHMGpIRGxUbjVfNWlWOGtpMkZVV3J4a1RvVFdrUGRab0NBU3dvbkd2cnpBbVZRMTV1OHFFUDZKNlkydXNiQndpSdIB1AFBVV95cUxQTHhMdGF0d0VTN2l1YnZfZmM2T1d5QU1yYWtVcUVPcEZfMXlXNDlXQVlMNnZvZHJiQ0FIVjhadkp2cXZPZUpvbERkRlBraU12Vk5ZR29JamFSSjhBWHdOWTRFMUZJU0N0YUVocWRzSnRmZ0xmTDBXZTg4N3V6bGJuWEljN3NicmZ1dnpHTnVfcVdGQjVHMGpIRGxUbjVfNWlWOGtpMkZVV3J4a1RvVFdrUGRab0NBU3dvbkd2cnpBbVZRMTV1OHFFUDZKNlkydXNiQndpSQ?oc=5",
+     "time": "27 Oct 12:05",
+     "tags": [
+      "people"
+     ]
+    },
+    {
+     "title": "Anup Bagchi takes charge as HDFC Bank MD & CEO",
+     "source": "The Economic Times",
+     "link": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOVFBjS091MUVQT0pLenJQR2g5YVV1eUFQZFhFU2lHRFpnZTF1MjlCME1qRkxZNEg5SXNYN2NEN2V5dDJXOVJ5Z0Jic0ljeGJUUWRFR1BaMXJzR1VTT3kzVFpEQ0owUlY1dnV2TmJZM1dyQVpLZ25nUXp0YVZGaW9CZGoxQ19YdXVNRDRWY0Uzb2tHeDJfR3ByNF84UmFfRUtBc0xPQnhzZlpLV0pBSlBlZUlsbFBqRWJqZ1RzMEVsVENiQWhxcHdsOTRiQnRuV1prd0piTVh5SzU5eUdKZXFJdWZzYTlxTmVOcU1IQl92Y1poUWVaQ1EwdUhn0gH6AUFVX3lxTE5UUGNLT3UxRVBPSkt6clBHaDlhVXV5QVBkWEVTaUdEWmdlMXUyOUIwTWpGTFk0SDlJc1g3Y0Q3ZXl0Mlc5UnlnQmJzSWN4YlRRZEVHUFoxcnNHVVNPeTNUWkRDSjBSVjV2dXZOYlkzV3JBWktnbmdRenRhVkZpb0JkajFDX1h1dU1ENFZjRTNva0d4Ml9HcHI0XzhSYV9FS0FzTE9CeHNmWktXSkFKUGVlSWxsUGpFYmpnVHMwRWxUQ2JBaHFwd2w5NGJCdG5XWmt3SmJNWHlLNTl5R0plcUl1ZnNhOXFOZU5xTUhCX3ZjWmhRZVpDUTB1SGc?oc=5",
+     "time": "27 Oct 11:43",
+     "tags": [
+      "people"
+     ]
+    },
+    {
+     "title": "HDFC Bank appoints Anup Bagchi as MD & CEO effective Oct 27, 2026",
+     "source": "scanx.trade",
+     "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQRnE1T2pvS3A5QWZESXF0NW01V3dpSXpYSC10enQwQnJqUkpBcjR4MUJJRzBEelNyaHpqWDRWd3U0X1paZi05M1g1c1d0THpqT1Y2WXdZMWxKeGdZT3QxQVNiY1BSUHQydGpScDYxZThKSy0wRl9aNXlPcVpMdlBOOXZ1WFJCN19ZZ0tqb19IRWNJakN5TEdIeVBhMlBWYTdIS0U2LUJHNzI0aEw4Qjh3dUZJMDRfdVE?oc=5",
+     "time": "27 Oct 11:36",
+     "tags": [
+      "people"
+     ]
     }
    ],
-   "setups": [
-    "breakout_20d",
-    "reclaim_ma20"
-   ],
-   "rsi": 55.5,
-   "earnings_flag": true
+   "setups": [],
+   "rsi": null,
+   "earnings_flag": true,
+   "price_source": "Yahoo"
   },
   {
-   "rank": 9,
+   "rank": 8,
    "symbol": "SONACOMS.NS",
    "name": "Sona BLW Precision Forgings Limited",
-   "score": 86,
+   "score": 87,
    "price": 851.85,
    "chg_pct": 8.95,
    "volume": 19077900,
@@ -622,6 +562,13 @@
      "source": "MarketsMojo",
      "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPcGR6YnFzM2wyOHZvMHNlMHV6OWhMcGlhNUlMdDhaclZjZEpQMFNaZDJjTmVaaTBKOXJFdmRDMlJ4bHFXSl9aUU51TllhQk5BMHVlU3Q4dGZBV2lxeUhTYm9RUHhWZkFYazFGV2JKWWZIVFZVaVNDZ1VNMzFjS01HVnFLMTlPcVljbXJGb1ZEUHZoZ0ZfcVk2bXdLQXZZWUF4R1VjVEt0QzhnNjA4aDhXakdhakR5WXZlRjV0Mno2S09CU3ZieXpSRXlBNVNacFdyelRfS3FvcU9HQQ?oc=5",
      "time": "27 Oct 15:00",
+     "tags": []
+    },
+    {
+     "title": "Sona BLW Precision Forgings Ltd Sees Surge in Value Trading and Institutional Interest",
+     "source": "MarketsMojo",
+     "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQU2VvZ29jTEViSzJxencyNkNoTFMydWRVR1g0NkhFTHNFaENTTDIwbmhfc0xLdmZGekdNUTkyXzlsQ1hNZ2JzYjNISlU3LVNTRjlEMGNUcmF4amV4MmRBRGpfTHhLVjhQN2hWRGF5WjhmblJDZ0tkMEVTaVoxLW1CRllabUZTRmpoUW1nNjNWMFBLS0p3NjI4UEx2d0xWUGdCSTlFWG9FdEFTVkNPNWl2TlY2Z1k3V0VjOUxsbEpENEI3aV9rU2EycGJpYU1rS2N4NER5Qjl1ZVpHNU1k?oc=5",
+     "time": "27 Oct 14:56",
      "tags": []
     },
     {
@@ -653,15 +600,6 @@
      "tags": [
       "earnings"
      ]
-    },
-    {
-     "title": "Sona BLW Precision Forgings expects BEV revenue share to rise to 80% in the long term",
-     "source": "CNBC TV18",
-     "link": "https://news.google.com/rss/articles/CBMikAJBVV95cUxQdmI0a2d3cDhJejFPb21lS0VQOWxQYnNjb21NNHdZWWJoQjZGR0w0LWk2RUROTFczckVMSGVQYTdzaHowUi1PNnhyZ2FGV2xXazlYRk05OWxCOGt2WDVCeFNnWkh1WUg4WFI4UC1wa2JJU283ckh6d1FFOFFuYVlfMFBhUW1tNEZpVHpXSHpJU0xxTlV0Q0FiMTBFM1E2OFNGT09uVWVrNTg5VjBmMVNmbEc3bzdSQmZ5eThPcEZkYjZCM2Q0bWxMMndfVnVBekd5N0x1SG02VDExMndSMEp4c3RQamRORzZNMDhidnpzamFpMV9iX1FyRURVRkswS1hsR2dhbDcySEdBUWduZnRVNdIBkAJBVV95cUxQdmI0a2d3cDhJejFPb21lS0VQOWxQYnNjb21NNHdZWWJoQjZGR0w0LWk2RUROTFczckVMSGVQYTdzaHowUi1PNnhyZ2FGV2xXazlYRk05OWxCOGt2WDVCeFNnWkh1WUg4WFI4UC1wa2JJU283ckh6d1FFOFFuYVlfMFBhUW1tNEZpVHpXSHpJU0xxTlV0Q0FiMTBFM1E2OFNGT09uVWVrNTg5VjBmMVNmbEc3bzdSQmZ5eThPcEZkYjZCM2Q0bWxMMndfVnVBekd5N0x1SG02VDExMndSMEp4c3RQamRORzZNMDhidnpzamFpMV9iX1FyRURVRkswS1hsR2dhbDcySEdBUWduZnRVNQ?oc=5",
-     "time": "27 Oct 10:54",
-     "tags": [
-      "earnings"
-     ]
     }
    ],
    "setups": [
@@ -669,7 +607,83 @@
     "reclaim_ma20"
    ],
    "rsi": 62.9,
-   "earnings_flag": true
+   "earnings_flag": true,
+   "price_source": "Yahoo"
+  },
+  {
+   "rank": 9,
+   "symbol": "PAYTM.NS",
+   "name": "One 97 Communications Limited",
+   "score": 86,
+   "price": 1601.6,
+   "chg_pct": -3.21,
+   "volume": 6040903,
+   "turnover_cr": 967.5,
+   "news_count": 40,
+   "news_tags": [
+    "analyst",
+    "earnings"
+   ],
+   "news": [
+    {
+     "title": "Why Goldman Sachs Sees Paytm Valuation Re-Rating",
+     "source": "Rediff",
+     "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxONjZhc2RHVXVHbWhSTHJOdlBRWENHYnBFeUlTdjdGY3BKZEJ1Z1VRb3NWb0RyRkl4UjZSNWZtaWc3ZUpFV2ZxRnU0eVNFWXZVLTNtNHVfTjFLZ25SaDA1YkM3Q2Jyc19XNVpBZkRtem1pU2JOazYteFBaUnJmTHZOSGYzZUk5azFXdGJEaHNhZ0tmUUFhZTBUUk4wYzZXckwxMjJfbnc5bmtvSTA?oc=5",
+     "time": "27 Oct 15:46",
+     "tags": [
+      "analyst"
+     ]
+    },
+    {
+     "title": "Paytm shares slip despite Q2 profit - Analysts see up to 33% upside going forward",
+     "source": "CNBC TV18",
+     "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOQmZvMkdoRkxqRGk0SWJrNzEyUHpEdEtDaDdicFRIazRBa0dYamt2U2VteXJnMy1IYzBoY0xCLVo0OG9QNktPQ1hLQksyQmE1TERWUGRvY05pOG9hX1FKUW9YbU5KU2x3czVqOWpkaEdwbmVKXzZ6RXZfVEdjZUhKVVY4NjNSNkRNcU5ZUTdJM3k1VFEzeHU2RlNnSWk3emUtb2o2cVpZLV83MDlUUHEtYVZ4NW9vejVZdVlQelotTTVObGJ6ZjJlZDNDQmVGNHFVV3JST1FuQzBJLUZuZFBkenBoZ9IB4wFBVV95cUxOQmZvMkdoRkxqRGk0SWJrNzEyUHpEdEtDaDdicFRIazRBa0dYamt2U2VteXJnMy1IYzBoY0xCLVo0OG9QNktPQ1hLQksyQmE1TERWUGRvY05pOG9hX1FKUW9YbU5KU2x3czVqOWpkaEdwbmVKXzZ6RXZfVEdjZUhKVVY4NjNSNkRNcU5ZUTdJM3k1VFEzeHU2RlNnSWk3emUtb2o2cVpZLV83MDlUUHEtYVZ4NW9vejVZdVlQelotTTVObGJ6ZjJlZDNDQmVGNHFVV3JST1FuQzBJLUZuZFBkenBoZw?oc=5",
+     "time": "27 Oct 13:45",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "Paytm Share Price Drops Despite Profit Surge Brokerages Predict Growth",
+     "source": "Zoom News",
+     "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOZ3U3WWJxbGN6LTZyT2Y1S25uQmNDQXRHTXpRd1lTTGZxbUFGUklvVUw2OFRSRWhxWm12bURTNUt6U0NRc0pSVURsQk1YZTVEdjJtOUN5TnM2ODRtTkhHTjRSLXNkVlh3OXN0N1hremVsX0dDRTZxMVBrRWdXWDdHVjVnX19ZcndMV0hsQnNTVWZBUm9fTGFDMUt3UXZLS3RNb1FCNFVFTlMwNWFGdk1kSkcwVVrSAboBQVVfeXFMUHlBMWdReG5qMUlvSHdkTEJpVndvaVNFM0JWZHdlMHROcWFjeXh1cDNuWk5HUDdXZG5mbkwzUFBZcUNGNzZSdEEtUnRaaWFQQUhiQS1IQlhwMFdOTlJxUTdMVlhBaHEtby01SmMyM0F2b3pPcHo0VVByaEJkOEp0NWJBaGVmblBnVTdqRGdiWlhHLTlTMUNDck9vYkVSNHlyaWN2TjlZMzNSdjlyNnFrNk81eHhfbm1qNUl3?oc=5",
+     "time": "27 Oct 13:41",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "Paytm, Vodafone Idea, ITC Hotels, Sona BLW to Tata Consumer shares: Jefferies sees up to 34% upside | Target, rationale",
+     "source": "TradingView",
+     "link": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxPblRpbmZyN01za0ZKUDQ4UVBqUjV3dGUzUVFvVEFWTnI2REs0d2pXS3lYamlRNXZhd1FWekhiMnZZeU5vb1kyU2p1aXE0WlI2QVZ4bGpOcHVQR2RWMHRMeTdYcHBBWW9lLVRkdEpYWkU1RFlPZjlKNVQ1QVd4YXN0Q1N0elBzUU0xVEpmTWJjMVQ2RnZHOUJUU3FQekJIUWZtX1RkcUJiS29kRHJXWVF3bjhOeXYxdmNad1ZNa2pvT2FkR1pwR20tTWc3akZPc0F4MDBBQlJhdnhSTERfSUdQY1REMDlEcWVidDhHZDhUakdEUVlUTkhneHdPOHc?oc=5",
+     "time": "27 Oct 12:43",
+     "tags": [
+      "analyst"
+     ]
+    },
+    {
+     "title": "stock in news tata consumer kfin tech paytm q2 results",
+     "source": "Zee Business",
+     "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNV0FQQkJNOUNGY1ZUNmw4cDVVN0NvVzFJSUc0cXFTUGJQeWgtMEx0UFJxX05rSmIwTlFFUDRxQjQ0eU1mSDJzcHJBVWo2QjJwemYtdnI3ZFI0YWhCRlhJQUVnVXNqOXBGWV9GQkJiNFdKZnlDWTVXWlZnYWFNQm1Jc0xWNzBnX1N0bU9zbTRVcXdMYkNuSTBrZ2NnQnluNXhZTk9vTmR4a2JOVkc3czNR?oc=5",
+     "time": "27 Oct 12:33",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "Paytm Q2 Profit Soars 10x to ₹225 Cr, Revenue Up 28%",
+     "source": "Rediff MoneyWiz",
+     "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNY0R4VTFRVzk4bzhwOW9lZERNNjdJODNuS09NQUtYNW84eHJ6Nzg2dDdMV1VWQWlEZU1tSTFfaGpYcks4Q25ELVNXZ3IwOUxkdF9KT1J4WkZBeEhZN2pXeG16YkhpTDlWRzNfZGk3NVc5enVaQ1VHWkZ6QzN2WFdRcVgzUkZLRmtHckE0SWxfMUwyUmZ4b2czY2p1d0Jsci1pMUxWc3hjNjPSAagBQVVfeXFMTWNEeFUxUVc5OG84cDlvZWRETTY3STgzbktPTUFLWDVvOHhyejc4NnQ3TFdVVkFpRGVNbUkxX2hqWHJLOENuRC1TV2dyMDlMZHRfSk9SeFpGQXhIWTdqV3htemJIaUw5VkczX2RpNzVXOXp1WkNVR1pGekMzdlhXUXFYM1JGS0ZrR3JBNElsXzFMMlJmeG9nM2NqdXdCbHItaTFMVnN4YzYz?oc=5",
+     "time": "27 Oct 11:55",
+     "tags": [
+      "earnings"
+     ]
+    }
+   ],
+   "setups": [],
+   "rsi": null,
+   "earnings_flag": true,
+   "price_source": "Yahoo"
   },
   {
    "rank": 10,
@@ -680,12 +694,21 @@
    "chg_pct": 2.05,
    "volume": 426626,
    "turnover_cr": 488.5,
-   "news_count": 22,
+   "news_count": 24,
    "news_tags": [
     "earnings",
     "regulatory"
    ],
    "news": [
+    {
+     "title": "Maruti Suzuki Q2 net profit falls 26.9% to Rs 2,415 crore despite record sales",
+     "source": "Storyboard18",
+     "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQenVxS0pTSk1xUk5WaGxSdTRGdDVWY0dqTDI1ZEVKd0pRbjBPYmFEck4xQXVCcFhjeGdnOWpvOXBoQzhteWJrQWtSX1dCWUprdms1cldHQy1JdGU3dUFoejZ1QUJUODU5aGVYN0NySkI4MzVuajhpU1VsR2EzeDVrY2F5SnpVWEFWQ1dmVFVfREdiSmFqTzExb1lDOGNkSUtlUXJVMHUwQUpMV0c1dTZJcnJQcnlZM3JzbW1FdHgwSGtkcG5lYXlPTUljcV9zZWZla0hpbnN0SjDSAdgBQVVfeXFMUHp1cUtKU0pNcVJOVmhsUnU0RnQ1VmNHakwyNWRFSndKUW4wT2JhRHJOMUF1QnBYY3hnZzlqbzlwaEM4bXlia0FrUl9XQllKa3ZrNXJXR0MtSXRlN3VBaHo2dUFCVDg1OWhlWDdDckpCODM1bmo4aVNVbEdhM3g1a2NheUp6VVhBVkNXZlRVX0RHYkphak8xMW9ZQzhjZElLZVFyVTB1MEFKTFdHNXU2SXJyUHJ5WTNyc21tRXR4MEhrZHBuZWF5T01JY3Ffc2VmZWtIaW5zdEow?oc=5",
+     "time": "27 Oct 16:17",
+     "tags": [
+      "earnings"
+     ]
+    },
     {
      "title": "Maruti Suzuki Q2 profit falls 26% to Rs 2,466 crore; revenue rises 26%",
      "source": "Business Today",
@@ -730,102 +753,20 @@
      "tags": [
       "earnings"
      ]
-    },
-    {
-     "title": "Maruti Suzuki's profit estimated to fall 11%: Revenue may stand at ₹54,100 crore in Q2; stock down 31% this...",
-     "source": "Bhaskar English",
-     "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPUzVUM2hNSXRHZUFSRGRtcl9EclEwRERWal91VkkzYVlxeTRHT3AzVWpmd0tad25xNGQxS1Q1ZFhrUWNmc2MwYzBXc2tabU5Ka2g1dzVkbnZhLTF0eXcyUVp5VElsN2NXZUZucmRDSDB3TEpJWWptZFdHNFdrUkNkX1htR0lSUFNZRzFSZWQ4c01xZTJiRDktbE9yZWZzay1KUDlPYk9sRm1GWWxnY2VTUzlLbHlGN1dTTGU1TFNWc9IBxAFBVV95cUxPU0RYTVhiLVVRd0FNcl9kdUN3bl84ajNXYnJtS21yazM5WUpaVWtUZzZxZWlQSzNQTjlXT3pxRmF0YnBkSzFTd3puVERneEFIRW9hVk0zUXVPUTJQYkdXNGxUY3RlT0dFcGNTZFR5X2JSN3JpeXlJNjdOdGVwMW0tYUJSZmc4U2VPdGt2Tm5FNlpwWGtMRlA0NWdGTXlOTklHdF9YbTZBdEs3WUhGZDN4NXpvUVFuR3c4UzVub2RHVHdLTVpG?oc=5",
-     "time": "27 Oct 15:39",
-     "tags": [
-      "earnings"
-     ]
     }
    ],
    "setups": [
     "reclaim_ma20"
    ],
    "rsi": 43.1,
-   "earnings_flag": true
+   "earnings_flag": true,
+   "price_source": "Yahoo"
   },
   {
    "rank": 11,
-   "symbol": "PAYTM.NS",
-   "name": "One 97 Communications Limited",
-   "score": 86,
-   "price": 1601.6,
-   "chg_pct": -3.21,
-   "volume": 6040903,
-   "turnover_cr": 967.5,
-   "news_count": 40,
-   "news_tags": [
-    "analyst",
-    "earnings"
-   ],
-   "news": [
-    {
-     "title": "Why Goldman Sachs Sees Paytm Valuation Re-Rating",
-     "source": "Rediff",
-     "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxONjZhc2RHVXVHbWhSTHJOdlBRWENHYnBFeUlTdjdGY3BKZEJ1Z1VRb3NWb0RyRkl4UjZSNWZtaWc3ZUpFV2ZxRnU0eVNFWXZVLTNtNHVfTjFLZ25SaDA1YkM3Q2Jyc19XNVpBZkRtem1pU2JOazYteFBaUnJmTHZOSGYzZUk5azFXdGJEaHNhZ0tmUUFhZTBUUk4wYzZXckwxMjJfbnc5bmtvSTA?oc=5",
-     "time": "27 Oct 15:46",
-     "tags": [
-      "analyst"
-     ]
-    },
-    {
-     "title": "Paytm shares slip despite Q2 profit - Analysts see up to 33% upside going forward",
-     "source": "CNBC TV18",
-     "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOQmZvMkdoRkxqRGk0SWJrNzEyUHpEdEtDaDdicFRIazRBa0dYamt2U2VteXJnMy1IYzBoY0xCLVo0OG9QNktPQ1hLQksyQmE1TERWUGRvY05pOG9hX1FKUW9YbU5KU2x3czVqOWpkaEdwbmVKXzZ6RXZfVEdjZUhKVVY4NjNSNkRNcU5ZUTdJM3k1VFEzeHU2RlNnSWk3emUtb2o2cVpZLV83MDlUUHEtYVZ4NW9vejVZdVlQelotTTVObGJ6ZjJlZDNDQmVGNHFVV3JST1FuQzBJLUZuZFBkenBoZ9IB4wFBVV95cUxOQmZvMkdoRkxqRGk0SWJrNzEyUHpEdEtDaDdicFRIazRBa0dYamt2U2VteXJnMy1IYzBoY0xCLVo0OG9QNktPQ1hLQksyQmE1TERWUGRvY05pOG9hX1FKUW9YbU5KU2x3czVqOWpkaEdwbmVKXzZ6RXZfVEdjZUhKVVY4NjNSNkRNcU5ZUTdJM3k1VFEzeHU2RlNnSWk3emUtb2o2cVpZLV83MDlUUHEtYVZ4NW9vejVZdVlQelotTTVObGJ6ZjJlZDNDQmVGNHFVV3JST1FuQzBJLUZuZFBkenBoZw?oc=5",
-     "time": "27 Oct 13:45",
-     "tags": [
-      "earnings"
-     ]
-    },
-    {
-     "title": "Paytm Share Price Drops Despite Profit Surge Brokerages Predict Growth",
-     "source": "Zoom News",
-     "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQeUExZ1F4bmoxSW9Id2RMQmlWd29pU0UzQlZkd2UwdE5xYWN5eHVwM25aTkdQN1dkbmZuTDNQUFlxQ0Y3NlJ0QS1SdFppYVBBSGJBLUhCWHAwV05OUnFRN0xWWEFocS1vLTVKYzIzQXZvek9wejRVUHJoQmQ4SnQ1YkFoZWZuUGdVN2pEZ2JaWEctOVMxQ0NyT29iRVI0eXJpY3ZOOVkzM1J2OXI2cWs2TzV4eF9ubWo1SXfSAboBQVVfeXFMUHlBMWdReG5qMUlvSHdkTEJpVndvaVNFM0JWZHdlMHROcWFjeXh1cDNuWk5HUDdXZG5mbkwzUFBZcUNGNzZSdEEtUnRaaWFQQUhiQS1IQlhwMFdOTlJxUTdMVlhBaHEtby01SmMyM0F2b3pPcHo0VVByaEJkOEp0NWJBaGVmblBnVTdqRGdiWlhHLTlTMUNDck9vYkVSNHlyaWN2TjlZMzNSdjlyNnFrNk81eHhfbm1qNUl3?oc=5",
-     "time": "27 Oct 13:41",
-     "tags": [
-      "earnings"
-     ]
-    },
-    {
-     "title": "Paytm, Vodafone Idea, ITC Hotels, Sona BLW to Tata Consumer shares: Jefferies sees up to 34% upside | Target, rationale",
-     "source": "TradingView",
-     "link": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxPblRpbmZyN01za0ZKUDQ4UVBqUjV3dGUzUVFvVEFWTnI2REs0d2pXS3lYamlRNXZhd1FWekhiMnZZeU5vb1kyU2p1aXE0WlI2QVZ4bGpOcHVQR2RWMHRMeTdYcHBBWW9lLVRkdEpYWkU1RFlPZjlKNVQ1QVd4YXN0Q1N0elBzUU0xVEpmTWJjMVQ2RnZHOUJUU3FQekJIUWZtX1RkcUJiS29kRHJXWVF3bjhOeXYxdmNad1ZNa2pvT2FkR1pwR20tTWc3akZPc0F4MDBBQlJhdnhSTERfSUdQY1REMDlEcWVidDhHZDhUakdEUVlUTkhneHdPOHc?oc=5",
-     "time": "27 Oct 12:43",
-     "tags": [
-      "analyst"
-     ]
-    },
-    {
-     "title": "stock in news tata consumer kfin tech paytm q2 results",
-     "source": "Zee Business",
-     "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNV0FQQkJNOUNGY1ZUNmw4cDVVN0NvVzFJSUc0cXFTUGJQeWgtMEx0UFJxX05rSmIwTlFFUDRxQjQ0eU1mSDJzcHJBVWo2QjJwemYtdnI3ZFI0YWhCRlhJQUVnVXNqOXBGWV9GQkJiNFdKZnlDWTVXWlZnYWFNQm1Jc0xWNzBnX1N0bU9zbTRVcXdMYkNuSTBrZ2NnQnluNXhZTk9vTmR4a2JOVkc3czNR?oc=5",
-     "time": "27 Oct 12:33",
-     "tags": [
-      "earnings"
-     ]
-    },
-    {
-     "title": "Paytm Q2 Profit Soars 10x to ₹225 Cr, Revenue Up 28%",
-     "source": "Rediff MoneyWiz",
-     "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNY0R4VTFRVzk4bzhwOW9lZERNNjdJODNuS09NQUtYNW84eHJ6Nzg2dDdMV1VWQWlEZU1tSTFfaGpYcks4Q25ELVNXZ3IwOUxkdF9KT1J4WkZBeEhZN2pXeG16YkhpTDlWRzNfZGk3NVc5enVaQ1VHWkZ6QzN2WFdRcVgzUkZLRmtHckE0SWxfMUwyUmZ4b2czY2p1d0Jsci1pMUxWc3hjNjPSAagBQVVfeXFMTWNEeFUxUVc5OG84cDlvZWRETTY3STgzbktPTUFLWDVvOHhyejc4NnQ3TFdVVkFpRGVNbUkxX2hqWHJLOENuRC1TV2dyMDlMZHRfSk9SeFpGQXhIWTdqV3htemJIaUw5VkczX2RpNzVXOXp1WkNVR1pGekMzdlhXUXFYM1JGS0ZrR3JBNElsXzFMMlJmeG9nM2NqdXdCbHItaTFMVnN4YzYz?oc=5",
-     "time": "27 Oct 11:55",
-     "tags": [
-      "earnings"
-     ]
-    }
-   ],
-   "setups": [],
-   "rsi": null,
-   "earnings_flag": true
-  },
-  {
-   "rank": 12,
    "symbol": "TCS.NS",
    "name": "Tata Consultancy Services Limited",
-   "score": 84,
+   "score": 85,
    "price": 2496.9,
    "chg_pct": -1.5,
    "volume": 4336510,
@@ -893,151 +834,11 @@
     "bull_flag"
    ],
    "rsi": 69.0,
-   "earnings_flag": true
+   "earnings_flag": true,
+   "price_source": "Yahoo"
   },
   {
-   "rank": 13,
-   "symbol": "ITCHOTELS.NS",
-   "name": "ITC Hotels Limited",
-   "score": 84,
-   "price": 166.3,
-   "chg_pct": 1.21,
-   "volume": 19772412,
-   "turnover_cr": 328.8,
-   "news_count": 27,
-   "news_tags": [
-    "analyst",
-    "earnings"
-   ],
-   "news": [
-    {
-     "title": "ITC Hotels share price jumps 6% after Q2 results - Is it the right time to buy the stock? Experts decode",
-     "source": "TradingView",
-     "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPTktabjBLdjNFclpXelI4RGo3b21PclJOX2liWWs2VEJnSmFuemNuN0lWRHJ3dHVyYkNJRnJBdUVIQzdRVGFCdGNma2xLckJjLVBETkNBNTZFSG40eEVGdVA3SWVUY3VPS2V2cDduT0pLTlBwVjVDYS02NDZSMEE5anhWS3NuNjBsTGFfVzlkSVFzOFJzMFdZWi0wUE5kRHA5eHFHd0pmNkhvUDB2YkM5UXdiVnVXRTZ2bW1yendDRDBYSkt3bE1hbGFid1hKbWZoSEw5Rk95Ri1YTVNBVHViTkRSZVlHY0ZyRlFQWXhR?oc=5",
-     "time": "27 Oct 13:57",
-     "tags": [
-      "earnings"
-     ]
-    },
-    {
-     "title": "ITC Hotels Ltd Sees Exceptional Volume Surge Amid Strong Price Gains",
-     "source": "MarketsMojo",
-     "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNMGRJb1RnLXFPNE04NTdjNXJ1UDIxWFZlRkh3bjV4bnk2R0pTVlROSW9VVGVjUlZRN2tic0ZtRlVPZjdHbE5Ta3FnOVg4ekpDb1Fuc2VtRmhva1ZmbTJmcGxfRWRnUWt3UlJ5RXNmc29xam9Hdnltci1vRFZick5rbWNockJSVC1NQ3o1eTVMY0FJNmcwaktxN1YxTWJtakpLOFY3Q1kwS1FHX18xRGNrcnBTTDdJWjBhTkJ2aV9Kb1lvTkc5?oc=5",
-     "time": "27 Oct 13:03",
-     "tags": []
-    },
-    {
-     "title": "ITC Hotels Ltd Valuation Shifts to Very Expensive Amid Mixed Returns",
-     "source": "MarketsMojo",
-     "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQcjN5OGRBNmNoYkcyQUVCTGtWX0ZZbFRrOTY1X09jekw5bkppUGVDVXduMWIzYWJFMHhTa3hvbTN3d19iVzBJUTNPT19SWmV4ak96VndWWHA3LXpxbGFQZjNvRDF6R2pCb19OS1BuZVlyVzgtbjZKdFRMRFRoTlNNV1VCRjBtdk5xX0Y0WmdxXzRIelRLT2x3Z1hNS2J2RUwteDZJQVZxSFR0cnBoa3FYT1R3NVFLdVNuNGlQQldjSy1HTlI4?oc=5",
-     "time": "27 Oct 13:03",
-     "tags": []
-    },
-    {
-     "title": "Paytm, Vodafone Idea, ITC Hotels, Sona BLW to Tata Consumer shares: Jefferies sees up to 34% upside | Target, rationale",
-     "source": "TradingView",
-     "link": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxPblRpbmZyN01za0ZKUDQ4UVBqUjV3dGUzUVFvVEFWTnI2REs0d2pXS3lYamlRNXZhd1FWekhiMnZZeU5vb1kyU2p1aXE0WlI2QVZ4bGpOcHVQR2RWMHRMeTdYcHBBWW9lLVRkdEpYWkU1RFlPZjlKNVQ1QVd4YXN0Q1N0elBzUU0xVEpmTWJjMVQ2RnZHOUJUU3FQekJIUWZtX1RkcUJiS29kRHJXWVF3bjhOeXYxdmNad1ZNa2pvT2FkR1pwR20tTWc3akZPc0F4MDBBQlJhdnhSTERfSUdQY1REMDlEcWVidDhHZDhUakdEUVlUTkhneHdPOHc?oc=5",
-     "time": "27 Oct 12:43",
-     "tags": [
-      "analyst"
-     ]
-    },
-    {
-     "title": "ITC Hotels shares up 6% on Q2 beat; targets suggest up to 44% further upside",
-     "source": "Business Today",
-     "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNZzhabHk5YWtIcXhrbVgxMmRmVUc0cjhrdlZIZk1YM1FsZ203aU82VWFMU2llNzBBSnpyNi00MlctbXRwUVlBT0JqWUVodXl1ODdBSVNhbzZlT1Z2LS1TbDNPZi1UY0tndWNIQU9pNk1ZQTd0dEUwa3gtT2hJWDRRdzhMNjFxRVFqcWcwcXQ5MlFqSElUbGg0UmlEYWpQX1Ytdk5XMlBrWExJSjBZV0FVQXpzaXN2N1hGWnNWOTdhRnRTSjBBRXVxSHNKREFhQTRDcHlKbTJnMWTSAd4BQVVfeXFMTThGWUpJZF9CVmo1YTB6U1hPbDFrRWVvNkVLcmRONER0V0J1V3hKM3BFVGFEMlR0OG1KcnBOZFRfeUotVFRENW1xNkY4Y280WlY3MzctWjktRFpieFpma0xzc3pKZ0hSUExXRkxsRW42UERBOWEzdUhCVFJqeExfVFpQUVdFTVhNQnVDNmtWb2FuNXFsYXZxWFg1UzFHSTFqZ25ELW5sQ19HRHYycnZzRmJVNXdWYW5NV0ZSd3FNcE1jS25KUkxnbTJkd2o5OUxBT0daOUJOdWt5YVZsSThn?oc=5",
-     "time": "27 Oct 12:28",
-     "tags": [
-      "earnings"
-     ]
-    },
-    {
-     "title": "ITC Hotels shares extend rally for second day, rise 6% post-strong Q2; brokerages bullish, check share...",
-     "source": "Moneycontrol.com",
-     "link": "https://news.google.com/rss/articles/CBMihwJBVV95cUxOWUY3ZERuRks3VVVZd01yYlFiODZxdzA4UU8zTWZSN3p2UHdBVlNLWGlFcEFrcUhmVkdkdDc3SzYxVDlndmY0d1BtR2hDUkUtR3ZkR0k2YmFQbWQtVnVHMDJuT2p5clJOZElHOXN4VEI0YTJrWWxrOU1hbHRkTUJDLWxaYVN6NW94aFBZWUVHTF9sTE00cGhWc3h6RnRjQWFkXzl2RUkyZkJZU1pGaVQ3VWFpX3dZUzRidGtjV3JYMDBwYzg1bmJiTkpCWVJWV0s3dHdWa1lMNEVtcHFNNVF6ODFOZTNUd1U5TXUyN2xkVUlSSE5RdzdkSEgxckJpdXdBZmZtT2VhRdIBjAJBVV95cUxQa0RwS1FtUVNVZHBIeU5pejBVdHNLa3MyZ0pKMW1FVURJX2RFeHptR3JQTldYckNsaFdocndoVEd5S2g3anFyRlhiMEVnbHNzQnNMdVpBamk1dDdoc1hsS1Q5bGp3QTg1b3ZGeFpiOTl2dm1sNXJQLWU4SmpldEJvblNaeHFPWFM2VUdZbDgwN3VfeEE4WnkybnNIOS1QclFHdmhBdVc0MC01dlhVNmc2aU1TS2xULVBNWUxzNXBzcGZTV24wQVc3dmd2TjBWRzhWeG40RjU4cG9yakFGbngyMVhxMTRwMzc3ZWN5T2tfb3BmNEUtQ3l6Mk9RNGFEbHRrS1RHUkJvdENNbkFU?oc=5",
-     "time": "27 Oct 11:55",
-     "tags": [
-      "earnings"
-     ]
-    }
-   ],
-   "setups": [
-    "breakout_20d"
-   ],
-   "rsi": 58.7,
-   "earnings_flag": true
-  },
-  {
-   "rank": 14,
-   "symbol": "COFORGE.NS",
-   "name": "Coforge Limited",
-   "score": 83,
-   "price": 1997.0,
-   "chg_pct": 0.2,
-   "volume": 3797745,
-   "turnover_cr": 758.4,
-   "news_count": 9,
-   "news_tags": [
-    "analyst",
-    "capital",
-    "earnings"
-   ],
-   "news": [
-    {
-     "title": "Coforge (NSE:COFORGE) Supports Career Pathways for College Students",
-     "source": "Kalkine India",
-     "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOTlRTaDZMTEdWaHZCaDlyM3ZZLVVPYXN4MDdYOWZQaUVPVjNZbDV4cEZORnF3cnRrc2FKd0hDeEkxYnd0ZDRwLWpDWk9USjFHMGdNczJEWWpQcjlxYlY3eHBuZWpLTXpxV21KZ3hPdVZSTTI2TndIdzQ5VzJscjB4eC13Z1VjMUp4Wmpnc1FSMTY0R1RNSXU1UExNbU9XN0QzTU16Sm02MVpQb0xkV1JfVkZmWG1lemp1ZGV1TjdoRmE4QmJHaGZWRFZsV19kWjNHbS1Rb0wyOXlmVjZnYjVIRw?oc=5",
-     "time": "27 Oct 13:07",
-     "tags": []
-    },
-    {
-     "title": "Infosys, TCS, Coforge shares: IT stocks fall after Anthropic IPO filing; here's why -",
-     "source": "IndiaIPO",
-     "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNa2lJSlFMbVdUeHgxUWhMdGhlcEZidWZIaThLS3liZnZNUVFNZU5uWGo4TUxZTmhKSXdwYl9YR3VnVmdKV3ZDYnVYSWo0XzR0dncwanFPZWFNdEV5OWx0VTFGMjczbDA3OFJic0JiMkNZQXE1WU1lT1dDYzliWW56c1AxQXl6Vklod0UybDJUUVZrelQxdzRyUTJHa2ZvZi1sUWNEQXhBdjJUQTFCYTVnV240OXQ?oc=5",
-     "time": "27 Oct 12:09",
-     "tags": [
-      "capital"
-     ]
-    },
-    {
-     "title": "Top 3 Stocks to Buy Tomorrow 28 Oct: Laurus Labs, MCX, Coforge",
-     "source": "Univest",
-     "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOa3ZINkxaLUFqME9LZ2VSdUxWV3hpeTRFblJxM216eUJMOW1nWkpNS1BNQVNCNm1Idy1NMUkwclVOajVwUUV2TW5ab1E1aUFMNm9wNW9sand5MXdKRzVhWHR3THFNcUpzeU1JSUxNSW0yZlpaVVFKTUZ1REtKV0Nxd29vUFpQWWRIcmpuZHZLVi1xLUk4OEp3YmZpZUNXUXI4VktYVlpSbThSRlY4bWU2UUFnSmNjc3h4OXk1bEY2bmpNTkFydk80V3Zwc2RkSjRiVExoQTZfYw?oc=5",
-     "time": "27 Oct 11:28",
-     "tags": []
-    },
-    {
-     "title": "Coforge Partners with Driving Forward to Expand Career Pathways for First-Generation and Under-Resourced College Students in Chicago",
-     "source": "EquityBulls",
-     "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOYWtmWUthX25XTU5TYmowX2EweUpybEZxeHdRMkgwTVBBenBacnBwNjdGX1haSGhyZ294NDlqdHo1RFBDQlMyZDlXT0VpajV5NERpU2ZNaWtlMlNWeVQ3X0Q3MDUwZE9PbDNVajZrWTE3SFBOMU5BS0NlQjhaVWF0enBRNHV2VElqdGV2eVhYVnFrUE9TQ29IaVVrZm9IUmVTQmRWY2RPQXBpOGE5NnhnX2l6UWUwZld2dzVCUg?oc=5",
-     "time": "27 Oct 10:33",
-     "tags": []
-    },
-    {
-     "title": "Coforge - MTAR Technologies among 4 stocks closing above VWAP",
-     "source": "The Economic Times",
-     "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPSTZIdVRJWkl5ZzVSMDM0NDlFU0dEdW5VaDVtNDdTWHJsYmJ5c0REQXFpMXdkczF2cXhFNjdHcW5uLVdieXFXa1dCRl9uSGlCRlVnVmIxRzloNmpOVHJwbFp2VDJJTnlZWHdpS0FqZDFsLXRpQ3d2cVNjYzU2S290NDBoN3RmU3VzWmdGbEpnQ0RXMnpNb0FncTRqbVBJQ3VKVFBqbnBTZ0xQZTA2MzlkRFFmOExZLVFBZ2tXRkhzcjFvYW9uczhUTE9haw?oc=5",
-     "time": "27 Oct 09:18",
-     "tags": []
-    },
-    {
-     "title": "Coforge Q2FY27 Results: Net profit up 42%, misses estimates",
-     "source": "scanx.trade",
-     "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQa25PS2x3QkhjVmhrb2ktM0k3Mm1WVnFYRDhWeW5SX1V5ZWozV2hRaGN3dEMyUjIyYnB3V19PTjl3V2lCVWhBaTBuV2h5UXE0OWg1T2VseDZ0U0pZZmJTd3hnV2V4SWdtVmN1alRVaWRLRXNmRGdNdV9CVW5rMGhHM2diUW9FZUZGeEdHcDhHSkU3WkxudURkTF92Z2hOd2QyNzZ6a1MtVkZ4UXZkUTl0R1k2MU9oT0Zw?oc=5",
-     "time": "27 Oct 06:53",
-     "tags": [
-      "earnings"
-     ]
-    }
-   ],
-   "setups": [
-    "breakout_20d"
-   ],
-   "rsi": 64.8,
-   "earnings_flag": true
-  },
-  {
-   "rank": 15,
+   "rank": 12,
    "symbol": "APOLLO.NS",
    "name": "Apollo Micro Systems Limited",
    "score": 83,
@@ -1045,12 +846,21 @@
    "chg_pct": 3.53,
    "volume": 39160997,
    "turnover_cr": 1665.9,
-   "news_count": 15,
+   "news_count": 16,
    "news_tags": [
     "deal",
     "earnings"
    ],
    "news": [
+    {
+     "title": "Apollo Micro Systems Q2 FY27 presentation: 72% revenue growth By Investing.com",
+     "source": "Investing.com Australia",
+     "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNNDBaNGhNbFU5M1ozQWlZMjBFUUpTQ0NpaGZTNmwta283aGJ4NWp0SjlCMDlaQV9WaTkydXpGdEttN2d4em5mdXh2VDl1NzJjYlRfTnlzbzEtb0g4TEljSmJPcVRldEFOc1BOV09wRDEyZVp5a053SVRDTk9nRlJGQUtPLS0tMzhKQmpTcFJuYTNQT0xRZUN3bV8wbnI2Zld2NjFJT2hoRXhPMVJNRzVWQ21MYTRmVHNkYVA3dw?oc=5",
+     "time": "27 Oct 15:02",
+     "tags": [
+      "earnings"
+     ]
+    },
     {
      "title": "Earnings call transcript: Apollo Micro Systems jumps 12% after record Q2 2026",
      "source": "Investing.com Australia",
@@ -1096,26 +906,381 @@
       "deal",
       "earnings"
      ]
+    }
+   ],
+   "setups": [],
+   "rsi": null,
+   "earnings_flag": true,
+   "price_source": "Yahoo"
+  },
+  {
+   "rank": 13,
+   "symbol": "COFORGE.NS",
+   "name": "Coforge Limited",
+   "score": 83,
+   "price": 1997.0,
+   "chg_pct": 0.2,
+   "volume": 3797745,
+   "turnover_cr": 758.4,
+   "news_count": 9,
+   "news_tags": [
+    "analyst",
+    "capital",
+    "earnings"
+   ],
+   "news": [
+    {
+     "title": "Coforge named Leader in Everest Group QE Services for AI Applications and Systems",
+     "source": "scanx.trade",
+     "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPdlQyUlNPdDZ1bTNZNHlJcTVZc09vMzlabjlHU0NjeVRQZjZvMGRxbFZjYzVET3M2MEVrbTh2dHZyb0xUX2FJM042ZDRFdW8zWU5FYktQd0VhRTNGUmIyaUYzVm8wWFBUbF9URTdQMWxmZjY4TC14ZmFNQmNFME8tT2N2QjVCOWVOeHE1Z3BuWkF6cV9IMFJxS3pHczNaOWo1Zm5ieW90bXZJSFh0aldJcHR3SEs4RnRlaThJ?oc=5",
+     "time": "27 Oct 15:07",
+     "tags": []
     },
     {
-     "title": "Apollo Micro Systems Q2 Revenue Rises 72% to ₹388 Crore",
-     "source": "First India",
-     "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNcml4dXhnQkxOWXpERVF2UFZMcUVxakxrdUJSVjhVZXJ2aE5QbWtwWm1BejBoamwxX2dEUmJOMWhCSHp6WGYxbUNWdmpZTFp6eXhRMVUzZjBoYkZNLVB5VXZjR19zb3NEYXF1UUt5LVZXYVFUc29aX2hQdmVPa3V2VmxQbmlYNlRJY055MVpHWElJZ09LVHpuSlc2NkczVk4yM3c?oc=5",
-     "time": "27 Oct 10:32",
+     "title": "​Coforge - Diwali stock picks! Axis picks Eternal, Hindalco, 7 other stocks with upside potential of up to 20%. See full list",
+     "source": "The Economic Times",
+     "link": "https://news.google.com/rss/articles/CBMimAJBVV95cUxQbl8xdXJja1U1YnVrY2RBZ2NKbmt6WnhyS2FZeTI5ZGk2ZFRWT1h3ektPY3BVTU1VNVAyaWpMaVhKNW9sWk5JTm1aMXJGXzFtaXNYbHZ5TTJ1YjJjVjdsNkJVVWlLZ0ltZlp6TVhWZXVodWN5bG1JVTYwMWs2ZjRYLThobHBqZlR5Y0E2amxtQ1hvQm1waVhTbVRrNThaaHNBWm52U0N5emdCcmZqWURIeWdmYnpPaklQQ1pKR2ZOX0xkQWpIb05rSlNCWDNkUEl5dmppLVZkS0g4UEdfVEYzSFZQWVliYU9MQ0ItbXlpdWY1R2IyNDRHM0FLOEJTOFhpSDU1Qk9nd0h0UzhhaF91WWZsVXJsaEtW?oc=5",
+     "time": "27 Oct 13:38",
+     "tags": []
+    },
+    {
+     "title": "Infosys, TCS, Coforge shares: IT stocks fall after Anthropic IPO filing; here's why -",
+     "source": "IndiaIPO",
+     "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNa2lJSlFMbVdUeHgxUWhMdGhlcEZidWZIaThLS3liZnZNUVFNZU5uWGo4TUxZTmhKSXdwYl9YR3VnVmdKV3ZDYnVYSWo0XzR0dncwanFPZWFNdEV5OWx0VTFGMjczbDA3OFJic0JiMkNZQXE1WU1lT1dDYzliWW56c1AxQXl6Vklod0UybDJUUVZrelQxdzRyUTJHa2ZvZi1sUWNEQXhBdjJUQTFCYTVnV240OXQ?oc=5",
+     "time": "27 Oct 12:09",
+     "tags": [
+      "capital"
+     ]
+    },
+    {
+     "title": "Top 3 Stocks to Buy Tomorrow 28 Oct: Laurus Labs, MCX, Coforge",
+     "source": "Univest",
+     "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOa3ZINkxaLUFqME9LZ2VSdUxWV3hpeTRFblJxM216eUJMOW1nWkpNS1BNQVNCNm1Idy1NMUkwclVOajVwUUV2TW5ab1E1aUFMNm9wNW9sand5MXdKRzVhWHR3THFNcUpzeU1JSUxNSW0yZlpaVVFKTUZ1REtKV0Nxd29vUFpQWWRIcmpuZHZLVi1xLUk4OEp3YmZpZUNXUXI4VktYVlpSbThSRlY4bWU2UUFnSmNjc3h4OXk1bEY2bmpNTkFydk80V3Zwc2RkSjRiVExoQTZfYw?oc=5",
+     "time": "27 Oct 11:28",
+     "tags": []
+    },
+    {
+     "title": "Coforge Partners with Driving Forward to Expand Career Pathways for First-Generation and Under-Resourced College Students in Chicago",
+     "source": "EquityBulls",
+     "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOYWtmWUthX25XTU5TYmowX2EweUpybEZxeHdRMkgwTVBBenBacnBwNjdGX1haSGhyZ294NDlqdHo1RFBDQlMyZDlXT0VpajV5NERpU2ZNaWtlMlNWeVQ3X0Q3MDUwZE9PbDNVajZrWTE3SFBOMU5BS0NlQjhaVWF0enBRNHV2VElqdGV2eVhYVnFrUE9TQ29IaVVrZm9IUmVTQmRWY2RPQXBpOGE5NnhnX2l6UWUwZld2dzVCUg?oc=5",
+     "time": "27 Oct 10:33",
+     "tags": []
+    },
+    {
+     "title": "Coforge Limited Earnings Missed Analyst Estimates: Here's What Analysts Are Forecasting Now",
+     "source": "Simply Wall Street",
+     "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQSDNuQlRDbFRmREdQdXN1MVRMN2RMUjUwSG80NlY2MDV0ZTc5QkJqR2xEdHBiUmJjcEpiRG53ZTZocUc3cVExOVdhekxSNC1NY0h4TWJTS2xGQmFvQk9yZ0hnMExWMG9xbHIwNjlPRl9kOXBzcEdJMGZJUENqNmVoLXB2UzhvSXJhQlB5RnQybV9XampSdFVQbVhtLW9OaHYtY1Z1MHBGbGNuUmJneFExZkpjRjRaLXZzcE1xWEV6OTZoQ0h1bFh5UTlHNG9rajFZeFByTnVn0gHWAUFVX3lxTFBIM25CVENsVGZER1B1c3UxVEw3ZExSNTBIbzQ2VjYwNXRlNzlCQmpHbER0cGJSYmNwSmJEbndlNmhxRzdxUTE5V2F6TFI0LU1jSHhNYlNLbEZCYW9CT3JnSGcwTFYwb3FscjA2OU9GX2Q5cHNwR0kwZklQQ2o2ZWgtcHZTOG9JcmFCUHlGdDJtX1dqalJ0VVBtWG0tb05odi1jVnUwcEZsY25SYmd4UTFmSmNGNFotdnNwTXFYRXo5NmhDSHVsWHlROUc0b2tqMVl4UHJOdWc?oc=5",
+     "time": "27 Oct 05:41",
      "tags": [
       "earnings"
      ]
     }
    ],
+   "setups": [
+    "breakout_20d"
+   ],
+   "rsi": 64.8,
+   "earnings_flag": true,
+   "price_source": "Yahoo"
+  },
+  {
+   "rank": 14,
+   "symbol": "RELIANCE.NS",
+   "name": "Reliance Industries Limited",
+   "score": 83,
+   "price": 1196.2,
+   "chg_pct": -0.47,
+   "volume": 13064086,
+   "turnover_cr": 1562.7,
+   "news_count": 19,
+   "news_tags": [
+    "analyst",
+    "capital",
+    "deal",
+    "earnings"
+   ],
+   "news": [
+    {
+     "title": "Rs 1,160 and Rs 1,170 Puts Draw Over 4,700 Contracts on Reliance Industries Ltd Ahead of Expiry",
+     "source": "MarketsMojo",
+     "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNVmhYUU9CVnRBTF8xejkyNXhNd09yb01STEx6M19qaFFYMVF5T2pxdEJmLVU3eFI0SkxuZlZPVndwYnNqeWlpRGIwR3I2d3V0eWpweG1nTTZyazlxSUlYck9OVFlZNDBXNjhKbWVaLUxwb0FMY09aWEdic1EwMjROYlJvQ0gyQS1QMk40WnNPTTg5djhocHdPTWtOQnhrQjgySlpYcndTUjZhY1ltWE1DQ1ZRQkdyUkpycXhGYk5Dd2xFY2YzVzM4ZFBvTQ?oc=5",
+     "time": "27 Oct 15:00",
+     "tags": []
+    },
+    {
+     "title": "Reliance Industries Ltd Sees High-Value Trading Amid Mixed Market Signals",
+     "source": "MarketsMojo",
+     "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNV2w5VTVkbmp6MUxKWWJsUUNzWWJIN0I0U0hfUzFrMFVzaElFZXhfSC1rRENRR2xiZUwyUlFnWVc3TFp2UUVUYjNma0RQd3pXbkphYWtxdl94ZWFWajdQb1lUcHV3S1I1ZjBsSTM3VVNsdWVoVjlhNVl2cTRIT0JSY3B0d2RCRm1za3RWay1DdWwzWG9xdktkUi16UktDSzkybVhPMmJDRVJ0T0I2REVMWmZsa3E5bFJ6QlRPU0o1YXBubU9mU2VLaEZmYw?oc=5",
+     "time": "27 Oct 14:45",
+     "tags": []
+    },
+    {
+     "title": "Jio IPO draws INR 7.4 trillion as Reliance Industries stock awaits debut - ad-hoc-news.de",
+     "source": "Google News",
+     "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNMVlrT042YmVrTFdwR1VkcGsxa0JvNGpMNHVJY0FnY1NlWnU0SjZmN3VrVTRTOE9wYm1LTTJ2LUlFWnFhVkRSNUpQUDk0M2wtTkxoM0w4dmhZdnZiMlFzcnNxU1JzYmRXYlN1U3RwS2Z0V0pQbDdpLW1YWmRxSHVVNDRobXdzLWNlaHpOMVBKUWFZNTVJWW5uWDF6aTlsT2F0V0JWOU5RLTRfdVBEQW1SeGltTHlBdlZXdjREV01DWk9DYm4wZXoyU0U0Ykc4ODd4?oc=5",
+     "time": "27 Oct 13:56",
+     "tags": [
+      "capital"
+     ]
+    },
+    {
+     "title": "Jio’s big-bang listing may give it stock market’s No.2 crown after Reliance Industries",
+     "source": "Economic Times",
+     "link": "https://economictimes.indiatimes.com/markets/stocks/news/jios-big-bang-listing-may-give-it-stock-markets-no-2-crown-after-reliance-industries/articleshow/135227418.cms",
+     "time": "27 Oct 12:46",
+     "tags": [
+      "capital"
+     ]
+    },
+    {
+     "title": "4,910 Call Contracts at Rs 1,200 Strike on Reliance Industries Ltd Signal Near-Term Directional Interest",
+     "source": "MarketsMojo",
+     "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOUm45ZjBiV0NZSnFwN1Q3Zlp4WWdnQjNRalRRSnVaNmpSRVpickRvbURXY25lbm1OMHJiUkdNV01RalBLVVEwU1pLLWk4SmFiQ2o0SUJmVjM4T3JPclZEMkZjQmVKcW1hVTVsYV9nem5NcEdwMGVMUV9aNW1UZ19IcEVLVE5oNWs1NEFoMGZXQkduV0R0bC1LUE10VHdVSU1SQXpadHRZZGxiQ0hDblg4M2o2NWlTcFRFN0E1UmVvUU4xSVRVR1JxWEtOOVY?oc=5",
+     "time": "27 Oct 12:42",
+     "tags": []
+    },
+    {
+     "title": "RIL stock jumps 2 per cent as Jio Platforms IPO gets fully subscribed - Mid-Day",
+     "source": "Google News",
+     "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQQXRuc25fOGhBQThkRHI5Y0tSU01wSWJNRzQ0SWRqMnQzU2lnZ2t4TEtoUzcxN0hlM1U0ZUZVV2NjNUtLU1ZDUThHTkdLMnZmek85M0FMVFg1dG1ZZWZOd3NDRjRUVGdiV2R3UXVadkN3c0k2ZTVLczdhamZIQlhHQWRoRTBjMThzejVLOFlYWjZNcDlLNzF2Qmt2OXA2a3ktRHYzUENhckhxM0pIQ2NVd29qLWZtelN2UnB1b3hkTHBkVFA2SFFvUg?oc=5",
+     "time": "27 Oct 12:04",
+     "tags": [
+      "capital"
+     ]
+    }
+   ],
    "setups": [],
    "rsi": null,
-   "earnings_flag": true
+   "earnings_flag": true,
+   "price_source": "Yahoo"
+  },
+  {
+   "rank": 15,
+   "symbol": "BAJAJ-AUTO.NS",
+   "name": "Bajaj Auto Limited",
+   "score": 82,
+   "price": 10390.0,
+   "chg_pct": 3.17,
+   "volume": 340297,
+   "turnover_cr": 353.6,
+   "news_count": 21,
+   "news_tags": [
+    "analyst",
+    "earnings",
+    "people"
+   ],
+   "news": [
+    {
+     "title": "Bajaj Auto Q2 Results: Stan Net Profit Rises 35% YoY to Rs 3,354 Crore, Revenue Up 34%",
+     "source": "APAC Media",
+     "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPWENfTXFaTkFJMllTMDJ5ZXpuWXJWS1N0Z0lTVXpiNUZqTzJVUDNUZU81MWgtU25pbzBXYUlQRTExWUJlRE5Pa09GU3NHZGRVUXdySUdyU0dUQUtZbE9KU3oyM0JYN1M5YW9VMWV5STFDYXVYRGFkTWNwOUMyWTNER3p0MHNhUFlWTFNuYg?oc=5",
+     "time": "27 Oct 16:23",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "Bajaj Auto Q2 Results, Net Profit Jumps 35% To ₹3,354 Crore As Revenue Beats Street Estimates",
+     "source": "Free Press Journal",
+     "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPTkRWWkV1QkVIN1lCRi0zWUxlSFJJUjY5RHVEVFJYQ1owcTQ3X1pqTVJlUlZqQVdmWmNVWkxlMHAtSXViSXJvbUVETDEwMVYyRllqUEVoajh3VnRFb0ZBb3FIUEw0cDF5akpnVEFXMGtQbllxa0ZWdWdDZFB2YTFhUHVaMEs0TmdXczZpLVctNXRvbEE0X2hEQjFhZUg0LU5QbGpaR0tEZ3JhUmxxeE14bFVMNlFKYUxqWktKUzVSaGQ1YURFOERQR3ZR0gHPAUFVX3lxTFA5OXQ1X3hHWnhpb1dhdmZFRFdoVzlJelZVb3gxeTJ4Q0RNSWlETDJvNHg3a0ZvOUYwdlFtYms4Nm9ETFFpWC04Y0FDWEFISVJKb1BJc3ZpM2twUTFFaVNLVTB5NFdzSEFMYzU5MFJRd2ZIVnZLSFZHeVl6VmtlWkRra2dHaEd0MTNsY0NIUWpWVkU5cHd5OENlY0VES09SaXFhanFnMnE5ZDlSN2xfRnVTTmZjX0NaYjZhQm04QWN0WDVoOEtHdy1QZ3JpZDdhWQ?oc=5",
+     "time": "27 Oct 16:22",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "Bajaj Auto Q2 results: Profit surges 63%, revenue crosses Rs 25,000 crore",
+     "source": "Financial Express",
+     "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOU09VSlpYNU9FaTBqOVlwRl9PWDhjVjlQSjh6Yl9NeW9hMmRnQlhQdUMwWWZuSE1LUGZvYm1CejlNR1gweUFRVnVpZDJsYm9mM2R6YUpfUWxCcmlsang5VGx6RzIyU2xCdkJCV0tqNXZTRGstWFRIZWFkUzVmRm9TRDlQaVNFUEJDTDdVRHA0N0dYTVYxRnc5RWtnZG5ZMjc4bDV3NXJZM2Ewd21jR0h3TzRuaEZFbW5Sa3c5eFdxcjJkNi1VcE15OA?oc=5",
+     "time": "27 Oct 16:17",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "Bajaj Auto Q2 results: Net profit rises 59% YoY; revenue jumps 60% YoY to ₹25,125 crore",
+     "source": "Upstox",
+     "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNUXcySnJ0WmJZaUdYSk53SUVxWmc2T3I0S2pURE00cVN4WU4zUWMyaEdKVlpRQW1ZRXpXUmNyXzhRQTRrTnU5Mi1pZGdNSHZSRnFSa0hkVF9uRThOclFWZUoyNll5aGltQzVGZjVPRXUtUjNWeXF3cG96OU5NWWNTTmltZmpEUVl0YURlMkp0alhWMmQ0eUlJa2ZVN1FpbFJVRmgwUDF4YnFVbVFXem9iSFJsSTFRZVllME96UlBQYUMyY2lQS3ZDVzdmN1EzaFg3bzlHaTFKOS1hV24ydHc?oc=5",
+     "time": "27 Oct 16:07",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "Bajaj Auto appoints Kailash Zanzari as Chief Operating Officer",
+     "source": "scanx.trade",
+     "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOZnRsbFZmOEI0aURWN1dGUl81N3hyZlhMQ182UlRjX1B2Q00wNEYzOVJTVUlLSDlqSGlJUzJEbDVPeXd4aFpXRW5fTW5lUXVGMEp3VnFGVV9VZlZPTmFwN0JORjV0T25MZ2cwQkJnR3E1RkFGQ1lXTEYxS1p1WXdqTjhfNjlCOXlmT25jOHB3dml4M056VkN2bkFXZEpZZUtNWG9VTnlISFNzbFFtWmtnbl9XbEh1R00?oc=5",
+     "time": "27 Oct 16:02",
+     "tags": [
+      "people"
+     ]
+    },
+    {
+     "title": "Bajaj Auto designates Kailash Zanzari as Chief Operating Officer",
+     "source": "Business Upturn",
+     "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQMU8wOEtadnJWUW9zZ1lBQTlxZnBMRlRoNGE3dWJtLXBFVk9rQTRjbnN0Z01fOU9LemhNbm5CS19feWdZSm1wckczMENvTkIyVHdOQWprd0hCYkpMdDJDbm0xOFlJMTktRGM3N1pvWFFBZTJ6X25fSEMzUmp3WjZCelZoX1hvVFBYWFBFZE1KeGRQOTM3OG8xY05EY0wtMzJiWDhN?oc=5",
+     "time": "27 Oct 15:55",
+     "tags": []
+    }
+   ],
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "rsi": 47.0,
+   "earnings_flag": true,
+   "price_source": "Yahoo"
   },
   {
    "rank": 16,
+   "symbol": "ITCHOTELS.NS",
+   "name": "ITC Hotels Limited",
+   "score": 82,
+   "price": 166.3,
+   "chg_pct": 1.21,
+   "volume": 19772412,
+   "turnover_cr": 328.8,
+   "news_count": 26,
+   "news_tags": [
+    "analyst",
+    "earnings"
+   ],
+   "news": [
+    {
+     "title": "ITC Hotels Q2 Net Profit Jumps 52% to Rs 202.65 Cr",
+     "source": "Rediff MoneyWiz",
+     "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOaFBPVy12X3NIVTJlbWVScVZ6aG8yYmtULTJxVWdJV2ZrTUZVTC0zandkbHlsbkhRNm56dXdoS00zcUZmZndZelZzUDRvMDFVRGtCUUxfUFlZTXhIblplcU0yaXlSM29kSi0xSW04NzZRT013bDRmUWh6LXVYWjJRNUxEV3Q5WU9xS0xPYjZGNHI2Y3VkT1Q3MUtWRm5URS05OXJCVmR5V0vSAagBQVVfeXFMTmhQT1ctdl9zSFUyZW1lUnFWemhvMmJrVC0ycVVnSVdma01GVUwtM2p3ZGx5bG5IUTZuenV3aEtNM3FGZmZ3WXpWc1A0bzAxVURrQlFMX1BZWU14SG5aZXFNMml5UjNvZEotMUltODc2UU9Nd2w0ZlFoei11WFoyUTVMRFd0OVlPcUtMT2I2RjRyNmN1ZE9UNzFLVkZuVEUtOTlyQlZkeVdL?oc=5",
+     "time": "27 Oct 14:25",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "ITC Hotels share price jumps 6% after Q2 results - Is it the right time to buy the stock? Experts decode",
+     "source": "TradingView",
+     "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPTktabjBLdjNFclpXelI4RGo3b21PclJOX2liWWs2VEJnSmFuemNuN0lWRHJ3dHVyYkNJRnJBdUVIQzdRVGFCdGNma2xLckJjLVBETkNBNTZFSG40eEVGdVA3SWVUY3VPS2V2cDduT0pLTlBwVjVDYS02NDZSMEE5anhWS3NuNjBsTGFfVzlkSVFzOFJzMFdZWi0wUE5kRHA5eHFHd0pmNkhvUDB2YkM5UXdiVnVXRTZ2bW1yendDRDBYSkt3bE1hbGFid1hKbWZoSEw5Rk95Ri1YTVNBVHViTkRSZVlHY0ZyRlFQWXhR?oc=5",
+     "time": "27 Oct 13:57",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "ITC Hotels Ltd Sees Exceptional Volume Surge Amid Strong Price Gains",
+     "source": "MarketsMojo",
+     "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNMGRJb1RnLXFPNE04NTdjNXJ1UDIxWFZlRkh3bjV4bnk2R0pTVlROSW9VVGVjUlZRN2tic0ZtRlVPZjdHbE5Ta3FnOVg4ekpDb1Fuc2VtRmhva1ZmbTJmcGxfRWRnUWt3UlJ5RXNmc29xam9Hdnltci1vRFZick5rbWNockJSVC1NQ3o1eTVMY0FJNmcwaktxN1YxTWJtakpLOFY3Q1kwS1FHX18xRGNrcnBTTDdJWjBhTkJ2aV9Kb1lvTkc5?oc=5",
+     "time": "27 Oct 13:03",
+     "tags": []
+    },
+    {
+     "title": "ITC Hotels Ltd Valuation Shifts to Very Expensive Amid Mixed Returns",
+     "source": "MarketsMojo",
+     "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQcjN5OGRBNmNoYkcyQUVCTGtWX0ZZbFRrOTY1X09jekw5bkppUGVDVXduMWIzYWJFMHhTa3hvbTN3d19iVzBJUTNPT19SWmV4ak96VndWWHA3LXpxbGFQZjNvRDF6R2pCb19OS1BuZVlyVzgtbjZKdFRMRFRoTlNNV1VCRjBtdk5xX0Y0WmdxXzRIelRLT2x3Z1hNS2J2RUwteDZJQVZxSFR0cnBoa3FYT1R3NVFLdVNuNGlQQldjSy1HTlI4?oc=5",
+     "time": "27 Oct 13:03",
+     "tags": []
+    },
+    {
+     "title": "Paytm, Vodafone Idea, ITC Hotels, Sona BLW to Tata Consumer shares: Jefferies sees up to 34% upside | Target, rationale",
+     "source": "TradingView",
+     "link": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxPblRpbmZyN01za0ZKUDQ4UVBqUjV3dGUzUVFvVEFWTnI2REs0d2pXS3lYamlRNXZhd1FWekhiMnZZeU5vb1kyU2p1aXE0WlI2QVZ4bGpOcHVQR2RWMHRMeTdYcHBBWW9lLVRkdEpYWkU1RFlPZjlKNVQ1QVd4YXN0Q1N0elBzUU0xVEpmTWJjMVQ2RnZHOUJUU3FQekJIUWZtX1RkcUJiS29kRHJXWVF3bjhOeXYxdmNad1ZNa2pvT2FkR1pwR20tTWc3akZPc0F4MDBBQlJhdnhSTERfSUdQY1REMDlEcWVidDhHZDhUakdEUVlUTkhneHdPOHc?oc=5",
+     "time": "27 Oct 12:43",
+     "tags": [
+      "analyst"
+     ]
+    },
+    {
+     "title": "ITC Hotels shares up 6% on Q2 beat; targets suggest up to 44% further upside",
+     "source": "Business Today",
+     "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNZzhabHk5YWtIcXhrbVgxMmRmVUc0cjhrdlZIZk1YM1FsZ203aU82VWFMU2llNzBBSnpyNi00MlctbXRwUVlBT0JqWUVodXl1ODdBSVNhbzZlT1Z2LS1TbDNPZi1UY0tndWNIQU9pNk1ZQTd0dEUwa3gtT2hJWDRRdzhMNjFxRVFqcWcwcXQ5MlFqSElUbGg0UmlEYWpQX1Ytdk5XMlBrWExJSjBZV0FVQXpzaXN2N1hGWnNWOTdhRnRTSjBBRXVxSHNKREFhQTRDcHlKbTJnMWTSAd4BQVVfeXFMTThGWUpJZF9CVmo1YTB6U1hPbDFrRWVvNkVLcmRONER0V0J1V3hKM3BFVGFEMlR0OG1KcnBOZFRfeUotVFRENW1xNkY4Y280WlY3MzctWjktRFpieFpma0xzc3pKZ0hSUExXRkxsRW42UERBOWEzdUhCVFJqeExfVFpQUVdFTVhNQnVDNmtWb2FuNXFsYXZxWFg1UzFHSTFqZ25ELW5sQ19HRHYycnZzRmJVNXdWYW5NV0ZSd3FNcE1jS25KUkxnbTJkd2o5OUxBT0daOUJOdWt5YVZsSThn?oc=5",
+     "time": "27 Oct 12:28",
+     "tags": [
+      "earnings"
+     ]
+    }
+   ],
+   "setups": [
+    "breakout_20d"
+   ],
+   "rsi": 58.7,
+   "earnings_flag": true,
+   "price_source": "Yahoo"
+  },
+  {
+   "rank": 17,
+   "symbol": "HCLTECH.NS",
+   "name": "HCL Technologies Limited",
+   "score": 81,
+   "price": 1420.0,
+   "chg_pct": 0.21,
+   "volume": 4546353,
+   "turnover_cr": 645.6,
+   "news_count": 9,
+   "news_tags": [
+    "analyst",
+    "deal",
+    "earnings"
+   ],
+   "news": [
+    {
+     "title": "IT stocks crash! Infosys, TCS, Wipro, HCL Tech - Nifty IT tanks over 2% today, biggest sectoral loser - What lies ahead?",
+     "source": "Mint",
+     "link": "https://www.livemint.com/market/stock-market-news/it-stocks-crash-infosys-tcs-wipro-hcl-tech-nifty-it-tanks-over-2-today-biggest-sectoral-loser-what-lies-ahead-11793077366586.html",
+     "time": "27 Oct 11:06",
+     "tags": [
+      "earnings",
+      "analyst"
+     ]
+    },
+    {
+     "title": "HCL Tech Share Price Live Updates: HCL Tech's Current Trading Status",
+     "source": "Economic Times",
+     "link": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/hcl-tech-stock-price-livestock-price-today-live-updates-27-oct-2026/liveblog/135223378.cms",
+     "time": "27 Oct 08:35",
+     "tags": []
+    },
+    {
+     "title": "Stocks To Watch Today: Maruti Suzuki, L&T, Tata Consumer, HCLTech, Waaree Energies, And More",
+     "source": "NDTV Profit",
+     "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNalpuWkdjOFYxNnJBbWZ2bk5TamxVMk5aZ2hkRU42N2RoR0ZEVW9UbU9IRkxWLWZlVWFQakwwLWhHMlljLTFTVzJqWXBKR1F3a1I0NkdQMklzcWNzTTdNcUphanh2djQ2S3NtUk1rVDFvLVBTZ0FvclFrNlE1T3pLVVRscUEzbXdBbkxSWHJGZERpWFAxZFJFTGhnZ2NkZEtVUkNSWWw0YkVpaFFfd3pBUnBDYUlNWnh5WmhxVVlXTDg1Vi1Bd2hueTJn0gHSAUFVX3lxTE1MU2lTVkRzbnhVM1JkZ0lsRkdTZ2hYU0xIbUJDTk1MX0VBaFJheUJvZDBQYmoxSnl4R0M3UlFmMk9PLWwxZTF2Vkwzb3V5OHFmV0xZT2diVnNhTUsxVzY5UU12S1lHWU9sZUpnV0RPSmlNZlVVOGszNTA4clBmYzRfczZVdkdfeXdGX3loUXNuWGlkWW05Vm41cERWSG82b05EVjk3cUNFeXhiT0VqLWcxSnhfZ2g0UWpGUkZKUENMSUVBZjMtWlR2Tnl1ZnJQY1U4QQ?oc=5",
+     "time": "27 Oct 07:00",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "Stocks to Watch Today, October 27: Paytm, IOB, Ather Energy, Tata Communications, HCLTech in focus",
+     "source": "ET Now",
+     "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPeTBRWVlFMldYVjNWQjVsQmtONjdSY2FGUGVFeTJwMnNLYi05U25uMXFDVzF3OFhqcUtmVl9GR0VfWHRhZ2t4Z1lYWGFPejRXWUNubUMtNkVHbDR1Ylh0MUNheWNnQk1YVlg2NjB3WF9ZdmJQaFNidEZaV09iRDRhM0I3TGQ5NU1pTnNBRXF5dGhjT0Z4RVFEQ0xuWW9iQ3JlcGpRcE5LMDVaeGxfNkRmZkgybUttRHNYVEdqRDRsNHZwTmxWSjN3bGNmSndQYUdZWUh6TDIxVUhHVUFDNlpwNHVB0gHiAUFVX3lxTE95MFFZWUUyV1hWM1ZCNWxCa042N1JjYUZQZUV5MnAyc0tiLTlTbm4xcUNXMXc4WGpxS2ZWX0ZHRV9YdGFna3hnWVhYYU96NFdZQ25tQy02RUdsNHViWHQxQ2F5Y2dCTVhWWDY2MHdYX1l2YlBoU2J0RlpXT2JENGEzQjdMZDk1TWlOc0FFcXl0aGNPRnhFUURDTG5Zb2JDcmVwalFwTkswNVp4bF82RGZmSDJtS21Ec1hUR2pENGw0dnBObFZKM3dsY2ZKd1BhR1lZSHpMMjFVSEdVQUM2WnA0dUE?oc=5",
+     "time": "27 Oct 06:17",
+     "tags": []
+    },
+    {
+     "title": "HCLTech scales Climate Action Grant to 24 countries, strengthening global action against climate change",
+     "source": "EquityBulls",
+     "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNejk4MzdWcG1rQ3ZNMDExaEFzaHVnenVURlFxdXFLVUVkX0FDUlFqLURuS2NVWHdwOGZ6NGlDRGthM2NUWS1WS1lHM2VjcEdjSjRWenFHM1dWYUQyUm44UnVFbUF1alljSUZ6Q2Rfa1JpeXBWOFZMU0R3emx4ZzBhNldac3BxQnhuNnJyNlhQajdqWFgwVnBNTFhsRm5KbExqaXhGUUtkc0gyZmhoNDRtQy0yMHJsQmdCY0I0?oc=5",
+     "time": "26 Oct 23:07",
+     "tags": []
+    },
+    {
+     "title": "Can HCL Tech(NSE:HCLTECH) Sustain Its Q2FY27 Margin and Booking Growth?",
+     "source": "Kalkine India",
+     "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNU3gzTVc4ZDVvZlpDekV2Y0I2RmM1RW1zMVVSdXZUTXBuNVQwOUU3Y0d3c1Z4Ymo2dHU5WGd6QW0wYXNpdWZ0RUh6b2wzdl83RXpfMVd4QU9ZblhVMmp4VEl2cGIwQkRzeDBmVlpUWDdMSlI4Vnd3MW5IRkE3ZFEzZDFQVy1Xd1VWT3NrZzh1TXRzVklDTkJ3REl5QWFWRmRCQzhjb0FRTHV3T0lyelYtVVZR?oc=5",
+     "time": "26 Oct 22:43",
+     "tags": [
+      "earnings"
+     ]
+    }
+   ],
+   "setups": [
+    "bull_flag"
+   ],
+   "rsi": 71.7,
+   "earnings_flag": true,
+   "price_source": "Yahoo"
+  },
+  {
+   "rank": 18,
    "symbol": "KFINTECH.NS",
    "name": "Kfin Technologies Limited",
-   "score": 83,
+   "score": 81,
    "price": 869.65,
    "chg_pct": 4.9,
    "volume": 3849950,
@@ -1183,234 +1348,19 @@
     "reclaim_ma20"
    ],
    "rsi": 49.9,
-   "earnings_flag": true
-  },
-  {
-   "rank": 17,
-   "symbol": "BAJAJ-AUTO.NS",
-   "name": "Bajaj Auto Limited",
-   "score": 83,
-   "price": 10390.0,
-   "chg_pct": 3.17,
-   "volume": 340297,
-   "turnover_cr": 353.6,
-   "news_count": 17,
-   "news_tags": [
-    "analyst",
-    "earnings",
-    "people"
-   ],
-   "news": [
-    {
-     "title": "Bajaj Auto Q2 results: Net profit rises 59% YoY; revenue jumps 60% YoY to ₹25,125 crore",
-     "source": "Upstox",
-     "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNUXcySnJ0WmJZaUdYSk53SUVxWmc2T3I0S2pURE00cVN4WU4zUWMyaEdKVlpRQW1ZRXpXUmNyXzhRQTRrTnU5Mi1pZGdNSHZSRnFSa0hkVF9uRThOclFWZUoyNll5aGltQzVGZjVPRXUtUjNWeXF3cG96OU5NWWNTTmltZmpEUVl0YURlMkp0alhWMmQ0eUlJa2ZVN1FpbFJVRmgwUDF4YnFVbVFXem9iSFJsSTFRZVllME96UlBQYUMyY2lQS3ZDVzdmN1EzaFg3bzlHaTFKOS1hV24ydHc?oc=5",
-     "time": "27 Oct 16:07",
-     "tags": [
-      "earnings"
-     ]
-    },
-    {
-     "title": "Bajaj Auto appoints Kailash Zanzari as Chief Operating Officer",
-     "source": "scanx.trade",
-     "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOZnRsbFZmOEI0aURWN1dGUl81N3hyZlhMQ182UlRjX1B2Q00wNEYzOVJTVUlLSDlqSGlJUzJEbDVPeXd4aFpXRW5fTW5lUXVGMEp3VnFGVV9VZlZPTmFwN0JORjV0T25MZ2cwQkJnR3E1RkFGQ1lXTEYxS1p1WXdqTjhfNjlCOXlmT25jOHB3dml4M056VkN2bkFXZEpZZUtNWG9VTnlISFNzbFFtWmtnbl9XbEh1R00?oc=5",
-     "time": "27 Oct 16:02",
-     "tags": [
-      "people"
-     ]
-    },
-    {
-     "title": "Bajaj Auto designates Kailash Zanzari as Chief Operating Officer",
-     "source": "Business Upturn",
-     "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQMU8wOEtadnJWUW9zZ1lBQTlxZnBMRlRoNGE3dWJtLXBFVk9rQTRjbnN0Z01fOU9LemhNbm5CS19feWdZSm1wckczMENvTkIyVHdOQWprd0hCYkpMdDJDbm0xOFlJMTktRGM3N1pvWFFBZTJ6X25fSEMzUmp3WjZCelZoX1hvVFBYWFBFZE1KeGRQOTM3OG8xY05EY0wtMzJiWDhN?oc=5",
-     "time": "27 Oct 15:55",
-     "tags": []
-    },
-    {
-     "title": "Bajaj Auto appoints Pallavi Joshi Bakhru as independent director",
-     "source": "scanx.trade",
-     "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQaWRFRVRLZndCb1FzTkVnanFFWnBfelZKdHNBMFZHOGlJSEFpSk1UWE5nRWRlTGtaQXpkLXVtT0JiZ203SkMyc0ZpekxLLVFFcGphQjZmX3dFSVFNeVNSU283OVRocmtVZC15RldjRmJwZ21kajVsYmZOZG9QeXdna0p5bTlYWjJjMXl0Um9jbXJXdUNFaGxVWjU4VGNiSzJJWFhjUTBRb1hVTWh4NU1VOHdIUkpYcjJWb0E?oc=5",
-     "time": "27 Oct 15:53",
-     "tags": [
-      "people"
-     ]
-    },
-    {
-     "title": "Bajaj Auto Q2 earnings: Revenue hits Rs 20,000 crore mark for first time, net profit rises 35%",
-     "source": "Business Today",
-     "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNUGYwd05rbUsySWZBOExwU3B6V2VnUUUydklJMkw0VDNhM1hhYUJZOGpGdDNUaTdxZFFselR4TDVOd0diWHhYNC1TYldGbzZCZlQyUmo3Z1oyaUxrdTdncVN2cWNUcnN2R3V5Q3JxZlRiU1RUMEd3Z083dVFwMF9FODRobnRBOUxNWjFBOWUyRmx3Y3VDZTlueC1wQ1B1SUtwZ1ZtSUlUMl9Kd0xoMEFlMUVFdmRRdWlCSGVodFg4UUFnWUJ1ejZ3ejR3QnNFVDJlakFGSDFDVEoySFBZWG9vRGtGa2JjX2hFQWpBejZTMNIB9AFBVV95cUxNeUltY1NqdHpDSUxUaUJScXBjOWJBaC1Qazhzd2dfaVNsR0cwN3Z1QjNMbnJQUjlUWjFlM1BXOEJXX3h2dktXd09hdTZLeGNZd1ZCQ19sUUhuTkU3bTB3UDdKaEt5djVaV0lSRTJ0eVRWVFRWNzZOMDB0UDkycmhxZlFiN1ZkS2JaU0szUi1OYWlyanJJOW1VMmlTbDhJZWk0TVBIVGtoSTRmZG5GSjI2UUMxMWp2eDlqcENQTjIzZmIxSC1FQTBRb3R0b0p0dS16UWJ3aGlqZWJMcEw3Zk1XUEwtNDJoS0R4REctZU1IcGF3X3BD?oc=5",
-     "time": "27 Oct 15:49",
-     "tags": [
-      "earnings"
-     ]
-    },
-    {
-     "title": "Bajaj Auto appoints Madhusudan Gopalan as Chief Product Officer effective 16 November 2026",
-     "source": "Business Upturn",
-     "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQcUM2eU5CSDRvUVNQNEhjY0dhdWNHQkpHTzg3STdLRG1BUXYzZnEyZGJxeUF4S2hDQWtkZEFtaEVrZ1dUcFhldERQelRIXzRzWUk1LUtkRjBBZUhCYk1qMkpYcUg2azdmYkFyMHlSaDNYNGFPVEtRZ0htbWRWNU9wWUZTSmJEY1hJanNNalE4MWxzNDB2M0swUTdmV0tGa3N6V3k0Q0FMN0RjeVVVeTFYdkxEZTFydldpeFE5YldaSG1BWmJ4alUtbA?oc=5",
-     "time": "27 Oct 15:46",
-     "tags": [
-      "people"
-     ]
-    }
-   ],
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "rsi": 47.0,
-   "earnings_flag": true
-  },
-  {
-   "rank": 18,
-   "symbol": "HCLTECH.NS",
-   "name": "HCL Technologies Limited",
-   "score": 82,
-   "price": 1420.0,
-   "chg_pct": 0.21,
-   "volume": 4546353,
-   "turnover_cr": 645.6,
-   "news_count": 10,
-   "news_tags": [
-    "analyst",
-    "deal",
-    "earnings"
-   ],
-   "news": [
-    {
-     "title": "IT stocks crash! Infosys, TCS, Wipro, HCL Tech - Nifty IT tanks over 2% today, biggest sectoral loser - What lies ahead?",
-     "source": "Mint",
-     "link": "https://www.livemint.com/market/stock-market-news/it-stocks-crash-infosys-tcs-wipro-hcl-tech-nifty-it-tanks-over-2-today-biggest-sectoral-loser-what-lies-ahead-11793077366586.html",
-     "time": "27 Oct 11:06",
-     "tags": [
-      "earnings",
-      "analyst"
-     ]
-    },
-    {
-     "title": "HCL Tech Share Price Live Updates: HCL Tech's Current Trading Status",
-     "source": "Economic Times",
-     "link": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/hcl-tech-stock-price-livestock-price-today-live-updates-27-oct-2026/liveblog/135223378.cms",
-     "time": "27 Oct 08:35",
-     "tags": []
-    },
-    {
-     "title": "Stocks To Watch Today: Maruti Suzuki, L&T, Tata Consumer, HCLTech, Waaree Energies, And More",
-     "source": "NDTV Profit",
-     "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNalpuWkdjOFYxNnJBbWZ2bk5TamxVMk5aZ2hkRU42N2RoR0ZEVW9UbU9IRkxWLWZlVWFQakwwLWhHMlljLTFTVzJqWXBKR1F3a1I0NkdQMklzcWNzTTdNcUphanh2djQ2S3NtUk1rVDFvLVBTZ0FvclFrNlE1T3pLVVRscUEzbXdBbkxSWHJGZERpWFAxZFJFTGhnZ2NkZEtVUkNSWWw0YkVpaFFfd3pBUnBDYUlNWnh5WmhxVVlXTDg1Vi1Bd2hueTJn0gHSAUFVX3lxTE1MU2lTVkRzbnhVM1JkZ0lsRkdTZ2hYU0xIbUJDTk1MX0VBaFJheUJvZDBQYmoxSnl4R0M3UlFmMk9PLWwxZTF2Vkwzb3V5OHFmV0xZT2diVnNhTUsxVzY5UU12S1lHWU9sZUpnV0RPSmlNZlVVOGszNTA4clBmYzRfczZVdkdfeXdGX3loUXNuWGlkWW05Vm41cERWSG82b05EVjk3cUNFeXhiT0VqLWcxSnhfZ2g0UWpGUkZKUENMSUVBZjMtWlR2Tnl1ZnJQY1U4QQ?oc=5",
-     "time": "27 Oct 07:00",
-     "tags": [
-      "earnings"
-     ]
-    },
-    {
-     "title": "Stocks to Watch Today, October 27: Paytm, IOB, Ather Energy, Tata Communications, HCLTech in focus",
-     "source": "ET Now",
-     "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOSUVWZUpkT2w4cmRCcTRMd2M3aGh4N0lVOFdDWktILVJxc1dSZnFYV3FlTHVUbk5NdHNqQWZIbkRoZkhjU2pHWlV1WVRwSFIwNF9TTU1uS1pfa1dFSm5XTHNkTjcxVW11YnFTZW9lY2lvMkNoaC1ER1RfQUkzMUJUaTVWblZKYkFyeENESFRHYzVzMm1HRHBaZ0JkMlVOZ2pCclFWUVJzYzZNT0lzUWZPWmxRY2ZVby14RlNTcU1DTUc2Q2c2ZU14bHdnWlk5MUkybGpBWDlxN1c4TGRI0gHiAUFVX3lxTE95MFFZWUUyV1hWM1ZCNWxCa042N1JjYUZQZUV5MnAyc0tiLTlTbm4xcUNXMXc4WGpxS2ZWX0ZHRV9YdGFna3hnWVhYYU96NFdZQ25tQy02RUdsNHViWHQxQ2F5Y2dCTVhWWDY2MHdYX1l2YlBoU2J0RlpXT2JENGEzQjdMZDk1TWlOc0FFcXl0aGNPRnhFUURDTG5Zb2JDcmVwalFwTkswNVp4bF82RGZmSDJtS21Ec1hUR2pENGw0dnBObFZKM3dsY2ZKd1BhR1lZSHpMMjFVSEdVQUM2WnA0dUE?oc=5",
-     "time": "27 Oct 06:17",
-     "tags": []
-    },
-    {
-     "title": "HCLTech scales Climate Action Grant to 24 countries, strengthening global action against climate change",
-     "source": "EquityBulls",
-     "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNejk4MzdWcG1rQ3ZNMDExaEFzaHVnenVURlFxdXFLVUVkX0FDUlFqLURuS2NVWHdwOGZ6NGlDRGthM2NUWS1WS1lHM2VjcEdjSjRWenFHM1dWYUQyUm44UnVFbUF1alljSUZ6Q2Rfa1JpeXBWOFZMU0R3emx4ZzBhNldac3BxQnhuNnJyNlhQajdqWFgwVnBNTFhsRm5KbExqaXhGUUtkc0gyZmhoNDRtQy0yMHJsQmdCY0I0?oc=5",
-     "time": "26 Oct 23:07",
-     "tags": []
-    },
-    {
-     "title": "Can HCL Tech(NSE:HCLTECH) Sustain Its Q2FY27 Margin and Booking Growth?",
-     "source": "Kalkine India",
-     "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNU3gzTVc4ZDVvZlpDekV2Y0I2RmM1RW1zMVVSdXZUTXBuNVQwOUU3Y0d3c1Z4Ymo2dHU5WGd6QW0wYXNpdWZ0RUh6b2wzdl83RXpfMVd4QU9ZblhVMmp4VEl2cGIwQkRzeDBmVlpUWDdMSlI4Vnd3MW5IRkE3ZFEzZDFQVy1Xd1VWT3NrZzh1TXRzVklDTkJ3REl5QWFWRmRCQzhjb0FRTHV3T0lyelYtVVZR?oc=5",
-     "time": "26 Oct 22:43",
-     "tags": [
-      "earnings"
-     ]
-    }
-   ],
-   "setups": [
-    "bull_flag"
-   ],
-   "rsi": 71.7,
-   "earnings_flag": true
+   "earnings_flag": true,
+   "price_source": "Yahoo"
   },
   {
    "rank": 19,
-   "symbol": "RELIANCE.NS",
-   "name": "Reliance Industries Limited",
-   "score": 82,
-   "price": 1196.2,
-   "chg_pct": -0.47,
-   "volume": 13064086,
-   "turnover_cr": 1562.7,
-   "news_count": 15,
-   "news_tags": [
-    "capital",
-    "deal",
-    "earnings"
-   ],
-   "news": [
-    {
-     "title": "Reliance Industries Ltd Sees High-Value Trading Amid Mixed Market Signals",
-     "source": "MarketsMojo",
-     "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNV2w5VTVkbmp6MUxKWWJsUUNzWWJIN0I0U0hfUzFrMFVzaElFZXhfSC1rRENRR2xiZUwyUlFnWVc3TFp2UUVUYjNma0RQd3pXbkphYWtxdl94ZWFWajdQb1lUcHV3S1I1ZjBsSTM3VVNsdWVoVjlhNVl2cTRIT0JSY3B0d2RCRm1za3RWay1DdWwzWG9xdktkUi16UktDSzkybVhPMmJDRVJ0T0I2REVMWmZsa3E5bFJ6QlRPU0o1YXBubU9mU2VLaEZmYw?oc=5",
-     "time": "27 Oct 14:45",
-     "tags": []
-    },
-    {
-     "title": "Jio IPO draws INR 7.4 trillion as Reliance Industries stock awaits debut - ad-hoc-news.de",
-     "source": "Google News",
-     "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNMVlrT042YmVrTFdwR1VkcGsxa0JvNGpMNHVJY0FnY1NlWnU0SjZmN3VrVTRTOE9wYm1LTTJ2LUlFWnFhVkRSNUpQUDk0M2wtTkxoM0w4dmhZdnZiMlFzcnNxU1JzYmRXYlN1U3RwS2Z0V0pQbDdpLW1YWmRxSHVVNDRobXdzLWNlaHpOMVBKUWFZNTVJWW5uWDF6aTlsT2F0V0JWOU5RLTRfdVBEQW1SeGltTHlBdlZXdjREV01DWk9DYm4wZXoyU0U0Ykc4ODd4?oc=5",
-     "time": "27 Oct 13:56",
-     "tags": [
-      "capital"
-     ]
-    },
-    {
-     "title": "Jio’s big-bang listing may give it stock market’s No.2 crown after Reliance Industries",
-     "source": "Economic Times",
-     "link": "https://economictimes.indiatimes.com/markets/stocks/news/jios-big-bang-listing-may-give-it-stock-markets-no-2-crown-after-reliance-industries/articleshow/135227418.cms",
-     "time": "27 Oct 12:46",
-     "tags": [
-      "capital"
-     ]
-    },
-    {
-     "title": "4,910 Call Contracts at Rs 1,200 Strike on Reliance Industries Ltd Signal Near-Term Directional Interest",
-     "source": "MarketsMojo",
-     "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOUm45ZjBiV0NZSnFwN1Q3Zlp4WWdnQjNRalRRSnVaNmpSRVpickRvbURXY25lbm1OMHJiUkdNV01RalBLVVEwU1pLLWk4SmFiQ2o0SUJmVjM4T3JPclZEMkZjQmVKcW1hVTVsYV9nem5NcEdwMGVMUV9aNW1UZ19IcEVLVE5oNWs1NEFoMGZXQkduV0R0bC1LUE10VHdVSU1SQXpadHRZZGxiQ0hDblg4M2o2NWlTcFRFN0E1UmVvUU4xSVRVR1JxWEtOOVY?oc=5",
-     "time": "27 Oct 12:42",
-     "tags": []
-    },
-    {
-     "title": "VA Tech Wabag shares snap eight-day losing streak; Stock jumps 8% on ₹1,000 crore RIL order win",
-     "source": "CNBC TV18",
-     "link": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxPTkNPQUNORl9ZMjZfcEFpdS1ZdGpVRlA5T01KOUZCcUVWaWtsSzVYbm9IWFhJYWNuQTlrVTBPQnFENi1lOHUyMFBiMTRFaE16WElfTGE5dFRONHhIelVhdUpMU1RtN2dqODFacHNJb3d0Zk5KRXZMVzNjU2pjWno4OU9sT3ZuTFlDZVEwSVBUS1l5MWdmTkFuRkFWMFhjbFpmd3VqeXhrY1RRNXRwd09MUkZuZkw4YXppMzYyRGJGcl9sUTVFRHoySDZQU1NwNFE3RnF6M284cjhvMXFpLXRmaEdHMzlnckNPakdLaWJZSUN3TWJvQ1RJ0gH3AUFVX3lxTE9OQ09BQ05GX1kyNl9wQWl1LVl0alVGUDlPTUo5RkJxRVZpa2xLNVhub0hYWElhY25BOWtVME9CcUQ2LWU4dTIwUGIxNEVoTXpYSV9MYTl0VE40eEh6VWF1SkxTVG03Z2o4MVpwc0lvd3RmTkpFdkxXM2NTamNaejg5T2xPdm5MWUNlUTBJUFRLWXkxZ2ZOQW5GQVYwWGNsWmZ3dWp5eGtjVFE1dHB3T0xSRm5mTDhhemkzNjJEYkZyX2xRNUVEejJINlBTU3A0UTdGcXozbzhyOG8xcWktdGZoR0czOWdyQ09qR0tpYllJQ3dNYm9DVEk?oc=5",
-     "time": "27 Oct 11:56",
-     "tags": [
-      "deal"
-     ]
-    },
-    {
-     "title": "Reliance Industries Transforms ₹1,000 Investment into ₹53 Lakh Since 1977",
-     "source": "Udaipur Kiran",
-     "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPY1N3V3FYM0M0YlRKMkJzaGpBMElmSGxwblp3a2FyaHZoSko1MUI4M3ZCSlFSNjQ0ZWZLNWFxREdhbUFjM2FnRGRfY1FSUV9OajRGZDQzT3FTS085a0ZNSWRUOGdVUVRFNUZWVzhad0cxbEdicUlIRHBUdTBfdi0yVDJHWXhyaFlJZzJCOFotNEJkMk02OVZod3VoY0VPcjlmb0R3OEp5MTF4QWtqd2JDaHVCNHE?oc=5",
-     "time": "27 Oct 11:45",
-     "tags": []
-    }
-   ],
-   "setups": [],
-   "rsi": null,
-   "earnings_flag": true
-  },
-  {
-   "rank": 20,
    "symbol": "AEQUS.NS",
    "name": "Aequs Limited",
-   "score": 80,
+   "score": 79,
    "price": 219.1,
    "chg_pct": -9.61,
    "volume": 38706133,
    "turnover_cr": 848.1,
-   "news_count": 16,
+   "news_count": 13,
    "news_tags": [
     "analyst",
     "deal",
@@ -1477,7 +1427,72 @@
    ],
    "setups": [],
    "rsi": null,
-   "earnings_flag": true
+   "earnings_flag": true,
+   "price_source": "Yahoo"
+  },
+  {
+   "rank": 20,
+   "symbol": "HAL.NS",
+   "name": "Hindustan Aeronautics Limited",
+   "score": 77,
+   "price": 4855.0,
+   "chg_pct": 1.68,
+   "volume": 1045881,
+   "turnover_cr": 507.8,
+   "news_count": 5,
+   "news_tags": [
+    "deal",
+    "regulatory"
+   ],
+   "news": [
+    {
+     "title": "Apollo Micro, Paras Defence, BEL, HAL: Defence stocks today soar up to 9% as DAC clears  ₹2.12 lakh crore proposals",
+     "source": "Mint",
+     "link": "https://www.livemint.com/market/stock-market-news/apollo-micro-paras-defence-bel-hal-defence-stocks-today-soar-up-to-9-as-dac-clears-rs-2-12-lakh-crore-proposals-11793081045775.html",
+     "time": "27 Oct 12:02",
+     "tags": [
+      "deal"
+     ]
+    },
+    {
+     "title": "BEML, BDL, HAL, BEL, MTAR shares rise up to 5%; Macquarie, Goldman Sachs, others pick top bets",
+     "source": "Business Today",
+     "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNSmNubjZQaWxnS0dEZmlwN2NGQzk2REVyWFZCdXZ1TWF6U2NGOW1pTVA4NjgwWmhzNHJrLW9xNXlEd1hXLVhwaXVVR2NaTV9pdnRGYmxjbnJGYnFQbWN2ZFk2Mkg5aDY2Qmo2RzF0dzlKeDJRcmk4MXAwYWVXWmZ2Y05xcUp0NW4wSDNSUW85b0hPSndMREphRlNuQVlkRi1LZVA4OG55d3ZXai1aU0NWZGRsVEx6UWZUVmJOYjI3R1pDUXlvVWJXbnJSR0l6T1FmdU5meFc1dXJJM3UzOVZwbElkQmxmX3pIU1HSAe8BQVVfeXFMT0ViVnJ4OW0yMjg1T0Y0OW5EVjFvSUd4eWJtM0FwSmVzM2o0dktDSnZNWmVMV3J2aHQ5WmxSck5qYjJ3OFBqeklsVGxveW4tZG9vWHVXUVRGTVNYUVdzNGk5LVI3VWtjdFNUMmxkUXpoY2hrUk9iVDJEc0ZCdWZjMmxjUHhIb29tdnR0dk9tZHVlVUdzNW1oVDRQRUZjTFVwQzJNRUdoUVViMUVha0ZvOFVmZTVWaDVvZ3IwaUNQMFVJOG93R0JfMlM3cm9lRWNxVDl1dW8wekZyaHZTTDlXWEJoSW4talRqdE9aOTI4NVE?oc=5",
+     "time": "27 Oct 10:00",
+     "tags": []
+    },
+    {
+     "title": "HAL, BEL, Paras Defence, other stocks rise up to 4% after DAC clears  proposals worth Rs 2.12 lakh crore",
+     "source": "Economic Times",
+     "link": "https://economictimes.indiatimes.com/markets/stocks/news/hal-bel-paras-defence-other-stocks-in-focus-after-dac-clears-proposals-worth-rs-2-12-lakh-crore/articleshow/135223830.cms",
+     "time": "27 Oct 09:17",
+     "tags": [
+      "deal"
+     ]
+    },
+    {
+     "title": "Nifty India Defence rises over 1% after Rs 2.12-lakh-crore DAC approval; HAL, BEL, BEML, Mazagon Dock gain",
+     "source": "ET Now",
+     "link": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxNUkowRzlvWU1wTDBfQXRnOFJqZzlzN1JPcndsNHh2U0paU3VkdTdLUjZsa2ZKdGdRTXVENlBZdjJLU0JHX1BKUjYxRjc2a1RqZ3V1RTlEYnVvTkZiTk5rd1ZNYU91UFVvVDl0WjBGeGI0X2Y1eEFwU0JERmw2czk2T0IwV0thVFY3c04zVk9EbkZGZDFPNHR4WmFBTVY3SE9QbWFOdzQ3dDluNWRjeW9YQmpUVGE5a1pDMXI5Y0ZEVmFIVEstRWlZOThJNzBVZmU4RGhSTFZEWVAtYWo1NnNLNFZLNEsxT1JScl9fSlNQRVJMempNdElMd0EtONIBgAJBVV95cUxQQ1NVNTlYbXBxRG9rOUowM2tGSGlQYnRJZ0NSSEhZdi1rUEJpTkZDdGdMTDd1ajlpYjN6RnRDWDY3d0IybFQ1bElKT1hSZDhOaktTRkJLLTV0dkZaRnRtdFh0WTFvYUhINXpEMHF2QmZpeUdyUURDeVJ4UHdhNUVKdUx3WWNuNURhNk5sNHExRG5ya0ZlcW13ZUl0ellMQXFESFdxQ0NncDdmWFp0WHNXbVhrWXNhMG5xUzVUSi1tSDJCbUhDckFlNjhqckRMVXd1dTBLMWdkUG1mNE1DUDVNLWJEai1vQzFoc2xMS0dsYzJxMHFLMW8xcHA0SVM3cG54?oc=5",
+     "time": "27 Oct 08:58",
+     "tags": [
+      "regulatory"
+     ]
+    },
+    {
+     "title": "Defence stocks: HAL, BEML likely beneficiaries of Rs 2.12 lakh crore DAC approvals; shares to buy",
+     "source": "Business Today",
+     "link": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQbllUSXFyZlBkTW9IZ3FCMWdVNEpSUDBXRnlfQ1Y3cVRCc3pONUEwdTFhcGF0YVBidHFrZ1FyaHNpenB3UVFkQU85YzlOZGxfZkVWajhDZEJySm5BOGgxclRNUW5VS19wbFl1UExZTk01REhXVXplc180SnBQWTdObEg5OXlfbzBrbHgyU01NQkotNS14SDVuVHlpOGhTU3NMVUtqbkI4Z3B2SGlZbDNGekhKZ2t4QkFtb2FKcmNLWkViQURlR1ZkRXhDU0xkRVFfdndoYUxadkthbWNVRjdObGNGSTFWZHJiQmplXzgxWlU2bkJB0gH6AUFVX3lxTE5qczVzZUw1RHNlemRBQWVUaDc5c09SR2MtU0UycVJKdHNMV2NCQWRIbWZVMHQzUmMyXzU5eFhKUEExZGdYTWNkazNVc3dtaWRsN2lHU3dtczdjZWtPd2prQzVyNkhXU1VpbXdZV045c1RVbGdpVmk4eFpUZUFRQndCWnZzeEN1MlVrSjNscHk2OUNheExyN1VkVGlEYkQ4TUJWMlZaMnRFQ0I5QjJPSlFhc2VNdFM2ZDZ5Um1OZUZOTFNORGxCY2c0N1hzdnE3OUdFU1lFc0VBRVNnZldqamlGNjJkajZ0U1FKek10bTBWVC05X0xEVm9uVXc?oc=5",
+     "time": "27 Oct 08:50",
+     "tags": []
+    }
+   ],
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "rsi": 52.4,
+   "earnings_flag": false,
+   "price_source": "Yahoo"
   }
  ],
  "errors": [
