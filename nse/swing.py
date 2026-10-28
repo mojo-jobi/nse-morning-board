@@ -825,17 +825,16 @@ def stage_eod(now_utc, force=False):
         for sym, p in cands[side]:
             S = S_all[sym]
             p["odds"] = simulate(day_moves(S), p, cfg["horizon_days"], 2000, rnd_seed)
+            if p["odds"]["p_target"] < 0.10:           # the target almost never comes first: not a plan
+                continue
             r = row(sym, p, side)
             tr = trend(S, len(S["c"]) - 1, side)
             rsv = rs_pct.get(sym, 0.5) if side == "long" else 1 - rs_pct.get(sym, 0.5)
             vol = min((r["vol_ratio"] or 0) / 2.0, 1) if p["kind"] in ("breakout", "breakdown") else 0.5
             edge = (p["odds"]["p_target"] - p["odds"]["p_stop"] + 1) / 2
-            r["tech"] = round(100 * (0.3 * tr + 0.3 * rsv + 0.15 * vol + 0.25 * edge))
-            fs = r["fund"]
-            if fs is None:
-                r["score"] = r["tech"]
-            else:
-                r["score"] = round(0.5 * r["tech"] + 0.5 * (fs if side == "long" else 100 - fs))
+            r["tech"] = round(100 * (0.25 * tr + 0.25 * rsv + 0.15 * vol + 0.35 * edge))
+            fs = r["fund"] if r["fund"] is not None else 50   # not loaded yet: neutral, and the card says n/a
+            r["score"] = round(0.5 * r["tech"] + 0.5 * (fs if side == "long" else 100 - fs))
             rows.append(r)
         # one row per stock: its best setup
         best = {}
@@ -855,7 +854,7 @@ def stage_eod(now_utc, force=False):
         tech = 100 * (0.35 * min(near, 1) + 0.25 * min(max((45 - b["rsi"]) / 25, 0), 1) +
                       0.2 * b["divergence"] + 0.2 * (b["kind"] == "turning up"))
         r["tech"] = round(tech)
-        r["score"] = round(0.4 * tech + 0.6 * r["fund"]) if r["fund"] is not None else round(tech * 0.6)
+        r["score"] = round(0.4 * tech + 0.6 * (r["fund"] if r["fund"] is not None else 50))
         r["quality"] = (r["fund"] or 0) >= 60
         bots.append(r)
     bots.sort(key=lambda x: (-x["score"], -x["turnover_cr"]))
