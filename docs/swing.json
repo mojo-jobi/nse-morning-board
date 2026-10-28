@@ -975,7 +975,10 @@
     "lot": 550,
     "hv20": 27.0,
     "iv_rank": null,
-    "budget": 15000,
+    "budget": 30000,
+    "take_profit_pct": 60,
+    "stop_pct": 10,
+    "exit_dte": 7,
     "pcr": 0.63,
     "call_wall": 1640.0,
     "put_wall": 1600.0,
@@ -1007,7 +1010,7 @@
       "ok": true,
       "why_not": [],
       "fails": [
-       "costs Rs 60,665 a lot, over the Rs 15,000 budget",
+       "costs Rs 60,665 a lot, over the Rs 30,000 budget",
        "IV 33% is above the stock's realised 27.0%: buy a spread instead"
       ]
      },
@@ -1041,7 +1044,7 @@
       ],
       "fails": [
        "bid-ask spread 3.1%",
-       "costs Rs 52,442 a lot, over the Rs 15,000 budget",
+       "costs Rs 52,442 a lot, over the Rs 30,000 budget",
        "IV 31% is above the stock's realised 27.0%: buy a spread instead"
       ]
      },
@@ -1072,7 +1075,7 @@
       "ok": true,
       "why_not": [],
       "fails": [
-       "costs Rs 44,550 a lot, over the Rs 15,000 budget",
+       "costs Rs 44,550 a lot, over the Rs 30,000 budget",
        "IV 30% is above the stock's realised 27.0%: buy a spread instead"
       ]
      },
@@ -1103,7 +1106,7 @@
       "ok": true,
       "why_not": [],
       "fails": [
-       "costs Rs 37,592 a lot, over the Rs 15,000 budget",
+       "costs Rs 37,592 a lot, over the Rs 30,000 budget",
        "IV 30% is above the stock's realised 27.0%: buy a spread instead"
       ]
      },
@@ -1134,7 +1137,7 @@
       "ok": true,
       "why_not": [],
       "fails": [
-       "costs Rs 31,240 a lot, over the Rs 15,000 budget",
+       "costs Rs 31,240 a lot, over the Rs 30,000 budget",
        "IV 30% is above the stock's realised 27.0%: buy a spread instead"
       ]
      },
@@ -1165,7 +1168,6 @@
       "ok": true,
       "why_not": [],
       "fails": [
-       "costs Rs 25,658 a lot, over the Rs 15,000 budget",
        "IV 29% is above the stock's realised 27.0%: buy a spread instead"
       ]
      },
@@ -1196,7 +1198,6 @@
       "ok": true,
       "why_not": [],
       "fails": [
-       "costs Rs 20,928 a lot, over the Rs 15,000 budget",
        "IV 30% is above the stock's realised 27.0%: buy a spread instead"
       ]
      },
@@ -1227,7 +1228,6 @@
       "ok": true,
       "why_not": [],
       "fails": [
-       "costs Rs 16,775 a lot, over the Rs 15,000 budget",
        "IV 30% is above the stock's realised 27.0%: buy a spread instead"
       ]
      },
@@ -1281,6 +1281,46 @@
       "buy_iv": 29.79,
       "sell_iv": 29.3,
       "theta_lot_day": -64,
+      "lots_in_budget": 3,
+      "fails": []
+     },
+     {
+      "buy": 1620.0,
+      "sell": 1720.0,
+      "width": 100.0,
+      "cost": 44.5,
+      "cost_lot": 24475,
+      "max_profit_lot": 30525,
+      "gain_lot": 15715,
+      "loss_lot": 6652,
+      "rr": 2.36,
+      "breakeven": 1664.5,
+      "flat_lot": 23796,
+      "buy_delta": 0.599,
+      "sell_delta": 0.304,
+      "buy_iv": 30.27,
+      "sell_iv": 29.3,
+      "theta_lot_day": -68,
+      "lots_in_budget": 1,
+      "fails": []
+     },
+     {
+      "buy": 1640.0,
+      "sell": 1720.0,
+      "width": 80.0,
+      "cost": 32.95,
+      "cost_lot": 18122,
+      "max_profit_lot": 25878,
+      "gain_lot": 12689,
+      "loss_lot": 5477,
+      "rr": 2.32,
+      "breakeven": 1672.95,
+      "flat_lot": 17232,
+      "buy_delta": 0.538,
+      "sell_delta": 0.304,
+      "buy_iv": 29.72,
+      "sell_iv": 29.3,
+      "theta_lot_day": -73,
       "lots_in_budget": 1,
       "fails": []
      },
@@ -1301,6 +1341,26 @@
       "buy_iv": 29.36,
       "sell_iv": 29.3,
       "theta_lot_day": -67,
+      "lots_in_budget": 2,
+      "fails": []
+     },
+     {
+      "buy": 1620.0,
+      "sell": 1700.0,
+      "width": 80.0,
+      "cost": 38.5,
+      "cost_lot": 21175,
+      "max_profit_lot": 22825,
+      "gain_lot": 12069,
+      "loss_lot": 5865,
+      "rr": 2.06,
+      "breakeven": 1658.5,
+      "flat_lot": 20336,
+      "buy_delta": 0.599,
+      "sell_delta": 0.361,
+      "buy_iv": 30.27,
+      "sell_iv": 29.72,
+      "theta_lot_day": -27,
       "lots_in_budget": 1,
       "fails": []
      },
@@ -1321,7 +1381,7 @@
       "buy_iv": 29.72,
       "sell_iv": 29.72,
       "theta_lot_day": -31,
-      "lots_in_budget": 1,
+      "lots_in_budget": 2,
       "fails": []
      },
      {
@@ -1341,7 +1401,7 @@
       "buy_iv": 29.36,
       "sell_iv": 29.72,
       "theta_lot_day": -26,
-      "lots_in_budget": 1,
+      "lots_in_budget": 3,
       "fails": []
      },
      {
@@ -1361,72 +1421,8 @@
       "buy_iv": 29.79,
       "sell_iv": 29.72,
       "theta_lot_day": -23,
-      "lots_in_budget": 3,
+      "lots_in_budget": 6,
       "fails": []
-     },
-     {
-      "buy": 1640.0,
-      "sell": 1680.0,
-      "width": 40.0,
-      "cost": 19.6,
-      "cost_lot": 10780,
-      "max_profit_lot": 11220,
-      "gain_lot": 5728,
-      "loss_lot": 3473,
-      "rr": 1.65,
-      "breakeven": 1659.6,
-      "flat_lot": 9871,
-      "buy_delta": 0.538,
-      "sell_delta": 0.418,
-      "buy_iv": 29.72,
-      "sell_iv": 29.79,
-      "theta_lot_day": -8,
-      "lots_in_budget": 1,
-      "fails": []
-     },
-     {
-      "buy": 1620.0,
-      "sell": 1720.0,
-      "width": 100.0,
-      "cost": 44.5,
-      "cost_lot": 24475,
-      "max_profit_lot": 30525,
-      "gain_lot": 15715,
-      "loss_lot": 6652,
-      "rr": 2.36,
-      "breakeven": 1664.5,
-      "flat_lot": 23796,
-      "buy_delta": 0.599,
-      "sell_delta": 0.304,
-      "buy_iv": 30.27,
-      "sell_iv": 29.3,
-      "theta_lot_day": -68,
-      "lots_in_budget": 0,
-      "fails": [
-       "costs Rs 24,475 a lot, over the Rs 15,000 budget"
-      ]
-     },
-     {
-      "buy": 1640.0,
-      "sell": 1720.0,
-      "width": 80.0,
-      "cost": 32.95,
-      "cost_lot": 18122,
-      "max_profit_lot": 25878,
-      "gain_lot": 12689,
-      "loss_lot": 5477,
-      "rr": 2.32,
-      "breakeven": 1672.95,
-      "flat_lot": 17232,
-      "buy_delta": 0.538,
-      "sell_delta": 0.304,
-      "buy_iv": 29.72,
-      "sell_iv": 29.3,
-      "theta_lot_day": -73,
-      "lots_in_budget": 0,
-      "fails": [
-       "costs Rs 18,122 a lot, over the Rs 15,000 budget"
-      ]
      }
     ],
     "trade": {
@@ -1446,7 +1442,7 @@
      "buy_iv": 29.79,
      "sell_iv": 29.3,
      "theta_lot_day": -64,
-     "lots_in_budget": 1,
+     "lots_in_budget": 3,
      "fails": [],
      "structure": "spread"
     },
@@ -1518,6 +1514,615 @@
     "notes": []
    },
    {
+    "symbol": "PAYTM.NS",
+    "name": "One 97 Communications Limited",
+    "type": "CE",
+    "source": "bullish",
+    "rank": 23,
+    "score": 54,
+    "session": "2026-10-28",
+    "plan": {
+     "kind": "support bounce",
+     "entry": 1641.85,
+     "stop": 1577.7,
+     "target": 1770.15,
+     "rr": 2.0,
+     "est_days": 5
+    },
+    "p_target": 0.334,
+    "spot": 1631.5,
+    "expiry": "2026-11-23",
+    "dte": 26,
+    "lot": 725,
+    "hv20": 34.5,
+    "iv_rank": null,
+    "budget": 30000,
+    "take_profit_pct": 60,
+    "stop_pct": 10,
+    "exit_dte": 7,
+    "pcr": 0.49,
+    "call_wall": 1700.0,
+    "put_wall": 1600.0,
+    "strikes": [
+     {
+      "strike": 1540.0,
+      "ltp": 121.15,
+      "bid": 119.05,
+      "ask": 121.75,
+      "iv": 39.06,
+      "delta": 0.727,
+      "gamma": 0.002,
+      "theta": -1.0879,
+      "vega": 1.4479,
+      "theta_lot_day": -789,
+      "vega_lot": 1050,
+      "oi_lots": 28,
+      "oi_chg_pct": 21.7,
+      "buildup": "long build-up",
+      "premium_lot": 88269,
+      "at_target_lot": 173098,
+      "at_stop_lot": 61870,
+      "flat_lot": 85067,
+      "gain_lot": 84830,
+      "loss_lot": 26399,
+      "rr": 3.21,
+      "breakeven": 1661.75,
+      "be_move_pct": 1.85,
+      "ok": false,
+      "why_not": [
+       "thin OI (28 lots)"
+      ],
+      "fails": [
+       "thin OI (28 lots)",
+       "costs Rs 88,269 a lot, over the Rs 30,000 budget",
+       "IV 39% is above the stock's realised 34.5%: buy a spread instead",
+       "most call OI (writers) sits at 1700, before 1770.15: it may cap the rise"
+      ]
+     },
+     {
+      "strike": 1560.0,
+      "ltp": 107.4,
+      "bid": 105.35,
+      "ask": 107.8,
+      "iv": 38.39,
+      "delta": 0.689,
+      "gamma": 0.0021,
+      "theta": -1.137,
+      "vega": 1.5397,
+      "theta_lot_day": -824,
+      "vega_lot": 1116,
+      "oi_lots": 93,
+      "oi_chg_pct": 69.1,
+      "buildup": "long build-up",
+      "premium_lot": 78155,
+      "at_target_lot": 159397,
+      "at_stop_lot": 52904,
+      "flat_lot": 74129,
+      "gain_lot": 81242,
+      "loss_lot": 25251,
+      "rr": 3.22,
+      "breakeven": 1667.8,
+      "be_move_pct": 2.22,
+      "ok": false,
+      "why_not": [
+       "thin OI (93 lots)"
+      ],
+      "fails": [
+       "thin OI (93 lots)",
+       "costs Rs 78,155 a lot, over the Rs 30,000 budget",
+       "IV 38% is above the stock's realised 34.5%: buy a spread instead",
+       "most call OI (writers) sits at 1700, before 1770.15: it may cap the rise"
+      ]
+     },
+     {
+      "strike": 1580.0,
+      "ltp": 94.7,
+      "bid": 93.05,
+      "ask": 94.75,
+      "iv": 38.27,
+      "delta": 0.644,
+      "gamma": 0.0022,
+      "theta": -1.1952,
+      "vega": 1.6236,
+      "theta_lot_day": -867,
+      "vega_lot": 1177,
+      "oi_lots": 119,
+      "oi_chg_pct": 310.3,
+      "buildup": "long build-up",
+      "premium_lot": 68694,
+      "at_target_lot": 146140,
+      "at_stop_lot": 45287,
+      "flat_lot": 64365,
+      "gain_lot": 77446,
+      "loss_lot": 23407,
+      "rr": 3.31,
+      "breakeven": 1674.75,
+      "be_move_pct": 2.65,
+      "ok": false,
+      "why_not": [
+       "thin OI (119 lots)"
+      ],
+      "fails": [
+       "thin OI (119 lots)",
+       "costs Rs 68,694 a lot, over the Rs 30,000 budget",
+       "IV 38% is above the stock's realised 34.5%: buy a spread instead",
+       "most call OI (writers) sits at 1700, before 1770.15: it may cap the rise"
+      ]
+     },
+     {
+      "strike": 1600.0,
+      "ltp": 82.4,
+      "bid": 81.05,
+      "ask": 82.65,
+      "iv": 37.9,
+      "delta": 0.597,
+      "gamma": 0.0023,
+      "theta": -1.2289,
+      "vega": 1.6855,
+      "theta_lot_day": -891,
+      "vega_lot": 1222,
+      "oi_lots": 927,
+      "oi_chg_pct": 32.6,
+      "buildup": "long build-up",
+      "premium_lot": 59921,
+      "at_target_lot": 133088,
+      "at_stop_lot": 38139,
+      "flat_lot": 55111,
+      "gain_lot": 73167,
+      "loss_lot": 21782,
+      "rr": 3.36,
+      "breakeven": 1682.65,
+      "be_move_pct": 3.14,
+      "ok": true,
+      "why_not": [],
+      "fails": [
+       "costs Rs 59,921 a lot, over the Rs 30,000 budget",
+       "IV 38% is above the stock's realised 34.5%: buy a spread instead",
+       "most call OI (writers) sits at 1700, before 1770.15: it may cap the rise"
+      ]
+     },
+     {
+      "strike": 1620.0,
+      "ltp": 70.45,
+      "bid": 70.55,
+      "ask": 71.75,
+      "iv": 37.17,
+      "delta": 0.549,
+      "gamma": 0.0024,
+      "theta": -1.2328,
+      "vega": 1.7241,
+      "theta_lot_day": -894,
+      "vega_lot": 1250,
+      "oi_lots": 370,
+      "oi_chg_pct": 70.5,
+      "buildup": "long build-up",
+      "premium_lot": 52019,
+      "at_target_lot": 120167,
+      "at_stop_lot": 31340,
+      "flat_lot": 46253,
+      "gain_lot": 68148,
+      "loss_lot": 20679,
+      "rr": 3.3,
+      "breakeven": 1691.75,
+      "be_move_pct": 3.69,
+      "ok": true,
+      "why_not": [],
+      "fails": [
+       "costs Rs 52,019 a lot, over the Rs 30,000 budget",
+       "IV 37% is above the stock's realised 34.5%: buy a spread instead",
+       "most call OI (writers) sits at 1700, before 1770.15: it may cap the rise"
+      ]
+     },
+     {
+      "strike": 1640.0,
+      "ltp": 62.7,
+      "bid": 60.75,
+      "ask": 61.75,
+      "iv": 38.27,
+      "delta": 0.501,
+      "gamma": 0.0024,
+      "theta": -1.279,
+      "vega": 1.7374,
+      "theta_lot_day": -927,
+      "vega_lot": 1260,
+      "oi_lots": 890,
+      "oi_chg_pct": 35.1,
+      "buildup": "long build-up",
+      "premium_lot": 44769,
+      "at_target_lot": 108920,
+      "at_stop_lot": 27303,
+      "flat_lot": 40163,
+      "gain_lot": 64152,
+      "loss_lot": 17465,
+      "rr": 3.67,
+      "breakeven": 1701.75,
+      "be_move_pct": 4.31,
+      "ok": true,
+      "why_not": [],
+      "fails": [
+       "costs Rs 44,769 a lot, over the Rs 30,000 budget",
+       "IV 38% is above the stock's realised 34.5%: buy a spread instead",
+       "most call OI (writers) sits at 1700, before 1770.15: it may cap the rise"
+      ]
+     },
+     {
+      "strike": 1660.0,
+      "ltp": 53.15,
+      "bid": 51.9,
+      "ask": 53.15,
+      "iv": 37.78,
+      "delta": 0.453,
+      "gamma": 0.0024,
+      "theta": -1.2539,
+      "vega": 1.7253,
+      "theta_lot_day": -909,
+      "vega_lot": 1251,
+      "oi_lots": 1192,
+      "oi_chg_pct": 77.9,
+      "buildup": "long build-up",
+      "premium_lot": 38534,
+      "at_target_lot": 97125,
+      "at_stop_lot": 22193,
+      "flat_lot": 33183,
+      "gain_lot": 58591,
+      "loss_lot": 16341,
+      "rr": 3.59,
+      "breakeven": 1713.15,
+      "be_move_pct": 5.0,
+      "ok": true,
+      "why_not": [],
+      "fails": [
+       "costs Rs 38,534 a lot, over the Rs 30,000 budget",
+       "IV 38% is above the stock's realised 34.5%: buy a spread instead",
+       "most call OI (writers) sits at 1700, before 1770.15: it may cap the rise"
+      ]
+     },
+     {
+      "strike": 1680.0,
+      "ltp": 45.45,
+      "bid": 44.45,
+      "ask": 45.25,
+      "iv": 37.84,
+      "delta": 0.406,
+      "gamma": 0.0024,
+      "theta": -1.2298,
+      "vega": 1.6895,
+      "theta_lot_day": -892,
+      "vega_lot": 1225,
+      "oi_lots": 332,
+      "oi_chg_pct": 4.7,
+      "buildup": "long build-up",
+      "premium_lot": 32806,
+      "at_target_lot": 86356,
+      "at_stop_lot": 18306,
+      "flat_lot": 27580,
+      "gain_lot": 53550,
+      "loss_lot": 14500,
+      "rr": 3.69,
+      "breakeven": 1725.25,
+      "be_move_pct": 5.75,
+      "ok": true,
+      "why_not": [],
+      "fails": [
+       "costs Rs 32,806 a lot, over the Rs 30,000 budget",
+       "IV 38% is above the stock's realised 34.5%: buy a spread instead",
+       "most call OI (writers) sits at 1700, before 1770.15: it may cap the rise"
+      ]
+     },
+     {
+      "strike": 1700.0,
+      "ltp": 37.9,
+      "bid": 37.55,
+      "ask": 38.45,
+      "iv": 37.48,
+      "delta": 0.36,
+      "gamma": 0.0023,
+      "theta": -1.1747,
+      "vega": 1.6295,
+      "theta_lot_day": -852,
+      "vega_lot": 1181,
+      "oi_lots": 1321,
+      "oi_chg_pct": -16.2,
+      "buildup": "short covering",
+      "premium_lot": 27876,
+      "at_target_lot": 75840,
+      "at_stop_lot": 14613,
+      "flat_lot": 22304,
+      "gain_lot": 47963,
+      "loss_lot": 13263,
+      "rr": 3.62,
+      "breakeven": 1738.45,
+      "be_move_pct": 6.56,
+      "ok": true,
+      "why_not": [],
+      "fails": [
+       "IV 37% is above the stock's realised 34.5%: buy a spread instead",
+       "most call OI (writers) sits at 1700, before 1770.15: it may cap the rise"
+      ]
+     },
+     {
+      "strike": 1720.0,
+      "ltp": 33.0,
+      "bid": 31.7,
+      "ask": 32.4,
+      "iv": 38.21,
+      "delta": 0.321,
+      "gamma": 0.0022,
+      "theta": -1.1466,
+      "vega": 1.5601,
+      "theta_lot_day": -831,
+      "vega_lot": 1131,
+      "oi_lots": 308,
+      "oi_chg_pct": 60.4,
+      "buildup": "long build-up",
+      "premium_lot": 23490,
+      "at_target_lot": 67146,
+      "at_stop_lot": 12392,
+      "flat_lot": 18791,
+      "gain_lot": 43656,
+      "loss_lot": 11098,
+      "rr": 3.93,
+      "breakeven": 1752.4,
+      "be_move_pct": 7.41,
+      "ok": true,
+      "why_not": [],
+      "fails": [
+       "IV 38% is above the stock's realised 34.5%: buy a spread instead",
+       "most call OI (writers) sits at 1700, before 1770.15: it may cap the rise"
+      ]
+     }
+    ],
+    "spreads": [
+     {
+      "buy": 1640.0,
+      "sell": 1700.0,
+      "width": 60.0,
+      "cost": 24.2,
+      "cost_lot": 17545,
+      "max_profit_lot": 25955,
+      "gain_lot": 15536,
+      "loss_lot": 4855,
+      "rr": 3.2,
+      "breakeven": 1664.2,
+      "flat_lot": 17858,
+      "buy_delta": 0.501,
+      "sell_delta": 0.36,
+      "buy_iv": 38.27,
+      "sell_iv": 37.48,
+      "theta_lot_day": -76,
+      "lots_in_budget": 1,
+      "fails": []
+     },
+     {
+      "buy": 1640.0,
+      "sell": 1680.0,
+      "width": 40.0,
+      "cost": 17.3,
+      "cost_lot": 12542,
+      "max_profit_lot": 16458,
+      "gain_lot": 10022,
+      "loss_lot": 3545,
+      "rr": 2.83,
+      "breakeven": 1657.3,
+      "flat_lot": 12582,
+      "buy_delta": 0.501,
+      "sell_delta": 0.406,
+      "buy_iv": 38.27,
+      "sell_iv": 37.84,
+      "theta_lot_day": -36,
+      "lots_in_budget": 2,
+      "fails": []
+     },
+     {
+      "buy": 1660.0,
+      "sell": 1700.0,
+      "width": 40.0,
+      "cost": 15.6,
+      "cost_lot": 11310,
+      "max_profit_lot": 17690,
+      "gain_lot": 9975,
+      "loss_lot": 3730,
+      "rr": 2.67,
+      "breakeven": 1675.6,
+      "flat_lot": 10878,
+      "buy_delta": 0.453,
+      "sell_delta": 0.36,
+      "buy_iv": 37.78,
+      "sell_iv": 37.48,
+      "theta_lot_day": -57,
+      "lots_in_budget": 2,
+      "fails": []
+     },
+     {
+      "buy": 1680.0,
+      "sell": 1700.0,
+      "width": 20.0,
+      "cost": 7.7,
+      "cost_lot": 5583,
+      "max_profit_lot": 8917,
+      "gain_lot": 4934,
+      "loss_lot": 1889,
+      "rr": 2.61,
+      "breakeven": 1687.7,
+      "flat_lot": 5276,
+      "buy_delta": 0.406,
+      "sell_delta": 0.36,
+      "buy_iv": 37.84,
+      "sell_iv": 37.48,
+      "theta_lot_day": -40,
+      "lots_in_budget": 5,
+      "fails": []
+     },
+     {
+      "buy": 1600.0,
+      "sell": 1680.0,
+      "width": 80.0,
+      "cost": 38.2,
+      "cost_lot": 27695,
+      "max_profit_lot": 30305,
+      "gain_lot": 19037,
+      "loss_lot": 7862,
+      "rr": 2.42,
+      "breakeven": 1638.2,
+      "flat_lot": 27530,
+      "buy_delta": 0.597,
+      "sell_delta": 0.406,
+      "buy_iv": 37.9,
+      "sell_iv": 37.84,
+      "theta_lot_day": 1,
+      "lots_in_budget": 1,
+      "fails": []
+     },
+     {
+      "buy": 1620.0,
+      "sell": 1700.0,
+      "width": 80.0,
+      "cost": 34.2,
+      "cost_lot": 24795,
+      "max_profit_lot": 33205,
+      "gain_lot": 19532,
+      "loss_lot": 8068,
+      "rr": 2.42,
+      "breakeven": 1654.2,
+      "flat_lot": 23948,
+      "buy_delta": 0.549,
+      "sell_delta": 0.36,
+      "buy_iv": 37.17,
+      "sell_iv": 37.48,
+      "theta_lot_day": -42,
+      "lots_in_budget": 1,
+      "fails": []
+     },
+     {
+      "buy": 1640.0,
+      "sell": 1660.0,
+      "width": 20.0,
+      "cost": 9.85,
+      "cost_lot": 7141,
+      "max_profit_lot": 7359,
+      "gain_lot": 4654,
+      "loss_lot": 2030,
+      "rr": 2.29,
+      "breakeven": 1649.85,
+      "flat_lot": 6980,
+      "buy_delta": 0.501,
+      "sell_delta": 0.453,
+      "buy_iv": 38.27,
+      "sell_iv": 37.78,
+      "theta_lot_day": -18,
+      "lots_in_budget": 4,
+      "fails": []
+     },
+     {
+      "buy": 1620.0,
+      "sell": 1680.0,
+      "width": 60.0,
+      "cost": 27.3,
+      "cost_lot": 19792,
+      "max_profit_lot": 23708,
+      "gain_lot": 14018,
+      "loss_lot": 6759,
+      "rr": 2.07,
+      "breakeven": 1647.3,
+      "flat_lot": 18672,
+      "buy_delta": 0.549,
+      "sell_delta": 0.406,
+      "buy_iv": 37.17,
+      "sell_iv": 37.84,
+      "theta_lot_day": -2,
+      "lots_in_budget": 1,
+      "fails": []
+     }
+    ],
+    "trade": {
+     "buy": 1640.0,
+     "sell": 1700.0,
+     "width": 60.0,
+     "cost": 24.2,
+     "cost_lot": 17545,
+     "max_profit_lot": 25955,
+     "gain_lot": 15536,
+     "loss_lot": 4855,
+     "rr": 3.2,
+     "breakeven": 1664.2,
+     "flat_lot": 17858,
+     "buy_delta": 0.501,
+     "sell_delta": 0.36,
+     "buy_iv": 38.27,
+     "sell_iv": 37.48,
+     "theta_lot_day": -76,
+     "lots_in_budget": 1,
+     "fails": [],
+     "structure": "spread"
+    },
+    "best": 1640.0,
+    "watch": [
+     1640.0,
+     1640.0
+    ],
+    "direction": [
+     {
+      "name": "Replay edge",
+      "ok": false,
+      "detail": "target first in 33% of replays, expectancy +0.07R (needs 33%+ and +0.15R+)"
+     },
+     {
+      "name": "Not failing on this stock",
+      "ok": false,
+      "detail": "the same rule fired 8 times here, average -0.74R"
+     },
+     {
+      "name": "Market agrees",
+      "ok": true,
+      "detail": "Nifty down; stronger than 91% of stocks (a call in a falling market needs 70%+)"
+     },
+     {
+      "name": "Fundamentals not against it",
+      "ok": true,
+      "detail": "score 46 (a call needs 45+)"
+     },
+     {
+      "name": "No results due",
+      "ok": true,
+      "detail": "Q2 FY27 results are out (news: Paytm Q2 results: Revenue jumps 28% YoY and net profit rises to ₹225 crore; EBITDA jumps 9)"
+     }
+    ],
+    "checks": [
+     {
+      "name": "Replay edge",
+      "ok": false,
+      "detail": "target first in 33% of replays, expectancy +0.07R (needs 33%+ and +0.15R+)"
+     },
+     {
+      "name": "Not failing on this stock",
+      "ok": false,
+      "detail": "the same rule fired 8 times here, average -0.74R"
+     },
+     {
+      "name": "Market agrees",
+      "ok": true,
+      "detail": "Nifty down; stronger than 91% of stocks (a call in a falling market needs 70%+)"
+     },
+     {
+      "name": "Fundamentals not against it",
+      "ok": true,
+      "detail": "score 46 (a call needs 45+)"
+     },
+     {
+      "name": "No results due",
+      "ok": true,
+      "detail": "Q2 FY27 results are out (news: Paytm Q2 results: Revenue jumps 28% YoY and net profit rises to ₹225 crore; EBITDA jumps 9)"
+     },
+     {
+      "name": "A structure fits every option check",
+      "ok": true,
+      "detail": "spread 1640/1700 CE: costs Rs 17,545 a lot, reward:risk 3.2"
+     }
+    ],
+    "qualified": false,
+    "notes": []
+   },
+   {
     "symbol": "SONACOMS.NS",
     "name": "Sona BLW Precision Forgings Limited",
     "type": "CE",
@@ -1540,7 +2145,10 @@
     "lot": 1225,
     "hv20": 43.9,
     "iv_rank": null,
-    "budget": 15000,
+    "budget": 30000,
+    "take_profit_pct": 60,
+    "stop_pct": 10,
+    "exit_dte": 7,
     "pcr": 1.02,
     "call_wall": 900.0,
     "put_wall": 800.0,
@@ -1572,7 +2180,7 @@
       "ok": true,
       "why_not": [],
       "fails": [
-       "costs Rs 67,252 a lot, over the Rs 15,000 budget",
+       "costs Rs 67,252 a lot, over the Rs 30,000 budget",
        "most call OI (writers) sits at 900, before 945.9: it may cap the rise"
       ]
      },
@@ -1603,7 +2211,7 @@
       "ok": true,
       "why_not": [],
       "fails": [
-       "costs Rs 58,494 a lot, over the Rs 15,000 budget",
+       "costs Rs 58,494 a lot, over the Rs 30,000 budget",
        "most call OI (writers) sits at 900, before 945.9: it may cap the rise"
       ]
      },
@@ -1634,7 +2242,7 @@
       "ok": true,
       "why_not": [],
       "fails": [
-       "costs Rs 50,164 a lot, over the Rs 15,000 budget",
+       "costs Rs 50,164 a lot, over the Rs 30,000 budget",
        "most call OI (writers) sits at 900, before 945.9: it may cap the rise"
       ]
      },
@@ -1665,7 +2273,7 @@
       "ok": true,
       "why_not": [],
       "fails": [
-       "costs Rs 43,365 a lot, over the Rs 15,000 budget",
+       "costs Rs 43,365 a lot, over the Rs 30,000 budget",
        "most call OI (writers) sits at 900, before 945.9: it may cap the rise"
       ]
      },
@@ -1696,7 +2304,7 @@
       "ok": true,
       "why_not": [],
       "fails": [
-       "costs Rs 36,750 a lot, over the Rs 15,000 budget",
+       "costs Rs 36,750 a lot, over the Rs 30,000 budget",
        "most call OI (writers) sits at 900, before 945.9: it may cap the rise"
       ]
      },
@@ -1727,7 +2335,7 @@
       "ok": true,
       "why_not": [],
       "fails": [
-       "costs Rs 31,115 a lot, over the Rs 15,000 budget",
+       "costs Rs 31,115 a lot, over the Rs 30,000 budget",
        "most call OI (writers) sits at 900, before 945.9: it may cap the rise"
       ]
      },
@@ -1758,7 +2366,6 @@
       "ok": true,
       "why_not": [],
       "fails": [
-       "costs Rs 25,725 a lot, over the Rs 15,000 budget",
        "most call OI (writers) sits at 900, before 945.9: it may cap the rise"
       ]
      },
@@ -1792,7 +2399,6 @@
       ],
       "fails": [
        "thin OI (31 lots)",
-       "costs Rs 21,682 a lot, over the Rs 15,000 budget",
        "loses 28% to time decay by day 6 if the stock stands still",
        "most call OI (writers) sits at 900, before 945.9: it may cap the rise"
       ]
@@ -1824,7 +2430,6 @@
       "ok": true,
       "why_not": [],
       "fails": [
-       "costs Rs 17,701 a lot, over the Rs 15,000 budget",
        "loses 31% to time decay by day 6 if the stock stands still",
        "most call OI (writers) sits at 900, before 945.9: it may cap the rise"
       ]
@@ -1848,7 +2453,7 @@
       "buy_iv": 31.56,
       "sell_iv": 31.25,
       "theta_lot_day": -22,
-      "lots_in_budget": 1,
+      "lots_in_budget": 2,
       "fails": []
      },
      {
@@ -1868,7 +2473,27 @@
       "buy_iv": 31.62,
       "sell_iv": 31.25,
       "theta_lot_day": -22,
-      "lots_in_budget": 2,
+      "lots_in_budget": 5,
+      "fails": []
+     },
+     {
+      "buy": 870.0,
+      "sell": 900.0,
+      "width": 30.0,
+      "cost": 14.55,
+      "cost_lot": 17824,
+      "max_profit_lot": 18926,
+      "gain_lot": 12923,
+      "loss_lot": 6124,
+      "rr": 2.11,
+      "breakeven": 884.55,
+      "flat_lot": 17197,
+      "buy_delta": 0.576,
+      "sell_delta": 0.414,
+      "buy_iv": 31.31,
+      "sell_iv": 31.25,
+      "theta_lot_day": -5,
+      "lots_in_budget": 1,
       "fails": []
      },
      {
@@ -1888,7 +2513,7 @@
       "buy_iv": 31.25,
       "sell_iv": 31.62,
       "theta_lot_day": -139,
-      "lots_in_budget": 1,
+      "lots_in_budget": 2,
       "fails": [
        "most call OI (writers) sits at 900, before 940: it may cap the rise"
       ]
@@ -1910,9 +2535,8 @@
       "buy_iv": 31.62,
       "sell_iv": 31.62,
       "theta_lot_day": -161,
-      "lots_in_budget": 0,
+      "lots_in_budget": 1,
       "fails": [
-       "costs Rs 19,478 a lot, over the Rs 15,000 budget",
        "most call OI (writers) sits at 900, before 940: it may cap the rise"
       ]
      },
@@ -1933,9 +2557,8 @@
       "buy_iv": 31.56,
       "sell_iv": 31.62,
       "theta_lot_day": -160,
-      "lots_in_budget": 0,
+      "lots_in_budget": 1,
       "fails": [
-       "costs Rs 25,112 a lot, over the Rs 15,000 budget",
        "most call OI (writers) sits at 900, before 940: it may cap the rise"
       ]
      },
@@ -1956,7 +2579,7 @@
       "buy_iv": 31.25,
       "sell_iv": 31.37,
       "theta_lot_day": -56,
-      "lots_in_budget": 1,
+      "lots_in_budget": 3,
       "fails": [
        "most call OI (writers) sits at 900, before 920: it may cap the rise"
       ]
@@ -1978,31 +2601,9 @@
       "buy_iv": 31.25,
       "sell_iv": 31.74,
       "theta_lot_day": -88,
-      "lots_in_budget": 1,
+      "lots_in_budget": 2,
       "fails": [
        "most call OI (writers) sits at 900, before 930: it may cap the rise"
-      ]
-     },
-     {
-      "buy": 890.0,
-      "sell": 920.0,
-      "width": 30.0,
-      "cost": 11.15,
-      "cost_lot": 13659,
-      "max_profit_lot": 23091,
-      "gain_lot": 13781,
-      "loss_lot": 5322,
-      "rr": 2.59,
-      "breakeven": 901.15,
-      "flat_lot": 12756,
-      "buy_delta": 0.469,
-      "sell_delta": 0.317,
-      "buy_iv": 31.62,
-      "sell_iv": 31.37,
-      "theta_lot_day": -78,
-      "lots_in_budget": 1,
-      "fails": [
-       "most call OI (writers) sits at 900, before 920: it may cap the rise"
       ]
      }
     ],
@@ -2023,7 +2624,7 @@
      "buy_iv": 31.56,
      "sell_iv": 31.25,
      "theta_lot_day": -22,
-     "lots_in_budget": 1,
+     "lots_in_budget": 2,
      "fails": [],
      "structure": "spread"
     },
@@ -2095,619 +2696,6 @@
     "notes": []
    },
    {
-    "symbol": "PAYTM.NS",
-    "name": "One 97 Communications Limited",
-    "type": "CE",
-    "source": "bullish",
-    "rank": 23,
-    "score": 54,
-    "session": "2026-10-28",
-    "plan": {
-     "kind": "support bounce",
-     "entry": 1641.85,
-     "stop": 1577.7,
-     "target": 1770.15,
-     "rr": 2.0,
-     "est_days": 5
-    },
-    "p_target": 0.334,
-    "spot": 1631.5,
-    "expiry": "2026-11-23",
-    "dte": 26,
-    "lot": 725,
-    "hv20": 34.5,
-    "iv_rank": null,
-    "budget": 15000,
-    "pcr": 0.49,
-    "call_wall": 1700.0,
-    "put_wall": 1600.0,
-    "strikes": [
-     {
-      "strike": 1540.0,
-      "ltp": 121.15,
-      "bid": 119.05,
-      "ask": 121.75,
-      "iv": 39.06,
-      "delta": 0.727,
-      "gamma": 0.002,
-      "theta": -1.0879,
-      "vega": 1.4479,
-      "theta_lot_day": -789,
-      "vega_lot": 1050,
-      "oi_lots": 28,
-      "oi_chg_pct": 21.7,
-      "buildup": "long build-up",
-      "premium_lot": 88269,
-      "at_target_lot": 173098,
-      "at_stop_lot": 61870,
-      "flat_lot": 85067,
-      "gain_lot": 84830,
-      "loss_lot": 26399,
-      "rr": 3.21,
-      "breakeven": 1661.75,
-      "be_move_pct": 1.85,
-      "ok": false,
-      "why_not": [
-       "thin OI (28 lots)"
-      ],
-      "fails": [
-       "thin OI (28 lots)",
-       "costs Rs 88,269 a lot, over the Rs 15,000 budget",
-       "IV 39% is above the stock's realised 34.5%: buy a spread instead",
-       "most call OI (writers) sits at 1700, before 1770.15: it may cap the rise"
-      ]
-     },
-     {
-      "strike": 1560.0,
-      "ltp": 107.4,
-      "bid": 105.35,
-      "ask": 107.8,
-      "iv": 38.39,
-      "delta": 0.689,
-      "gamma": 0.0021,
-      "theta": -1.137,
-      "vega": 1.5397,
-      "theta_lot_day": -824,
-      "vega_lot": 1116,
-      "oi_lots": 93,
-      "oi_chg_pct": 69.1,
-      "buildup": "long build-up",
-      "premium_lot": 78155,
-      "at_target_lot": 159397,
-      "at_stop_lot": 52904,
-      "flat_lot": 74129,
-      "gain_lot": 81242,
-      "loss_lot": 25251,
-      "rr": 3.22,
-      "breakeven": 1667.8,
-      "be_move_pct": 2.22,
-      "ok": false,
-      "why_not": [
-       "thin OI (93 lots)"
-      ],
-      "fails": [
-       "thin OI (93 lots)",
-       "costs Rs 78,155 a lot, over the Rs 15,000 budget",
-       "IV 38% is above the stock's realised 34.5%: buy a spread instead",
-       "most call OI (writers) sits at 1700, before 1770.15: it may cap the rise"
-      ]
-     },
-     {
-      "strike": 1580.0,
-      "ltp": 94.7,
-      "bid": 93.05,
-      "ask": 94.75,
-      "iv": 38.27,
-      "delta": 0.644,
-      "gamma": 0.0022,
-      "theta": -1.1952,
-      "vega": 1.6236,
-      "theta_lot_day": -867,
-      "vega_lot": 1177,
-      "oi_lots": 119,
-      "oi_chg_pct": 310.3,
-      "buildup": "long build-up",
-      "premium_lot": 68694,
-      "at_target_lot": 146140,
-      "at_stop_lot": 45287,
-      "flat_lot": 64365,
-      "gain_lot": 77446,
-      "loss_lot": 23407,
-      "rr": 3.31,
-      "breakeven": 1674.75,
-      "be_move_pct": 2.65,
-      "ok": false,
-      "why_not": [
-       "thin OI (119 lots)"
-      ],
-      "fails": [
-       "thin OI (119 lots)",
-       "costs Rs 68,694 a lot, over the Rs 15,000 budget",
-       "IV 38% is above the stock's realised 34.5%: buy a spread instead",
-       "most call OI (writers) sits at 1700, before 1770.15: it may cap the rise"
-      ]
-     },
-     {
-      "strike": 1600.0,
-      "ltp": 82.4,
-      "bid": 81.05,
-      "ask": 82.65,
-      "iv": 37.9,
-      "delta": 0.597,
-      "gamma": 0.0023,
-      "theta": -1.2289,
-      "vega": 1.6855,
-      "theta_lot_day": -891,
-      "vega_lot": 1222,
-      "oi_lots": 927,
-      "oi_chg_pct": 32.6,
-      "buildup": "long build-up",
-      "premium_lot": 59921,
-      "at_target_lot": 133088,
-      "at_stop_lot": 38139,
-      "flat_lot": 55111,
-      "gain_lot": 73167,
-      "loss_lot": 21782,
-      "rr": 3.36,
-      "breakeven": 1682.65,
-      "be_move_pct": 3.14,
-      "ok": true,
-      "why_not": [],
-      "fails": [
-       "costs Rs 59,921 a lot, over the Rs 15,000 budget",
-       "IV 38% is above the stock's realised 34.5%: buy a spread instead",
-       "most call OI (writers) sits at 1700, before 1770.15: it may cap the rise"
-      ]
-     },
-     {
-      "strike": 1620.0,
-      "ltp": 70.45,
-      "bid": 70.55,
-      "ask": 71.75,
-      "iv": 37.17,
-      "delta": 0.549,
-      "gamma": 0.0024,
-      "theta": -1.2328,
-      "vega": 1.7241,
-      "theta_lot_day": -894,
-      "vega_lot": 1250,
-      "oi_lots": 370,
-      "oi_chg_pct": 70.5,
-      "buildup": "long build-up",
-      "premium_lot": 52019,
-      "at_target_lot": 120167,
-      "at_stop_lot": 31340,
-      "flat_lot": 46253,
-      "gain_lot": 68148,
-      "loss_lot": 20679,
-      "rr": 3.3,
-      "breakeven": 1691.75,
-      "be_move_pct": 3.69,
-      "ok": true,
-      "why_not": [],
-      "fails": [
-       "costs Rs 52,019 a lot, over the Rs 15,000 budget",
-       "IV 37% is above the stock's realised 34.5%: buy a spread instead",
-       "most call OI (writers) sits at 1700, before 1770.15: it may cap the rise"
-      ]
-     },
-     {
-      "strike": 1640.0,
-      "ltp": 62.7,
-      "bid": 60.75,
-      "ask": 61.75,
-      "iv": 38.27,
-      "delta": 0.501,
-      "gamma": 0.0024,
-      "theta": -1.279,
-      "vega": 1.7374,
-      "theta_lot_day": -927,
-      "vega_lot": 1260,
-      "oi_lots": 890,
-      "oi_chg_pct": 35.1,
-      "buildup": "long build-up",
-      "premium_lot": 44769,
-      "at_target_lot": 108920,
-      "at_stop_lot": 27303,
-      "flat_lot": 40163,
-      "gain_lot": 64152,
-      "loss_lot": 17465,
-      "rr": 3.67,
-      "breakeven": 1701.75,
-      "be_move_pct": 4.31,
-      "ok": true,
-      "why_not": [],
-      "fails": [
-       "costs Rs 44,769 a lot, over the Rs 15,000 budget",
-       "IV 38% is above the stock's realised 34.5%: buy a spread instead",
-       "most call OI (writers) sits at 1700, before 1770.15: it may cap the rise"
-      ]
-     },
-     {
-      "strike": 1660.0,
-      "ltp": 53.15,
-      "bid": 51.9,
-      "ask": 53.15,
-      "iv": 37.78,
-      "delta": 0.453,
-      "gamma": 0.0024,
-      "theta": -1.2539,
-      "vega": 1.7253,
-      "theta_lot_day": -909,
-      "vega_lot": 1251,
-      "oi_lots": 1192,
-      "oi_chg_pct": 77.9,
-      "buildup": "long build-up",
-      "premium_lot": 38534,
-      "at_target_lot": 97125,
-      "at_stop_lot": 22193,
-      "flat_lot": 33183,
-      "gain_lot": 58591,
-      "loss_lot": 16341,
-      "rr": 3.59,
-      "breakeven": 1713.15,
-      "be_move_pct": 5.0,
-      "ok": true,
-      "why_not": [],
-      "fails": [
-       "costs Rs 38,534 a lot, over the Rs 15,000 budget",
-       "IV 38% is above the stock's realised 34.5%: buy a spread instead",
-       "most call OI (writers) sits at 1700, before 1770.15: it may cap the rise"
-      ]
-     },
-     {
-      "strike": 1680.0,
-      "ltp": 45.45,
-      "bid": 44.45,
-      "ask": 45.25,
-      "iv": 37.84,
-      "delta": 0.406,
-      "gamma": 0.0024,
-      "theta": -1.2298,
-      "vega": 1.6895,
-      "theta_lot_day": -892,
-      "vega_lot": 1225,
-      "oi_lots": 332,
-      "oi_chg_pct": 4.7,
-      "buildup": "long build-up",
-      "premium_lot": 32806,
-      "at_target_lot": 86356,
-      "at_stop_lot": 18306,
-      "flat_lot": 27580,
-      "gain_lot": 53550,
-      "loss_lot": 14500,
-      "rr": 3.69,
-      "breakeven": 1725.25,
-      "be_move_pct": 5.75,
-      "ok": true,
-      "why_not": [],
-      "fails": [
-       "costs Rs 32,806 a lot, over the Rs 15,000 budget",
-       "IV 38% is above the stock's realised 34.5%: buy a spread instead",
-       "most call OI (writers) sits at 1700, before 1770.15: it may cap the rise"
-      ]
-     },
-     {
-      "strike": 1700.0,
-      "ltp": 37.9,
-      "bid": 37.55,
-      "ask": 38.45,
-      "iv": 37.48,
-      "delta": 0.36,
-      "gamma": 0.0023,
-      "theta": -1.1747,
-      "vega": 1.6295,
-      "theta_lot_day": -852,
-      "vega_lot": 1181,
-      "oi_lots": 1321,
-      "oi_chg_pct": -16.2,
-      "buildup": "short covering",
-      "premium_lot": 27876,
-      "at_target_lot": 75840,
-      "at_stop_lot": 14613,
-      "flat_lot": 22304,
-      "gain_lot": 47963,
-      "loss_lot": 13263,
-      "rr": 3.62,
-      "breakeven": 1738.45,
-      "be_move_pct": 6.56,
-      "ok": true,
-      "why_not": [],
-      "fails": [
-       "costs Rs 27,876 a lot, over the Rs 15,000 budget",
-       "IV 37% is above the stock's realised 34.5%: buy a spread instead",
-       "most call OI (writers) sits at 1700, before 1770.15: it may cap the rise"
-      ]
-     },
-     {
-      "strike": 1720.0,
-      "ltp": 33.0,
-      "bid": 31.7,
-      "ask": 32.4,
-      "iv": 38.21,
-      "delta": 0.321,
-      "gamma": 0.0022,
-      "theta": -1.1466,
-      "vega": 1.5601,
-      "theta_lot_day": -831,
-      "vega_lot": 1131,
-      "oi_lots": 308,
-      "oi_chg_pct": 60.4,
-      "buildup": "long build-up",
-      "premium_lot": 23490,
-      "at_target_lot": 67146,
-      "at_stop_lot": 12392,
-      "flat_lot": 18791,
-      "gain_lot": 43656,
-      "loss_lot": 11098,
-      "rr": 3.93,
-      "breakeven": 1752.4,
-      "be_move_pct": 7.41,
-      "ok": true,
-      "why_not": [],
-      "fails": [
-       "costs Rs 23,490 a lot, over the Rs 15,000 budget",
-       "IV 38% is above the stock's realised 34.5%: buy a spread instead",
-       "most call OI (writers) sits at 1700, before 1770.15: it may cap the rise"
-      ]
-     }
-    ],
-    "spreads": [
-     {
-      "buy": 1640.0,
-      "sell": 1680.0,
-      "width": 40.0,
-      "cost": 17.3,
-      "cost_lot": 12542,
-      "max_profit_lot": 16458,
-      "gain_lot": 10022,
-      "loss_lot": 3545,
-      "rr": 2.83,
-      "breakeven": 1657.3,
-      "flat_lot": 12582,
-      "buy_delta": 0.501,
-      "sell_delta": 0.406,
-      "buy_iv": 38.27,
-      "sell_iv": 37.84,
-      "theta_lot_day": -36,
-      "lots_in_budget": 1,
-      "fails": []
-     },
-     {
-      "buy": 1660.0,
-      "sell": 1700.0,
-      "width": 40.0,
-      "cost": 15.6,
-      "cost_lot": 11310,
-      "max_profit_lot": 17690,
-      "gain_lot": 9975,
-      "loss_lot": 3730,
-      "rr": 2.67,
-      "breakeven": 1675.6,
-      "flat_lot": 10878,
-      "buy_delta": 0.453,
-      "sell_delta": 0.36,
-      "buy_iv": 37.78,
-      "sell_iv": 37.48,
-      "theta_lot_day": -57,
-      "lots_in_budget": 1,
-      "fails": []
-     },
-     {
-      "buy": 1680.0,
-      "sell": 1700.0,
-      "width": 20.0,
-      "cost": 7.7,
-      "cost_lot": 5583,
-      "max_profit_lot": 8917,
-      "gain_lot": 4934,
-      "loss_lot": 1889,
-      "rr": 2.61,
-      "breakeven": 1687.7,
-      "flat_lot": 5276,
-      "buy_delta": 0.406,
-      "sell_delta": 0.36,
-      "buy_iv": 37.84,
-      "sell_iv": 37.48,
-      "theta_lot_day": -40,
-      "lots_in_budget": 2,
-      "fails": []
-     },
-     {
-      "buy": 1640.0,
-      "sell": 1660.0,
-      "width": 20.0,
-      "cost": 9.85,
-      "cost_lot": 7141,
-      "max_profit_lot": 7359,
-      "gain_lot": 4654,
-      "loss_lot": 2030,
-      "rr": 2.29,
-      "breakeven": 1649.85,
-      "flat_lot": 6980,
-      "buy_delta": 0.501,
-      "sell_delta": 0.453,
-      "buy_iv": 38.27,
-      "sell_iv": 37.78,
-      "theta_lot_day": -18,
-      "lots_in_budget": 2,
-      "fails": []
-     },
-     {
-      "buy": 1660.0,
-      "sell": 1680.0,
-      "width": 20.0,
-      "cost": 8.7,
-      "cost_lot": 6307,
-      "max_profit_lot": 8193,
-      "gain_lot": 4461,
-      "loss_lot": 2421,
-      "rr": 1.84,
-      "breakeven": 1668.7,
-      "flat_lot": 5602,
-      "buy_delta": 0.453,
-      "sell_delta": 0.406,
-      "buy_iv": 37.78,
-      "sell_iv": 37.84,
-      "theta_lot_day": -17,
-      "lots_in_budget": 2,
-      "fails": []
-     },
-     {
-      "buy": 1620.0,
-      "sell": 1660.0,
-      "width": 40.0,
-      "cost": 19.85,
-      "cost_lot": 14391,
-      "max_profit_lot": 14609,
-      "gain_lot": 8651,
-      "loss_lot": 5244,
-      "rr": 1.65,
-      "breakeven": 1639.85,
-      "flat_lot": 13070,
-      "buy_delta": 0.549,
-      "sell_delta": 0.453,
-      "buy_iv": 37.17,
-      "sell_iv": 37.78,
-      "theta_lot_day": 15,
-      "lots_in_budget": 1,
-      "fails": []
-     },
-     {
-      "buy": 1640.0,
-      "sell": 1740.0,
-      "width": 100.0,
-      "cost": 35.15,
-      "cost_lot": 25484,
-      "max_profit_lot": 47016,
-      "gain_lot": 25887,
-      "loss_lot": 7570,
-      "rr": 3.42,
-      "breakeven": 1675.15,
-      "flat_lot": 25665,
-      "buy_delta": 0.501,
-      "sell_delta": 0.277,
-      "buy_iv": 38.27,
-      "sell_iv": 37.41,
-      "theta_lot_day": -166,
-      "lots_in_budget": 0,
-      "fails": [
-       "costs Rs 25,484 a lot, over the Rs 15,000 budget",
-       "most call OI (writers) sits at 1700, before 1740: it may cap the rise"
-      ]
-     },
-     {
-      "buy": 1680.0,
-      "sell": 1740.0,
-      "width": 60.0,
-      "cost": 18.65,
-      "cost_lot": 13521,
-      "max_profit_lot": 29979,
-      "gain_lot": 15285,
-      "loss_lot": 4604,
-      "rr": 3.32,
-      "breakeven": 1698.65,
-      "flat_lot": 13083,
-      "buy_delta": 0.406,
-      "sell_delta": 0.277,
-      "buy_iv": 37.84,
-      "sell_iv": 37.41,
-      "theta_lot_day": -131,
-      "lots_in_budget": 1,
-      "fails": [
-       "most call OI (writers) sits at 1700, before 1740: it may cap the rise"
-      ]
-     }
-    ],
-    "trade": {
-     "buy": 1640.0,
-     "sell": 1680.0,
-     "width": 40.0,
-     "cost": 17.3,
-     "cost_lot": 12542,
-     "max_profit_lot": 16458,
-     "gain_lot": 10022,
-     "loss_lot": 3545,
-     "rr": 2.83,
-     "breakeven": 1657.3,
-     "flat_lot": 12582,
-     "buy_delta": 0.501,
-     "sell_delta": 0.406,
-     "buy_iv": 38.27,
-     "sell_iv": 37.84,
-     "theta_lot_day": -36,
-     "lots_in_budget": 1,
-     "fails": [],
-     "structure": "spread"
-    },
-    "best": 1640.0,
-    "watch": [
-     1640.0,
-     1640.0
-    ],
-    "direction": [
-     {
-      "name": "Replay edge",
-      "ok": false,
-      "detail": "target first in 33% of replays, expectancy +0.07R (needs 33%+ and +0.15R+)"
-     },
-     {
-      "name": "Not failing on this stock",
-      "ok": false,
-      "detail": "the same rule fired 8 times here, average -0.74R"
-     },
-     {
-      "name": "Market agrees",
-      "ok": true,
-      "detail": "Nifty down; stronger than 91% of stocks (a call in a falling market needs 70%+)"
-     },
-     {
-      "name": "Fundamentals not against it",
-      "ok": true,
-      "detail": "score 46 (a call needs 45+)"
-     },
-     {
-      "name": "No results due",
-      "ok": true,
-      "detail": "Q2 FY27 results are out (news: Paytm Q2 results: Revenue jumps 28% YoY and net profit rises to ₹225 crore; EBITDA jumps 9)"
-     }
-    ],
-    "checks": [
-     {
-      "name": "Replay edge",
-      "ok": false,
-      "detail": "target first in 33% of replays, expectancy +0.07R (needs 33%+ and +0.15R+)"
-     },
-     {
-      "name": "Not failing on this stock",
-      "ok": false,
-      "detail": "the same rule fired 8 times here, average -0.74R"
-     },
-     {
-      "name": "Market agrees",
-      "ok": true,
-      "detail": "Nifty down; stronger than 91% of stocks (a call in a falling market needs 70%+)"
-     },
-     {
-      "name": "Fundamentals not against it",
-      "ok": true,
-      "detail": "score 46 (a call needs 45+)"
-     },
-     {
-      "name": "No results due",
-      "ok": true,
-      "detail": "Q2 FY27 results are out (news: Paytm Q2 results: Revenue jumps 28% YoY and net profit rises to ₹225 crore; EBITDA jumps 9)"
-     },
-     {
-      "name": "A structure fits every option check",
-      "ok": true,
-      "detail": "spread 1640/1680 CE: costs Rs 12,542 a lot, reward:risk 2.83"
-     }
-    ],
-    "qualified": false,
-    "notes": []
-   },
-   {
     "symbol": "MOTHERSON.NS",
     "name": "Samvardhana Motherson International Limited",
     "type": "CE",
@@ -2730,7 +2718,10 @@
     "lot": 6150,
     "hv20": 32.6,
     "iv_rank": null,
-    "budget": 15000,
+    "budget": 30000,
+    "take_profit_pct": 60,
+    "stop_pct": 10,
+    "exit_dte": 7,
     "pcr": 0.71,
     "call_wall": 170.0,
     "put_wall": 150.0,
@@ -2765,7 +2756,7 @@
       ],
       "fails": [
        "thin OI (29 lots)",
-       "costs Rs 67,342 a lot, over the Rs 15,000 budget",
+       "costs Rs 67,342 a lot, over the Rs 30,000 budget",
        "IV 35% is above the stock's realised 32.6%: buy a spread instead",
        "most call OI (writers) sits at 170, before 176.15: it may cap the rise"
       ]
@@ -2797,7 +2788,7 @@
       "ok": true,
       "why_not": [],
       "fails": [
-       "costs Rs 56,518 a lot, over the Rs 15,000 budget",
+       "costs Rs 56,518 a lot, over the Rs 30,000 budget",
        "IV 35% is above the stock's realised 32.6%: buy a spread instead",
        "most call OI (writers) sits at 170, before 176.15: it may cap the rise"
       ]
@@ -2829,7 +2820,7 @@
       "ok": true,
       "why_not": [],
       "fails": [
-       "costs Rs 46,678 a lot, over the Rs 15,000 budget",
+       "costs Rs 46,678 a lot, over the Rs 30,000 budget",
        "IV 34% is above the stock's realised 32.6%: buy a spread instead",
        "most call OI (writers) sits at 170, before 176.15: it may cap the rise"
       ]
@@ -2861,7 +2852,7 @@
       "ok": true,
       "why_not": [],
       "fails": [
-       "costs Rs 37,946 a lot, over the Rs 15,000 budget",
+       "costs Rs 37,946 a lot, over the Rs 30,000 budget",
        "IV 33% is above the stock's realised 32.6%: buy a spread instead",
        "loses 27% to time decay by day 8 if the stock stands still",
        "most call OI (writers) sits at 170, before 176.15: it may cap the rise"
@@ -2894,7 +2885,7 @@
       "ok": true,
       "why_not": [],
       "fails": [
-       "costs Rs 30,320 a lot, over the Rs 15,000 budget",
+       "costs Rs 30,320 a lot, over the Rs 30,000 budget",
        "IV 34% is above the stock's realised 32.6%: buy a spread instead",
        "loses 31% to time decay by day 8 if the stock stands still",
        "most call OI (writers) sits at 170, before 176.15: it may cap the rise"
@@ -2927,7 +2918,6 @@
       "ok": true,
       "why_not": [],
       "fails": [
-       "costs Rs 23,800 a lot, over the Rs 15,000 budget",
        "IV 33% is above the stock's realised 32.6%: buy a spread instead",
        "loses 37% to time decay by day 8 if the stock stands still",
        "most call OI (writers) sits at 170, before 176.15: it may cap the rise"
@@ -2960,7 +2950,6 @@
       "ok": true,
       "why_not": [],
       "fails": [
-       "costs Rs 18,512 a lot, over the Rs 15,000 budget",
        "IV 33% is above the stock's realised 32.6%: buy a spread instead",
        "loses 44% to time decay by day 8 if the stock stands still",
        "most call OI (writers) sits at 170, before 176.15: it may cap the rise"
@@ -2985,6 +2974,26 @@
       "buy_iv": 33.2,
       "sell_iv": 32.71,
       "theta_lot_day": -97,
+      "lots_in_budget": 3,
+      "fails": []
+     },
+     {
+      "buy": 162.5,
+      "sell": 170.0,
+      "width": 7.5,
+      "cost": 2.67,
+      "cost_lot": 16420,
+      "max_profit_lot": 29704,
+      "gain_lot": 21383,
+      "loss_lot": 8627,
+      "rr": 2.48,
+      "breakeven": 165.17,
+      "flat_lot": 14200,
+      "buy_delta": 0.47,
+      "sell_delta": 0.275,
+      "buy_iv": 33.69,
+      "sell_iv": 32.71,
+      "theta_lot_day": -126,
       "lots_in_budget": 1,
       "fails": []
      },
@@ -3005,6 +3014,26 @@
       "buy_iv": 33.69,
       "sell_iv": 33.2,
       "theta_lot_day": -65,
+      "lots_in_budget": 2,
+      "fails": []
+     },
+     {
+      "buy": 160.0,
+      "sell": 170.0,
+      "width": 10.0,
+      "cost": 3.91,
+      "cost_lot": 24046,
+      "max_profit_lot": 37454,
+      "gain_lot": 27587,
+      "loss_lot": 12533,
+      "rr": 2.2,
+      "breakeven": 163.91,
+      "flat_lot": 20994,
+      "buy_delta": 0.539,
+      "sell_delta": 0.275,
+      "buy_iv": 33.2,
+      "sell_iv": 32.71,
+      "theta_lot_day": -115,
       "lots_in_budget": 1,
       "fails": []
      },
@@ -3025,7 +3054,7 @@
       "buy_iv": 33.2,
       "sell_iv": 33.2,
       "theta_lot_day": -36,
-      "lots_in_budget": 2,
+      "lots_in_budget": 5,
       "fails": []
      },
      {
@@ -3045,96 +3074,48 @@
       "buy_iv": 33.69,
       "sell_iv": 33.2,
       "theta_lot_day": -29,
-      "lots_in_budget": 2,
+      "lots_in_budget": 4,
       "fails": []
      },
      {
       "buy": 160.0,
-      "sell": 165.0,
-      "width": 5.0,
-      "cost": 2.35,
-      "cost_lot": 14452,
-      "max_profit_lot": 16298,
-      "gain_lot": 12898,
-      "loss_lot": 7238,
-      "rr": 1.78,
-      "breakeven": 162.35,
-      "flat_lot": 12924,
+      "sell": 167.5,
+      "width": 7.5,
+      "cost": 3.21,
+      "cost_lot": 19742,
+      "max_profit_lot": 26384,
+      "gain_lot": 20096,
+      "loss_lot": 10162,
+      "rr": 1.98,
+      "breakeven": 163.21,
+      "flat_lot": 17387,
       "buy_delta": 0.539,
-      "sell_delta": 0.401,
+      "sell_delta": 0.337,
       "buy_iv": 33.2,
       "sell_iv": 33.2,
-      "theta_lot_day": -18,
+      "theta_lot_day": -54,
       "lots_in_budget": 1,
       "fails": []
      },
      {
-      "buy": 165.0,
-      "sell": 175.0,
+      "buy": 157.5,
+      "sell": 167.5,
       "width": 10.0,
-      "cost": 2.57,
-      "cost_lot": 15806,
-      "max_profit_lot": 45694,
-      "gain_lot": 27389,
-      "loss_lot": 9602,
-      "rr": 2.85,
-      "breakeven": 167.57,
-      "flat_lot": 11901,
-      "buy_delta": 0.401,
-      "sell_delta": 0.18,
-      "buy_iv": 33.2,
-      "sell_iv": 33.2,
-      "theta_lot_day": -208,
-      "lots_in_budget": 0,
-      "fails": [
-       "costs Rs 15,806 a lot, over the Rs 15,000 budget",
-       "most call OI (writers) sits at 170, before 175: it may cap the rise"
-      ]
-     },
-     {
-      "buy": 162.5,
-      "sell": 175.0,
-      "width": 12.5,
-      "cost": 3.63,
-      "cost_lot": 22324,
-      "max_profit_lot": 54551,
-      "gain_lot": 34390,
-      "loss_lot": 12627,
-      "rr": 2.72,
-      "breakeven": 166.13,
-      "flat_lot": 18031,
-      "buy_delta": 0.47,
-      "sell_delta": 0.18,
+      "cost": 4.63,
+      "cost_lot": 28474,
+      "max_profit_lot": 33026,
+      "gain_lot": 25948,
+      "loss_lot": 13337,
+      "rr": 1.95,
+      "breakeven": 162.13,
+      "flat_lot": 26374,
+      "buy_delta": 0.607,
+      "sell_delta": 0.337,
       "buy_iv": 33.69,
       "sell_iv": 33.2,
-      "theta_lot_day": -237,
-      "lots_in_budget": 0,
-      "fails": [
-       "costs Rs 22,324 a lot, over the Rs 15,000 budget",
-       "most call OI (writers) sits at 170, before 175: it may cap the rise"
-      ]
-     },
-     {
-      "buy": 165.0,
-      "sell": 172.5,
-      "width": 7.5,
-      "cost": 2.15,
-      "cost_lot": 13223,
-      "max_profit_lot": 32902,
-      "gain_lot": 20989,
-      "loss_lot": 7885,
-      "rr": 2.66,
-      "breakeven": 167.15,
-      "flat_lot": 10218,
-      "buy_delta": 0.401,
-      "sell_delta": 0.226,
-      "buy_iv": 33.2,
-      "sell_iv": 33.2,
-      "theta_lot_day": -145,
+      "theta_lot_day": -42,
       "lots_in_budget": 1,
-      "fails": [
-       "most call OI (writers) sits at 170, before 172.5: it may cap the rise"
-      ]
+      "fails": []
      }
     ],
     "trade": {
@@ -3154,7 +3135,7 @@
      "buy_iv": 33.2,
      "sell_iv": 32.71,
      "theta_lot_day": -97,
-     "lots_in_budget": 1,
+     "lots_in_budget": 3,
      "fails": [],
      "structure": "spread"
     },
@@ -3248,7 +3229,10 @@
     "lot": 125,
     "hv20": 34.2,
     "iv_rank": null,
-    "budget": 15000,
+    "budget": 30000,
+    "take_profit_pct": 60,
+    "stop_pct": 10,
+    "exit_dte": 7,
     "pcr": 0.66,
     "call_wall": 5500.0,
     "put_wall": 5800.0,
@@ -3280,7 +3264,7 @@
       "ok": true,
       "why_not": [],
       "fails": [
-       "costs Rs 43,081 a lot, over the Rs 15,000 budget"
+       "costs Rs 43,081 a lot, over the Rs 30,000 budget"
       ]
      },
      {
@@ -3310,7 +3294,7 @@
       "ok": true,
       "why_not": [],
       "fails": [
-       "costs Rs 34,800 a lot, over the Rs 15,000 budget"
+       "costs Rs 34,800 a lot, over the Rs 30,000 budget"
       ]
      },
      {
@@ -3340,7 +3324,6 @@
       "ok": true,
       "why_not": [],
       "fails": [
-       "costs Rs 27,456 a lot, over the Rs 15,000 budget",
        "loses 29% to time decay by day 10 if the stock stands still"
       ]
      },
@@ -3371,7 +3354,6 @@
       "ok": true,
       "why_not": [],
       "fails": [
-       "costs Rs 21,306 a lot, over the Rs 15,000 budget",
        "loses 37% to time decay by day 10 if the stock stands still"
       ]
      },
@@ -3402,7 +3384,6 @@
       "ok": true,
       "why_not": [],
       "fails": [
-       "costs Rs 16,244 a lot, over the Rs 15,000 budget",
        "loses 46% to time decay by day 10 if the stock stands still"
       ]
      },
@@ -3439,6 +3420,26 @@
     ],
     "spreads": [
      {
+      "buy": 5800.0,
+      "sell": 6500.0,
+      "width": 700.0,
+      "cost": 192.25,
+      "cost_lot": 24031,
+      "max_profit_lot": 63469,
+      "gain_lot": 49028,
+      "loss_lot": 16398,
+      "rr": 2.99,
+      "breakeven": 5992.25,
+      "flat_lot": 18919,
+      "buy_delta": 0.57,
+      "sell_delta": 0.118,
+      "buy_iv": 29.39,
+      "sell_iv": 31.49,
+      "theta_lot_day": -200,
+      "lots_in_budget": 1,
+      "fails": []
+     },
+     {
       "buy": 6000.0,
       "sell": 6200.0,
       "width": 200.0,
@@ -3455,7 +3456,7 @@
       "buy_iv": 30.04,
       "sell_iv": 30.4,
       "theta_lot_day": -68,
-      "lots_in_budget": 2,
+      "lots_in_budget": 4,
       "fails": []
      },
      {
@@ -3475,7 +3476,7 @@
       "buy_iv": 29.75,
       "sell_iv": 30.73,
       "theta_lot_day": -121,
-      "lots_in_budget": 1,
+      "lots_in_budget": 2,
       "fails": []
      },
      {
@@ -3495,6 +3496,26 @@
       "buy_iv": 29.75,
       "sell_iv": 30.4,
       "theta_lot_day": -77,
+      "lots_in_budget": 2,
+      "fails": []
+     },
+     {
+      "buy": 5800.0,
+      "sell": 6300.0,
+      "width": 500.0,
+      "cost": 167.7,
+      "cost_lot": 20962,
+      "max_profit_lot": 41538,
+      "gain_lot": 35777,
+      "loss_lot": 13846,
+      "rr": 2.58,
+      "breakeven": 5967.7,
+      "flat_lot": 17594,
+      "buy_delta": 0.57,
+      "sell_delta": 0.202,
+      "buy_iv": 29.39,
+      "sell_iv": 30.73,
+      "theta_lot_day": -109,
       "lots_in_budget": 1,
       "fails": []
      },
@@ -3515,7 +3536,27 @@
       "buy_iv": 30.04,
       "sell_iv": 30.46,
       "theta_lot_day": -24,
-      "lots_in_budget": 3,
+      "lots_in_budget": 7,
+      "fails": []
+     },
+     {
+      "buy": 5800.0,
+      "sell": 6200.0,
+      "width": 400.0,
+      "cost": 148.5,
+      "cost_lot": 18562,
+      "max_profit_lot": 31438,
+      "gain_lot": 28199,
+      "loss_lot": 11963,
+      "rr": 2.36,
+      "breakeven": 5948.5,
+      "flat_lot": 16212,
+      "buy_delta": 0.57,
+      "sell_delta": 0.258,
+      "buy_iv": 29.39,
+      "sell_iv": 30.4,
+      "theta_lot_day": -65,
+      "lots_in_budget": 1,
       "fails": []
      },
      {
@@ -3535,97 +3576,35 @@
       "buy_iv": 29.75,
       "sell_iv": 30.46,
       "theta_lot_day": -33,
-      "lots_in_budget": 1,
+      "lots_in_budget": 3,
       "fails": []
-     },
-     {
-      "buy": 5900.0,
-      "sell": 6000.0,
-      "width": 100.0,
-      "cost": 42.0,
-      "cost_lot": 5250,
-      "max_profit_lot": 7250,
-      "gain_lot": 6746,
-      "loss_lot": 3395,
-      "rr": 1.99,
-      "breakeven": 5942.0,
-      "flat_lot": 4594,
-      "buy_delta": 0.484,
-      "sell_delta": 0.402,
-      "buy_iv": 29.75,
-      "sell_iv": 30.04,
-      "theta_lot_day": -9,
-      "lots_in_budget": 2,
-      "fails": []
-     },
-     {
-      "buy": 5800.0,
-      "sell": 6000.0,
-      "width": 200.0,
-      "cost": 91.2,
-      "cost_lot": 11400,
-      "max_profit_lot": 13600,
-      "gain_lot": 12846,
-      "loss_lot": 6938,
-      "rr": 1.85,
-      "breakeven": 5891.2,
-      "flat_lot": 10677,
-      "buy_delta": 0.57,
-      "sell_delta": 0.402,
-      "buy_iv": 29.39,
-      "sell_iv": 30.04,
-      "theta_lot_day": 3,
-      "lots_in_budget": 1,
-      "fails": []
-     },
-     {
-      "buy": 6000.0,
-      "sell": 6500.0,
-      "width": 500.0,
-      "cost": 102.55,
-      "cost_lot": 12819,
-      "max_profit_lot": 49681,
-      "gain_lot": 35995,
-      "loss_lot": 9647,
-      "rr": 3.73,
-      "breakeven": 6102.55,
-      "flat_lot": 8242,
-      "buy_delta": 0.402,
-      "sell_delta": 0.118,
-      "buy_iv": 30.04,
-      "sell_iv": 31.49,
-      "theta_lot_day": -203,
-      "lots_in_budget": 1,
-      "fails": [
-       "loses 36% to time decay by day 10 if the stock stands still"
-      ]
      }
     ],
     "trade": {
-     "buy": 6000.0,
-     "sell": 6200.0,
-     "width": 200.0,
-     "cost": 58.8,
-     "cost_lot": 7350,
-     "max_profit_lot": 17650,
-     "gain_lot": 15165,
-     "loss_lot": 5212,
-     "rr": 2.91,
-     "breakeven": 6058.8,
-     "flat_lot": 5535,
-     "buy_delta": 0.402,
-     "sell_delta": 0.258,
-     "buy_iv": 30.04,
-     "sell_iv": 30.4,
-     "theta_lot_day": -68,
-     "lots_in_budget": 2,
+     "buy": 5800.0,
+     "sell": 6500.0,
+     "width": 700.0,
+     "cost": 192.25,
+     "cost_lot": 24031,
+     "max_profit_lot": 63469,
+     "gain_lot": 49028,
+     "loss_lot": 16398,
+     "rr": 2.99,
+     "breakeven": 5992.25,
+     "flat_lot": 18919,
+     "buy_delta": 0.57,
+     "sell_delta": 0.118,
+     "buy_iv": 29.39,
+     "sell_iv": 31.49,
+     "theta_lot_day": -200,
+     "lots_in_budget": 1,
      "fails": [],
      "structure": "spread"
     },
-    "best": 6000.0,
+    "best": 5800.0,
     "watch": [
-     6000.0,
-     6000.0
+     5800.0,
+     5800.0
     ],
     "direction": [
      {
@@ -3683,7 +3662,7 @@
      {
       "name": "A structure fits every option check",
       "ok": true,
-      "detail": "spread 6000/6200 CE: costs Rs 7,350 a lot, reward:risk 2.91"
+      "detail": "spread 5800/6500 CE: costs Rs 24,031 a lot, reward:risk 2.99"
      }
     ],
     "qualified": false,
@@ -3712,7 +3691,10 @@
     "lot": 6500,
     "hv20": 35.9,
     "iv_rank": null,
-    "budget": 15000,
+    "budget": 30000,
+    "take_profit_pct": 60,
+    "stop_pct": 10,
+    "exit_dte": 7,
     "pcr": 0.61,
     "call_wall": 80.0,
     "put_wall": 75.0,
@@ -3747,7 +3729,7 @@
       ],
       "fails": [
        "bid-ask spread 8.8%",
-       "costs Rs 36,140 a lot, over the Rs 15,000 budget",
+       "costs Rs 36,140 a lot, over the Rs 30,000 budget",
        "most call OI (writers) sits at 80, before 87.95: it may cap the rise"
       ]
      },
@@ -3781,7 +3763,7 @@
       ],
       "fails": [
        "bid-ask spread 12.4%",
-       "costs Rs 32,370 a lot, over the Rs 15,000 budget",
+       "costs Rs 32,370 a lot, over the Rs 30,000 budget",
        "IV 39% is above the stock's realised 35.9%: buy a spread instead",
        "most call OI (writers) sits at 80, before 87.95: it may cap the rise"
       ]
@@ -3816,7 +3798,6 @@
       ],
       "fails": [
        "bid-ask spread 9.3%",
-       "costs Rs 27,170 a lot, over the Rs 15,000 budget",
        "IV 37% is above the stock's realised 35.9%: buy a spread instead",
        "most call OI (writers) sits at 80, before 87.95: it may cap the rise"
       ]
@@ -3851,7 +3832,6 @@
       ],
       "fails": [
        "bid-ask spread 5.5%",
-       "costs Rs 22,945 a lot, over the Rs 15,000 budget",
        "IV 36% is above the stock's realised 35.9%: buy a spread instead",
        "most call OI (writers) sits at 80, before 87.95: it may cap the rise"
       ]
@@ -3883,7 +3863,6 @@
       "ok": true,
       "why_not": [],
       "fails": [
-       "costs Rs 19,045 a lot, over the Rs 15,000 budget",
        "most call OI (writers) sits at 80, before 87.95: it may cap the rise"
       ]
      },
@@ -3917,7 +3896,6 @@
       ],
       "fails": [
        "bid-ask spread 4.0%",
-       "costs Rs 16,380 a lot, over the Rs 15,000 budget",
        "loses 28% to time decay by day 8 if the stock stands still",
        "most call OI (writers) sits at 80, before 87.95: it may cap the rise"
       ]
@@ -4049,7 +4027,7 @@
       "buy_iv": 36.13,
       "sell_iv": 35.16,
       "theta_lot_day": -64,
-      "lots_in_budget": 2,
+      "lots_in_budget": 4,
       "fails": [
        "bid-ask spread 3.8%",
        "most call OI (writers) sits at 80, before 85: it may cap the rise"
@@ -4072,7 +4050,7 @@
       "buy_iv": 36.13,
       "sell_iv": 35.16,
       "theta_lot_day": -42,
-      "lots_in_budget": 3,
+      "lots_in_budget": 6,
       "fails": [
        "bid-ask spread 3.8%",
        "sold leg: thin OI (25 lots)",
@@ -4096,7 +4074,7 @@
       "buy_iv": 36.13,
       "sell_iv": 35.16,
       "theta_lot_day": -90,
-      "lots_in_budget": 1,
+      "lots_in_budget": 3,
       "fails": [
        "bid-ask spread 3.8%",
        "sold leg: bid-ask spread 20.0%",
@@ -4120,7 +4098,7 @@
       "buy_iv": 35.16,
       "sell_iv": 35.16,
       "theta_lot_day": -61,
-      "lots_in_budget": 1,
+      "lots_in_budget": 3,
       "fails": [
        "bid-ask spread 4.0%",
        "most call OI (writers) sits at 80, before 85: it may cap the rise"
@@ -4143,7 +4121,7 @@
       "buy_iv": 34.18,
       "sell_iv": 35.16,
       "theta_lot_day": -52,
-      "lots_in_budget": 1,
+      "lots_in_budget": 2,
       "fails": [
        "most call OI (writers) sits at 80, before 85: it may cap the rise"
       ]
@@ -4165,10 +4143,9 @@
       "buy_iv": 36.13,
       "sell_iv": 35.16,
       "theta_lot_day": -68,
-      "lots_in_budget": 0,
+      "lots_in_budget": 1,
       "fails": [
        "bid-ask spread 5.5%",
-       "costs Rs 15,210 a lot, over the Rs 15,000 budget",
        "most call OI (writers) sits at 80, before 85: it may cap the rise"
       ]
      },
@@ -4189,7 +4166,7 @@
       "buy_iv": 35.16,
       "sell_iv": 35.16,
       "theta_lot_day": -87,
-      "lots_in_budget": 1,
+      "lots_in_budget": 2,
       "fails": [
        "bid-ask spread 4.0%",
        "sold leg: bid-ask spread 20.0%",
@@ -4213,7 +4190,7 @@
       "buy_iv": 35.16,
       "sell_iv": 35.16,
       "theta_lot_day": -40,
-      "lots_in_budget": 2,
+      "lots_in_budget": 4,
       "fails": [
        "bid-ask spread 4.0%",
        "sold leg: thin OI (25 lots)",
@@ -4309,7 +4286,10 @@
     "lot": 2500,
     "hv20": 25.2,
     "iv_rank": null,
-    "budget": 15000,
+    "budget": 30000,
+    "take_profit_pct": 60,
+    "stop_pct": 10,
+    "exit_dte": 7,
     "pcr": 0.83,
     "call_wall": 350.0,
     "put_wall": 350.0,
@@ -4344,7 +4324,7 @@
       ],
       "fails": [
        "thin OI (59 lots)",
-       "costs Rs 41,750 a lot, over the Rs 15,000 budget",
+       "costs Rs 41,750 a lot, over the Rs 30,000 budget",
        "most call OI (writers) sits at 350, before 374.3: it may cap the rise"
       ]
      },
@@ -4375,7 +4355,7 @@
       "ok": true,
       "why_not": [],
       "fails": [
-       "costs Rs 32,750 a lot, over the Rs 15,000 budget",
+       "costs Rs 32,750 a lot, over the Rs 30,000 budget",
        "most call OI (writers) sits at 350, before 374.3: it may cap the rise"
       ]
      },
@@ -4406,7 +4386,6 @@
       "ok": true,
       "why_not": [],
       "fails": [
-       "costs Rs 25,000 a lot, over the Rs 15,000 budget",
        "loses 31% to time decay by day 9 if the stock stands still",
        "most call OI (writers) sits at 350, before 374.3: it may cap the rise"
       ]
@@ -4438,7 +4417,6 @@
       "ok": true,
       "why_not": [],
       "fails": [
-       "costs Rs 18,500 a lot, over the Rs 15,000 budget",
        "loses 40% to time decay by day 9 if the stock stands still",
        "most call OI (writers) sits at 350, before 374.3: it may cap the rise"
       ]
@@ -4493,7 +4471,7 @@
       "buy_iv": 22.46,
       "sell_iv": 22.95,
       "theta_lot_day": -145,
-      "lots_in_budget": 1,
+      "lots_in_budget": 2,
       "fails": [
        "loses 30% to time decay by day 9 if the stock stands still",
        "most call OI (writers) sits at 350, before 370: it may cap the rise"
@@ -4516,7 +4494,7 @@
       "buy_iv": 22.46,
       "sell_iv": 22.46,
       "theta_lot_day": -102,
-      "lots_in_budget": 1,
+      "lots_in_budget": 2,
       "fails": [
        "loses 25% to time decay by day 9 if the stock stands still",
        "most call OI (writers) sits at 350, before 365: it may cap the rise"
@@ -4539,9 +4517,8 @@
       "buy_iv": 22.95,
       "sell_iv": 22.95,
       "theta_lot_day": -150,
-      "lots_in_budget": 0,
+      "lots_in_budget": 1,
       "fails": [
-       "costs Rs 20,625 a lot, over the Rs 15,000 budget",
        "most call OI (writers) sits at 350, before 370: it may cap the rise"
       ]
      },
@@ -4562,9 +4539,8 @@
       "buy_iv": 22.95,
       "sell_iv": 22.46,
       "theta_lot_day": -106,
-      "lots_in_budget": 0,
+      "lots_in_budget": 1,
       "fails": [
-       "costs Rs 18,500 a lot, over the Rs 15,000 budget",
        "most call OI (writers) sits at 350, before 365: it may cap the rise"
       ]
      },
@@ -4585,7 +4561,7 @@
       "buy_iv": 22.46,
       "sell_iv": 22.46,
       "theta_lot_day": -54,
-      "lots_in_budget": 1,
+      "lots_in_budget": 3,
       "fails": [
        "most call OI (writers) sits at 350, before 360: it may cap the rise"
       ]
@@ -4607,9 +4583,8 @@
       "buy_iv": 22.95,
       "sell_iv": 22.46,
       "theta_lot_day": -58,
-      "lots_in_budget": 0,
+      "lots_in_budget": 1,
       "fails": [
-       "costs Rs 15,750 a lot, over the Rs 15,000 budget",
        "most call OI (writers) sits at 350, before 360: it may cap the rise"
       ]
      },
@@ -4630,7 +4605,7 @@
       "buy_iv": 22.46,
       "sell_iv": 22.46,
       "theta_lot_day": -18,
-      "lots_in_budget": 2,
+      "lots_in_budget": 5,
       "fails": [
        "most call OI (writers) sits at 350, before 355: it may cap the rise"
       ]
@@ -4652,7 +4627,7 @@
       "buy_iv": 22.95,
       "sell_iv": 22.46,
       "theta_lot_day": -22,
-      "lots_in_budget": 1,
+      "lots_in_budget": 2,
       "fails": [
        "most call OI (writers) sits at 350, before 355: it may cap the rise"
       ]
@@ -4748,7 +4723,10 @@
     "lot": 1975,
     "hv20": 26.4,
     "iv_rank": null,
-    "budget": 15000,
+    "budget": 30000,
+    "take_profit_pct": 60,
+    "stop_pct": 10,
+    "exit_dte": 7,
     "pcr": 0.99,
     "call_wall": 300.0,
     "put_wall": 250.0,
@@ -4844,9 +4822,7 @@
       "be_move_pct": -1.76,
       "ok": true,
       "why_not": [],
-      "fails": [
-       "costs Rs 15,899 a lot, over the Rs 15,000 budget"
-      ]
+      "fails": []
      },
      {
       "strike": 295.0,
@@ -4874,9 +4850,7 @@
       "be_move_pct": -0.96,
       "ok": true,
       "why_not": [],
-      "fails": [
-       "costs Rs 21,231 a lot, over the Rs 15,000 budget"
-      ]
+      "fails": []
      },
      {
       "strike": 300.0,
@@ -4904,9 +4878,7 @@
       "be_move_pct": -0.35,
       "ok": true,
       "why_not": [],
-      "fails": [
-       "costs Rs 27,650 a lot, over the Rs 15,000 budget"
-      ]
+      "fails": []
      },
      {
       "strike": 305.0,
@@ -4940,7 +4912,7 @@
       "fails": [
        "bid-ask spread 23.1%",
        "thin OI (7 lots)",
-       "costs Rs 38,611 a lot, over the Rs 15,000 budget",
+       "costs Rs 38,611 a lot, over the Rs 30,000 budget",
        "IV 34% is above the stock's realised 26.4%: buy a spread instead"
       ]
      },
@@ -4976,7 +4948,7 @@
       "fails": [
        "bid-ask spread 11.3%",
        "thin OI (3 lots)",
-       "costs Rs 73,766 a lot, over the Rs 15,000 budget",
+       "costs Rs 73,766 a lot, over the Rs 30,000 budget",
        "IV 58% is above the stock's realised 26.4%: buy a spread instead"
       ]
      }
@@ -4999,6 +4971,26 @@
       "buy_iv": 25.63,
       "sell_iv": 28.81,
       "theta_lot_day": -88,
+      "lots_in_budget": 2,
+      "fails": []
+     },
+     {
+      "buy": 295.0,
+      "sell": 270.0,
+      "width": 25.0,
+      "cost": 8.7,
+      "cost_lot": 17182,
+      "max_profit_lot": 32192,
+      "gain_lot": 20679,
+      "loss_lot": 7648,
+      "rr": 2.7,
+      "breakeven": 286.3,
+      "flat_lot": 18065,
+      "buy_delta": -0.589,
+      "sell_delta": -0.168,
+      "buy_iv": 25.39,
+      "sell_iv": 28.81,
+      "theta_lot_day": -77,
       "lots_in_budget": 1,
       "fails": []
      },
@@ -5019,6 +5011,26 @@
       "buy_iv": 25.63,
       "sell_iv": 27.83,
       "theta_lot_day": -53,
+      "lots_in_budget": 2,
+      "fails": []
+     },
+     {
+      "buy": 295.0,
+      "sell": 275.0,
+      "width": 20.0,
+      "cost": 7.85,
+      "cost_lot": 15504,
+      "max_profit_lot": 23996,
+      "gain_lot": 16913,
+      "loss_lot": 6678,
+      "rr": 2.53,
+      "breakeven": 287.15,
+      "flat_lot": 16520,
+      "buy_delta": -0.589,
+      "sell_delta": -0.228,
+      "buy_iv": 25.39,
+      "sell_iv": 27.83,
+      "theta_lot_day": -43,
       "lots_in_budget": 1,
       "fails": []
      },
@@ -5039,7 +5051,7 @@
       "buy_iv": 25.63,
       "sell_iv": 27.1,
       "theta_lot_day": -22,
-      "lots_in_budget": 1,
+      "lots_in_budget": 3,
       "fails": []
      },
      {
@@ -5059,7 +5071,7 @@
       "buy_iv": 25.39,
       "sell_iv": 27.1,
       "theta_lot_day": -12,
-      "lots_in_budget": 1,
+      "lots_in_budget": 2,
       "fails": []
      },
      {
@@ -5079,52 +5091,8 @@
       "buy_iv": 25.63,
       "sell_iv": 26.37,
       "theta_lot_day": -3,
-      "lots_in_budget": 3,
+      "lots_in_budget": 6,
       "fails": []
-     },
-     {
-      "buy": 295.0,
-      "sell": 270.0,
-      "width": 25.0,
-      "cost": 8.7,
-      "cost_lot": 17182,
-      "max_profit_lot": 32192,
-      "gain_lot": 20679,
-      "loss_lot": 7648,
-      "rr": 2.7,
-      "breakeven": 286.3,
-      "flat_lot": 18065,
-      "buy_delta": -0.589,
-      "sell_delta": -0.168,
-      "buy_iv": 25.39,
-      "sell_iv": 28.81,
-      "theta_lot_day": -77,
-      "lots_in_budget": 0,
-      "fails": [
-       "costs Rs 17,182 a lot, over the Rs 15,000 budget"
-      ]
-     },
-     {
-      "buy": 295.0,
-      "sell": 275.0,
-      "width": 20.0,
-      "cost": 7.85,
-      "cost_lot": 15504,
-      "max_profit_lot": 23996,
-      "gain_lot": 16913,
-      "loss_lot": 6678,
-      "rr": 2.53,
-      "breakeven": 287.15,
-      "flat_lot": 16520,
-      "buy_delta": -0.589,
-      "sell_delta": -0.228,
-      "buy_iv": 25.39,
-      "sell_iv": 27.83,
-      "theta_lot_day": -43,
-      "lots_in_budget": 0,
-      "fails": [
-       "costs Rs 15,504 a lot, over the Rs 15,000 budget"
-      ]
      },
      {
       "buy": 295.0,
@@ -5143,7 +5111,7 @@
       "buy_iv": 25.39,
       "sell_iv": 26.37,
       "theta_lot_day": 8,
-      "lots_in_budget": 1,
+      "lots_in_budget": 3,
       "fails": [
        "pays 50% of the width (max 50%)"
       ]
@@ -5166,14 +5134,14 @@
      "buy_iv": 25.63,
      "sell_iv": 28.81,
      "theta_lot_day": -88,
-     "lots_in_budget": 1,
+     "lots_in_budget": 2,
      "fails": [],
      "structure": "spread"
     },
     "best": 290.0,
     "watch": [
      290.0,
-     290.0
+     300.0
     ],
     "direction": [
      {
@@ -5260,7 +5228,10 @@
     "lot": 625,
     "hv20": 28.5,
     "iv_rank": null,
-    "budget": 15000,
+    "budget": 30000,
+    "take_profit_pct": 60,
+    "stop_pct": 10,
+    "exit_dte": 7,
     "pcr": 1.03,
     "call_wall": 1100.0,
     "put_wall": 1200.0,
@@ -5349,9 +5320,7 @@
       "be_move_pct": -1.86,
       "ok": true,
       "why_not": [],
-      "fails": [
-       "costs Rs 19,625 a lot, over the Rs 15,000 budget"
-      ]
+      "fails": []
      },
      {
       "strike": 1080.0,
@@ -5382,8 +5351,7 @@
        "bid-ask spread 4.4%"
       ],
       "fails": [
-       "bid-ask spread 4.4%",
-       "costs Rs 26,844 a lot, over the Rs 15,000 budget"
+       "bid-ask spread 4.4%"
       ]
      },
      {
@@ -5418,7 +5386,7 @@
       "fails": [
        "bid-ask spread 12.0%",
        "thin OI (2 lots)",
-       "costs Rs 81,781 a lot, over the Rs 15,000 budget",
+       "costs Rs 81,781 a lot, over the Rs 30,000 budget",
        "IV 62% is above the stock's realised 28.5%: buy a spread instead"
       ]
      }
@@ -5441,7 +5409,7 @@
       "buy_iv": 26.37,
       "sell_iv": 29.66,
       "theta_lot_day": -96,
-      "lots_in_budget": 1,
+      "lots_in_budget": 3,
       "fails": []
      },
      {
@@ -5461,7 +5429,7 @@
       "buy_iv": 25.88,
       "sell_iv": 29.66,
       "theta_lot_day": -99,
-      "lots_in_budget": 1,
+      "lots_in_budget": 2,
       "fails": []
      },
      {
@@ -5481,7 +5449,7 @@
       "buy_iv": 26.37,
       "sell_iv": 28.32,
       "theta_lot_day": -57,
-      "lots_in_budget": 2,
+      "lots_in_budget": 4,
       "fails": []
      },
      {
@@ -5501,7 +5469,7 @@
       "buy_iv": 25.88,
       "sell_iv": 28.32,
       "theta_lot_day": -60,
-      "lots_in_budget": 1,
+      "lots_in_budget": 2,
       "fails": []
      },
      {
@@ -5521,7 +5489,7 @@
       "buy_iv": 25.88,
       "sell_iv": 27.47,
       "theta_lot_day": -21,
-      "lots_in_budget": 1,
+      "lots_in_budget": 3,
       "fails": []
      },
      {
@@ -5541,7 +5509,7 @@
       "buy_iv": 26.37,
       "sell_iv": 27.47,
       "theta_lot_day": -18,
-      "lots_in_budget": 3,
+      "lots_in_budget": 6,
       "fails": []
      },
      {
@@ -5561,7 +5529,7 @@
       "buy_iv": 25.88,
       "sell_iv": 26.37,
       "theta_lot_day": -3,
-      "lots_in_budget": 2,
+      "lots_in_budget": 5,
       "fails": []
      },
      {
@@ -5581,10 +5549,9 @@
       "buy_iv": 23.93,
       "sell_iv": 29.66,
       "theta_lot_day": -56,
-      "lots_in_budget": 0,
+      "lots_in_budget": 1,
       "fails": [
-       "bid-ask spread 4.4%",
-       "costs Rs 22,125 a lot, over the Rs 15,000 budget"
+       "bid-ask spread 4.4%"
       ]
      }
     ],
@@ -5605,14 +5572,14 @@
      "buy_iv": 26.37,
      "sell_iv": 29.66,
      "theta_lot_day": -96,
-     "lots_in_budget": 1,
+     "lots_in_budget": 3,
      "fails": [],
      "structure": "spread"
     },
     "best": 1040.0,
     "watch": [
      1040.0,
-     1040.0
+     1060.0
     ],
     "direction": [
      {
@@ -5699,7 +5666,10 @@
     "lot": 4875,
     "hv20": 23.0,
     "iv_rank": null,
-    "budget": 15000,
+    "budget": 30000,
+    "take_profit_pct": 60,
+    "stop_pct": 10,
+    "exit_dte": 7,
     "pcr": 1.02,
     "call_wall": 150.0,
     "put_wall": 150.0,
@@ -5833,7 +5803,6 @@
       ],
       "fails": [
        "thin OI (43 lots)",
-       "costs Rs 15,698 a lot, over the Rs 15,000 budget",
        "IV 26% is above the stock's realised 23.0%: buy a spread instead",
        "loses 31% to time decay by day 6 if the stock stands still"
       ]
@@ -5865,7 +5834,6 @@
       "ok": true,
       "why_not": [],
       "fails": [
-       "costs Rs 17,940 a lot, over the Rs 15,000 budget",
        "IV 26% is above the stock's realised 23.0%: buy a spread instead",
        "loses 27% to time decay by day 6 if the stock stands still"
       ]
@@ -5900,7 +5868,6 @@
       ],
       "fails": [
        "thin OI (48 lots)",
-       "costs Rs 20,426 a lot, over the Rs 15,000 budget",
        "IV 26% is above the stock's realised 23.0%: buy a spread instead",
        "loses 25% to time decay by day 6 if the stock stands still"
       ]
@@ -5932,7 +5899,6 @@
       "ok": true,
       "why_not": [],
       "fails": [
-       "costs Rs 23,108 a lot, over the Rs 15,000 budget",
        "IV 26% is above the stock's realised 23.0%: buy a spread instead"
       ]
      },
@@ -5968,7 +5934,7 @@
       "fails": [
        "bid-ask spread 46.7%",
        "thin OI (18 lots)",
-       "costs Rs 36,075 a lot, over the Rs 15,000 budget",
+       "costs Rs 36,075 a lot, over the Rs 30,000 budget",
        "reward:risk 0.68, needs 2.0+",
        "loses 48% to time decay by day 6 if the stock stands still"
       ]
@@ -6000,7 +5966,7 @@
       "ok": true,
       "why_not": [],
       "fails": [
-       "costs Rs 32,565 a lot, over the Rs 15,000 budget",
+       "costs Rs 32,565 a lot, over the Rs 30,000 budget",
        "IV 26% is above the stock's realised 23.0%: buy a spread instead"
       ]
      }
@@ -6023,7 +5989,7 @@
       "buy_iv": 26.37,
       "sell_iv": 28.32,
       "theta_lot_day": -21,
-      "lots_in_budget": 1,
+      "lots_in_budget": 2,
       "fails": []
      },
      {
@@ -6043,7 +6009,7 @@
       "buy_iv": 26.37,
       "sell_iv": 26.86,
       "theta_lot_day": 1,
-      "lots_in_budget": 1,
+      "lots_in_budget": 3,
       "fails": []
      },
      {
@@ -6063,7 +6029,7 @@
       "buy_iv": 26.37,
       "sell_iv": 28.32,
       "theta_lot_day": -26,
-      "lots_in_budget": 1,
+      "lots_in_budget": 3,
       "fails": []
      },
      {
@@ -6083,7 +6049,7 @@
       "buy_iv": 26.86,
       "sell_iv": 28.32,
       "theta_lot_day": -22,
-      "lots_in_budget": 3,
+      "lots_in_budget": 6,
       "fails": []
      },
      {
@@ -6103,7 +6069,7 @@
       "buy_iv": 26.37,
       "sell_iv": 26.86,
       "theta_lot_day": -4,
-      "lots_in_budget": 3,
+      "lots_in_budget": 6,
       "fails": []
      },
      {
@@ -6123,7 +6089,7 @@
       "buy_iv": 26.37,
       "sell_iv": 27.34,
       "theta_lot_day": -18,
-      "lots_in_budget": 1,
+      "lots_in_budget": 2,
       "fails": [
        "sold leg: thin OI (54 lots)"
       ]
@@ -6145,10 +6111,9 @@
       "buy_iv": 26.37,
       "sell_iv": 28.32,
       "theta_lot_day": -41,
-      "lots_in_budget": 0,
+      "lots_in_budget": 1,
       "fails": [
-       "sold leg: thin OI (21 lots)",
-       "costs Rs 15,698 a lot, over the Rs 15,000 budget"
+       "sold leg: thin OI (21 lots)"
       ]
      },
      {
@@ -6168,10 +6133,9 @@
       "buy_iv": 26.37,
       "sell_iv": 29.3,
       "theta_lot_day": -48,
-      "lots_in_budget": 0,
+      "lots_in_budget": 1,
       "fails": [
-       "sold leg: thin OI (36 lots)",
-       "costs Rs 16,721 a lot, over the Rs 15,000 budget"
+       "sold leg: thin OI (36 lots)"
       ]
      }
     ],
@@ -6192,7 +6156,7 @@
      "buy_iv": 26.37,
      "sell_iv": 28.32,
      "theta_lot_day": -21,
-     "lots_in_budget": 1,
+     "lots_in_budget": 2,
      "fails": [],
      "structure": "spread"
     },
@@ -6286,7 +6250,10 @@
     "lot": 1900,
     "hv20": 20.1,
     "iv_rank": null,
-    "budget": 15000,
+    "budget": 30000,
+    "take_profit_pct": 60,
+    "stop_pct": 10,
+    "exit_dte": 7,
     "pcr": 0.88,
     "call_wall": 250.0,
     "put_wall": 300.0,
@@ -6448,7 +6415,6 @@
       ],
       "fails": [
        "thin OI (37 lots)",
-       "costs Rs 15,485 a lot, over the Rs 15,000 budget",
        "IV 24% is above the stock's realised 20.1%: buy a spread instead",
        "loses 39% to time decay by day 8 if the stock stands still"
       ]
@@ -6480,7 +6446,6 @@
       "ok": true,
       "why_not": [],
       "fails": [
-       "costs Rs 18,430 a lot, over the Rs 15,000 budget",
        "IV 24% is above the stock's realised 20.1%: buy a spread instead",
        "loses 34% to time decay by day 8 if the stock stands still"
       ]
@@ -6517,7 +6482,6 @@
       "fails": [
        "bid-ask spread 30.1%",
        "thin OI (26 lots)",
-       "costs Rs 24,700 a lot, over the Rs 15,000 budget",
        "reward:risk 1.31, needs 2.0+",
        "IV 24% is above the stock's realised 20.1%: buy a spread instead",
        "loses 39% to time decay by day 8 if the stock stands still"
@@ -6550,7 +6514,6 @@
       "ok": true,
       "why_not": [],
       "fails": [
-       "costs Rs 25,175 a lot, over the Rs 15,000 budget",
        "IV 26% is above the stock's realised 20.1%: buy a spread instead"
       ]
      },
@@ -6586,7 +6549,7 @@
       "fails": [
        "bid-ask spread 17.9%",
        "thin OI (5 lots)",
-       "costs Rs 39,995 a lot, over the Rs 15,000 budget",
+       "costs Rs 39,995 a lot, over the Rs 30,000 budget",
        "IV 45% is above the stock's realised 20.1%: buy a spread instead"
       ]
      },
@@ -6622,7 +6585,7 @@
       "fails": [
        "bid-ask spread 12.1%",
        "thin OI (1 lots)",
-       "costs Rs 57,475 a lot, over the Rs 15,000 budget",
+       "costs Rs 57,475 a lot, over the Rs 30,000 budget",
        "IV 54% is above the stock's realised 20.1%: buy a spread instead"
       ]
      }
@@ -6645,7 +6608,7 @@
       "buy_iv": 24.9,
       "sell_iv": 24.41,
       "theta_lot_day": -12,
-      "lots_in_budget": 6,
+      "lots_in_budget": 13,
       "fails": []
      },
      {
@@ -6665,7 +6628,7 @@
       "buy_iv": 24.41,
       "sell_iv": 24.9,
       "theta_lot_day": -24,
-      "lots_in_budget": 1,
+      "lots_in_budget": 2,
       "fails": []
      },
      {
@@ -6685,7 +6648,7 @@
       "buy_iv": 24.9,
       "sell_iv": 24.9,
       "theta_lot_day": -37,
-      "lots_in_budget": 2,
+      "lots_in_budget": 5,
       "fails": [
        "loses 30% to time decay by day 8 if the stock stands still"
       ]
@@ -6707,7 +6670,7 @@
       "buy_iv": 24.9,
       "sell_iv": 26.37,
       "theta_lot_day": -44,
-      "lots_in_budget": 2,
+      "lots_in_budget": 4,
       "fails": [
        "sold leg: thin OI (43 lots)",
        "loses 36% to time decay by day 8 if the stock stands still"
@@ -6730,7 +6693,7 @@
       "buy_iv": 24.9,
       "sell_iv": 24.9,
       "theta_lot_day": -21,
-      "lots_in_budget": 3,
+      "lots_in_budget": 7,
       "fails": [
        "sold leg: thin OI (59 lots)",
        "loses 29% to time decay by day 8 if the stock stands still"
@@ -6753,7 +6716,7 @@
       "buy_iv": 23.93,
       "sell_iv": 24.9,
       "theta_lot_day": -28,
-      "lots_in_budget": 1,
+      "lots_in_budget": 2,
       "fails": [
        "thin OI (37 lots)",
        "loses 25% to time decay by day 8 if the stock stands still"
@@ -6776,7 +6739,7 @@
       "buy_iv": 23.93,
       "sell_iv": 24.9,
       "theta_lot_day": -31,
-      "lots_in_budget": 1,
+      "lots_in_budget": 3,
       "fails": [
        "loses 30% to time decay by day 8 if the stock stands still"
       ]
@@ -6798,7 +6761,7 @@
       "buy_iv": 24.41,
       "sell_iv": 26.37,
       "theta_lot_day": -30,
-      "lots_in_budget": 1,
+      "lots_in_budget": 2,
       "fails": [
        "sold leg: thin OI (43 lots)"
       ]
@@ -6821,7 +6784,7 @@
      "buy_iv": 24.9,
      "sell_iv": 24.41,
      "theta_lot_day": -12,
-     "lots_in_budget": 6,
+     "lots_in_budget": 13,
      "fails": [],
      "structure": "spread"
     },
@@ -6915,7 +6878,10 @@
     "lot": 3550,
     "hv20": 22.8,
     "iv_rank": null,
-    "budget": 15000,
+    "budget": 30000,
+    "take_profit_pct": 60,
+    "stop_pct": 10,
+    "exit_dte": 7,
     "pcr": 1.04,
     "call_wall": 170.0,
     "put_wall": 190.0,
@@ -7011,7 +6977,6 @@
       "ok": true,
       "why_not": [],
       "fails": [
-       "costs Rs 18,992 a lot, over the Rs 15,000 budget",
        "IV 26% is above the stock's realised 22.8%: buy a spread instead"
       ]
      },
@@ -7042,7 +7007,6 @@
       "ok": true,
       "why_not": [],
       "fails": [
-       "costs Rs 24,069 a lot, over the Rs 15,000 budget",
        "IV 25% is above the stock's realised 22.8%: buy a spread instead"
       ]
      },
@@ -7078,7 +7042,7 @@
       "fails": [
        "bid-ask spread 7.0%",
        "thin OI (17 lots)",
-       "costs Rs 30,956 a lot, over the Rs 15,000 budget",
+       "costs Rs 30,956 a lot, over the Rs 30,000 budget",
        "IV 25% is above the stock's realised 22.8%: buy a spread instead"
       ]
      }
@@ -7101,7 +7065,7 @@
       "buy_iv": 25.88,
       "sell_iv": 28.32,
       "theta_lot_day": -93,
-      "lots_in_budget": 1,
+      "lots_in_budget": 2,
       "fails": []
      },
      {
@@ -7121,6 +7085,26 @@
       "buy_iv": 26.37,
       "sell_iv": 28.32,
       "theta_lot_day": -100,
+      "lots_in_budget": 2,
+      "fails": []
+     },
+     {
+      "buy": 170.0,
+      "sell": 155.0,
+      "width": 15.0,
+      "cost": 5.61,
+      "cost_lot": 19916,
+      "max_profit_lot": 33334,
+      "gain_lot": 26978,
+      "loss_lot": 9369,
+      "rr": 2.88,
+      "breakeven": 164.39,
+      "flat_lot": 19989,
+      "buy_delta": -0.624,
+      "sell_delta": -0.17,
+      "buy_iv": 24.9,
+      "sell_iv": 28.32,
+      "theta_lot_day": -69,
       "lots_in_budget": 1,
       "fails": []
      },
@@ -7141,7 +7125,7 @@
       "buy_iv": 26.37,
       "sell_iv": 26.86,
       "theta_lot_day": -40,
-      "lots_in_budget": 1,
+      "lots_in_budget": 2,
       "fails": []
      },
      {
@@ -7161,7 +7145,27 @@
       "buy_iv": 25.88,
       "sell_iv": 26.86,
       "theta_lot_day": -32,
-      "lots_in_budget": 2,
+      "lots_in_budget": 4,
+      "fails": []
+     },
+     {
+      "buy": 170.0,
+      "sell": 160.0,
+      "width": 10.0,
+      "cost": 4.56,
+      "cost_lot": 16188,
+      "max_profit_lot": 19312,
+      "gain_lot": 17334,
+      "loss_lot": 7104,
+      "rr": 2.44,
+      "breakeven": 165.44,
+      "flat_lot": 17016,
+      "buy_delta": -0.624,
+      "sell_delta": -0.288,
+      "buy_iv": 24.9,
+      "sell_iv": 26.86,
+      "theta_lot_day": -9,
+      "lots_in_budget": 1,
       "fails": []
      },
      {
@@ -7181,7 +7185,7 @@
       "buy_iv": 26.37,
       "sell_iv": 26.86,
       "theta_lot_day": -11,
-      "lots_in_budget": 1,
+      "lots_in_budget": 3,
       "fails": []
      },
      {
@@ -7201,53 +7205,8 @@
       "buy_iv": 25.88,
       "sell_iv": 26.86,
       "theta_lot_day": -4,
-      "lots_in_budget": 3,
+      "lots_in_budget": 7,
       "fails": []
-     },
-     {
-      "buy": 165.0,
-      "sell": 152.5,
-      "width": 12.5,
-      "cost": 3.24,
-      "cost_lot": 11502,
-      "max_profit_lot": 32873,
-      "gain_lot": 23176,
-      "loss_lot": 6454,
-      "rr": 3.59,
-      "breakeven": 161.76,
-      "flat_lot": 10070,
-      "buy_delta": -0.448,
-      "sell_delta": -0.129,
-      "buy_iv": 25.88,
-      "sell_iv": 29.3,
-      "theta_lot_day": -124,
-      "lots_in_budget": 1,
-      "fails": [
-       "sold leg: thin OI (30 lots)"
-      ]
-     },
-     {
-      "buy": 167.5,
-      "sell": 152.5,
-      "width": 15.0,
-      "cost": 4.5,
-      "cost_lot": 15975,
-      "max_profit_lot": 37275,
-      "gain_lot": 27347,
-      "loss_lot": 7875,
-      "rr": 3.47,
-      "breakeven": 163.0,
-      "flat_lot": 15262,
-      "buy_delta": -0.533,
-      "sell_delta": -0.129,
-      "buy_iv": 26.37,
-      "sell_iv": 29.3,
-      "theta_lot_day": -131,
-      "lots_in_budget": 0,
-      "fails": [
-       "sold leg: thin OI (30 lots)",
-       "costs Rs 15,975 a lot, over the Rs 15,000 budget"
-      ]
      }
     ],
     "trade": {
@@ -7267,7 +7226,7 @@
      "buy_iv": 25.88,
      "sell_iv": 28.32,
      "theta_lot_day": -93,
-     "lots_in_budget": 1,
+     "lots_in_budget": 2,
      "fails": [],
      "structure": "spread"
     },
@@ -7361,7 +7320,10 @@
     "lot": 2250,
     "hv20": 17.3,
     "iv_rank": null,
-    "budget": 15000,
+    "budget": 30000,
+    "take_profit_pct": 60,
+    "stop_pct": 10,
+    "exit_dte": 7,
     "pcr": 0.74,
     "call_wall": 230.0,
     "put_wall": 220.0,
@@ -7492,7 +7454,6 @@
       "ok": true,
       "why_not": [],
       "fails": [
-       "costs Rs 15,772 a lot, over the Rs 15,000 budget",
        "IV 24% is above the stock's realised 17.3%: buy a spread instead",
        "loses 26% to time decay by day 9 if the stock stands still",
        "most put OI (writers) sits at 220, before 207.35: it may hold the fall"
@@ -7525,7 +7486,6 @@
       "ok": true,
       "why_not": [],
       "fails": [
-       "costs Rs 19,215 a lot, over the Rs 15,000 budget",
        "IV 24% is above the stock's realised 17.3%: buy a spread instead",
        "most put OI (writers) sits at 220, before 207.35: it may hold the fall"
       ]
@@ -7560,7 +7520,6 @@
       ],
       "fails": [
        "thin OI (165 lots)",
-       "costs Rs 27,338 a lot, over the Rs 15,000 budget",
        "IV 23% is above the stock's realised 17.3%: buy a spread instead",
        "most put OI (writers) sits at 220, before 207.35: it may hold the fall"
       ]
@@ -7584,7 +7543,7 @@
       "buy_iv": 23.93,
       "sell_iv": 24.17,
       "theta_lot_day": -16,
-      "lots_in_budget": 3,
+      "lots_in_budget": 6,
       "fails": []
      },
      {
@@ -7604,7 +7563,7 @@
       "buy_iv": 23.93,
       "sell_iv": 24.17,
       "theta_lot_day": -14,
-      "lots_in_budget": 1,
+      "lots_in_budget": 3,
       "fails": []
      },
      {
@@ -7624,7 +7583,7 @@
       "buy_iv": 23.93,
       "sell_iv": 26.37,
       "theta_lot_day": -109,
-      "lots_in_budget": 1,
+      "lots_in_budget": 3,
       "fails": [
        "thin OI (162 lots)",
        "sold leg: thin OI (49 lots)",
@@ -7649,7 +7608,7 @@
       "buy_iv": 23.93,
       "sell_iv": 26.37,
       "theta_lot_day": -114,
-      "lots_in_budget": 1,
+      "lots_in_budget": 2,
       "fails": [
        "sold leg: thin OI (49 lots)",
        "most put OI (writers) sits at 220, before 207.5: it may hold the fall"
@@ -7672,7 +7631,7 @@
       "buy_iv": 23.93,
       "sell_iv": 26.37,
       "theta_lot_day": -81,
-      "lots_in_budget": 2,
+      "lots_in_budget": 4,
       "fails": [
        "thin OI (162 lots)",
        "loses 28% to time decay by day 9 if the stock stands still",
@@ -7696,7 +7655,7 @@
       "buy_iv": 23.93,
       "sell_iv": 25.39,
       "theta_lot_day": -65,
-      "lots_in_budget": 2,
+      "lots_in_budget": 4,
       "fails": [
        "thin OI (162 lots)",
        "sold leg: thin OI (61 lots)",
@@ -7720,7 +7679,7 @@
       "buy_iv": 23.93,
       "sell_iv": 26.37,
       "theta_lot_day": -112,
-      "lots_in_budget": 1,
+      "lots_in_budget": 2,
       "fails": [
        "sold leg: thin OI (49 lots)",
        "most put OI (writers) sits at 220, before 207.5: it may hold the fall"
@@ -7743,7 +7702,7 @@
       "buy_iv": 23.93,
       "sell_iv": 26.37,
       "theta_lot_day": -86,
-      "lots_in_budget": 1,
+      "lots_in_budget": 3,
       "fails": [
        "most put OI (writers) sits at 220, before 210: it may hold the fall"
       ]
@@ -7766,7 +7725,7 @@
      "buy_iv": 23.93,
      "sell_iv": 24.17,
      "theta_lot_day": -16,
-     "lots_in_budget": 3,
+     "lots_in_budget": 6,
      "fails": [],
      "structure": "spread"
     },
@@ -7860,7 +7819,10 @@
     "lot": 1275,
     "hv20": 32.2,
     "iv_rank": null,
-    "budget": 15000,
+    "budget": 30000,
+    "take_profit_pct": 60,
+    "stop_pct": 10,
+    "exit_dte": 7,
     "pcr": 0.48,
     "call_wall": 400.0,
     "put_wall": 400.0,
@@ -7964,7 +7926,6 @@
       "ok": true,
       "why_not": [],
       "fails": [
-       "costs Rs 15,938 a lot, over the Rs 15,000 budget",
        "IV 36% is above the stock's realised 32.2%: buy a spread instead",
        "loses 32% to time decay by day 9 if the stock stands still",
        "most put OI (writers) sits at 400, before 370.3: it may hold the fall"
@@ -8000,7 +7961,6 @@
       ],
       "fails": [
        "thin OI (120 lots)",
-       "costs Rs 18,615 a lot, over the Rs 15,000 budget",
        "IV 35% is above the stock's realised 32.2%: buy a spread instead",
        "loses 29% to time decay by day 9 if the stock stands still",
        "most put OI (writers) sits at 400, before 370.3: it may hold the fall"
@@ -8033,7 +7993,6 @@
       "ok": true,
       "why_not": [],
       "fails": [
-       "costs Rs 21,802 a lot, over the Rs 15,000 budget",
        "IV 34% is above the stock's realised 32.2%: buy a spread instead",
        "most put OI (writers) sits at 400, before 370.3: it may hold the fall"
       ]
@@ -8068,7 +8027,6 @@
       ],
       "fails": [
        "thin OI (56 lots)",
-       "costs Rs 25,245 a lot, over the Rs 15,000 budget",
        "IV 34% is above the stock's realised 32.2%: buy a spread instead",
        "most put OI (writers) sits at 400, before 370.3: it may hold the fall"
       ]
@@ -8100,7 +8058,6 @@
       "ok": true,
       "why_not": [],
       "fails": [
-       "costs Rs 29,134 a lot, over the Rs 15,000 budget",
        "IV 33% is above the stock's realised 32.2%: buy a spread instead",
        "most put OI (writers) sits at 400, before 370.3: it may hold the fall"
       ]
@@ -8137,7 +8094,7 @@
       "fails": [
        "bid-ask spread 21.3%",
        "thin OI (29 lots)",
-       "costs Rs 36,082 a lot, over the Rs 15,000 budget",
+       "costs Rs 36,082 a lot, over the Rs 30,000 budget",
        "reward:risk 1.7, needs 2.0+",
        "most put OI (writers) sits at 400, before 370.3: it may hold the fall"
       ]
@@ -8169,7 +8126,7 @@
       "ok": true,
       "why_not": [],
       "fails": [
-       "costs Rs 37,995 a lot, over the Rs 15,000 budget",
+       "costs Rs 37,995 a lot, over the Rs 30,000 budget",
        "IV 34% is above the stock's realised 32.2%: buy a spread instead",
        "most put OI (writers) sits at 400, before 370.3: it may hold the fall"
       ]
@@ -8206,7 +8163,7 @@
       "fails": [
        "bid-ask spread 9.4%",
        "thin OI (10 lots)",
-       "costs Rs 78,476 a lot, over the Rs 15,000 budget",
+       "costs Rs 78,476 a lot, over the Rs 30,000 budget",
        "IV 72% is above the stock's realised 32.2%: buy a spread instead",
        "most put OI (writers) sits at 400, before 370.3: it may hold the fall"
       ]
@@ -8230,7 +8187,7 @@
       "buy_iv": 34.18,
       "sell_iv": 36.25,
       "theta_lot_day": 13,
-      "lots_in_budget": 2,
+      "lots_in_budget": 4,
       "fails": []
      },
      {
@@ -8250,7 +8207,7 @@
       "buy_iv": 36.25,
       "sell_iv": 38.57,
       "theta_lot_day": -88,
-      "lots_in_budget": 1,
+      "lots_in_budget": 3,
       "fails": [
        "sold leg: thin OI (50 lots)",
        "most put OI (writers) sits at 400, before 375: it may hold the fall"
@@ -8273,7 +8230,7 @@
       "buy_iv": 36.25,
       "sell_iv": 38.09,
       "theta_lot_day": -64,
-      "lots_in_budget": 1,
+      "lots_in_budget": 3,
       "fails": [
        "most put OI (writers) sits at 400, before 380: it may hold the fall"
       ]
@@ -8295,7 +8252,7 @@
       "buy_iv": 34.91,
       "sell_iv": 38.57,
       "theta_lot_day": -82,
-      "lots_in_budget": 1,
+      "lots_in_budget": 2,
       "fails": [
        "thin OI (120 lots)",
        "sold leg: thin OI (50 lots)",
@@ -8319,7 +8276,7 @@
       "buy_iv": 36.25,
       "sell_iv": 36.62,
       "theta_lot_day": -29,
-      "lots_in_budget": 3,
+      "lots_in_budget": 6,
       "fails": [
        "most put OI (writers) sits at 400, before 390: it may hold the fall"
       ]
@@ -8341,7 +8298,7 @@
       "buy_iv": 36.25,
       "sell_iv": 37.6,
       "theta_lot_day": -42,
-      "lots_in_budget": 2,
+      "lots_in_budget": 4,
       "fails": [
        "sold leg: thin OI (120 lots)",
        "most put OI (writers) sits at 400, before 385: it may hold the fall"
@@ -8364,10 +8321,9 @@
       "buy_iv": 34.18,
       "sell_iv": 38.57,
       "theta_lot_day": -75,
-      "lots_in_budget": 0,
+      "lots_in_budget": 1,
       "fails": [
        "sold leg: thin OI (50 lots)",
-       "costs Rs 15,555 a lot, over the Rs 15,000 budget",
        "most put OI (writers) sits at 400, before 375: it may hold the fall"
       ]
      },
@@ -8388,11 +8344,10 @@
       "buy_iv": 33.69,
       "sell_iv": 38.57,
       "theta_lot_day": -65,
-      "lots_in_budget": 0,
+      "lots_in_budget": 1,
       "fails": [
        "thin OI (56 lots)",
        "sold leg: thin OI (50 lots)",
-       "costs Rs 18,998 a lot, over the Rs 15,000 budget",
        "most put OI (writers) sits at 400, before 375: it may hold the fall"
       ]
      }
@@ -8414,7 +8369,7 @@
      "buy_iv": 34.18,
      "sell_iv": 36.25,
      "theta_lot_day": 13,
-     "lots_in_budget": 2,
+     "lots_in_budget": 4,
      "fails": [],
      "structure": "spread"
     },
@@ -8508,7 +8463,10 @@
     "lot": 150,
     "hv20": 41.7,
     "iv_rank": null,
-    "budget": 15000,
+    "budget": 30000,
+    "take_profit_pct": 60,
+    "stop_pct": 10,
+    "exit_dte": 7,
     "pcr": 0.64,
     "call_wall": 3200.0,
     "put_wall": 3100.0,
@@ -8543,7 +8501,6 @@
       ],
       "fails": [
        "bid-ask spread 5.6%",
-       "costs Rs 15,548 a lot, over the Rs 15,000 budget",
        "reward:risk 0.96, needs 2.0+",
        "IV 53% is above the stock's realised 41.7%: buy a spread instead",
        "loses 54% to time decay by day 6 if the stock stands still",
@@ -8583,7 +8540,6 @@
       "fails": [
        "bid-ask spread 8.9%",
        "thin OI (24 lots)",
-       "costs Rs 18,982 a lot, over the Rs 15,000 budget",
        "reward:risk 0.85, needs 2.0+",
        "IV 52% is above the stock's realised 41.7%: buy a spread instead",
        "loses 54% to time decay by day 6 if the stock stands still",
@@ -8617,7 +8573,6 @@
       "ok": true,
       "why_not": [],
       "fails": [
-       "costs Rs 20,940 a lot, over the Rs 15,000 budget",
        "reward:risk 1.08, needs 2.0+",
        "IV 51% is above the stock's realised 41.7%: buy a spread instead",
        "loses 47% to time decay by day 6 if the stock stands still",
@@ -8656,7 +8611,6 @@
       "fails": [
        "bid-ask spread 5.1%",
        "thin OI (45 lots)",
-       "costs Rs 25,058 a lot, over the Rs 15,000 budget",
        "reward:risk 1.01, needs 2.0+",
        "IV 51% is above the stock's realised 41.7%: buy a spread instead",
        "loses 45% to time decay by day 6 if the stock stands still",
@@ -8690,7 +8644,6 @@
       "ok": true,
       "why_not": [],
       "fails": [
-       "costs Rs 28,478 a lot, over the Rs 15,000 budget",
        "reward:risk 1.06, needs 2.0+",
        "IV 50% is above the stock's realised 41.7%: buy a spread instead",
        "loses 42% to time decay by day 6 if the stock stands still",
@@ -8727,7 +8680,7 @@
       ],
       "fails": [
        "thin OI (86 lots)",
-       "costs Rs 33,015 a lot, over the Rs 15,000 budget",
+       "costs Rs 33,015 a lot, over the Rs 30,000 budget",
        "reward:risk 1.1, needs 2.0+",
        "IV 51% is above the stock's realised 41.7%: buy a spread instead",
        "loses 37% to time decay by day 6 if the stock stands still",
@@ -8764,7 +8717,7 @@
       ],
       "fails": [
        "bid-ask spread 4.0%",
-       "costs Rs 37,980 a lot, over the Rs 15,000 budget",
+       "costs Rs 37,980 a lot, over the Rs 30,000 budget",
        "reward:risk 1.03, needs 2.0+",
        "IV 50% is above the stock's realised 41.7%: buy a spread instead",
        "loses 36% to time decay by day 6 if the stock stands still",
@@ -8803,7 +8756,7 @@
       "fails": [
        "bid-ask spread 4.0%",
        "thin OI (21 lots)",
-       "costs Rs 43,335 a lot, over the Rs 15,000 budget",
+       "costs Rs 43,335 a lot, over the Rs 30,000 budget",
        "reward:risk 1.1, needs 2.0+",
        "IV 53% is above the stock's realised 41.7%: buy a spread instead",
        "loses 31% to time decay by day 6 if the stock stands still",
@@ -8840,7 +8793,7 @@
       ],
       "fails": [
        "bid-ask spread 4.7%",
-       "costs Rs 49,508 a lot, over the Rs 15,000 budget",
+       "costs Rs 49,508 a lot, over the Rs 30,000 budget",
        "reward:risk 1.0, needs 2.0+",
        "IV 52% is above the stock's realised 41.7%: buy a spread instead",
        "loses 30% to time decay by day 6 if the stock stands still",
@@ -8879,7 +8832,7 @@
       "fails": [
        "bid-ask spread 18.7%",
        "thin OI (84 lots)",
-       "costs Rs 61,042 a lot, over the Rs 15,000 budget",
+       "costs Rs 61,042 a lot, over the Rs 30,000 budget",
        "reward:risk 1.05, needs 2.0+",
        "IV 54% is above the stock's realised 41.7%: buy a spread instead",
        "most put OI (writers) sits at 3100, before 2821.65: it may hold the fall"
@@ -8909,7 +8862,7 @@
        "bid-ask spread 4.0%",
        "thin OI (21 lots)",
        "sold leg: thin OI (50 lots)",
-       "costs Rs 30,832 a lot, over the Rs 15,000 budget",
+       "costs Rs 30,832 a lot, over the Rs 30,000 budget",
        "pays 51% of the width (max 50%)",
        "reward:risk 1.1, needs 1.5+",
        "most put OI (writers) sits at 3100, before 2850: it may hold the fall"
@@ -8932,11 +8885,10 @@
       "buy_iv": 51.21,
       "sell_iv": 54.47,
       "theta_lot_day": -38,
-      "lots_in_budget": 0,
+      "lots_in_budget": 1,
       "fails": [
        "thin OI (86 lots)",
        "sold leg: thin OI (50 lots)",
-       "costs Rs 20,512 a lot, over the Rs 15,000 budget",
        "reward:risk 1.09, needs 1.5+",
        "loses 27% to time decay by day 6 if the stock stands still",
        "most put OI (writers) sits at 3100, before 2850: it may hold the fall"
@@ -8959,13 +8911,12 @@
       "buy_iv": 52.8,
       "sell_iv": 51.73,
       "theta_lot_day": -4,
-      "lots_in_budget": 0,
+      "lots_in_budget": 1,
       "fails": [
        "bid-ask spread 4.0%",
        "thin OI (21 lots)",
        "sold leg: bid-ask spread 8.9%",
        "sold leg: thin OI (24 lots)",
-       "costs Rs 25,965 a lot, over the Rs 15,000 budget",
        "pays 58% of the width (max 50%)",
        "reward:risk 1.08, needs 1.5+",
        "most put OI (writers) sits at 3100, before 2950: it may hold the fall"
@@ -8988,12 +8939,11 @@
       "buy_iv": 51.21,
       "sell_iv": 51.73,
       "theta_lot_day": -16,
-      "lots_in_budget": 0,
+      "lots_in_budget": 1,
       "fails": [
        "thin OI (86 lots)",
        "sold leg: bid-ask spread 8.9%",
        "sold leg: thin OI (24 lots)",
-       "costs Rs 15,645 a lot, over the Rs 15,000 budget",
        "pays 52% of the width (max 50%)",
        "reward:risk 1.07, needs 1.5+",
        "most put OI (writers) sits at 3100, before 2950: it may hold the fall"
@@ -9016,11 +8966,10 @@
       "buy_iv": 52.8,
       "sell_iv": 53.13,
       "theta_lot_day": -12,
-      "lots_in_budget": 0,
+      "lots_in_budget": 1,
       "fails": [
        "bid-ask spread 4.0%",
        "thin OI (21 lots)",
-       "costs Rs 28,627 a lot, over the Rs 15,000 budget",
        "pays 55% of the width (max 50%)",
        "reward:risk 1.07, needs 1.5+",
        "most put OI (writers) sits at 3100, before 2900: it may hold the fall"
@@ -9043,10 +8992,9 @@
       "buy_iv": 51.21,
       "sell_iv": 53.13,
       "theta_lot_day": -24,
-      "lots_in_budget": 0,
+      "lots_in_budget": 1,
       "fails": [
        "thin OI (86 lots)",
-       "costs Rs 18,308 a lot, over the Rs 15,000 budget",
        "reward:risk 1.06, needs 1.5+",
        "loses 25% to time decay by day 6 if the stock stands still",
        "most put OI (writers) sits at 3100, before 2900: it may hold the fall"
@@ -9069,11 +9017,10 @@
       "buy_iv": 52.8,
       "sell_iv": 51.48,
       "theta_lot_day": 9,
-      "lots_in_budget": 0,
+      "lots_in_budget": 1,
       "fails": [
        "bid-ask spread 4.0%",
        "thin OI (21 lots)",
-       "costs Rs 22,702 a lot, over the Rs 15,000 budget",
        "pays 61% of the width (max 50%)",
        "reward:risk 1.06, needs 1.5+",
        "most put OI (writers) sits at 3100, before 3000: it may hold the fall"
@@ -9096,7 +9043,7 @@
       "buy_iv": 51.21,
       "sell_iv": 51.48,
       "theta_lot_day": -3,
-      "lots_in_budget": 1,
+      "lots_in_budget": 2,
       "fails": [
        "thin OI (86 lots)",
        "pays 55% of the width (max 50%)",
@@ -9164,7 +9111,7 @@
      {
       "name": "A structure fits every option check",
       "ok": false,
-      "detail": "none fits: closest spread 3250/2850 fails on bid-ask spread 4.0%; thin OI (21 lots); sold leg: thin OI (50 lots); costs Rs 30,832 a lot, over the Rs 15,000 budget; pays 51% of the width (max 50%); reward:risk 1.1, needs 1.5+; most put OI (writers) sits at 3100, before 2850: it may hold the fall"
+      "detail": "none fits: closest spread 3250/2850 fails on bid-ask spread 4.0%; thin OI (21 lots); sold leg: thin OI (50 lots); costs Rs 30,832 a lot, over the Rs 30,000 budget; pays 51% of the width (max 50%); reward:risk 1.1, needs 1.5+; most put OI (writers) sits at 3100, before 2850: it may hold the fall"
      }
     ],
     "qualified": false,
@@ -9193,7 +9140,10 @@
     "lot": 125,
     "hv20": 19.7,
     "iv_rank": null,
-    "budget": 15000,
+    "budget": 30000,
+    "take_profit_pct": 60,
+    "stop_pct": 10,
+    "exit_dte": 7,
     "pcr": 1.15,
     "call_wall": 5200.0,
     "put_wall": 5000.0,
@@ -9295,7 +9245,6 @@
       ],
       "fails": [
        "bid-ask spread 3.3%",
-       "costs Rs 15,731 a lot, over the Rs 15,000 budget",
        "IV 26% is above the stock's realised 19.7%: buy a spread instead",
        "loses 35% to time decay by day 10 if the stock stands still",
        "most put OI (writers) sits at 5000, before 4612.45: it may hold the fall"
@@ -9331,7 +9280,6 @@
       ],
       "fails": [
        "bid-ask spread 3.1%",
-       "costs Rs 18,669 a lot, over the Rs 15,000 budget",
        "IV 27% is above the stock's realised 19.7%: buy a spread instead",
        "loses 27% to time decay by day 10 if the stock stands still",
        "most put OI (writers) sits at 5000, before 4612.45: it may hold the fall"
@@ -9369,7 +9317,6 @@
       "fails": [
        "bid-ask spread 39.2%",
        "thin OI (7 lots)",
-       "costs Rs 26,088 a lot, over the Rs 15,000 budget",
        "IV 40% is above the stock's realised 19.7%: buy a spread instead",
        "most put OI (writers) sits at 5000, before 4612.45: it may hold the fall"
       ]
@@ -9404,7 +9351,6 @@
       ],
       "fails": [
        "bid-ask spread 33.6%",
-       "costs Rs 29,531 a lot, over the Rs 15,000 budget",
        "IV 31% is above the stock's realised 19.7%: buy a spread instead",
        "most put OI (writers) sits at 5000, before 4612.45: it may hold the fall"
       ]
@@ -9441,7 +9387,7 @@
       "fails": [
        "bid-ask spread 25.4%",
        "thin OI (19 lots)",
-       "costs Rs 37,900 a lot, over the Rs 15,000 budget",
+       "costs Rs 37,900 a lot, over the Rs 30,000 budget",
        "IV 32% is above the stock's realised 19.7%: buy a spread instead",
        "most put OI (writers) sits at 5000, before 4612.45: it may hold the fall"
       ]
@@ -9478,7 +9424,7 @@
       "fails": [
        "bid-ask spread 19.8%",
        "thin OI (1 lots)",
-       "costs Rs 47,488 a lot, over the Rs 15,000 budget",
+       "costs Rs 47,488 a lot, over the Rs 30,000 budget",
        "IV 39% is above the stock's realised 19.7%: buy a spread instead",
        "most put OI (writers) sits at 5000, before 4612.45: it may hold the fall"
       ]
@@ -9515,7 +9461,7 @@
       "fails": [
        "bid-ask spread 17.7%",
        "thin OI (2 lots)",
-       "costs Rs 52,650 a lot, over the Rs 15,000 budget",
+       "costs Rs 52,650 a lot, over the Rs 30,000 budget",
        "IV 52% is above the stock's realised 19.7%: buy a spread instead",
        "most put OI (writers) sits at 5000, before 4612.45: it may hold the fall"
       ]
@@ -9552,7 +9498,7 @@
       "fails": [
        "bid-ask spread 16.0%",
        "thin OI (1 lots)",
-       "costs Rs 58,025 a lot, over the Rs 15,000 budget",
+       "costs Rs 58,025 a lot, over the Rs 30,000 budget",
        "IV 40% is above the stock's realised 19.7%: buy a spread instead",
        "most put OI (writers) sits at 5000, before 4612.45: it may hold the fall"
       ]
@@ -9576,11 +9522,10 @@
       "buy_iv": 40.45,
       "sell_iv": 28.29,
       "theta_lot_day": -214,
-      "lots_in_budget": 0,
+      "lots_in_budget": 1,
       "fails": [
        "bid-ask spread 39.2%",
        "thin OI (7 lots)",
-       "costs Rs 17,300 a lot, over the Rs 15,000 budget",
        "pays 55% of the width (max 50%)",
        "most put OI (writers) sits at 5000, before 4900: it may hold the fall"
       ]
@@ -9602,11 +9547,10 @@
       "buy_iv": 40.45,
       "sell_iv": 29.39,
       "theta_lot_day": -253,
-      "lots_in_budget": 0,
+      "lots_in_budget": 1,
       "fails": [
        "bid-ask spread 39.2%",
        "thin OI (7 lots)",
-       "costs Rs 20,062 a lot, over the Rs 15,000 budget",
        "most put OI (writers) sits at 5000, before 4800: it may hold the fall"
       ]
      },
@@ -9627,12 +9571,11 @@
       "buy_iv": 40.45,
       "sell_iv": 29.97,
       "theta_lot_day": -274,
-      "lots_in_budget": 0,
+      "lots_in_budget": 1,
       "fails": [
        "bid-ask spread 39.2%",
        "thin OI (7 lots)",
        "sold leg: thin OI (24 lots)",
-       "costs Rs 21,119 a lot, over the Rs 15,000 budget",
        "most put OI (writers) sits at 5000, before 4750: it may hold the fall"
       ]
      },
@@ -9653,11 +9596,10 @@
       "buy_iv": 40.45,
       "sell_iv": 30.82,
       "theta_lot_day": -324,
-      "lots_in_budget": 0,
+      "lots_in_budget": 1,
       "fails": [
        "bid-ask spread 39.2%",
        "thin OI (7 lots)",
-       "costs Rs 22,712 a lot, over the Rs 15,000 budget",
        "most put OI (writers) sits at 5000, before 4650: it may hold the fall"
       ]
      },
@@ -9678,11 +9620,10 @@
       "buy_iv": 40.45,
       "sell_iv": 30.61,
       "theta_lot_day": -296,
-      "lots_in_budget": 0,
+      "lots_in_budget": 1,
       "fails": [
        "bid-ask spread 39.2%",
        "thin OI (7 lots)",
-       "costs Rs 21,987 a lot, over the Rs 15,000 budget",
        "most put OI (writers) sits at 5000, before 4700: it may hold the fall"
       ]
      },
@@ -9703,10 +9644,9 @@
       "buy_iv": 26.98,
       "sell_iv": 30.82,
       "theta_lot_day": -148,
-      "lots_in_budget": 0,
+      "lots_in_budget": 1,
       "fails": [
        "bid-ask spread 3.1%",
-       "costs Rs 15,294 a lot, over the Rs 15,000 budget",
        "most put OI (writers) sits at 5000, before 4650: it may hold the fall"
       ]
      },
@@ -9727,7 +9667,7 @@
       "buy_iv": 26.25,
       "sell_iv": 30.82,
       "theta_lot_day": -133,
-      "lots_in_budget": 1,
+      "lots_in_budget": 2,
       "fails": [
        "bid-ask spread 3.3%",
        "most put OI (writers) sits at 5000, before 4650: it may hold the fall"
@@ -9750,7 +9690,7 @@
       "buy_iv": 26.98,
       "sell_iv": 30.61,
       "theta_lot_day": -120,
-      "lots_in_budget": 1,
+      "lots_in_budget": 2,
       "fails": [
        "bid-ask spread 3.1%",
        "most put OI (writers) sits at 5000, before 4700: it may hold the fall"
@@ -9816,7 +9756,7 @@
      {
       "name": "A structure fits every option check",
       "ok": false,
-      "detail": "none fits: closest spread 5150/4900 fails on bid-ask spread 39.2%; thin OI (7 lots); costs Rs 17,300 a lot, over the Rs 15,000 budget; pays 55% of the width (max 50%); most put OI (writers) sits at 5000, before 4900: it may hold the fall"
+      "detail": "none fits: closest spread 5150/4900 fails on bid-ask spread 39.2%; thin OI (7 lots); pays 55% of the width (max 50%); most put OI (writers) sits at 5000, before 4900: it may hold the fall"
      }
     ],
     "qualified": false,
@@ -9845,7 +9785,10 @@
     "lot": 4700,
     "hv20": 37.5,
     "iv_rank": null,
-    "budget": 15000,
+    "budget": 30000,
+    "take_profit_pct": 60,
+    "stop_pct": 10,
+    "exit_dte": 7,
     "pcr": 0.25,
     "call_wall": 180.0,
     "put_wall": 170.0,
@@ -9882,7 +9825,7 @@
       "fails": [
        "bid-ask spread 158.5%",
        "thin OI (3 lots)",
-       "costs Rs 89,300 a lot, over the Rs 15,000 budget",
+       "costs Rs 89,300 a lot, over the Rs 30,000 budget",
        "reward:risk 0.5, needs 2.0+",
        "loses 58% to time decay by day 9 if the stock stands still"
       ]
@@ -9977,7 +9920,10 @@
     "lot": 575,
     "hv20": 44.7,
     "iv_rank": null,
-    "budget": 15000,
+    "budget": 30000,
+    "take_profit_pct": 60,
+    "stop_pct": 10,
+    "exit_dte": 7,
     "pcr": 0.79,
     "call_wall": 900.0,
     "put_wall": 900.0,
@@ -10045,7 +9991,6 @@
       ],
       "fails": [
        "bid-ask spread 3.9%",
-       "costs Rs 16,618 a lot, over the Rs 15,000 budget",
        "loses 33% to time decay by day 11 if the stock stands still"
       ]
      },
@@ -10078,8 +10023,7 @@
        "bid-ask spread 3.6%"
       ],
       "fails": [
-       "bid-ask spread 3.6%",
-       "costs Rs 22,885 a lot, over the Rs 15,000 budget"
+       "bid-ask spread 3.6%"
       ]
      },
      {
@@ -10112,7 +10056,7 @@
       ],
       "fails": [
        "bid-ask spread 4.8%",
-       "costs Rs 30,705 a lot, over the Rs 15,000 budget"
+       "costs Rs 30,705 a lot, over the Rs 30,000 budget"
       ]
      },
      {
@@ -10147,7 +10091,7 @@
       "fails": [
        "bid-ask spread 21.2%",
        "thin OI (2 lots)",
-       "costs Rs 78,746 a lot, over the Rs 15,000 budget",
+       "costs Rs 78,746 a lot, over the Rs 30,000 budget",
        "IV 93% is above the stock's realised 44.7%: buy a spread instead"
       ]
      }
@@ -10170,11 +10114,10 @@
       "buy_iv": 31.25,
       "sell_iv": 38.33,
       "theta_lot_day": -198,
-      "lots_in_budget": 0,
+      "lots_in_budget": 1,
       "fails": [
        "bid-ask spread 3.9%",
        "sold leg: bid-ask spread 8.3%",
-       "costs Rs 15,295 a lot, over the Rs 15,000 budget",
        "loses 28% to time decay by day 11 if the stock stands still"
       ]
      },
@@ -10195,7 +10138,7 @@
       "buy_iv": 31.25,
       "sell_iv": 37.35,
       "theta_lot_day": -156,
-      "lots_in_budget": 1,
+      "lots_in_budget": 2,
       "fails": [
        "bid-ask spread 3.9%"
       ]
@@ -10217,11 +10160,10 @@
       "buy_iv": 30.52,
       "sell_iv": 38.33,
       "theta_lot_day": -184,
-      "lots_in_budget": 0,
+      "lots_in_budget": 1,
       "fails": [
        "bid-ask spread 3.6%",
-       "sold leg: bid-ask spread 8.3%",
-       "costs Rs 21,562 a lot, over the Rs 15,000 budget"
+       "sold leg: bid-ask spread 8.3%"
       ]
      },
      {
@@ -10241,7 +10183,7 @@
       "buy_iv": 31.25,
       "sell_iv": 35.64,
       "theta_lot_day": -118,
-      "lots_in_budget": 1,
+      "lots_in_budget": 2,
       "fails": [
        "bid-ask spread 3.9%"
       ]
@@ -10263,10 +10205,9 @@
       "buy_iv": 30.52,
       "sell_iv": 37.35,
       "theta_lot_day": -142,
-      "lots_in_budget": 0,
+      "lots_in_budget": 1,
       "fails": [
-       "bid-ask spread 3.6%",
-       "costs Rs 20,757 a lot, over the Rs 15,000 budget"
+       "bid-ask spread 3.6%"
       ]
      },
      {
@@ -10286,10 +10227,9 @@
       "buy_iv": 30.52,
       "sell_iv": 35.64,
       "theta_lot_day": -104,
-      "lots_in_budget": 0,
+      "lots_in_budget": 1,
       "fails": [
-       "bid-ask spread 3.6%",
-       "costs Rs 19,579 a lot, over the Rs 15,000 budget"
+       "bid-ask spread 3.6%"
       ]
      },
      {
@@ -10309,7 +10249,7 @@
       "buy_iv": 31.25,
       "sell_iv": 34.91,
       "theta_lot_day": -69,
-      "lots_in_budget": 1,
+      "lots_in_budget": 2,
       "fails": [
        "bid-ask spread 3.9%"
       ]
@@ -10331,10 +10271,9 @@
       "buy_iv": 30.52,
       "sell_iv": 34.91,
       "theta_lot_day": -55,
-      "lots_in_budget": 0,
+      "lots_in_budget": 1,
       "fails": [
-       "bid-ask spread 3.6%",
-       "costs Rs 17,768 a lot, over the Rs 15,000 budget"
+       "bid-ask spread 3.6%"
       ]
      }
     ],
@@ -10397,7 +10336,7 @@
      {
       "name": "A structure fits every option check",
       "ok": false,
-      "detail": "none fits: closest spread 860/740 fails on bid-ask spread 3.9%; sold leg: bid-ask spread 8.3%; costs Rs 15,295 a lot, over the Rs 15,000 budget; loses 28% to time decay by day 11 if the stock stands still"
+      "detail": "none fits: closest spread 860/740 fails on bid-ask spread 3.9%; sold leg: bid-ask spread 8.3%; loses 28% to time decay by day 11 if the stock stands still"
      }
     ],
     "qualified": false,
@@ -10405,7 +10344,7 @@
    }
   ],
   "skipped": [],
-  "created_ist": "2026-10-28 19:22",
+  "created_ist": "2026-10-28 19:43",
   "rules": {
    "min_dte": 14,
    "buffer": 7,
@@ -10423,10 +10362,10 @@
    "min_rr": 2.0,
    "min_rr_spread": 1.5,
    "max_decay_pct": 25.0,
-   "budget": 15000,
+   "budget": 30000,
    "max_open": 3,
    "take_profit_pct": 60,
-   "stop_pct": 40,
+   "stop_pct": 10,
    "exit_dte": 7,
    "direction": {
     "min_p_target": 0.33,
