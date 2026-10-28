@@ -1,0 +1,3041 @@
+{
+ "stage": "eod",
+ "created_ist": "2026-10-28 12:05",
+ "session": "2026-10-27",
+ "counts": {
+  "universe": 2364,
+  "quoted": 2364,
+  "with_bars": 1155,
+  "liquid": 822,
+  "fo": 212,
+  "with_fundamentals": 292,
+  "bull": 91,
+  "bear": 7,
+  "bottoms": 88
+ },
+ "sources": {
+  "quotes": "Upstox",
+  "bars": {
+   "Upstox": 1225,
+   "Yahoo": 74
+  },
+  "upstox": "ok"
+ },
+ "nifty": {
+  "close": 22749.75,
+  "ret_63": -5.2,
+  "trend": "down"
+ },
+ "bull": [
+  {
+   "symbol": "LAURUSLABS.NS",
+   "name": "Laurus Labs Limited",
+   "price": 2142.0,
+   "prev_close": 2058.9,
+   "chg_pct": 4.04,
+   "session": "2026-10-27",
+   "rsi": 64.8,
+   "atr": 60.16,
+   "vol_ratio": 2.11,
+   "sma50": 1953.45,
+   "sma200": 1431.57,
+   "support": 1950.55,
+   "resistance": null,
+   "rs_pct": 92,
+   "fund": null,
+   "fund_notes": [],
+   "fo_lot": 425,
+   "turnover_cr": 289.6,
+   "plan": {
+    "kind": "breakout",
+    "side": "long",
+    "entry": 2143.15,
+    "stop": 2058.9,
+    "target": 2311.65,
+    "target_label": "2R",
+    "risk": 84.25,
+    "rr": 2.0,
+    "level": 2089.0,
+    "why": [
+     "closed above its 52-week high 2089.00 on 2.1x volume"
+    ],
+    "odds": {
+     "p_target": 0.465,
+     "p_stop": 0.383,
+     "p_time": 0.152,
+     "avg_R": 0.65,
+     "days_to_target": 8,
+     "n": 10000,
+     "horizon": 15
+    },
+    "history": {
+     "fired": 15,
+     "target": 3,
+     "stop": 7,
+     "time": 5,
+     "avg_R": 0.14
+    },
+    "est_days": 8
+   },
+   "tech": 87,
+   "score": 87,
+   "size": {
+    "qty": 11,
+    "bound_by": "max loss",
+    "cost": 23574.65,
+    "max_loss": 926.75,
+    "refusal": null,
+    "reward": 1853.5
+   },
+   "news": [],
+   "rank": 1,
+   "status": "waiting for entry"
+  },
+  {
+   "symbol": "INDSWFTLAB.NS",
+   "name": "Ind-Swift Laboratories Limited",
+   "price": 368.8,
+   "prev_close": 337.05,
+   "chg_pct": 9.42,
+   "session": "2026-10-27",
+   "rsi": 52.6,
+   "atr": 24.0,
+   "vol_ratio": 1.84,
+   "sma50": 366.15,
+   "sma200": 210.71,
+   "support": 350.65,
+   "resistance": null,
+   "rs_pct": 98,
+   "fund": null,
+   "fund_notes": [],
+   "fo_lot": null,
+   "turnover_cr": 14.8,
+   "plan": {
+    "kind": "breakout",
+    "side": "long",
+    "entry": 376.05,
+    "stop": 338.6,
+    "target": 450.95,
+    "target_label": "2R",
+    "risk": 37.45,
+    "rr": 2.0,
+    "level": 350.65,
+    "why": [
+     "closed above resistance (2 touches) 350.65 on 1.8x volume"
+    ],
+    "odds": {
+     "p_target": 0.349,
+     "p_stop": 0.272,
+     "p_time": 0.38,
+     "avg_R": 0.61,
+     "days_to_target": 9,
+     "n": 10000,
+     "horizon": 15
+    },
+    "history": {
+     "fired": 5,
+     "target": 3,
+     "stop": 2,
+     "time": 0,
+     "avg_R": 0.84
+    },
+    "est_days": 9
+   },
+   "tech": 87,
+   "score": 87,
+   "size": {
+    "qty": 26,
+    "bound_by": "max loss",
+    "cost": 9777.3,
+    "max_loss": 973.7,
+    "refusal": null,
+    "reward": 1947.4
+   },
+   "news": [],
+   "rank": 2,
+   "status": "waiting for entry"
+  },
+  {
+   "symbol": "CUPID.NS",
+   "name": "Cupid Limited",
+   "price": 316.6,
+   "prev_close": 314.05,
+   "chg_pct": 0.81,
+   "session": "2026-10-27",
+   "rsi": 49.8,
+   "atr": 17.12,
+   "vol_ratio": 0.53,
+   "sma50": 298.32,
+   "sma200": 173.71,
+   "support": 265.98,
+   "resistance": null,
+   "rs_pct": 97,
+   "fund": 79,
+   "fund_notes": [
+    "ROE 24.0% (sector 12.4%)",
+    "ROCE 28.6%",
+    "P/E 310.2 (sector 34.2)",
+    "profit +165% in Mar 2026",
+    "revenue +93%",
+    "promoters 47.7% (+2.1)"
+   ],
+   "fo_lot": null,
+   "turnover_cr": 699.6,
+   "plan": {
+    "kind": "pullback",
+    "side": "long",
+    "entry": 328.75,
+    "stop": 298.0,
+    "target": 390.25,
+    "target_label": "2R",
+    "risk": 30.75,
+    "rr": 2.0,
+    "level": 298.31800000000004,
+    "why": [
+     "uptrend, pulled back to the 50-day average 298.32 and closed up"
+    ],
+    "odds": {
+     "p_target": 0.462,
+     "p_stop": 0.305,
+     "p_time": 0.234,
+     "avg_R": 0.78,
+     "days_to_target": 9,
+     "n": 10000,
+     "horizon": 15
+    },
+    "history": {
+     "fired": 4,
+     "target": 3,
+     "stop": 0,
+     "time": 1,
+     "avg_R": 1.53
+    },
+    "est_days": 9
+   },
+   "tech": 81,
+   "score": 80,
+   "size": {
+    "qty": 32,
+    "bound_by": "max loss",
+    "cost": 10520.0,
+    "max_loss": 984.0,
+    "refusal": null,
+    "reward": 1968.0
+   },
+   "news": [],
+   "rank": 3,
+   "status": "waiting for entry"
+  },
+  {
+   "symbol": "TFCILTD.NS",
+   "name": "Tourism Finance Corporation of India Limited",
+   "price": 155.04,
+   "prev_close": 154.31,
+   "chg_pct": 0.47,
+   "session": "2026-10-27",
+   "rsi": 59.9,
+   "atr": 6.59,
+   "vol_ratio": 0.59,
+   "sma50": 142.32,
+   "sma200": 92.14,
+   "support": 146.06,
+   "resistance": null,
+   "rs_pct": 99,
+   "fund": null,
+   "fund_notes": [],
+   "fo_lot": null,
+   "turnover_cr": 222.3,
+   "plan": {
+    "kind": "pullback",
+    "side": "long",
+    "entry": 157.1,
+    "stop": 139.75,
+    "target": 191.8,
+    "target_label": "2R",
+    "risk": 17.35,
+    "rr": 2.0,
+    "level": 142.31800000000007,
+    "why": [
+     "uptrend, pulled back to the 50-day average 142.32 and closed up"
+    ],
+    "odds": {
+     "p_target": 0.163,
+     "p_stop": 0.18,
+     "p_time": 0.657,
+     "avg_R": 0.43,
+     "days_to_target": 11,
+     "n": 10000,
+     "horizon": 15
+    },
+    "history": {
+     "fired": 8,
+     "target": 4,
+     "stop": 1,
+     "time": 3,
+     "avg_R": 0.99
+    },
+    "est_days": 11
+   },
+   "tech": 80,
+   "score": 80,
+   "size": {
+    "qty": 57,
+    "bound_by": "max loss",
+    "cost": 8954.7,
+    "max_loss": 988.95,
+    "refusal": null,
+    "reward": 1977.9
+   },
+   "news": [],
+   "rank": 4,
+   "status": "waiting for entry"
+  },
+  {
+   "symbol": "ACUTAAS.NS",
+   "name": "Acutaas Chemicals Limited",
+   "price": 3793.3,
+   "prev_close": 3348.8,
+   "chg_pct": 13.27,
+   "session": "2026-10-27",
+   "rsi": 70.8,
+   "atr": 160.92,
+   "vol_ratio": 12.17,
+   "sma50": 3245.62,
+   "sma200": 2786.87,
+   "support": 3720.0,
+   "resistance": null,
+   "rs_pct": 83,
+   "fund": 76,
+   "fund_notes": [
+    "ROE 21.5% (sector 0.2%)",
+    "ROCE 28.8%",
+    "P/E 70.8 (sector 16.3)",
+    "profit +122% in Mar 2026",
+    "revenue +35%",
+    "promoters 32.7%"
+   ],
+   "fo_lot": null,
+   "turnover_cr": 109.7,
+   "plan": {
+    "kind": "breakout",
+    "side": "long",
+    "entry": 3900.05,
+    "stop": 3639.5,
+    "target": 4421.15,
+    "target_label": "2R",
+    "risk": 260.55,
+    "rr": 2.0,
+    "level": 3720.0,
+    "why": [
+     "closed above resistance (2 touches) 3720.00 on 12.2x volume"
+    ],
+    "odds": {
+     "p_target": 0.359,
+     "p_stop": 0.393,
+     "p_time": 0.249,
+     "avg_R": 0.45,
+     "days_to_target": 8,
+     "n": 10000,
+     "horizon": 15
+    },
+    "history": {
+     "fired": 14,
+     "target": 4,
+     "stop": 9,
+     "time": 1,
+     "avg_R": 0.05
+    },
+    "est_days": 8
+   },
+   "tech": 82,
+   "score": 79,
+   "size": {
+    "qty": 3,
+    "bound_by": "max loss",
+    "cost": 11700.15,
+    "max_loss": 781.65,
+    "refusal": null,
+    "reward": 1563.3
+   },
+   "news": [],
+   "rank": 5,
+   "status": "waiting for entry"
+  },
+  {
+   "symbol": "WSTCSTPAPR.NS",
+   "name": "West Coast Paper Mills Limited",
+   "price": 815.9,
+   "prev_close": 787.8,
+   "chg_pct": 3.57,
+   "session": "2026-10-27",
+   "rsi": 55.0,
+   "atr": 56.82,
+   "vol_ratio": 0.21,
+   "sma50": 714.62,
+   "sma200": 534.65,
+   "support": 650.0,
+   "resistance": null,
+   "rs_pct": 97,
+   "fund": null,
+   "fund_notes": [],
+   "fo_lot": null,
+   "turnover_cr": 20.8,
+   "plan": {
+    "kind": "pullback",
+    "side": "long",
+    "entry": 828.85,
+    "stop": 746.2,
+    "target": 994.15,
+    "target_label": "2R",
+    "risk": 82.65,
+    "rr": 2.0,
+    "level": 786.7823126154624,
+    "why": [
+     "uptrend, pulled back to the 20-day EMA 786.78 and closed up"
+    ],
+    "odds": {
+     "p_target": 0.17,
+     "p_stop": 0.211,
+     "p_time": 0.619,
+     "avg_R": 0.35,
+     "days_to_target": 10,
+     "n": 10000,
+     "horizon": 15
+    },
+    "history": {
+     "fired": 8,
+     "target": 3,
+     "stop": 3,
+     "time": 2,
+     "avg_R": 0.53
+    },
+    "est_days": 10
+   },
+   "tech": 78,
+   "score": 78,
+   "size": {
+    "qty": 12,
+    "bound_by": "max loss",
+    "cost": 9946.2,
+    "max_loss": 991.8,
+    "refusal": null,
+    "reward": 1983.6
+   },
+   "news": [],
+   "rank": 6,
+   "status": "waiting for entry"
+  },
+  {
+   "symbol": "UTTAMSUGAR.NS",
+   "name": "Uttam Sugar Mills Limited",
+   "price": 327.55,
+   "prev_close": 309.2,
+   "chg_pct": 5.93,
+   "session": "2026-10-27",
+   "rsi": 51.1,
+   "atr": 26.43,
+   "vol_ratio": 0.32,
+   "sma50": 303.84,
+   "sma200": 249.48,
+   "support": 238.76,
+   "resistance": null,
+   "rs_pct": 97,
+   "fund": null,
+   "fund_notes": [],
+   "fo_lot": null,
+   "turnover_cr": 13.0,
+   "plan": {
+    "kind": "pullback",
+    "side": "long",
+    "entry": 330.85,
+    "stop": 296.45,
+    "target": 399.65,
+    "target_label": "2R",
+    "risk": 34.4,
+    "rr": 2.0,
+    "level": 303.8415999999998,
+    "why": [
+     "uptrend, pulled back to the 50-day average 303.84 and closed up"
+    ],
+    "odds": {
+     "p_target": 0.184,
+     "p_stop": 0.307,
+     "p_time": 0.509,
+     "avg_R": 0.21,
+     "days_to_target": 10,
+     "n": 10000,
+     "horizon": 15
+    },
+    "history": {
+     "fired": 8,
+     "target": 1,
+     "stop": 6,
+     "time": 1,
+     "avg_R": -0.56
+    },
+    "est_days": 10
+   },
+   "tech": 78,
+   "score": 78,
+   "size": {
+    "qty": 29,
+    "bound_by": "max loss",
+    "cost": 9594.65,
+    "max_loss": 997.6,
+    "refusal": null,
+    "reward": 1995.2
+   },
+   "news": [],
+   "rank": 7,
+   "status": "waiting for entry"
+  },
+  {
+   "symbol": "MRPL.NS",
+   "name": "Mangalore Refinery and Petrochemicals Limited",
+   "price": 189.44,
+   "prev_close": 182.61,
+   "chg_pct": 3.74,
+   "session": "2026-10-27",
+   "rsi": 61.8,
+   "atr": 9.37,
+   "vol_ratio": 1.65,
+   "sma50": 172.62,
+   "sma200": 169.81,
+   "support": 188.47,
+   "resistance": 212.16,
+   "rs_pct": 87,
+   "fund": null,
+   "fund_notes": [],
+   "fo_lot": null,
+   "turnover_cr": 229.4,
+   "plan": {
+    "kind": "breakout",
+    "side": "long",
+    "entry": 190.35,
+    "stop": 180.95,
+    "target": 212.16,
+    "target_label": "next resistance",
+    "risk": 9.4,
+    "rr": 2.32,
+    "level": 188.475,
+    "why": [
+     "closed above resistance (10 touches) 188.47 on 1.7x volume"
+    ],
+    "odds": {
+     "p_target": 0.321,
+     "p_stop": 0.618,
+     "p_time": 0.061,
+     "avg_R": 0.15,
+     "days_to_target": 6,
+     "n": 10000,
+     "horizon": 15
+    },
+    "history": {
+     "fired": 6,
+     "target": 1,
+     "stop": 5,
+     "time": 0,
+     "avg_R": -0.5
+    },
+    "est_days": 6
+   },
+   "tech": 77,
+   "score": 77,
+   "size": {
+    "qty": 106,
+    "bound_by": "max loss",
+    "cost": 20177.1,
+    "max_loss": 996.4,
+    "refusal": null,
+    "reward": 2311.86
+   },
+   "news": [],
+   "rank": 8,
+   "status": "waiting for entry"
+  },
+  {
+   "symbol": "NAZARA.NS",
+   "name": "Nazara Technologies Limited",
+   "price": 401.3,
+   "prev_close": 400.25,
+   "chg_pct": 0.26,
+   "session": "2026-10-27",
+   "rsi": 57.6,
+   "atr": 15.2,
+   "vol_ratio": 2.03,
+   "sma50": 375.92,
+   "sma200": 303.95,
+   "support": 377.8,
+   "resistance": null,
+   "rs_pct": 95,
+   "fund": null,
+   "fund_notes": [],
+   "fo_lot": null,
+   "turnover_cr": 71.3,
+   "plan": {
+    "kind": "pullback",
+    "side": "long",
+    "entry": 407.8,
+    "stop": 371.2,
+    "target": 481.0,
+    "target_label": "2R",
+    "risk": 36.6,
+    "rr": 2.0,
+    "level": 375.9170000000002,
+    "why": [
+     "uptrend, pulled back to the 50-day average 375.92 and closed up"
+    ],
+    "odds": {
+     "p_target": 0.134,
+     "p_stop": 0.234,
+     "p_time": 0.633,
+     "avg_R": 0.25,
+     "days_to_target": 10,
+     "n": 10000,
+     "horizon": 15
+    },
+    "history": {
+     "fired": 7,
+     "target": 1,
+     "stop": 2,
+     "time": 4,
+     "avg_R": 0.26
+    },
+    "est_days": 10
+   },
+   "tech": 77,
+   "score": 77,
+   "size": {
+    "qty": 27,
+    "bound_by": "max loss",
+    "cost": 11010.6,
+    "max_loss": 988.2,
+    "refusal": null,
+    "reward": 1976.4
+   },
+   "news": [
+    {
+     "title": "Stocks to watch, Oct 27: Waaree Energies, Paytm, L&T, REC, Tata Consumer Products, Maruti, JBM Auto",
+     "link": "https://upstox.com/news/market-news/stocks/stocks-to-watch-oct-27-waaree-energies-paytm-l-and-t-rec-tata-consumer-products-maruti-jbm-auto/article-202422/",
+     "time": "27 Oct 09:00"
+    }
+   ],
+   "rank": 9,
+   "status": "waiting for entry"
+  },
+  {
+   "symbol": "WELSPUNLIV.NS",
+   "name": "Welspun Living Limited",
+   "price": 215.03,
+   "prev_close": 208.96,
+   "chg_pct": 2.9,
+   "session": "2026-10-27",
+   "rsi": 48.6,
+   "atr": 10.14,
+   "vol_ratio": 0.57,
+   "sma50": 209.66,
+   "sma200": 156.43,
+   "support": 171.53,
+   "resistance": null,
+   "rs_pct": 95,
+   "fund": null,
+   "fund_notes": [],
+   "fo_lot": null,
+   "turnover_cr": 57.9,
+   "plan": {
+    "kind": "pullback",
+    "side": "long",
+    "entry": 218.75,
+    "stop": 202.2,
+    "target": 251.85,
+    "target_label": "2R",
+    "risk": 16.55,
+    "rr": 2.0,
+    "level": 209.6598,
+    "why": [
+     "uptrend, pulled back to the 50-day average 209.66 and closed up"
+    ],
+    "odds": {
+     "p_target": 0.261,
+     "p_stop": 0.352,
+     "p_time": 0.387,
+     "avg_R": 0.37,
+     "days_to_target": 9,
+     "n": 10000,
+     "horizon": 15
+    },
+    "history": {
+     "fired": 7,
+     "target": 2,
+     "stop": 5,
+     "time": 0,
+     "avg_R": -0.21
+    },
+    "est_days": 9
+   },
+   "tech": 77,
+   "score": 77,
+   "size": {
+    "qty": 60,
+    "bound_by": "max loss",
+    "cost": 13125.0,
+    "max_loss": 993.0,
+    "refusal": null,
+    "reward": 1986.0
+   },
+   "news": [],
+   "rank": 10,
+   "status": "waiting for entry"
+  },
+  {
+   "symbol": "ONEPOINT.NS",
+   "name": "One Point One Solutions Limited",
+   "price": 73.14,
+   "prev_close": 69.53,
+   "chg_pct": 5.19,
+   "session": "2026-10-27",
+   "rsi": 49.5,
+   "atr": 4.54,
+   "vol_ratio": 0.41,
+   "sma50": 65.89,
+   "sma200": 56.71,
+   "support": 59.39,
+   "resistance": null,
+   "rs_pct": 95,
+   "fund": null,
+   "fund_notes": [],
+   "fo_lot": null,
+   "turnover_cr": 28.6,
+   "plan": {
+    "kind": "pullback",
+    "side": "long",
+    "entry": 74.25,
+    "stop": 66.05,
+    "target": 90.65,
+    "target_label": "2R",
+    "risk": 8.2,
+    "rr": 2.0,
+    "level": 65.89020000000002,
+    "why": [
+     "uptrend, pulled back to the 50-day average 65.89 and closed up"
+    ],
+    "odds": {
+     "p_target": 0.08,
+     "p_stop": 0.197,
+     "p_time": 0.724,
+     "avg_R": 0.24,
+     "days_to_target": 12,
+     "n": 2000,
+     "horizon": 15
+    }
+   },
+   "tech": 77,
+   "score": 77,
+   "rank": 11
+  },
+  {
+   "symbol": "SONACOMS.NS",
+   "name": "Sona BLW Precision Forgings Limited",
+   "price": 851.85,
+   "prev_close": 781.9,
+   "chg_pct": 8.95,
+   "session": "2026-10-27",
+   "rsi": 62.8,
+   "atr": 29.51,
+   "vol_ratio": 8.08,
+   "sma50": 802.34,
+   "sma200": 637.35,
+   "support": 832.11,
+   "resistance": null,
+   "rs_pct": 89,
+   "fund": null,
+   "fund_notes": [],
+   "fo_lot": 1225,
+   "turnover_cr": 163.4,
+   "plan": {
+    "kind": "breakout",
+    "side": "long",
+    "entry": 868.05,
+    "stop": 817.35,
+    "target": 969.45,
+    "target_label": "2R",
+    "risk": 50.7,
+    "rr": 2.0,
+    "level": 832.1083333333332,
+    "why": [
+     "closed above resistance (6 touches) 832.11 on 8.1x volume"
+    ],
+    "odds": {
+     "p_target": 0.261,
+     "p_stop": 0.278,
+     "p_time": 0.462,
+     "avg_R": 0.49,
+     "days_to_target": 10,
+     "n": 2000,
+     "horizon": 15
+    }
+   },
+   "tech": 76,
+   "score": 76,
+   "rank": 12
+  },
+  {
+   "symbol": "APLAPOLLO.NS",
+   "name": "APL Apollo Tubes Limited",
+   "price": 2213.9,
+   "prev_close": 2077.9,
+   "chg_pct": 6.55,
+   "session": "2026-10-27",
+   "rsi": 57.8,
+   "atr": 66.12,
+   "vol_ratio": 3.84,
+   "sma50": 2156.29,
+   "sma200": 2007.94,
+   "support": 2180.85,
+   "resistance": 2265.94,
+   "rs_pct": 89,
+   "fund": 71,
+   "fund_notes": [
+    "ROE 22.8% (sector 17.4%)",
+    "ROCE 27.2%",
+    "P/E 46.8 (sector 22.3)",
+    "profit +59% in Mar 2026",
+    "revenue +12%",
+    "promoters 28.2% (-0.1)"
+   ],
+   "fo_lot": 350,
+   "turnover_cr": 128.6,
+   "plan": {
+    "kind": "breakout",
+    "side": "long",
+    "entry": 2213.95,
+    "stop": 2147.75,
+    "target": 2346.35,
+    "target_label": "2R",
+    "risk": 66.2,
+    "rr": 2.0,
+    "level": 2180.85,
+    "why": [
+     "closed above resistance (2 touches) 2180.85 on 3.8x volume"
+    ],
+    "odds": {
+     "p_target": 0.362,
+     "p_stop": 0.586,
+     "p_time": 0.051,
+     "avg_R": 0.17,
+     "days_to_target": 6,
+     "n": 2000,
+     "horizon": 15
+    }
+   },
+   "tech": 82,
+   "score": 76,
+   "rank": 13
+  },
+  {
+   "symbol": "SYNCOMF.NS",
+   "name": "Syncom Formulations (India) Limited",
+   "price": 20.61,
+   "prev_close": 20.05,
+   "chg_pct": 2.79,
+   "session": "2026-10-27",
+   "rsi": 45.6,
+   "atr": 1.55,
+   "vol_ratio": 0.21,
+   "sma50": 20.29,
+   "sma200": 15.16,
+   "support": 14.91,
+   "resistance": null,
+   "rs_pct": 99,
+   "fund": null,
+   "fund_notes": [],
+   "fo_lot": null,
+   "turnover_cr": 35.6,
+   "plan": {
+    "kind": "pullback",
+    "side": "long",
+    "entry": 21.05,
+    "stop": 19.5,
+    "target": 24.15,
+    "target_label": "2R",
+    "risk": 1.55,
+    "rr": 2.0,
+    "level": 20.294800000000006,
+    "why": [
+     "uptrend, pulled back to the 50-day average 20.29 and closed up"
+    ],
+    "odds": {
+     "p_target": 0.256,
+     "p_stop": 0.516,
+     "p_time": 0.228,
+     "avg_R": 0.07,
+     "days_to_target": 7,
+     "n": 2000,
+     "horizon": 15
+    }
+   },
+   "tech": 76,
+   "score": 76,
+   "rank": 14
+  },
+  {
+   "symbol": "THELEELA.NS",
+   "name": "Leela Palaces Hotels & Resorts Limited",
+   "price": 593.25,
+   "prev_close": 582.95,
+   "chg_pct": 1.77,
+   "session": "2026-10-27",
+   "rsi": 55.1,
+   "atr": 28.93,
+   "vol_ratio": 0.22,
+   "sma50": 560.36,
+   "sma200": 471.89,
+   "support": 516.54,
+   "resistance": null,
+   "rs_pct": 92,
+   "fund": null,
+   "fund_notes": [],
+   "fo_lot": null,
+   "turnover_cr": 29.5,
+   "plan": {
+    "kind": "pullback",
+    "side": "long",
+    "entry": 595.55,
+    "stop": 554.55,
+    "target": 677.55,
+    "target_label": "2R",
+    "risk": 41.0,
+    "rr": 2.0,
+    "level": 560.3620000000003,
+    "why": [
+     "uptrend, pulled back to the 50-day average 560.36 and closed up"
+    ],
+    "odds": {
+     "p_target": 0.146,
+     "p_stop": 0.305,
+     "p_time": 0.548,
+     "avg_R": 0.21,
+     "days_to_target": 11,
+     "n": 2000,
+     "horizon": 15
+    }
+   },
+   "tech": 76,
+   "score": 76,
+   "rank": 15
+  },
+  {
+   "symbol": "SBCL.NS",
+   "name": "Shivalik Bimetal Controls Limited",
+   "price": 1007.2,
+   "prev_close": 915.7,
+   "chg_pct": 9.99,
+   "session": "2026-10-27",
+   "rsi": 47.4,
+   "atr": 65.7,
+   "vol_ratio": 2.08,
+   "sma50": 1061.57,
+   "sma200": 709.3,
+   "support": 971.8,
+   "resistance": 1200.85,
+   "rs_pct": 96,
+   "fund": null,
+   "fund_notes": [],
+   "fo_lot": null,
+   "turnover_cr": 21.2,
+   "plan": {
+    "kind": "breakout",
+    "side": "long",
+    "entry": 1007.25,
+    "stop": 938.9,
+    "target": 1200.85,
+    "target_label": "next resistance",
+    "risk": 68.35,
+    "rr": 2.83,
+    "level": 971.8,
+    "why": [
+     "closed above resistance (2 touches) 971.80 on 2.1x volume"
+    ],
+    "odds": {
+     "p_target": 0.242,
+     "p_stop": 0.467,
+     "p_time": 0.291,
+     "avg_R": 0.44,
+     "days_to_target": 8,
+     "n": 2000,
+     "horizon": 15
+    }
+   },
+   "tech": 76,
+   "score": 76,
+   "rank": 16
+  },
+  {
+   "symbol": "INDHOTEL.NS",
+   "name": "The Indian Hotels Company Limited",
+   "price": 812.85,
+   "prev_close": 795.5,
+   "chg_pct": 2.18,
+   "session": "2026-10-27",
+   "rsi": 71.9,
+   "atr": 21.85,
+   "vol_ratio": 1.54,
+   "sma50": 732.04,
+   "sma200": 690.01,
+   "support": 747.35,
+   "resistance": null,
+   "rs_pct": 81,
+   "fund": null,
+   "fund_notes": [],
+   "fo_lot": 1000,
+   "turnover_cr": 282.2,
+   "plan": {
+    "kind": "breakout",
+    "side": "long",
+    "entry": 812.9,
+    "stop": 784.7,
+    "target": 869.3,
+    "target_label": "2R",
+    "risk": 28.2,
+    "rr": 2.0,
+    "level": 795.65,
+    "why": [
+     "closed above its 52-week high 795.65 on 1.5x volume"
+    ],
+    "odds": {
+     "p_target": 0.266,
+     "p_stop": 0.562,
+     "p_time": 0.172,
+     "avg_R": 0.06,
+     "days_to_target": 8,
+     "n": 2000,
+     "horizon": 15
+    }
+   },
+   "tech": 75,
+   "score": 75,
+   "rank": 17
+  },
+  {
+   "symbol": "HBLENGINE.NS",
+   "name": "HBL Engineering Limited",
+   "price": 788.0,
+   "prev_close": 760.8,
+   "chg_pct": 3.58,
+   "session": "2026-10-27",
+   "rsi": 55.8,
+   "atr": 35.46,
+   "vol_ratio": 0.3,
+   "sma50": 731.62,
+   "sma200": 750.5,
+   "support": 755.38,
+   "resistance": 832.57,
+   "rs_pct": 81,
+   "fund": 85,
+   "fund_notes": [
+    "ROE 36.8% (sector 14.0%)",
+    "ROCE 47.8%",
+    "P/E 28.0 (sector 15.8)",
+    "profit +206% in Mar 2026",
+    "revenue +69%",
+    "promoters 59.1%"
+   ],
+   "fo_lot": null,
+   "turnover_cr": 95.8,
+   "plan": {
+    "kind": "pullback",
+    "side": "long",
+    "entry": 795.5,
+    "stop": 729.0,
+    "target": 928.5,
+    "target_label": "2R",
+    "risk": 66.5,
+    "rr": 2.0,
+    "level": 731.6239999999998,
+    "why": [
+     "uptrend, pulled back to the 50-day average 731.62 and closed up"
+    ],
+    "odds": {
+     "p_target": 0.151,
+     "p_stop": 0.455,
+     "p_time": 0.394,
+     "avg_R": -0.06,
+     "days_to_target": 10,
+     "n": 2000,
+     "horizon": 15
+    }
+   },
+   "tech": 63,
+   "score": 74,
+   "rank": 18
+  },
+  {
+   "symbol": "JAYKAY.NS",
+   "name": "Jaykay Enterprises Limited",
+   "price": 202.39,
+   "prev_close": 197.73,
+   "chg_pct": 2.36,
+   "session": "2026-10-27",
+   "rsi": 48.8,
+   "atr": 14.63,
+   "vol_ratio": 0.17,
+   "sma50": 186.16,
+   "sma200": 168.81,
+   "support": 189.03,
+   "resistance": 217.34,
+   "rs_pct": 90,
+   "fund": null,
+   "fund_notes": [],
+   "fo_lot": null,
+   "turnover_cr": 12.7,
+   "plan": {
+    "kind": "pullback",
+    "side": "long",
+    "entry": 206.05,
+    "stop": 186.3,
+    "target": 245.55,
+    "target_label": "2R",
+    "risk": 19.75,
+    "rr": 2.0,
+    "level": 186.16040000000012,
+    "why": [
+     "uptrend, pulled back to the 50-day average 186.16 and closed up"
+    ],
+    "odds": {
+     "p_target": 0.23,
+     "p_stop": 0.493,
+     "p_time": 0.277,
+     "avg_R": 0.04,
+     "days_to_target": 8,
+     "n": 2000,
+     "horizon": 15
+    }
+   },
+   "tech": 74,
+   "score": 74,
+   "rank": 19
+  },
+  {
+   "symbol": "SHYAMMETL.NS",
+   "name": "Shyam Metalics and Energy Limited",
+   "price": 1153.8,
+   "prev_close": 1126.2,
+   "chg_pct": 2.45,
+   "session": "2026-10-27",
+   "rsi": 56.9,
+   "atr": 43.13,
+   "vol_ratio": 0.18,
+   "sma50": 1078.4,
+   "sma200": 942.56,
+   "support": 1100.5,
+   "resistance": null,
+   "rs_pct": 82,
+   "fund": null,
+   "fund_notes": [],
+   "fo_lot": null,
+   "turnover_cr": 44.3,
+   "plan": {
+    "kind": "pullback",
+    "side": "long",
+    "entry": 1160.05,
+    "stop": 1087.9,
+    "target": 1304.35,
+    "target_label": "2R",
+    "risk": 72.15,
+    "rr": 2.0,
+    "level": 1078.4040000000014,
+    "why": [
+     "uptrend, pulled back to the 50-day average 1078.40 and closed up"
+    ],
+    "odds": {
+     "p_target": 0.162,
+     "p_stop": 0.314,
+     "p_time": 0.524,
+     "avg_R": 0.21,
+     "days_to_target": 11,
+     "n": 2000,
+     "horizon": 15
+    }
+   },
+   "tech": 73,
+   "score": 73,
+   "rank": 20
+  }
+ ],
+ "bear": [
+  {
+   "symbol": "MAZDOCK.NS",
+   "name": "Mazagon Dock Shipbuilders Limited",
+   "price": 1754.0,
+   "prev_close": 1875.0,
+   "chg_pct": -6.45,
+   "session": "2026-10-27",
+   "rsi": 21.2,
+   "atr": 76.54,
+   "vol_ratio": 6.74,
+   "sma50": 2266.86,
+   "sma200": 2395.53,
+   "support": null,
+   "resistance": 2148.97,
+   "rs_pct": 11,
+   "fund": null,
+   "fund_notes": [],
+   "fo_lot": 225,
+   "turnover_cr": 128.7,
+   "plan": {
+    "kind": "breakdown",
+    "side": "short",
+    "entry": 1687.45,
+    "stop": 1876.3,
+    "target": 1309.75,
+    "target_label": "2R",
+    "risk": 188.85,
+    "rr": 2.0,
+    "level": 1838.0,
+    "why": [
+     "closed below its 52-week low 1838.00 on 6.7x volume"
+    ],
+    "odds": {
+     "p_target": 0.007,
+     "p_stop": 0.143,
+     "p_time": 0.85,
+     "avg_R": 0.21,
+     "days_to_target": 13,
+     "n": 10000,
+     "horizon": 15
+    },
+    "history": {
+     "fired": 1,
+     "target": 0,
+     "stop": 1,
+     "time": 0,
+     "avg_R": -1.0
+    },
+    "est_days": 13
+   },
+   "tech": 83,
+   "score": 83,
+   "lot": {
+    "lot": 225,
+    "notional": 379676,
+    "move_to_target": 84983,
+    "move_to_stop": 42491
+   },
+   "news": [
+    {
+     "title": "Mazagon Dock Q2 results: Profit declines 54% to ₹344 crore, ₹5/share dividend declared; stock crashes 10% intraday",
+     "link": "https://upstox.com/news/market-news/earnings/mazagon-dock-q2-results-profit-declines-54-to-344-crore-5-share-dividend-declared-stock-crashes-10-intraday/article-202469/",
+     "time": "27 Oct 16:56"
+    },
+    {
+     "title": "Bharat Electronics, HAL, BEML: Defence stocks rally as Centre clears ₹2.12 lakh crore procurement proposals",
+     "link": "https://upstox.com/news/market-news/stocks/bharat-electronics-hal-beml-defence-stocks-in-spotlight-as-centre-clears-2-12-lakh-crore-procurement-proposals/article-202419/",
+     "time": "27 Oct 10:03"
+    },
+    {
+     "title": "India's next maritime growth wave? Cochin Shipyard, Adani Ports among stocks to watch",
+     "link": "https://upstox.com/news/market-news/stocks/india-s-next-maritime-growth-wave-cochin-shipyard-adani-ports-among-stocks-to-watch/article-202370/",
+     "time": "26 Oct 10:06"
+    },
+    {
+     "title": "Q2 results this week: Ather Energy, IndiGo, L&T, Paytm, Maruti, Mazagon Dock, Adani Enterprises, Vedanta, among others in focus",
+     "link": "https://upstox.com/news/market-news/earnings/q2-results-this-week-ather-energy-indigo-l-and-t-paytm-maruti-mazagon-dock-adani-enterprises-vedanta-among-others-in-focus/article-202339/",
+     "time": "25 Oct 14:40"
+    }
+   ],
+   "rank": 1,
+   "status": "waiting for entry"
+  },
+  {
+   "symbol": "KPITTECH.NS",
+   "name": "KPIT Technologies Limited",
+   "price": 531.9,
+   "prev_close": 536.55,
+   "chg_pct": -0.87,
+   "session": "2026-10-27",
+   "rsi": 51.1,
+   "atr": 18.26,
+   "vol_ratio": 1.27,
+   "sma50": 547.04,
+   "sma200": 712.77,
+   "support": null,
+   "resistance": 544.17,
+   "rs_pct": 45,
+   "fund": null,
+   "fund_notes": [],
+   "fo_lot": 775,
+   "turnover_cr": 94.8,
+   "plan": {
+    "kind": "failed rally",
+    "side": "short",
+    "entry": 523.7,
+    "stop": 555.55,
+    "target": 460.0,
+    "target_label": "2R",
+    "risk": 31.85,
+    "rr": 2.0,
+    "level": 547.042999999999,
+    "why": [
+     "downtrend, rallied into the 50-day average 547.04 and closed down"
+    ],
+    "odds": {
+     "p_target": 0.262,
+     "p_stop": 0.383,
+     "p_time": 0.355,
+     "avg_R": 0.38,
+     "days_to_target": 10,
+     "n": 10000,
+     "horizon": 15
+    },
+    "history": {
+     "fired": 14,
+     "target": 2,
+     "stop": 7,
+     "time": 5,
+     "avg_R": 0.08
+    },
+    "est_days": 10
+   },
+   "tech": 65,
+   "score": 65,
+   "lot": {
+    "lot": 775,
+    "notional": 405868,
+    "move_to_target": 49368,
+    "move_to_stop": 24684
+   },
+   "news": [],
+   "rank": 2,
+   "status": "waiting for entry"
+  },
+  {
+   "symbol": "GAIL.NS",
+   "name": "GAIL (India) Limited",
+   "price": 165.68,
+   "prev_close": 168.28,
+   "chg_pct": -1.55,
+   "session": "2026-10-27",
+   "rsi": 43.1,
+   "atr": 3.85,
+   "vol_ratio": 1.58,
+   "sma50": 171.42,
+   "sma200": 165.99,
+   "support": 161.25,
+   "resistance": 172.2,
+   "rs_pct": 56,
+   "fund": 28,
+   "fund_notes": [
+    "ROE 8.5% (sector 16.0%)",
+    "ROCE 9.0%",
+    "P/E 11.1 (sector 8.6)",
+    "profit -39% in Mar 2026",
+    "revenue -0%",
+    "promoters 51.9% (-0.0)"
+   ],
+   "fo_lot": 3550,
+   "turnover_cr": 128.8,
+   "plan": {
+    "kind": "failed rally",
+    "side": "short",
+    "entry": 165.6,
+    "stop": 170.85,
+    "target": 155.1,
+    "target_label": "2R",
+    "risk": 5.25,
+    "rr": 2.0,
+    "level": 168.43865520862903,
+    "why": [
+     "downtrend, rallied into the 20-day EMA 168.44 and closed down"
+    ],
+    "odds": {
+     "p_target": 0.269,
+     "p_stop": 0.573,
+     "p_time": 0.158,
+     "avg_R": 0.04,
+     "days_to_target": 7,
+     "n": 10000,
+     "horizon": 15
+    },
+    "history": {
+     "fired": 11,
+     "target": 2,
+     "stop": 5,
+     "time": 4,
+     "avg_R": 0.21
+    },
+    "est_days": 7
+   },
+   "tech": 52,
+   "score": 62,
+   "lot": {
+    "lot": 3550,
+    "notional": 587880,
+    "move_to_target": 37275,
+    "move_to_stop": 18638
+   },
+   "news": [],
+   "rank": 3,
+   "status": "waiting for entry"
+  },
+  {
+   "symbol": "CIPLA.NS",
+   "name": "Cipla Limited",
+   "price": 1350.0,
+   "prev_close": 1355.0,
+   "chg_pct": -0.37,
+   "session": "2026-10-27",
+   "rsi": 50.9,
+   "atr": 28.32,
+   "vol_ratio": 4.17,
+   "sma50": 1374.66,
+   "sma200": 1366.58,
+   "support": 1312.3,
+   "resistance": 1352.87,
+   "rs_pct": 57,
+   "fund": 34,
+   "fund_notes": [
+    "ROE 11.3% (sector 0.2%)",
+    "ROCE 14.9%",
+    "P/E 38.2 (sector 16.3)",
+    "profit -27% in Mar 2026",
+    "revenue +2%",
+    "promoters 29.2%"
+   ],
+   "fo_lot": 425,
+   "turnover_cr": 130.7,
+   "plan": {
+    "kind": "failed rally",
+    "side": "short",
+    "entry": 1318.95,
+    "stop": 1379.8,
+    "target": 1197.25,
+    "target_label": "2R",
+    "risk": 60.85,
+    "rr": 2.0,
+    "level": 1374.6600000000008,
+    "why": [
+     "downtrend, rallied into the 50-day average 1374.66 and closed down"
+    ],
+    "odds": {
+     "p_target": 0.076,
+     "p_stop": 0.276,
+     "p_time": 0.647,
+     "avg_R": 0.21,
+     "days_to_target": 12,
+     "n": 10000,
+     "horizon": 15
+    },
+    "history": {
+     "fired": 13,
+     "target": 1,
+     "stop": 6,
+     "time": 6,
+     "avg_R": -0.17
+    },
+    "est_days": 12
+   },
+   "tech": 53,
+   "score": 60,
+   "lot": {
+    "lot": 425,
+    "notional": 560554,
+    "move_to_target": 51723,
+    "move_to_stop": 25861
+   },
+   "news": [
+    {
+     "title": "Cipla Q2 FY27 results: Net profit declines 35% YoY; firm invests ₹423 crore in R&D",
+     "link": "https://upstox.com/news/market-news/stocks/cipla-q2-fy-27-results-net-profit-declines-35-yo-y-firm-invests-423-crore-in-r-and-d/article-202461/",
+     "time": "27 Oct 14:02"
+    },
+    {
+     "title": "Top gainers and losers, October 22: Nestle, Eternal tumble 3%;  Bajaj Finance shares jump 3%",
+     "link": "https://upstox.com/news/market-news/stocks/top-gainers-and-losers-october-22-nestle-eternal-tumble-3-bajaj-finance-shares-jump-3/article-202249/",
+     "time": "22 Oct 18:37"
+    }
+   ],
+   "rank": 4,
+   "status": "waiting for entry"
+  },
+  {
+   "symbol": "LT.NS",
+   "name": "Larsen & Toubro Limited",
+   "price": 3665.1,
+   "prev_close": 3680.0,
+   "chg_pct": -0.4,
+   "session": "2026-10-27",
+   "rsi": 42.7,
+   "atr": 73.18,
+   "vol_ratio": 0.77,
+   "sma50": 3858.15,
+   "sma200": 3936.25,
+   "support": null,
+   "resistance": 3720.05,
+   "rs_pct": 58,
+   "fund": null,
+   "fund_notes": [],
+   "fo_lot": 175,
+   "turnover_cr": 737.4,
+   "plan": {
+    "kind": "failed rally",
+    "side": "short",
+    "entry": 3648.25,
+    "stop": 3731.8,
+    "target": 3481.15,
+    "target_label": "2R",
+    "risk": 83.55,
+    "rr": 2.0,
+    "level": 3700.301318041307,
+    "why": [
+     "downtrend, rallied into the 20-day EMA 3700.30 and closed down"
+    ],
+    "odds": {
+     "p_target": 0.327,
+     "p_stop": 0.623,
+     "p_time": 0.05,
+     "avg_R": -0.01,
+     "days_to_target": 5,
+     "n": 10000,
+     "horizon": 15
+    },
+    "history": {
+     "fired": 9,
+     "target": 2,
+     "stop": 4,
+     "time": 3,
+     "avg_R": 0.08
+    },
+    "est_days": 5
+   },
+   "tech": 59,
+   "score": 59,
+   "lot": {
+    "lot": 175,
+    "notional": 638444,
+    "move_to_target": 29242,
+    "move_to_stop": 14621
+   },
+   "news": [
+    {
+     "title": "L&T shares surge over 6% on strong Q2 numbers; order inflows rise 28%",
+     "link": "https://upstox.com/news/market-news/stocks/larsen-and-toubro-shares-surge-over-6-on-strong-q2-numbers-order-inflows-rise-28/article-202514/",
+     "time": "28 Oct 09:53"
+    },
+    {
+     "title": "SENSEX drops over 700 points, NIFTY50 below 22,600 dragged down by IT shares",
+     "link": "https://upstox.com/news/market-news/stocks/sensex-drops-over-700-points-nifty-50-below-22-600-dragged-down-by-it-shares/article-202511/",
+     "time": "28 Oct 09:44"
+    },
+    {
+     "title": "Stocks to watch, Oct 28: Vedanta, Jio Platforms, RIL, L&T, Piramal Pharma, Maruti, Max Financial Services",
+     "link": "https://upstox.com/news/market-news/stocks/stocks-to-watch-oct-28-vedanta-jio-platforms-ril-l-and-t-piramal-pharma-maruti-max-financial-services/article-202502/",
+     "time": "28 Oct 08:46"
+    },
+    {
+     "title": "L&T Q2 FY27 results: Net profit surges 33% YoY to ₹5,202 crore; order intake increases 28% ",
+     "link": "https://upstox.com/news/market-news/earnings/l-and-t-q2-fy-27-results-net-profit-surges-33-to-5-202-crore-yo-y-order-intake-increases-28/article-202484/",
+     "time": "28 Oct 10:06"
+    }
+   ],
+   "rank": 5,
+   "status": "waiting for entry"
+  },
+  {
+   "symbol": "ASIANPAINT.NS",
+   "name": "Asian Paints Limited",
+   "price": 2277.0,
+   "prev_close": 2322.0,
+   "chg_pct": -1.94,
+   "session": "2026-10-27",
+   "rsi": 35.0,
+   "atr": 51.26,
+   "vol_ratio": 1.55,
+   "sma50": 2465.2,
+   "sma200": 2527.6,
+   "support": 2152.5,
+   "resistance": 2300.65,
+   "rs_pct": 29,
+   "fund": 57,
+   "fund_notes": [
+    "ROE 20.2% (sector 7.4%)",
+    "ROCE 24.4%",
+    "P/E 45.4 (sector 28.7)",
+    "profit +18% in Mar 2026",
+    "revenue +5%",
+    "promoters 52.6% (+0.0)"
+   ],
+   "fo_lot": 250,
+   "turnover_cr": 164.2,
+   "plan": {
+    "kind": "breakdown",
+    "side": "short",
+    "entry": 2268.65,
+    "stop": 2326.3,
+    "target": 2152.5,
+    "target_label": "next support",
+    "risk": 57.65,
+    "rr": 2.01,
+    "level": 2300.6499999999996,
+    "why": [
+     "closed below support (2 touches) 2300.65 on 1.5x volume"
+    ],
+    "odds": {
+     "p_target": 0.311,
+     "p_stop": 0.626,
+     "p_time": 0.063,
+     "avg_R": -0.0,
+     "days_to_target": 6,
+     "n": 10000,
+     "horizon": 15
+    },
+    "history": {
+     "fired": 4,
+     "target": 1,
+     "stop": 1,
+     "time": 2,
+     "avg_R": 0.34
+    },
+    "est_days": 6
+   },
+   "tech": 71,
+   "score": 57,
+   "lot": {
+    "lot": 250,
+    "notional": 567162,
+    "move_to_target": 29038,
+    "move_to_stop": 14413
+   },
+   "news": [
+    {
+     "title": "Top gainers and losers, Oct 27: Asian Paints, Coal India fall 2%; Tata Consumer Products jumps 7%",
+     "link": "https://upstox.com/news/market-news/stocks/top-gainers-and-losers-oct-27-asian-paints-coal-india-fall-2-tata-consumer-products-jumps-7/article-202481/",
+     "time": "27 Oct 17:22"
+    },
+    {
+     "title": "BPCL, HPCL and IOC gain, while paints, tyres and chemical stocks fall as crude oil prices drop 2%",
+     "link": "https://upstox.com/news/market-news/stocks/bpcl-hpcl-and-ioc-gain-while-paints-tyres-and-chemical-stocks-fell-as-crude-oil-prices-drop-2/article-202368/",
+     "time": "26 Oct 12:07"
+    },
+    {
+     "title": "HPCL, BPCL, Asian Paints, CEAT: Oil-linked stocks slide as crude prices rise more than $114/barrel",
+     "link": "https://upstox.com/news/market-news/stocks/hpcl-bpcl-asian-paints-ceat-oil-linked-stocks-slide-as-crude-prices-rise-more-than-114-barrel/article-202294/",
+     "time": "23 Oct 12:57"
+    }
+   ],
+   "rank": 6,
+   "status": "waiting for entry"
+  },
+  {
+   "symbol": "AXISBANK.NS",
+   "name": "Axis Bank Limited",
+   "price": 1205.7,
+   "prev_close": 1220.0,
+   "chg_pct": -1.17,
+   "session": "2026-10-27",
+   "rsi": 40.8,
+   "atr": 27.14,
+   "vol_ratio": 0.91,
+   "sma50": 1242.25,
+   "sma200": 1284.41,
+   "support": null,
+   "resistance": 1217.1,
+   "rs_pct": 62,
+   "fund": 46,
+   "fund_notes": [
+    "ROE 13.0% (sector 9.1%)",
+    "P/E 12.5 (sector -0.8)",
+    "profit -6% in Mar 2026",
+    "revenue +4%",
+    "promoters 7.9% (-0.3)"
+   ],
+   "fo_lot": 625,
+   "turnover_cr": 916.4,
+   "plan": {
+    "kind": "failed rally",
+    "side": "short",
+    "entry": 1205.65,
+    "stop": 1250.3,
+    "target": 1116.35,
+    "target_label": "2R",
+    "risk": 44.65,
+    "rr": 2.0,
+    "level": 1235.7428671639914,
+    "why": [
+     "downtrend, rallied into the 20-day EMA 1235.74 and closed down"
+    ],
+    "odds": {
+     "p_target": 0.183,
+     "p_stop": 0.524,
+     "p_time": 0.293,
+     "avg_R": -0.04,
+     "days_to_target": 9,
+     "n": 10000,
+     "horizon": 15
+    },
+    "history": {
+     "fired": 5,
+     "target": 0,
+     "stop": 2,
+     "time": 3,
+     "avg_R": -0.31
+    },
+    "est_days": 9
+   },
+   "tech": 57,
+   "score": 56,
+   "lot": {
+    "lot": 625,
+    "notional": 753531,
+    "move_to_target": 55813,
+    "move_to_stop": 27906
+   },
+   "news": [
+    {
+     "title": "HDFC Bank, ICICI Bank, Axis Bank, Kotak Bank report higher Q2 profits despite margin pressure",
+     "link": "https://upstox.com/news/market-news/earnings/hdfc-bank-icici-bank-axis-bank-kotak-bank-report-higher-q2-profits-despite-margin-pressure/article-202381/",
+     "time": "26 Oct 12:22"
+    }
+   ],
+   "rank": 7,
+   "status": "waiting for entry"
+  }
+ ],
+ "bottoms": [
+  {
+   "symbol": "EMMVEE.NS",
+   "name": "Emmvee Photovoltaic Power Limited",
+   "price": 240.65,
+   "prev_close": 240.45,
+   "chg_pct": 0.08,
+   "session": "2026-10-27",
+   "rsi": 21.5,
+   "atr": 13.5,
+   "vol_ratio": 0.56,
+   "sma50": 310.32,
+   "sma200": 276.14,
+   "support": 229.65,
+   "resistance": 248.69,
+   "rs_pct": 6,
+   "fund": 86,
+   "fund_notes": [
+    "ROE 32.3% (sector 24.7%)",
+    "ROCE 31.3%",
+    "P/E 11.8 (sector 29.8)",
+    "profit +193% in Mar 2026",
+    "revenue +116%",
+    "promoters 80.0%"
+   ],
+   "fo_lot": null,
+   "turnover_cr": 52.5,
+   "bottom": {
+    "kind": "on support",
+    "support": 229.65,
+    "touches": 2,
+    "zone": [
+     226.25,
+     236.4
+    ],
+    "invalidation": 216.15,
+    "drawdown_pct": 35.2,
+    "rsi": 21.5,
+    "divergence": false,
+    "why": [
+     "35% below its 52-week high",
+     "support 229.65 (2 touches)"
+    ]
+   },
+   "tech": 39,
+   "score": 67,
+   "quality": true,
+   "news": [],
+   "rank": 1
+  },
+  {
+   "symbol": "DIXON.NS",
+   "name": "Dixon Technologies (India) Limited",
+   "price": 11233.0,
+   "prev_close": 11161.0,
+   "chg_pct": 0.65,
+   "session": "2026-10-27",
+   "rsi": 23.8,
+   "atr": 370.89,
+   "vol_ratio": 1.1,
+   "sma50": 13396.66,
+   "sma200": 12076.46,
+   "support": 11115.5,
+   "resistance": 11761.6,
+   "rs_pct": 21,
+   "fund": 78,
+   "fund_notes": [
+    "ROE 30.8% (sector 9.3%)",
+    "ROCE 38.1%",
+    "P/E 33.0 (sector 34.7)",
+    "profit +33% in Mar 2026",
+    "revenue +28%",
+    "promoters 28.5% (-0.3)"
+   ],
+   "fo_lot": 50,
+   "turnover_cr": 328.7,
+   "bottom": {
+    "kind": "on support",
+    "support": 11115.5,
+    "touches": 2,
+    "zone": [
+     11022.75,
+     11300.95
+    ],
+    "invalidation": 10744.6,
+    "drawdown_pct": 30.9,
+    "rsi": 23.8,
+    "divergence": false,
+    "why": [
+     "31% below its 52-week high",
+     "support 11115.50 (2 touches)"
+    ]
+   },
+   "tech": 49,
+   "score": 66,
+   "quality": true,
+   "news": [],
+   "rank": 2
+  },
+  {
+   "symbol": "GOLDIAM.NS",
+   "name": "Goldiam International Limited",
+   "price": 294.8,
+   "prev_close": 294.85,
+   "chg_pct": -0.02,
+   "session": "2026-10-27",
+   "rsi": 36.0,
+   "atr": 12.34,
+   "vol_ratio": 0.76,
+   "sma50": 329.13,
+   "sma200": 303.14,
+   "support": 283.48,
+   "resistance": 304.91,
+   "rs_pct": 25,
+   "fund": 76,
+   "fund_notes": [
+    "ROE 15.4% (sector 9.8%)",
+    "ROCE 19.8%",
+    "P/E 21.1 (sector 72.5)",
+    "profit +46% in Mar 2026",
+    "revenue +28%",
+    "promoters 58.5%"
+   ],
+   "fo_lot": null,
+   "turnover_cr": 10.7,
+   "bottom": {
+    "kind": "on support",
+    "support": 283.48,
+    "touches": 4,
+    "zone": [
+     280.35,
+     289.65
+    ],
+    "invalidation": 271.1,
+    "drawdown_pct": 26.0,
+    "rsi": 36.0,
+    "divergence": true,
+    "why": [
+     "26% below its 52-week high",
+     "support 283.48 (4 touches)",
+     "RSI made a higher low while price made a lower low"
+    ]
+   },
+   "tech": 43,
+   "score": 63,
+   "quality": true,
+   "news": [],
+   "rank": 3
+  },
+  {
+   "symbol": "DYCL.NS",
+   "name": "Dynamic Cables Limited",
+   "price": 338.3,
+   "prev_close": 355.35,
+   "chg_pct": -4.8,
+   "session": "2026-10-27",
+   "rsi": 23.2,
+   "atr": 21.35,
+   "vol_ratio": 6.14,
+   "sma50": 442.71,
+   "sma200": 359.3,
+   "support": 332.29,
+   "resistance": 358.93,
+   "rs_pct": 22,
+   "fund": 69,
+   "fund_notes": [
+    "ROE 18.5% (sector 8.0%)",
+    "ROCE 24.9%",
+    "P/E 17.5 (sector 13.3)",
+    "promoters 68.2%"
+   ],
+   "fo_lot": null,
+   "turnover_cr": 10.4,
+   "bottom": {
+    "kind": "on support",
+    "support": 332.29,
+    "touches": 5,
+    "zone": [
+     326.95,
+     343.0
+    ],
+    "invalidation": 310.9,
+    "drawdown_pct": 39.6,
+    "rsi": 23.2,
+    "divergence": false,
+    "why": [
+     "40% below its 52-week high",
+     "support 332.29 (5 touches)"
+    ]
+   },
+   "tech": 50,
+   "score": 61,
+   "quality": true,
+   "news": [],
+   "rank": 4
+  },
+  {
+   "symbol": "ABSLAMC.NS",
+   "name": "Aditya Birla Sun Life AMC Limited",
+   "price": 878.55,
+   "prev_close": 882.5,
+   "chg_pct": -0.45,
+   "session": "2026-10-27",
+   "rsi": 26.4,
+   "atr": 40.13,
+   "vol_ratio": 1.07,
+   "sma50": 1009.24,
+   "sma200": 991.53,
+   "support": 863.4,
+   "resistance": 938.55,
+   "rs_pct": 39,
+   "fund": 66,
+   "fund_notes": [
+    "ROE 25.4% (sector 15.2%)",
+    "ROCE 32.4%",
+    "P/E 25.8 (sector 22.7)",
+    "profit +5% in Mar 2026",
+    "revenue +10%",
+    "promoters 74.7% (-0.1)"
+   ],
+   "fo_lot": null,
+   "turnover_cr": 21.2,
+   "bottom": {
+    "kind": "on support",
+    "support": 863.4,
+    "touches": 4,
+    "zone": [
+     853.35,
+     883.5
+    ],
+    "invalidation": 823.25,
+    "drawdown_pct": 28.3,
+    "rsi": 26.4,
+    "divergence": false,
+    "why": [
+     "28% below its 52-week high",
+     "support 863.40 (4 touches)"
+    ]
+   },
+   "tech": 45,
+   "score": 58,
+   "quality": true,
+   "news": [],
+   "rank": 5
+  },
+  {
+   "symbol": "AEGISLOG.NS",
+   "name": "Aegis Logistics Limited",
+   "price": 1200.1,
+   "prev_close": 1291.1,
+   "chg_pct": -7.05,
+   "session": "2026-10-27",
+   "rsi": 38.4,
+   "atr": 78.38,
+   "vol_ratio": 3.3,
+   "sma50": 1342.71,
+   "sma200": 975.22,
+   "support": 1172.2,
+   "resistance": 1247.87,
+   "rs_pct": 51,
+   "fund": 70,
+   "fund_notes": [
+    "ROE 20.0% (sector 7.6%)",
+    "ROCE 19.3%",
+    "P/E 27.1 (sector 20.9)",
+    "profit +41% in Mar 2026",
+    "revenue +24%",
+    "promoters 58.1%"
+   ],
+   "fo_lot": null,
+   "turnover_cr": 117.7,
+   "bottom": {
+    "kind": "on support",
+    "support": 1172.2,
+    "touches": 2,
+    "zone": [
+     1152.6,
+     1211.4
+    ],
+    "invalidation": 1093.8,
+    "drawdown_pct": 21.5,
+    "rsi": 38.4,
+    "divergence": false,
+    "why": [
+     "21% below its 52-week high",
+     "support 1172.20 (2 touches)"
+    ]
+   },
+   "tech": 33,
+   "score": 55,
+   "quality": true,
+   "news": [],
+   "rank": 6
+  },
+  {
+   "symbol": "COMSYN.NS",
+   "name": "Commercial Syn Bags Limited",
+   "price": 215.0,
+   "prev_close": 208.45,
+   "chg_pct": 3.14,
+   "session": "2026-10-27",
+   "rsi": 25.4,
+   "atr": 15.82,
+   "vol_ratio": 0.83,
+   "sma50": 276.04,
+   "sma200": 195.53,
+   "support": 202.19,
+   "resistance": 226.3,
+   "rs_pct": 91,
+   "fund": 64,
+   "fund_notes": [
+    "ROE 14.8% (sector 7.5%)",
+    "ROCE 13.0%",
+    "P/E 30.2 (sector 31.4)",
+    "profit +54% in Mar 2026",
+    "revenue +11%",
+    "promoters 60.8% (+2.0)"
+   ],
+   "fo_lot": null,
+   "turnover_cr": 12.1,
+   "bottom": {
+    "kind": "on support",
+    "support": 202.19,
+    "touches": 2,
+    "zone": [
+     198.2,
+     210.15
+    ],
+    "invalidation": 186.35,
+    "drawdown_pct": 31.8,
+    "rsi": 25.4,
+    "divergence": false,
+    "why": [
+     "32% below its 52-week high",
+     "support 202.19 (2 touches)"
+    ]
+   },
+   "tech": 36,
+   "score": 53,
+   "quality": true,
+   "news": [],
+   "rank": 7
+  },
+  {
+   "symbol": "HCLTECH.NS",
+   "name": "HCL Technologies Limited",
+   "price": 1420.0,
+   "prev_close": 1417.0,
+   "chg_pct": 0.21,
+   "session": "2026-10-27",
+   "rsi": 71.7,
+   "atr": 39.44,
+   "vol_ratio": 0.93,
+   "sma50": 1292.62,
+   "sma200": 1328.68,
+   "support": 1380.2,
+   "resistance": 1482.7,
+   "rs_pct": 80,
+   "fund": 65,
+   "fund_notes": [
+    "ROE 24.1% (sector 8.8%)",
+    "ROCE 29.0%",
+    "P/E 21.0 (sector 63.5)",
+    "profit -4% in Mar 2026",
+    "revenue +10%",
+    "promoters 60.9% (+0.1)"
+   ],
+   "fo_lot": 400,
+   "turnover_cr": 521.8,
+   "bottom": {
+    "kind": "on support",
+    "support": 1380.2,
+    "touches": 4,
+    "zone": [
+     1370.3,
+     1399.95
+    ],
+    "invalidation": 1340.75,
+    "drawdown_pct": 20.2,
+    "rsi": 71.7,
+    "divergence": true,
+    "why": [
+     "20% below its 52-week high",
+     "support 1380.20 (4 touches)",
+     "RSI made a higher low while price made a lower low"
+    ]
+   },
+   "tech": 31,
+   "score": 52,
+   "quality": true,
+   "news": [
+    {
+     "title": "Cyient, TCS, Infosys: IT stocks power ahead as NIFTY IT surges 16% in a month — what’s driving the rally?",
+     "link": "https://upstox.com/news/market-news/stocks/cyient-tcs-infosys-it-stocks-power-ahead-as-nifty-it-surges-16-in-a-month-what-s-driving-the-rally/article-202274/",
+     "time": "23 Oct 11:26"
+    },
+    {
+     "title": "SENSEX rises over 400 points, NIFTY50 reclaims 22,750 led by gains in IT shares",
+     "link": "https://upstox.com/news/market-news/stocks/sensex-rises-over-400-points-nifty-50-reclaims-22-750-led-by-gains-in-it-shares/article-202270/",
+     "time": "23 Oct 09:47"
+    },
+    {
+     "title": "Top gainers and losers, October 21: Bajaj Finance, BSE shares drop 3%; Infosys, HCLTech gain 3%",
+     "link": "https://upstox.com/news/market-news/stocks/top-gainers-and-losers-october-21-bajaj-finance-bse-shares-drop-3-infosys-hcl-tech-gain-3/article-202171/",
+     "time": "21 Oct 16:55"
+    },
+    {
+     "title": "Infosys, Wipro: IT stocks steal the show as Nifty IT jumps 3% against market trend; what’s driving the rally?",
+     "link": "https://upstox.com/news/market-news/stocks/infosys-wipro-it-stocks-steal-the-show-as-nifty-it-jumps-2-6-against-market-trend-what-s-driving-the-rally/article-202148/",
+     "time": "21 Oct 15:32"
+    }
+   ],
+   "rank": 8
+  },
+  {
+   "symbol": "GAEL.NS",
+   "name": "Gujarat Ambuja Exports Limited",
+   "price": 143.9,
+   "prev_close": 141.07,
+   "chg_pct": 2.01,
+   "session": "2026-10-27",
+   "rsi": 34.2,
+   "atr": 7.6,
+   "vol_ratio": 0.84,
+   "sma50": 165.75,
+   "sma200": 153.65,
+   "support": 137.85,
+   "resistance": 147.72,
+   "rs_pct": 46,
+   "fund": 69,
+   "fund_notes": [
+    "ROE 14.2% (sector 5.3%)",
+    "ROCE 17.1%",
+    "P/E 13.0 (sector 20.3)",
+    "profit +22% in Mar 2026",
+    "revenue +24%",
+    "promoters 63.8%"
+   ],
+   "fo_lot": null,
+   "turnover_cr": 13.0,
+   "bottom": {
+    "kind": "on support",
+    "support": 137.85,
+    "touches": 2,
+    "zone": [
+     135.9,
+     141.7
+    ],
+    "invalidation": 130.2,
+    "drawdown_pct": 22.2,
+    "rsi": 34.2,
+    "divergence": false,
+    "why": [
+     "22% below its 52-week high",
+     "support 137.85 (2 touches)"
+    ]
+   },
+   "tech": 27,
+   "score": 52,
+   "quality": true,
+   "news": [],
+   "rank": 9
+  },
+  {
+   "symbol": "DCMSHRIRAM.NS",
+   "name": "DCM Shriram Limited",
+   "price": 913.95,
+   "prev_close": 968.35,
+   "chg_pct": -5.62,
+   "session": "2026-10-27",
+   "rsi": 37.2,
+   "atr": 43.42,
+   "vol_ratio": 0.72,
+   "sma50": 998.08,
+   "sma200": 1070.09,
+   "support": null,
+   "resistance": 944.83,
+   "rs_pct": 39,
+   "fund": 59,
+   "fund_notes": [
+    "ROE 16.3% (sector 2.2%)",
+    "ROCE 11.2%",
+    "P/E 10.3 (sector 11.2)",
+    "profit +42% in Mar 2026",
+    "revenue +12%",
+    "promoters 66.5%"
+   ],
+   "fo_lot": null,
+   "turnover_cr": 8.1,
+   "bottom": {
+    "kind": "on support",
+    "support": 886.3,
+    "touches": 1,
+    "zone": [
+     875.4,
+     908.05
+    ],
+    "invalidation": 842.85,
+    "drawdown_pct": 35.1,
+    "rsi": 37.2,
+    "divergence": false,
+    "why": [
+     "35% below its 52-week high",
+     "52-week low 886.30"
+    ]
+   },
+   "tech": 28,
+   "score": 47,
+   "quality": false,
+   "news": [],
+   "rank": 10
+  },
+  {
+   "symbol": "AWL.NS",
+   "name": "AWL Agri Business Limited",
+   "price": 176.35,
+   "prev_close": 172.77,
+   "chg_pct": 2.07,
+   "session": "2026-10-27",
+   "rsi": 41.3,
+   "atr": 5.42,
+   "vol_ratio": 0.65,
+   "sma50": 186.07,
+   "sma200": 192.38,
+   "support": 171.89,
+   "resistance": 179.99,
+   "rs_pct": 54,
+   "fund": 49,
+   "fund_notes": [
+    "ROE 10.0% (sector 25.3%)",
+    "ROCE 18.2%",
+    "P/E 19.8 (sector 27.3)",
+    "profit -10% in Mar 2026",
+    "revenue +18%",
+    "promoters 56.9%"
+   ],
+   "fo_lot": null,
+   "turnover_cr": 26.9,
+   "bottom": {
+    "kind": "on support",
+    "support": 171.89,
+    "touches": 2,
+    "zone": [
+     170.5,
+     174.65
+    ],
+    "invalidation": 166.45,
+    "drawdown_pct": 37.7,
+    "rsi": 41.3,
+    "divergence": true,
+    "why": [
+     "38% below its 52-week high",
+     "support 171.89 (2 touches)",
+     "RSI made a higher low while price made a lower low"
+    ]
+   },
+   "tech": 39,
+   "score": 45,
+   "quality": false,
+   "rank": 11
+  },
+  {
+   "symbol": "GREAVESCOT.NS",
+   "name": "Greaves Cotton Limited",
+   "price": 181.68,
+   "prev_close": 182.32,
+   "chg_pct": -0.35,
+   "session": "2026-10-27",
+   "rsi": 28.9,
+   "atr": 8.42,
+   "vol_ratio": 0.4,
+   "sma50": 201.34,
+   "sma200": 185.06,
+   "support": 177.1,
+   "resistance": 190.05,
+   "rs_pct": 9,
+   "fund": 49,
+   "fund_notes": [
+    "ROE 8.0% (sector 27.0%)",
+    "ROCE 9.7%",
+    "P/E 206.7 (sector 92.8)",
+    "profit +662% in Mar 2026",
+    "revenue +17%",
+    "promoters 55.8% (-0.0)"
+   ],
+   "fo_lot": null,
+   "turnover_cr": 20.9,
+   "bottom": {
+    "kind": "on support",
+    "support": 177.1,
+    "touches": 6,
+    "zone": [
+     174.95,
+     181.35
+    ],
+    "invalidation": 168.65,
+    "drawdown_pct": 33.2,
+    "rsi": 28.9,
+    "divergence": false,
+    "why": [
+     "33% below its 52-week high",
+     "support 177.10 (6 touches)"
+    ]
+   },
+   "tech": 38,
+   "score": 45,
+   "quality": false,
+   "rank": 12
+  },
+  {
+   "symbol": "AARTIIND.NS",
+   "name": "Aarti Industries Limited",
+   "price": 435.7,
+   "prev_close": 428.4,
+   "chg_pct": 1.7,
+   "session": "2026-10-27",
+   "rsi": 36.2,
+   "atr": 18.94,
+   "vol_ratio": 0.61,
+   "sma50": 493.86,
+   "sma200": 460.17,
+   "support": 421.75,
+   "resistance": 462.39,
+   "rs_pct": 42,
+   "fund": 42,
+   "fund_notes": [
+    "ROE 7.0% (sector -1.7%)",
+    "ROCE 6.4%",
+    "P/E 29.8 (sector 20.5)",
+    "profit +27% in Mar 2026",
+    "revenue +14%",
+    "promoters 41.8% (-0.3)"
+   ],
+   "fo_lot": null,
+   "turnover_cr": 30.4,
+   "bottom": {
+    "kind": "on support",
+    "support": 421.75,
+    "touches": 2,
+    "zone": [
+     417.0,
+     431.25
+    ],
+    "invalidation": 402.8,
+    "drawdown_pct": 21.0,
+    "rsi": 36.2,
+    "divergence": true,
+    "why": [
+     "21% below its 52-week high",
+     "support 421.75 (2 touches)",
+     "RSI made a higher low while price made a lower low"
+    ]
+   },
+   "tech": 47,
+   "score": 44,
+   "quality": false,
+   "rank": 13
+  },
+  {
+   "symbol": "CONFIPET.NS",
+   "name": "Confidence Petroleum India Limited",
+   "price": 69.33,
+   "prev_close": 69.83,
+   "chg_pct": -0.72,
+   "session": "2026-10-27",
+   "rsi": 30.1,
+   "atr": 4.3,
+   "vol_ratio": 0.44,
+   "sma50": 81.76,
+   "sma200": 61.01,
+   "support": 67.66,
+   "resistance": 80.48,
+   "rs_pct": 32,
+   "fund": 44,
+   "fund_notes": [
+    "ROE 6.5% (sector 16.0%)",
+    "ROCE 9.6%",
+    "P/E 16.6 (sector 9.0)",
+    "profit +6% in Mar 2026",
+    "revenue +49%",
+    "promoters 60.3% (+4.4)"
+   ],
+   "fo_lot": null,
+   "turnover_cr": 13.7,
+   "bottom": {
+    "kind": "on support",
+    "support": 67.66,
+    "touches": 4,
+    "zone": [
+     66.55,
+     69.85
+    ],
+    "invalidation": 63.35,
+    "drawdown_pct": 25.6,
+    "rsi": 30.1,
+    "divergence": false,
+    "why": [
+     "26% below its 52-week high",
+     "support 67.66 (4 touches)"
+    ]
+   },
+   "tech": 41,
+   "score": 43,
+   "quality": false,
+   "rank": 14
+  },
+  {
+   "symbol": "BORORENEW.NS",
+   "name": "BOROSIL RENEWABLES LIMITED",
+   "price": 395.4,
+   "prev_close": 383.65,
+   "chg_pct": 3.06,
+   "session": "2026-10-27",
+   "rsi": 28.6,
+   "atr": 15.28,
+   "vol_ratio": 0.83,
+   "sma50": 473.48,
+   "sma200": 506.22,
+   "support": null,
+   "resistance": 440.45,
+   "rs_pct": 2,
+   "fund": 58,
+   "fund_notes": [
+    "ROE 21.7% (sector 9.4%)",
+    "ROCE 22.1%",
+    "P/E 13.9 (sector 2.5)",
+    "profit +246% in Mar 2026",
+    "revenue +4%",
+    "promoters 56.0% (-2.8)"
+   ],
+   "fo_lot": null,
+   "turnover_cr": 11.0,
+   "bottom": {
+    "kind": "on support",
+    "support": 374.4,
+    "touches": 1,
+    "zone": [
+     370.55,
+     382.05
+    ],
+    "invalidation": 359.1,
+    "drawdown_pct": 45.2,
+    "rsi": 28.6,
+    "divergence": false,
+    "why": [
+     "45% below its 52-week high",
+     "52-week low 374.40"
+    ]
+   },
+   "tech": 19,
+   "score": 43,
+   "quality": false,
+   "rank": 15
+  },
+  {
+   "symbol": "KIRLOSBROS.NS",
+   "name": "Kirloskar Brothers Limited",
+   "price": 1551.4,
+   "prev_close": 1562.4,
+   "chg_pct": -0.7,
+   "session": "2026-10-27",
+   "rsi": 27.8,
+   "atr": 54.12,
+   "vol_ratio": 0.61,
+   "sma50": 1790.25,
+   "sma200": 1716.23,
+   "support": 1464.8,
+   "resistance": 1557.6,
+   "rs_pct": 30,
+   "fund": null,
+   "fund_notes": [],
+   "fo_lot": null,
+   "turnover_cr": 6.5,
+   "bottom": {
+    "kind": "on support",
+    "support": 1557.6,
+    "touches": 2,
+    "zone": [
+     1544.05,
+     1584.7
+    ],
+    "invalidation": 1503.45,
+    "drawdown_pct": 29.1,
+    "rsi": 27.8,
+    "divergence": true,
+    "why": [
+     "29% below its 52-week high",
+     "support 1557.60 (2 touches)",
+     "RSI made a higher low while price made a lower low"
+    ]
+   },
+   "tech": 72,
+   "score": 43,
+   "quality": false,
+   "rank": 16
+  },
+  {
+   "symbol": "BAJFINANCE.NS",
+   "name": "Bajaj Finance Limited",
+   "price": 912.0,
+   "prev_close": 918.7,
+   "chg_pct": -0.73,
+   "session": "2026-10-27",
+   "rsi": 35.0,
+   "atr": 27.38,
+   "vol_ratio": 0.75,
+   "sma50": 1013.85,
+   "sma200": 973.03,
+   "support": 888.0,
+   "resistance": 944.02,
+   "rs_pct": 35,
+   "fund": 53,
+   "fund_notes": [
+    "ROE 17.6% (sector 11.3%)",
+    "ROCE 9.7%",
+    "P/E 25.8 (sector 18.8)",
+    "profit +15% in Mar 2026",
+    "revenue +19%",
+    "promoters 54.7% (-0.0)"
+   ],
+   "fo_lot": 750,
+   "turnover_cr": 759.2,
+   "bottom": {
+    "kind": "on support",
+    "support": 888.0,
+    "touches": 2,
+    "zone": [
+     881.15,
+     901.7
+    ],
+    "invalidation": 860.6,
+    "drawdown_pct": 22.5,
+    "rsi": 35.0,
+    "divergence": false,
+    "why": [
+     "22% below its 52-week high",
+     "support 888.00 (2 touches)"
+    ]
+   },
+   "tech": 25,
+   "score": 42,
+   "quality": false,
+   "rank": 17
+  },
+  {
+   "symbol": "UJJIVANSFB.NS",
+   "name": "Ujjivan Small Finance Bank Limited",
+   "price": 55.43,
+   "prev_close": 55.0,
+   "chg_pct": 0.78,
+   "session": "2026-10-27",
+   "rsi": 32.0,
+   "atr": 2.8,
+   "vol_ratio": 0.84,
+   "sma50": 65.34,
+   "sma200": 61.09,
+   "support": 50.75,
+   "resistance": 55.76,
+   "rs_pct": 14,
+   "fund": null,
+   "fund_notes": [],
+   "fo_lot": 8000,
+   "turnover_cr": 108.4,
+   "bottom": {
+    "kind": "on support",
+    "support": 55.76,
+    "touches": 9,
+    "zone": [
+     55.05,
+     57.2
+    ],
+    "invalidation": 52.95,
+    "drawdown_pct": 25.0,
+    "rsi": 32.0,
+    "divergence": true,
+    "why": [
+     "25% below its 52-week high",
+     "support 55.76 (9 touches)",
+     "RSI made a higher low while price made a lower low"
+    ]
+   },
+   "tech": 68,
+   "score": 41,
+   "quality": false,
+   "rank": 18
+  },
+  {
+   "symbol": "AADHARHFC.NS",
+   "name": "Aadhar Housing Finance Limited",
+   "price": 435.65,
+   "prev_close": 441.2,
+   "chg_pct": -1.26,
+   "session": "2026-10-27",
+   "rsi": 39.9,
+   "atr": 14.13,
+   "vol_ratio": 0.92,
+   "sma50": 459.72,
+   "sma200": 478.62,
+   "support": 433.57,
+   "resistance": 450.67,
+   "rs_pct": 35,
+   "fund": 44,
+   "fund_notes": [
+    "ROE 14.5% (sector 9.4%)",
+    "ROCE 10.5%",
+    "P/E 16.8 (sector 7.4)",
+    "profit +20% in Mar 2026",
+    "revenue +18%",
+    "promoters 64.5% (-10.7)"
+   ],
+   "fo_lot": null,
+   "turnover_cr": 10.0,
+   "bottom": {
+    "kind": "on support",
+    "support": 433.57,
+    "touches": 6,
+    "zone": [
+     430.0,
+     440.65
+    ],
+    "invalidation": 419.4,
+    "drawdown_pct": 22.6,
+    "rsi": 39.9,
+    "divergence": false,
+    "why": [
+     "23% below its 52-week high",
+     "support 433.57 (6 touches)"
+    ]
+   },
+   "tech": 37,
+   "score": 41,
+   "quality": false,
+   "rank": 19
+  },
+  {
+   "symbol": "GRAVITA.NS",
+   "name": "Gravita India Limited",
+   "price": 1340.3,
+   "prev_close": 1308.6,
+   "chg_pct": 2.42,
+   "session": "2026-10-27",
+   "rsi": 28.0,
+   "atr": 50.76,
+   "vol_ratio": 0.71,
+   "sma50": 1600.45,
+   "sma200": 1624.28,
+   "support": 1279.0,
+   "resistance": 1467.5,
+   "rs_pct": 10,
+   "fund": 50,
+   "fund_notes": [
+    "ROE 15.4% (sector 16.3%)",
+    "ROCE 14.8%",
+    "P/E 25.3 (sector 17.6)",
+    "profit +21% in Mar 2026",
+    "revenue +9%",
+    "promoters 55.9%"
+   ],
+   "fo_lot": null,
+   "turnover_cr": 28.9,
+   "bottom": {
+    "kind": "on support",
+    "support": 1279.0,
+    "touches": 2,
+    "zone": [
+     1266.3,
+     1304.4
+    ],
+    "invalidation": 1228.2,
+    "drawdown_pct": 30.0,
+    "rsi": 28.0,
+    "divergence": false,
+    "why": [
+     "30% below its 52-week high",
+     "support 1279.00 (2 touches)"
+    ]
+   },
+   "tech": 24,
+   "score": 40,
+   "quality": false,
+   "rank": 20
+  }
+ ],
+ "record": {
+  "stats": {
+   "tracked": 17,
+   "open": 17,
+   "closed": 0,
+   "missed": 0,
+   "targets": 0,
+   "stops": 0,
+   "avg_R": null,
+   "win_rate": null
+  },
+  "rows": [
+   {
+    "id": "2026-10-27-LAURUSLABS.NS",
+    "created": "2026-10-27",
+    "symbol": "LAURUSLABS.NS",
+    "name": "Laurus Labs Limited",
+    "side": "long",
+    "kind": "breakout",
+    "entry": 2143.15,
+    "stop": 2058.9,
+    "target": 2311.65,
+    "rr": 2.0,
+    "est_days": 8,
+    "p_target": 0.465,
+    "score": 87,
+    "status": "waiting for entry",
+    "price_at_signal": 2142.0,
+    "last_price": 2142.0,
+    "last_close": 2058.9
+   },
+   {
+    "id": "2026-10-27-INDSWFTLAB.NS",
+    "created": "2026-10-27",
+    "symbol": "INDSWFTLAB.NS",
+    "name": "Ind-Swift Laboratories Limited",
+    "side": "long",
+    "kind": "breakout",
+    "entry": 376.05,
+    "stop": 338.6,
+    "target": 450.95,
+    "rr": 2.0,
+    "est_days": 9,
+    "p_target": 0.349,
+    "score": 87,
+    "status": "waiting for entry",
+    "price_at_signal": 368.8,
+    "last_price": 368.8,
+    "last_close": 337.05
+   },
+   {
+    "id": "2026-10-27-CUPID.NS",
+    "created": "2026-10-27",
+    "symbol": "CUPID.NS",
+    "name": "Cupid Limited",
+    "side": "long",
+    "kind": "pullback",
+    "entry": 328.75,
+    "stop": 298.0,
+    "target": 390.25,
+    "rr": 2.0,
+    "est_days": 9,
+    "p_target": 0.462,
+    "score": 80,
+    "status": "waiting for entry",
+    "price_at_signal": 316.6,
+    "last_price": 316.6,
+    "last_close": 314.05
+   },
+   {
+    "id": "2026-10-27-TFCILTD.NS",
+    "created": "2026-10-27",
+    "symbol": "TFCILTD.NS",
+    "name": "Tourism Finance Corporation of India Limited",
+    "side": "long",
+    "kind": "pullback",
+    "entry": 157.1,
+    "stop": 139.75,
+    "target": 191.8,
+    "rr": 2.0,
+    "est_days": 11,
+    "p_target": 0.163,
+    "score": 80,
+    "status": "waiting for entry",
+    "price_at_signal": 155.04,
+    "last_price": 155.04,
+    "last_close": 154.31
+   },
+   {
+    "id": "2026-10-27-ACUTAAS.NS",
+    "created": "2026-10-27",
+    "symbol": "ACUTAAS.NS",
+    "name": "Acutaas Chemicals Limited",
+    "side": "long",
+    "kind": "breakout",
+    "entry": 3900.05,
+    "stop": 3639.5,
+    "target": 4421.15,
+    "rr": 2.0,
+    "est_days": 8,
+    "p_target": 0.359,
+    "score": 79,
+    "status": "waiting for entry",
+    "price_at_signal": 3793.3,
+    "last_price": 3793.3,
+    "last_close": 3348.8
+   },
+   {
+    "id": "2026-10-27-WSTCSTPAPR.NS",
+    "created": "2026-10-27",
+    "symbol": "WSTCSTPAPR.NS",
+    "name": "West Coast Paper Mills Limited",
+    "side": "long",
+    "kind": "pullback",
+    "entry": 828.85,
+    "stop": 746.2,
+    "target": 994.15,
+    "rr": 2.0,
+    "est_days": 10,
+    "p_target": 0.17,
+    "score": 78,
+    "status": "waiting for entry",
+    "price_at_signal": 815.9,
+    "last_price": 815.9,
+    "last_close": 787.8
+   },
+   {
+    "id": "2026-10-27-UTTAMSUGAR.NS",
+    "created": "2026-10-27",
+    "symbol": "UTTAMSUGAR.NS",
+    "name": "Uttam Sugar Mills Limited",
+    "side": "long",
+    "kind": "pullback",
+    "entry": 330.85,
+    "stop": 296.45,
+    "target": 399.65,
+    "rr": 2.0,
+    "est_days": 10,
+    "p_target": 0.184,
+    "score": 78,
+    "status": "waiting for entry",
+    "price_at_signal": 327.55,
+    "last_price": 327.55,
+    "last_close": 309.2
+   },
+   {
+    "id": "2026-10-27-MRPL.NS",
+    "created": "2026-10-27",
+    "symbol": "MRPL.NS",
+    "name": "Mangalore Refinery and Petrochemicals Limited",
+    "side": "long",
+    "kind": "breakout",
+    "entry": 190.35,
+    "stop": 180.95,
+    "target": 212.16,
+    "rr": 2.32,
+    "est_days": 6,
+    "p_target": 0.321,
+    "score": 77,
+    "status": "waiting for entry",
+    "price_at_signal": 189.44,
+    "last_price": 189.44,
+    "last_close": 182.61
+   },
+   {
+    "id": "2026-10-27-NAZARA.NS",
+    "created": "2026-10-27",
+    "symbol": "NAZARA.NS",
+    "name": "Nazara Technologies Limited",
+    "side": "long",
+    "kind": "pullback",
+    "entry": 407.8,
+    "stop": 371.2,
+    "target": 481.0,
+    "rr": 2.0,
+    "est_days": 10,
+    "p_target": 0.134,
+    "score": 77,
+    "status": "waiting for entry",
+    "price_at_signal": 401.3,
+    "last_price": 401.3,
+    "last_close": 400.25
+   },
+   {
+    "id": "2026-10-27-WELSPUNLIV.NS",
+    "created": "2026-10-27",
+    "symbol": "WELSPUNLIV.NS",
+    "name": "Welspun Living Limited",
+    "side": "long",
+    "kind": "pullback",
+    "entry": 218.75,
+    "stop": 202.2,
+    "target": 251.85,
+    "rr": 2.0,
+    "est_days": 9,
+    "p_target": 0.261,
+    "score": 77,
+    "status": "waiting for entry",
+    "price_at_signal": 215.03,
+    "last_price": 215.03,
+    "last_close": 208.96
+   },
+   {
+    "id": "2026-10-27-MAZDOCK.NS",
+    "created": "2026-10-27",
+    "symbol": "MAZDOCK.NS",
+    "name": "Mazagon Dock Shipbuilders Limited",
+    "side": "short",
+    "kind": "breakdown",
+    "entry": 1687.45,
+    "stop": 1876.3,
+    "target": 1309.75,
+    "rr": 2.0,
+    "est_days": 13,
+    "p_target": 0.007,
+    "score": 83,
+    "status": "waiting for entry",
+    "price_at_signal": 1754.0,
+    "last_price": 1754.0,
+    "last_close": 1875.0
+   },
+   {
+    "id": "2026-10-27-KPITTECH.NS",
+    "created": "2026-10-27",
+    "symbol": "KPITTECH.NS",
+    "name": "KPIT Technologies Limited",
+    "side": "short",
+    "kind": "failed rally",
+    "entry": 523.7,
+    "stop": 555.55,
+    "target": 460.0,
+    "rr": 2.0,
+    "est_days": 10,
+    "p_target": 0.262,
+    "score": 65,
+    "status": "waiting for entry",
+    "price_at_signal": 531.9,
+    "last_price": 531.9,
+    "last_close": 536.55
+   },
+   {
+    "id": "2026-10-27-GAIL.NS",
+    "created": "2026-10-27",
+    "symbol": "GAIL.NS",
+    "name": "GAIL (India) Limited",
+    "side": "short",
+    "kind": "failed rally",
+    "entry": 165.6,
+    "stop": 170.85,
+    "target": 155.1,
+    "rr": 2.0,
+    "est_days": 7,
+    "p_target": 0.269,
+    "score": 62,
+    "status": "waiting for entry",
+    "price_at_signal": 165.68,
+    "last_price": 165.68,
+    "last_close": 168.28
+   },
+   {
+    "id": "2026-10-27-CIPLA.NS",
+    "created": "2026-10-27",
+    "symbol": "CIPLA.NS",
+    "name": "Cipla Limited",
+    "side": "short",
+    "kind": "failed rally",
+    "entry": 1318.95,
+    "stop": 1379.8,
+    "target": 1197.25,
+    "rr": 2.0,
+    "est_days": 12,
+    "p_target": 0.076,
+    "score": 60,
+    "status": "waiting for entry",
+    "price_at_signal": 1350.0,
+    "last_price": 1350.0,
+    "last_close": 1355.0
+   },
+   {
+    "id": "2026-10-27-LT.NS",
+    "created": "2026-10-27",
+    "symbol": "LT.NS",
+    "name": "Larsen & Toubro Limited",
+    "side": "short",
+    "kind": "failed rally",
+    "entry": 3648.25,
+    "stop": 3731.8,
+    "target": 3481.15,
+    "rr": 2.0,
+    "est_days": 5,
+    "p_target": 0.327,
+    "score": 59,
+    "status": "waiting for entry",
+    "price_at_signal": 3665.1,
+    "last_price": 3665.1,
+    "last_close": 3680.0
+   },
+   {
+    "id": "2026-10-27-ASIANPAINT.NS",
+    "created": "2026-10-27",
+    "symbol": "ASIANPAINT.NS",
+    "name": "Asian Paints Limited",
+    "side": "short",
+    "kind": "breakdown",
+    "entry": 2268.65,
+    "stop": 2326.3,
+    "target": 2152.5,
+    "rr": 2.01,
+    "est_days": 6,
+    "p_target": 0.311,
+    "score": 57,
+    "status": "waiting for entry",
+    "price_at_signal": 2277.0,
+    "last_price": 2277.0,
+    "last_close": 2322.0
+   },
+   {
+    "id": "2026-10-27-AXISBANK.NS",
+    "created": "2026-10-27",
+    "symbol": "AXISBANK.NS",
+    "name": "Axis Bank Limited",
+    "side": "short",
+    "kind": "failed rally",
+    "entry": 1205.65,
+    "stop": 1250.3,
+    "target": 1116.35,
+    "rr": 2.0,
+    "est_days": 9,
+    "p_target": 0.183,
+    "score": 56,
+    "status": "waiting for entry",
+    "price_at_signal": 1205.7,
+    "last_price": 1205.7,
+    "last_close": 1220.0
+   }
+  ]
+ },
+ "live": null,
+ "config": {
+  "min_price": 20,
+  "min_turnover_cr": 5,
+  "horizon_days": 15,
+  "entry_valid_days": 3,
+  "budget": 100000,
+  "max_loss_per_trade": 1000,
+  "max_position_pct": 40,
+  "cash_buffer_pct": 10,
+  "min_reward_risk": 1.5,
+  "target_r": 2,
+  "show": 10,
+  "replays": 10000,
+  "fundamentals_days": 7
+ },
+ "errors": [],
+ "seconds": 333
+}
