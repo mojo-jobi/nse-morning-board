@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       stage:
-        description: "pre, orb, all or refresh (the dashboard's Refresh button sends refresh)"
+        description: "pre, orb, all, refresh (the Refresh button), or check (Upstox token health, no commit)"
         default: "all"
       request:
         description: "id the dashboard uses to find its own run (leave empty)"
@@ -45,13 +45,21 @@ jobs:
         run: |
           if [ "$(TZ=Asia/Kolkata date +%u)" = "1" ]; then python nse/universe.py || echo "universe refresh skipped"; fi
 
+      - name: Check Upstox
+        if: steps.stage.outputs.stage == 'check'
+        env:
+          UPSTOX_ANALYTICS_TOKEN: ${{ secrets.UPSTOX_ANALYTICS_TOKEN }}
+        run: python nse/check_upstox.py
+
       - name: Run
+        if: steps.stage.outputs.stage != 'check'
         env:
           # optional: Upstox Analytics Token (read-only). Without it, or if Upstox refuses it, Yahoo is used.
           UPSTOX_ANALYTICS_TOKEN: ${{ secrets.UPSTOX_ANALYTICS_TOKEN }}
         run: python nse/morning.py ${{ steps.stage.outputs.stage }}
 
       - name: Save the dashboard
+        if: steps.stage.outputs.stage != 'check'
         run: |
           git config user.name "nse-morning"
           git config user.email "nse-morning@users.noreply.github.com"
