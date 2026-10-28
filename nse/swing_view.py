@@ -28,6 +28,9 @@ section.tab .grid{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
 .tbl{overflow-x:auto}.tbl table{min-width:760px}
 .why2{margin:6px 0 0;padding-left:18px;font-size:13px;color:var(--muted)}
 .empty{color:var(--muted);font-size:14px;padding:6px 0}
+.checks{margin:8px 0;font-size:13px}.checks ul{margin:4px 0 0;padding-left:18px}.checks li{margin:2px 0}
+.ck-ok{color:var(--good)}.ck-no{color:var(--bad)}div.checks>.ck-no{font-weight:700}
+details.watch{margin-top:12px}details.watch>summary{font-weight:600}
 """
 
 
@@ -141,6 +144,21 @@ def _lines(*pairs):
     return json.dumps([{"p": p, "t": t, "c": c} for p, t, c in pairs if p is not None])
 
 
+def checks_block(checks, qualified):
+    """The gate's checks: all shown, folded when every one passed; failures listed first otherwise."""
+    if not checks:
+        return ""
+    items = "".join('<li class="%s"><b>%s %s</b>: %s</li>' % ("ck-ok" if c["ok"] else "ck-no", "\u2713" if c["ok"] else "\u2717",
+                                                             e(c["name"]), e(c["detail"]))
+                    for c in sorted(checks, key=lambda c: c["ok"]))
+    if qualified:
+        return ('<details class="checks"><summary class="ck-ok">\u2713 Clears all %d checks</summary><ul>%s</ul></details>'
+                % (len(checks), items))
+    n = sum(1 for c in checks if not c["ok"])
+    return '<div class="checks"><div class="ck-no">\u2717 Fails %d of %d checks: watchlist only</div><ul>%s</ul></div>' % (
+        n, len(checks), items)
+
+
 def trade_card(r):
     p = r.get("plan") or {}
     tech = "support %s &middot; resistance %s &middot; RSI %s &middot; 50-day %s &middot; 200-day %s" % (
@@ -151,10 +169,10 @@ def trade_card(r):
                    (p.get("target"), "target", "#17804a"))
     return ('<div class="card"><div class="top"><span class="rank">#%s</span><span class="sym">%s</span>'
             '<span class="kind %s">%s</span>%s<span class="name">%s</span>%s</div>'
-            '<div class="sub">%s</div><ul class="why2">%s</ul>%s%s%s</div>' % (
+            '<div class="sub">%s</div><ul class="why2">%s</ul>%s%s%s%s</div>' % (
                 e(r.get("rank")), e(sym(r["symbol"])), e(p.get("side")), e(p.get("kind")), status_pill(r.get("status")),
                 e(r.get("name")), price_line(r), tech, "".join("<li>%s</li>" % e(w) for w in p.get("why") or []),
-                plan_block(r, p), scores(r), extras(r, lines)))
+                checks_block(r.get("checks"), r.get("qualified")), plan_block(r, p), scores(r), extras(r, lines)))
 
 
 def bottom_card(r):
@@ -175,7 +193,8 @@ def bottom_card(r):
             '<span class="name">%s</span>%s</div><ul class="why2">%s</ul>%s%s%s%s</div>' % (
                 e(r.get("rank")), e(sym(r["symbol"])), state, q, status_pill(r.get("status")), e(r.get("name")),
                 price_line(r), "".join("<li>%s</li>" % e(w) for w in b.get("why") or []), grid,
-                ('<h3 style="font-size:14px;margin:12px 0 0">Turning up: a plan</h3>' + plan_block(r, p)) if p else "",
+                ('<h3 style="font-size:14px;margin:12px 0 0">Turning up: a plan</h3>' +
+                 checks_block(r.get("checks"), r.get("qualified")) + plan_block(r, p)) if p else "",
                 scores(r), extras(r, lines)))
 
 
@@ -276,7 +295,8 @@ def option_card(o):
              '<th>Delta</th><th>Theta a lot/day</th>' % format(o["lot"], ",") +
              '<th>Vega a lot</th><th>IV</th><th>OI lots (chg)</th><th>Build-up</th><th>Stock at target</th>'
              '<th>Stock at stop</th><th>R:R</th><th>Break-even at expiry (move)</th></tr>%s</table></div>' % trs)
-    return '<div class="card">%s%s%s%s%s%s</div>' % (head, plan, chain, watch, notes, table)
+    return '<div class="card">%s%s%s%s%s%s%s</div>' % (head, plan, checks_block(o.get("checks"), o.get("qualified")),
+                                                      chain, watch, notes, table)
 
 
 def options_block(opts):
@@ -290,11 +310,28 @@ def options_block(opts):
              '%.0f%% or less, open interest of %s+ lots and at least a tenth of the busiest tradable strike. "Stock at target" and '
              '"Stock at stop" are what one lot would be worth on its estimated day (stop: halfway), from Black-Scholes at '
              'that strike\'s own IV, minus the premium. IV usually drops after a big move or results, which makes a '
-             'bought option worth less than shown. Buying options can lose the whole premium. Updated %s IST.</div>' % (
+             'bought option worth less than shown. Buying options can lose the whole premium.</div>'
+             '<div class="note"><b>When an option is recommended.</b> Only when its stock plan clears every swing check, '
+             'and a strike clears every option check: reward:risk per lot %.1f+; IV no more than %.2fx the stock\'s own '
+             'realised 20-day volatility (not overpaying); no more than %d%% of the premium lost to time decay if the stock '
+             'stands still to the estimated day; break-even at expiry inside the target; and no heavy OI writing between '
+             'the price and the target. <b>When to buy:</b> only after the stock trades through the plan\'s entry trigger '
+             '(above the day\'s high for a call, below its low for a put) within 3 sessions, and only if the strike still '
+             'clears every check then. <b>When to sell:</b> when the stock reaches its target or stop, on day 15, or '
+             'before expiry, whichever comes first. Updated %s IST.</div>' % (
                  e(r.get("min_dte")), e(r.get("buffer")), (r.get("delta") or [0, 0])[0], (r.get("delta") or [0, 0])[1],
-                 r.get("max_spread_pct") or 0, e(r.get("min_lots")), e(opts.get("created_ist"))))
-    calls = "".join(option_card(o) for o in opts.get("calls") or []) or '<div class="card empty">No bullish F&amp;O plan today.</div>'
-    puts = "".join(option_card(o) for o in opts.get("puts") or []) or '<div class="card empty">No bearish F&amp;O plan today.</div>'
+                 r.get("max_spread_pct") or 0, e(r.get("min_lots")), r.get("min_rr") or 2, r.get("iv_max") or 1.25,
+                 r.get("max_decay_pct") or 25, e(opts.get("created_ist"))))
+    def group(rows, none_msg):
+        q = [o for o in rows if o.get("qualified")]
+        rest = [o for o in rows if not o.get("qualified")]
+        body = "".join(option_card(o) for o in q) or '<div class="card empty">%s</div>' % none_msg
+        if rest:
+            body += ('<details class="watch"><summary>%d that did not clear every option check</summary>%s</details>'
+                     % (len(rest), "".join(option_card(o) for o in rest)))
+        return body
+    calls = group(opts.get("calls") or [], "No call clears every check today. Sitting out is the plan.")
+    puts = group(opts.get("puts") or [], "No put clears every check today. Sitting out is the plan.")
     skipped = ""
     if opts.get("skipped"):
         skipped = '<details><summary>%d skipped</summary><ul class="news">%s</ul></details>' % (
@@ -363,23 +400,46 @@ def tabs(doc):
     sub = '<div class="sub">Scan of the %s session, made %s IST.</div>' % (e(doc.get("session")), e(doc.get("created_ist")))
     show = (doc.get("config") or {}).get("show", 10)
 
-    def section(title, note, rows, card):
-        body = "".join(card(r) for r in rows[:show]) or '<div class="card empty">Nothing matches today.</div>'
-        more = rows[show:]
-        if more:
-            body += '<details><summary>%d more</summary>%s</details>' % (len(more), "".join(card(r) for r in more))
+    def section(title, note, rows, card, none_msg):
+        q = [r for r in rows if r.get("qualified")]
+        rest = [r for r in rows if not r.get("qualified")]
+        body = "".join(card(r) for r in q) or '<div class="card empty">%s</div>' % none_msg
+        if rest:
+            body += ('<details class="watch"><summary>Watchlist: %d setups that did not clear every check</summary>'
+                     '<div class="sub">Not recommended. Each card lists the checks it failed.</div>%s</details>'
+                     % (len(rest), "".join(card(r) for r in rest[:show])))
         return '<h2>%s</h2><div class="sub">%s</div>%s' % (title, note, body)
 
-    bull = moves_block(doc.get("live")) + section(
-        "Bullish swing setups", "All liquid NSE stocks: breakouts, pullbacks in an uptrend, bounces off support. "
-        "Ranked half on technicals, half on fundamentals.", doc.get("bull") or [], trade_card) + sub
-    falling = section(
-        "Breakdowns (F&amp;O stocks)", "Stocks with options only: breakdowns below support and failed rallies in a "
-        "downtrend. The levels are the stock's; picking a put (strike, expiry) is your call. Ranked on weak technicals "
-        "and weak fundamentals.", doc.get("bear") or [], trade_card) + section(
-        "Bottoms: support to watch", "All liquid stocks 20%+ off their 52-week high, sitting on support with RSI 40 or "
-        "under or a bullish divergence. 'Turning up' once it closes above its 10-day high and 20-day EMA. Ranked "
-        "60% on fundamentals, for a later swing or a long-term buy.", doc.get("bottoms") or [], bottom_card) + sub
+    G = (doc.get("config") or {}).get("gate") or {}
+    gate_note = ('<div class="note">Only setups that clear <b>every</b> check are recommended; no trade is a valid '
+                 'result. The checks: replay expectancy %+.2fR or more and the target first in %d%%+ of 10,000 replays; '
+                 'the same rule worked on this stock before (%d+ times, %+.2fR+ average, at least as many targets as '
+                 'stops); fundamentals agree (longs %d+, shorts %d or less, bottoms %d+); the market agrees (in a '
+                 'falling Nifty a long must be stronger than %d%% of stocks; a short needs a Nifty not rising and a '
+                 'weak stock); Rs %s cr+ traded a day; reward:risk %.1f+. Nothing guarantees a profit: these raise the '
+                 'odds, they do not remove the risk.</div>' % (
+                     G.get("min_avg_r", 0), 100 * G.get("min_p_target", 0), G.get("min_hist_trades", 0),
+                     G.get("min_hist_avg_r", 0), G.get("long_min_fund", 0), G.get("short_max_fund", 0),
+                     G.get("bottom_min_fund", 0), G.get("rs_long_in_down_market", 0), G.get("min_turnover_cr", 0),
+                     G.get("min_rr", 0))) if G else ""
+
+    bull = gate_note + moves_block(doc.get("live")) + section(
+        "Recommended bullish swings", "All liquid NSE stocks: breakouts, pullbacks in an uptrend, bounces off support, "
+        "that clear every check.", doc.get("bull") or [], trade_card,
+        "No bullish setup clears every check today. Sitting out is the plan.") + sub
+    bots = doc.get("bottoms") or []
+    watch_bots = [r for r in bots if not (r.get("bottom") or {}).get("plan")]
+    falling = gate_note + section(
+        "Recommended breakdowns (F&amp;O stocks)", "Stocks with options only: breakdowns below support and failed "
+        "rallies in a downtrend that clear every check.", doc.get("bear") or [], trade_card,
+        "No breakdown clears every check today. Sitting out is the plan.") + section(
+        "Bottoms turning up", "Stocks 20%+ off their high that held support and closed above their 10-day high and "
+        "20-day EMA, and clear every check.", [r for r in bots if (r.get("bottom") or {}).get("plan")], bottom_card,
+        "No bottom has turned up and cleared every check today.") + (
+        '<h2>Bottoms: support zones to watch</h2><div class="sub">Not trade signals: stocks 20%+ off their 52-week '
+        'high sitting on support (RSI 40 or under, or a bullish divergence), with the buy zone and the close that would '
+        'break the support. One that turns up and clears every check moves to the list above.</div>' +
+        ("".join(bottom_card(r) for r in watch_bots[:show]) or '<div class="card empty">None today.</div>')) + sub
     record = ("<h2>Stock plans</h2>" + record_block(doc.get("record") or {}) +
               options_record_block(doc.get("options_record")))
     if doc.get("errors"):

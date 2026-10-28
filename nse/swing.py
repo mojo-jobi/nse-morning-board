@@ -53,6 +53,10 @@ DEFAULTS = {
     "horizon_days": 15, "entry_valid_days": 3,    # a trade lasts up to 15 sessions; an entry waits 3
     "budget": 100000, "max_loss_per_trade": 1000, "max_position_pct": 40, "cash_buffer_pct": 10,
     "min_reward_risk": 1.5, "target_r": 2, "show": 10, "replays": 10000, "fundamentals_days": 7,
+    # a plan is recommended only if it clears every one of these; otherwise it is watchlist only
+    "gate": {"min_avg_r": 0.30, "min_p_target": 0.35, "min_hist_trades": 3, "min_hist_avg_r": 0.25,
+             "min_turnover_cr": 20, "min_rr": 2.0, "long_min_fund": 55, "short_max_fund": 50,
+             "bottom_min_fund": 60, "rs_long_in_down_market": 85, "rs_short_max": 50},
 }
 TICK = 0.05
 PIVOT = 5                                         # a swing high is the top of the 11 bars around it
@@ -80,7 +84,51 @@ def write_json(path, doc, indent=1):
 
 def config():
     cfg = read_json(os.path.join(ROOT, "config.json"), {})
-    return dict(DEFAULTS, **(cfg.get("swing") or {})), cfg
+    out = dict(DEFAULTS, **(cfg.get("swing") or {}))
+    out["gate"] = dict(DEFAULTS["gate"], **((cfg.get("swing") or {}).get("gate") or {}))
+    return out, cfg
+
+
+def gate(r, p, nifty_trend, cfg):
+    """Every check a plan must clear to be recommended: [{"name", "ok", "detail"}], and whether all passed.
+    Run after the full numbers (10,000 replays, the rule's own history) are in."""
+    G = cfg["gate"]
+    o, h = p.get("odds") or {}, p.get("history") or {}
+    long_ = p["side"] == "long"
+    fund, rs = r.get("fund"), r.get("rs_pct", 50)
+    out = []
+
+    def add(name, ok, detail):
+        out.append({"name": name, "ok": bool(ok), "detail": detail})
+
+    add("Replay expectancy", o.get("avg_R", -9) >= G["min_avg_r"],
+        "%+.2fR a trade over %s replays (needs %+.2fR or more)" % (o.get("avg_R", 0), format(o.get("n", 0), ","), G["min_avg_r"]))
+    add("Target reachable", o.get("p_target", 0) >= G["min_p_target"],
+        "target first in %d%% of replays, stop first in %d%% (needs %d%%+)" % (
+            100 * o.get("p_target", 0), 100 * o.get("p_stop", 0), 100 * G["min_p_target"]))
+    fired, havg = h.get("fired", 0), h.get("avg_R")
+    add("Worked on this stock before",
+        fired >= G["min_hist_trades"] and havg is not None and havg >= G["min_hist_avg_r"] and h.get("target", 0) >= h.get("stop", 0),
+        "fired %d times: %d targets, %d stops%s (needs %d+ times, %+.2fR+ average, targets >= stops)" % (
+            fired, h.get("target", 0), h.get("stop", 0), ", average %+.2fR" % havg if havg is not None else "",
+            G["min_hist_trades"], G["min_hist_avg_r"]))
+    if long_:
+        need = G["bottom_min_fund"] if p["kind"] == "bottom reversal" else G["long_min_fund"]
+        add("Fundamentals agree", fund is not None and fund >= need,
+            "score %s (needs %d or more)" % ("n/a" if fund is None else fund, need))
+        add("Market agrees", nifty_trend != "down" or rs >= G["rs_long_in_down_market"],
+            "Nifty trend %s; stronger than %d%% of stocks (in a falling market needs %d%%+)" % (
+                nifty_trend or "?", rs, G["rs_long_in_down_market"]))
+    else:
+        add("Fundamentals agree", fund is not None and fund <= G["short_max_fund"],
+            "score %s (a short needs %d or less)" % ("n/a" if fund is None else fund, G["short_max_fund"]))
+        add("Market agrees", nifty_trend != "up" and rs <= G["rs_short_max"],
+            "Nifty trend %s; stronger than %d%% of stocks (a short needs a Nifty not rising and %d%% or less)" % (
+                nifty_trend or "?", rs, G["rs_short_max"]))
+    add("Liquid", (r.get("turnover_cr") or 0) >= G["min_turnover_cr"],
+        "Rs %s cr traded a day (needs %s cr+)" % (r.get("turnover_cr"), G["min_turnover_cr"]))
+    add("Reward:risk", p["rr"] >= G["min_rr"], "%.1f (needs %.1f+)" % (p["rr"], G["min_rr"]))
+    return out, all(c["ok"] for c in out)
 
 
 def up(x):
@@ -244,6 +292,16 @@ def series(bars):
     S["piv_hi"] = [j for j in range(PIVOT, len(h) - PIVOT) if h[j] == max(h[j - PIVOT:j + PIVOT + 1])]
     S["piv_lo"] = [j for j in range(PIVOT, len(l) - PIVOT) if l[j] == min(l[j - PIVOT:j + PIVOT + 1])]
     return S
+
+
+def hv20(S):
+    """Realised volatility of the last 20 sessions, % a year (to compare with an option's IV)."""
+    c = S["c"][-21:]
+    rets = [math.log(c[j] / c[j - 1]) for j in range(1, len(c))]
+    if len(rets) < 10:
+        return None
+    m = sum(rets) / len(rets)
+    return round(math.sqrt(sum((x - m) ** 2 for x in rets) / (len(rets) - 1)) * math.sqrt(252) * 100, 1)
 
 
 def levels_at(S, i):
@@ -674,6 +732,11 @@ def update_record(rec, day, o, h, l, c, cfg):
                    result_pct=round(((x - fill) if long_ else (fill - x)) / fill * 100, 2))
 
 
+def page_list(rows, show):
+    """Every plan that cleared the gate, then the top of the rest as a watchlist."""
+    return [r for r in rows if r.get("qualified")] + [r for r in rows if not r.get("qualified")][:2 * show]
+
+
 def add_plan_record(records, sym, name, p, session, score, price, prev_close=None):
     """One record per stock and signal session; False if it is already there."""
     if any(r["symbol"] == sym and r["created"] == session for r in records):
@@ -842,7 +905,8 @@ def stage_eod(now_utc, force=False):
              "sma50": round(S["sma50"][i], 2), "sma200": round(S["sma200"][i], 2),
              "support": round(sup[0], 2) if sup else None, "resistance": round(res[0], 2) if res else None,
              "rs_pct": round(rs_pct.get(sym, 0.5) * 100), "fund": fscore.get(sym), "fund_notes": fund_notes(f),
-             "fo_lot": fo.get(sym), "turnover_cr": round(sorted(S["turn"][-20:])[10] / 1e7, 1)}
+             "fo_lot": fo.get(sym), "turnover_cr": round(sorted(S["turn"][-20:])[10] / 1e7, 1),
+             "hv20": hv20(S)}
         if p and "entry" in p:
             r["plan"] = p
         return r
@@ -886,21 +950,38 @@ def stage_eod(now_utc, force=False):
         bots.append(r)
     bots.sort(key=lambda x: (-x["score"], -x["turnover_cr"]))
 
-    # 7. the shown ones get the full numbers: 10,000 replays, the rule's history, size, news
-    show = cfg["show"]
-    shown = bull[:show] + bear[:show] + bots[:show]
+    # 7. full numbers (10,000 replays, the rule's own history) for the top of each list and for every
+    # plan that might clear the gate; then the gate, which decides what is recommended
+    show, G = cfg["show"], cfg["gate"]
+
+    def plan_of(r):
+        return r.get("plan") or (r.get("bottom") or {}).get("plan")
+
+    def maybe(r):                                     # cheap pre-check on the 2,000-replay numbers
+        p = plan_of(r)
+        return (p and (r.get("turnover_cr") or 0) >= G["min_turnover_cr"] and p["rr"] >= G["min_rr"]
+                and p["odds"]["avg_R"] >= G["min_avg_r"] - 0.1 and p["odds"]["p_target"] >= G["min_p_target"] - 0.05)
+    shown, seen = [], set()
+    for r in bull[:show] + bear[:show] + bots[:show] + [r for r in bull + bear + bots if maybe(r)]:
+        if id(r) not in seen:
+            seen.add(id(r))
+            shown.append(r)
     for r in shown:
         S = S_all[r["symbol"]]
-        p = r.get("plan") or (r.get("bottom") or {}).get("plan")
+        p = plan_of(r)
         if not p:
             continue
         p["odds"] = simulate(day_moves(S), p, cfg["horizon_days"], cfg["replays"], rnd_seed)
         p["history"] = history(S, p["kind"], cfg, r["symbol"] in fo)
         p["est_days"] = p["odds"]["days_to_target"]
+        r["checks"], r["qualified"] = gate(r, p, nifty.get("trend"), cfg)
         if p["side"] == "long":
             r["size"] = size_long(p, r["symbol"], cfg, sk)
         else:
             r["lot"] = lot_info(p, r.get("fo_lot"))
+    n_q = {k: sum(1 for r in lst if r.get("qualified")) for k, lst in (("bull", bull), ("bear", bear), ("bottoms", bots))}
+    log("gate: %d bullish, %d breakdowns, %d bottoms turning up clear every check (of %d checked)" % (
+        n_q["bull"], n_q["bear"], n_q["bottoms"], sum(1 for r in shown if plan_of(r))))
     if data.ok:
         try:
             nws = upstox.news([data.inst["eq"][r["symbol"]]["key"] for r in shown if r["symbol"] in data.inst["eq"]])
@@ -923,9 +1004,9 @@ def stage_eod(now_utc, force=False):
         if S and S["d"][-1] == session:
             update_record(rec, datetime.date.fromisoformat(session), S["o"][-1], S["h"][-1], S["l"][-1], S["c"][-1], cfg)
             rec["last_price"], rec["last_close"] = S["c"][-1], S["c"][-2]
-    for r in shown:
+    for r in shown:                                   # only what is recommended is tracked
         p = r.get("plan") or (r.get("bottom") or {}).get("plan")
-        if p:
+        if p and r.get("qualified"):
             add_plan_record(records, r["symbol"], r["name"], p, session, r["score"], r["price"], r["prev_close"])
     write_json(LOG, records)
     status = {(rec["symbol"], rec["created"]): rec for rec in records}
@@ -959,8 +1040,9 @@ def stage_eod(now_utc, force=False):
     # 10. options: the call or put strikes for each F&O stock with a plan (one chain request each)
     fo_picks, opts = [], None
     if data.ok:
-        fo_picks = options.fo_plans([(bull, "bullish"), (bear, "breakdown"),
-                                     ([b for b in bots if (b.get("bottom") or {}).get("plan")], "bottom turning up")],
+        fo_picks = options.fo_plans([([r for r in bull if r.get("qualified")], "bullish"),
+                                     ([r for r in bear if r.get("qualified")], "breakdown"),
+                                     ([b for b in bots if b.get("qualified")], "bottom turning up")],
                                     data.inst)
         opts = options.screen(fo_picks, data.inst, now_utc, cfg, errors)
         log("options: %d call and %d put underlyings from %d F&O plans" % (len(opts["calls"]), len(opts["puts"]), len(fo_picks)))
@@ -975,7 +1057,7 @@ def stage_eod(now_utc, force=False):
                       "fo": sum(1 for s in liquid if s in fo), "with_fundamentals": len(fscore),
                       "bull": len(bull), "bear": len(bear), "bottoms": len(bots)},
            "sources": {"quotes": qsrc, "bars": data.bars_from, "upstox": data.status},
-           "nifty": nifty, "bull": bull[:2 * show], "bear": bear[:2 * show], "bottoms": bots[:2 * show],
+           "nifty": nifty, "bull": page_list(bull, show), "bear": page_list(bear, show), "bottoms": page_list(bots, show),
            "record": {"stats": record_stats(records), "rows": sorted(records, key=lambda r: r["created"], reverse=True)[:60]},
            "live": None, "config": cfg, "errors": list(dict.fromkeys(errors))[:30],
            "seconds": round(time.time() - t0)}
@@ -1080,9 +1162,9 @@ def stage_options(now_utc):
     if not data.ok:
         log("options: needs the Upstox token (%s)" % data.status)
         return page
-    picks = page.get("fo_plans") or options.fo_plans(
-        [(page.get("bull") or [], "bullish"), (page.get("bear") or [], "breakdown"),
-         ([b for b in page.get("bottoms") or [] if (b.get("bottom") or {}).get("plan")], "bottom turning up")], data.inst)
+    picks = options.fo_plans([([r for r in page.get(k) or [] if r.get("qualified")], label)
+                              for k, label in (("bull", "bullish"), ("bear", "breakdown"), ("bottoms", "bottom turning up"))],
+                             data.inst)
     for pk in picks:                                  # plans saved before the record existed carry no session
         if not pk.get("session"):
             pk["session"] = page.get("session")

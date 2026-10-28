@@ -19,7 +19,7 @@ ENV_KEY = "GOOGLE_SERVICE_ACCOUNT_JSON"
 ENV_SHEET = "SHEET_ID"
 API = "https://sheets.googleapis.com/v4/spreadsheets/"
 
-TRADE_HEAD = ["Rank", "Symbol", "Company", "Setup", "Status", "Last close", "Prev close", "Change %",
+TRADE_HEAD = ["Recommended", "Failed checks", "Rank", "Symbol", "Company", "Setup", "Status", "Last close", "Prev close", "Change %",
               "Live (Google)", "Entry (trigger)", "Stop loss", "Target", "Reward:risk", "Est. days",
               "Target first %", "Stop first %", "Avg R (replays)", "Rule history", "Tech score",
               "Fund score", "Score", "Size / lot", "If target / if stop", "Why", "Fundamentals", "Chart", "Signal date"]
@@ -35,6 +35,10 @@ def _chart(sym):
 
 def _pct(x):
     return "" if x is None else round(100 * x)
+
+
+def failed(checks):
+    return "; ".join("%s: %s" % (c["name"], c["detail"]) for c in checks or [] if not c["ok"])
 
 
 def trade_rows(rows):
@@ -54,7 +58,8 @@ def trade_rows(rows):
             size = money = ""
         hist = ("%d fired: %d target, %d stop, %d time" % (h["fired"], h["target"], h["stop"], h["time"])
                 if h.get("fired") else "")
-        out.append([r.get("rank"), r["symbol"].replace(".NS", ""), r.get("name"), p.get("kind", ""), r.get("status", ""),
+        out.append(["yes" if r.get("qualified") else "watchlist", failed(r.get("checks")),
+                    r.get("rank"), r["symbol"].replace(".NS", ""), r.get("name"), p.get("kind", ""), r.get("status", ""),
                     r.get("price"), r.get("prev_close"), r.get("chg_pct"), _lv(r["symbol"]), p.get("entry"),
                     p.get("stop"), p.get("target"), p.get("rr"), p.get("est_days"), _pct(o.get("p_target")),
                     _pct(o.get("p_stop")), o.get("avg_R"), hist, r.get("tech"), r.get("fund"), r.get("score"),
@@ -64,14 +69,15 @@ def trade_rows(rows):
 
 
 def bottom_rows(rows):
-    out = [["Rank", "Symbol", "Company", "State", "Last close", "Change %", "Live (Google)", "Support",
+    out = [["Recommended", "Failed checks", "Rank", "Symbol", "Company", "State", "Last close", "Change %", "Live (Google)", "Support",
             "Touches", "Buy zone", "Breaks below (close)", "Off 52w high %", "RSI", "RSI divergence",
             "Entry if turning up", "Stop", "Target", "Fund score", "Quality", "Score", "Fundamentals", "Chart",
             "Signal date"]]
     for r in rows:
         b = r.get("bottom") or {}
         p = b.get("plan") or {}
-        out.append([r.get("rank"), r["symbol"].replace(".NS", ""), r.get("name"), b.get("kind"), r.get("price"),
+        out.append(["yes" if r.get("qualified") else ("watch zone" if not p else "watchlist"), failed(r.get("checks")),
+                    r.get("rank"), r["symbol"].replace(".NS", ""), r.get("name"), b.get("kind"), r.get("price"),
                     r.get("chg_pct"), _lv(r["symbol"]), b.get("support"), b.get("touches"),
                     "%s - %s" % tuple(b["zone"]) if b.get("zone") else "", b.get("invalidation"),
                     b.get("drawdown_pct"), b.get("rsi"), "yes" if b.get("divergence") else "", p.get("entry"),
@@ -118,7 +124,7 @@ def options_rows(opts):
     out = [["Rules screen, not advice. Expiry 14+ days away and 7+ days after the plan's estimated exit; delta 0.30-0.75; "
             "spread 3% or less; OI 25+ lots. 'At target / at stop' = one lot's value then, minus the premium (Black-Scholes, "
             "IV unchanged)."], [],
-           ["Symbol", "Type", "Plan", "Spot", "Expiry", "Days left", "Lot", "PCR", "Most call OI", "Most put OI",
+           ["Recommended", "Failed checks", "Symbol", "Type", "Plan", "Spot", "Expiry", "Days left", "Lot", "PCR", "Most call OI", "Most put OI",
             "Watch range", "Best", "Strike", "Price a share", "Value of 1 lot (price x lot)", "Delta", "Theta/lot/day", "Vega/lot", "IV %", "OI lots",
             "OI chg %", "Build-up", "Gain at target/lot", "Loss at stop/lot", "R:R", "Break-even", "Passes filters",
             "Notes"]]
@@ -127,11 +133,13 @@ def options_rows(opts):
         plan = "%s: entry %s, stop %s, target %s" % (p.get("kind"), p.get("entry"), p.get("stop"), p.get("target"))
         watch = "%s - %s" % tuple(o["watch"]) if o.get("watch") else ""
         for s in o.get("strikes") or []:
-            out.append([o["symbol"].replace(".NS", ""), o["type"], plan, o.get("spot"), o["expiry"], o["dte"], o["lot"],
+            out.append(["yes" if o.get("qualified") else "no", failed(o.get("checks")),
+                        o["symbol"].replace(".NS", ""), o["type"], plan, o.get("spot"), o["expiry"], o["dte"], o["lot"],
                         o.get("pcr"), o.get("call_wall"), o.get("put_wall"), watch,
                         "best" if s["strike"] == o.get("best") else "", s["strike"], s["ask"], s["premium_lot"], s["delta"],
                         s["theta_lot_day"], s["vega_lot"], s["iv"], s["oi_lots"], s.get("oi_chg_pct"), s.get("buildup"),
-                        s["gain_lot"], -s["loss_lot"], s["rr"], s["breakeven"], "yes" if s["ok"] else ", ".join(s["why_not"]),
+                        s["gain_lot"], -s["loss_lot"], s["rr"], s["breakeven"],
+                        "yes" if not s.get("fails") else "; ".join(s["fails"]),
                         "; ".join(o.get("notes") or [])])
     return out
 

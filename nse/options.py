@@ -35,6 +35,9 @@ DELTA = (0.30, 0.75)
 MAX_SPREAD = 0.03
 MIN_LOTS = 25
 MIN_OI_SHARE = 0.10
+MIN_RR = 2.0          # gain at the target over the loss at the stop, per lot
+IV_MAX = 1.25         # IV at most this many times the stock's realised 20-day volatility
+MAX_DECAY = 0.25      # at most a quarter of the premium lost if the stock stands still to the estimated day
 
 
 def ncdf(x):
@@ -99,7 +102,8 @@ def screen_one(row, plan, chain, expiry, dte, lot, today, cfg):
                 "plan": {k: plan.get(k) for k in ("kind", "entry", "stop", "target", "rr", "est_days")},
                 "p_target": (plan.get("odds") or {}).get("p_target"), "spot": spot, "expiry": expiry, "dte": dte,
                 "lot": lot, "pcr": None, "call_wall": None, "put_wall": None, "strikes": [], "best": None,
-                "watch": None, "notes": [void], "void": True}
+                "watch": None, "notes": [void], "void": True, "qualified": False,
+                "checks": [{"name": "Plan still live", "ok": False, "detail": void}]}
     est = plan.get("est_days") or 10
     t_hit = calendar_days(est)
     t_stop = calendar_days(max(est // 2, 1))
@@ -134,14 +138,44 @@ def screen_one(row, plan, chain, expiry, dte, lot, today, cfg):
             "flat_lot": round(v_f * lot), "gain_lot": round(gain), "loss_lot": round(loss),
             "rr": round(gain / loss, 2) if loss > 0 else None, "breakeven": round(be, 2),
             "be_move_pct": round((be / spot - 1) * 100, 2), "ok": not why_not, "why_not": why_not})
+    hv = row.get("hv20")
+
+    def fails(x):
+        """Why a strike is not one to buy: liquidity, then the four option checks."""
+        f = list(x["why_not"])
+        if not x["rr"] or x["rr"] < MIN_RR:
+            f.append("reward:risk %s, needs %.1f+" % (x["rr"], MIN_RR))
+        if not hv:
+            f.append("no realised volatility to compare the IV with")
+        elif x["iv"] > IV_MAX * hv:
+            f.append("IV %.0f%% is over %.2fx the stock's realised %.0f%%" % (x["iv"], IV_MAX, hv))
+        if x["flat_lot"] < (1 - MAX_DECAY) * x["premium_lot"]:
+            f.append("loses %d%% to time decay by day %d if the stock stands still (max %d%%)" % (
+                round(100 * (1 - x["flat_lot"] / x["premium_lot"])), est, round(100 * MAX_DECAY)))
+        if (call and x["breakeven"] > plan["target"]) or (not call and x["breakeven"] < plan["target"]):
+            f.append("break-even %s is beyond the target %s" % (x["breakeven"], plan["target"]))
+        return f
+    for x in strikes:
+        x["fails"] = fails(x)
+    passing = [x for x in strikes if not x["fails"]]
     good = [x for x in strikes if x["ok"] and x["rr"] and x["rr"] > 0 and x["gain_lot"] > 0]
-    best = max(good, key=lambda x: (x["rr"], -abs(abs(x["delta"]) - 0.5))) if good else None
-    watch = [x["strike"] for x in good if x["rr"] >= 1.5] or ([best["strike"]] if best else [])
+    pick = lambda xs: max(xs, key=lambda x: (x["rr"], -abs(abs(x["delta"]) - 0.5)))  # noqa: E731
+    best = pick(passing) if passing else (pick(good) if good else None)
+    watch = [x["strike"] for x in passing]
     notes = []
+    wall = None
     if call and wall_c and spot < wall_c < plan["target"]:
-        notes.append("most call OI (writers) sits at %s, between the price and the target: it may cap the rise" % wall_c)
+        wall = "most call OI (writers) sits at %s, between the price and the target: it may cap the rise" % wall_c
     if not call and wall_p and plan["target"] < wall_p < spot:
-        notes.append("most put OI (writers) sits at %s, between the price and the target: it may hold the fall" % wall_p)
+        wall = "most put OI (writers) sits at %s, between the price and the target: it may hold the fall" % wall_p
+    checks = [{"name": "Stock plan clears every swing check", "ok": bool(row.get("qualified")),
+               "detail": "see the stock's card" if row.get("qualified") else "the stock plan is watchlist only"},
+              {"name": "A strike clears every option check", "ok": bool(passing),
+               "detail": ("%d of %d strikes: %s" % (len(passing), len(strikes), ", ".join(k_(x["strike"]) for x in passing)))
+               if passing else ("closest, %s: %s" % (k_(best["strike"]), "; ".join(best["fails"])) if best else "no liquid strike")},
+              {"name": "No OI wall in the way", "ok": wall is None, "detail": wall or "the biggest OI walls are not between the price and the target"}]
+    if wall:
+        notes.append(wall)
     max_loss = cfg.get("max_loss_per_trade")
     if best and max_loss and best["loss_lot"] > max_loss:
         notes.append("one lot of the best strike loses about Rs %s at the stop, over your Rs %s a trade"
@@ -153,7 +187,12 @@ def screen_one(row, plan, chain, expiry, dte, lot, today, cfg):
             "p_target": (plan.get("odds") or {}).get("p_target"), "spot": spot, "expiry": expiry, "dte": dte,
             "lot": lot, "pcr": pcr, "call_wall": wall_c, "put_wall": wall_p,
             "strikes": sorted(strikes, key=lambda x: x["strike"]), "best": best["strike"] if best else None,
-            "watch": [min(watch), max(watch)] if watch else None, "notes": notes}
+            "watch": [min(watch), max(watch)] if watch else None, "notes": notes, "hv20": hv,
+            "checks": checks, "qualified": all(c["ok"] for c in checks)}
+
+
+def k_(x):
+    return str(int(x)) if x is not None and float(x).is_integer() else str(x)
 
 
 def fo_plans(lists, inst, limit=30):
@@ -168,7 +207,8 @@ def fo_plans(lists, inst, limit=30):
                 p = dict(plan)
                 p.setdefault("est_days", (p.get("odds") or {}).get("days_to_target"))
                 out.append({"symbol": r["symbol"], "name": r.get("name"), "price": r.get("price"), "rank": r.get("rank"),
-                            "score": r.get("score"), "_list": label, "plan": p, "session": r.get("session")})
+                            "score": r.get("score"), "_list": label, "plan": p, "session": r.get("session"),
+                            "hv20": r.get("hv20"), "qualified": r.get("qualified")})
     return sorted(out, key=lambda x: -(x["score"] or 0))[:limit]
 
 
@@ -196,10 +236,11 @@ def screen(picks, inst, now_utc, cfg, errors):
         res = screen_one(r, plan, chain, expiry, dte, fo[r["symbol"]], today, cfg)
         (out["calls"] if res["type"] == "CE" else out["puts"]).append(res)
     for k in ("calls", "puts"):
-        out[k].sort(key=lambda x: (bool(x.get("void")), x["best"] is None, -(x["score"] or 0)))
+        out[k].sort(key=lambda x: (not x.get("qualified"), bool(x.get("void")), x["best"] is None, -(x["score"] or 0)))
     out.update(created_ist=market.to_ist(now_utc).strftime("%Y-%m-%d %H:%M"),
                rules={"min_dte": MIN_DTE, "buffer": BUFFER, "delta": DELTA, "max_spread_pct": 100 * MAX_SPREAD,
-                      "min_lots": MIN_LOTS, "rate_pct": 100 * RATE})
+                      "min_lots": MIN_LOTS, "rate_pct": 100 * RATE, "min_rr": MIN_RR, "iv_max": IV_MAX,
+                      "max_decay_pct": 100 * MAX_DECAY})
     return out
 
 
@@ -246,8 +287,8 @@ def track(rows, opts, stock_records, inst, now_utc, errors):
     eq = inst.get("eq") or {}
     have = {r["id"] for r in rows}
     for o in ((opts or {}).get("calls") or []) + ((opts or {}).get("puts") or []):
-        if o.get("void") or not o.get("best") or not o.get("session"):
-            continue
+        if o.get("void") or not o.get("qualified") or not o.get("best") or not o.get("session"):
+            continue                                  # only what clears every check is recommended, and tracked
         rid = "%s-%s-%s" % (o["session"], o["symbol"], o["type"])
         if rid in have:
             continue
@@ -260,6 +301,7 @@ def track(rows, opts, stock_records, inst, now_utc, errors):
                      "last": s["ask"], "last_ist": stamp})
         have.add(rid)
     stocks = {r["id"]: r for r in stock_records}
+    cards = {o["symbol"]: o for o in ((opts or {}).get("calls") or []) + ((opts or {}).get("puts") or [])}
     for r in rows:
         if r["status"] not in OPEN:
             continue
@@ -286,6 +328,14 @@ def track(rows, opts, stock_records, inst, now_utc, errors):
         r.update(last=_sell(q), last_ist=stamp, last_spot=spot, last_iv=q.get("iv"), last_delta=q.get("delta"))
         if r["status"] == "waiting for entry":
             if r["stock_status"] == "entered":
+                card = cards.get(r["symbol"])
+                if opts and not (card and card.get("qualified") and card.get("best") == r["strike"]):
+                    # the stock triggered, but this strike no longer clears every check (IV jumped, a gap...)
+                    why = ([c["detail"] for c in card.get("checks", []) if not c["ok"]] if card else ["no option card now"])
+                    if card and card.get("best") != r["strike"]:
+                        why.append("the best strike is now %s" % card.get("best"))
+                    r.update(status="skipped at entry", closed_ist=stamp, skip_reason="; ".join(why)[:300])
+                    continue
                 r.update(status="entered", fill=_buy(q), entered_ist=stamp)
             elif r["stock_status"] in ("target hit", "stop hit") or str(r["stock_status"]).startswith("closed at day"):
                 # the stock plan opened and closed between two updates: no fair option price to show
@@ -315,7 +365,8 @@ def summary(rows):
     done = [r for r in rows if r.get("result_lot") is not None]
     opened = [r for r in rows if r["status"] == "entered"]
     st = {"tracked": len(rows), "open": sum(1 for r in rows if r["status"] in OPEN), "entered_now": len(opened),
-          "closed": len(done), "missed": sum(1 for r in rows if r["status"] in ("entry missed", "not entered before expiry")),
+          "closed": len(done), "missed": sum(1 for r in rows if r["status"] in ("entry missed", "not entered before expiry", "skipped at entry",
+                                                         "stock plan opened and closed between updates")),
           "wins": sum(1 for r in done if r["result_lot"] > 0),
           "total_lot": sum(r["result_lot"] for r in done), "open_mark_lot": sum(r.get("mark_lot") or 0 for r in opened)}
     st["avg_pct"] = round(sum(r["result_pct"] or 0 for r in done) / len(done), 1) if done else None
