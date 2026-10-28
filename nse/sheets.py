@@ -1,0 +1,151 @@
+"""The swing board in a Google Sheet, rewritten on every run.
+
+Needs two GitHub secrets (nothing else changes without them; the run just skips the sheet):
+  GOOGLE_SERVICE_ACCOUNT_JSON   the JSON key of a Google Cloud service account
+  SHEET_ID                      the sheet's id (the long part of its URL between /d/ and /edit)
+and the sheet shared with the service account's e-mail as an Editor.
+
+Tabs (created if missing): Bullish, Breakdowns (F&O), Bottoms, Track record, Live, Read me.
+Each has a "Live (Google)" column, =GOOGLEFINANCE("NSE:SYMBOL"), so the price keeps moving
+between runs (Google's quotes can lag up to 20 minutes).
+
+Needs the google-auth and requests packages (the workflow installs them).
+"""
+
+import json
+import os
+
+ENV_KEY = "GOOGLE_SERVICE_ACCOUNT_JSON"
+ENV_SHEET = "SHEET_ID"
+API = "https://sheets.googleapis.com/v4/spreadsheets/"
+
+TRADE_HEAD = ["Rank", "Symbol", "Company", "Setup", "Status", "Last close", "Prev close", "Change %",
+              "Live (Google)", "Entry (trigger)", "Stop loss", "Target", "Reward:risk", "Est. days",
+              "Target first %", "Stop first %", "Avg R (replays)", "Rule history", "Tech score",
+              "Fund score", "Score", "Size / lot", "If target / if stop", "Why", "Fundamentals", "Chart", "Signal date"]
+
+
+def _lv(sym):
+    return '=IFERROR(GOOGLEFINANCE("NSE:%s"),"")' % sym.replace(".NS", "")
+
+
+def _chart(sym):
+    return '=HYPERLINK("https://www.tradingview.com/chart/?symbol=NSE:%s","chart")' % sym.replace(".NS", "")
+
+
+def _pct(x):
+    return "" if x is None else round(100 * x)
+
+
+def trade_rows(rows):
+    out = [TRADE_HEAD]
+    for r in rows:
+        p = r.get("plan") or (r.get("bottom") or {}).get("plan") or {}
+        o, h = p.get("odds") or {}, p.get("history") or {}
+        if r.get("size"):
+            sz = r["size"]
+            size = "%s shares (%s)" % (sz.get("qty"), "Rs %s" % format(round(sz.get("cost") or 0), ",")) if sz.get("qty") else sz.get("refusal")
+            money = "+%s / -%s" % (round(sz.get("reward") or 0), round(sz.get("max_loss") or 0)) if sz.get("qty") else ""
+        elif r.get("lot"):
+            lt = r["lot"]
+            size = "lot %s (Rs %s)" % (lt["lot"], format(lt["notional"], ","))
+            money = "move per lot: %s / %s" % (lt["move_to_target"], lt["move_to_stop"])
+        else:
+            size = money = ""
+        hist = ("%d fired: %d target, %d stop, %d time" % (h["fired"], h["target"], h["stop"], h["time"])
+                if h.get("fired") else "")
+        out.append([r.get("rank"), r["symbol"].replace(".NS", ""), r.get("name"), p.get("kind", ""), r.get("status", ""),
+                    r.get("price"), r.get("prev_close"), r.get("chg_pct"), _lv(r["symbol"]), p.get("entry"),
+                    p.get("stop"), p.get("target"), p.get("rr"), p.get("est_days"), _pct(o.get("p_target")),
+                    _pct(o.get("p_stop")), o.get("avg_R"), hist, r.get("tech"), r.get("fund"), r.get("score"),
+                    size, money, "; ".join(p.get("why") or []), "; ".join(r.get("fund_notes") or []),
+                    _chart(r["symbol"]), r.get("session")])
+    return out
+
+
+def bottom_rows(rows):
+    out = [["Rank", "Symbol", "Company", "State", "Last close", "Change %", "Live (Google)", "Support",
+            "Touches", "Buy zone", "Breaks below (close)", "Off 52w high %", "RSI", "RSI divergence",
+            "Entry if turning up", "Stop", "Target", "Fund score", "Quality", "Score", "Fundamentals", "Chart",
+            "Signal date"]]
+    for r in rows:
+        b = r.get("bottom") or {}
+        p = b.get("plan") or {}
+        out.append([r.get("rank"), r["symbol"].replace(".NS", ""), r.get("name"), b.get("kind"), r.get("price"),
+                    r.get("chg_pct"), _lv(r["symbol"]), b.get("support"), b.get("touches"),
+                    "%s - %s" % tuple(b["zone"]) if b.get("zone") else "", b.get("invalidation"),
+                    b.get("drawdown_pct"), b.get("rsi"), "yes" if b.get("divergence") else "", p.get("entry"),
+                    p.get("stop"), p.get("target"), r.get("fund"), "yes" if r.get("quality") else "", r.get("score"),
+                    "; ".join(r.get("fund_notes") or []), _chart(r["symbol"]), r.get("session")])
+    return out
+
+
+def record_rows(record):
+    st = record.get("stats") or {}
+    out = [["Track record", "tracked %s, open %s, closed %s (target %s, stop %s), entries missed %s, average %sR, "
+                            "win rate %s" % (st.get("tracked"), st.get("open"), st.get("closed"), st.get("targets"),
+                                             st.get("stops"), st.get("missed"), st.get("avg_R"),
+                                             "-" if st.get("win_rate") is None else "%d%%" % round(100 * st["win_rate"]))],
+           [],
+           ["Signal date", "Symbol", "Company", "Side", "Setup", "Status", "Entry", "Stop", "Target", "Est. days",
+            "Target first %", "Price at signal", "Last close", "Current price", "Live (Google)", "Entered", "Closed",
+            "Exit", "Result R", "Result %"]]
+    for r in record.get("rows") or []:
+        out.append([r["created"], r["symbol"].replace(".NS", ""), r.get("name"), r["side"], r["kind"], r["status"],
+                    r["entry"], r["stop"], r["target"], r.get("est_days"), _pct(r.get("p_target")),
+                    r.get("price_at_signal"), r.get("last_close"), r.get("last_price"), _lv(r["symbol"]),
+                    r.get("entered", ""), r.get("closed", ""), r.get("exit", ""), r.get("result_R", ""),
+                    r.get("result_pct", "")])
+    return out
+
+
+def live_rows(doc):
+    live = (doc.get("live") or {})
+    out = [["Updated", live.get("created_ist") or doc.get("created_ist"), "in session" if live.get("in_session") else "market closed"], []]
+    for title, key in (("Breaking out now (confirm at the close)", "breakouts"),
+                       ("Breaking down now, F&O (confirm at the close)", "breakdowns"),
+                       ("In a bottom's buy zone", "in_zone")):
+        out.append([title])
+        out.append(["Symbol", "Price", "Change %", "Volume pace (x usual)", "Level / zone", "Live (Google)"])
+        for m in (live.get("moves") or {}).get(key) or []:
+            lvl = m.get("level") if "level" in m else "%s - %s" % tuple(m["zone"])
+            out.append([m["symbol"].replace(".NS", ""), m["price"], m["chg_pct"], m["volume_pace"], lvl, _lv(m["symbol"])])
+        out.append([])
+    return out
+
+
+README = [["NSE swing board"],
+          ["Rules screen, not advice. Entries are triggers (above the day's high; below its low for a breakdown), "
+           "valid 3 sessions. Stops sit where the setup is proven wrong; targets at the next level 1.5R+ away, else 2R."],
+          ["Odds: 10,000 replays of up to 15 sessions resampled from the stock's own last year of days, and the "
+           "same rule on its own past. Not a forecast; a gap can jump any stop."],
+          ["Breakdowns list F&O stocks only (the ones with stock options). Bottoms: 20%+ off the 52-week high, "
+           "on support; 'turning up' once it closes above its 10-day high and 20-day EMA."],
+          ["Live (Google) uses GOOGLEFINANCE, which can lag up to 20 minutes."]]
+
+
+def write(doc):
+    key, sheet = os.environ.get(ENV_KEY), os.environ.get(ENV_SHEET)
+    if not key or not sheet:
+        return "skipped (%s and %s are not both set)" % (ENV_KEY, ENV_SHEET)
+    from google.oauth2 import service_account
+    from google.auth.transport.requests import AuthorizedSession
+    creds = service_account.Credentials.from_service_account_info(
+        json.loads(key), scopes=["https://www.googleapis.com/auth/spreadsheets"])
+    s = AuthorizedSession(creds)
+    base = API + sheet.strip()
+    tabs = {"Bullish": trade_rows(doc.get("bull") or []), "Breakdowns (F&O)": trade_rows(doc.get("bear") or []),
+            "Bottoms": bottom_rows(doc.get("bottoms") or []), "Track record": record_rows(doc.get("record") or {}),
+            "Live": live_rows(doc), "Read me": README}
+    meta = s.get(base, params={"fields": "sheets.properties.title"})
+    meta.raise_for_status()
+    have = {x["properties"]["title"] for x in meta.json().get("sheets", [])}
+    add = [{"addSheet": {"properties": {"title": t}}} for t in tabs if t not in have]
+    if add:
+        s.post(base + ":batchUpdate", json={"requests": add}).raise_for_status()
+    s.post(base + "/values:batchClear", json={"ranges": ["'%s'" % t for t in tabs]}).raise_for_status()
+    stamp = "updated %s IST (%s)" % ((doc.get("live") or {}).get("created_ist") or doc.get("created_ist"), doc.get("stage"))
+    data = [{"range": "'%s'!A1" % t, "values": [[stamp]] + [[("" if v is None else v) for v in row] for row in rows]}
+            for t, rows in tabs.items()]
+    s.post(base + "/values:batchUpdate", json={"valueInputOption": "USER_ENTERED", "data": data}).raise_for_status()
+    return "wrote %s" % ", ".join("%s (%d rows)" % (t, len(r) - 1) for t, r in tabs.items())

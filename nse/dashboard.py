@@ -252,12 +252,13 @@ def card(r, basis="last session", show=10):
                chips, trade_block(r.get("trade")), len(r.get("news") or []), news))
 
 
-def render(doc, path):
+def intraday_body(doc):
     cfg = doc.get("config") or {}
-    repo = doc.get("repo") or ""
     show = 10
     rows = (doc.get("shortlist") or [])[:show]
-    if doc.get("stage") == "closed":
+    if not doc:
+        body = '<div class="note">No intraday board yet: it runs at 9:00 and 9:35 IST on trading days.</div>'
+    elif doc.get("stage") == "closed":
         body = '<div class="note">NSE is closed today: %s</div>' % e(doc.get("closed_reason"))
     else:
         sc, nw = doc.get("scan", {}), doc.get("news", {})
@@ -306,13 +307,45 @@ def render(doc, path):
         if doc.get("errors"):
             body += '<details><summary>%d feed problems</summary><ul class="news">%s</ul></details>' % (
                 len(doc["errors"]), "".join("<li>%s</li>" % e(x) for x in doc["errors"]))
+    head = ('<div class="note">Intraday: ranked by how much news a stock got and how much of it traded, not by how good '
+            'a trade it is. Opening-range plans for today only, flat by %s IST; budget %s, max loss %s a trade, %s trades '
+            'a day. The odds replay each stock\'s last 60 days of 5-minute bars, not a forecast.</div>' % (
+                e(cfg.get("flat_by")), rs(cfg.get("budget")), rs(cfg.get("max_loss_per_trade_usd")),
+                e(cfg.get("max_trades_per_day"))) if doc and doc.get("stage") != "closed" else "")
     skills = "".join('<tr><td>%s</td><td class="st-%s">%s</td><td>%s</td></tr>' % (
         e(n), s.split()[0], e(s), e(w)) for n, s, w in SKILL_ROWS)
+    return (head + body + '<h2>The 11 trader skills</h2><div class="card" style="overflow-x:auto"><table><tr><th>Skill'
+            '</th><th>Status</th><th>What it does here</th></tr>%s</table></div>' % skills)
+
+
+def render(doc, path=None):
+    """Kept for morning.py: the whole site, with this intraday board."""
+    render_site(intraday=doc, path=path)
+
+
+def _load(name):
+    try:
+        with open(os.path.join(DOCS, name), encoding="utf-8") as fh:
+            return json.load(fh)
+    except (OSError, ValueError):
+        return None
+
+
+def render_site(intraday=None, swing=None, path=None):
+    """docs/index.html: Swing, Falling market, Track record and Intraday tabs from docs/swing.json
+    and docs/data.json (either can be missing)."""
+    import swing_view
+    intraday = intraday if intraday is not None else (_load("data.json") or {})
+    swing = swing if swing is not None else _load("swing.json")
+    repo = intraday.get("repo") or (swing or {}).get("repo") or _repo()
+    bull, falling, record, top = swing_view.tabs(swing)
+    updated = max(((swing or {}).get("live") or {}).get("created_ist") or "",
+                  (swing or {}).get("created_ist") or "", intraday.get("orb_ist") or intraday.get("created_ist") or "")
     page = """<!doctype html><html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1"><title>NSE Morning Board</title>
-<style>%s</style></head><body><div class="wrap">
-<div class="head"><div><h1>NSE Morning Board</h1><div class="sub">Updated %s IST &middot; budget %s, max loss %s a trade, %s trades a day, flat by %s IST</div></div>
-<div><button id="refresh" type="button">Refresh</button><div id="rstatus" class="rstatus">Rescans every NSE stock and the news (about 2 minutes)</div></div></div>
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>NSE Swing Board</title>
+<style>%s%s</style></head><body><div class="wrap">
+<div class="head"><div><h1>NSE Swing Board</h1><div class="sub">Updated %s IST &middot; swing setups for 3 to 15 trading days, ranked on technicals and fundamentals</div></div>
+<div><button id="refresh" type="button">Refresh</button><div id="rstatus" class="rstatus">Updates prices, entries, stops and targets, and rescans intraday (about 2 minutes)</div></div></div>
 <div id="rsetup" class="card" hidden><b>Let this page start a rescan on GitHub</b>
 <ol><li>Open <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">GitHub &rarr; new fine-grained token</a>.</li>
 <li>Repository access: <b>Only select repositories</b> &rarr; <b>%s</b>.</li>
@@ -323,22 +356,32 @@ def render(doc, path):
 <div class="why">The token is kept only in this browser and sent only to api.github.com. It can start and read runs of this one repository, nothing else.
 <a href="#" id="rforget">Forget the saved token</a>. No token? <a href="https://github.com/%s/actions/workflows/morning.yml" target="_blank" rel="noopener">Run it on GitHub</a>
 (Run workflow &rarr; stage <b>refresh</b>) and reload this page when it finishes.</div></div>
-<div class="note">Ranked by how much news a stock got and how much of it traded, not by how good a trade it is.
-The odds are replays of each stock's own last 60 days, not a forecast: results, news and halts can do what those days never did.
-A stop can fill worse than planned on a gap. Paper trade first. Nothing on this page places an order.</div>
+<div class="note">A rules screen, not advice to buy or sell. Entries are triggers; stops sit where the setup is proven wrong.
+The odds replay each stock's own past, not a forecast: results, news and gaps can do what those days never did. Paper trade first. Nothing here places an order.</div>
 %s
-<h2>The 11 trader skills</h2><div class="card" style="overflow-x:auto"><table><tr><th>Skill</th><th>Status</th><th>What it does here</th></tr>%s</table></div>
-</div><script>%s</script></body></html>""" % (
-        CSS, e(doc.get("created_ist")), rs(cfg.get("budget")), rs(cfg.get("max_loss_per_trade_usd")),
-        e(cfg.get("max_trades_per_day")), e(cfg.get("flat_by")), e(repo.split("/")[-1]), e(repo), body, skills,
-        REFRESH_JS.replace("__REPO__", json.dumps(repo or None)))
+<nav class="tabs" role="tablist"><a href="#swing" data-tab="swing">Swing</a><a href="#falling" data-tab="falling">Falling market</a><a href="#record" data-tab="record">Track record</a><a href="#intraday" data-tab="intraday">Intraday</a></nav>
+<section id="tab-swing" class="tab">%s</section>
+<section id="tab-falling" class="tab" hidden>%s</section>
+<section id="tab-record" class="tab" hidden>%s</section>
+<section id="tab-intraday" class="tab" hidden>%s</section>
+</div><script>%s</script><script>%s</script></body></html>""" % (
+        CSS, swing_view.CSS, e(updated or "-"), e(repo.split("/")[-1]), e(repo), top, bull, falling, record,
+        intraday_body(intraday), REFRESH_JS.replace("__REPO__", json.dumps(repo or None)), swing_view.JS)
+    path = path or os.path.join(DOCS, "index.html")
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8") as fh:
         fh.write(page)
 
 
+def _repo():
+    try:
+        with open(os.path.join(os.path.dirname(DOCS), "config.json"), encoding="utf-8") as fh:
+            return json.load(fh).get("repo") or ""
+    except (OSError, ValueError):
+        return ""
+
+
+DOCS = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "docs")
+
 if __name__ == "__main__":
-    here = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    src = sys.argv[1] if len(sys.argv) > 1 else os.path.join(here, "docs", "data.json")
-    with open(src, encoding="utf-8") as fh:
-        render(json.load(fh), os.path.join(os.path.dirname(src), "index.html"))
+    render_site()

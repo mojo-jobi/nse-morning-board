@@ -1,13 +1,67 @@
-# NSE Morning Board
+# NSE Swing Board
 
-Every NSE trading day this builds a dashboard of the top 10 NSE stocks by **news and volume**.
-For each one it adds a day-trade plan with the reward if the target hits, the loss if the stop
-hits, and the odds of each from replaying that stock's own last 60 days.
+A web page (phone and desktop) of **swing setups** on NSE, 3 to 15 trading days, ranked on
+**technicals and fundamentals**, with a Google Sheet that tracks every plan. The tabs:
 
-It is a rules engine, not advice. The ranking measures attention, not quality. The odds are
-replays, not a forecast. Nothing here places an order.
+- **Swing**: bullish setups on all liquid stocks (breakouts, pullbacks in an uptrend, bounces off
+  support), and what is crossing a level right now during the session.
+- **Falling market**: breakdowns and failed rallies on **F&O stocks only** (the ones with stock
+  options, for puts), and **bottoms**: stocks 20 %+ off their high sitting on support, with a buy
+  zone, the close that would break it, and a plan once the stock turns up.
+- **Track record**: every plan shown, from the day it appears: entry hit or missed, then target,
+  stop or day 15, with the result in R and %.
+- **Intraday**: the original news-and-volume morning board with opening-range plans.
 
-## When it runs (GitHub Actions, weekdays)
+It is a rules screen, not advice. The odds are replays of each stock's own past, not a forecast.
+Nothing here places an order.
+
+## Swing: how a setup is found and planned (`nse/swing.py`)
+
+- **Universe**: all NSE EQ stocks, quoted from Upstox; those at Rs 20+ get 3 years of daily bars;
+  liquid = 20-day median turnover of Rs 5 crore or more (about 800 stocks).
+- **Levels**: a swing high/low is the extreme of the 11 bars around it; swing points within half
+  an ATR cluster into a zone; a zone touched twice or more is support or resistance.
+- **Rules** (on the last completed session): breakout above resistance or the 52-week high on 1.5x
+  volume; pullback to the rising 20-day EMA or 50-day average in an uptrend; bounce off support
+  above the 200-day; mirror images for breakdowns and failed rallies (F&O stocks only).
+- **Plan**: entry is a trigger above the day's high (below its low for a breakdown), valid 3
+  sessions; stop where the setup is proven wrong, at least 1 ATR away; target at the next level
+  1.5R+ away, else 2R. Size: whole shares inside Rs 1,000 risk (trader-budget); F&O lot for breakdowns.
+- **Odds**: 10,000 replays of up to 15 sessions resampled from the stock's own last year of
+  days (a gap through the stop fills at the open), plus the same rule on its own last 2-3 years.
+  Estimated days = the median days to target in the replays that hit it.
+- **Score**: technical (trend, strength against the Nifty 50, volume, replay edge) and
+  fundamental (ROE, ROCE, profit and revenue growth, P/E against its sector, shareholding change,
+  each ranked against the other liquid stocks) at 50/50; breakdowns favour weak fundamentals;
+  bottoms weigh fundamentals 60 %.
+
+## When it runs (GitHub Actions)
+
+| IST | stage | what |
+| --- | ----- | ---- |
+| 9:00 weekdays | `pre` | intraday: news + daily scan + shortlist |
+| 9:35 weekdays | `orb` | intraday: opening range and trade numbers |
+| 9:45 to 15:15, every 30 min | `swing-live` | live prices, entries/stops/targets hit, levels being crossed, buy zones reached |
+| 15:50 weekdays | `swing-eod` | the full swing scan, track record, page and sheet |
+| Saturday 10:00 | `swing-fundamentals` | refresh every liquid stock's fundamentals (Upstox, about 9 minutes) |
+
+The Refresh button runs `refresh`: the intraday board and the swing live update.
+
+## Google Sheet
+
+Each swing run rewrites the tabs Bullish, Breakdowns (F&O), Bottoms, Track record, Live and Read
+me, with a `Live (Google)` column (`GOOGLEFINANCE`, can lag 20 minutes). Setup, once:
+
+1. Google Cloud console: create a project, enable the **Google Sheets API**, create a **service
+   account**, and add a **JSON key** for it (it downloads a .json file).
+2. Make a Google Sheet and **Share** it with the service account's e-mail (in the JSON,
+   `client_email`) as **Editor**.
+3. Add two repository secrets: `GOOGLE_SERVICE_ACCOUNT_JSON` (the whole JSON file) and `SHEET_ID`
+   (the part of the sheet's URL between `/d/` and `/edit`), for example from your own terminal:
+   `gh secret set GOOGLE_SERVICE_ACCOUNT_JSON -R mojo-jobi/nse-morning-board < key.json`.
+   Delete the downloaded key file afterwards.
+
+## Intraday board: when it runs
 
 | IST  | stage | what |
 | ---- | ----- | ---- |
@@ -27,7 +81,11 @@ With live Upstox prices, a refresh reuses the day's saved setups (`trader/setups
 ```bash
 python nse/morning.py pre
 python nse/morning.py orb
-python nse/morning.py refresh     # what the dashboard's Refresh button runs
+python nse/morning.py refresh     # what the dashboard's Refresh button runs (plus swing live)
+python nse/swing.py eod           # the swing scan (after 15:30 it includes today's bar)
+python nse/swing.py live          # prices, entries and exits, levels crossed now
+python nse/swing.py fundamentals  # refresh fundamentals (needs UPSTOX_ANALYTICS_TOKEN)
+python nse/check_upstox.py        # is the Upstox token working?
 python nse/universe.py            # refresh the NSE stock list (the workflow does it on Mondays)
 ```
 

@@ -2,12 +2,15 @@ name: NSE morning board
 
 on:
   schedule:
-    - cron: "30 3 * * 1-5"   # 9:00 IST: news + daily scan + shortlist
-    - cron: "5 4 * * 1-5"    # 9:35 IST: opening range + trade numbers
+    - cron: "30 3 * * 1-5"       # 9:00 IST: intraday news + daily scan + shortlist
+    - cron: "5 4 * * 1-5"        # 9:35 IST: intraday opening range + trade numbers
+    - cron: "15,45 4-9 * * 1-5"  # 9:45 to 15:15 IST, every 30 min: swing prices, entries, exits, levels crossed
+    - cron: "20 10 * * 1-5"      # 15:50 IST: swing end-of-day scan, track record, sheet
+    - cron: "30 4 * * 6"         # Saturday 10:00 IST: refresh every liquid stock's fundamentals
   workflow_dispatch:
     inputs:
       stage:
-        description: "pre, orb, all, refresh (the Refresh button), or check (Upstox token health, no commit)"
+        description: "pre, orb, all, refresh (the Refresh button), swing-eod, swing-live, swing-fundamentals, or check (Upstox token health, no commit)"
         default: "all"
       request:
         description: "id the dashboard uses to find its own run (leave empty)"
@@ -25,7 +28,13 @@ concurrency:
 jobs:
   run:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 40
+    env:
+      # optional: Upstox Analytics Token (read-only). Without it, or if Upstox refuses it, Yahoo is used.
+      UPSTOX_ANALYTICS_TOKEN: ${{ secrets.UPSTOX_ANALYTICS_TOKEN }}
+      # optional: the Google Sheet. Without both, the sheet is skipped.
+      GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+      SHEET_ID: ${{ secrets.SHEET_ID }}
     steps:
       - uses: actions/checkout@v4
 
@@ -36,9 +45,19 @@ jobs:
       - name: Pick the stage
         id: stage
         run: |
-          if [ -n "${{ github.event.inputs.stage }}" ]; then s="${{ github.event.inputs.stage }}";
-          elif [ "${{ github.event.schedule }}" = "30 3 * * 1-5" ]; then s=pre; else s=orb; fi
-          echo "stage=$s" >> "$GITHUB_OUTPUT"
+          case "${{ github.event.schedule }}" in
+            "30 3 * * 1-5") s=pre ;;
+            "5 4 * * 1-5") s=orb ;;
+            "15,45 4-9 * * 1-5") s=swing-live ;;
+            "20 10 * * 1-5") s=swing-eod ;;
+            "30 4 * * 6") s=swing-fundamentals ;;
+            *) s="${{ github.event.inputs.stage }}" ;;
+          esac
+          echo "stage=${s:-all}" >> "$GITHUB_OUTPUT"
+
+      - name: Install the Google Sheets client
+        if: env.SHEET_ID != '' && steps.stage.outputs.stage != 'check'
+        run: pip install --quiet google-auth requests
 
       - name: Refresh the NSE list (Mondays, keeps the old one if NSE refuses)
         if: steps.stage.outputs.stage == 'pre'
@@ -47,16 +66,16 @@ jobs:
 
       - name: Check Upstox
         if: steps.stage.outputs.stage == 'check'
-        env:
-          UPSTOX_ANALYTICS_TOKEN: ${{ secrets.UPSTOX_ANALYTICS_TOKEN }}
         run: python nse/check_upstox.py
 
       - name: Run
         if: steps.stage.outputs.stage != 'check'
-        env:
-          # optional: Upstox Analytics Token (read-only). Without it, or if Upstox refuses it, Yahoo is used.
-          UPSTOX_ANALYTICS_TOKEN: ${{ secrets.UPSTOX_ANALYTICS_TOKEN }}
-        run: python nse/morning.py ${{ steps.stage.outputs.stage }}
+        run: |
+          case "${{ steps.stage.outputs.stage }}" in
+            swing-*) python nse/swing.py "${{ steps.stage.outputs.stage }}" ;;
+            refresh) python nse/morning.py refresh; python nse/swing.py live ;;
+            *) python nse/morning.py "${{ steps.stage.outputs.stage }}" ;;
+          esac
 
       - name: Save the dashboard
         if: steps.stage.outputs.stage != 'check'

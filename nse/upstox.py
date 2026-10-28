@@ -6,9 +6,13 @@ works from GitHub Actions with no static IP. The token comes from the environmen
 (UPSTOX_ANALYTICS_TOKEN, a GitHub Actions secret), never from a file in this repo.
 
 What it gives the board:
-  quotes()      live price, today's volume and yesterday's close, 500 stocks a request
-  chart_text()  today's 5-minute bars plus about 58 past sessions, in the shape of
-                Yahoo's v8 chart JSON, so the trader skills read it unchanged
+  quotes()        live price, today's volume and yesterday's close, 500 stocks a request
+  chart_text()    today's 5-minute bars plus about 58 past sessions, in the shape of
+                  Yahoo's v8 chart JSON, so the trader skills read it unchanged
+  daily_bars()    years of daily bars in one request (the swing scan)
+  fundamentals()  key ratios against the sector, yearly and quarterly results, shareholding
+  news()          each stock's news of the last 7 days, 30 stocks a request
+  instruments()   NSE equities (key, ISIN) and F&O stocks with their lot sizes
 
 Docs (read 2026-10-27): upstox.com/developer/api-documentation/ analytics-token,
 get-full-market-quote, v3/get-intra-day-candle-data, v3/get-historical-candle-data,
@@ -19,6 +23,7 @@ import datetime
 import gzip
 import json
 import os
+import threading
 import time
 import urllib.error
 import urllib.parse
@@ -32,7 +37,9 @@ ENV = "UPSTOX_ANALYTICS_TOKEN"
 BATCH = 500                     # instruments per quotes request (Upstox's maximum)
 WINDOW_DAYS = 28                # 5-minute history: at most one month per request
 HISTORY_WINDOWS = 3             # about 58 sessions, like Yahoo's range=60d
-GAP = 0.05                      # seconds between requests: 20 a second, well under 50
+RATE = 8                        # requests a second, all threads together: 480 a minute, under
+                                # Upstox's 500 a minute for any one API
+NEWS_BATCH = 30                 # instruments per news request (Upstox's maximum)
 
 
 class UpstoxError(Exception):
@@ -47,17 +54,25 @@ def token():
     return (os.environ.get(ENV) or "").strip() or None
 
 
-_last = [0.0]
+_slot = [0.0]
+_lock = threading.Lock()
+
+
+def _pace():
+    """Hand out request slots 1/RATE seconds apart, across threads."""
+    with _lock:
+        now = time.time()
+        _slot[0] = max(_slot[0] + 1.0 / RATE, now)
+        wait = _slot[0] - now
+    if wait > 0:
+        time.sleep(wait)
 
 
 def _get(path, timeout=20):
-    wait = GAP - (time.time() - _last[0])
-    if wait > 0:
-        time.sleep(wait)
     req = urllib.request.Request(API + path, headers={
         "Authorization": "Bearer " + (token() or ""), "Accept": "application/json", "User-Agent": market.UA})
-    for attempt in (0, 1):
-        _last[0] = time.time()
+    for attempt in (0, 1, 2):
+        _pace()
         try:
             with urllib.request.urlopen(req, timeout=timeout) as r:
                 doc = json.loads(r.read().decode("utf-8", "replace"))
@@ -69,8 +84,8 @@ def _get(path, timeout=20):
             if e.code == 401:
                 raise TokenError("Upstox rejected the token (HTTP 401): make a new Analytics Token and update "
                                  "the %s secret" % ENV)
-            if e.code == 429 and attempt == 0:
-                time.sleep(2)
+            if e.code == 429 and attempt < 2:
+                time.sleep(3 * (attempt + 1))
                 continue
             raise UpstoxError("HTTP %d from Upstox for %s: %s" % (e.code, path.split("?")[0], body))
         except urllib.error.URLError as e:
@@ -78,13 +93,32 @@ def _get(path, timeout=20):
     raise UpstoxError("Upstox kept answering 429 for %s" % path.split("?")[0])
 
 
+_instruments = {}
+
+
+def instruments():
+    """Upstox's daily NSE file (no login needed), read once a run:
+    {"eq": {"RELIANCE.NS": {"key", "isin", "name"}}, "fo": {"RELIANCE.NS": lot_size}}.
+    "fo" holds the stocks with F&O contracts, the only ones with stock options."""
+    if not _instruments:
+        req = urllib.request.Request(INSTRUMENTS, headers={"User-Agent": market.UA})
+        with urllib.request.urlopen(req, timeout=60) as r:
+            rows = json.loads(gzip.decompress(r.read()))
+        eq, fo = {}, {}
+        for row in rows:
+            if row.get("segment") == "NSE_EQ" and row.get("instrument_type") == "EQ":
+                eq[row["trading_symbol"] + ".NS"] = {"key": row["instrument_key"], "isin": row.get("isin"),
+                                                     "name": row.get("name")}
+            elif (row.get("segment") == "NSE_FO" and row.get("instrument_type") == "FUT"
+                  and row.get("underlying_type") == "EQUITY"):
+                fo[row["underlying_symbol"] + ".NS"] = row.get("lot_size")
+        _instruments.update(eq=eq, fo=fo)
+    return _instruments
+
+
 def instrument_keys():
-    """{"RELIANCE.NS": "NSE_EQ|INE002A01018"} for NSE equities, from Upstox's daily file (no login needed)."""
-    req = urllib.request.Request(INSTRUMENTS, headers={"User-Agent": market.UA})
-    with urllib.request.urlopen(req, timeout=60) as r:
-        rows = json.loads(gzip.decompress(r.read()))
-    return {row["trading_symbol"] + ".NS": row["instrument_key"] for row in rows
-            if row.get("segment") == "NSE_EQ" and row.get("instrument_type") == "EQ"}
+    """{"RELIANCE.NS": "NSE_EQ|INE002A01018"} for NSE equities."""
+    return {s: v["key"] for s, v in instruments()["eq"].items()}
 
 
 def quotes(symbols, keys):
@@ -143,3 +177,66 @@ def chart_text(sym, key, now_utc, prev_close=None):
     quote["volume"] = [int(bars[t][5] or 0) for t in ts]
     return json.dumps({"chart": {"result": [{"meta": meta, "timestamp": ts, "indicators": {"quote": [quote]}}],
                                  "error": None}})
+
+
+# ---------------------------------------------------------------- swing: daily bars, fundamentals, news
+
+def daily_bars(key, to_date, years=3):
+    """[{"d": "2026-10-27", "o", "h", "l", "c", "v"}] oldest first, through to_date (one request)."""
+    frm = to_date.replace(year=to_date.year - years)
+    rows = _candles("/v3/historical-candle/%s/days/1/%s/%s" % (urllib.parse.quote(key, safe=""),
+                                                              to_date.isoformat(), frm.isoformat()))
+    out = {}
+    for c in rows:
+        if len(c) >= 6 and None not in c[1:5]:
+            out[c[0][:10]] = {"d": c[0][:10], "o": float(c[1]), "h": float(c[2]), "l": float(c[3]),
+                              "c": float(c[4]), "v": int(c[5] or 0)}
+    return [out[d] for d in sorted(out)]
+
+
+def _num(text):
+    """"8.94%" -> 8.94, "1,234.5" -> 1234.5, junk -> None."""
+    try:
+        return float(str(text).replace("%", "").replace(",", "").strip())
+    except ValueError:
+        return None
+
+
+def fundamentals(isin):
+    """Key ratios (company and sector), latest yearly and quarterly results with their change,
+    and shareholding now and its change over about a year; 4 requests."""
+    out = {"isin": isin}
+    for r in _get("/v2/fundamentals/%s/key-ratios" % isin) or []:
+        name = (r.get("name") or "").lower().replace("/", "").replace(" ", "_")   # "P/E" -> "pe"
+        out[name] = _num(r.get("company_value"))
+        out[name + "_sector"] = _num(r.get("sector_value"))
+    for period, tag in (("yearly", "y"), ("quarterly", "q")):
+        inc = _get("/v2/fundamentals/%s/income-statement?time_period=%s" % (isin, period)) or {}
+        for cat in inc.get("income_statement") or []:
+            hist = cat.get("history") or []           # newest first
+            if hist:
+                name = "%s_%s" % (cat.get("category"), tag)
+                out[name] = hist[0].get("value")
+                out[name + "_chg"] = _num(hist[0].get("change"))
+                out[name + "_period"] = hist[0].get("period")
+    for cat in _get("/v2/fundamentals/%s/share-holdings" % isin) or []:
+        vals = [h.get("value") for h in cat.get("history") or []]        # newest first
+        name = "hold_" + (cat.get("category") or "")
+        if vals and vals[0] is not None:
+            out[name] = vals[0]
+            out[name + "_chg"] = round(vals[0] - vals[-1], 2) if vals[-1] is not None else None
+    return out
+
+
+def news(keys, page_size=100):
+    """{instrument_key: [{"title", "summary", "link", "time_ms"}]}, the last 7 days, 30 keys a request."""
+    out = {}
+    keys = list(keys)
+    for i in range(0, len(keys), NEWS_BATCH):
+        part = keys[i:i + NEWS_BATCH]
+        data = _get("/v2/news?category=instrument_keys&page_size=%d&instrument_keys=%s"
+                    % (page_size, ",".join(urllib.parse.quote(k, safe="") for k in part))) or {}
+        for k, items in data.items():
+            out[k] = [{"title": n.get("heading"), "summary": n.get("summary"), "link": n.get("article_link"),
+                       "time_ms": n.get("published_time")} for n in items or []]
+    return out
