@@ -16,8 +16,12 @@ A web page (phone and desktop) of **swing setups** on NSE, 3 to 15 trading days,
   the stock reaches the plan's target or stop (Black-Scholes at the strike's own IV), the
   break-even, the put-call ratio and the OI walls. The strike range to watch is the strikes with a
   reward:risk of 1.5 or more. A screen, not advice: buying options can lose the whole premium.
-- **Track record**: every plan shown, from the day it appears: entry hit or missed, then target,
-  stop or day 15, with the result in R and %.
+- **Track record**: every plan shown (and every F&O plan behind an option card), from the day it
+  appears: entry hit or missed, then target, stop or day 15, with the result in R and %. Below
+  it, the **options record** (`trader/options-log.json`): each option card's best strike, bought at
+  the ask once its stock triggers the entry and sold at the bid when the stock plan hits its target
+  or stop, reaches day 15, or at expiry (intrinsic value); open ones marked to market at the bid.
+  Prices are those of the 30-minute update after the stock's move, so real fills can differ.
 - **Intraday**: the original news-and-volume morning board with opening-range plans.
 
 It is a rules screen, not advice. The odds are replays of each stock's own past, not a forecast.
