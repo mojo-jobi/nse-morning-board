@@ -1,14 +1,14 @@
 {
  "stage": "orb",
  "market": "NSE",
- "created_ist": "2026-10-28 11:37",
+ "created_ist": "2026-10-28 12:49",
  "volume_basis": "today so far",
  "closes_through": "2026-10-27",
  "scan": {
   "universe": 2364,
   "fetched": 2364,
   "failed": 0,
-  "liquid": 735,
+  "liquid": 847,
   "scanned": 421,
   "setups": 178,
   "min_price": 20,
@@ -16,8 +16,8 @@
  },
  "news": {
   "feeds": 12,
-  "headlines": 474,
-  "stocks_named": 114,
+  "headlines": 458,
+  "stocks_named": 97,
   "hours": 24
  },
  "sources": {
@@ -36,17 +36,43 @@
    "symbol": "BAJAJ-AUTO.NS",
    "name": "Bajaj Auto Limited",
    "score": 96,
-   "price": 10562.0,
-   "chg_pct": 1.66,
-   "volume": 683337,
-   "turnover_cr": 721.7,
-   "news_count": 24,
+   "price": 10499.0,
+   "chg_pct": 1.05,
+   "volume": 750642,
+   "turnover_cr": 788.1,
+   "news_count": 32,
    "news_tags": [
     "analyst",
     "earnings",
     "people"
    ],
    "news": [
+    {
+     "title": "Bajaj Auto Hits Record Revenue of ₹25,000 Cr: Can Strong EV Sales Drive Further Growth?",
+     "source": "Trade Brains",
+     "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQU0pEN3VIYURMWi1JUnRiT29mOGpmOWc4SjdTNUMzZjJYckJLZU1kUGdYTGhncjhaVEpvZ3lITXhGZkZYTzlaM1QxWGRQQmp2bGs2SmF0b3A2cUQxZG56NU1BaDJMeXhoN0RmbU1sUkthT1Iwb3pqcjhuMW1KQzJVZHRubFBkbTRqQ2ExX3dtWDJfaW5QcFVETFAtV3ctX1dBRHN2aDY2czl2b24tQkoweUpyWHhIQTROQmtFbV80ZmtEZlFjejlHYl9R?oc=5",
+     "time": "28 Oct 11:54",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "Buy Bajaj Auto; target of Rs 14,300: Anand Rathi",
+     "source": "Moneycontrol.com",
+     "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOSm9mb0lzRHl2X1dtdjUtN2tIcVpRS1gzVXZ3eFRhQkp4b3dKQ3JGY0dVM3dFMnRCc3Jkc1ZveXk4dEhiVHd2eXFBTW1aVTlWVE5POE54OFB4WUFwMnd2b2ZjMWIybnJSOG9JemlzTERtR3Qzd0xGcUdVcm1NbC0zZ2FOei15bWliaFVlVnJwOWhEcUVIcVJ6VXFPMk1ScG5ESFhvY1hSdEQwSU4xd21z0gG0AUFVX3lxTE95QUR1d05LTVdyLXFfd1BjNmZMdnZ2OWpmbFhxU1U3SVhkT1BMWVFIYWRSSDhzeThWeGFuRUhySlZYbmp3My1ZTEJ3QlVpc2U0RnFEVVFlSVdwcjB0b1dBekoxaGFSa0FDdDNjNF9Vci10My1lR0I2RGZqRjVtMS1yemJHUHR4enozTDA3V0dVbXNCRXZpNnQtUTlDYWd5TTVmYUI2R1JfbHVseTFQX2ZvQ2tTbA?oc=5",
+     "time": "28 Oct 11:43",
+     "tags": []
+    },
+    {
+     "title": "Bajaj Auto shares rise 3% after Q2 beat estimates; JPMorgan upgrades to ‘Overweight’, CLSA sees 29%...",
+     "source": "Moneycontrol.com",
+     "link": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxOZ0tsOExMdjcxdTJ4eUlGTERNUjFxNEgwZWoxdTFZXzdYM2k3ejNsTDhkSE9qRVFHMEV2OVNoNXNwbHUyYkU3dlgyczB0V0djT0cwTURfZFMxUG9xMkRhZDlPZ0ZTeVdlaEZ0dUtjUjNqcnZDdTZTSGhHU3Rpak4zbHM2SGZWd19ocWdsOGxSVjllMnJDaTc2ek9aYi1aVXVxc1VFY0J6Uk5kZWhXTVo2UjZjS0x4MFhFRVVBQUVyUlQwMFFlRFlyNlY0blJCMEx2TDFPenM0d0dpWVdackc4SUhkd1NCVWMzQkpic2ZjVTAzN0NRMkJzN1FXOGV6UdIB_gFBVV95cUxOZ0tsOExMdjcxdTJ4eUlGTERNUjFxNEgwZWoxdTFZXzdYM2k3ejNsTDhkSE9qRVFHMEV2OVNoNXNwbHUyYkU3dlgyczB0V0djT0cwTURfZFMxUG9xMkRhZDlPZ0ZTeVdlaEZ0dUtjUjNqcnZDdTZTSGhHU3Rpak4zbHM2SGZWd19ocWdsOGxSVjllMnJDaTc2ek9aYi1aVXVxc1VFY0J6Uk5kZWhXTVo2UjZjS0x4MFhFRVVBQUVyUlQwMFFlRFlyNlY0blJCMEx2TDFPenM0d0dpWVdackc4SUhkd1NCVWMzQkpic2ZjVTAzN0NRMkJzN1FXOGV6UQ?oc=5",
+     "time": "28 Oct 11:34",
+     "tags": [
+      "analyst",
+      "earnings"
+     ]
+    },
     {
      "title": "Auto sector stocks today, October 28: Hyundai Motor India gains 2.62%, Bajaj Auto up 1.48%, TVS Motor jumps 0.91%",
      "source": "Business Upturn",
@@ -62,38 +88,13 @@
      "tags": []
     },
     {
-     "title": "Bajaj Auto: JPMorgan upgrades to Overweight, CLSA stays Outperform after a flat margin quarter",
-     "source": "Business Upturn",
-     "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOWldDS2xWSTNfeXRuS3Jub0NxQjA4WE1JNVdPZlR0eTFrT3RaUU5wYTBZSVBZbnBIcmtadHVaWm1lREFnM25QMVI5TlFhOXcwQUhlcWdrdzcyY1lMQnh3OHNnWk96dGV5T211QjQtQTluOFJ4V1BsbUtBSW5SLVdYU0lmSGdQNXV5NEM3YkNSRGJtdS1nMjY3bEI2YWpiRkd6SHpYRXBrMWlrSVkwdHozbTZuTQ?oc=5",
-     "time": "28 Oct 08:45",
+     "title": "India's Bajaj Auto gains as export strength, EV growth drive earnings beat",
+     "source": "Reuters",
+     "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOaFk5UHExSDZmMWtzMER3WWx2TEZxZHpkNXo1VmRFcm9TWDZsNk96T2tEd2ZjcXdvTjRYOXI3Tmw5anQxSW9WbkEydllLdEROVVNlYkZ3RUl2LXBlNUtja3I0UXNpSTBXVDJ4Z215QVB3eFF3SlNicEVia3diRUpkaEVVMWFVaWc4WS0xdE1IaDdZWG1FTUFLWA?oc=5",
+     "time": "28 Oct 09:29",
      "tags": [
-      "analyst",
       "earnings"
      ]
-    },
-    {
-     "title": "Bajaj Auto Q2 Review: Strong Beat Despite Cost Pressures; Valuations Reasonable, Says Jefferies; Citi Hikes Target",
-     "source": "NDTV Profit",
-     "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPY053ZHJJRWo1NVdra1NDUmtvR2p6YW9RYVpWQ0dyOVYxVHBFZm9hUTliMkpCV2FQMnZRQXo0MkU2cDZaRnpqZ2EtOWRWSWN5Tjh1emkwdmwtejVobWVNajAxbzRwbDFqd3dFeUF4ZG8wUmVnbGJvZkM4akhkMmtUbk9VZmR0YnJpUWlIa19aUW1JNUNhUU9JdjZiOUFSWjJNRDM3UElHNHgtb2UzOUt1SGV0eDlwYXhqaGZhUXBDR3I0Q3Y5d0JCR0NLMkV1eGdTb2s1d1J3endfQkJ1czl0X3ZKY0FTUzdxWGfSAfIBQVVfeXFMT1NqNFRYM3lyX2sxRG8tNTM1MDh6UTlycnRYQXh4REJUR0V4eEUyYzA3ZGtyZ2hTekRMT2pDcnlNOE5ZUlRXVDExSGlZTENlMUNKQno4eDhrWkx0cE52V1ppQzJuY2ppVEZkNHliWnAzN1M5Y1RlRXlUVkZabmtzUTFtMlBHR29LUnhDWlI2Q2UyUjNHc0ZOenJLTTZOdEtJdW8yb29zUzB2cXdRSG5jM3ltREoyaTdvTGlXc3JHMXdXdzhwLWVSZGhQUmh1aHlFTHdOV1dBbUhnaXBFR0pQQkppbWlxa1ExbWE4eXlaLXhxRUE?oc=5",
-     "time": "28 Oct 08:26",
-     "tags": [
-      "earnings",
-      "analyst"
-     ]
-    },
-    {
-     "title": "Bajaj Auto Share Price Live Updates: Bajaj Auto Stock Details",
-     "source": "Economic Times",
-     "link": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/bajaj-auto-share-price-today-live-updates-28-oct-2026/liveblog/135250087.cms",
-     "time": "28 Oct 08:22",
-     "tags": []
-    },
-    {
-     "title": "Stocks to BUY, SELL or HOLD Today, October 28: SBI Life, Bajaj Auto, Cipla, Maruti Suzuki, SAIL and more",
-     "source": "ET Now",
-     "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNM1lQOGpDYm1sY1ltZHY1RmhYa3lIOWRKb1lWU1Z2a1RMTUJ0akV6SFpJeTA1ZHhEYlhVSkt0NDh1dUoyT1I2Q1IxbERIWE9zS18wSDhlV0o0SnRVSFpUekxoOE50N2lXaFd4ZEVBZUprQ2RrZGdrQnZON0RRWjVzNUszNnNfTFpHQzh2NEp1QTg1VUFxbnd2c19WRklnSXBBRHJmVGpFQ1MtMXVRYnd6ekFPSVdPN0N2V1U1eVFFeUFnVmJsOHB2dXVMM1pBOVY2NkZFa3R6RllOMzZtTDd2SWlTTdIB6AFBVV95cUxNQXhIOGo5Y1ZiNHl5OEIxN000cHduRXFQTTJTaDRuVm1yZ1k1MEdWeGNETElQYXRZblFKb08yZ1ZPWWZ2VVpUVHhaR1VRODVvNTlTUzlSQVpjNXBQNzhLaF9GZUJ1anRFbW9tTzhFQ3RQVjZTOGhfZGVpSC1OdlIzMXZWVk05Qk1ubU16TnFMYjF1X3JMZkV0NUV0Mm01RWlZZFppYmNfUmRjdXdsTnNYeXhmWEd6NzdMbDM4NTY5V00wYVphRUxfZng2LVZPdmg5S1RfZUxTRHpBdEZNcWZWSlRzWlpRanlY?oc=5",
-     "time": "28 Oct 08:18",
-     "tags": []
     }
    ],
    "setups": [
@@ -103,15 +104,15 @@
    "earnings_flag": true,
    "price_source": "Upstox",
    "cross_check": {
-    "yahoo": 10562.0,
-    "gap_pct": 0.0,
+    "yahoo": 10505.0,
+    "gap_pct": 0.06,
     "flag": false,
-    "yahoo_time": "11:37"
+    "yahoo_time": "12:50"
    },
    "trade": {
     "status": "waiting",
     "phase": "open",
-    "reason": "last close $10564.00 (11:30 bar), $211.00 under the range high $10775.00 (-1.96%)",
+    "reason": "last close $10504.00 (12:40 bar), $271.00 under the range high $10775.00 (-2.52%)",
     "opening_range": {
      "high": 10775.0,
      "low": 10552.0,
@@ -122,13 +123,13 @@
      "avg_volume": 76000
     },
     "last": {
-     "bar_start": "11:30",
-     "close": 10564.0,
-     "vs_level_pct": -1.96
+     "bar_start": "12:40",
+     "close": 10504.0,
+     "vs_level_pct": -2.52
     },
     "bars_source": "Upstox",
     "entry_kind": "not triggered: plan if a bar closes above 10775.00",
-    "rel_volume": 6.75,
+    "rel_volume": 5.2,
     "plan": {
      "symbol": "BAJAJ-AUTO.NS",
      "side": "buy",
@@ -137,8 +138,8 @@
      "entry": 10775.05,
      "stop": 10663.5,
      "target": 10998.15,
-     "entry_time": "11:35",
-     "entry_bar": 27,
+     "entry_time": "12:45",
+     "entry_bar": 41,
      "risk_per_share": 111.55,
      "reward_risk": 2.0,
      "stop_label": "opening-range midpoint",
@@ -153,18 +154,18 @@
     },
     "timemachine": {
      "sessions": 57,
-     "p_target": 0.007,
-     "p_stop": 0.2129,
-     "p_neither": 0.7801,
-     "p_green": 0.4084,
-     "avg_R": -0.137,
-     "median_close": 10758.8,
-     "p5_close": 10630.92,
-     "p95_close": 10892.04,
+     "p_target": 0.0005,
+     "p_stop": 0.1091,
+     "p_neither": 0.8904,
+     "p_green": 0.4082,
+     "avg_R": -0.12,
+     "median_close": 10761.17,
+     "p5_close": 10664.69,
+     "p95_close": 10861.69,
      "r_at_target": 2.0,
-     "verdict": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 3 % (target first 0.7 % vs stop first 21.3 %).",
+     "verdict": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 0 % (target first 0.1 % vs stop first 10.9 %).",
      "notes": [
-      "78.0 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those."
+      "89.0 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those."
      ],
      "history": {
       "sessions": 57,
@@ -182,7 +183,7 @@
      "max_loss": 669.3,
      "refusal": null,
      "reward": 1338.6,
-     "replay_avg": -91.69
+     "replay_avg": -80.32
     },
     "risk": {
      "verdict": "PASS",
@@ -206,7 +207,7 @@
       "risk_per_share": 111.55,
       "max_loss": 669.3,
       "setup": "orb",
-      "entry_time": "11:35",
+      "entry_time": "12:45",
       "flat_by": "15:15"
      }
     },
@@ -232,222 +233,47 @@
   },
   {
    "rank": 2,
-   "symbol": "MARUTI.NS",
-   "name": "Maruti Suzuki India Limited",
-   "score": 96,
-   "price": 11403.0,
-   "chg_pct": -0.41,
-   "volume": 357880,
-   "turnover_cr": 408.1,
-   "news_count": 40,
-   "news_tags": [
-    "analyst",
-    "deal",
-    "earnings",
-    "regulatory"
-   ],
-   "news": [
-    {
-     "title": "Subros shares surge 10% after securing Rs 1,225 crore HVAC supply order from Maruti Suzuki",
-     "source": "The Economic Times",
-     "link": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxQSU9fRjdmRnhzNDZOSTZPS3Jyd204RHV4VDFiaUxZQVVhbUVvbWhVVTFubklRX0pmc1ZtcTAxaFZyOFhDbFdmREtyRVFlck5UdEx2TFBuYkQtUEZKLUI1ZUtsOTBIVEVOem45U0dNVlpvZEtTNjVNRFFDQU53dVhjcWlMd2lIZ3IteVNMU0JWOHhpdTRLelVxdE9BV3ZKRDhHT2tHN0JLSGd4Q2FXYmdnTml1OURubXdsZkZrMWhJeXJ5eF92dGs0ZHdIeHVDVGJ2NTJseHprVlhkRVFnaVo0SEFrM09sTkJTcUw4bEVsbjBFdHk5VFZsX3Jn0gH6AUFVX3lxTFBJT19GN2ZGeHM0Nk5JNk9LcnJ3bThEdXhUMWJpTFlBVWFtRW9taFVVMW5uSVFfSmZzVm1xMDFoVnI4WENsV2ZES3JFUWVyTlR0THZMUG5iRC1QRkotQjVlS2w5MEhURU56bjlTR01WWm9kS1M2NU1EUUNBTnd1WGNxaUx3aUhnci15U0xTQlY4eGl1NEt6VXF0T0FXdkpEOEdPa0c3QktIZ3hDYVdiZ2dOaXU5RG5td2xmRmsxaEl5cnl4X3Z0azRkd0h4dUNUYnY1Mmx4emtWWGRFUWdpWjRIQWszT2xOQlNxTDhsRWxuMEV0eTlUVmxfcmc?oc=5",
-     "time": "28 Oct 11:28",
-     "tags": [
-      "deal"
-     ]
-    },
-    {
-     "title": "Buy Maruti Suzuki; target of Rs 15,350: Anand Rathi",
-     "source": "Moneycontrol.com",
-     "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPRHpsd1NodUlSYlNlNGNPTUZnSlFHLTVLRUt2TTIxS3QzT2x1NU1vaDBjZXdCZlZ2N2VWWmkzS0wxTkJKMUhHYmlJQ2IzbWdEeGdBQXQ5T2REY3dTTEtibHppNVFpTlRha3k4Z1ROYlU4OW1pdGRteUQ3M21rc2NpOHJFdjk5d0xHZGJCMGQzZ3BQa2NNeUFPLWtzN1FBUHIwMUZXVTA3MVJxelhCSVJSRWtLTlB4dFRB0gG4AUFVX3lxTE9Eemx3U2h1SVJiU2U0Y09NRmdKUUctNUtFS3ZNMjFLdDNPbHU1TW9oMGNld0JmVnY3ZVZaaTNLTDFOQkoxSEdiaUlDYjNtZ0R4Z0FBdDlPZERjd1NMS2Jsemk1UWlOVGFreThnVE5iVTg5bWl0ZG15RDczbWtzY2k4ckV2OTl3TEdkYkIwZDNncFBrY015QU8ta3M3UUFQcjAxRldVMDcxUnF6WEJJUlJFa0tOUHh0VEE?oc=5",
-     "time": "28 Oct 11:12",
-     "tags": []
-    },
-    {
-     "title": "Auto Ancillary Stock Skyrockets 10% After Securing ₹1,225 Crore Order From Maruti Suzuki",
-     "source": "Trade Brains",
-     "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPN3ZKelpvalBXRDdjd0dOWjJzSTk5ZG4teGw5R0JvTjVscnh6VkdVQ1FHcldQb3hXN3piWlFYNUJPTDZabmtfMk01bmZMa0ZrdTZLZ1JOYWh4eExHM0EwTThndDNGaEF4Y1EzZEJZSjU3WjZkcjBnSVJjd19SQjFQMG9XaDBWM3V2QXF1WEVzRUJtVmQ4ajg3R3ZKTGRUbjVkTzJXZU0tUDZXM3k2STR2aUNNZGs2dmEzUk1WSzMxQXQ1eFFiRVhLOHQ2alU?oc=5",
-     "time": "28 Oct 11:07",
-     "tags": [
-      "deal"
-     ]
-    },
-    {
-     "title": "stock in news maruti suzuki waaree energies sail q2 results",
-     "source": "Zee Business",
-     "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPck1tTlpCeWxIY002bk04X1pNLVJfUjBBUHFxeTd6NmVkenpJVWJNbThSbDF6dWFHVHdNWFR6TXotbkxWTFM1aW5zSWRBVmNzenBGdnRna1FLYkczSWR3SUtxZmU1M29JUWJ4YW5EYTVTc3dFSUlFc1BDVVJLX0JGejg5TnhCR2kzQVJZUFNsYVdzOHJnNlVYQVJuTWZZV193SmNpeGtCMkpJb1VaWUJNVjZfWUc0dw?oc=5",
-     "time": "28 Oct 10:42",
-     "tags": [
-      "earnings"
-     ]
-    },
-    {
-     "title": "Subros shares jump 10% after  ₹1,225 crore Maruti Suzuki order; key details to know | What lies ahead for investors?",
-     "source": "Mint",
-     "link": "https://www.livemint.com/market/stock-market-news/subros-shares-jump-10-after-rs-1-225-crore-maruti-suzuki-order-key-details-to-know-what-lies-ahead-for-investors-11793159896612.html",
-     "time": "28 Oct 09:56",
-     "tags": [
-      "deal"
-     ]
-    },
-    {
-     "title": "Maruti Suzuki share: Why 3 brokerages remain bullish despite Q2 earnings miss",
-     "source": "Zee Business",
-     "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOeDhGM0VCd0doR1oxNDJQTndFZi13dDBGc0xjWlVYaGJ0dTFURUthZDExUF9UTTdTRktDLUwyMVhOY0sxcjNGUFUxMzMtQ3llNG1PMEdNR0NJbDZRTDRObmtETkJ4bDdYTHQyc21wR1ZJTEdvaGVhRVQzUnFySHdHeG54Z0dVQUVlTEtqOWZ3dVpJR1NhSThkMzhIeGFZc2tYeTZqYjhFOE0wYmlhMXNnc2d6Vkp6bGU3WmZac1A0SnR1d2twMmc?oc=5",
-     "time": "28 Oct 09:50",
-     "tags": [
-      "earnings"
-     ]
-    }
-   ],
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "rsi": 43.1,
-   "earnings_flag": true,
-   "price_source": "Upstox",
-   "cross_check": {
-    "yahoo": 11407.0,
-    "gap_pct": 0.04,
-    "flag": false,
-    "yahoo_time": "11:37"
-   },
-   "trade": {
-    "status": "waiting",
-    "phase": "open",
-    "reason": "last close $11433.00 (11:30 bar), $157.00 under the range high $11590.00 (-1.35%)",
-    "opening_range": {
-     "high": 11590.0,
-     "low": 11332.0,
-     "minutes": 15,
-     "bars": 3,
-     "of": 3,
-     "complete": true,
-     "avg_volume": 35984
-    },
-    "last": {
-     "bar_start": "11:30",
-     "close": 11433.0,
-     "vs_level_pct": -1.35
-    },
-    "bars_source": "Upstox",
-    "entry_kind": "not triggered: plan if a bar closes above 11590.00",
-    "rel_volume": 2.62,
-    "plan": {
-     "symbol": "MARUTI.NS",
-     "side": "buy",
-     "setup": "orb",
-     "date": "2026-10-28",
-     "entry": 11590.05,
-     "stop": 11461.0,
-     "target": 11848.15,
-     "entry_time": "11:35",
-     "entry_bar": 27,
-     "risk_per_share": 129.05,
-     "reward_risk": 2.0,
-     "stop_label": "opening-range midpoint",
-     "target_label": "2R (two times the risk)",
-     "opening_range": {
-      "high": 11590.0,
-      "low": 11332.0,
-      "minutes": 15
-     },
-     "flat_by": "15:15",
-     "interval": "5m"
-    },
-    "timemachine": {
-     "sessions": 57,
-     "p_target": 0.0004,
-     "p_stop": 0.177,
-     "p_neither": 0.8226,
-     "p_green": 0.3972,
-     "avg_R": -0.162,
-     "median_close": 11569.34,
-     "p5_close": 11431.12,
-     "p95_close": 11698.71,
-     "r_at_target": 2.0,
-     "verdict": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 0 % (target first 0.0 % vs stop first 17.7 %).",
-     "notes": [
-      "82.3 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those."
-     ],
-     "history": {
-      "sessions": 57,
-      "triggered": 28,
-      "target": 4,
-      "stop": 14,
-      "close": 10,
-      "avg_R": -0.061
-     }
-    },
-    "sizing": {
-     "qty": 6,
-     "bound_by": "position cap",
-     "cost": 69540.3,
-     "max_loss": 774.3,
-     "refusal": null,
-     "reward": 1548.6,
-     "replay_avg": -125.44
-    },
-    "risk": {
-     "verdict": "PASS",
-     "reasons": [],
-     "warnings": []
-    },
-    "order": {
-     "symbol": "MARUTI.NS",
-     "side": "buy",
-     "qty": "6",
-     "type": "market",
-     "time_in_force": "day",
-     "order_class": "bracket",
-     "take_profit_limit_price": "11848.15",
-     "stop_loss_stop_price": "11461.00",
-     "why": "opening-range breakout on MARUTI.NS: 6 shares, bound by your position cap (6 x 129.05 = $774.30 at the stop)",
-     "plan": {
-      "entry": 11590.05,
-      "stop": 11461.0,
-      "target": 11848.15,
-      "risk_per_share": 129.05,
-      "max_loss": 774.3,
-      "setup": "orb",
-      "entry_time": "11:35",
-      "flat_by": "15:15"
-     }
-    },
-    "alerts": [
-     {
-      "type": "stop",
-      "price": 11461.0,
-      "at": null
-     },
-     {
-      "type": "target",
-      "price": 11848.15,
-      "at": null
-     },
-     {
-      "type": "time",
-      "price": null,
-      "at": "15:15"
-     }
-    ]
-   },
-   "prev_rank": 2
-  },
-  {
-   "rank": 3,
    "symbol": "PPLPHARMA.NS",
    "name": "Piramal Pharma Limited",
-   "score": 95,
-   "price": 227.0,
-   "chg_pct": 14.23,
-   "volume": 65211733,
-   "turnover_cr": 1480.3,
-   "news_count": 18,
+   "score": 96,
+   "price": 232.08,
+   "chg_pct": 16.79,
+   "volume": 87947237,
+   "turnover_cr": 2041.1,
+   "news_count": 19,
    "news_tags": [
+    "analyst",
     "earnings"
    ],
    "news": [
+    {
+     "title": "Piramal Pharma Shares Jump 14% As FY27 Revenue Growth Outlook Raised To 20%",
+     "source": "BW Businessworld",
+     "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPb0JfTDFWSDUzSFdBY1U2ZnNSN3NLcGUwVlk5SGdiMkZyc1dLMGF4cnh3Ty1yQThoMnVyYVZrSExSUHB3UDVYd3ZKV0hzdGlWYW5PakVDajNIdnZyZ0U0bDNvcTlUUm9hc0t2dF9FTE5zTk1BcnRLOTZSYWxqUG5ZQWR2QTVzc2ZVSU9kOWJjb0J1aUpWOHpvZV9KVllWTE5iN0hxN1dUSVFCYUdzS0l3eW9La1I2c3kz?oc=5",
+     "time": "28 Oct 11:52",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "Earnings call transcript: Piramal Pharma Q2 2026 shares jump 14% on raised outlook By Investing.com",
+     "source": "Investing.com India",
+     "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQbTJnb1lLSzM0Sl9MZUVJWXh1NTYxZGlndlFuSDdLaVJSU1pvbEF4a3QyN3JpYlBSeGJUZnpaN3llc3kwVzQxSno2SFI0WEcxcVVwb196akpTc1huTVJFZ0phWTdZai1RYWxacTU3UjNUMFNlT3VBS3IzZUpkLWZDWG9RNXdvek5PejNEeHhfSWFQU2VpbGFLZ3VUeWd0b3BxczhGVF80WGQwc1VaMzloc3JzRm44TnF3ZmVxSzB4ZDh3SXBxSFF4aXBWbElXMHpLbkJoam5CTXg?oc=5",
+     "time": "28 Oct 11:49",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "Piramal Pharma shares rally 15% as firm swings to profit in Q2; upgrades FY27 outlook",
+     "source": "Upstox",
+     "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOeEZoQldwY29LVnFiQ19obWQ2N3dJQzF2VG1KbmJlaFM3UTFNSU9MTkd6ck1sQW9NMV9TbU5sZDJZY0haYmlTWGRnR1FHWk51Wi1MLXduc2d2VnFTRm5CVWNrTUJsalgzcnRXR3lXZUJTWFg5M25zXzE2bjQtZ1pPYm9zNDYzbmFrS1Vuak00WDRLRk90bWd6M2dGRkJTRWM0WVc0amFPLXM3dnlWWWpCQnNFZzdOOHE3eXlaNDFRZXAtWHBIbmhkQUpIVEs0RWJtVHJ1c2V4dmx3Nk0?oc=5",
+     "time": "28 Oct 11:42",
+     "tags": [
+      "analyst",
+      "earnings"
+     ]
+    },
     {
      "title": "Piramal Pharma Shares Surge 14% After Q2 FY27 Results, Raises FY27 Growth Outlook",
      "source": "India Infoline",
@@ -458,6 +284,13 @@
      ]
     },
     {
+     "title": "Piramal Pharma Ltd Reports Strong Quarterly Turnaround Amid Market Outperformance",
+     "source": "MarketsMojo",
+     "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQZzR6RDEyV05NTWV4bU9jYzNmZlB5SFBheGNvTFhITVlrcFJybmh0VGRNUkxJNVlmYnhFSDJ6S1VVZWJNTng3RHlCTnNfeVl4SWc1Y0NVdUxBVVJLeW1VeWo2dVJhUGJfT19Xc2V2SGtMUWJCbFJnRURSeFBhcmJOMEM3NWpFN1R2RDhXNkh1MTVMYTBMcEUwdjZRR28yREpxTEZLZ3ltdnlUVDVHeE9ZelczNWVPZUJ5RzhxWWZ6YVg5TlU1STUwWEt5SkdkUThXenFrNmJn?oc=5",
+     "time": "28 Oct 11:08",
+     "tags": []
+    },
+    {
      "title": "Piramal Pharma Back in Black, Posts Rs 5-Crore Profit in Q2",
      "source": "HDFC Sky",
      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQa2JTcHp0TG1mdkI3SDZEUXZmVWJpYkxWbE5KQ1AyeE9JTTRmbmR5aVhuTjJqcEQwTWtlNGdXN0hQZS03TjZyeTMxOGVsUjU0ZHdEUTVFT0MyUjU1NzNOT0lKYkVNaDdHX1ZoUVRrYWV3bDZ4TjBObENVZHNmTWEzZTc1WnlnRHNHM2ow?oc=5",
@@ -465,40 +298,6 @@
      "tags": [
       "earnings"
      ]
-    },
-    {
-     "title": "Piramal Pharma soars 15% in weak market on huge volume post Q2 results",
-     "source": "Business Standard",
-     "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOVEtmclJQdHYzdXA0emxGdlF2bzVka09tcENlem9aRnU1a1lxZDZxUi1OVm83MUxrWG1rUU41cjRhMWNRSko1YjQ1empDUVFnaktXV2dncmRGMkVvaDNzZFRkY3poeUtLM1l1eVBPRGZvZEpIMWpneHZsSWVxWUV6dmtuYTViQ2dDcDJuWjBVU3JxNmZTTGlta1lyc25GX2xuVVEzVUJUT0c0THF3YU5uendHWUNYTEhRNUxOX3BlLVZBNEtnMnd2MVpnVktMTzRNUGfSAdcBQVVfeXFMUG5fWWZpaEV0OGZLdUlHMUNidG1NRnBjbUhLdVk4YWZoQ2kzQUQtS0ZYbVVjcWgxX3h3dG9qanhNWGlwazRGWGRaWURyZG5CODhxbXRvLXJ3OFYzNlphUnh0LWpBZ3IyTXlzcVBKMThMeUNUZi02MFQ4UzNpOFQ4Y1hjeHduNkVZUlJZdGlaZHhIbFoxU05HaURxZ1FiU1lrc3UwUzlYS0hRZlpWV0UwOTJYUmpZam1kdFdxR1BockkySVVmc19VcVFKN3k4Ty1pdEJlQTV3RUk?oc=5",
-     "time": "28 Oct 10:52",
-     "tags": [
-      "earnings"
-     ]
-    },
-    {
-     "title": "Piramal Pharma Q2 Concall: FY27 revenue growth guidance raised to 19% to 20%, CDMO up 36%, EBITDA jumps 72%; stock surges 14.6% to ₹227.50",
-     "source": "Business Upturn",
-     "link": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxPdUV2OVRUd3kwWXUyU2F4bXQwcVlieUlzdjQ0RVZiUHB4eTVSVFY1Y2t3QVJtdFFTdWdMWVMwTXk0TnZyVEZPN3k3d2JPV01JSVNGaThOVUszSnBuUUlkXzBjVDlWRmJKelhHTG1aamRVdnFYeU1qQUZ3dENXb3VBczktSG9HSk1hTnJfMjJWWTQySUowODFRVC1ycDk3dFZFUVFSVUhzUXdOMWJQYUVFNHRHNVBENmtHZmhCSjVRcFFTcERkYmVDQ3dXVUpfTlI0b2Z5Q0FweHFmZllramRkaEJNV3ZSamtVTmVnRVhKQ2pKTTRDemxPcHlHSQ?oc=5",
-     "time": "28 Oct 10:45",
-     "tags": [
-      "earnings"
-     ]
-    },
-    {
-     "title": "Piramal Pharma shares surge 14% as Q2 profitability improves, FY27 outlook raised",
-     "source": "CNBC TV18",
-     "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNaUxUVzhnZk5rd3FVcm91Y3RXM1dMaWxVb0d4N2htSlJSTEVHN29fX1FZLW4zNVVMemtTQmhnUFNyd2Fmdm03NVNaaXdqd0dtM2E2S3ZXVzQyQzZNR2UyWDN5Y0tqLVhORXo0NDZzUjhlWXdqaFJ1Rm1VZkU2NVJyZ1N5bW9fOHdHR3lNMjNPTk4zNFYyZlRBa0dGVWVsenQ1Tm5wOUhGZUtEdVpNVTF0RUhlcDlWMW52UDdOaDJPVEg0MTdyZ2hv0gHHAUFVX3lxTE1pTFRXOGdmTmt3cVVyb3VjdFczV0xpbFVvR3g3aG1KUlJMRUc3b19fUVktbjM1VUx6a1NCaGdQU3J3YWZ2bTc1U1ppd2p3R20zYTZLdldXNDJDNk1HZTJYM3ljS2otWE5FejQ0NnNSOGVZd2poUnVGbVVmRTY1UnJnU3ltb184d0dHeU0yM09OTjM0VjJmVEFrR0ZVZWx6dDVObnA5SEZlS0R1Wk1VMXRFSGVwOVYxbnZQN05oMk9USDQxN3JnaG8?oc=5",
-     "time": "28 Oct 10:19",
-     "tags": [
-      "earnings"
-     ]
-    },
-    {
-     "title": "Pharma sector stocks today, October 28: Piramal Pharma jumps 12%, Aarti Drugs up 11.25%; Torrent Pharma down 2.32%",
-     "source": "Business Upturn",
-     "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPRVVONll3WTMzZ2kxOWNJNkkzeGR6VUtaTEptUktOeVJGZ1Y2N2VwQmI1TzZWTVlZXy1fMjdMU0pJZjlwaEotQmgzbGJiZFZ2dVRsLUZLenlFWjM1eXh5VGJoQmdYM0ZKWVNwUlBhMDYwNEdmQ2lBOEptYlZGek5RZ2M1ZmxKVnhsTW53ZEdZMFg0TVhIdDZXOFlqSVQwOElRdlFlM01RbV8wa0xpX0hrSXo5eDdEQUtKdEdrbm9XaU9nNjFnNHdNUkxHa043Y1hDSW9MOTRZNEhxRWVqTGZKMkp5Z1hrZmdQVV9YQWNFelRadw?oc=5",
-     "time": "28 Oct 09:50",
-     "tags": []
     }
    ],
    "setups": [
@@ -508,10 +307,10 @@
    "earnings_flag": true,
    "price_source": "Upstox",
    "cross_check": {
-    "yahoo": 227.29,
-    "gap_pct": 0.13,
+    "yahoo": 232.0,
+    "gap_pct": 0.03,
     "flag": false,
-    "yahoo_time": "11:37"
+    "yahoo_time": "12:50"
    },
    "trade": {
     "status": "triggered",
@@ -527,13 +326,13 @@
      "avg_volume": 5116214
     },
     "last": {
-     "bar_start": "11:30",
-     "close": 227.34,
-     "vs_level_pct": 1.67
+     "bar_start": "12:40",
+     "close": 232.0,
+     "vs_level_pct": 3.76
     },
     "bars_source": "Upstox",
     "entry_kind": "triggered at 9:50 AM",
-    "rel_volume": 33.18,
+    "rel_volume": 36.91,
     "plan": {
      "symbol": "PPLPHARMA.NS",
      "side": "buy",
@@ -633,33 +432,244 @@
      }
     ]
    },
-   "prev_rank": 4
+   "prev_rank": 3
+  },
+  {
+   "rank": 3,
+   "symbol": "MARUTI.NS",
+   "name": "Maruti Suzuki India Limited",
+   "score": 96,
+   "price": 11500.0,
+   "chg_pct": 0.44,
+   "volume": 532773,
+   "turnover_cr": 612.7,
+   "news_count": 40,
+   "news_tags": [
+    "analyst",
+    "deal",
+    "earnings"
+   ],
+   "news": [
+    {
+     "title": "Stocks to Watch Today 28 Oct: Jio, RIL, HUL, L&T, Maruti",
+     "source": "Univest",
+     "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQWjg4dzN0LXJtUnpTQkhxQmNSVEI0WlF2dGNwaUo0UG5VS09Pdnd0T3RUcDhoNFNfYzZwenRjc1JJQ3llcnVDQ1N0QnJLb3pSODdVdk93VlQ3czBDRjhMSk15c0RVd3RGSURubG1xdnFpQzQzeGJneGZoSjkxWW9qQXQ2N21Bd3hzbU8wMjMwQjd3WUJ5U0xpSWNnbno4ckhxS3lrUmRBVTFRTVNLSU1OdElmeWJ4eEo2TXhiNXFnWXlidUtRR0lyVFVUanJGM1BTOGVBTUZVV29YbGM?oc=5",
+     "time": "28 Oct 12:48",
+     "tags": []
+    },
+    {
+     "title": "Subros shares swing 17 percentage points after Rs 1,225 crore Maruti Suzuki order",
+     "source": "Business Upturn",
+     "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNXzJfNHFkcDl2YUZQN2poYWlPbEpiakUyNGtrSHpocUFwREw5Q0M4M3FoZlVGaHBZclFDWXNWUnhsUGs4X3BlWGdNWXBxT0RCTlNCME8xOFRsVVU3aklsQmN6SkxBV1MtUEJIRGpmQS1jby1CakdYUlBFMUctUFI1aXVoMVdYcUpRUnNLV1F0eVpaNXBuRHpBSWRGSmtwX2JOelFTRmhBQS1VRTJON1VEYndzcGxSNHNETnk5SzdyZ1VkbE9DOUM3ag?oc=5",
+     "time": "28 Oct 12:31",
+     "tags": []
+    },
+    {
+     "title": "Subros Shares Jump on Rs 1,225 Crore Maruti Suzuki Order",
+     "source": "Univest",
+     "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPRnpYdDRyS3JmSkhnT1Nzc1NkRlFIbllwMm90RVhKbEZzTGhSLU5zMGRscUw3R055b0kyT3lyZ21IZV93N2R6TDR6THpMRVlZblR6cThIcmh3aEx4TjRVX2EzOC1Pd2ZleXhEbHVmdmFPZG9neDZsUzU3bmRFaDFnamFwNV9pVC1FbmR6VEkxY3p0eHFxNE9sUzkxelpMMzVKTUN2eUtNN0NhQXRKUnJvQW0yWUJSbmx1RWhkRGpSLVdJZ055V0pYQW84NURKdG1KaE1WRkl2VQ?oc=5",
+     "time": "28 Oct 11:48",
+     "tags": []
+    },
+    {
+     "title": "Maruti Suzuki shares see target price cuts by Jefferies, Nomura, other brokerages after Q2 net profit drops 26% YoY. What’s ahead?",
+     "source": "Economic Times",
+     "link": "https://economictimes.indiatimes.com/markets/stocks/news/maruti-suzuki-shares-see-target-price-cuts-by-jefferies-nomura-other-brokerages-after-q2-net-profit-drops-26-yoy-whats-ahead/articleshow/135254335.cms",
+     "time": "28 Oct 11:47",
+     "tags": [
+      "earnings",
+      "analyst"
+     ]
+    },
+    {
+     "title": "Maruti Suzuki shares see target price cuts by Jefferies, Nomura, other brokerages after Q2 net profit drop",
+     "source": "The Economic Times",
+     "link": "https://news.google.com/rss/articles/CBMipAJBVV95cUxQdEtXUHRyQnE5UFlrUDQ2RURQUmhxWXEtSTZQTDF6UHJyTzRDeHgtTEJYbHBPNFlHVmNwV1dobkdIYlMzTHlRRGtYYVJsYUtUNTRWVl85bExxamFQX0NtN3B6R2poTkc0RlF3RWJDeFJtb3VFMEliSjc1OXpfLUpjckRfZHFfcmJ3OC1kbUdTTkxFSWF6M3hSNDNrSklSSUFTdmtDOTExRHRMRzZqbDFIT09VTGtrOGd4eUdpYkRzSkF4MDNtcDFUcGhveTB3WFBITTJmQzdVLUFnV0ZLY0VMODdGZTlXOHlVRVpGY3ZQYld1LVY4VHFVaUNERFZSUzNkWGlyZmV2QUo2UElCZ3ZPOWpXakN4RExIZTU5R3JxajNvSV9R0gGqAkFVX3lxTE9yM2NHbXRRTG5VRlRfUWVfMVBYcW91eEQtc3N2bE82OHc2QTdkMTZCUEtqeDhja25zN0tXSnFtOUI2X0tyZkhKMDdjSTVtdDFQU0pxM3BiUlZpUGU2bGhJZDUxX3NfU014NTdQaUJhMlpxd0Y4X3JzSTlqRVpmRFotaWZWSGlqekhCemVLU1k3eHEwZ0R3SWs5czliOXJuZ2RMbEoxVFJyMDFXS0ZOVXlEREpQWlVpVDREZkh2MFN5MWczcmszR1VnLXBVak1tSU92RHdOMHNVLTdfYThxRXAwTTRmN1E1MkY4OWNyM2lJUnU0N0dRem9xUkJpZUJsS1NrLUExMzVITHkwNmJHX1Y4SDd6M2pWS0tHdFUzXzNSRFNVbW5iZkwybGc?oc=5",
+     "time": "28 Oct 11:47",
+     "tags": [
+      "earnings",
+      "analyst"
+     ]
+    },
+    {
+     "title": "Subros shares surge 10% after securing Rs 1,225 crore HVAC supply order from Maruti Suzuki",
+     "source": "Economic Times",
+     "link": "https://economictimes.indiatimes.com/markets/stocks/news/subros-shares-surge-10-after-securing-rs-1225-crore-hvac-supply-order-from-maruti-suzuki/articleshow/135253915.cms",
+     "time": "28 Oct 11:28",
+     "tags": [
+      "deal"
+     ]
+    }
+   ],
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "rsi": 43.1,
+   "earnings_flag": true,
+   "price_source": "Upstox",
+   "cross_check": {
+    "yahoo": 11497.0,
+    "gap_pct": 0.03,
+    "flag": false,
+    "yahoo_time": "12:50"
+   },
+   "trade": {
+    "status": "waiting",
+    "phase": "open",
+    "reason": "last close $11427.00 (12:40 bar), $163.00 under the range high $11590.00 (-1.41%)",
+    "opening_range": {
+     "high": 11590.0,
+     "low": 11332.0,
+     "minutes": 15,
+     "bars": 3,
+     "of": 3,
+     "complete": true,
+     "avg_volume": 35984
+    },
+    "last": {
+     "bar_start": "12:40",
+     "close": 11427.0,
+     "vs_level_pct": -1.41
+    },
+    "bars_source": "Upstox",
+    "entry_kind": "not triggered: plan if a bar closes above 11590.00",
+    "rel_volume": 2.55,
+    "plan": {
+     "symbol": "MARUTI.NS",
+     "side": "buy",
+     "setup": "orb",
+     "date": "2026-10-28",
+     "entry": 11590.05,
+     "stop": 11461.0,
+     "target": 11848.15,
+     "entry_time": "12:45",
+     "entry_bar": 41,
+     "risk_per_share": 129.05,
+     "reward_risk": 2.0,
+     "stop_label": "opening-range midpoint",
+     "target_label": "2R (two times the risk)",
+     "opening_range": {
+      "high": 11590.0,
+      "low": 11332.0,
+      "minutes": 15
+     },
+     "flat_by": "15:15",
+     "interval": "5m"
+    },
+    "timemachine": {
+     "sessions": 57,
+     "p_target": 0.0001,
+     "p_stop": 0.088,
+     "p_neither": 0.9119,
+     "p_green": 0.3821,
+     "avg_R": -0.146,
+     "median_close": 11571.09,
+     "p5_close": 11466.32,
+     "p95_close": 11675.94,
+     "r_at_target": 2.0,
+     "verdict": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 0 % (target first 0.0 % vs stop first 8.8 %).",
+     "notes": [
+      "91.2 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those."
+     ],
+     "history": {
+      "sessions": 57,
+      "triggered": 28,
+      "target": 4,
+      "stop": 14,
+      "close": 10,
+      "avg_R": -0.061
+     }
+    },
+    "sizing": {
+     "qty": 6,
+     "bound_by": "position cap",
+     "cost": 69540.3,
+     "max_loss": 774.3,
+     "refusal": null,
+     "reward": 1548.6,
+     "replay_avg": -113.05
+    },
+    "risk": {
+     "verdict": "PASS",
+     "reasons": [],
+     "warnings": []
+    },
+    "order": {
+     "symbol": "MARUTI.NS",
+     "side": "buy",
+     "qty": "6",
+     "type": "market",
+     "time_in_force": "day",
+     "order_class": "bracket",
+     "take_profit_limit_price": "11848.15",
+     "stop_loss_stop_price": "11461.00",
+     "why": "opening-range breakout on MARUTI.NS: 6 shares, bound by your position cap (6 x 129.05 = $774.30 at the stop)",
+     "plan": {
+      "entry": 11590.05,
+      "stop": 11461.0,
+      "target": 11848.15,
+      "risk_per_share": 129.05,
+      "max_loss": 774.3,
+      "setup": "orb",
+      "entry_time": "12:45",
+      "flat_by": "15:15"
+     }
+    },
+    "alerts": [
+     {
+      "type": "stop",
+      "price": 11461.0,
+      "at": null
+     },
+     {
+      "type": "target",
+      "price": 11848.15,
+      "at": null
+     },
+     {
+      "type": "time",
+      "price": null,
+      "at": "15:15"
+     }
+    ]
+   },
+   "prev_rank": 2
   },
   {
    "rank": 4,
    "symbol": "BHARTIARTL.NS",
    "name": "Bharti Airtel Limited",
-   "score": 95,
-   "price": 1943.8,
-   "chg_pct": -1.77,
-   "volume": 7741536,
-   "turnover_cr": 1504.8,
-   "news_count": 21,
+   "score": 93,
+   "price": 1948.5,
+   "chg_pct": -1.53,
+   "volume": 9114780,
+   "turnover_cr": 1776.0,
+   "news_count": 20,
    "news_tags": [
     "analyst",
     "capital",
-    "earnings"
+    "earnings",
+    "regulatory"
    ],
    "news": [
     {
+     "title": "Jio Platforms dethrones Airtel after record IPO listing; shares trade flat",
+     "source": "The Week",
+     "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQZ0hSbjZETVFNbUhEc3k0aG1kZjZ3QUE1R21vWkE3YkYzb0ZMMDVSTlZURmdrR1RoTUZWRXk5NUYxWmhqS2d4ckdKUmVNVTIxd3gwZENqRkJiY2pIczM1bm9ITUZUclRESWRpbDVWei1YeTNuOHltSWRoVkNXWk9hOG5Sb2RTTmFLLUhwWU1ONDAyQVo5SDJzWFhqZHRUZ3JmM3UtbU53MjhEU0JubVVjd0taeGhoc1VpUlU0UjR0UGtUdlBSMkRpVURPWGpWUdIB0wFBVV95cUxQVHdHanliTmVhUzVtZ0ZuNzdXRDg3dUg4WTJweXJIQ1dXUDBQazR2SnJhdDBDUDhqQVZYSERBd3VZN3paV1lXZ1pTUngzTEFEVDJZN0JSSC1MdzZJOGV0OHlMdHI0Sm9pU2lGdU41ZjMxRy1kX1c1TzBFTFI4NHI4Y3poV2FFaGdSQW44N0FReTJyMEx5aFFWN1YwWWp2T0gzdlhwdG9rSk5YTExmbmFlaVJTbHVQVDVTcDMwbUF1WWV3cDJ5SUVhRVEydEc4c3d5RVlV?oc=5",
+     "time": "28 Oct 11:38",
+     "tags": [
+      "capital"
+     ]
+    },
+    {
      "title": "Jio jumps 21% in market debut, dethrones Bharti Airtel as largest telecom player by m-cap",
      "source": "Livemint",
-     "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNYzFqendfbWgzNTFmaHM5bkdycmg2N1pXWDJYb3M4Mnl5NUtEQ3NFS0ppWU55WVVVM0k3azRJbmlVRU1ycmozWExSamRDRWRpTWtQNk5COFd3TF9sSlpGV0I5M2owSjlQVlFHVC13bzMyTDFldHZwZEFSSnhkSWhqb2xTMzl4a0I4ekV1MXZtNjVfYnlQaUkw0gGcAUFVX3lxTE4zTnk2emIxblNHUkJQV0ZuVll1U3lNcmlFdUZURWhBN3VJUzlOdEdpdHRqYWY0U2I2NE9nRUJveWVERm1fTVVaMnRBd3J0enh1Q1NGZ0FpX1FQQ1ktMXJjVS1kd0FvZTVUQURtSHplc0oxYkJfa3lWS09hVlFrYTJhbWRkcHQzQy01dDc2aVdtUmxBMVBQQm1tUFhZZA?oc=5",
+     "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNYzFqendfbWgzNTFmaHM5bkdycmg2N1pXWDJYb3M4Mnl5NUtEQ3NFS0ppWU55WVVVM0k3azRJbmlVRU1ycmozWExSamRDRWRpTWtQNk5COFd3TF9sSlpGV0I5M2owSjlQVlFHVC13bzMyTDFldHZwZEFSSnhkSWhqb2xTMzl4a0I4ekV1MXZtNjVfYnlQaUkw?oc=5",
      "time": "28 Oct 11:21",
      "tags": []
     },
     {
-     "title": "No. 2 on Day 1: How Jio Platforms broke India’s market cap hierarchy on debut itself",
+     "title": "No. 2 on Day 1: How Jio Platforms broke India’s market cap hierarchy in debut trade",
      "source": "Economic Times",
      "link": "https://economictimes.indiatimes.com/markets/stocks/news/no-2-on-day-1-how-jio-platforms-broke-indias-market-cap-hierarchy-on-debut-itself/articleshow/135253571.cms",
      "time": "28 Oct 11:11",
@@ -684,18 +694,13 @@
      "tags": []
     },
     {
-     "title": "Jio adds 2.713 mn mobile users, Airtel gains 2.692 mn in Sept: Trai",
-     "source": "Business Standard",
-     "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPQXRZQ3F3aXdMWkFubFY4cEhtcUNGZkZ3Z1JaWTVFWGNpM3pnazBxMWdpNnFpMXJ1UTNvdTNqT01BQ2VkR3JyTW5hMDdlcXQ3cjlXdXI2MnlOMTdCNTE4SUhRaDVWbGVWRFZlX1ZxcGhITzJoV0tKaHczNFVqbThmVUFKSFhxWENPa2ZTRE9ielFWSVdKUHJjN09McHE4eGdPTEVFRWFPNm5GZkpDdTFBeGhXaTlSQTNUX084bkc5N2ZtTjRwaURDX0EzTDJkZ9IB0wFBVV95cUxPUkpyeFd3cFdmWTl1R2MzSGZMTUpKSUF1dzVzQWhReUdZSVJYUnJMbDF2cFM2TW9nRGtud2YxaXRuenVReDl6M2tIZ2Q3ckhaU3RIenFZdVpiVXcxc2E3akVCbDJNSHZzTHllMnhrM2tBdW04d1dVQlJHbUhfNE42LWdfenF6U1Fxc1pxNlRzaUtST2xHV1o1ekYzMUllQ0E3UzhSc2NBNy1SMFFmQXlWMUd3c1RmX1BheGZ3YTdzTWhQZENIeDY1X3NZQ05sWWR1TEpr?oc=5",
-     "time": "28 Oct 09:08",
-     "tags": []
-    },
-    {
-     "title": "Bharti Airtel Share Price Live Updates: Bharti Airtel Stock Details",
-     "source": "Economic Times",
-     "link": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/bharti-airtel-share-price-live-updates-28-oct-2026/liveblog/135249798.cms",
-     "time": "28 Oct 08:08",
-     "tags": []
+     "title": "Bharti Airtel pays ₹3.15 lakh DoT penalty for subscriber verification lapses",
+     "source": "scanx.trade",
+     "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNelVQMmloWVRmUHNQV3hLNUxkNF9JWHFiMW82aDdLeVYxbWlPdFJYS2VlaUViUmEtS3l3VlZ6ZDVKanNoNjdLQ1paUFlKamdjekZoS3NDZWtwcms2NTJLdXhmOU5ncFdWZ0RnZlI0VURtdE15MUx3TVR6ZUl6Sjd1UUxYT3p1WF9FX0ljbmtnUTBxZWR5WjFWcXVEQUtmdXF6UEhPNS1BS1Q2czdaMXBVNmNFeDgtcWxpX0VzN2hqcVc?oc=5",
+     "time": "28 Oct 09:39",
+     "tags": [
+      "regulatory"
+     ]
     }
    ],
    "setups": [
@@ -705,15 +710,15 @@
    "earnings_flag": true,
    "price_source": "Upstox",
    "cross_check": {
-    "yahoo": 1944.5,
-    "gap_pct": 0.04,
+    "yahoo": 1948.9,
+    "gap_pct": 0.02,
     "flag": false,
-    "yahoo_time": "11:37"
+    "yahoo_time": "12:50"
    },
    "trade": {
     "status": "waiting",
     "phase": "open",
-    "reason": "last close $1942.50 (11:30 bar), $28.30 under the range high $1970.80 (-1.44%)",
+    "reason": "last close $1948.80 (12:40 bar), $22.00 under the range high $1970.80 (-1.12%)",
     "opening_range": {
      "high": 1970.8,
      "low": 1935.1,
@@ -724,13 +729,13 @@
      "avg_volume": 658613
     },
     "last": {
-     "bar_start": "11:30",
-     "close": 1942.5,
-     "vs_level_pct": -1.44
+     "bar_start": "12:40",
+     "close": 1948.8,
+     "vs_level_pct": -1.12
     },
     "bars_source": "Upstox",
     "entry_kind": "not triggered: plan if a bar closes above 1970.80",
-    "rel_volume": 2.88,
+    "rel_volume": 2.5,
     "plan": {
      "symbol": "BHARTIARTL.NS",
      "side": "buy",
@@ -739,8 +744,8 @@
      "entry": 1970.85,
      "stop": 1952.95,
      "target": 2006.65,
-     "entry_time": "11:35",
-     "entry_bar": 27,
+     "entry_time": "12:45",
+     "entry_bar": 41,
      "risk_per_share": 17.9,
      "reward_risk": 2.0,
      "stop_label": "opening-range midpoint",
@@ -755,18 +760,18 @@
     },
     "timemachine": {
      "sessions": 57,
-     "p_target": 0.0043,
-     "p_stop": 0.2208,
-     "p_neither": 0.7749,
-     "p_green": 0.3953,
-     "avg_R": -0.168,
-     "median_close": 1967.65,
-     "p5_close": 1947.32,
-     "p95_close": 1988.32,
+     "p_target": 0.0008,
+     "p_stop": 0.1396,
+     "p_neither": 0.8596,
+     "p_green": 0.3802,
+     "avg_R": -0.167,
+     "median_close": 1967.76,
+     "p5_close": 1950.91,
+     "p95_close": 1984.54,
      "r_at_target": 2.0,
-     "verdict": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 2 % (target first 0.4 % vs stop first 22.1 %).",
+     "verdict": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 1 % (target first 0.1 % vs stop first 14.0 %).",
      "notes": [
-      "77.5 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those."
+      "86.0 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those."
      ],
      "history": {
       "sessions": 57,
@@ -784,7 +789,7 @@
      "max_loss": 680.2,
      "refusal": null,
      "reward": 1360.4,
-     "replay_avg": -114.27
+     "replay_avg": -113.59
     },
     "risk": {
      "verdict": "PASS",
@@ -808,7 +813,7 @@
       "risk_per_share": 17.9,
       "max_loss": 680.2,
       "setup": "orb",
-      "entry_time": "11:35",
+      "entry_time": "12:45",
       "flat_by": "15:15"
      }
     },
@@ -830,23 +835,29 @@
      }
     ]
    },
-   "prev_rank": 5
+   "prev_rank": 4
   },
   {
    "rank": 5,
    "symbol": "ACUTAAS.NS",
    "name": "Acutaas Chemicals Limited",
-   "score": 93,
-   "price": 3728.7,
-   "chg_pct": -1.7,
-   "volume": 1691602,
-   "turnover_cr": 630.7,
+   "score": 92,
+   "price": 3728.2,
+   "chg_pct": -1.72,
+   "volume": 1859145,
+   "turnover_cr": 693.1,
    "news_count": 17,
    "news_tags": [
-    "earnings",
-    "regulatory"
+    "earnings"
    ],
    "news": [
+    {
+     "title": "Acutaas Chemicals - PVR Inox among stocks that hit 52-week highs and rallied up to 20% in a month",
+     "source": "The Economic Times",
+     "link": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxPRkgtY1IxVGpfV29XQm02S0N2Y0pHMmVkUTUxbzU2QWR4Y1cteTVGeEVhOER4bzQ1SEF6cWhWclhZMjdQVnBXR0pza21XTVljVTNnRUhHOVBxb1dCaFVlODY5X1FlYzJ6VjBMSFFoM2N1MEFDNzc0cUN1R2pmanJfZFprdTltMDM1UWo3SWpYQjdIUVc1c180cGg5UEpTeFBERlJidzRwenVNS3huY215VF92RmRNN19ibHJSeVhialp0YnowbDJOQTMybjRnVjRsUWNYZXIwRzUyUVhKUjlTSWNjNXNaNUdxb3dYSjc3bUktaFZPX3hNeVRB?oc=5",
+     "time": "27 Oct 19:19",
+     "tags": []
+    },
     {
      "title": "Earnings call transcript: Acutaas Chemicals Q2 2026 revenue beat lifts stock 13%",
      "source": "Investing.com India",
@@ -889,15 +900,6 @@
      "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNUENFMFlQdXBKOUpCREQxM2xkQzRmQmVqNzRlNjhZU0VIWjdJQ2gwdklYam5uOHF6M19rUlIwdFZQYkZZYnowbTRPc2ZjNmJ3SlgtVGlPbGk2ckEycE5yR1YzOGFBZXB5MU9ZVDZIRXZQMjRPd0JxbzcwdmdSYVNEWVNvLUhCeGpXWGo5ZGo1bmtrRWlySWpqaEQyVVRSWTA2ei1WQmN0eEpaV0FzMldSWXJ3Z3VzcktZNHFwazB2T3ZFVkk3ZHVXaFBKR1FoNThxbEE?oc=5",
      "time": "27 Oct 15:02",
      "tags": []
-    },
-    {
-     "title": "Acutaas Chemicals Limited Reports Earnings Results for the Second Quarter and Six Months Ended September 30, 2026",
-     "source": "www.marketscreener.com",
-     "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNOG1tTnFETFdRTEJaNW43Y0VWdk9EanlDUWhVQURELTVHVWwxcVB4T3NkekgyekwyTjk3dkNseXMydUJlalQwTnY2Zk5EbTFYYUJfa095LUo1Vk91dEpCYkhiTzJkcl9FYktzNEVoQ0VvT1ktMVRsaE45YVZEdUsySDZfM3NtNVF4bFU1VkNLem9aWlk4UDBTbzVkTWR0c1RqZ2J4dTVpXzQ5UVRJMVkzQ0JPcTg4WDhCZ3BDVXVydzdlTG9MZVViX01JbjE0ejNhVDYyWTVkVXRWdVVaWTRvS1FLakx1TGZz?oc=5",
-     "time": "27 Oct 14:51",
-     "tags": [
-      "earnings"
-     ]
     }
    ],
    "setups": [
@@ -908,14 +910,14 @@
    "price_source": "Upstox",
    "cross_check": {
     "yahoo": 3728.3,
-    "gap_pct": 0.01,
+    "gap_pct": 0.0,
     "flag": false,
-    "yahoo_time": "11:37"
+    "yahoo_time": "12:50"
    },
    "trade": {
     "status": "waiting",
     "phase": "open",
-    "reason": "last close $3728.20 (11:30 bar), $246.80 under the range high $3975.00 (-6.21%)",
+    "reason": "last close $3727.50 (12:40 bar), $247.50 under the range high $3975.00 (-6.23%)",
     "opening_range": {
      "high": 3975.0,
      "low": 3840.0,
@@ -926,13 +928,13 @@
      "avg_volume": 243969
     },
     "last": {
-     "bar_start": "11:30",
-     "close": 3728.2,
-     "vs_level_pct": -6.21
+     "bar_start": "12:40",
+     "close": 3727.5,
+     "vs_level_pct": -6.23
     },
     "bars_source": "Upstox",
     "entry_kind": "not triggered: plan if a bar closes above 3975.00",
-    "rel_volume": 11.7,
+    "rel_volume": 9.83,
     "plan": {
      "symbol": "ACUTAAS.NS",
      "side": "buy",
@@ -941,8 +943,8 @@
      "entry": 3975.05,
      "stop": 3907.5,
      "target": 4110.15,
-     "entry_time": "11:35",
-     "entry_bar": 27,
+     "entry_time": "12:45",
+     "entry_bar": 41,
      "risk_per_share": 67.55,
      "reward_risk": 2.0,
      "stop_label": "opening-range midpoint",
@@ -957,18 +959,19 @@
     },
     "timemachine": {
      "sessions": 57,
-     "p_target": 0.0369,
-     "p_stop": 0.2309,
-     "p_neither": 0.7322,
-     "p_green": 0.4785,
-     "avg_R": -0.0,
-     "median_close": 3973.69,
-     "p5_close": 3883.43,
-     "p95_close": 4076.6,
+     "p_target": 0.0257,
+     "p_stop": 0.124,
+     "p_neither": 0.8503,
+     "p_green": 0.5066,
+     "avg_R": 0.052,
+     "median_close": 3976.55,
+     "p5_close": 3904.02,
+     "p95_close": 4062.85,
      "r_at_target": 2.0,
-     "verdict": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 14 % (target first 3.7 % vs stop first 23.1 %).",
+     "verdict": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 17 % (target first 2.6 % vs stop first 12.4 %).",
      "notes": [
-      "73.2 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those."
+      "85.0 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those.",
+      "Average R is +0.052 all the same: the replays that hit neither pull it the other way."
      ],
      "history": {
       "sessions": 57,
@@ -986,7 +989,7 @@
      "max_loss": 945.7,
      "refusal": null,
      "reward": 1891.4,
-     "replay_avg": -0.0
+     "replay_avg": 49.18
     },
     "risk": {
      "verdict": "PASS",
@@ -1010,7 +1013,7 @@
       "risk_per_share": 67.55,
       "max_loss": 945.7,
       "setup": "orb",
-      "entry_time": "11:35",
+      "entry_time": "12:45",
       "flat_by": "15:15"
      }
     },
@@ -1032,34 +1035,47 @@
      }
     ]
    },
-   "prev_rank": 3
+   "prev_rank": 5
   },
   {
    "rank": 6,
-   "symbol": "LT.NS",
-   "name": "Larsen & Toubro Limited",
-   "score": 88,
-   "price": 3808.8,
-   "chg_pct": 3.92,
-   "volume": 3372024,
-   "turnover_cr": 1284.3,
-   "news_count": 29,
+   "symbol": "INFY.NS",
+   "name": "Infosys Limited",
+   "score": 90,
+   "price": 1117.35,
+   "chg_pct": -3.93,
+   "volume": 9110092,
+   "turnover_cr": 1017.9,
+   "news_count": 17,
    "news_tags": [
     "analyst",
     "capital",
-    "deal",
-    "earnings",
-    "macro"
+    "earnings"
    ],
    "news": [
     {
-     "title": "L&T share price jumps 6% after strong Q2 results 2026 | Should you buy, sell or hold? Check target, stop loss",
-     "source": "Livemint",
-     "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNaERVMDVnaF9jZ21sTjQtSHMwY25EV1F6azlLb01JZDVrSEMtYUVKdEppdmJMczdCbmxFSjFZY2xNdk5YSmRIU1RMdURRRHBhT0luOTdIeGJrN1A1Z0QycEdvS3ZIWnU3b2dvalF2WTZ3aGVTRDM1R2I2TVNnS3JQT21DWXh0cHhCN0hmancxajZKaVpTbzltTnRMM25ndnQtcTVzdGJZc0xYcGxuY1pIN0FkSHZWZkhTSkZmM1ByTURVRHRzb0RWZUh5dVZVbUlheWdxelJlM29ja2ZDaUNRbzBiMNIB6AFBVV95cUxPd0l1VDlHQlNGc3pQOGJYQnUyRm9neVhaWi1wUHVLcS0zY2JoNno1WHVTQzdYX0ZKWElnQkt0clE2UlVfQU5LTkp4ekV0SUF0dmxjcUFYUHlta1FSUmluZy1jVmNfUWphay1LcTNvWFBrbjVaT001eU1XZElTaXc4bXgtQlFIRVhCMzdjeVBMQ2xZOC1BbF9sNkoxMkdGTFRaZmtnS0NfRWRYMWYxSGJQUTZTdVNUSXpVc0ZscTFuTF9sdmZ6Wl85STRTbXZ2dXRhbWF2QXZlVmhoX2tFUFh2a0k2M1p0a1BW?oc=5",
-     "time": "28 Oct 11:25",
+     "title": "Infosys, TechM, TCS, other IT stocks plunge up to 5%, extend losses as global AI trade rebounds. What lies ahead?",
+     "source": "Economic Times",
+     "link": "https://economictimes.indiatimes.com/markets/stocks/news/infosys-techm-tcs-other-it-stocks-plunge-up-to-5-extend-losses-as-global-ai-trade-rebounds-what-lies-ahead/articleshow/135255322.cms",
+     "time": "28 Oct 12:16",
      "tags": [
-      "earnings"
+      "earnings",
+      "capital"
      ]
+    },
+    {
+     "title": "Infosys, TechM, TCS, other IT stocks plunge up to 5%, extend losses as global AI trade rebounds. What lies",
+     "source": "The Economic Times",
+     "link": "https://news.google.com/rss/articles/CBMijAJBVV95cUxQY2o5ZEswa09uUEFJNlFBYUp2VWlkWFlOOG50Q2ExbDN2R2RZai13Y19qeEQ0bmpUX25SRlhvaS1mN0xwMlY2UDIyOC0xZDc2U3JRUHN4QnBNeGtYRXQxMUh5dGpHUlRHeTdxbkx4UmgteUJUWVIwLWdqN0hiYmtFTzBmWTk5b1E2d082RkdoNk9VN2hJZWVyaU82U3BGWFFnYXFKOVZIZ1FWckJFY0ZOcDhQbWExc0JtZVBnNFNhMmZreG1tbmJ6QjM3Yno4M3lHX2c4Q0xua250eHd1LXRPN2FvR1lxSHZaS1NnTk01SW41bGNqWnh2WmNSb21ldDFmd1FBdkpLN1RwTHVs0gGSAkFVX3lxTE1VSUlRZWczZ0pfOTNFc191WG9GNVBNWl9OTVRueVoycE4yZ0pJS0FzS0czbmktY3ZmTW9YaUNGYXR3Q2s3TmRsdnp3VV84VmtpRzZMSlJUQW1QWWlmUFdjTUtLYzNQX1VJeEljTk8ybG53OWRGSE5ZVW0zdGpBX3B2NGFXMlJ2NERZalp2aEtDeGd6dEMzT2pfTzRWZmlOV3F3aFFiVXdTUmhiQWVGTGp2NUtMRkJlUWxVMnM1RldiMk9DVzVSSGRLdVp0MjdoVFJaRll4NFRYa2hCdDBBc3I5S3ZjTGs4NWp1aTVmODdMcmhSUEtnX3dhcG5GZ2ZBMkMzWnhwSlJCNjRQZmxpTmZDcGc?oc=5",
+     "time": "28 Oct 12:16",
+     "tags": []
+    },
+    {
+     "title": "Nifty IT index slips 4%; Infosys, TCS, Coforge tank up to 5%; here's why",
+     "source": "Business Standard",
+     "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQNUhnVFNGMFlHd0l2My1HVzZBUlVjbERNbVNMQ0ZvTnlIU3ByNjJBUVBIanFObTk0LWhBblliS2pmanlCSTJkd19KR2I1WGZrTHQ1SmRxeWppVkpFQ29rVDhxRG9qdF9iTWpCQWFSYUFYVFNWVUFNcW5jZ1UzSWRId0Z1M1ZRbU9iNG1XRWtKUDRqVllZS1VndU04ZGdIZVNlLWpxaHBFUmFLbjV5RHlkMzExbEdJRXhId1dHTWgwTlhqRlRYRVVIc0xySnAwUdIB0wFBVV95cUxNSExPR0o2WTlpN0F3SXlQZEV3dXRQYm1LZVE1aVUtNmdCd3QtcDdIMWxMV2pQbzNRZ0dtVW5VWUZINjgxYjZ1YmtmdTVRX2VUTnF1NzZxcWZmYlJmbVhMbGJaSUtYR1RIMWtMQ0Q5am8tRUMwc185em42RExDMWZhZHNPMVNWZVBkWVBCM3JpM2d5WWtLYnF5eDJJRHBhaHZoSWYxOS10T18wV3FaU1o1cUNnLW9fS0d3MEpFeHlWamJYNXRmNE1adEhvMFdjX2RKOWpn?oc=5",
+     "time": "28 Oct 12:01",
+     "tags": []
     },
     {
      "title": "NSE, Sensex Today: Stock Market Latest News; Infosys, TCS, HCLTech Fall, L&T, Bajaj Auto Gain",
@@ -1069,38 +1085,220 @@
      "tags": []
     },
     {
-     "title": "L&T Share Price Jump Over 6%: Will stock hit Rs 4,700 or fall to Rs 3,400? Jefferies, Citi & MOFSL weigh in",
-     "source": "Zee Business",
-     "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNYURDWmRDNk9HNkxlUkYxMC1lQ2FoR3g1d3R1amhxUWZfWHg2YW1WallkOXE0elh1YlZ0ck1RckJmWkx3cWZSR1I1UUFQZFFneHFrLVZFVms2bzk4bzgwaDE1aEdfaVdhc3l6VGhuelBEOWZ5MmhXdUFocXlmMlpjLWhEaTRDVnRYVE1FZ1J6ZUZFbzhHMFcwQkE5c0hsR3JMUXJmZXQ5SVR4RDJJVzdtbTRTZ3FiQTkwSnVwSkFYT1AxSnFrVS15azl5RjN3VkVZUGxfQy12YVotOHVjcEE?oc=5",
-     "time": "28 Oct 11:09",
+     "title": "IT Stocks In Red: Infosys, Coforge, Mphasis Lead Losses; Nifty IT Tanks Over 3%",
+     "source": "NDTV Profit",
+     "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPWXY1dG0tdWdBUjhRWlhjVkZKek9IcTNfTVFuZi00UmxJbTdyZXd2TFFPUE9FckVjUU5wUXU5VEVCbk4wSm13cFBicGp5Tjl0TEVwUHI0bkFLOVRrN1JVVXhYYlptLUZfTElHRm1WMV9HRjlVUHB2eHFmMVNOUG9sYUFaSUR1d2l1ODN1ZEdkYVdwLWt6Qjc0OUZFREpOMUViZTQzSkVkWjZVcWJHQXYzcTNxWWRoMjZCZXfSAcIBQVVfeXFMTm9yUnMwbDJYalBwN29BQzVsSkZKUUJPN09Va09iTTRkZTI1bWplSGM2OTc5d2IzWlZYRVM2REk2SlN3S1BtVmRLNjBEMXRvdU0tZV94S0p4VnhYSkZXYUYzaHBWZTBJQ0VXOExSSEVId2o4bE10eDc4NmJLZ3k4SWVhak4xZHVEUTd3TzZOeU9CMkN3cU40elF3U0I3emlCanFpOHBRc1NIVXVLeU9TR08xeGhOd1o1WExaR0ZTZDdsQnc?oc=5",
+     "time": "28 Oct 11:06",
      "tags": [
-      "analyst"
+      "earnings"
      ]
     },
     {
-     "title": "L&T shares rally 6% after Q2 net profit jumps 33% YoY. Why Jefferies cut target price?",
-     "source": "The Economic Times",
-     "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPWFhFMjJSUFBvMGxqTFF2emY3cmNpNXNuSUE4MG5Wb3Z2S29rUGxOTUFDN2VQcWlKNTFmR21SeHM0UVpyQXF0aDA2UzA0aTJUMUZpd1l4WUJvS3FRQk8xTHN3bERJSXQzUFhUOS1pcTM2eU4tcUwtU2xCVzAwb0dSUENxZzJqWFg0c1FVMVZFMVVWbkp1TGwxYnZwSnBhelJzc2Nud1U5VFlJOWhtOTdjVGxXMVBBRjZvc0lJbDhacmRPWW5PUlh2OFY5am14cTB0VlNPd2dxdTFrWWxQMHh3RThRenJCTFNfNUk40gHwAUFVX3lxTE84Zkp1a1FXTEMyNEN6LUpCN3lwUTgtSm8xOG9WaUpVYUh0RmV3WVNvRkt6ZVlfNVBLVVM0YXB6NTY4NTg5SzU5MVFvQ3ItTWlQV04yUWJObEl1VFhCcWk4VEZEQV95VkhRSTFfM01hX0V0czEzczRyRml5ZllLa3QtWHdtUUxmR1ppU2V2SGdULURWcktUaUFXTW1zS0pGYU9GU0hUbVVkRDJBNlVqRVUxbVR0WnNZcWlRSVJoczRNM0otR1lRLXNYeTZMM2N5SDNhME1PMkhRd2tUeTNCajVIelBmMmhENnB4V3U5d3p2ag?oc=5",
-     "time": "28 Oct 10:43",
+     "title": "IT Stocks Crash! Nifty IT plunges over 1,000 points; Rs 77,000 crore mcap lost – Why are Infosys, TCS & others falling?",
+     "source": "Zee Business",
+     "link": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxQbFVUNjVWc0pjNDY3X21RY25zUnBlNi0wWHB1akNUMGR4Z2FKZU9naG5YbDl0cHZrX2FRZnlCT3BDMmhOQUtjQ3dEVjRmYXViOGI0TFFpMU04QWwwMC05NnNEbXMwdHNwMHJlN2swV3pXQ01rV3RzWFpURGlLMGhWMnVDMUZmbTUwVGFpMHRBWVU5SkhJMGhJZVQ0UjNZMy16blVlUFZtaGdvZzcxWXV4ak5WOVcwRk50U2FKWTFKQ01YTjNtQk0tQ1EtMUh1SHdWRVFKNGV5MmU5Tkdxc0NpNjMyNFg4WGRILVk5bmc5Szl2amI3OC1V?oc=5",
+     "time": "28 Oct 10:01",
+     "tags": []
+    }
+   ],
+   "setups": [
+    "bull_flag"
+   ],
+   "rsi": 64.9,
+   "earnings_flag": true,
+   "price_source": "Upstox",
+   "cross_check": {
+    "yahoo": 1116.75,
+    "gap_pct": 0.05,
+    "flag": false,
+    "yahoo_time": "12:50"
+   },
+   "trade": {
+    "status": "waiting",
+    "phase": "open",
+    "reason": "last close $1116.90 (12:40 bar), $16.90 under the range high $1133.80 (-1.49%)",
+    "opening_range": {
+     "high": 1133.8,
+     "low": 1106.9,
+     "minutes": 15,
+     "bars": 3,
+     "of": 3,
+     "complete": true,
+     "avg_volume": 731298
+    },
+    "last": {
+     "bar_start": "12:40",
+     "close": 1116.9,
+     "vs_level_pct": -1.49
+    },
+    "bars_source": "Upstox",
+    "entry_kind": "not triggered: plan if a bar closes above 1133.80",
+    "rel_volume": 1.43,
+    "plan": {
+     "symbol": "INFY.NS",
+     "side": "buy",
+     "setup": "orb",
+     "date": "2026-10-28",
+     "entry": 1133.85,
+     "stop": 1120.35,
+     "target": 1160.85,
+     "entry_time": "12:45",
+     "entry_bar": 41,
+     "risk_per_share": 13.5,
+     "reward_risk": 2.0,
+     "stop_label": "opening-range midpoint",
+     "target_label": "2R (two times the risk)",
+     "opening_range": {
+      "high": 1133.8,
+      "low": 1106.9,
+      "minutes": 15
+     },
+     "flat_by": "15:15",
+     "interval": "5m"
+    },
+    "timemachine": {
+     "sessions": 57,
+     "p_target": 0.0002,
+     "p_stop": 0.0596,
+     "p_neither": 0.9402,
+     "p_green": 0.4808,
+     "avg_R": -0.023,
+     "median_close": 1133.52,
+     "p5_close": 1122.48,
+     "p95_close": 1145.21,
+     "r_at_target": 2.0,
+     "verdict": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 0 % (target first 0.0 % vs stop first 6.0 %).",
+     "notes": [
+      "94.0 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those."
+     ],
+     "history": {
+      "sessions": 57,
+      "triggered": 19,
+      "target": 1,
+      "stop": 8,
+      "close": 10,
+      "avg_R": -0.332
+     }
+    },
+    "sizing": {
+     "qty": 66,
+     "bound_by": "position cap",
+     "cost": 74834.1,
+     "max_loss": 891.0,
+     "refusal": null,
+     "reward": 1782.0,
+     "replay_avg": -20.49
+    },
+    "risk": {
+     "verdict": "PASS",
+     "reasons": [],
+     "warnings": []
+    },
+    "order": {
+     "symbol": "INFY.NS",
+     "side": "buy",
+     "qty": "66",
+     "type": "market",
+     "time_in_force": "day",
+     "order_class": "bracket",
+     "take_profit_limit_price": "1160.85",
+     "stop_loss_stop_price": "1120.35",
+     "why": "opening-range breakout on INFY.NS: 66 shares, bound by your position cap (66 x 13.50 = $891 at the stop)",
+     "plan": {
+      "entry": 1133.85,
+      "stop": 1120.35,
+      "target": 1160.85,
+      "risk_per_share": 13.5,
+      "max_loss": 891.0,
+      "setup": "orb",
+      "entry_time": "12:45",
+      "flat_by": "15:15"
+     }
+    },
+    "alerts": [
+     {
+      "type": "stop",
+      "price": 1120.35,
+      "at": null
+     },
+     {
+      "type": "target",
+      "price": 1160.85,
+      "at": null
+     },
+     {
+      "type": "time",
+      "price": null,
+      "at": "15:15"
+     }
+    ]
+   },
+   "prev_rank": null
+  },
+  {
+   "rank": 7,
+   "symbol": "LT.NS",
+   "name": "Larsen & Toubro Limited",
+   "score": 87,
+   "price": 3819.5,
+   "chg_pct": 4.21,
+   "volume": 4382167,
+   "turnover_cr": 1673.8,
+   "news_count": 25,
+   "news_tags": [
+    "analyst",
+    "earnings"
+   ],
+   "news": [
+    {
+     "title": "Stocks to Watch Today 28 Oct: Jio, RIL, HUL, L&T, Maruti",
+     "source": "Univest",
+     "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQWjg4dzN0LXJtUnpTQkhxQmNSVEI0WlF2dGNwaUo0UG5VS09Pdnd0T3RUcDhoNFNfYzZwenRjc1JJQ3llcnVDQ1N0QnJLb3pSODdVdk93VlQ3czBDRjhMSk15c0RVd3RGSURubG1xdnFpQzQzeGJneGZoSjkxWW9qQXQ2N21Bd3hzbU8wMjMwQjd3WUJ5U0xpSWNnbno4ckhxS3lrUmRBVTFRTVNLSU1OdElmeWJ4eEo2TXhiNXFnWXlidUtRR0lyVFVUanJGM1BTOGVBTUZVV29YbGM?oc=5",
+     "time": "28 Oct 12:48",
+     "tags": []
+    },
+    {
+     "title": "L&T Share Price Jumps 6% on Q2 Results: Target, Upside",
+     "source": "Univest",
+     "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQQnRpOVBnZDhZd0FYRV8xaG11RDVjZXc0bXhkeGFqZTRVYXZReWtrampsMUpIOWUtazdhWUFQc2FNb3NiUWVCNG5HNGJYQ1ZxWmpjWkpHNHFtOXFBZmNrTWFsVHdVSk4xQjJseDFZMWVaOW1tQ0lwTDRRVV9VN0d2LVZFd09mWi13clVRSjJxT1liNHVHNGtCUzhUZmxxSzJfQ3MwdFlLZG1WTWNiOFE3eWpCRFdEZjc4RXdFVXZGU2RDNkJhSEJuanoyazg2M2UwUGF6cnk1UEp1QQ?oc=5",
+     "time": "28 Oct 12:13",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "L&T Shares Jump 6% After Q2 Earnings As CLSA Sees 32% Upside",
+     "source": "BW Businessworld",
+     "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPckFvUnd0cGFQVDhMV2xjaVRXMEtUZTVuOUljOWpPZG1FMmFISWhSY2FySDY2aXNFcHotZEhaU0p6OWJ3Z0g4OFJmQWtFUnpja19DMm9wLTl2T093YXlSOW1ScnpfQ1FuZzNrUjFKeHczYXhRMzNDdW51QVpsMDRVU2VkYkRlRkpYY3lOT0otUnRWU0pVemtReExEOTRYeEZERXBTMw?oc=5",
+     "time": "28 Oct 12:02",
      "tags": [
       "earnings",
       "analyst"
      ]
     },
     {
-     "title": "L&T shares rise 6% after 32.5% profit in Q2; brokerages bullish, see up to 28% upside",
-     "source": "Moneycontrol.com",
-     "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNTmhDcnBvSi1zaUFuS2cxa0NPTWpXSWpTVXlNV2J0XzZfWmJGUml2TVNnZ2Nkd0RIWlkzSWxpZEo0Z3JHck5wSDBMSDl2VERiY1phZlpLZGV4WG9XSlNKSmZxRmpNcUNJYmhkWUgzSkVUUl9TZms4RU9SNU9kYkhVeGFCMkxmakR5emtZNFBOaHV0WlNwbGEyOFlSRFRmektWX21vNEs5blN1UkstS3hqaEdxSS1wOVRsNkZCQzNYYXVjeVhyem5WZGc3YkVSeWNNMDVYYU5PdjFiQk5lTEHSAeMBQVVfeXFMTTZSY3MxWm5UWF96TEQxNXlGNTdhLWhWVlh6RlBiUnp2QnF2X3hobllnNG5WR2tGQlVuNkhYWF9DRmg3d0tiSlJId2tVSWotMEhPVVlOWjI1ZUQ3UGlXYXdyUjItam44ZVVLSFQ0QUhJbmZmY3puNjE1azgxQ0RTUXZ6QXFvaHoxNzdQYm0xQVI1bDRCVHQ4ZUUwOGpvUkthZDI3TTZPbVR4SG1OS3pWYlFYeS1PSVBLMmUzSGhBbTNEeEo5QkZpWDlLRlpMYmFlQmM0NjdJY0lHQ01OWlVwRVJJTzA?oc=5",
-     "time": "28 Oct 10:35",
+     "title": "L&T shares rally 6% as Q2 profit rises 33%; brokerages cite strong order inflows, flag margin pressures",
+     "source": "ET Infra",
+     "link": "https://news.google.com/rss/articles/CBMitwJBVV95cUxQZl9oWU14Y1JGcHZuRWRIbml0MWRmWF9td0dINGtnTW1zcDVUb0swaFRaaWlxT0h5Rm1HQV9JZUIyUFdiRHhiSXpOcWw5Z2xDSWRPWS1WMmdrZkNCdnFiOXRxVWZtOU5scDUyTHJEeWR3WEkyNWlNV2NLbEt5czZOZGRzVGRCUkF2bEQwY0tPWnBUckdubUFBOFpGcGxJSEZ3R0Z0dlVpeUNNWlJzUlpFTHFOY2kzNS01dV9nWTFkNjlvY0Z4Y0RiYUxuLVlmemtjTVNhX1Ffblg4M0I3VE82MlUzUnU4MlhoeTY2N2ZTVDZYZnRWaWJlVHdCY05RTHVRcFNEeXNaSHU3VE51V2N6Q2U3dHp4MHBsc1l0djZXZVVkaHlnWFN0WFZjQVF2bkxhX05nXzNnVdIBggJBVV95cUxOdm9zNng4cy1CSk0wNDdEcS12N2tPUVZKT2tKckswTGFTeGtvTjZaelJ4LWhsWGsxVlBiU3pSTTVLdEtrZkVvWTE2UU0yZDZJcGh1dk1HRzdMampRM1pZTkRDZUdSZVI4U1lFYk9VNFF6SVV1NFBubVRORGxpandyUGc0bTRKSl93Rkh4Z0VBbUlkWDRKa0t2YThaZFVfc3ZiU28xWmFNZ0IzYkFpcC1aWTgwaVVXSXJnV05zUXIwU2Z5VHZOUnc4YnN5NmdZWHExZENXbEpJanhMUVJLdXhtMy11VWoyQUUzSXlGbFNsTDFHXzdjbmRMdFhPVm5NZ0ZNQnc?oc=5",
+     "time": "28 Oct 11:55",
      "tags": [
       "earnings"
      ]
     },
     {
-     "title": "L&T surges 6%, sees sharpest intraday rally in 6 months on strong Q2 show",
-     "source": "Business Standard",
-     "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNaWJYcWpHeGc3NGF1NGc0d0U2LXhYV0x4YVZ3R1k5NjNseXBRNW1tUmtpLV90MkZXSURacy1feFVxYkVzb1NfUFlXU0FxcmdBZW5QMFM4M0QtaTVjM0dPYjkxd1ZlVDdLNF9rbjV1ME5Rd21GbkZ0VUphWEM2TnVKVmxTbDdIOE16Y2dKbi1zT1VNZ3o2d3FFYXc0dXdMYXhvZXlXMFF5UG9NZ25heW1BZ1RuTVVhOWFqZkpWZFlpVTdPSVFGc2J3RFNuTWV2NEF1TWF2UNIB2gFBVV95cUxPeWFNTHpxR0tVekdHVzBpTjMzMlF0LUR3QWp1cUdVTzBMeWpIeHp1eXg0QS1ucGdsV3pZRXJuclEyWHA4MXl5UzJ6REhMRUJOZXg0RkZvOFVfRjQwRm45eFIwV0k2Ni0teU1oenJPa0paZTljZHJPYlM2UjAwNkZXMHRCNUwxSV9Wc3pyT0RjSVJ1bFNZcDF4MkxEbTlWVXRGcG5hZ3FFdFByMkZSMGVpLXhNTEtGSE5URV8waGUzazdGLTFXamt5bEZzNXNlemhadDB6aVNUWUZfZw?oc=5",
-     "time": "28 Oct 10:16",
+     "title": "Buy, Sell Or Hold: Jio Platforms, Apollo Hospitals, Kaynes Tech, HDFC Bank, L&T, Tata Technologies | Ask Profit",
+     "source": "NDTV Profit",
+     "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQWk5vWF9RamNNSnRoXzlTclR1RGgyX0VmQVpGTGpzNUt3M0pHQmZiZTZoaVFKXzcyS3RiZlFTNElUelF5ak4yaGFBNWJaZmpLeThKWmhVV2gwWGFMbTZiWVN6MEo3QkdTM01GUDNrb0lSUG9oN3pxSnpTTkp0aUlKSkpUZkZzSUVjSnhuNl9DazVfQ2tyNjB1VEVReVJCWjFQMFFuS05kUS1QSUlZLUlXRzhQX2xYUjNta3pxY3VYUmw4dFpsNkNuU3l3ZDBsamlRQ3o5VXNqN0FWdnE1WnfSAeYBQVVfeXFMTi1BOS0zbE03b1YxRER2Si1xNk1FQ0NFUV9hT2xIX1hFWkhsaXdRRTZReWZ1T3lCU2t0VHQ1VElsUkFyQ0dtVzlrejIwUUliMGQza0U2Ylk3RkFvYnZ3dzlYTWlUbGNxY0VrbmVDcDBYNHNsRW85V0ZEcDhQM2tYdVNMNFFWaFRzbUMyUVlHY2NIVkdGX1M2dTVReFNHUVBzbjJmZkJtd0FMSVVxd2lwNEQ1UGYzRGVBbnVuUjFfeXVlbDN6T0JPaDJOZkVGNlB4SjB2ckhudHNTa2dPeG1WdlY1NGJmTkE?oc=5",
+     "time": "28 Oct 11:46",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "L&T share price jumps 6% after strong Q2 results 2026 | Should you buy, sell or hold? Check target, upside",
+     "source": "Livemint",
+     "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNaERVMDVnaF9jZ21sTjQtSHMwY25EV1F6azlLb01JZDVrSEMtYUVKdEppdmJMczdCbmxFSjFZY2xNdk5YSmRIU1RMdURRRHBhT0luOTdIeGJrN1A1Z0QycEdvS3ZIWnU3b2dvalF2WTZ3aGVTRDM1R2I2TVNnS3JQT21DWXh0cHhCN0hmancxajZKaVpTbzltTnRMM25ndnQtcTVzdGJZc0xYcGxuY1pIN0FkSHZWZkhTSkZmM1ByTURVRHRzb0RWZUh5dVZVbUlheWdxelJlM29ja2ZDaUNRbzBiMNIB6AFBVV95cUxPd0l1VDlHQlNGc3pQOGJYQnUyRm9neVhaWi1wUHVLcS0zY2JoNno1WHVTQzdYX0ZKWElnQkt0clE2UlVfQU5LTkp4ekV0SUF0dmxjcUFYUHlta1FSUmluZy1jVmNfUWphay1LcTNvWFBrbjVaT001eU1XZElTaXc4bXgtQlFIRVhCMzdjeVBMQ2xZOC1BbF9sNkoxMkdGTFRaZmtnS0NfRWRYMWYxSGJQUTZTdVNUSXpVc0ZscTFuTF9sdmZ6Wl85STRTbXZ2dXRhbWF2QXZlVmhoX2tFUFh2a0k2M1p0a1BW?oc=5",
+     "time": "28 Oct 11:25",
      "tags": [
       "earnings"
      ]
@@ -1111,15 +1309,15 @@
    "earnings_flag": true,
    "price_source": "Upstox",
    "cross_check": {
-    "yahoo": 3808.3,
-    "gap_pct": 0.01,
+    "yahoo": 3819.5,
+    "gap_pct": 0.0,
     "flag": false,
-    "yahoo_time": "11:37"
+    "yahoo_time": "12:50"
    },
    "trade": {
     "status": "waiting",
     "phase": "open",
-    "reason": "last close $3806.30 (11:30 bar), $87.70 under the range high $3894.00 (-2.25%)",
+    "reason": "last close $3819.30 (12:40 bar), $74.70 under the range high $3894.00 (-1.92%)",
     "opening_range": {
      "high": 3894.0,
      "low": 3770.0,
@@ -1130,13 +1328,13 @@
      "avg_volume": 551062
     },
     "last": {
-     "bar_start": "11:30",
-     "close": 3806.3,
-     "vs_level_pct": -2.25
+     "bar_start": "12:40",
+     "close": 3819.3,
+     "vs_level_pct": -1.92
     },
     "bars_source": "Upstox",
     "entry_kind": "not triggered: plan if a bar closes above 3894.00",
-    "rel_volume": 6.54,
+    "rel_volume": 5.61,
     "plan": {
      "symbol": "LT.NS",
      "side": "buy",
@@ -1145,8 +1343,8 @@
      "entry": 3894.05,
      "stop": 3832.0,
      "target": 4018.15,
-     "entry_time": "11:35",
-     "entry_bar": 27,
+     "entry_time": "12:45",
+     "entry_bar": 41,
      "risk_per_share": 62.05,
      "reward_risk": 2.0,
      "stop_label": "opening-range midpoint",
@@ -1162,17 +1360,17 @@
     "timemachine": {
      "sessions": 57,
      "p_target": 0.0,
-     "p_stop": 0.0173,
-     "p_neither": 0.9827,
-     "p_green": 0.4634,
+     "p_stop": 0.0039,
+     "p_neither": 0.9961,
+     "p_green": 0.4588,
      "avg_R": -0.029,
-     "median_close": 3891.87,
-     "p5_close": 3851.53,
-     "p95_close": 3934.18,
+     "median_close": 3891.92,
+     "p5_close": 3859.08,
+     "p95_close": 3926.86,
      "r_at_target": 2.0,
-     "verdict": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 0 % (target first 0.0 % vs stop first 1.7 %).",
+     "verdict": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 0 % (target first 0.0 % vs stop first 0.4 %).",
      "notes": [
-      "98.3 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those."
+      "99.6 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those."
      ],
      "history": {
       "sessions": 57,
@@ -1214,7 +1412,7 @@
       "risk_per_share": 62.05,
       "max_loss": 992.8,
       "setup": "orb",
-      "entry_time": "11:35",
+      "entry_time": "12:45",
       "flat_by": "15:15"
      }
     },
@@ -1236,26 +1434,41 @@
      }
     ]
    },
-   "prev_rank": 10
+   "prev_rank": 6
   },
   {
-   "rank": 7,
+   "rank": 8,
    "symbol": "RELIANCE.NS",
    "name": "Reliance Industries Limited",
-   "score": 87,
-   "price": 1176.4,
-   "chg_pct": -1.66,
-   "volume": 8237548,
-   "turnover_cr": 969.1,
-   "news_count": 29,
+   "score": 86,
+   "price": 1173.7,
+   "chg_pct": -1.88,
+   "volume": 9926515,
+   "turnover_cr": 1165.1,
+   "news_count": 27,
    "news_tags": [
     "capital",
-    "deal",
     "earnings"
    ],
    "news": [
     {
-     "title": "No. 2 on Day 1: How Jio Platforms broke India’s market cap hierarchy on debut itself",
+     "title": "Stocks to Watch Today 28 Oct: Jio, RIL, HUL, L&T, Maruti",
+     "source": "Univest",
+     "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQWjg4dzN0LXJtUnpTQkhxQmNSVEI0WlF2dGNwaUo0UG5VS09Pdnd0T3RUcDhoNFNfYzZwenRjc1JJQ3llcnVDQ1N0QnJLb3pSODdVdk93VlQ3czBDRjhMSk15c0RVd3RGSURubG1xdnFpQzQzeGJneGZoSjkxWW9qQXQ2N21Bd3hzbU8wMjMwQjd3WUJ5U0xpSWNnbno4ckhxS3lrUmRBVTFRTVNLSU1OdElmeWJ4eEo2TXhiNXFnWXlidUtRR0lyVFVUanJGM1BTOGVBTUZVV29YbGM?oc=5",
+     "time": "28 Oct 12:48",
+     "tags": []
+    },
+    {
+     "title": "Isha Ambani says Jio IPO marks a promise, renews Dhirubhai Ambani’s trust with investors",
+     "source": "Economic Times",
+     "link": "https://economictimes.indiatimes.com/markets/stocks/news/isha-ambani-says-jio-ipo-marks-a-promise-renews-dhirubhai-ambanis-trust-with-investors/articleshow/135253885.cms",
+     "time": "28 Oct 11:26",
+     "tags": [
+      "capital"
+     ]
+    },
+    {
+     "title": "No. 2 on Day 1: How Jio Platforms broke India’s market cap hierarchy in debut trade",
      "source": "Economic Times",
      "link": "https://economictimes.indiatimes.com/markets/stocks/news/no-2-on-day-1-how-jio-platforms-broke-indias-market-cap-hierarchy-on-debut-itself/articleshow/135253571.cms",
      "time": "28 Oct 11:11",
@@ -1287,22 +1500,6 @@
      "tags": [
       "capital"
      ]
-    },
-    {
-     "title": "Jio IPO listing: Reliance-promoted firm becomes 2nd largest market cap holder in India | Check other 4 in top 5",
-     "source": "Mint",
-     "link": "https://www.livemint.com/market/stock-market-news/jio-ipo-listing-reliance-promoted-firm-becomes-2nd-largest-market-cap-holder-in-india-check-other-4-in-top-5-11793162583765.html",
-     "time": "28 Oct 10:24",
-     "tags": [
-      "capital"
-     ]
-    },
-    {
-     "title": "Jio Platforms Opens With 21% Gains at ₹1,358; Reliance Industries Shares in Focus",
-     "source": "Gujarat Samachar",
-     "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNZWRRTTVDQmswdkpzV1dLWXZwdWhMYlFGLXE3NnRoSGpaaHVlOWtRbndNcGt0OUpyeVZjYVVtaG1pUzFfOGQ4SE9mWEJRZ2RuSXlCMDVBTFZKWjRVYzRZTno5cWtxMFNpTjFZY05HdjlTd0tvbVZJd1pRR0JXRzFoZU1RYVIzUmgxYnZ0RTY4b3puZTUxS2VBUmNCTTNkWUcwc1R2NEt0N1ltbUpJRnJrRG84ejBGU1RvQkpNY3NISQ?oc=5",
-     "time": "28 Oct 10:21",
-     "tags": []
     }
    ],
    "setups": [],
@@ -1310,10 +1507,10 @@
    "earnings_flag": true,
    "price_source": "Upstox",
    "cross_check": {
-    "yahoo": 1175.4,
-    "gap_pct": 0.09,
+    "yahoo": 1173.7,
+    "gap_pct": 0.0,
     "flag": false,
-    "yahoo_time": "11:37"
+    "yahoo_time": "12:50"
    },
    "trade": {
     "status": "triggered",
@@ -1329,13 +1526,13 @@
      "avg_volume": 406548
     },
     "last": {
-     "bar_start": "11:30",
-     "close": 1175.7,
-     "vs_level_pct": -1.65
+     "bar_start": "12:40",
+     "close": 1174.1,
+     "vs_level_pct": -1.78
     },
     "bars_source": "Upstox",
     "entry_kind": "triggered at 9:45 AM",
-    "rel_volume": 1.85,
+    "rel_volume": 1.57,
     "plan": {
      "symbol": "RELIANCE.NS",
      "side": "buy",
@@ -1435,24 +1632,67 @@
      }
     ]
    },
-   "prev_rank": 9
+   "prev_rank": 7
   },
   {
-   "rank": 8,
+   "rank": 9,
    "symbol": "WAAREEENER.NS",
    "name": "Waaree Energies Limited",
    "score": 84,
-   "price": 2215.2,
-   "chg_pct": -2.63,
-   "volume": 1540882,
-   "turnover_cr": 341.3,
-   "news_count": 29,
+   "price": 2262.9,
+   "chg_pct": -0.53,
+   "volume": 2126124,
+   "turnover_cr": 481.1,
+   "news_count": 31,
    "news_tags": [
     "deal",
     "earnings",
     "regulatory"
    ],
    "news": [
+    {
+     "title": "Waaree Energies flags US-linked export order cancellations",
+     "source": "BusinessLine",
+     "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPUldiTWFFSGhUM3pXUjdVNzNlWlYwVzV2NFp1TFE4RE45dk9OTS1EMUtDOFlxaHBjVHBWTnpPanFGUzUwaUdYUkp4ZkIwY2pyb3NNaUdScUJGNjE2d1puR1hUUEY4Yks5b3NQeHcyRVVfZXNQaDdmNldMY0pNbDl3aEpoSUc0S3FMYUFlVDBlOTMxcnhXSmRvWTlUX3NPekdPb212MnhpdUxZSS0wbEtwZHJFT09GdWhLelRJTjVPYkYtZXfSAcoBQVVfeXFMTlUzUzBZVHVuU2pzYnpjMmdsajFLbzN3M2Z4cHVTbGhKMEpsN01Gd0VUNkxWOC1jTzJHVVF3ajYxd05MTlk4Vk5pUUk0WVFPOEh1LXJuVXZoSW1reFhPMWt3b2N1c3JHU1QyZlRCQW9tdFJKSEJvSnFESTN3NUtCWXdBVjltdWtZNGVmMkNmekppNVBKZXRSd3BRQXB2SmhLUTRreWI0Uk4yR2lISWxhdDE4cGEyUFdBeUxNTGRTeExVUDZoejBwY21uQQ?oc=5",
+     "time": "28 Oct 12:29",
+     "tags": []
+    },
+    {
+     "title": "Waaree Energies Reports 47.3 Percent Revenue Growth to INR 15,449.5 Cr in H1 FY27",
+     "source": "Energetica India Magazine",
+     "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOdlYxSzhkYnJBNjd0bEpmeWJPNUVnWmRacXN0RFVMSUZtenUzaWQ3SWJIT2syLTAzazBXaXJvRjRPZGFpd2ZUbVBDQzM5c3RaMFZBVFMzaUxBbGxBN01ISGxac0h3M3Z2MWkyVzNUZ2JBdHQ2enFjbGVUY0pjRmpDZENLb0ZqSmFFdEVQNTJRejFnWXNsVHpiYWRYUFpsWGFSTFZLQXZ4LU5LWS0xdThTMVQxejFwMUZZSkE?oc=5",
+     "time": "28 Oct 12:13",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "Waaree Energies Shares Fall 5%: What Went Wrong in Q2 Despite 24% Revenue Growth?",
+     "source": "Trade Brains",
+     "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxONFdicGlVeDRVWmJqNWkyQ3YzVERZOFUzSE9iQ0JueUZJUU9mT0VnVlJMS0dFQ2h6UEVVdmJPYW9TU3ZaN09kWWFwTVdMallnMnF3MXBFVk9wYnF5WExsRHQ5NkRFLWZ3aE9DVkdzZXpzMTgzOUhVZlM2VmZJckJVa2dSOHBZdUtQN2hJV3NFb3BielVwVjhOMUEtQlJOT3VsU2VyNGM5SGs2azVKSmZwZjBOWkhtc2NhQXoxUEdrNnlBZw?oc=5",
+     "time": "28 Oct 12:13",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "Waaree Energies Q2 Results, Net Profit Falls 14% To ₹754 Crore Despite 24% Revenue Growth",
+     "source": "Free Press Journal",
+     "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOU1RNajR4RlhtNkh4dkJqZ2pxTEZtcWlHb01fdWFfdkgzcUhWakFxc2w3alpwaHd2VkZORG83TWNKcFlROV90cl9XdVJ4c25jeGZXQ3V0SkhUcFZoQVhRal9oaFd5VGQ1d1JXYkV5ekRYbkdYZUN5S0xQNEZoVVZka1p1RVk0YmtvU3BlM0JoRFBSWHgzNmFhQ1Ffemh3UVpxTWFpTVN2aW85OWlJTE4tcE50MXJUUHZUWnAzdW94SU9jZjZU?oc=5",
+     "time": "28 Oct 11:44",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "Waaree Energies Ltd Faces Financial Setback Amidst Revenue Growth in Q3 2026",
+     "source": "MarketsMojo",
+     "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPX3Vqam1PNlRKdDE3QUpJN25mSUJHOUZkcHJ0Wkh1Tkl4WFBmdlpVUmFDYVdRWFZMclp2UUhRd0pEX3VLcnlVRFhFaTlLTWtkMnJsUHhhTnlQRjkyU1pMSl9MRXdEX3BPV1N0ek9UNHlyT1BvejBOYVl6U0pwRXQyT2ZlWDJBVm5kc2Vfb3RwTGluRDdqSWUtR2VsS0s1UlhVbFllSURPdHVuYzlTeGltSEVscUI5SDNVMlBQU05NU3JRRFBxVDJKQ0E5b3RIbDg?oc=5",
+     "time": "28 Oct 11:08",
+     "tags": [
+      "earnings"
+     ]
+    },
     {
      "title": "stock in news maruti suzuki waaree energies sail q2 results",
      "source": "Zee Business",
@@ -1461,49 +1701,6 @@
      "tags": [
       "earnings"
      ]
-    },
-    {
-     "title": "Waaree Energies shares fall over 3% after Q2 profit and EBITDA decline",
-     "source": "Business Upturn",
-     "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOUlV6RVdxZnBIQ08zOEtIVnNLaDNsTG1jcm5mdEx1TUUwZWlFY3VYcFNJdE1kX1BGQjZDNnJaRXBGYW5UWEVObTljWU5YYzMwRl9TcmJWVG82ZHJXbS1GQjVMWU81MGNwbjIzYm8wSHlRbjVjVVJJZS1mVFNENkhDak9xTHRVam5XZDhsbHNScUNXLTNzSlZkZmZKSWJaZ3lpMDE0bzlYZURSbUxIWEREeHIxVUgwNTN0UkE?oc=5",
-     "time": "28 Oct 10:03",
-     "tags": [
-      "earnings"
-     ]
-    },
-    {
-     "title": "Waaree Energies Reports 24% Q2 Revenue Growth; Profit Declines 14% YoY",
-     "source": "Saur Energy",
-     "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQU09rd0dUU04xU3lsQjQ5eG5KZ3p3YTNZVmI2UFJyNXlRVnoxUXRCMzRFcEVVemNERkRtUzQ2WF8wc08zVkMzWjJsbnRlT3JfZG9kZlRaOG1VWEUyM0NuUkZmcFVVZzVEY2JHWGQxSERETW9IaUdiUHltbG1kWGZncnV3TjJWZHlLc3JkdVlPcFRUSmJZQnVNOXdzdFYzRjBhZUhSNFV5MU5qLWdzRzFpaGVjdHBLZm12NkpqVlVB?oc=5",
-     "time": "28 Oct 09:41",
-     "tags": [
-      "earnings"
-     ]
-    },
-    {
-     "title": "Waaree Energies share price drops 3% as Q2FY27 net profit plunges 14% to ₹753 crore",
-     "source": "Upstox",
-     "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQTDlTMzNEOE9oQlp6cW9ncU1Mc0d0amx2blN0NV9oYmxSSGlZZkNBMllyblBIdVVQMnJLQkR1U2hIMFVWbDIxVGtTQzZyRmVtUG5ITUg1aGhOWW1lcWhtd0h1VlNzS2pWOEdqWjVhX0JNQWU0bXRFNU9KQzVQV3Qwb0JEZ1ZOSW9UR1JuQmtlUmp1cks5RTh1LXhwWmR2a3JpcHhKUHBJLUVsZTU4ek1OaTJuUFR3Tl94a2JmRFhTS3FDdjdTMkhVcTFmVVRHZUt0NTNMRHNsUmQ?oc=5",
-     "time": "28 Oct 09:24",
-     "tags": [
-      "earnings"
-     ]
-    },
-    {
-     "title": "Waaree Energies Q2 Profit Falls 15% To Rs 719 Cr Despite 24% Revenue Growth",
-     "source": "BW Businessworld",
-     "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNSldiZHFsd191dklmRGY2UXNlMjVYZFZ0RDlYY0d3UGIwcmFpa2RXVXRzMmV1MHhlS3FuS0tsYUxZdFFyWF96NHVzUnAyOEpURExFVm1ZTVZnZmZhN0VyUzFJSzBQa2VadUZKNWdZSEJIdkxnM2hXQTFpSHczaEt5LTA0TngzU2cyVlhoMTFLQVQzWE1DN0tjUTZSUWl4bERZRFhyUzVnSFB0em9yVWdEUFFIMUVXZ3Y2?oc=5",
-     "time": "28 Oct 08:37",
-     "tags": [
-      "earnings"
-     ]
-    },
-    {
-     "title": "Stocks to Watch Today (Oct 28): L&T, Maruti Suzuki, Waaree Energies, Infosys, SAIL, Indus Towers and more",
-     "source": "Zee Business",
-     "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQRkF5XzRBQm9UTmtJRi1Gb3hiLXNleGMyVGJYY0ItV2FjS19hd1NpbVZqdl90c2dDUnl2cWxKRThMQkQ0QzZsbmJORElDRFd4NGYxemdTellpS25hZThzM0dNb2tHOVJ6UDVYekNFbHlHcEFtRzcwU01QLUhhYUZaVXY4VEgxX0VXRTFuZE9IUE9PTlhMSTZyejRKTUlTbkNtV2lBN3ZBTkJleVJpdVNnVGxpaGVQZXQ0MWJySVBDYUstcUpLbDZ0NlFpbFFGVmlUSHRRWklYTjVHT0k?oc=5",
-     "time": "28 Oct 08:19",
-     "tags": []
     }
    ],
    "setups": [],
@@ -1511,15 +1708,15 @@
    "earnings_flag": true,
    "price_source": "Upstox",
    "cross_check": {
-    "yahoo": 2217.0,
-    "gap_pct": 0.08,
+    "yahoo": 2262.1,
+    "gap_pct": 0.04,
     "flag": false,
-    "yahoo_time": "11:37"
+    "yahoo_time": "12:50"
    },
    "trade": {
-    "status": "waiting",
+    "status": "triggered",
     "phase": "open",
-    "reason": "last close $2209.90 (11:30 bar), $38.10 under the range high $2248.00 (-1.69%)",
+    "reason": "the 12:25 bar closed above the range high",
     "opening_range": {
      "high": 2248.0,
      "low": 2188.1,
@@ -1530,24 +1727,24 @@
      "avg_volume": 150856
     },
     "last": {
-     "bar_start": "11:30",
-     "close": 2209.9,
-     "vs_level_pct": -1.69
+     "bar_start": "12:40",
+     "close": 2272.0,
+     "vs_level_pct": 1.07
     },
     "bars_source": "Upstox",
-    "entry_kind": "not triggered: plan if a bar closes above 2248.00",
-    "rel_volume": 6.25,
+    "entry_kind": "triggered at 12:30 PM",
+    "rel_volume": 6.79,
     "plan": {
      "symbol": "WAAREEENER.NS",
      "side": "buy",
      "setup": "orb",
      "date": "2026-10-28",
-     "entry": 2248.05,
+     "entry": 2250.2,
      "stop": 2218.05,
-     "target": 2308.05,
-     "entry_time": "11:35",
-     "entry_bar": 27,
-     "risk_per_share": 30.0,
+     "target": 2314.5,
+     "entry_time": "12:30",
+     "entry_bar": 38,
+     "risk_per_share": 32.15,
      "reward_risk": 2.0,
      "stop_label": "opening-range midpoint",
      "target_label": "2R (two times the risk)",
@@ -1561,18 +1758,18 @@
     },
     "timemachine": {
      "sessions": 57,
-     "p_target": 0.0024,
-     "p_stop": 0.1581,
-     "p_neither": 0.8395,
-     "p_green": 0.3933,
-     "avg_R": -0.148,
-     "median_close": 2243.07,
-     "p5_close": 2213.35,
-     "p95_close": 2275.61,
+     "p_target": 0.001,
+     "p_stop": 0.0799,
+     "p_neither": 0.9191,
+     "p_green": 0.3935,
+     "avg_R": -0.121,
+     "median_close": 2245.9,
+     "p5_close": 2219.98,
+     "p95_close": 2274.82,
      "r_at_target": 2.0,
-     "verdict": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 1 % (target first 0.2 % vs stop first 15.8 %).",
+     "verdict": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 1 % (target first 0.1 % vs stop first 8.0 %).",
      "notes": [
-      "84.0 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those."
+      "91.9 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those."
      ],
      "history": {
       "sessions": 57,
@@ -1584,13 +1781,13 @@
      }
     },
     "sizing": {
-     "qty": 33,
+     "qty": 31,
      "bound_by": "max loss",
-     "cost": 74185.65,
-     "max_loss": 990.0,
+     "cost": 69756.2,
+     "max_loss": 996.65,
      "refusal": null,
-     "reward": 1980.0,
-     "replay_avg": -146.52
+     "reward": 1993.3,
+     "replay_avg": -120.59
     },
     "risk": {
      "verdict": "PASS",
@@ -1600,21 +1797,21 @@
     "order": {
      "symbol": "WAAREEENER.NS",
      "side": "buy",
-     "qty": "33",
+     "qty": "31",
      "type": "market",
      "time_in_force": "day",
      "order_class": "bracket",
-     "take_profit_limit_price": "2308.05",
+     "take_profit_limit_price": "2314.50",
      "stop_loss_stop_price": "2218.05",
-     "why": "opening-range breakout on WAAREEENER.NS: 33 shares, bound by your $1,000 max loss per trade (33 x 30.00 = $990 at the stop)",
+     "why": "opening-range breakout on WAAREEENER.NS: 31 shares, bound by your $1,000 max loss per trade (31 x 32.15 = $996.65 at the stop)",
      "plan": {
-      "entry": 2248.05,
+      "entry": 2250.2,
       "stop": 2218.05,
-      "target": 2308.05,
-      "risk_per_share": 30.0,
-      "max_loss": 990.0,
+      "target": 2314.5,
+      "risk_per_share": 32.15,
+      "max_loss": 996.65,
       "setup": "orb",
-      "entry_time": "11:35",
+      "entry_time": "12:30",
       "flat_by": "15:15"
      }
     },
@@ -1626,195 +1823,7 @@
      },
      {
       "type": "target",
-      "price": 2308.05,
-      "at": null
-     },
-     {
-      "type": "time",
-      "price": null,
-      "at": "15:15"
-     }
-    ]
-   },
-   "prev_rank": 11
-  },
-  {
-   "rank": 9,
-   "symbol": "ONESOURCE.NS",
-   "name": "Onesource Specialty Pharma Limited",
-   "score": 83,
-   "price": 1627.2,
-   "chg_pct": 2.35,
-   "volume": 2261843,
-   "turnover_cr": 368.0,
-   "news_count": 5,
-   "news_tags": [
-    "earnings"
-   ],
-   "news": [
-    {
-     "title": "Onesource Specialty Pharma - Sona BLW Precision Forgings among 4 stocks showing RSI trending up",
-     "source": "The Economic Times",
-     "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNMlczdlR1SWlYSFkzSDcySGVrN21ZZHZYSVN0N0RMV0RwNm9xajNJVndudjBSZ0J2NlBxdzAzWm5JTGpVdS1POXNUMjYzX2hRdnhYaDkzcWRjbEFfS181UjA5MXM0anJnQVVSenEyRXNXMTJYTkFrNjgzZE5BMjJxTTBFWHZqZ1lIckxWU0I0Z3RBaW41LVRWa1pzVTVLTVF3blY1NGFKVU9IMS1fRXRweHBFMlJOOFB2dFZhT0ZLdEs4OHpXUWVqRkZoSlVvRDlCTzd5QkpQSkxKdkRGWm0talB5Smdza2RkOVpNYWVEZnYwblJsTlVtUQ?oc=5",
-     "time": "28 Oct 08:48",
-     "tags": []
-    },
-    {
-     "title": "OneSource Specialty Pharma (NSE:ONESOURCE) DDC Capacity and Customer Update",
-     "source": "Kalkine India",
-     "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxOOUFXZVpfY1hHWno2cXRvQnRxbzdiaU9aVEo1alJsS2hZLWp5cWVDRHpxdVFjdGY0dzFsZTFYUVVjbnZoR3o2NkVyb2x2NUZCaWxQdVkwb0VoQW1uSldzTTZXMzNFaDRVRFZFSXFMSjlCYlhuaTNYYVV2dF9oZGJyWl9Tb1R2OHlwMG5jYWo0TFVMQmZhbWRXTDZxdVBxVm9zM1lCcm1rdWZXblpYakpkUnNZemVXZFhBNzBsbHBZa1ZaSHl3TWlqRDRCdFdTVXJ0MFFoUGg3azNaY05KN3FCOE5iRmJYenh6M01pOGhpZw?oc=5",
-     "time": "27 Oct 23:08",
-     "tags": []
-    },
-    {
-     "title": "OneSource Specialty Pharma shares jump 14% after Q2 results; recover 50% from recent lows",
-     "source": "Mint",
-     "link": "https://www.livemint.com/market/stock-market-news/onesource-specialty-pharma-shares-jump-14-after-q2-results-recover-50-from-recent-lows-11793115107385.html",
-     "time": "27 Oct 21:22",
-     "tags": [
-      "earnings"
-     ]
-    },
-    {
-     "title": "OneSource Specialty Pharma Reports Strong Q2 FY27 With 37% Revenue Growth, Adjusted PAT Doubles",
-     "source": "Free Press Journal",
-     "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPVHNzS2dtYUJuczhzdGdmZEw3Q0wwLXp6b2xFaFJoTEpHUVBnVFNFVmwxS3U5OWpXd0pNRnUweTJtZW5zRktpY1IxdEF5TFZIa2hoclhGQkxxVjFqOWdWNFdJTklETEFBQWdubTF4NzBIbXdKQkJ4NzZXaklOSWFmTEZ5d1lCR21WcDJ3MVV3a0RMRmd5OHlDZlpSc0ZHYXY1Zl9qTU5hbUNOSC13QjlzOU4xdUU2bkxFOU40ZUVVQ3ZTNmZtVExZTzJ4cWhVXzjSAdQBQVVfeXFMTUt3MWtFTVlUdFNtcnpvcS1uVmMtLWNLMkNfVUM5UDM5a05nZXBSamFlVmtPX1lfTzlVX2xyd1hnZHU2d25DXzJWbUdaSlVFSWY4VnRXLXNQQkxYNXF3ZG9FYk4tZXoyazZCUFFlc21BRmtka3A1OFpjcUg0N3UtLW9nS3NhLVpzcmlMRE1sWU5qSF9IOWlSODFuWUFQYTBOTjN1ZUM5T3NubzI0SjJPZDRjakRVNmtISEZLc1Y2UUdiVXNPOEFiekhQcGlEQUIyczBkTHg?oc=5",
-     "time": "27 Oct 12:39",
-     "tags": [
-      "earnings"
-     ]
-    },
-    {
-     "title": "OneSource Specialty Pharma Ltd Surges 8.97% to Day's High...",
-     "source": "MarketsMojo",
-     "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOMnlXdElNWjhpeDRFcXlqNkRGamhXSllsbU03bTliWGp1Vzl1RG1Xb3pkaGhmMlJDNlFFNm1nNWU1ajAxWGQwQS1Pb2FKM2xIajY5U3EtRzZaaVRQTW92cjdtZTBzbExRSHB3cHJHOFJxelk0Z2tsbFAtMlgxVktWSUJuZUEwLXBDaTF4S0lqeVc3Tm53QlRVRVo2Um1yaWQwWFllYVZPM3FCbGlWWTVCd2tSMFpuR1BXRm44SVByd0IzaVRLT1R5Y1pFY1lRMWNtME8w?oc=5",
-     "time": "27 Oct 11:43",
-     "tags": []
-    }
-   ],
-   "setups": [
-    "oversold_bounce"
-   ],
-   "rsi": 38.9,
-   "earnings_flag": true,
-   "price_source": "Upstox",
-   "cross_check": {
-    "yahoo": 1626.9,
-    "gap_pct": 0.02,
-    "flag": false,
-    "yahoo_time": "11:37"
-   },
-   "trade": {
-    "status": "triggered",
-    "phase": "open",
-    "reason": "the 9:30 bar closed above the range high",
-    "opening_range": {
-     "high": 1635.0,
-     "low": 1596.0,
-     "minutes": 15,
-     "bars": 3,
-     "of": 3,
-     "complete": true,
-     "avg_volume": 252007
-    },
-    "last": {
-     "bar_start": "11:30",
-     "close": 1627.3,
-     "vs_level_pct": -0.47
-    },
-    "bars_source": "Upstox",
-    "entry_kind": "triggered at 9:35 AM",
-    "rel_volume": 16.32,
-    "plan": {
-     "symbol": "ONESOURCE.NS",
-     "side": "buy",
-     "setup": "orb",
-     "date": "2026-10-28",
-     "entry": 1641.4,
-     "stop": 1615.5,
-     "target": 1693.2,
-     "entry_time": "09:35",
-     "entry_bar": 3,
-     "risk_per_share": 25.9,
-     "reward_risk": 2.0,
-     "stop_label": "opening-range midpoint",
-     "target_label": "2R (two times the risk)",
-     "opening_range": {
-      "high": 1635.0,
-      "low": 1596.0,
-      "minutes": 15
-     },
-     "flat_by": "15:15",
-     "interval": "5m"
-    },
-    "timemachine": {
-     "sessions": 57,
-     "p_target": 0.1758,
-     "p_stop": 0.4027,
-     "p_neither": 0.4215,
-     "p_green": 0.4713,
-     "avg_R": 0.115,
-     "median_close": 1641.98,
-     "p5_close": 1582.67,
-     "p95_close": 1703.89,
-     "r_at_target": 2.0,
-     "verdict": "Close to break-even: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 30 % (target first 17.6 % vs stop first 40.3 %).",
-     "notes": [
-      "42.1 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those."
-     ],
-     "history": {
-      "sessions": 57,
-      "triggered": 33,
-      "target": 6,
-      "stop": 18,
-      "close": 9,
-      "avg_R": -0.161
-     }
-    },
-    "sizing": {
-     "qty": 38,
-     "bound_by": "max loss",
-     "cost": 62373.2,
-     "max_loss": 984.2,
-     "refusal": null,
-     "reward": 1968.4,
-     "replay_avg": 113.18
-    },
-    "risk": {
-     "verdict": "PASS",
-     "reasons": [],
-     "warnings": []
-    },
-    "order": {
-     "symbol": "ONESOURCE.NS",
-     "side": "buy",
-     "qty": "38",
-     "type": "market",
-     "time_in_force": "day",
-     "order_class": "bracket",
-     "take_profit_limit_price": "1693.20",
-     "stop_loss_stop_price": "1615.50",
-     "why": "opening-range breakout on ONESOURCE.NS: 38 shares, bound by your $1,000 max loss per trade (38 x 25.90 = $984.20 at the stop)",
-     "plan": {
-      "entry": 1641.4,
-      "stop": 1615.5,
-      "target": 1693.2,
-      "risk_per_share": 25.9,
-      "max_loss": 984.2,
-      "setup": "orb",
-      "entry_time": "09:35",
-      "flat_by": "15:15"
-     }
-    },
-    "alerts": [
-     {
-      "type": "stop",
-      "price": 1615.5,
-      "at": null
-     },
-     {
-      "type": "target",
-      "price": 1693.2,
+      "price": 2314.5,
       "at": null
      },
      {
@@ -1828,819 +1837,50 @@
   },
   {
    "rank": 10,
-   "symbol": "TCS.NS",
-   "name": "Tata Consultancy Services Limited",
-   "score": 83,
-   "price": 2412.6,
-   "chg_pct": -3.38,
-   "volume": 1147802,
-   "turnover_cr": 276.9,
-   "news_count": 7,
-   "news_tags": [
-    "capital",
-    "earnings"
-   ],
-   "news": [
-    {
-     "title": "No. 2 on Day 1: How Jio Platforms broke India’s market cap hierarchy on debut itself",
-     "source": "Economic Times",
-     "link": "https://economictimes.indiatimes.com/markets/stocks/news/no-2-on-day-1-how-jio-platforms-broke-indias-market-cap-hierarchy-on-debut-itself/articleshow/135253571.cms",
-     "time": "28 Oct 11:11",
-     "tags": [
-      "capital"
-     ]
-    },
-    {
-     "title": "NSE, Sensex Today: Stock Market Latest News; Infosys, TCS, HCLTech Fall, L&T, Bajaj Auto Gain",
-     "source": "The Sunday Guardian",
-     "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQM1laLU9WQ1dtMXZOcW50alFuVHd1V3dqcTBCQ2M5aV9pNDFjUWJBSWdpT08wOEVUR0RPWGk4elpYZjFXc0tURUZDWlZNM2NhcjE2d3g4ZWlmSVZQdXphSXVOcG96Wk94dEpKMGlkYnpNMU4wTzduQ29QU1pmVlBEd1RIX2FYTHhXLWMyOTZEYnNUa2NvaThFNUFUU1ljTE43YUtpZ0pnR3UzTEtXQmRiZURNTmNERGlleWw0R1FOdGYxalRxZmdWLWZKVlo0QdIB0wFBVV95cUxPa1JFWlFFSmNTRDRlek1tS1VubWg0WjF6dzJzLWF5V0NwQnpwVlJpYWJEakF6Z1dMc0EwSktlcTVxc25KX3d2ZTVRVWp2SjR5NHpWajlVeGlaSHFYaEIzYjZ2VUhvYU43ODZEdEtseUpYcU0ydHRlM1JOWTdfRFNNZGhGT29XQUo1NkZfVE1WVnEtemhsSkhJZ284NzRtMVJKVTVOeTl6Z25PekUxdVZ0QUxtX2hCVWZsUnFmLThGM2p6TXRlM0lYT1RfSTE0TzRobFVz?oc=5",
-     "time": "28 Oct 11:11",
-     "tags": []
-    },
-    {
-     "title": "TCS Share Price Live Updates: TCS Stock Faces Downward Pressure",
-     "source": "Economic Times",
-     "link": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/tcs-stock-price-today-live-28-oct-2026/liveblog/135250078.cms",
-     "time": "28 Oct 08:22",
-     "tags": []
-    },
-    {
-     "title": "Stocks To Buy or Sell Today, October 28, 2026: Bank of Baroda, TCS and Biocon Among Shares That May Remain",
-     "source": "LatestLY",
-     "link": "https://news.google.com/rss/articles/CBMihgJBVV95cUxPRU96bGlFZVhuYmpDTnotNlhoZVo3cEZfem1Ya1V3SmFOQlZTckhwSGtsWUJZaU50NUNNMEF4UTViN2tPaUxkNE4yUVpvbW42RVZWeEFZdzNEX1o1ekZBNE45VWZVbFFqb2E2RGdZV1ZSdnpCUXhqcFh4cmN3SnJMTHdMREhEQUpfV0cyckRyYWVjSlhfa3o1aGI3bzl4T01tSTNhQkRYUkhQdTQ0V2lJZzhwcmtXNldyRGU1ZDBvVUlSTG9mN19CQ2dnZTJiWlVKVVdNakZ6WEhyQl9DaHZlUnJTWHdWdnZnd3RRT2RxeVRXYkRVMjZtdXFJeWxiTzkxY3NxSzlR0gGLAkFVX3lxTE8zekR0SnQtdm5PUTEyYkgydS1xejFOYmxJYVN4TUZuYlpOVDduUnUwWFc0TFlFVVJ3NTU1SFFMa3JHUGczMm5HYXZ4RkVqMW11c2NTb0tfRUExSk5ic1k1T2pmbGhNLTY0b3VuaTVZd2xYTzBWTGRkeGhJQVpuMjNlY2NPQTJXR0FJQ0JpS1F2cUc5bGpidW5iZnc0dXRUR19KaU0xNnpKVnZSM3hVMGs0REV4Q2tHb0YtSTlCS09VSEw3T3Y1XzVGOXlNSUZWWVpEdkQtaEZZUlVET1MxNklfY0FjMjF0WVZ6M2NhY2p4ZmR1bXJ6ZHpJRnp5OVJHYnMtQ05USVdKc0llWQ?oc=5",
-     "time": "28 Oct 08:00",
-     "tags": []
-    },
-    {
-     "title": "Tata Consultancy Services Limited (TCS.NS) Stock Price, News, Quote & History",
-     "source": "Yahoo! Finance Canada",
-     "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1BSy16NndZSGpmME05RXVyV2lZLTVNYjAwZUpqWkFkemk3bWdJUGM1STlteGM0Z2tfc2pzMjR5SGR3eVRZRm5XNzhoNUdyWWxYSHhnVw?oc=5",
-     "time": "27 Oct 16:27",
-     "tags": []
-    },
-    {
-     "title": "IT Sector Q2 Results Preview: TCS, HCL, Infosys, Wipro To See Muted Quarter; Check Dates, Dividends, Bonus",
-     "source": "Goodreturns",
-     "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNVWw2NEE0aDVWZ0dNV2VMZDQzcDlKZ29WUXZWQmEtNXJCaU5sSHZxRHQzZnBfQXlWeldRZl90SXBMaUF1MGo2VlpJNjVTcXpkU1djRUN6bTBkTlFGSGJ4SU5USEZCVi1zU2lZeFFLcXpYSVhtM0RjX01ZM0FFSWZlUGI1WXJPcmRlNEZERkJZWnJkUFkxRmZValNTTWZLdXBlNlJaQkNLWDktejVITkhPOTVjRzV6WkNNX3dIM2tPdTEyTGJocllZSlRDRDF0V2JrRmN0MmlxSFJJWTg?oc=5",
-     "time": "27 Oct 14:53",
-     "tags": [
-      "earnings",
-      "capital"
-     ]
-    }
-   ],
-   "setups": [
-    "bull_flag"
-   ],
-   "rsi": 68.7,
-   "earnings_flag": true,
-   "price_source": "Upstox",
-   "cross_check": {
-    "yahoo": 2411.2,
-    "gap_pct": 0.06,
-    "flag": false,
-    "yahoo_time": "11:37"
-   },
-   "trade": {
-    "status": "waiting",
-    "phase": "open",
-    "reason": "last close $2412.40 (11:30 bar), $38.30 under the range high $2450.70 (-1.56%)",
-    "opening_range": {
-     "high": 2450.7,
-     "low": 2413.6,
-     "minutes": 15,
-     "bars": 3,
-     "of": 3,
-     "complete": true,
-     "avg_volume": 165737
-    },
-    "last": {
-     "bar_start": "11:30",
-     "close": 2412.4,
-     "vs_level_pct": -1.56
-    },
-    "bars_source": "Upstox",
-    "entry_kind": "not triggered: plan if a bar closes above 2450.70",
-    "rel_volume": 0.62,
-    "plan": {
-     "symbol": "TCS.NS",
-     "side": "buy",
-     "setup": "orb",
-     "date": "2026-10-28",
-     "entry": 2450.75,
-     "stop": 2432.15,
-     "target": 2487.95,
-     "entry_time": "11:35",
-     "entry_bar": 27,
-     "risk_per_share": 18.6,
-     "reward_risk": 2.0,
-     "stop_label": "opening-range midpoint",
-     "target_label": "2R (two times the risk)",
-     "opening_range": {
-      "high": 2450.7,
-      "low": 2413.6,
-      "minutes": 15
-     },
-     "flat_by": "15:15",
-     "interval": "5m"
-    },
-    "timemachine": {
-     "sessions": 57,
-     "p_target": 0.0513,
-     "p_stop": 0.3926,
-     "p_neither": 0.5561,
-     "p_green": 0.3977,
-     "avg_R": -0.146,
-     "median_close": 2447.13,
-     "p5_close": 2414.28,
-     "p95_close": 2479.31,
-     "r_at_target": 2.0,
-     "verdict": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 12 % (target first 5.1 % vs stop first 39.3 %).",
-     "notes": [
-      "55.6 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those."
-     ],
-     "history": {
-      "sessions": 57,
-      "triggered": 24,
-      "target": 2,
-      "stop": 8,
-      "close": 14,
-      "avg_R": -0.174
-     }
-    },
-    "sizing": {
-     "qty": 30,
-     "bound_by": "position cap",
-     "cost": 73522.5,
-     "max_loss": 558.0,
-     "refusal": null,
-     "reward": 1116.0,
-     "replay_avg": -81.47
-    },
-    "risk": {
-     "verdict": "PASS",
-     "reasons": [],
-     "warnings": []
-    },
-    "order": {
-     "symbol": "TCS.NS",
-     "side": "buy",
-     "qty": "30",
-     "type": "market",
-     "time_in_force": "day",
-     "order_class": "bracket",
-     "take_profit_limit_price": "2487.95",
-     "stop_loss_stop_price": "2432.15",
-     "why": "opening-range breakout on TCS.NS: 30 shares, bound by your position cap (30 x 18.60 = $558 at the stop)",
-     "plan": {
-      "entry": 2450.75,
-      "stop": 2432.15,
-      "target": 2487.95,
-      "risk_per_share": 18.6,
-      "max_loss": 558.0,
-      "setup": "orb",
-      "entry_time": "11:35",
-      "flat_by": "15:15"
-     }
-    },
-    "alerts": [
-     {
-      "type": "stop",
-      "price": 2432.15,
-      "at": null
-     },
-     {
-      "type": "target",
-      "price": 2487.95,
-      "at": null
-     },
-     {
-      "type": "time",
-      "price": null,
-      "at": "15:15"
-     }
-    ]
-   },
-   "prev_rank": 15
-  },
-  {
-   "rank": 11,
-   "symbol": "HDFCBANK.NS",
-   "name": "HDFC Bank Limited",
-   "score": 83,
-   "price": 681.55,
-   "chg_pct": 0.2,
-   "volume": 13759694,
-   "turnover_cr": 937.8,
-   "news_count": 17,
-   "news_tags": [
-    "analyst",
-    "capital",
-    "earnings",
-    "people"
-   ],
-   "news": [
-    {
-     "title": "Jio IPO listing: Reliance-promoted firm becomes 2nd largest market cap holder in India | Check other 4 in top 5",
-     "source": "Mint",
-     "link": "https://www.livemint.com/market/stock-market-news/jio-ipo-listing-reliance-promoted-firm-becomes-2nd-largest-market-cap-holder-in-india-check-other-4-in-top-5-11793162583765.html",
-     "time": "28 Oct 10:24",
-     "tags": [
-      "capital"
-     ]
-    },
-    {
-     "title": "HDFC Bank Limited Stock 12‑Month Price Target Cut to $30.31, Implies 42% Upside",
-     "source": "TradingView",
-     "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNd1F1TFgwZFpxdzRGOGtvdVg2anlrX1c2di1mY1pmaUc4NS1FQnZ1SFZkelR1bUtQM2VXb2h1WEZIMHRaa0pnWDl0YkU5YmlkY1FxZjdnZk1IOXlXVTRjYzR1VTdFZmlzR0ItUHNqMlM2cG5jVmUzRDAwckR1ZjcxaklFSGI4UzJxdlVYdzhQVThyYnhWMmhuckozVThyM25sblRDOHJIR3lWSkpIbVYzdlgzWnI1ZXMxQXFiRngzNDZzVE9tWjZGQkc3SXQwS2g0Q0Zfbg?oc=5",
-     "time": "28 Oct 09:50",
-     "tags": [
-      "analyst"
-     ]
-    },
-    {
-     "title": "HDFC Bank Limited Stock 12‑Month Price Target Cut to INR 957.95, Implies 41% Upside",
-     "source": "TradingView",
-     "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNVnNFc3JGNlRQZ1pXTUxwdnBIS3hqd2VrNjMwdDZ6OVhlM0VHZTl2d2RwUjJ6ZTdzYUNpZVBwUzVmS3ltMmQ1RmpYSEkxSU9sQUQwemx0VExsVzJ5LWloM214djZzU1p2dmxPYVFGRWZwOU5UOG5aNUxNNW1wRnMtUHhnX3lRdElFS1ZmcUdKdHBldC1YZ0VIb2lhVnRXR3BkUWY3blotMHRMQlhvZy1PWFBQOHpGeERKUnNhZV9EZGpocVVQUUw4V3FVelpIVlpXQkFFT1I0ZXZDUlU?oc=5",
-     "time": "28 Oct 09:50",
-     "tags": [
-      "analyst"
-     ]
-    },
-    {
-     "title": "HDFC Bank Share Price Live Updates: HDFC Bank's Trading Volume Overview",
-     "source": "Economic Times",
-     "link": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/hdfc-bank-stock-price-today-live-28-oct-2026/liveblog/135250054.cms",
-     "time": "28 Oct 08:21",
-     "tags": []
-    },
-    {
-     "title": "HDFC Bank Share Price Prediction for Tomorrow: 28 Oct 2026",
-     "source": "Univest",
-     "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQeVl3LXdDSFF3RW43QjdXYzNBWWtxUFNpS3dTYU4tSXI4MV9sN2hDeDQ5YllqNjZXN0VvaWI1cG95YVR0d296TXE3RC1rbU51cS0wV1hYUTJaLWkzVWt4UnJYSEp5WVBGWHBEa3JzZUhhWE1SaHpMTDFTaWE1TlRWVDVxcmw5ZTlweU9hT3FHZw?oc=5",
-     "time": "27 Oct 20:48",
-     "tags": []
-    },
-    {
-     "title": "Ashima settles HDFC Bank and BBK cases for net outgo of ₹13.94 crore",
-     "source": "scanx.trade",
-     "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOUlRRVGNkZkhKY3M1TkNnaWp5TlpyTFZ4VjZ1R1JlbkZpRTBJS2lDdnB5NFd5dzlSemI4cllSX3MtUFR5OXFqZ3c2dWVOTGNoOFMyNHZfSURsT2VpWl9Ba1o5UFdSa3N4LW5DT2JULXJUMnIwMExKSTFacmNpODBnbV9UQzdnLVd1VGxnaElEdkFpdU05SHZMSGpUUW5EczdYRFJKRWY4NXlXNUlnWXFrRmdHMA?oc=5",
-     "time": "27 Oct 20:42",
-     "tags": []
-    }
-   ],
-   "setups": [],
-   "rsi": null,
-   "earnings_flag": true,
-   "price_source": "Upstox",
-   "cross_check": {
-    "yahoo": 681.75,
-    "gap_pct": 0.03,
-    "flag": false,
-    "yahoo_time": "11:37"
-   },
-   "trade": {
-    "status": "triggered",
-    "phase": "open",
-    "reason": "the 9:40 bar closed above the range high",
-    "opening_range": {
-     "high": 677.7,
-     "low": 669.2,
-     "minutes": 15,
-     "bars": 3,
-     "of": 3,
-     "complete": true,
-     "avg_volume": 1646965
-    },
-    "last": {
-     "bar_start": "11:30",
-     "close": 681.1,
-     "vs_level_pct": 0.5
-    },
-    "bars_source": "Upstox",
-    "entry_kind": "triggered at 9:45 AM",
-    "rel_volume": 1.06,
-    "plan": {
-     "symbol": "HDFCBANK.NS",
-     "side": "buy",
-     "setup": "orb",
-     "date": "2026-10-28",
-     "entry": 678.0,
-     "stop": 673.45,
-     "target": 687.1,
-     "entry_time": "09:45",
-     "entry_bar": 5,
-     "risk_per_share": 4.55,
-     "reward_risk": 2.0,
-     "stop_label": "opening-range midpoint",
-     "target_label": "2R (two times the risk)",
-     "opening_range": {
-      "high": 677.7,
-      "low": 669.2,
-      "minutes": 15
-     },
-     "flat_by": "15:15",
-     "interval": "5m"
-    },
-    "timemachine": {
-     "sessions": 57,
-     "p_target": 0.0821,
-     "p_stop": 0.4746,
-     "p_neither": 0.4433,
-     "p_green": 0.397,
-     "avg_R": -0.123,
-     "median_close": 677.31,
-     "p5_close": 668.39,
-     "p95_close": 686.53,
-     "r_at_target": 2.0,
-     "verdict": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 15 % (target first 8.2 % vs stop first 47.5 %).",
-     "notes": [
-      "44.3 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those."
-     ],
-     "history": {
-      "sessions": 57,
-      "triggered": 31,
-      "target": 4,
-      "stop": 16,
-      "close": 11,
-      "avg_R": -0.201
-     }
-    },
-    "sizing": {
-     "qty": 110,
-     "bound_by": "position cap",
-     "cost": 74580.0,
-     "max_loss": 500.5,
-     "refusal": null,
-     "reward": 1001.0,
-     "replay_avg": -61.56
-    },
-    "risk": {
-     "verdict": "PASS",
-     "reasons": [],
-     "warnings": []
-    },
-    "order": {
-     "symbol": "HDFCBANK.NS",
-     "side": "buy",
-     "qty": "110",
-     "type": "market",
-     "time_in_force": "day",
-     "order_class": "bracket",
-     "take_profit_limit_price": "687.10",
-     "stop_loss_stop_price": "673.45",
-     "why": "opening-range breakout on HDFCBANK.NS: 110 shares, bound by your position cap (110 x 4.55 = $500.50 at the stop)",
-     "plan": {
-      "entry": 678.0,
-      "stop": 673.45,
-      "target": 687.1,
-      "risk_per_share": 4.55,
-      "max_loss": 500.5,
-      "setup": "orb",
-      "entry_time": "09:45",
-      "flat_by": "15:15"
-     }
-    },
-    "alerts": [
-     {
-      "type": "stop",
-      "price": 673.45,
-      "at": null
-     },
-     {
-      "type": "target",
-      "price": 687.1,
-      "at": null
-     },
-     {
-      "type": "time",
-      "price": null,
-      "at": "15:15"
-     }
-    ]
-   },
-   "prev_rank": 7
-  },
-  {
-   "rank": 12,
-   "symbol": "MANKIND.NS",
-   "name": "Mankind Pharma Limited",
-   "score": 83,
-   "price": 2533.4,
-   "chg_pct": 1.23,
-   "volume": 690414,
-   "turnover_cr": 174.9,
-   "news_count": 15,
-   "news_tags": [
-    "earnings",
-    "macro"
-   ],
-   "news": [
-    {
-     "title": "Mankind Pharma Shares Surge 8% After Q2 Earnings Beat; Brokerages Flag Valuation",
-     "source": "TradingView",
-     "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOc1dZZThFa1hjeGdSLVJ0Y0VibkFZX0V6SEVMQ0Izc1lDanJXTmViczM3TU5MRHFBbUpfel9ySG1HOHVhdlRkSGVXUUp6Y2VMcFVPb2RRamZBd1M5azhZSnJzUVc1YUhsQ01Sak8tVTZDSnVmVU94SVdYaWtxU3YwZHAtQ0FXR3IxXzJQSW9KTV9pQzhwYkt1SWRCdXJ4NVlJRVhKZENPT1JBd1hXS1ktemN4cENmajlHSzJVNUhxMHRtaDFZMDdLZ2xjWDhGU3ZU?oc=5",
-     "time": "27 Oct 20:33",
-     "tags": [
-      "earnings"
-     ]
-    },
-    {
-     "title": "Mankind Pharma’s Q2 profit jumps 38% as revenue rises 17% to Rs 4,338 Cr",
-     "source": "Indian Pharma Post",
-     "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQa1Q2WVhPbEhQZ05ZSjNsTnhJM3dIV0FMM3IzeFVEeXNHM2tyNTRVV0dyQ19GWktQY2ZCbTV0bEdLRkNqOGt6bXZuemdqOEJldmdrbW1QVjBiTExtM29fX1JrZEJXeVJVc1RYMjBzNEpQaTIxbmxzR0lKeG1pMjFVXzdwSGlZMU81M3F3UXRyWjY0ZWl3TzlEelRIOEMyMEUtamY4TGxCY002QjNyMUdMS0xLVFEtUU140gG4AUFVX3lxTFBrVDZZWE9sSFBnTllKM2xOeEkzd0hXQUwzcjN4VUR5c0cza3I1NFVXR3JDX0ZaS1BjZkJtNXRsR0tGQ2o4a3ptdm56Z2o4QmV2Z2ttbVBWMGJMTG0zb19fUmtkQld5UlVzVFgyMHM0SlBpMjFubHNHSUp4bWkyMVVfN3BIaVkxTzUzcXdRdHJaNjRlaXdPOUR6VEg4QzIwRS1qZjhMbEJjTTZCM3IxR0xLTEtUUS1RTXg?oc=5",
-     "time": "27 Oct 18:30",
-     "tags": [
-      "earnings"
-     ]
-    },
-    {
-     "title": "Mankind Pharma Share Price - Live NSE: MANKIND Stock Price & Chart",
-     "source": "Upstox",
-     "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE0tdFYzdXFCMXZJVVdQU3J3WHk3ZV90UDVkLWNkd0J4bU5iekJheWR4U01TRTZyZHV2d1g5Wk8wYjF4Uk1HTzdZbWJmcHlZMGZ3d0xYX1VOU3NVelBMQ3c4enpaUGllcV9ZT1Q1OTF3?oc=5",
-     "time": "27 Oct 16:53",
-     "tags": []
-    },
-    {
-     "title": "Mankind Pharma stock surges 9% after strong Q2 results; Kotak sees big upside, other brokerages cautious",
-     "source": "Moneycontrol.com",
-     "link": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOdkFIZTBiZk1pY3kweW5uV283LUVLRUV4dHk3Vi0wNFF5VTBtV0pDLXBneHQ4Ti1zWGxfeDRQLU5kTTBkSmRveGtGR2FfMFdvc2RQcHpxTVhCbjBOc184TkRFMHAwcUlXakZIakJkemZETkkyOTMwTmVlRkx6UmlxZC02SndJX0NJZ3VQR0xET1lmYllET1dCVDNOdG0zS0JVdnFUOTBNbDh5MmFPMjVxWFlMTHJWU0dIV2RwSnNDNk0yUXJLNGl4c29IOU85S1FmWV9PNFE5RUFVNkhTWlMwcEh2S0dYNzR4V0tNa3ZDajJwd2NON21HNFl30gH_AUFVX3lxTE1MbTdYYUx4aDdmeVdKTDlkRlF2eXk3VVJPQXJmTUItTnRiTHhBdERDOU9SalRyY28wblFJRFV4UVlKTjM3a0prZk9nSVFod19ZcW1Lb1B6Uk81cWhZa0Q0bDR6MDc1alR0UHVvLURCOGZtcEQ1N1NhVTNQcmRNSlFtaEQyTnZKVzlkdGpRZWtzSUZGdHowRkctRV9NQlNLM2RYYURtTkt5ajBQd2d5bVV6WldZU00yakFfNWF3RUx3N0Vsc1h5QTJUYi1wd1dLRzk4RXhXcnNIeUFVSHNJRmRDQU1MZm5lay1XQUxOQU9NRklJSjFGWFAwWTZwZExibw?oc=5",
-     "time": "27 Oct 14:15",
-     "tags": [
-      "earnings"
-     ]
-    },
-    {
-     "title": "Sensex Dips 0.32% Amid Mixed Sector Performance; Tata Consumer and Mankind Pharma Lead Gains",
-     "source": "MarketsMojo",
-     "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQZEhxRW5sc2U5aDdOcUtJcGcwRHA0YkxSRmtCSUlXbVZGVVRFaDNMUk1iSTh3QzZjREQzUmRxd0w4TloxSDN2UE1rUnBNSUJoTk5FbHBGWTVFWDlScDVTWDhiSWYwNVN4ZmhPSDRaa05Xb1RnRm0wdWY1YlRzQXUyMlJMWXJyaTh3LXFOZWhscTNxNjdDbXd1czNIazNFdlRTREVjTE55YkozSXBuV3NYSTk4bFBZOEMtQVlFZ0JEMERmOTNtdnc3cG1TNE1aeHhuMFAzeG1Ybm94bENUbWdLQUhR?oc=5",
-     "time": "27 Oct 14:03",
-     "tags": []
-    },
-    {
-     "title": "Mankind Pharma shares jump 8%: What brokerages say after Q2 results",
-     "source": "Zee Business",
-     "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPenNiR0lBcmZ0VUViMlltVmtzWkFRb1AwU1JubFdNdjcyOVVtSmxJdDB2bGpnTWNlQTZTdnl5MnBSY3Y2cnJiWVpxSnI5UFE4MHp6cTdLbkZHYjJPb1puckZ5cGlKcElZNzl1V3hYMVFQdHIxb3RBWEpzcnZSeUYxQ0ZlVGZHODc4M3dlaHVKT0s4Y3REVnNNYVE5OWQxRDJrZ1VHZHNPem5abHRXR2lwWjZR?oc=5",
-     "time": "27 Oct 13:09",
-     "tags": [
-      "earnings"
-     ]
-    }
-   ],
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "rsi": 59.5,
-   "earnings_flag": true,
-   "price_source": "Upstox",
-   "cross_check": {
-    "yahoo": 2533.4,
-    "gap_pct": 0.0,
-    "flag": false,
-    "yahoo_time": "11:37"
-   },
-   "trade": {
-    "status": "triggered",
-    "phase": "open",
-    "reason": "the 10:55 bar closed above the range high",
-    "opening_range": {
-     "high": 2524.7,
-     "low": 2485.2,
-     "minutes": 15,
-     "bars": 3,
-     "of": 3,
-     "complete": true,
-     "avg_volume": 40883
-    },
-    "last": {
-     "bar_start": "11:30",
-     "close": 2529.9,
-     "vs_level_pct": 0.21
-    },
-    "bars_source": "Upstox",
-    "entry_kind": "triggered at 11:00 AM",
-    "rel_volume": 3.53,
-    "plan": {
-     "symbol": "MANKIND.NS",
-     "side": "buy",
-     "setup": "orb",
-     "date": "2026-10-28",
-     "entry": 2534.4,
-     "stop": 2504.95,
-     "target": 2593.3,
-     "entry_time": "11:00",
-     "entry_bar": 20,
-     "risk_per_share": 29.45,
-     "reward_risk": 2.0,
-     "stop_label": "opening-range midpoint",
-     "target_label": "2R (two times the risk)",
-     "opening_range": {
-      "high": 2524.7,
-      "low": 2485.2,
-      "minutes": 15
-     },
-     "flat_by": "15:15",
-     "interval": "5m"
-    },
-    "timemachine": {
-     "sessions": 57,
-     "p_target": 0.0172,
-     "p_stop": 0.2754,
-     "p_neither": 0.7074,
-     "p_green": 0.4212,
-     "avg_R": -0.126,
-     "median_close": 2530.43,
-     "p5_close": 2491.9,
-     "p95_close": 2570.32,
-     "r_at_target": 2.0,
-     "verdict": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 6 % (target first 1.7 % vs stop first 27.5 %).",
-     "notes": [
-      "70.7 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those."
-     ],
-     "history": {
-      "sessions": 57,
-      "triggered": 21,
-      "target": 6,
-      "stop": 6,
-      "close": 9,
-      "avg_R": 0.389
-     }
-    },
-    "sizing": {
-     "qty": 29,
-     "bound_by": "position cap",
-     "cost": 73497.6,
-     "max_loss": 854.05,
-     "refusal": null,
-     "reward": 1708.1,
-     "replay_avg": -107.61
-    },
-    "risk": {
-     "verdict": "PASS",
-     "reasons": [],
-     "warnings": []
-    },
-    "order": {
-     "symbol": "MANKIND.NS",
-     "side": "buy",
-     "qty": "29",
-     "type": "market",
-     "time_in_force": "day",
-     "order_class": "bracket",
-     "take_profit_limit_price": "2593.30",
-     "stop_loss_stop_price": "2504.95",
-     "why": "opening-range breakout on MANKIND.NS: 29 shares, bound by your position cap (29 x 29.45 = $854.05 at the stop)",
-     "plan": {
-      "entry": 2534.4,
-      "stop": 2504.95,
-      "target": 2593.3,
-      "risk_per_share": 29.45,
-      "max_loss": 854.05,
-      "setup": "orb",
-      "entry_time": "11:00",
-      "flat_by": "15:15"
-     }
-    },
-    "alerts": [
-     {
-      "type": "stop",
-      "price": 2504.95,
-      "at": null
-     },
-     {
-      "type": "target",
-      "price": 2593.3,
-      "at": null
-     },
-     {
-      "type": "time",
-      "price": null,
-      "at": "15:15"
-     }
-    ]
-   },
-   "prev_rank": 17
-  },
-  {
-   "rank": 13,
-   "symbol": "TATACAP.NS",
-   "name": "Tata Capital Limited",
-   "score": 82,
-   "price": 310.0,
-   "chg_pct": 3.18,
-   "volume": 4403849,
-   "turnover_cr": 136.5,
-   "news_count": 19,
-   "news_tags": [
-    "analyst",
-    "capital",
-    "earnings"
-   ],
-   "news": [
-    {
-     "title": "Mazagon Dock, Tata Capital, IndiaMart Among Seven Stocks In HDFC Securities' Q2 Review; Check Ratings, Target Prices",
-     "source": "NDTV Profit",
-     "link": "https://news.google.com/rss/articles/CBMingJBVV95cUxQZDhBV3otWEFBYUlQTEd2RVI3MDRsU1N4Wmt2YVN5b005WjczWGhjdWxfbFh2bVFhYi1XZ2p4QjlyNDQxQmtxQ1E5NWUxWVdCSHlRUHJqTnV0QTBCcDRqV3dxMGQ5X1lzeDRnbkZIOG00UmJfcFloeU1XTmxmUm5oTEY0QmRNdUNrX1N0T0hUbjBhdVptRGowazMxZk53Um5zRlp2dEwwUmJ0OTJNWUtoRXRfTW1qZWQ3WHhLWkpWLWVEcGdTZFZyZ1IyeExkcXk1VmRma0lVaE5kWVIxeVBVRmp3MWw5VC1mbHZBVTBzZER4S0RWcFRFZllMb3F0MzY3MThkdFBaVEZXRUdfb0NPYnBmMDFrZlZVbXZBd0Z3?oc=5",
-     "time": "28 Oct 10:51",
-     "tags": [
-      "earnings"
-     ]
-    },
-    {
-     "title": "Price Action: Mazagon Dock hits 52-week low as HSBC cuts target price; Tata Capital gains 3% on 51% jump...",
-     "source": "Moneycontrol.com",
-     "link": "https://news.google.com/rss/articles/CBMiigJBVV95cUxPS3lRUWhMVnBWR0NQZ1BoU2hINmx1cVFyR2RQV1ZkVVM4VG1oeGxDcFlta0t3VWNJWXdkN2RWMUdhWWhPY2Zqb3dWUnpsN2hzSmc2Qk5FTXd5VW8xZDMzYTkzOTFmUl81clV6cjA2cTFGOTZTUmMtdWZScVQwV25SSUtoU0JTWXhSZFVLY3B6LXUzTXdmOF9IUG51OTVfYWtYNG9SX2VOQXZpV082VjZLOWlwaW85cGFGbk8zQ2Y3cHNmRVZtZE5PU0xldW5FSjdFQnZjUlZQR1pSY2E2ZmxUUHZGWlVuOUhmY2Y1dmtSZEtKNV9uVkNRMVpIRDIxMzUxUElielpweS1PUdIBjwJBVV95cUxQOG5zWjZ0dm1wNU9YcEctX01sWkMzUTE5SDNwUHFScEZlY2RWcDYwSGpkQy1EZlNsMnQ1YnN2VHIwWVV4S09CSE1zU1ctamdUYUFlc0hFQnJlS3JlMmN1YU83M2JzTnQ0RFVla09hcHhkcGVaejZEcEMydC14VFZET2JOdHYyYXNrbGRGbE1vZWlTalFOTDV4UmtzWF9iOERVRDktRHB0aVIyQ21WMUlCQkI2ZGNYM3VWSmFaaGNQX0RyQkNSSklOaHVoS0ltTTdYQnVFV3hQZ0NmYklsODYxcFlYc1VxajV4SjQtVllmSElqbDlSTmVDb0dSMDJyQzlxOC00bHBUZURLMXNUNUk0?oc=5",
-     "time": "28 Oct 09:51",
-     "tags": [
-      "analyst"
-     ]
-    },
-    {
-     "title": "Tata Capital confident of meeting FY28 guidance, fresh price targets post Q2 earnings",
-     "source": "Business Today",
-     "link": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNd2pYOFBBUGlLb0g1Q1ZSTkFudnZpMGZvYTh1MmVFQjBjaVlydk85Q0ZiR05OM2V5b2ZmUmp2VnZMeXQzMXRxU0dkc2xKa1FRdWZCdDN4UlBXSTRZdUE4blFCU0hZTDVxT0lXTEZ5NXJwNG9JV01TMDU1Y3o2Y1BReDJnOTFJa2JJYkpObEo2d1liTjhSQl9taVlBRkQxSkIzSF8wQlMwNHU4d2VOb0JKY2pKVmVaTmNBNlRZVGtKemw5VjUwbUVjQVowcExsbExESHdqTXhoQ1hJREFfZ2FaNFdVSE80cjltTURrOE5kaDJnRk8xVEHSAfsBQVVfeXFMTUVucm5sMVB3MFJzdVdUTlowRTRGaFBSSXo2MTBOZGZvYzlxWEFGU0EyUFhieFhkR1VqemlHWlNnUkNDWXQ4UWZnc2JUQ0VhZTdIbTUzbDh3alhGNUxRYVlicDhhano1T0pFWHo3eFlKN3EtdzZNQjhPZzB1OEYtM2p4VElmWlZVSlNEVmRHYTI4ZWdSSERobkJMUlRnVmxDTS01aU83VE9yV2J5ci1LMnNDbHg4NFZxRXpndnFhaHA0cEhmaTI5RWpzNUxGTGFzdkUtR1VrS2otcUNFYk0wVFc1dVNqaHZGcDZrdU9EQ2JKZUN4Rmk4bUdKT1U?oc=5",
-     "time": "28 Oct 09:11",
-     "tags": [
-      "earnings",
-      "analyst"
-     ]
-    },
-    {
-     "title": "Stocks to Watch Today Oct 28: Jio Platforms Listing, L&T, Tata Capital in Focus",
-     "source": "NiftyTrader",
-     "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPVjhtMXdiTFN3ZUkwLVVpejZENHpoNHMwRzlpNUw5ZXF2dFpJa2NxMHBtMnZJVW9BWlBQeHVXdVBINlVZTE1uNndTZjJoc2tqbVEzcGRmNndGUnJVdXpXaXZPcHZaSG56R1Z5TFlfbVFYNk51eW5NQWxFcHFuM0k4akNR?oc=5",
-     "time": "28 Oct 08:46",
-     "tags": []
-    },
-    {
-     "title": "Tata Capital says revolving credit impact seen at 3-4% of yield; alternate products being tested",
-     "source": "bfsi.economictimes.indiatimes.com",
-     "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQeGtLUW42Sk5RdE5OQ0dFdk5XdDlPa0lzb1ZjMHZxSVNHLXJCRUM0V2FEM24xR1lQVmZiVkJhb1o1LWxMbzlTRm54ZXRGamVScVlMLWg3OTdENUNsdms0S0JyT0R1eEVsUmFPUHdRVGJwMkRaWnpxTjZDMjZXVWpJVnU0Y3NWNnZlaDE3dTN5dHE5VXEtT0hDVDdpZDktdnU2QmF0NVJ4bUw4T2dwdTQ5UEpHemVMWGw1NlZHX1VFZFVQU2R2d0h6dHdHME1rdDItMWVuYUV0aENJQjkzRXR0MHkyWEotTTRQSjJNbEIwRGQ?oc=5",
-     "time": "28 Oct 08:20",
-     "tags": []
-    },
-    {
-     "title": "Stocks to watch today: Maruti Suzuki, Tata Capital, SAIL and more will be in focus",
-     "source": "News9live",
-     "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOSHpKUUVUcHNvVU92dTdVMGNBSWpCVUJqUXRuY00zaUEtV0FXOEhHZzVTZjM1X3pMQnBjX092a3hQNFRYNjFjcjBtRkdTVTkxUEE1ZEozczNhMlkzZm8wZUh5b083OFVHdWFyQmRUY0pfMV82VUFXek9MeFhFZTF5WEdIeHVVUm9hZ25paGl2TC1MOHhNM2phVXl1TnByWk14OUxsZVc1bkpJMWsxazVqMXRKcVVuRUFwVjJPYWxDWEExX1NRWkdEamhn0gHPAUFVX3lxTE1tbFdubHRyc3RxYVRxSV9GR1Q1OVBMLTVrR1N3SzBweGlIWVJGaEdneFdzQUJGVXkwSDZXUTl3akw1WDl2YW92Wkp3cklpc0NadndwNFl6VVNRVE1oUjFJazh5UkRxUlRjQ18wbXhpU1gxZDlINVJ5NnNFclBFX3IxZ0ZVVlFBbl9ib1BybGxrYjlTMXlGQTlkNUhTaXpST2hoZ2NPMkhrOUlzb2gtdjFSM2F5Z2tabDlLeFB0M0kzTnU5aDZqUWdudGpxN0FWdw?oc=5",
-     "time": "28 Oct 08:06",
-     "tags": []
-    }
-   ],
-   "setups": [
-    "oversold"
-   ],
-   "rsi": 29.2,
-   "earnings_flag": true,
-   "price_source": "Upstox",
-   "cross_check": {
-    "yahoo": 310.0,
-    "gap_pct": 0.0,
-    "flag": false,
-    "yahoo_time": "11:37"
-   },
-   "trade": {
-    "status": "waiting",
-    "phase": "open",
-    "reason": "last close $309.95 (11:30 bar), $5.05 under the range high $315.00 (-1.60%)",
-    "opening_range": {
-     "high": 315.0,
-     "low": 306.25,
-     "minutes": 15,
-     "bars": 3,
-     "of": 3,
-     "complete": true,
-     "avg_volume": 556556
-    },
-    "last": {
-     "bar_start": "11:30",
-     "close": 309.95,
-     "vs_level_pct": -1.6
-    },
-    "bars_source": "Upstox",
-    "entry_kind": "not triggered: plan if a bar closes above 315.00",
-    "rel_volume": 7.96,
-    "plan": {
-     "symbol": "TATACAP.NS",
-     "side": "buy",
-     "setup": "orb",
-     "date": "2026-10-28",
-     "entry": 315.05,
-     "stop": 310.62,
-     "target": 323.91,
-     "entry_time": "11:35",
-     "entry_bar": 27,
-     "risk_per_share": 4.43,
-     "reward_risk": 2.0,
-     "stop_label": "opening-range midpoint",
-     "target_label": "2R (two times the risk)",
-     "opening_range": {
-      "high": 315.0,
-      "low": 306.25,
-      "minutes": 15
-     },
-     "flat_by": "15:15",
-     "interval": "5m"
-    },
-    "timemachine": {
-     "sessions": 57,
-     "p_target": 0.0125,
-     "p_stop": 0.0978,
-     "p_neither": 0.8897,
-     "p_green": 0.5579,
-     "avg_R": 0.117,
-     "median_close": 315.48,
-     "p5_close": 310.94,
-     "p95_close": 320.8,
-     "r_at_target": 2.0,
-     "verdict": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 11 % (target first 1.2 % vs stop first 9.8 %).",
-     "notes": [
-      "89.0 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those.",
-      "Average R is +0.117 all the same: the replays that hit neither pull it the other way."
-     ],
-     "history": {
-      "sessions": 57,
-      "triggered": 27,
-      "target": 4,
-      "stop": 12,
-      "close": 11,
-      "avg_R": -0.079
-     }
-    },
-    "sizing": {
-     "qty": 225,
-     "bound_by": "max loss",
-     "cost": 70886.25,
-     "max_loss": 996.75,
-     "refusal": null,
-     "reward": 1993.5,
-     "replay_avg": 116.62
-    },
-    "risk": {
-     "verdict": "PASS",
-     "reasons": [],
-     "warnings": []
-    },
-    "order": {
-     "symbol": "TATACAP.NS",
-     "side": "buy",
-     "qty": "225",
-     "type": "market",
-     "time_in_force": "day",
-     "order_class": "bracket",
-     "take_profit_limit_price": "323.91",
-     "stop_loss_stop_price": "310.62",
-     "why": "opening-range breakout on TATACAP.NS: 225 shares, bound by your $1,000 max loss per trade (225 x 4.43 = $996.75 at the stop)",
-     "plan": {
-      "entry": 315.05,
-      "stop": 310.62,
-      "target": 323.91,
-      "risk_per_share": 4.43,
-      "max_loss": 996.75,
-      "setup": "orb",
-      "entry_time": "11:35",
-      "flat_by": "15:15"
-     }
-    },
-    "alerts": [
-     {
-      "type": "stop",
-      "price": 310.62,
-      "at": null
-     },
-     {
-      "type": "target",
-      "price": 323.91,
-      "at": null
-     },
-     {
-      "type": "time",
-      "price": null,
-      "at": "15:15"
-     }
-    ]
-   },
-   "prev_rank": 12
-  },
-  {
-   "rank": 14,
    "symbol": "PGEL.NS",
    "name": "PG Electroplast Limited",
-   "score": 82,
-   "price": 533.15,
-   "chg_pct": 6.51,
-   "volume": 6698551,
-   "turnover_cr": 357.1,
-   "news_count": 3,
+   "score": 84,
+   "price": 540.0,
+   "chg_pct": 7.88,
+   "volume": 9111753,
+   "turnover_cr": 492.0,
+   "news_count": 6,
    "news_tags": [
     "earnings"
    ],
    "news": [
     {
-     "title": "PG Electroplast Concall: H1 sales cross ₹2,968 crore, Q2 profit rises nearly 5x to ₹13.67 crore, Room AC volume guided at 2.1 to 2.2 million units for FY27",
-     "source": "Business Upturn",
-     "link": "https://news.google.com/rss/articles/CBMimwJBVV95cUxPaGZxR1B0dk02dmFyYWpYZC0zTWdBcF8tSjdwaF8yMUdwTmVKUVFrZC1FQ3lVcUFxM0FCbmJqZGQ0TUtCZFlJcUwyLWNQYVJCaTlPRXgzZDlUeXBBblF6Z3g1aGcwODBPSS1xRDRJTDV0VFg4Z29uWTAxOThHc2VYRGRLdWFteHktY2VkVktpOUdZdWQ1VGtrU0hJdTBfZ09CNFJEZUVfYWlhaGNRR0UzTVRhS3pSWlhZOWE3YmpKME9ucTJGb2ZUbkZxb3pKOUd1T3dVekVIOGxlWGlQLVJmNjI0b09MOTJqTTIwbS1qQTVDTVJRY25UZXJQUVZYVC1yVHRDSDZPMG5GOXIweVpucjZVMnJ1RzRIclNj?oc=5",
-     "time": "28 Oct 10:50",
+     "title": "PG Electroplast Q2 FY27 Revenue Up 42.5% To ₹933.88 Crore, Net Income Reaches ₹13.67 Crore On Strong",
+     "source": "Free Press Journal",
+     "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPS2JyNXNWeFZEWHNFa29sYS1Uak54cU5nOEZQN0VqUG04SWU4c1JWMmdvUVBfTmVoS1JQa1o1ZzZhLWlEWGlYc25LckpiczJuWlhBQVQ4YjJMYjV1bTc5SENvSEdQVEZpeTlsLXMwT1FsOWYydU5kQWNhWEdyVGY3RmZEbnZXWTlIcHdxVnd1VEtDTUx1OWxlejM4NjVJc1piVmp1azY1UHZpeGxaUFcyUG1MX01VZXBoR3VPaDRiSWdCR2l2ZWpINmtOVWNVejRXZkg2MHlHY0N5SXZTS0phV0ptY9IB6AFBVV95cUxNZFQ0VWtLOEFXa05sRjhUYlAyS294QjFFalVYVEsxOUVSMVlvMGgtdUNCeWpUZTByNVQxeDBmbFNJdDh1ZUpYTnk3TlhxTmhZVlFGS1hKM0hfaE5xdC1hUHhVTnAxbElxOWtwUTRyWVk3N0pweFM0cjdybzJkazNHUFdnT2pZQWlmN0FSVzl4YTYyZC01SDBWWUxMckQydHBNaE1nMENfMGJiWnl3OXl4SUNQOHgxYmdMX0ZJSTN6RjVMdFpKbGltbnBsNHI4VS1LbHBKaHY2a3dxNUEyMklVanJiRDE4UURj?oc=5",
+     "time": "28 Oct 12:37",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "PG Electroplast Beats Q2 Estimates Despite Margin Pressure; Shares Rally 6%",
+     "source": "BW Businessworld",
+     "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNaWZnb2FVVGNQRnJoOFhfekJSSmkzR1M5UndOMmJQMUgzZm9YMzd5MEVFQ08wYmxpUEc0X0lkMnlDS1RrYTBuUkhRX2c3akdYZ2FQY21oNDFzUTIzVmhrdHBMYnI3TENOZnlna3Bfb04xU0ozUXVnd2lWZzRhQmxlZ2IzYUNYcEpMQm4zN3Vhb0oxWVlnd1BkejQxQV9nYjJQcF81R0RmY1QzVnZqb1BVX19GQ1hUckdu?oc=5",
+     "time": "28 Oct 12:14",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "PG Electroplast Q2 FY27 slides: revenue surges 43%, margins face pressure By Investing.com",
+     "source": "Investing.com India",
+     "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQVzdQT2hHemlGTkFLSWRETlVpYy1LSHNQUGExWWJyVUZnQjh4SmE5MEw3ZHoyNUJPWWV5MUxOcWhBeG1OOW5tU3RmZldnN2Z4WFBWekJPNGFrOTNtTnZUdGphbkotOGtsWVF3dGtxdm5CMFVrSDRqakZ3bXFFUm9Rak5YN1BTUHlhazEyQjJEdmJvOFo2N3VoVFFzTXZCOWxNX2FpSVU1cU1vbk56WGRaajQ5VG9weHc1R0VfS0gxaHFxNV9US0stRGZvZw?oc=5",
+     "time": "28 Oct 11:53",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "Earnings call transcript: PG Electroplast posts record Q2 2026 revenue By Investing.com",
+     "source": "Investing.com India",
+     "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNVDBSaktUMzN1NVdWNnh1NlYtZHlmMWloYjh0OTRZWG9LcUlXUjE4UmY1em1iRi1VOXVzc0JuSlpQQUN4YV9YVDNobzhvMFVneEJPanhUek8xZTRCWG96MGRNTDBTWWg1Mzd4X0JuUEIzZkhDZlJDUWdtRHV5MHFqM2l4WFQwSUd4emNya0EzT0l3Mk5HY0ZCcmFpR3A2TFZWRlJnVlF2X3JPcVFEYVpRRzhlZ0psQVA2QWN4UmpTQW5IajZQdjFQQVl3?oc=5",
+     "time": "28 Oct 11:48",
      "tags": [
       "earnings"
      ]
@@ -2669,10 +1909,10 @@
    "earnings_flag": true,
    "price_source": "Upstox",
    "cross_check": {
-    "yahoo": 533.1,
-    "gap_pct": 0.01,
+    "yahoo": 540.55,
+    "gap_pct": 0.1,
     "flag": false,
-    "yahoo_time": "11:37"
+    "yahoo_time": "12:50"
    },
    "trade": {
     "status": "triggered",
@@ -2688,13 +1928,13 @@
      "avg_volume": 633857
     },
     "last": {
-     "bar_start": "11:30",
-     "close": 533.7,
-     "vs_level_pct": 0.4
+     "bar_start": "12:40",
+     "close": 540.4,
+     "vs_level_pct": 1.66
     },
     "bars_source": "Upstox",
     "entry_kind": "triggered at 11:10 AM",
-    "rel_volume": 10.41,
+    "rel_volume": 10.52,
     "plan": {
      "symbol": "PGEL.NS",
      "side": "buy",
@@ -2794,111 +2034,125 @@
      }
     ]
    },
-   "prev_rank": null
+   "prev_rank": 14
   },
   {
-   "rank": 15,
-   "symbol": "MAZDOCK.NS",
-   "name": "Mazagon Dock Shipbuilders Limited",
-   "score": 82,
-   "price": 1727.4,
-   "chg_pct": -1.52,
-   "volume": 1616717,
-   "turnover_cr": 279.3,
-   "news_count": 4,
+   "rank": 11,
+   "symbol": "TCS.NS",
+   "name": "Tata Consultancy Services Limited",
+   "score": 84,
+   "price": 2443.6,
+   "chg_pct": -2.13,
+   "volume": 1666631,
+   "turnover_cr": 407.3,
+   "news_count": 12,
    "news_tags": [
     "capital",
     "earnings"
    ],
    "news": [
     {
-     "title": "Mazagon Dock Shipbuilders: Interim Dividend Approved of ₹5 Per Share for FY27",
-     "source": "InvestyWise",
-     "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQVmwwcjktMVRzZDFzeGFyRjZ3OG5GWUJlTjEzYnZTZnU4RksyUjZVSzFsSHVSVDQ5SUZrTHhqSlJqOWdkLTdqdDhJNFByRmVCSk42T3FFX2lySm5aTFVMQ2g2NlIzaXRoOEJTdzBXeVowSVpTM1d5MHFlb3J4YjNfWGhvOUtjMWc1cDc5ZA?oc=5",
-     "time": "27 Oct 18:01",
+     "title": "Infosys, TechM, TCS, other IT stocks plunge up to 5%, extend losses as global AI trade rebounds. What lies ahead?",
+     "source": "Economic Times",
+     "link": "https://economictimes.indiatimes.com/markets/stocks/news/infosys-techm-tcs-other-it-stocks-plunge-up-to-5-extend-losses-as-global-ai-trade-rebounds-what-lies-ahead/articleshow/135255322.cms",
+     "time": "28 Oct 12:16",
+     "tags": [
+      "earnings",
+      "capital"
+     ]
+    },
+    {
+     "title": "Infosys, TechM, TCS, other IT stocks plunge up to 5%, extend losses as global AI trade rebounds. What lies",
+     "source": "The Economic Times",
+     "link": "https://news.google.com/rss/articles/CBMijAJBVV95cUxQY2o5ZEswa09uUEFJNlFBYUp2VWlkWFlOOG50Q2ExbDN2R2RZai13Y19qeEQ0bmpUX25SRlhvaS1mN0xwMlY2UDIyOC0xZDc2U3JRUHN4QnBNeGtYRXQxMUh5dGpHUlRHeTdxbkx4UmgteUJUWVIwLWdqN0hiYmtFTzBmWTk5b1E2d082RkdoNk9VN2hJZWVyaU82U3BGWFFnYXFKOVZIZ1FWckJFY0ZOcDhQbWExc0JtZVBnNFNhMmZreG1tbmJ6QjM3Yno4M3lHX2c4Q0xua250eHd1LXRPN2FvR1lxSHZaS1NnTk01SW41bGNqWnh2WmNSb21ldDFmd1FBdkpLN1RwTHVs0gGSAkFVX3lxTE1VSUlRZWczZ0pfOTNFc191WG9GNVBNWl9OTVRueVoycE4yZ0pJS0FzS0czbmktY3ZmTW9YaUNGYXR3Q2s3TmRsdnp3VV84VmtpRzZMSlJUQW1QWWlmUFdjTUtLYzNQX1VJeEljTk8ybG53OWRGSE5ZVW0zdGpBX3B2NGFXMlJ2NERZalp2aEtDeGd6dEMzT2pfTzRWZmlOV3F3aFFiVXdTUmhiQWVGTGp2NUtMRkJlUWxVMnM1RldiMk9DVzVSSGRLdVp0MjdoVFJaRll4NFRYa2hCdDBBc3I5S3ZjTGs4NWp1aTVmODdMcmhSUEtnX3dhcG5GZ2ZBMkMzWnhwSlJCNjRQZmxpTmZDcGc?oc=5",
+     "time": "28 Oct 12:16",
+     "tags": []
+    },
+    {
+     "title": "Tata Consultancy Services - TCS, Vedanta among 10 companies offering dividend yield of up to 7%. Do you own any?",
+     "source": "The Economic Times",
+     "link": "https://news.google.com/rss/articles/CBMiigJBVV95cUxPclpOZ1hEaTJXc0ZMOE9wT1c4ZnZRTXVLTFJRekVyZm5yckhRN1RHcWFNeExZQVB3NS1CNWhMNWI3SnljejIzaUlGRHl6ZEd2RkctTWt6TWxCTVN3LWlPTFhCX2UxMFJ5Tm9FMktrM2tpRkRzWVBJaDhDUVhxUUVWZm0wTGVwcFctNHA3WmNUVHR6clNFajA5ZEdCSklWZUtQRHA1UjVhdXhoVWNzRmYzeWh2ZUt5SV9ybUpFZC1QYmRiM1ZRcU1Ybl9xRUFsY2N6ZVpxdUJCc2stM214TmhMT3FXQUw0bkZ1cVdZOTBlaS1reGhQRVlBSEx2NGozSUJ1MGk3WUZUaFVVZw?oc=5",
+     "time": "28 Oct 12:07",
      "tags": [
       "capital"
      ]
     },
     {
-     "title": "Mazagon Dock Shipbuilders shares crash 10% after Q2 net profit tumbles 54%; firm declares Rs 5/share divid",
-     "source": "The Economic Times",
-     "link": "https://news.google.com/rss/articles/CBMijAJBVV95cUxNR1h1cng0ZmJxU3AzaURvSHJmN1Z3WXRXMURaRUFLRXl1M3otR3hTQW9sQk9wRXRWaG0zdnZWeVdfcGNkVEF5Q2x0X3RQdnplbHdrY1V0X0Y1dTMybnRsSVpRZGlPdjhXbTE1VzhtZXFOXzB1ek9QMk1jalpQdkVxTU5Gc3ZyZ1BZVDg2WjBVSGtoUTM3STNtZlc0WlNKZEtOdEdfYjR3QWNoVnBCS2p3dEUyaVFQVnJEMXZpclNFc05CdllMd3RIU3JsZUlMN2tDemJfMVRKUVloQ2o1SkxpMXpWcjZHTkhpVnpqT2tVUENBWU5uLW9fRllxUk9QYmFrZUZvX20tSlZhaUht0gGSAkFVX3lxTE94NXFSOVMxVzkwc1ZSeHNDbXRSU1lvZjNQWmo0WDZZNXdhODVSc3FpVUFKcjBuaXU4aDhhakRWYU1nQTIybTJiZHpRUXRvbFYwRzBvbHhSUmJhbEtoSlZLODlwRnVTOHpFM2wtSS1xYXZIOFdjN1BVbEREMC1VOEY0NlRQTkZTUTBPY1l1R0lBcjc1U0d3Q0lWME9ibVdEYUZLN19xdnlyeWp0eXFpWFdYLW42dTctbWNaRWdXOUJHZF9UTDUwTWlySlZQUy1XWnNiRUlreHRoWWp0TWhLa0NrWVBYMmRQRkYzaThhQjRDY3BIVzV0NGd5Z2JnRmpqaE5OLWx0cHFxV0NKZnNBLVpRVkE?oc=5",
-     "time": "27 Oct 16:43",
+     "title": "TCS Out, Jio In! Reliance Jio's listing shakes up India’s rich list: IT major crashes out of top 5 as shares tumble 3.5%",
+     "source": "Mint",
+     "link": "https://www.livemint.com/market/tcs-out-jio-in-reliance-jios-listing-shakes-up-india-s-rich-list-it-major-crashes-out-of-top-5-as-shares-tumble-35-11793166947344.html",
+     "time": "28 Oct 11:53",
+     "tags": []
+    },
+    {
+     "title": "TCS, Vedanta among 10 companies offering dividend yield of up to 7%. Do you own any?",
+     "source": "Economic Times",
+     "link": "https://economictimes.indiatimes.com/markets/stocks/news/tcs-vedanta-among-10-companies-offering-dividend-yield-of-up-to-7-do-you-own-any/slideshow/135254303.cms",
+     "time": "28 Oct 11:30",
      "tags": [
-      "earnings"
+      "capital"
      ]
     },
     {
-     "title": "Mazagon Dock Shipbuilders Q2 results: Shares slump 10% after revenue declines; Higher provisions drags PAT",
-     "source": "CNBC TV18",
-     "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQd3piNTJOVVBYWENEYnk0NnVnak5zbGhOVlRSbVR6NVNsaU5FdlVvQkg2OEZGZlpCbDJoMExtUC1oUUNQRDkxV0QtX2M3M1JmOVJQT3JDVGhNTzhsa3U1N19WTW5STU16WUJTM0gydHVmVUZaX1lUdXJaVXlrNGkwd2JmWDB0S3p3QkhRWklLXy12MGMyUm9KWVNyM19sVWJQZFBPdlNfZVQ1ZHVpMlVnM1RlM0pIY3dXNm5waWhLUFd4LWVUalZDTG1ES1AyalM0X0NULVRuZ3FXcUXSAdsBQVVfeXFMUHd6YjUyTlVQWFhDRGJ5NDZ1Z2pOc2xoTlZUUm1UejVTbGlORXZVb0JINjhGRmZaQmwyaDBMbVAtaFFDUEQ5MVdELV9jNzNSZjlSUE9yQ1RoTU84bGt1NTdfVk1uUk1NellCUzNIMnR1ZlVGWl9ZVHVyWlV5azRpMHdiZlgwdEt6d0JIUVpJS18tdjBjMlJvSllTcjNfbFViUGRQT3ZTX2VUNWR1aTJVZzNUZTNKSGN3VzZucGloS1BXeC1lVGpWQ0xtREtQMmpTNF9DVC1UbmdxV3FF?oc=5",
-     "time": "27 Oct 15:23",
+     "title": "No. 2 on Day 1: How Jio Platforms broke India’s market cap hierarchy in debut trade",
+     "source": "Economic Times",
+     "link": "https://economictimes.indiatimes.com/markets/stocks/news/no-2-on-day-1-how-jio-platforms-broke-indias-market-cap-hierarchy-on-debut-itself/articleshow/135253571.cms",
+     "time": "28 Oct 11:11",
      "tags": [
-      "earnings"
-     ]
-    },
-    {
-     "title": "Mazagon Dock Shipbuilders Dividend 2026: Navratna PSU declares Rs 5 cash payout with Q2 results; Check record date",
-     "source": "Zee Business",
-     "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNajJLZ2RjR3pzd09PRkpHS0t3ZnZybFpXQ1JmZXF4Skd6ay1naUpieU5FenZ6UlhBbUwxeDg5eDhyaFFHSm9GV0tjVFVKR1VwcmM1U015RFVHcFc3b1NrYW1hN3RfTTZObUxTUEZBQzdwdVNUOEFnSVNUZnpRbDF5cC02T1o4bl90ZG5UanhQYXlXNzBPc29iME1ucDJwbzFjNVh5SzdxNzJ3d3hfRUNNbW9KS3dqZ3dmTDNBZVdPTFBWcFd1aW1BLTFlclBWbXVRQkhLLVVLcVJZQ3Y1Mk5CVmlkZUdZWUhGUmc4eUZ6Q0g?oc=5",
-     "time": "27 Oct 14:58",
-     "tags": [
-      "earnings",
       "capital"
      ]
     }
    ],
    "setups": [
-    "oversold"
+    "bull_flag"
    ],
-   "rsi": 21.6,
+   "rsi": 68.7,
    "earnings_flag": true,
    "price_source": "Upstox",
    "cross_check": {
-    "yahoo": 1728.0,
+    "yahoo": 2444.4,
     "gap_pct": 0.03,
     "flag": false,
-    "yahoo_time": "11:37"
+    "yahoo_time": "12:50"
    },
    "trade": {
-    "status": "triggered",
+    "status": "waiting",
     "phase": "open",
-    "reason": "the 9:30 bar closed above the range high",
+    "reason": "last close $2443.40 (12:40 bar), $7.30 under the range high $2450.70 (-0.30%)",
     "opening_range": {
-     "high": 1750.2,
-     "low": 1690.6,
+     "high": 2450.7,
+     "low": 2413.6,
      "minutes": 15,
      "bars": 3,
      "of": 3,
      "complete": true,
-     "avg_volume": 194778
+     "avg_volume": 165737
     },
     "last": {
-     "bar_start": "11:30",
-     "close": 1723.0,
-     "vs_level_pct": -1.55
+     "bar_start": "12:40",
+     "close": 2443.4,
+     "vs_level_pct": -0.3
     },
     "bars_source": "Upstox",
-    "entry_kind": "triggered at 9:35 AM",
-    "rel_volume": 4.81,
+    "entry_kind": "not triggered: plan if a bar closes above 2450.70",
+    "rel_volume": 0.7,
     "plan": {
-     "symbol": "MAZDOCK.NS",
+     "symbol": "TCS.NS",
      "side": "buy",
      "setup": "orb",
      "date": "2026-10-28",
-     "entry": 1750.5,
-     "stop": 1720.4,
-     "target": 1810.7,
-     "entry_time": "09:35",
-     "entry_bar": 3,
-     "risk_per_share": 30.1,
+     "entry": 2450.75,
+     "stop": 2432.15,
+     "target": 2487.95,
+     "entry_time": "12:45",
+     "entry_bar": 41,
+     "risk_per_share": 18.6,
      "reward_risk": 2.0,
      "stop_label": "opening-range midpoint",
      "target_label": "2R (two times the risk)",
      "opening_range": {
-      "high": 1750.2,
-      "low": 1690.6,
+      "high": 2450.7,
+      "low": 2413.6,
       "minutes": 15
      },
      "flat_by": "15:15",
@@ -2906,36 +2160,36 @@
     },
     "timemachine": {
      "sessions": 57,
-     "p_target": 0.0178,
-     "p_stop": 0.265,
-     "p_neither": 0.7172,
-     "p_green": 0.409,
-     "avg_R": -0.125,
-     "median_close": 1745.65,
-     "p5_close": 1702.49,
-     "p95_close": 1787.8,
+     "p_target": 0.0311,
+     "p_stop": 0.3032,
+     "p_neither": 0.6657,
+     "p_green": 0.3772,
+     "avg_R": -0.178,
+     "median_close": 2446.71,
+     "p5_close": 2421.58,
+     "p95_close": 2474.11,
      "r_at_target": 2.0,
-     "verdict": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 6 % (target first 1.8 % vs stop first 26.5 %).",
+     "verdict": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 9 % (target first 3.1 % vs stop first 30.3 %).",
      "notes": [
-      "71.7 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those."
+      "66.6 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those."
      ],
      "history": {
       "sessions": 57,
-      "triggered": 22,
-      "target": 6,
-      "stop": 13,
-      "close": 3,
-      "avg_R": 0.02
+      "triggered": 24,
+      "target": 2,
+      "stop": 8,
+      "close": 14,
+      "avg_R": -0.174
      }
     },
     "sizing": {
-     "qty": 33,
-     "bound_by": "max loss",
-     "cost": 57766.5,
-     "max_loss": 993.3,
+     "qty": 30,
+     "bound_by": "position cap",
+     "cost": 73522.5,
+     "max_loss": 558.0,
      "refusal": null,
-     "reward": 1986.6,
-     "replay_avg": -124.16
+     "reward": 1116.0,
+     "replay_avg": -99.32
     },
     "risk": {
      "verdict": "PASS",
@@ -2943,35 +2197,35 @@
      "warnings": []
     },
     "order": {
-     "symbol": "MAZDOCK.NS",
+     "symbol": "TCS.NS",
      "side": "buy",
-     "qty": "33",
+     "qty": "30",
      "type": "market",
      "time_in_force": "day",
      "order_class": "bracket",
-     "take_profit_limit_price": "1810.70",
-     "stop_loss_stop_price": "1720.40",
-     "why": "opening-range breakout on MAZDOCK.NS: 33 shares, bound by your $1,000 max loss per trade (33 x 30.10 = $993.30 at the stop)",
+     "take_profit_limit_price": "2487.95",
+     "stop_loss_stop_price": "2432.15",
+     "why": "opening-range breakout on TCS.NS: 30 shares, bound by your position cap (30 x 18.60 = $558 at the stop)",
      "plan": {
-      "entry": 1750.5,
-      "stop": 1720.4,
-      "target": 1810.7,
-      "risk_per_share": 30.1,
-      "max_loss": 993.3,
+      "entry": 2450.75,
+      "stop": 2432.15,
+      "target": 2487.95,
+      "risk_per_share": 18.6,
+      "max_loss": 558.0,
       "setup": "orb",
-      "entry_time": "09:35",
+      "entry_time": "12:45",
       "flat_by": "15:15"
      }
     },
     "alerts": [
      {
       "type": "stop",
-      "price": 1720.4,
+      "price": 2432.15,
       "at": null
      },
      {
       "type": "target",
-      "price": 1810.7,
+      "price": 2487.95,
       "at": null
      },
      {
@@ -2981,22 +2235,638 @@
      }
     ]
    },
-   "prev_rank": 16
+   "prev_rank": 10
   },
   {
-   "rank": 16,
+   "rank": 12,
+   "symbol": "TATACAP.NS",
+   "name": "Tata Capital Limited",
+   "score": 82,
+   "price": 311.95,
+   "chg_pct": 3.83,
+   "volume": 5322223,
+   "turnover_cr": 166.0,
+   "news_count": 23,
+   "news_tags": [
+    "analyst",
+    "capital",
+    "earnings"
+   ],
+   "news": [
+    {
+     "title": "Tata Capital shares jump 5% post Q2 show; analysts say margin revival key",
+     "source": "Business Standard",
+     "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPYVFJQmFoaHBlSF84SGVJdHVpamh4M2VZbFNITHVwNkpIbGcyRDltc2J0bTM0NGFHcEx2ZThFOHMydFJXbUVlbHQyR3pieEhSRjFHUl9FT2x6cjhEcjV6M0I2MkhYWFhfTnY5MTNNV1dVX09WQ2I4SXdXU1FqWVRBcGFpbDZLRzlGT1VKZU13MzdLQmoyc1lUMGxreklQOVRTN3hydndTSmkyOGpsbE1lYjZuR041dDFQQ05YSVlGcmRPWThiZ1FOVGt5VGFMODBvQmFiM185Q1Z1SXfSAeABQVVfeXFMT2xqUmxjajJhM1BqNXhCUW5RYVlKYzYwSVBlVlZ5UlhkSWRreHp2a3NtOTQxQ3ByVEpvakdsTk9QZHp2OHhRY0JCT1AtMXBWdmNFN0FBSGxwTmRISTNhUUQ1VV81T0ZQWXpjbWRGTVpFeTJHNmRGUkk0WTYwd2h5am1WU25wZVJjbFhXZlBOMVpDWWtzNUN4djNndjZwMGdzN1BfZlQ3LU1FRkxHZ1BVRG9BT0c1WlpJRXR1RVp1c2ptX1l2ZjEzTHE2ZzFzaWlGQm9WMVU3NFRtMmZfQTloYXM?oc=5",
+     "time": "28 Oct 12:26",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "Price Action: Mazagon Dock hits 52-week low as HSBC cuts target price; Tata Capital gains 3% on 51% jump...",
+     "source": "Moneycontrol.com",
+     "link": "https://news.google.com/rss/articles/CBMiigJBVV95cUxPS3lRUWhMVnBWR0NQZ1BoU2hINmx1cVFyR2RQV1ZkVVM4VG1oeGxDcFlta0t3VWNJWXdkN2RWMUdhWWhPY2Zqb3dWUnpsN2hzSmc2Qk5FTXd5VW8xZDMzYTkzOTFmUl81clV6cjA2cTFGOTZTUmMtdWZScVQwV25SSUtoU0JTWXhSZFVLY3B6LXUzTXdmOF9IUG51OTVfYWtYNG9SX2VOQXZpV082VjZLOWlwaW85cGFGbk8zQ2Y3cHNmRVZtZE5PU0xldW5FSjdFQnZjUlZQR1pSY2E2ZmxUUHZGWlVuOUhmY2Y1dmtSZEtKNV9uVkNRMVpIRDIxMzUxUElielpweS1PUdIBjwJBVV95cUxQOG5zWjZ0dm1wNU9YcEctX01sWkMzUTE5SDNwUHFScEZlY2RWcDYwSGpkQy1EZlNsMnQ1YnN2VHIwWVV4S09CSE1zU1ctamdUYUFlc0hFQnJlS3JlMmN1YU83M2JzTnQ0RFVla09hcHhkcGVaejZEcEMydC14VFZET2JOdHYyYXNrbGRGbE1vZWlTalFOTDV4UmtzWF9iOERVRDktRHB0aVIyQ21WMUlCQkI2ZGNYM3VWSmFaaGNQX0RyQkNSSklOaHVoS0ltTTdYQnVFV3hQZ0NmYklsODYxcFlYc1VxajV4SjQtVllmSElqbDlSTmVDb0dSMDJyQzlxOC00bHBUZURLMXNUNUk0?oc=5",
+     "time": "28 Oct 09:51",
+     "tags": [
+      "analyst"
+     ]
+    },
+    {
+     "title": "Tata Capital confident of meeting FY28 guidance, fresh price targets post Q2 earnings",
+     "source": "Business Today",
+     "link": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNd2pYOFBBUGlLb0g1Q1ZSTkFudnZpMGZvYTh1MmVFQjBjaVlydk85Q0ZiR05OM2V5b2ZmUmp2VnZMeXQzMXRxU0dkc2xKa1FRdWZCdDN4UlBXSTRZdUE4blFCU0hZTDVxT0lXTEZ5NXJwNG9JV01TMDU1Y3o2Y1BReDJnOTFJa2JJYkpObEo2d1liTjhSQl9taVlBRkQxSkIzSF8wQlMwNHU4d2VOb0JKY2pKVmVaTmNBNlRZVGtKemw5VjUwbUVjQVowcExsbExESHdqTXhoQ1hJREFfZ2FaNFdVSE80cjltTURrOE5kaDJnRk8xVEHSAfsBQVVfeXFMTUVucm5sMVB3MFJzdVdUTlowRTRGaFBSSXo2MTBOZGZvYzlxWEFGU0EyUFhieFhkR1VqemlHWlNnUkNDWXQ4UWZnc2JUQ0VhZTdIbTUzbDh3alhGNUxRYVlicDhhano1T0pFWHo3eFlKN3EtdzZNQjhPZzB1OEYtM2p4VElmWlZVSlNEVmRHYTI4ZWdSSERobkJMUlRnVmxDTS01aU83VE9yV2J5ci1LMnNDbHg4NFZxRXpndnFhaHA0cEhmaTI5RWpzNUxGTGFzdkUtR1VrS2otcUNFYk0wVFc1dVNqaHZGcDZrdU9EQ2JKZUN4Rmk4bUdKT1U?oc=5",
+     "time": "28 Oct 09:11",
+     "tags": [
+      "earnings",
+      "analyst"
+     ]
+    },
+    {
+     "title": "Stocks to Watch Today Oct 28: Jio Platforms Listing, L&T, Tata Capital in Focus",
+     "source": "NiftyTrader",
+     "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPVjhtMXdiTFN3ZUkwLVVpejZENHpoNHMwRzlpNUw5ZXF2dFpJa2NxMHBtMnZJVW9BWlBQeHVXdVBINlVZTE1uNndTZjJoc2tqbVEzcGRmNndGUnJVdXpXaXZPcHZaSG56R1Z5TFlfbVFYNk51eW5NQWxFcHFuM0k4akNR?oc=5",
+     "time": "28 Oct 08:46",
+     "tags": []
+    },
+    {
+     "title": "Tata Capital's strong Q2 bolsters outlook",
+     "source": "Moneycontrol.com",
+     "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNbk16STVGQWlaYzJqdlpHbVdsUUhxSHJ6SUVkYzB3a212eGNQNVd5VU9ZTEo4c2lRdzFrdTA0dFBuZlRUaFpzVkxPaEpDNE1qbVZ5Zk16ZV9Zb3R3NVhHRFR4c0hTc1V5X1hIZjM2WjRyXzZ0Uy1aRkVvT0VQdUI1UU5mQlpyMk1landpd2Z3dWZnZGpiR0otYzV3NjZHWkNkNVRQSXJXdHBLNW5Sbm5CRkxqYUc0R0gyeGNxTmg3Si0zV1ZBdzhydFY4cG0taUnSAc8BQVVfeXFMTW5Nekk1RkFpWmMyanZaR21XbFFIcUhyeklFZGMwd2ttdnhjUDVXeVVPWUxKOHNpUXcxa3UwNHRQbmZUVGhac1ZMT2hKQzRNam1WeWZNemVfWW90dzVYR0RUeHNIU3NVeV9YSGYzNlo0cl82dFMtWkZFb09FUHVCNVFOZkJacjJNZWp3aXdmd3VmZ2RqYkdKLWM1dzY2R1pDZDVUUElyV3RwSzVuUm5uQkZMamFHNEdIMnhjcU5oN0otM1dWQXc4cnRWOHBtLWlJ?oc=5",
+     "time": "28 Oct 08:44",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "Tata Capital says revolving credit impact seen at 3-4% of yield; alternate products being tested",
+     "source": "bfsi.economictimes.indiatimes.com",
+     "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQeGtLUW42Sk5RdE5OQ0dFdk5XdDlPa0lzb1ZjMHZxSVNHLXJCRUM0V2FEM24xR1lQVmZiVkJhb1o1LWxMbzlTRm54ZXRGamVScVlMLWg3OTdENUNsdms0S0JyT0R1eEVsUmFPUHdRVGJwMkRaWnpxTjZDMjZXVWpJVnU0Y3NWNnZlaDE3dTN5dHE5VXEtT0hDVDdpZDktdnU2QmF0NVJ4bUw4T2dwdTQ5UEpHemVMWGw1NlZHX1VFZFVQU2R2d0h6dHdHME1rdDItMWVuYUV0aENJQjkzRXR0MHkyWEotTTRQSjJNbEIwRGQ?oc=5",
+     "time": "28 Oct 08:20",
+     "tags": []
+    }
+   ],
+   "setups": [
+    "oversold"
+   ],
+   "rsi": 29.2,
+   "earnings_flag": true,
+   "price_source": "Upstox",
+   "cross_check": {
+    "yahoo": 311.0,
+    "gap_pct": 0.3,
+    "flag": false,
+    "yahoo_time": "12:50"
+   },
+   "trade": {
+    "status": "waiting",
+    "phase": "open",
+    "reason": "last close $311.50 (12:40 bar), $3.50 under the range high $315.00 (-1.11%)",
+    "opening_range": {
+     "high": 315.0,
+     "low": 306.25,
+     "minutes": 15,
+     "bars": 3,
+     "of": 3,
+     "complete": true,
+     "avg_volume": 556556
+    },
+    "last": {
+     "bar_start": "12:40",
+     "close": 311.5,
+     "vs_level_pct": -1.11
+    },
+    "bars_source": "Upstox",
+    "entry_kind": "not triggered: plan if a bar closes above 315.00",
+    "rel_volume": 6.79,
+    "plan": {
+     "symbol": "TATACAP.NS",
+     "side": "buy",
+     "setup": "orb",
+     "date": "2026-10-28",
+     "entry": 315.05,
+     "stop": 310.62,
+     "target": 323.91,
+     "entry_time": "12:45",
+     "entry_bar": 41,
+     "risk_per_share": 4.43,
+     "reward_risk": 2.0,
+     "stop_label": "opening-range midpoint",
+     "target_label": "2R (two times the risk)",
+     "opening_range": {
+      "high": 315.0,
+      "low": 306.25,
+      "minutes": 15
+     },
+     "flat_by": "15:15",
+     "interval": "5m"
+    },
+    "timemachine": {
+     "sessions": 57,
+     "p_target": 0.0073,
+     "p_stop": 0.0512,
+     "p_neither": 0.9415,
+     "p_green": 0.5466,
+     "avg_R": 0.095,
+     "median_close": 315.36,
+     "p5_close": 311.6,
+     "p95_close": 319.95,
+     "r_at_target": 2.0,
+     "verdict": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 12 % (target first 0.7 % vs stop first 5.1 %).",
+     "notes": [
+      "94.2 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those.",
+      "Average R is +0.095 all the same: the replays that hit neither pull it the other way."
+     ],
+     "history": {
+      "sessions": 57,
+      "triggered": 27,
+      "target": 4,
+      "stop": 12,
+      "close": 11,
+      "avg_R": -0.079
+     }
+    },
+    "sizing": {
+     "qty": 225,
+     "bound_by": "max loss",
+     "cost": 70886.25,
+     "max_loss": 996.75,
+     "refusal": null,
+     "reward": 1993.5,
+     "replay_avg": 94.69
+    },
+    "risk": {
+     "verdict": "PASS",
+     "reasons": [],
+     "warnings": []
+    },
+    "order": {
+     "symbol": "TATACAP.NS",
+     "side": "buy",
+     "qty": "225",
+     "type": "market",
+     "time_in_force": "day",
+     "order_class": "bracket",
+     "take_profit_limit_price": "323.91",
+     "stop_loss_stop_price": "310.62",
+     "why": "opening-range breakout on TATACAP.NS: 225 shares, bound by your $1,000 max loss per trade (225 x 4.43 = $996.75 at the stop)",
+     "plan": {
+      "entry": 315.05,
+      "stop": 310.62,
+      "target": 323.91,
+      "risk_per_share": 4.43,
+      "max_loss": 996.75,
+      "setup": "orb",
+      "entry_time": "12:45",
+      "flat_by": "15:15"
+     }
+    },
+    "alerts": [
+     {
+      "type": "stop",
+      "price": 310.62,
+      "at": null
+     },
+     {
+      "type": "target",
+      "price": 323.91,
+      "at": null
+     },
+     {
+      "type": "time",
+      "price": null,
+      "at": "15:15"
+     }
+    ]
+   },
+   "prev_rank": 13
+  },
+  {
+   "rank": 13,
+   "symbol": "HDFCBANK.NS",
+   "name": "HDFC Bank Limited",
+   "score": 81,
+   "price": 684.95,
+   "chg_pct": 0.7,
+   "volume": 18924262,
+   "turnover_cr": 1296.2,
+   "news_count": 16,
+   "news_tags": [
+    "analyst",
+    "capital",
+    "earnings",
+    "people"
+   ],
+   "news": [
+    {
+     "title": "Buy, Sell Or Hold: Jio Platforms, Apollo Hospitals, Kaynes Tech, HDFC Bank, L&T, Tata Technologies | Ask Profit",
+     "source": "NDTV Profit",
+     "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQWk5vWF9RamNNSnRoXzlTclR1RGgyX0VmQVpGTGpzNUt3M0pHQmZiZTZoaVFKXzcyS3RiZlFTNElUelF5ak4yaGFBNWJaZmpLeThKWmhVV2gwWGFMbTZiWVN6MEo3QkdTM01GUDNrb0lSUG9oN3pxSnpTTkp0aUlKSkpUZkZzSUVjSnhuNl9DazVfQ2tyNjB1VEVReVJCWjFQMFFuS05kUS1QSUlZLUlXRzhQX2xYUjNta3pxY3VYUmw4dFpsNkNuU3l3ZDBsamlRQ3o5VXNqN0FWdnE1WnfSAeYBQVVfeXFMTi1BOS0zbE03b1YxRER2Si1xNk1FQ0NFUV9hT2xIX1hFWkhsaXdRRTZReWZ1T3lCU2t0VHQ1VElsUkFyQ0dtVzlrejIwUUliMGQza0U2Ylk3RkFvYnZ3dzlYTWlUbGNxY0VrbmVDcDBYNHNsRW85V0ZEcDhQM2tYdVNMNFFWaFRzbUMyUVlHY2NIVkdGX1M2dTVReFNHUVBzbjJmZkJtd0FMSVVxd2lwNEQ1UGYzRGVBbnVuUjFfeXVlbDN6T0JPaDJOZkVGNlB4SjB2ckhudHNTa2dPeG1WdlY1NGJmTkE?oc=5",
+     "time": "28 Oct 11:46",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "HDFC Bank’s new CEO set to command record Rs 35.9 crore pay",
+     "source": "https://whispersinthecorridors.net/",
+     "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQS3QzOUpJWXRENjNyNFgzU2trdXdsbG5BcE9uSV9DY2xySHQzUTctSXk4ZzQxR1UzQVBzdnlEc3J0UXJSVDRoNnhkOXFYc3VJVGNFZFdZaHBDTVd6NXdzQmVnRnZDZ1ZnSEJLR0NIamZPcE5VRWo5Y1NpOVhvN1dIV2pIaDVqV2JtbjB4VkhYRmZEX0QySDVEWWltYVloSG50?oc=5",
+     "time": "28 Oct 10:57",
+     "tags": [
+      "people"
+     ]
+    },
+    {
+     "title": "Jio IPO listing: Reliance-promoted firm becomes 2nd largest market cap holder in India | Check other 4 in top 5",
+     "source": "Mint",
+     "link": "https://www.livemint.com/market/stock-market-news/jio-ipo-listing-reliance-promoted-firm-becomes-2nd-largest-market-cap-holder-in-india-check-other-4-in-top-5-11793162583765.html",
+     "time": "28 Oct 10:24",
+     "tags": [
+      "capital"
+     ]
+    },
+    {
+     "title": "HDFC Bank Limited Stock 12‑Month Price Target Cut to $30.31, Implies 42% Upside",
+     "source": "TradingView",
+     "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNd1F1TFgwZFpxdzRGOGtvdVg2anlrX1c2di1mY1pmaUc4NS1FQnZ1SFZkelR1bUtQM2VXb2h1WEZIMHRaa0pnWDl0YkU5YmlkY1FxZjdnZk1IOXlXVTRjYzR1VTdFZmlzR0ItUHNqMlM2cG5jVmUzRDAwckR1ZjcxaklFSGI4UzJxdlVYdzhQVThyYnhWMmhuckozVThyM25sblRDOHJIR3lWSkpIbVYzdlgzWnI1ZXMxQXFiRngzNDZzVE9tWjZGQkc3SXQwS2g0Q0Zfbg?oc=5",
+     "time": "28 Oct 09:50",
+     "tags": [
+      "analyst"
+     ]
+    },
+    {
+     "title": "HDFC Bank Limited Stock 12‑Month Price Target Cut to INR 957.95, Implies 41% Upside",
+     "source": "TradingView",
+     "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNVnNFc3JGNlRQZ1pXTUxwdnBIS3hqd2VrNjMwdDZ6OVhlM0VHZTl2d2RwUjJ6ZTdzYUNpZVBwUzVmS3ltMmQ1RmpYSEkxSU9sQUQwemx0VExsVzJ5LWloM214djZzU1p2dmxPYVFGRWZwOU5UOG5aNUxNNW1wRnMtUHhnX3lRdElFS1ZmcUdKdHBldC1YZ0VIb2lhVnRXR3BkUWY3blotMHRMQlhvZy1PWFBQOHpGeERKUnNhZV9EZGpocVVQUUw4V3FVelpIVlpXQkFFT1I0ZXZDUlU?oc=5",
+     "time": "28 Oct 09:50",
+     "tags": [
+      "analyst"
+     ]
+    },
+    {
+     "title": "HDFC Bank appoints Puneet Sharma as CFO and Jigar Shah as General Counsel",
+     "source": "scanx.trade",
+     "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPX1NuNWF1d3dCdUo1RE93Ri02WVJ4d3hhby1URHkyLThMM3luWUxvaHFIRGlMS1RId1g2V3NkYVlrRS1QSG13SU15MGFkdldLOTJIbHM2aGU4VURObzBDX3AxaURkX2FjaUtQQVJpX3pxbUsycUtWSTVzTWtyT3NPeVZnek5CaHBpV2FUaWZhYWh3cVhBeU1UdGhqSi1JVmc1WFBDUXZRc01YTGNxWGM1ZllucmhXN2xfT3JuQXNucFJPajZjc0kyOGhn?oc=5",
+     "time": "28 Oct 09:27",
+     "tags": [
+      "people"
+     ]
+    }
+   ],
+   "setups": [],
+   "rsi": null,
+   "earnings_flag": true,
+   "price_source": "Upstox",
+   "cross_check": {
+    "yahoo": 684.65,
+    "gap_pct": 0.04,
+    "flag": false,
+    "yahoo_time": "12:50"
+   },
+   "trade": {
+    "status": "triggered",
+    "phase": "open",
+    "reason": "the 9:40 bar closed above the range high",
+    "opening_range": {
+     "high": 677.7,
+     "low": 669.2,
+     "minutes": 15,
+     "bars": 3,
+     "of": 3,
+     "complete": true,
+     "avg_volume": 1646965
+    },
+    "last": {
+     "bar_start": "12:40",
+     "close": 685.0,
+     "vs_level_pct": 1.08
+    },
+    "bars_source": "Upstox",
+    "entry_kind": "triggered at 9:45 AM",
+    "rel_volume": 1.08,
+    "plan": {
+     "symbol": "HDFCBANK.NS",
+     "side": "buy",
+     "setup": "orb",
+     "date": "2026-10-28",
+     "entry": 678.0,
+     "stop": 673.45,
+     "target": 687.1,
+     "entry_time": "09:45",
+     "entry_bar": 5,
+     "risk_per_share": 4.55,
+     "reward_risk": 2.0,
+     "stop_label": "opening-range midpoint",
+     "target_label": "2R (two times the risk)",
+     "opening_range": {
+      "high": 677.7,
+      "low": 669.2,
+      "minutes": 15
+     },
+     "flat_by": "15:15",
+     "interval": "5m"
+    },
+    "timemachine": {
+     "sessions": 57,
+     "p_target": 0.0821,
+     "p_stop": 0.4746,
+     "p_neither": 0.4433,
+     "p_green": 0.397,
+     "avg_R": -0.123,
+     "median_close": 677.31,
+     "p5_close": 668.39,
+     "p95_close": 686.53,
+     "r_at_target": 2.0,
+     "verdict": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 15 % (target first 8.2 % vs stop first 47.5 %).",
+     "notes": [
+      "44.3 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those."
+     ],
+     "history": {
+      "sessions": 57,
+      "triggered": 31,
+      "target": 4,
+      "stop": 16,
+      "close": 11,
+      "avg_R": -0.201
+     }
+    },
+    "sizing": {
+     "qty": 110,
+     "bound_by": "position cap",
+     "cost": 74580.0,
+     "max_loss": 500.5,
+     "refusal": null,
+     "reward": 1001.0,
+     "replay_avg": -61.56
+    },
+    "risk": {
+     "verdict": "PASS",
+     "reasons": [],
+     "warnings": []
+    },
+    "order": {
+     "symbol": "HDFCBANK.NS",
+     "side": "buy",
+     "qty": "110",
+     "type": "market",
+     "time_in_force": "day",
+     "order_class": "bracket",
+     "take_profit_limit_price": "687.10",
+     "stop_loss_stop_price": "673.45",
+     "why": "opening-range breakout on HDFCBANK.NS: 110 shares, bound by your position cap (110 x 4.55 = $500.50 at the stop)",
+     "plan": {
+      "entry": 678.0,
+      "stop": 673.45,
+      "target": 687.1,
+      "risk_per_share": 4.55,
+      "max_loss": 500.5,
+      "setup": "orb",
+      "entry_time": "09:45",
+      "flat_by": "15:15"
+     }
+    },
+    "alerts": [
+     {
+      "type": "stop",
+      "price": 673.45,
+      "at": null
+     },
+     {
+      "type": "target",
+      "price": 687.1,
+      "at": null
+     },
+     {
+      "type": "time",
+      "price": null,
+      "at": "15:15"
+     }
+    ]
+   },
+   "prev_rank": 11
+  },
+  {
+   "rank": 14,
+   "symbol": "ONESOURCE.NS",
+   "name": "Onesource Specialty Pharma Limited",
+   "score": 79,
+   "price": 1596.9,
+   "chg_pct": 0.45,
+   "volume": 2724931,
+   "turnover_cr": 435.1,
+   "news_count": 5,
+   "news_tags": [
+    "earnings",
+    "regulatory"
+   ],
+   "news": [
+    {
+     "title": "Onesource Specialty Pharma - Sona BLW Precision Forgings among 4 stocks showing RSI trending up",
+     "source": "The Economic Times",
+     "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNMlczdlR1SWlYSFkzSDcySGVrN21ZZHZYSVN0N0RMV0RwNm9xajNJVndudjBSZ0J2NlBxdzAzWm5JTGpVdS1POXNUMjYzX2hRdnhYaDkzcWRjbEFfS181UjA5MXM0anJnQVVSenEyRXNXMTJYTkFrNjgzZE5BMjJxTTBFWHZqZ1lIckxWU0I0Z3RBaW41LVRWa1pzVTVLTVF3blY1NGFKVU9IMS1fRXRweHBFMlJOOFB2dFZhT0ZLdEs4OHpXUWVqRkZoSlVvRDlCTzd5QkpQSkxKdkRGWm0talB5Smdza2RkOVpNYWVEZnYwblJsTlVtUQ?oc=5",
+     "time": "28 Oct 08:48",
+     "tags": []
+    },
+    {
+     "title": "OneSource Specialty Pharma approves change in Dr. Claudio Albrecht’s director role",
+     "source": "scanx.trade",
+     "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOZF9qYjJudUdJbjBPYXI0UVRsMlNOUWJtYmQwVXllaFB0bWdRUVVPazFwX1dXQmVRa1p3a1BadGpYMXdXQzhrT1VRREk5LUMzbF9YOHpCTi11UkYyWFQ5TnpZVUxBMEs5VVJxM2F3N3Nra2dSZlh6Zk1vTk1vVndhWmFkMG13QkZNZUR5U3FNdVpNblhaMEdLanZ2REpObDFLeFJvV0VFMmxFM05mSktfMVdrNFRGdGtKUXlfMA?oc=5",
+     "time": "28 Oct 08:43",
+     "tags": [
+      "regulatory"
+     ]
+    },
+    {
+     "title": "OneSource Specialty Pharma (NSE:ONESOURCE) DDC Capacity and Customer Update",
+     "source": "Kalkine India",
+     "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxOOUFXZVpfY1hHWno2cXRvQnRxbzdiaU9aVEo1alJsS2hZLWp5cWVDRHpxdVFjdGY0dzFsZTFYUVVjbnZoR3o2NkVyb2x2NUZCaWxQdVkwb0VoQW1uSldzTTZXMzNFaDRVRFZFSXFMSjlCYlhuaTNYYVV2dF9oZGJyWl9Tb1R2OHlwMG5jYWo0TFVMQmZhbWRXTDZxdVBxVm9zM1lCcm1rdWZXblpYakpkUnNZemVXZFhBNzBsbHBZa1ZaSHl3TWlqRDRCdFdTVXJ0MFFoUGg3azNaY05KN3FCOE5iRmJYenh6M01pOGhpZw?oc=5",
+     "time": "27 Oct 23:08",
+     "tags": []
+    },
+    {
+     "title": "OneSource Specialty Pharma shares jump 14% after Q2 results; recover 50% from recent lows",
+     "source": "Mint",
+     "link": "https://www.livemint.com/market/stock-market-news/onesource-specialty-pharma-shares-jump-14-after-q2-results-recover-50-from-recent-lows-11793115107385.html",
+     "time": "27 Oct 21:22",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "OneSource Specialty Pharma’s Q2 profit more than doubles on new capacity, volume growth",
+     "source": "Moneycontrol.com",
+     "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxONXMxQjVsNWZaeFRoMDh3aGoxd08xWG8wRlpqX2ZobzNwaDhPY3dJTDlTSUQxa2Q3OW9tOEdvUTlQQ0ZQc19mMlowYkxseXMyYXdVaDJKNFNVcnQ0OGxoekV0Zmx0TEY4VVQ0YzZFMmQ2RS1ad21tV2J0U0pDa2lSSG9UeXd1cU53TTVxbko3a242NzhMUkRybFdMTVYwR1JWQllJZ3FBZEJNd2JwWWFDYXdnVEFLdWMwX1dUZXp5aWpPeFZJbklTZW9Xd2N0aEl2QW5zaU9mVVlMQmF5R3o2dHdodDZ6d0XSAewBQVVfeXFMT1VLaTlOQ2pHVmt5UjRFeE9LbUZUcWpBcF96dVNrbEFNN21rdFZvMjE2aHdEbDYyRTNGdlVVY1pNb1VXOVl3UDdYeF9ZOTI4WmxiWF93Mk5hZmhubTFfTDVYMk5iNkZuMkYwVUVkTGNHSEZLRHpMemFQSmRZTGtaRDdFWm9Lc2FzbUFCdFF3a0g1NUdiZGFFODdOWTNtUzhYUW54VzFMUGRGQUNpQ3BxYzBFU2ZhOFpwdVpoWm9oY2lobmd2U2VJNzVZTTB2bzNXMjBCUHRibVZ1aDZMR3BvNVJ4M05zcDBjU21yREk?oc=5",
+     "time": "27 Oct 12:54",
+     "tags": [
+      "earnings"
+     ]
+    }
+   ],
+   "setups": [
+    "oversold_bounce"
+   ],
+   "rsi": 38.9,
+   "earnings_flag": true,
+   "price_source": "Upstox",
+   "cross_check": {
+    "yahoo": 1596.1,
+    "gap_pct": 0.05,
+    "flag": false,
+    "yahoo_time": "12:50"
+   },
+   "trade": {
+    "status": "triggered",
+    "phase": "open",
+    "reason": "the 9:30 bar closed above the range high",
+    "opening_range": {
+     "high": 1635.0,
+     "low": 1596.0,
+     "minutes": 15,
+     "bars": 3,
+     "of": 3,
+     "complete": true,
+     "avg_volume": 252007
+    },
+    "last": {
+     "bar_start": "12:40",
+     "close": 1598.0,
+     "vs_level_pct": -2.26
+    },
+    "bars_source": "Upstox",
+    "entry_kind": "triggered at 9:35 AM",
+    "rel_volume": 12.24,
+    "plan": {
+     "symbol": "ONESOURCE.NS",
+     "side": "buy",
+     "setup": "orb",
+     "date": "2026-10-28",
+     "entry": 1641.4,
+     "stop": 1615.5,
+     "target": 1693.2,
+     "entry_time": "09:35",
+     "entry_bar": 3,
+     "risk_per_share": 25.9,
+     "reward_risk": 2.0,
+     "stop_label": "opening-range midpoint",
+     "target_label": "2R (two times the risk)",
+     "opening_range": {
+      "high": 1635.0,
+      "low": 1596.0,
+      "minutes": 15
+     },
+     "flat_by": "15:15",
+     "interval": "5m"
+    },
+    "timemachine": {
+     "sessions": 57,
+     "p_target": 0.1758,
+     "p_stop": 0.4027,
+     "p_neither": 0.4215,
+     "p_green": 0.4713,
+     "avg_R": 0.115,
+     "median_close": 1641.98,
+     "p5_close": 1582.67,
+     "p95_close": 1703.89,
+     "r_at_target": 2.0,
+     "verdict": "Close to break-even: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 30 % (target first 17.6 % vs stop first 40.3 %).",
+     "notes": [
+      "42.1 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those."
+     ],
+     "history": {
+      "sessions": 57,
+      "triggered": 33,
+      "target": 6,
+      "stop": 18,
+      "close": 9,
+      "avg_R": -0.161
+     }
+    },
+    "sizing": {
+     "qty": 38,
+     "bound_by": "max loss",
+     "cost": 62373.2,
+     "max_loss": 984.2,
+     "refusal": null,
+     "reward": 1968.4,
+     "replay_avg": 113.18
+    },
+    "risk": {
+     "verdict": "PASS",
+     "reasons": [],
+     "warnings": []
+    },
+    "order": {
+     "symbol": "ONESOURCE.NS",
+     "side": "buy",
+     "qty": "38",
+     "type": "market",
+     "time_in_force": "day",
+     "order_class": "bracket",
+     "take_profit_limit_price": "1693.20",
+     "stop_loss_stop_price": "1615.50",
+     "why": "opening-range breakout on ONESOURCE.NS: 38 shares, bound by your $1,000 max loss per trade (38 x 25.90 = $984.20 at the stop)",
+     "plan": {
+      "entry": 1641.4,
+      "stop": 1615.5,
+      "target": 1693.2,
+      "risk_per_share": 25.9,
+      "max_loss": 984.2,
+      "setup": "orb",
+      "entry_time": "09:35",
+      "flat_by": "15:15"
+     }
+    },
+    "alerts": [
+     {
+      "type": "stop",
+      "price": 1615.5,
+      "at": null
+     },
+     {
+      "type": "target",
+      "price": 1693.2,
+      "at": null
+     },
+     {
+      "type": "time",
+      "price": null,
+      "at": "15:15"
+     }
+    ]
+   },
+   "prev_rank": 9
+  },
+  {
+   "rank": 15,
    "symbol": "UBL.NS",
    "name": "United Breweries Limited",
-   "score": 81,
-   "price": 1229.0,
-   "chg_pct": 7.47,
-   "volume": 3342066,
-   "turnover_cr": 410.7,
-   "news_count": 14,
+   "score": 79,
+   "price": 1221.0,
+   "chg_pct": 6.77,
+   "volume": 3841554,
+   "turnover_cr": 469.1,
+   "news_count": 15,
    "news_tags": [
     "earnings"
    ],
    "news": [
+    {
+     "title": "United Breweries Stocks Jump 6% As Premium Brands Drive Q2 Growth",
+     "source": "BW Businessworld",
+     "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNWFB0c1dHUUNBaXF5aVF5cXgtM252c0xQcWo0Q0ZSVE85WXp6bU9MX284RUszazBwb09jX0RnNnp6a2dKcFA3WW5XbkNWeHRNdy1HVmFIOWRoeElXWWc3R0NJTC1xblk0eTA4Tl9uVkMzV3ZwbzNQc2dHZFE3R1N4QVhfYUx3VnRZYVViZGhRWkZUR3hSZ1Z2eXF3bjAwNUhhNjltVk9FbU1oMHdW?oc=5",
+     "time": "28 Oct 12:23",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "United Breweries shares zoom 15% on Q2 earnings, more upside likely?",
+     "source": "Business Today",
+     "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNamZBb2N3Q2dPZXdLNkZWZmc3RGpybUlwdHV4T2Nla3BjWFdaTy12dXktLUY3MjNUVzJabkJRZHFXNUVhNnprN1lIZUZaQnM2NjFhaUFMT3htUWZzbjVwRm1lelRrVXpQaXpNVFNud2MwNFU2OVA1bUpYbURLZW5pRkJ3Q1drWkVaSVdncXNua1JJNDZKS3QtWjdhUVBqMWxTZXBEYTlwMUs3YjBLM2cxTnJyMExSaWNodXN1Z0paakhKUGUzOUhSY0d30gHPAUFVX3lxTE9aVVpSZmNLRHNFWFVpVnlGNlFRbExNRlRYRXBLTlFLV3JNX0E2QlpGREo5aVhYN0QtNHllNkpsQk1QQmJnRzdMUzFKb3FJbGF0clBHMVdsNWRMX2RNQkZzcTJ0ZUptbWhteW1vMmpHVTBUQThwc3FKd2NjR0xwbjE1N1BKaXRxd3VfVjZHaTltNnRCWlNUMm1xQkxTMGIxY01vZnRDSHhtREdvX3Z1MzhsdjhvcmZzUTAwUXVzTncyUC0wRGQyMTluMUNhMW5qQQ?oc=5",
+     "time": "28 Oct 12:05",
+     "tags": [
+      "earnings"
+     ]
+    },
     {
      "title": "United Breweries shares rally 10% as Q2 EBITDA doubles, profit beats estimates",
      "source": "CNBC TV18",
@@ -3032,24 +2902,6 @@
      "tags": [
       "earnings"
      ]
-    },
-    {
-     "title": "Nifty 500: United Breweries surges 14%, AWL Agri hits record low on Q2 results; Check others",
-     "source": "CNBC TV18",
-     "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPNWdjUzdsSjQ3cXhMTDgyWmptb2UzaGdzb1ZSelhHQVhacEFWb0otSm5wbWNHa0gyYlJhNUYtanFkbTRfcU1sWmR1cE1KMEpubzlPX0NfLXY2NHNmcUMweWtMM1RvNWxtNTlhMnFKVXVjcmM1bDFhQmRXTUZvbkVCaGliUk1ueWx3dFB5SjBNZWlJdGw5b2xtT0U1b3lhSXQ0VFZULVUyem4yams2YjI0ZmI4ZTJKUkdQb3JsZ3NqWDM1X1YxRWp4dlJkd3cyUkhKQmtzMnNJWGJtZnF0UUtUa2RTYTc0elpELTJ1bFhkSdIB9AFBVV95cUxPOFVGc2hBUmdwbFFHUG12Z2wwOVM3YnU0MTd2eW40R0N2NHpzaExiWGotaFpyanY3TFBvTjk3OFE2ZXdSOHFJbjF3ay1sTDZfeVY1ZTljc3daVHRzRnlOTzR2dWRseklCUC1aMFJBZHlya3NJUC11QkJVYVUxdlUybFV1bEJOdnBmX010M1AwOUF3MmFXQ0l4bXBtTTBrM3hEekhka196VmgtUzdwclotYkgydmd5SzRVNFJwdW9KQ0hjUjZkc2dYWWYySVhBNG9DYzBVMWV6eFpFQkphSDJGZ21XNHpVMHVCeFAxOG10STFlenBN?oc=5",
-     "time": "28 Oct 10:26",
-     "tags": [
-      "earnings"
-     ]
-    },
-    {
-     "title": "United Breweries shares soar 15% as Q2 profit triples - Check Q2 results 2026 highlights for Heineken, Kingfisher maker",
-     "source": "Mint",
-     "link": "https://www.livemint.com/market/stock-market-news/united-breweries-shares-soar-15-as-q2-profit-triples-check-q2-results-2026-highlights-for-heineken-kingfisher-maker-11793160835059.html",
-     "time": "28 Oct 10:04",
-     "tags": [
-      "earnings"
-     ]
     }
    ],
    "setups": [],
@@ -3057,15 +2909,15 @@
    "earnings_flag": true,
    "price_source": "Upstox",
    "cross_check": {
-    "yahoo": 1229.3,
-    "gap_pct": 0.02,
+    "yahoo": 1220.2,
+    "gap_pct": 0.07,
     "flag": false,
-    "yahoo_time": "11:37"
+    "yahoo_time": "12:50"
    },
    "trade": {
     "status": "waiting",
     "phase": "open",
-    "reason": "last close $1230.80 (11:30 bar), $86.60 under the range high $1317.40 (-6.57%)",
+    "reason": "last close $1219.60 (12:40 bar), $97.80 under the range high $1317.40 (-7.42%)",
     "opening_range": {
      "high": 1317.4,
      "low": 1211.0,
@@ -3076,13 +2928,13 @@
      "avg_volume": 438305
     },
     "last": {
-     "bar_start": "11:30",
-     "close": 1230.8,
-     "vs_level_pct": -6.57
+     "bar_start": "12:40",
+     "close": 1219.6,
+     "vs_level_pct": -7.42
     },
     "bars_source": "Upstox",
     "entry_kind": "not triggered: plan if a bar closes above 1317.40",
-    "rel_volume": 75.29,
+    "rel_volume": 65.62,
     "plan": {
      "symbol": "UBL.NS",
      "side": "buy",
@@ -3091,8 +2943,8 @@
      "entry": 1317.45,
      "stop": 1264.2,
      "target": 1423.95,
-     "entry_time": "11:35",
-     "entry_bar": 27,
+     "entry_time": "12:45",
+     "entry_bar": 41,
      "risk_per_share": 53.25,
      "reward_risk": 2.0,
      "stop_label": "opening-range midpoint",
@@ -3110,11 +2962,11 @@
      "p_target": 0.0,
      "p_stop": 0.0,
      "p_neither": 1.0,
-     "p_green": 0.4523,
-     "avg_R": -0.023,
-     "median_close": 1315.98,
-     "p5_close": 1297.32,
-     "p95_close": 1335.92,
+     "p_green": 0.4991,
+     "avg_R": 0.005,
+     "median_close": 1317.43,
+     "p5_close": 1301.73,
+     "p95_close": 1334.58,
      "r_at_target": 2.0,
      "verdict": "No replay reached the target or the stop by 3:15 PM: the price at 3:15 PM decides every one.",
      "notes": [],
@@ -3134,7 +2986,7 @@
      "max_loss": 958.5,
      "refusal": null,
      "reward": 1917.0,
-     "replay_avg": -22.05
+     "replay_avg": 4.79
     },
     "risk": {
      "verdict": "PASS",
@@ -3158,7 +3010,7 @@
       "risk_per_share": 53.25,
       "max_loss": 958.5,
       "setup": "orb",
-      "entry_time": "11:35",
+      "entry_time": "12:45",
       "flat_by": "15:15"
      }
     },
@@ -3180,234 +3032,62 @@
      }
     ]
    },
-   "prev_rank": 14
+   "prev_rank": 16
   },
   {
-   "rank": 17,
-   "symbol": "SONACOMS.NS",
-   "name": "Sona BLW Precision Forgings Limited",
-   "score": 81,
-   "price": 872.5,
-   "chg_pct": 2.42,
-   "volume": 2851916,
-   "turnover_cr": 248.8,
-   "news_count": 8,
-   "news_tags": [],
-   "news": [
-    {
-     "title": "Sona BLW Precision Forgings among 4 stocks showing RSI trending up",
-     "source": "Economic Times",
-     "link": "https://economictimes.indiatimes.com/markets/stocks/news/sona-blw-precision-forgings-among-4-stocks-showing-rsi-trending-up/slideshow/135250403.cms",
-     "time": "28 Oct 08:31",
-     "tags": []
-    },
-    {
-     "title": "Sona BLW Precision Forgings in Focus on 27 October",
-     "source": "Kalkine India",
-     "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQM1hYcVhKbkNUT3lOTXVSbGtvYmViVVVZT0p0RHdrWTdyTXlKakRUd2diSVR1UDJteVVTdFhnTy1HaVZPV2pPMFoxZE8tOWJXbmZnZmVSQzZzRHpKcmNibEk1bkJTQUxYRVJJamt6WXlMMW0wTmdXalI1OW5pZlBWRkhweGpBbHg2NHRteEN4eWprS25lTTJUbS1wdmxXOVd6RWZlMldSUnZsWW1BcTMwSmtTYlNzV2dydHlncUJ3?oc=5",
-     "time": "27 Oct 23:56",
-     "tags": []
-    },
-    {
-     "title": "Sona BLW Precision Forgings Ltd Surges 5.88% to Day's Hig...",
-     "source": "MarketsMojo",
-     "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQNDI3TWdNZ0tzM0t2OEljaEhaU2hIMF9kNTZKWGI4ZDlKX3dMZUFrNFBadXh2RnlVV0VwaDZjdzI2SDNiSTVNZUxDUEk2Z0hvOEZFdGtMZnZIYnk1aDNBdDdPUHdmeWJJWndiZ0E1akR1RXU5djZKSXY5eks1TVBIRk9YTEYxd0paM2lWR29vT0Y2M0tOVnBvNGlfT3Faa2haOEUzZ2FHZ05zdzlvMlo5WnRMNDRfRnhEelQ1dWtKV0Itc0dCNThwSVgzaERvZW1mOGNhRA?oc=5",
-     "time": "27 Oct 15:02",
-     "tags": []
-    },
-    {
-     "title": "Sona BLW Precision Forgings Ltd Hits All-Time High of Rs 847.95 as Momentum Builds Across Timeframes",
-     "source": "MarketsMojo",
-     "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPcGR6YnFzM2wyOHZvMHNlMHV6OWhMcGlhNUlMdDhaclZjZEpQMFNaZDJjTmVaaTBKOXJFdmRDMlJ4bHFXSl9aUU51TllhQk5BMHVlU3Q4dGZBV2lxeUhTYm9RUHhWZkFYazFGV2JKWWZIVFZVaVNDZ1VNMzFjS01HVnFLMTlPcVljbXJGb1ZEUHZoZ0ZfcVk2bXdLQXZZWUF4R1VjVEt0QzhnNjA4aDhXakdhakR5WXZlRjV0Mno2S09CU3ZieXpSRXlBNVNacFdyelRfS3FvcU9HQQ?oc=5",
-     "time": "27 Oct 15:00",
-     "tags": []
-    },
-    {
-     "title": "Sona BLW Precision Forgings Ltd Sees Surge in Value Trading and Institutional Interest",
-     "source": "MarketsMojo",
-     "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQU2VvZ29jTEViSzJxencyNkNoTFMydWRVR1g0NkhFTHNFaENTTDIwbmhfc0xLdmZGekdNUTkyXzlsQ1hNZ2JzYjNISlU3LVNTRjlEMGNUcmF4amV4MmRBRGpfTHhLVjhQN2hWRGF5WjhmblJDZ0tkMEVTaVoxLW1CRllabUZTRmpoUW1nNjNWMFBLS0p3NjI4UEx2d0xWUGdCSTlFWG9FdEFTVkNPNWl2TlY2Z1k3V0VjOUxsbEpENEI3aV9rU2EycGJpYU1rS2N4NER5Qjl1ZVpHNU1k?oc=5",
-     "time": "27 Oct 14:56",
-     "tags": []
-    },
-    {
-     "title": "Why Sona BLW Precision Forgings Share Price is Rising",
-     "source": "Equitymaster",
-     "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQcnZpaWxGVTVIa1ZweTVjdkFZVWR2cmYzR1ZCVGRMejFzLWthSVVxQU1NbXYzS1pDV0NQSExBeHBBWUdWSDVacVctdHlWanpCTER0MTFWWklQTDFQd3B5UU1fdzlycFZpRmQ4RlVCOXJzZE0yS21RVXVXTnhCVmo3N1Z4bFhBbXJQbHBxNmYwMUstYlVDemF0bkc3Mm5LV0tKb2U4ZjRta3lwVFB3bFlEbXowVzhNMFRiMWZEMmUxREk?oc=5",
-     "time": "27 Oct 14:28",
-     "tags": []
-    }
-   ],
-   "setups": [
-    "breakout_20d",
-    "reclaim_ma20"
-   ],
-   "rsi": 62.9,
-   "earnings_flag": false,
-   "price_source": "Upstox",
-   "cross_check": {
-    "yahoo": 872.45,
-    "gap_pct": 0.01,
-    "flag": false,
-    "yahoo_time": "11:37"
-   },
-   "trade": {
-    "status": "triggered",
-    "phase": "open",
-    "reason": "the 9:55 bar closed above the range high",
-    "opening_range": {
-     "high": 861.9,
-     "low": 850.25,
-     "minutes": 15,
-     "bars": 3,
-     "of": 3,
-     "complete": true,
-     "avg_volume": 205921
-    },
-    "last": {
-     "bar_start": "11:30",
-     "close": 872.0,
-     "vs_level_pct": 1.17
-    },
-    "bars_source": "Upstox",
-    "entry_kind": "triggered at 10:00 AM",
-    "rel_volume": 2.85,
-    "plan": {
-     "symbol": "SONACOMS.NS",
-     "side": "buy",
-     "setup": "orb",
-     "date": "2026-10-28",
-     "entry": 863.05,
-     "stop": 856.07,
-     "target": 877.01,
-     "entry_time": "10:00",
-     "entry_bar": 8,
-     "risk_per_share": 6.98,
-     "reward_risk": 2.0,
-     "stop_label": "opening-range midpoint",
-     "target_label": "2R (two times the risk)",
-     "opening_range": {
-      "high": 861.9,
-      "low": 850.25,
-      "minutes": 15
-     },
-     "flat_by": "15:15",
-     "interval": "5m"
-    },
-    "timemachine": {
-     "sessions": 57,
-     "p_target": 0.2615,
-     "p_stop": 0.546,
-     "p_neither": 0.1925,
-     "p_green": 0.4065,
-     "avg_R": 0.075,
-     "median_close": 863.39,
-     "p5_close": 843.07,
-     "p95_close": 884.15,
-     "r_at_target": 2.0,
-     "verdict": "Close to break-even: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 32 % (target first 26.2 % vs stop first 54.6 %).",
-     "notes": [],
-     "history": {
-      "sessions": 57,
-      "triggered": 36,
-      "target": 10,
-      "stop": 18,
-      "close": 8,
-      "avg_R": 0.143
-     }
-    },
-    "sizing": {
-     "qty": 86,
-     "bound_by": "position cap",
-     "cost": 74222.3,
-     "max_loss": 600.28,
-     "refusal": null,
-     "reward": 1200.56,
-     "replay_avg": 45.02
-    },
-    "risk": {
-     "verdict": "PASS",
-     "reasons": [],
-     "warnings": []
-    },
-    "order": {
-     "symbol": "SONACOMS.NS",
-     "side": "buy",
-     "qty": "86",
-     "type": "market",
-     "time_in_force": "day",
-     "order_class": "bracket",
-     "take_profit_limit_price": "877.01",
-     "stop_loss_stop_price": "856.07",
-     "why": "opening-range breakout on SONACOMS.NS: 86 shares, bound by your position cap (86 x 6.98 = $600.28 at the stop)",
-     "plan": {
-      "entry": 863.05,
-      "stop": 856.07,
-      "target": 877.01,
-      "risk_per_share": 6.98,
-      "max_loss": 600.28,
-      "setup": "orb",
-      "entry_time": "10:00",
-      "flat_by": "15:15"
-     }
-    },
-    "alerts": [
-     {
-      "type": "stop",
-      "price": 856.07,
-      "at": null
-     },
-     {
-      "type": "target",
-      "price": 877.01,
-      "at": null
-     },
-     {
-      "type": "time",
-      "price": null,
-      "at": "15:15"
-     }
-    ]
-   },
-   "prev_rank": 19
-  },
-  {
-   "rank": 18,
+   "rank": 16,
    "symbol": "HINDUNILVR.NS",
    "name": "Hindustan Unilever Limited",
-   "score": 80,
-   "price": 1780.6,
-   "chg_pct": -2.06,
-   "volume": 1662095,
-   "turnover_cr": 296.0,
-   "news_count": 20,
+   "score": 78,
+   "price": 1807.8,
+   "chg_pct": -0.56,
+   "volume": 2414198,
+   "turnover_cr": 436.4,
+   "news_count": 16,
    "news_tags": [
     "capital",
     "earnings"
    ],
    "news": [
     {
+     "title": "Stocks to Watch Today 28 Oct: Jio, RIL, HUL, L&T, Maruti",
+     "source": "Univest",
+     "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQWjg4dzN0LXJtUnpTQkhxQmNSVEI0WlF2dGNwaUo0UG5VS09Pdnd0T3RUcDhoNFNfYzZwenRjc1JJQ3llcnVDQ1N0QnJLb3pSODdVdk93VlQ3czBDRjhMSk15c0RVd3RGSURubG1xdnFpQzQzeGJneGZoSjkxWW9qQXQ2N21Bd3hzbU8wMjMwQjd3WUJ5U0xpSWNnbno4ckhxS3lrUmRBVTFRTVNLSU1OdElmeWJ4eEo2TXhiNXFnWXlidUtRR0lyVFVUanJGM1BTOGVBTUZVV29YbGM?oc=5",
+     "time": "28 Oct 12:48",
+     "tags": []
+    },
+    {
+     "title": "HUL trades on a volatile note post Q2 results; stock near 6-year low",
+     "source": "Business Standard",
+     "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOazZRajJVLTlxVTF4UlhnTVYtTThETGVuQlloSlV6MkdaVGc4RGhkWTM5NFJNSjlzQmNNTTVLV3VqRmdXVFZOWmY5Q3lLNDMzU1I4TEVEc3hJa2VZR2NCUC02NmNTbkNpTW1XbHE0RkdyTlVLLVJCWVBoTWZKbkFqM1FmcTRaYzdMZ2VXZjNDcDM4cHFqX3FjMkQyMTlvZk13M0RsOTd1MGxuN2gyclpFbHdNNklkSjMzRFBJbHpsMVZwQllad2dlS0NXOHNVaGvSAdQBQVVfeXFMTk1FV2sxVVVJYWNwZmdXLTBuNDlxcWhva0lDSDdQcXd6MWRSMUxMSnRCaTZHWXgyazZUNEhjdjVuLUw4eVV5T09xM1B1SGNGX3pBSkxGLTJpR0F1cUlTTFNfMVNqMDl1S3BrazBRVFJRaTRfSE9wN2pXWlZVM1JPQUVsNVB0UTh4VWdVNGJSSTB5dGpNcS11LXlROUFaN2pzZUtBd3RKWThsTENRNFNKMUh2enJWMXBHTHU1aUNIaUtsaDNUbURMUkdweTFOaDZIMDFwa3Q?oc=5",
+     "time": "28 Oct 12:17",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "HUL posts 15% sales growth, declares ₹19 dividend; stock falls 1.8%",
+     "source": "TradingView",
+     "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPeTJHU0NZV29GNzZqaXFSRGZCOEYtdkZTU2tlaDhORXR6VHIxenl3SGRxaXlZQkVVenpPSll1M0JMdkpXYWJrcVQwS1prX1FHMHptX1dUMW1zR3IwTF94Y2Q0ZktMT21GY01YNWxEMzhhVjBLUUVmY0JNendXaWF6YXRtRFJOVFZuS1ZGR3BGTTZ2Q0ZYdGh2OGFnb0wxQS1KOEF6dFJCSVlxZDJFU1hvOFg3Y3p0dUJNazRF?oc=5",
+     "time": "28 Oct 12:10",
+     "tags": [
+      "capital"
+     ]
+    },
+    {
+     "title": "HUL shares slip 3% to hover near 52 week low after Q2 results; details here -",
+     "source": "IndiaIPO",
+     "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNUzNXU0dvdHExNFA3blhjcnJaSlF4dnhLUFF1SjJ1dzVfdHpHZ09yTGFBQTA4bFRLYWQwZHhUMWlOY1IyV0lwM081eWdObkdWUW9jSEZDMlNlbXRSVDRRdE1fNmNlRFZXek9lT3UzLXI3bkg5c2JrZGtNb1pSWDJkY2oxSkwzMjNfUUw1ZktKdjczdGxZMVRVWThkVkJVWnNhTkJMVXBFcHM1VHZIM1E?oc=5",
+     "time": "28 Oct 12:04",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
      "title": "HUL Q2 results: Volumes grow at multi-quarter high of 7%",
      "source": "Livemint",
-     "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPUEJydGhLbkkyM1RSaHBKS0RJdmRxVkZLN2FkUENEN21fNEN3cTU1X1VXdExEVTJoVXVCZ1plX3diNmMxWWxuOWxfcUtmQmM0NWhNVVFJT2JacE5aOXJoRU85T1ZMWnpvR1FUZ0I0MHVlOEZTLUluMDJJYks2Z1pZR18tcmZySmR2Wk1sMUhJdllMZGJXdXNoYnBJYlAwYVh5d0ZIbnZtQ1ZYVDVSeGJ0V1J5dm5wLTFCNEE?oc=5",
+     "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPUEJydGhLbkkyM1RSaHBKS0RJdmRxVkZLN2FkUENEN21fNEN3cTU1X1VXdExEVTJoVXVCZ1plX3diNmMxWWxuOWxfcUtmQmM0NWhNVVFJT2JacE5aOXJoRU85T1ZMWnpvR1FUZ0I0MHVlOEZTLUluMDJJYks2Z1pZR18tcmZySmR2Wk1sMUhJdllMZGJXdXNoYnBJYlAwYVh5d0ZIbnZtQ1ZYVDVSeGJ0V1J5dm5wLTFCNEHSAb8BQVVfeXFMTjVhdm9IMEF1cE5Hc1FuS0I1dS1EOHJULUtCZWRQTFA0cDFrLWJ3N0ZwVThLYWVFODJUOHlkZktKQ1hOTXUybU83a1BCbFRFeU1sU3FQbjJpNjFsSmJ4ZnZVRTZ6cUlwWlRoanpxRHlfX05CLTQtU0QtNUlHZkhxN3paaVpVeFdmdXhtdHJCX1RnMDdYWlEtVTBmd04xQmJDYko1VVlQdGloSE42c25feWhtN3J1M1F3RkRFNFp6SDA?oc=5",
      "time": "28 Oct 11:09",
-     "tags": [
-      "earnings"
-     ]
-    },
-    {
-     "title": "HUL shares slip 3% to hover near 52-week low after Q2 results; details here",
-     "source": "Business Today",
-     "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQY0JLbUYwS2Jpa21PZVBxOUtKSy1CTjZ5MWlpS3E5aWFaczJQSTVyRGFhMkRrMDAwcUoxSm9NUW5vRVpfdUZUZ200VVJyd2Qza2p1cFpfUTNkTzFhUjdfU3o2TVRZaFVwUWJnLW5hYXZYR0hSTGRRQjJVV2pOYWpBNWtmeFgyLWNLbTBhQ3U1TnR6dGlGSzlDLWRlNnlvR1U0NGRRY2V1T3lqTGVLZHY1Q1lyMDQzeUNFc3JZdXA4bGhYNExQU012eDhFdzhWT2JsN1NyNXNyd0bSAd4BQVVfeXFMTjFONDRZTENOYXdRdXBaUnh5WEFNVS04RldwTjF5dU1QcURiTFI5a2dKelNoeUVKbTFWS0F3S0hsMnRYWnNTbnpqbjBNQnZQQVVDTjZTM2ZSdTg0X1lDQ2RiaVdZMVFNVFhxRjRhVEVsYVZpQ1FvSUV3RjFKQ1k4YUJOaVpHeE90am1JNUktYnZKVENLR0xrYzU2WnJSaWRFakk1SE9Dc1V6dUNjM2x4N2RIRk9TM24yQTh5eWx1X3hua095QjZqTzhNNkgtOEZ3TmZ5YkZVRW5xTWRUNnJB?oc=5",
-     "time": "28 Oct 11:00",
-     "tags": [
-      "earnings"
-     ]
-    },
-    {
-     "title": "HUL Q2 Ad Spend Analysis News, Insights & Timeline",
-     "source": "Exchange4Media",
-     "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPLUJISS15Z2tiZWhzNjA3djJPdTRmSXBFSndoTlNDYkpRZ3VMOWxNakZzZW1FdXh6UkdVckZMVU9OeXZjR0w3WWJKc3E3TWZJbEJiTnRnbGN1MnVvYk81VmpqYno4bXNXdll1Q3lVbUE0NGlVaVFCaEdudnhPNGphNUg0Ul8?oc=5",
-     "time": "28 Oct 10:44",
      "tags": [
       "earnings"
      ]
@@ -3420,25 +3100,6 @@
      "tags": [
       "earnings"
      ]
-    },
-    {
-     "title": "HUL Q2 profit rises 4%, revenue at Rs 18,037; declares Rs 19 dividend",
-     "source": "The Financial Express",
-     "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPNW0xdlZmMmdwZzVtaXpmZFNDbmtyR0RZMzNIUVdNMEVEeHg3MEFxb3diN2dwQklyMm9VRGZxaWw4YWRBSDgwZDNRVnB4RUtYUG1VNDVYM3AwOXRDb1NBdWdNdEMxelQycDl5WGlzRHpjcmpJeGFORmFkX3Eyc2IxR2VkRm5EeEtoU0J1RHhWNUFWX0lScEVIRllMbU5SWXNwakFQS0swWHBGME43N05telU3bWQxOHBGS0ZVbV8xT285dTjSAcoBQVVfeXFMTjJyb25aWTc4cTVycVlILW1jd1NNT1hEWER3UThIV2lnYUJkcXExVENGTThNWVJleFB5T2twQWR4U0FPZW9PUlZpMDJHc3BHQzlreGIzOHpDOHZuQ3RVZWhwZktvc2ZiRk1uVnFjbWNhTWxxb2VyMFpTb3Q0dmUyQVV3bmpLSFJ3ZnZ5Vi1DVEE3bFNxNnBOaGtpOVUtbmQybUZBODd3YWFCbjJOQWRwYTJkOGJhNTg1WGFab05NeFBGQzVmYzFmaVo4UQ?oc=5",
-     "time": "28 Oct 10:30",
-     "tags": [
-      "capital",
-      "earnings"
-     ]
-    },
-    {
-     "title": "HUL Q2 Results: Revenue growth highest in 14 quarters; Volumes increase by 7%",
-     "source": "CNBC TV18",
-     "link": "https://news.google.com/rss/articles/CBMigwJBVV95cUxQWlo2VWhzWWJPUGtiT0hhRkFTUk5BZ0QwSm93RWllSnoxWXdrWGw2NC1FUVo0dnJ1aWtOSjZRbzJOZHZwZF8xZXdxN2pFQkhJcV92YWcxZ0xvdU14LXVDR0VHR1pzREcySW1qYmhweXh0MWlubW8tWlZfdG9vUDRHZGRzbXZPX0RnYTY4b0NHd09WQ0pPWjR3NEFIN0JmMDB2T3lDbm9zZzA2Nm9tV0lNbHVwOVpuSUNLUm05ZHk3S0dIUHVMNktwdjhIQjNNR0FRMzV2OW40YXlFVHFvd3pXRl9vR1FpY2pya2FzWXpvOUVraC0xNXhUYldMcDlaRjF0WDJv0gGIAkFVX3lxTFBHVVJDdHlhQnUtRHdmSXFyVjRXejl0RC1VOVp3cGZHU1hRY1hTWmRhTlVGdzlHYkE0dks3UUFsRmZOTzEtVEJUa2ZfU1lKTVdqSGNKYXNwQWNqS18tQnRWdzhlMFF5TVpOZU9MOXdDeU81OG45LU56M3Zpd0xRTUhCdTk3bk1HZVR0aTVBUFM2NUE1MDc4ZDg4dzNvQVViZllQYmRVbVVqb2I3SEJQRzg0UEdnMzBwQVlyR1Q2MTRYZHJiQVF2NzVwa3hEdWNqbjM0R3Q4M1hCX0dqaWt2X1RiM2dpTXQ5YXZYYXFLSTdNbWhGM0FBeEJyY0ktNkp3OGQ0dHlSczIyYg?oc=5",
-     "time": "28 Oct 10:26",
-     "tags": [
-      "earnings"
-     ]
     }
    ],
    "setups": [],
@@ -3446,10 +3107,10 @@
    "earnings_flag": true,
    "price_source": "Upstox",
    "cross_check": {
-    "yahoo": 1778.4,
-    "gap_pct": 0.12,
+    "yahoo": 1807.5,
+    "gap_pct": 0.02,
     "flag": false,
-    "yahoo_time": "11:37"
+    "yahoo_time": "12:50"
    },
    "trade": {
     "status": "triggered",
@@ -3465,13 +3126,13 @@
      "avg_volume": 31501
     },
     "last": {
-     "bar_start": "11:30",
-     "close": 1778.7,
-     "vs_level_pct": -1.99
+     "bar_start": "12:40",
+     "close": 1804.5,
+     "vs_level_pct": -0.57
     },
     "bars_source": "Upstox",
     "entry_kind": "triggered at 9:40 AM",
-    "rel_volume": 3.93,
+    "rel_volume": 3.9,
     "plan": {
      "symbol": "HINDUNILVR.NS",
      "side": "buy",
@@ -3571,17 +3232,213 @@
      }
     ]
    },
-   "prev_rank": null
+   "prev_rank": 18
   },
   {
-   "rank": 19,
+   "rank": 17,
+   "symbol": "MAZDOCK.NS",
+   "name": "Mazagon Dock Shipbuilders Limited",
+   "score": 78,
+   "price": 1726.3,
+   "chg_pct": -1.58,
+   "volume": 1939865,
+   "turnover_cr": 334.9,
+   "news_count": 5,
+   "news_tags": [
+    "capital",
+    "earnings"
+   ],
+   "news": [
+    {
+     "title": "Mazagon Dock Shipbuilders share price cut 10% by HSBC after Q2 results on weak earnings fears",
+     "source": "CNBC TV18",
+     "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQaTVDMWlSbUJmS2RqNk5nd3lOdDBFVnV5SnU5bklHSXRKTFg0cnJlcUJhTkJCdTdFR19Gb1pZM19QOVU0NXp1Y3dKMTRfSjlaNU9KamJPRjhwZG5OeFlET3o1LW9LZ3BubUFjejdVNjNMNWQ5a2VwcWtkQlNoUFQxeWV3WWhSYVplUG1fc1M3YjVnc2h5QXJwTGR2NXp5NV9EYTBSZG5vQXVWUE5lN3FWeVVEelBvc1RMQU01cnp4YUxZZ0xyY2cwaVo4bWRlSHPSAdQBQVVfeXFMUF92cTlVbXZqRmpDa2E1S3dJZ2V1OW9GN01WV2xyc3F5MUZKX1dLTjN0WHRiUGZXaE95b204TW9kWFM3U0kyMHRBamRBeXRJMjlVZ00xMk5NNmljaTlQckVDN0txZnluY19BZmZTN3dRTjBHSmtzZ2x0R2ktLWN4cUJ3OEtLN1F6blpZZ3hZUWl0MjNCbTZjcnlYZmEyS2xOc0dWOUNnbk1Mdk1EbFJaVHpjUGJZMldJQmZsVDlwMDRxSTBiNllEQ1Y5dnUtNXNhMktwOFI?oc=5",
+     "time": "28 Oct 12:18",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "Mazagon Dock Shipbuilders: Interim Dividend Approved of ₹5 Per Share for FY27",
+     "source": "InvestyWise",
+     "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQVmwwcjktMVRzZDFzeGFyRjZ3OG5GWUJlTjEzYnZTZnU4RksyUjZVSzFsSHVSVDQ5SUZrTHhqSlJqOWdkLTdqdDhJNFByRmVCSk42T3FFX2lySm5aTFVMQ2g2NlIzaXRoOEJTdzBXeVowSVpTM1d5MHFlb3J4YjNfWGhvOUtjMWc1cDc5ZA?oc=5",
+     "time": "27 Oct 18:01",
+     "tags": [
+      "capital"
+     ]
+    },
+    {
+     "title": "Mazagon Dock Shipbuilders shares crash 10% after Q2 net profit tumbles 54%; firm declares Rs 5/share divid",
+     "source": "The Economic Times",
+     "link": "https://news.google.com/rss/articles/CBMijAJBVV95cUxNR1h1cng0ZmJxU3AzaURvSHJmN1Z3WXRXMURaRUFLRXl1M3otR3hTQW9sQk9wRXRWaG0zdnZWeVdfcGNkVEF5Q2x0X3RQdnplbHdrY1V0X0Y1dTMybnRsSVpRZGlPdjhXbTE1VzhtZXFOXzB1ek9QMk1jalpQdkVxTU5Gc3ZyZ1BZVDg2WjBVSGtoUTM3STNtZlc0WlNKZEtOdEdfYjR3QWNoVnBCS2p3dEUyaVFQVnJEMXZpclNFc05CdllMd3RIU3JsZUlMN2tDemJfMVRKUVloQ2o1SkxpMXpWcjZHTkhpVnpqT2tVUENBWU5uLW9fRllxUk9QYmFrZUZvX20tSlZhaUht0gGSAkFVX3lxTE94NXFSOVMxVzkwc1ZSeHNDbXRSU1lvZjNQWmo0WDZZNXdhODVSc3FpVUFKcjBuaXU4aDhhakRWYU1nQTIybTJiZHpRUXRvbFYwRzBvbHhSUmJhbEtoSlZLODlwRnVTOHpFM2wtSS1xYXZIOFdjN1BVbEREMC1VOEY0NlRQTkZTUTBPY1l1R0lBcjc1U0d3Q0lWME9ibVdEYUZLN19xdnlyeWp0eXFpWFdYLW42dTctbWNaRWdXOUJHZF9UTDUwTWlySlZQUy1XWnNiRUlreHRoWWp0TWhLa0NrWVBYMmRQRkYzaThhQjRDY3BIVzV0NGd5Z2JnRmpqaE5OLWx0cHFxV0NKZnNBLVpRVkE?oc=5",
+     "time": "27 Oct 16:43",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "Mazagon Dock Shipbuilders Q2 results: Shares slump 10% after revenue declines; Higher provisions drags PAT",
+     "source": "CNBC TV18",
+     "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQd3piNTJOVVBYWENEYnk0NnVnak5zbGhOVlRSbVR6NVNsaU5FdlVvQkg2OEZGZlpCbDJoMExtUC1oUUNQRDkxV0QtX2M3M1JmOVJQT3JDVGhNTzhsa3U1N19WTW5STU16WUJTM0gydHVmVUZaX1lUdXJaVXlrNGkwd2JmWDB0S3p3QkhRWklLXy12MGMyUm9KWVNyM19sVWJQZFBPdlNfZVQ1ZHVpMlVnM1RlM0pIY3dXNm5waWhLUFd4LWVUalZDTG1ES1AyalM0X0NULVRuZ3FXcUXSAdsBQVVfeXFMUHd6YjUyTlVQWFhDRGJ5NDZ1Z2pOc2xoTlZUUm1UejVTbGlORXZVb0JINjhGRmZaQmwyaDBMbVAtaFFDUEQ5MVdELV9jNzNSZjlSUE9yQ1RoTU84bGt1NTdfVk1uUk1NellCUzNIMnR1ZlVGWl9ZVHVyWlV5azRpMHdiZlgwdEt6d0JIUVpJS18tdjBjMlJvSllTcjNfbFViUGRQT3ZTX2VUNWR1aTJVZzNUZTNKSGN3VzZucGloS1BXeC1lVGpWQ0xtREtQMmpTNF9DVC1UbmdxV3FF?oc=5",
+     "time": "27 Oct 15:23",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "Mazagon Dock Shipbuilders Dividend 2026: Navratna PSU declares Rs 5 cash payout with Q2 results; Check record date",
+     "source": "Zee Business",
+     "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNajJLZ2RjR3pzd09PRkpHS0t3ZnZybFpXQ1JmZXF4Skd6ay1naUpieU5FenZ6UlhBbUwxeDg5eDhyaFFHSm9GV0tjVFVKR1VwcmM1U015RFVHcFc3b1NrYW1hN3RfTTZObUxTUEZBQzdwdVNUOEFnSVNUZnpRbDF5cC02T1o4bl90ZG5UanhQYXlXNzBPc29iME1ucDJwbzFjNVh5SzdxNzJ3d3hfRUNNbW9KS3dqZ3dmTDNBZVdPTFBWcFd1aW1BLTFlclBWbXVRQkhLLVVLcVJZQ3Y1Mk5CVmlkZUdZWUhGUmc4eUZ6Q0g?oc=5",
+     "time": "27 Oct 14:58",
+     "tags": [
+      "earnings",
+      "capital"
+     ]
+    }
+   ],
+   "setups": [
+    "oversold"
+   ],
+   "rsi": 21.6,
+   "earnings_flag": true,
+   "price_source": "Upstox",
+   "cross_check": {
+    "yahoo": 1726.9,
+    "gap_pct": 0.03,
+    "flag": false,
+    "yahoo_time": "12:50"
+   },
+   "trade": {
+    "status": "triggered",
+    "phase": "open",
+    "reason": "the 9:30 bar closed above the range high",
+    "opening_range": {
+     "high": 1750.2,
+     "low": 1690.6,
+     "minutes": 15,
+     "bars": 3,
+     "of": 3,
+     "complete": true,
+     "avg_volume": 194778
+    },
+    "last": {
+     "bar_start": "12:40",
+     "close": 1720.0,
+     "vs_level_pct": -1.73
+    },
+    "bars_source": "Upstox",
+    "entry_kind": "triggered at 9:35 AM",
+    "rel_volume": 4.42,
+    "plan": {
+     "symbol": "MAZDOCK.NS",
+     "side": "buy",
+     "setup": "orb",
+     "date": "2026-10-28",
+     "entry": 1750.5,
+     "stop": 1720.4,
+     "target": 1810.7,
+     "entry_time": "09:35",
+     "entry_bar": 3,
+     "risk_per_share": 30.1,
+     "reward_risk": 2.0,
+     "stop_label": "opening-range midpoint",
+     "target_label": "2R (two times the risk)",
+     "opening_range": {
+      "high": 1750.2,
+      "low": 1690.6,
+      "minutes": 15
+     },
+     "flat_by": "15:15",
+     "interval": "5m"
+    },
+    "timemachine": {
+     "sessions": 57,
+     "p_target": 0.0178,
+     "p_stop": 0.265,
+     "p_neither": 0.7172,
+     "p_green": 0.409,
+     "avg_R": -0.125,
+     "median_close": 1745.65,
+     "p5_close": 1702.49,
+     "p95_close": 1787.8,
+     "r_at_target": 2.0,
+     "verdict": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 6 % (target first 1.8 % vs stop first 26.5 %).",
+     "notes": [
+      "71.7 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those."
+     ],
+     "history": {
+      "sessions": 57,
+      "triggered": 22,
+      "target": 6,
+      "stop": 13,
+      "close": 3,
+      "avg_R": 0.02
+     }
+    },
+    "sizing": {
+     "qty": 33,
+     "bound_by": "max loss",
+     "cost": 57766.5,
+     "max_loss": 993.3,
+     "refusal": null,
+     "reward": 1986.6,
+     "replay_avg": -124.16
+    },
+    "risk": {
+     "verdict": "PASS",
+     "reasons": [],
+     "warnings": []
+    },
+    "order": {
+     "symbol": "MAZDOCK.NS",
+     "side": "buy",
+     "qty": "33",
+     "type": "market",
+     "time_in_force": "day",
+     "order_class": "bracket",
+     "take_profit_limit_price": "1810.70",
+     "stop_loss_stop_price": "1720.40",
+     "why": "opening-range breakout on MAZDOCK.NS: 33 shares, bound by your $1,000 max loss per trade (33 x 30.10 = $993.30 at the stop)",
+     "plan": {
+      "entry": 1750.5,
+      "stop": 1720.4,
+      "target": 1810.7,
+      "risk_per_share": 30.1,
+      "max_loss": 993.3,
+      "setup": "orb",
+      "entry_time": "09:35",
+      "flat_by": "15:15"
+     }
+    },
+    "alerts": [
+     {
+      "type": "stop",
+      "price": 1720.4,
+      "at": null
+     },
+     {
+      "type": "target",
+      "price": 1810.7,
+      "at": null
+     },
+     {
+      "type": "time",
+      "price": null,
+      "at": "15:15"
+     }
+    ]
+   },
+   "prev_rank": 15
+  },
+  {
+   "rank": 18,
    "symbol": "TVSMOTOR.NS",
    "name": "TVS Motor Company Limited",
-   "score": 78,
-   "price": 4137.0,
-   "chg_pct": 1.22,
-   "volume": 312501,
-   "turnover_cr": 129.3,
+   "score": 76,
+   "price": 4135.5,
+   "chg_pct": 1.19,
+   "volume": 382821,
+   "turnover_cr": 158.3,
    "news_count": 12,
    "news_tags": [
     "deal",
@@ -3647,10 +3504,10 @@
    "earnings_flag": true,
    "price_source": "Upstox",
    "cross_check": {
-    "yahoo": 4137.0,
-    "gap_pct": 0.0,
+    "yahoo": 4139.9,
+    "gap_pct": 0.11,
     "flag": false,
-    "yahoo_time": "11:37"
+    "yahoo_time": "12:50"
    },
    "trade": {
     "status": "triggered",
@@ -3666,13 +3523,13 @@
      "avg_volume": 33320
     },
     "last": {
-     "bar_start": "11:30",
-     "close": 4136.0,
-     "vs_level_pct": 0.15
+     "bar_start": "12:40",
+     "close": 4137.7,
+     "vs_level_pct": 0.19
     },
     "bars_source": "Upstox",
     "entry_kind": "triggered at 9:45 AM",
-    "rel_volume": 1.03,
+    "rel_volume": 0.93,
     "plan": {
      "symbol": "TVSMOTOR.NS",
      "side": "buy",
@@ -3770,17 +3627,217 @@
      }
     ]
    },
-   "prev_rank": 20
+   "prev_rank": 19
+  },
+  {
+   "rank": 19,
+   "symbol": "JIOFIN.NS",
+   "name": "Jio Financial Services Limited",
+   "score": 75,
+   "price": 207.25,
+   "chg_pct": 0.0,
+   "volume": 9090304,
+   "turnover_cr": 188.4,
+   "news_count": 7,
+   "news_tags": [
+    "analyst",
+    "capital",
+    "earnings"
+   ],
+   "news": [
+    {
+     "title": "Jio Platforms Dream Debut Puts Spotlight On Jio Financial Services: Why Its Growth Story Is Far From Over",
+     "source": "Free Press Journal",
+     "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOeGdiajRZZHJyb2l1SlVsOXI2R0tnVDE4ejV3SGFhRzNBOGRTU0pyMVRIN1Z1Rk9SN1BLa3N4N0dNZ0pzbFp2ODVGdkxMMk5MWmtCckxTTXUyaEdkNHN5dmZ1d1hoanlfc3N2alZkUzZzdDl3ZF82TmtGM3ppbFFqNUtpSkhjaGxCQ3JLcURueVd1OGhyNGVwTHdHTUxwamxKSlJETVRmVllnblNJU3NUR1Z0SmhrRDhSU2VaTXpFTS01bHZvclJJWDcwWkcwNFpWeWRxSkZOZ21FREc0bmfSAeMBQVVfeXFMTmZWeUFLR2FfdTVFaXNIV1U2ckFDM1laVkMtUmZxUGpwLXA4SmJQUmx2Y2tMN215U1Y5eVVKQmhHYWxERU9VX0s2XzFVMFA4aGRFazg0UUxUUGJ2LW4tQ08tMjc1bk1VNDhlbi03SFhqeUZDMVM3SFFreHdweVZZOFJWYldGNGViX2JudnVqb3FFV01tMzZ5MXpfUC0yWkVnUW9SazNtdXV6TEZkQ1NSY1JaaVNlTnctRFdWRWNWVGc3VnJoazE0aFhBTG43cHRkQy1EVW8zRU1TRTIwVHVkYkFLRkU?oc=5",
+     "time": "28 Oct 12:18",
+     "tags": []
+    },
+    {
+     "title": "Jio Financial Services shares fall 1% amid Jio Platforms listing | What should investors do? Check target, stop loss",
+     "source": "Mint",
+     "link": "https://www.livemint.com/market/stock-market-news/jio-financial-services-shares-fall-1-amid-jio-platforms-listing-what-should-investors-do-check-target-stop-loss-11793162015795.html",
+     "time": "28 Oct 10:32",
+     "tags": [
+      "capital"
+     ]
+    },
+    {
+     "title": "Jio Financial Services Share Price Live Updates: Jio Financial Services News",
+     "source": "Economic Times",
+     "link": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/jio-financial-services-share-price-live-updates-28-oct-2026/liveblog/135250387.cms",
+     "time": "28 Oct 08:35",
+     "tags": []
+    },
+    {
+     "title": "Motilal Oswal keeps INR 300 target for Jio Financial Services stock - ad-hoc-news.de",
+     "source": "Google News",
+     "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPSy1XcDNOWHQyTnJ5VjFjZUtXaERrbDdwcTUtUzVlR3AtX1VPSGk5Y1B5OUoyZTN1V0NNdEJIRGFnR1hTTlhCT1FFOU9oend6WEJha3NDckhJQTBMWmc4YkZpb1JGWlM0ZWZEb21JQlFiVC1ITER3c3hUYjVyUlZib2R1dkJDclpteDhaQzhCNEJsTUJpMU41a2tHMk5ZSk5FZVF4bTdxYkxxMzNtbmE2eVB2ZHNxNl9YV0M5ZzZEbS1YLVZzQmpQc0xB?oc=5",
+     "time": "27 Oct 19:57",
+     "tags": [
+      "analyst"
+     ]
+    },
+    {
+     "title": "JIO Finance Share Price - Live NSE: JIOFIN Stock Price & Chart",
+     "source": "Upstox",
+     "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9qYXVSUmFnb2dUb1VxaWNpb3JwZDJ2VDAxZUVybWJkODdPRlk1bnNuTTI3RmZ0ZFEza3ZfV1hxYnZLaVg0cVotZG9FVnZnWHEyeXFhV0Nmd0lHTjZTMG5NREl1ZVlhakg4WWNR?oc=5",
+     "time": "27 Oct 15:37",
+     "tags": []
+    },
+    {
+     "title": "Jio Financial reports Q2 profit drop: Motilal Oswal rates Jio Financial Services stock Buy - ad-hoc-news.de",
+     "source": "Google News",
+     "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPVzRnT1dqMFg4bWxTeFBMc29rd3llS1NhRFktOUZHdFRZdUJkNEhCMXZQNjgzeHpPcDZTa05HaEtoRmJQb1N4MW9PUHFpR1kzT0g2TzFKVkgxY3NwR3V0TVVHeWFkWHBMMGJvbFMxSUJiQ05CcTBVUmFjczZaNTZUanhJUkZINHdTSFF1SXRYSEktUU5Nb0h3dHVQeXVEOEE1cVYwNzhxNkR0MzRKNnhndnZ2c3RMYVVzcXg4eTd6MU0zRllzdVphaVFWeWpnLXlEd3BHWFZDVE50VnoxQUhPUFBkUE1hNkk?oc=5",
+     "time": "27 Oct 13:58",
+     "tags": [
+      "earnings",
+      "analyst"
+     ]
+    }
+   ],
+   "setups": [
+    "oversold_bounce"
+   ],
+   "rsi": 34.1,
+   "earnings_flag": true,
+   "price_source": "Upstox",
+   "cross_check": {
+    "yahoo": 207.29,
+    "gap_pct": 0.02,
+    "flag": false,
+    "yahoo_time": "12:50"
+   },
+   "trade": {
+    "status": "triggered",
+    "phase": "open",
+    "reason": "the 9:45 bar closed above the range high",
+    "opening_range": {
+     "high": 207.43,
+     "low": 205.3,
+     "minutes": 15,
+     "bars": 3,
+     "of": 3,
+     "complete": true,
+     "avg_volume": 417598
+    },
+    "last": {
+     "bar_start": "12:40",
+     "close": 207.19,
+     "vs_level_pct": -0.12
+    },
+    "bars_source": "Upstox",
+    "entry_kind": "triggered at 9:50 AM",
+    "rel_volume": 1.15,
+    "plan": {
+     "symbol": "JIOFIN.NS",
+     "side": "buy",
+     "setup": "orb",
+     "date": "2026-10-28",
+     "entry": 208.32,
+     "stop": 206.36,
+     "target": 212.24,
+     "entry_time": "09:50",
+     "entry_bar": 6,
+     "risk_per_share": 1.96,
+     "reward_risk": 2.0,
+     "stop_label": "opening-range midpoint",
+     "target_label": "2R (two times the risk)",
+     "opening_range": {
+      "high": 207.43,
+      "low": 205.3,
+      "minutes": 15
+     },
+     "flat_by": "15:15",
+     "interval": "5m"
+    },
+    "timemachine": {
+     "sessions": 57,
+     "p_target": 0.0411,
+     "p_stop": 0.4357,
+     "p_neither": 0.5232,
+     "p_green": 0.3483,
+     "avg_R": -0.243,
+     "median_close": 207.63,
+     "p5_close": 204.38,
+     "p95_close": 211.15,
+     "r_at_target": 2.0,
+     "verdict": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 9 % (target first 4.1 % vs stop first 43.6 %).",
+     "notes": [
+      "52.3 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those."
+     ],
+     "history": {
+      "sessions": 57,
+      "triggered": 29,
+      "target": 3,
+      "stop": 16,
+      "close": 10,
+      "avg_R": -0.225
+     }
+    },
+    "sizing": {
+     "qty": 360,
+     "bound_by": "position cap",
+     "cost": 74995.2,
+     "max_loss": 705.6,
+     "refusal": null,
+     "reward": 1411.2,
+     "replay_avg": -171.46
+    },
+    "risk": {
+     "verdict": "PASS",
+     "reasons": [],
+     "warnings": []
+    },
+    "order": {
+     "symbol": "JIOFIN.NS",
+     "side": "buy",
+     "qty": "360",
+     "type": "market",
+     "time_in_force": "day",
+     "order_class": "bracket",
+     "take_profit_limit_price": "212.24",
+     "stop_loss_stop_price": "206.36",
+     "why": "opening-range breakout on JIOFIN.NS: 360 shares, bound by your position cap (360 x 1.96 = $705.60 at the stop)",
+     "plan": {
+      "entry": 208.32,
+      "stop": 206.36,
+      "target": 212.24,
+      "risk_per_share": 1.96,
+      "max_loss": 705.6,
+      "setup": "orb",
+      "entry_time": "09:50",
+      "flat_by": "15:15"
+     }
+    },
+    "alerts": [
+     {
+      "type": "stop",
+      "price": 206.36,
+      "at": null
+     },
+     {
+      "type": "target",
+      "price": 212.24,
+      "at": null
+     },
+     {
+      "type": "time",
+      "price": null,
+      "at": "15:15"
+     }
+    ]
+   },
+   "prev_rank": null
   },
   {
    "rank": 20,
    "symbol": "ICICIBANK.NS",
    "name": "ICICI Bank Limited",
-   "score": 78,
-   "price": 1376.7,
-   "chg_pct": -0.74,
-   "volume": 4213948,
-   "turnover_cr": 580.1,
+   "score": 75,
+   "price": 1376.5,
+   "chg_pct": -0.75,
+   "volume": 5527754,
+   "turnover_cr": 760.9,
    "news_count": 8,
    "news_tags": [
     "capital"
@@ -3817,17 +3874,19 @@
      "tags": []
     },
     {
+     "title": "600% Dividend Dhamaka: ICICI Bank Fixes Record Date For Payout | Are You Eligible?",
+     "source": "Goodreturns",
+     "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQQ25FTGFwRWpWa2lyRmpDNjItck5zVW9NSWxQUV9SV2dVUER4YldsNklHa2JkVmo2TlBUVzBlWFliVGNBbnFOakdBY0J6eW1CSkJLdHNCUlRKYnZrOE1UQWhJdFBpQTVadnh0SzRVdldvb2YwWDNaOGNsUm9qRGVpUjVBWHNxNk5tUXB0M3Q4Mk1PbmZyd3ZXY2RFLW9jdUViYkRqbXEwT2VZYU5qaHVoTE0xa3JlU0t6RVluZ25lTQ?oc=5",
+     "time": "27 Oct 23:52",
+     "tags": [
+      "capital"
+     ]
+    },
+    {
      "title": "ICICI Bank (NSE:ICICIBANK) Allots 10,63,398 Shares Under ESOP Scheme-2000",
      "source": "Kalkine India",
      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNdm9tbFU5alpqeF83UV9JdkYzV2JVXzFkR3lTRGt2X21DbkFfcWhlTVlRMWZScXhWMWE2XzJibEU3T3ZMQmhaLUhwTUphZU0yMktzNGpPMm9FdmwyZjVCTFNFTFFCZUdjOFRDYzBkdVRJeFVtZVZtT054OWJBblJDTHpySm81aFY4WkdLQjhCVWNQektPSEJfSmZkblJCM3NQeGo4ZnRsRjNJaXlhQU1DOElmMUZ3VzB1bWc?oc=5",
      "time": "27 Oct 23:12",
-     "tags": []
-    },
-    {
-     "title": "ICICI Bank Share Price Prediction for Tomorrow: 28 Oct 2026",
-     "source": "Univest",
-     "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQSzd6bEpaWEhIRnJFVWEwbHVxc2g1Q3JGU1FSVmpXQXdBWWRuWEtkX3RycnRKSEdUZUN1WHdxMFc1REJhN0hFM29rUmhIUE9JOWI0a0tyQ1JGOUlXdlR0U2JzSVpsZW16NHMyV3hVY1BCN2tIcHJpU0ZTMVptN290bE5DWUc5ZUdVVGZuQ08zUlc?oc=5",
-     "time": "27 Oct 20:22",
      "tags": []
     }
    ],
@@ -3837,14 +3896,14 @@
    "price_source": "Upstox",
    "cross_check": {
     "yahoo": 1376.7,
-    "gap_pct": 0.0,
+    "gap_pct": 0.01,
     "flag": false,
-    "yahoo_time": "11:37"
+    "yahoo_time": "12:50"
    },
    "trade": {
     "status": "waiting",
     "phase": "open",
-    "reason": "last close $1375.70 (11:30 bar), $3.80 under the range high $1379.50 (-0.28%)",
+    "reason": "last close $1376.60 (12:40 bar), $2.90 under the range high $1379.50 (-0.21%)",
     "opening_range": {
      "high": 1379.5,
      "low": 1361.4,
@@ -3855,13 +3914,13 @@
      "avg_volume": 287107
     },
     "last": {
-     "bar_start": "11:30",
-     "close": 1375.7,
-     "vs_level_pct": -0.28
+     "bar_start": "12:40",
+     "close": 1376.6,
+     "vs_level_pct": -0.21
     },
     "bars_source": "Upstox",
     "entry_kind": "not triggered: plan if a bar closes above 1379.50",
-    "rel_volume": 1.18,
+    "rel_volume": 1.08,
     "plan": {
      "symbol": "ICICIBANK.NS",
      "side": "buy",
@@ -3870,8 +3929,8 @@
      "entry": 1379.55,
      "stop": 1370.45,
      "target": 1397.75,
-     "entry_time": "11:35",
-     "entry_bar": 27,
+     "entry_time": "12:45",
+     "entry_bar": 41,
      "risk_per_share": 9.1,
      "reward_risk": 2.0,
      "stop_label": "opening-range midpoint",
@@ -3886,19 +3945,18 @@
     },
     "timemachine": {
      "sessions": 57,
-     "p_target": 0.036,
-     "p_stop": 0.2744,
-     "p_neither": 0.6896,
-     "p_green": 0.4981,
-     "avg_R": 0.019,
-     "median_close": 1379.85,
-     "p5_close": 1366.41,
-     "p95_close": 1393.64,
+     "p_target": 0.0125,
+     "p_stop": 0.2046,
+     "p_neither": 0.7829,
+     "p_green": 0.4966,
+     "avg_R": -0.004,
+     "median_close": 1379.68,
+     "p5_close": 1368.17,
+     "p95_close": 1391.02,
      "r_at_target": 2.0,
-     "verdict": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 12 % (target first 3.6 % vs stop first 27.4 %).",
+     "verdict": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 6 % (target first 1.2 % vs stop first 20.5 %).",
      "notes": [
-      "69.0 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those.",
-      "Average R is +0.019 all the same: the replays that hit neither pull it the other way."
+      "78.3 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those."
      ],
      "history": {
       "sessions": 57,
@@ -3916,7 +3974,7 @@
      "max_loss": 491.4,
      "refusal": null,
      "reward": 982.8,
-     "replay_avg": 9.34
+     "replay_avg": -1.97
     },
     "risk": {
      "verdict": "PASS",
@@ -3940,7 +3998,7 @@
       "risk_per_share": 9.1,
       "max_loss": 491.4,
       "setup": "orb",
-      "entry_time": "11:35",
+      "entry_time": "12:45",
       "flat_by": "15:15"
      }
     },
@@ -3962,32 +4020,31 @@
      }
     ]
    },
-   "prev_rank": null
+   "prev_rank": 20
   }
  ],
  "errors": [
-  "Moneycontrol feed: RSS for  is not valid XML: not well-formed (invalid token): line 6, column 305",
   "Business Standard feed: HTTP 403 for https://www.business-standard.com/rss/markets-106.rss"
  ],
- "seconds": 25,
- "orb_ist": "2026-10-28 11:37",
- "orb_seconds": 36,
+ "seconds": 26,
+ "orb_ist": "2026-10-28 12:49",
+ "orb_seconds": 37,
  "previous": {
-  "created_ist": "2026-10-28 09:44",
+  "created_ist": "2026-10-28 11:37",
   "entered": [
-   "WAAREEENER.NS",
-   "TCS.NS"
+   "INFY.NS",
+   "PGEL.NS"
   ],
   "dropped": [
    {
-    "symbol": "INFY.NS",
-    "rank": 6,
-    "name": "Infosys Limited"
+    "symbol": "ONESOURCE.NS",
+    "rank": 9,
+    "name": "Onesource Specialty Pharma Limited"
    },
    {
-    "symbol": "HDFCBANK.NS",
-    "rank": 7,
-    "name": "HDFC Bank Limited"
+    "symbol": "TCS.NS",
+    "rank": 10,
+    "name": "Tata Consultancy Services Limited"
    }
   ]
  },
