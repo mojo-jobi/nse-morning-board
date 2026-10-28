@@ -1,6 +1,6 @@
 {
  "mode": "nse-morning",
- "as_of": "2026-10-28 09:44",
+ "as_of": "2026-10-28 11:37",
  "hits": [
   {
    "symbol": "BAJAJ-AUTO.NS"
@@ -9,58 +9,58 @@
    "symbol": "MARUTI.NS"
   },
   {
-   "symbol": "ACUTAAS.NS"
-  },
-  {
    "symbol": "PPLPHARMA.NS"
   },
   {
    "symbol": "BHARTIARTL.NS"
   },
   {
-   "symbol": "INFY.NS"
-  },
-  {
-   "symbol": "HDFCBANK.NS"
-  },
-  {
-   "symbol": "ONESOURCE.NS"
-  },
-  {
-   "symbol": "RELIANCE.NS"
+   "symbol": "ACUTAAS.NS"
   },
   {
    "symbol": "LT.NS"
   },
   {
+   "symbol": "RELIANCE.NS"
+  },
+  {
    "symbol": "WAAREEENER.NS"
   },
   {
-   "symbol": "TATACAP.NS"
-  },
-  {
-   "symbol": "PAYTM.NS"
-  },
-  {
-   "symbol": "UBL.NS"
+   "symbol": "ONESOURCE.NS"
   },
   {
    "symbol": "TCS.NS"
   },
   {
-   "symbol": "MAZDOCK.NS"
+   "symbol": "HDFCBANK.NS"
   },
   {
    "symbol": "MANKIND.NS"
   },
   {
-   "symbol": "RAYMOND.NS"
+   "symbol": "TATACAP.NS"
+  },
+  {
+   "symbol": "PGEL.NS"
+  },
+  {
+   "symbol": "MAZDOCK.NS"
+  },
+  {
+   "symbol": "UBL.NS"
   },
   {
    "symbol": "SONACOMS.NS"
   },
   {
+   "symbol": "HINDUNILVR.NS"
+  },
+  {
    "symbol": "TVSMOTOR.NS"
+  },
+  {
+   "symbol": "ICICIBANK.NS"
   }
  ]
 }
