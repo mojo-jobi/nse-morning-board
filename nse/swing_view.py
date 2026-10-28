@@ -222,6 +222,11 @@ def record_block(rec):
                 '<th>Stop</th><th>Target</th><th>Last</th><th>Entered</th><th>Closed</th><th>Result</th></tr>%s</table></div>' % trs)
 
 
+def k(x):
+    """A strike without a trailing .0: 1190.0 -> 1190, 162.5 stays."""
+    return e(int(x) if x is not None and float(x).is_integer() else x)
+
+
 def option_card(o):
     p = o["plan"]
     kind = '<span class="kind %s">%s</span>' % ("long" if o["type"] == "CE" else "short",
@@ -235,11 +240,13 @@ def option_card(o):
                 e(p.get("est_days") or "?"), pct(o.get("p_target"))))
     chain = ('<div class="sub">Expiry <b>%s</b> (%d days) &middot; lot %s &middot; put-call ratio %s &middot; most call OI '
              'at %s &middot; most put OI at %s</div>' % (e(o["expiry"]), o["dte"], e(o["lot"]), e(o.get("pcr")),
-                                                       e(o.get("call_wall")), e(o.get("put_wall"))))
-    if o.get("watch"):
+                                                       k(o.get("call_wall")), k(o.get("put_wall"))))
+    if o.get("void"):
+        watch = ""
+    elif o.get("watch"):
         lo, hi = o["watch"]
         watch = ('<div class="changes"><b>Strike range to watch: %s%s</b> &middot; best reward:risk by the numbers: '
-                 '<b>%s %s</b></div>' % (e(lo), "" if lo == hi else " to %s" % e(hi), e(o["best"]), e(o["type"])))
+                 '<b>%s %s</b></div>' % (k(lo), "" if lo == hi else " to %s" % k(hi), k(o["best"]), e(o["type"])))
     else:
         watch = '<div class="changes">No strike passes the liquidity and delta filters for this expiry.</div>'
     notes = "".join('<div class="note" style="margin:8px 0">%s</div>' % e(n) for n in o.get("notes") or [])
@@ -250,7 +257,7 @@ def option_card(o):
             ' style="color:var(--muted)"' if not s["ok"] else "")
         trs += ("<tr%s><td>%s%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s%s</td><td>%s</td>"
                 "<td>%s</td><td>%s</td><td>%s</td><td>%s (%+.1f%%)</td></tr>" % (
-                    style, e(s["strike"]), " (%s)" % e(", ".join(s["why_not"])) if s["why_not"] else "",
+                    style, k(s["strike"]), " (%s)" % e(", ".join(s["why_not"])) if s["why_not"] else "",
                     rs(s["premium_lot"], 0), e(s["delta"]), rs(s["theta_lot_day"], 0), rs(s["vega_lot"], 0),
                     "%.1f%%" % s["iv"], format(s["oi_lots"], ","),
                     " (%+.0f%%)" % s["oi_chg_pct"] if s.get("oi_chg_pct") is not None else "", e(s.get("buildup") or "-"),

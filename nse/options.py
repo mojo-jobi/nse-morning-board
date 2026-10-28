@@ -88,6 +88,18 @@ def screen_one(row, plan, chain, expiry, dte, lot, today, cfg):
     put_oi = sum((s["put"].get("oi") or 0) for s in chain)
     wall_c = max(chain, key=lambda s: s["call"].get("oi") or 0)["strike"] if chain else None
     wall_p = max(chain, key=lambda s: s["put"].get("oi") or 0)["strike"] if chain else None
+    void = None
+    if (call and spot <= plan["stop"]) or (not call and spot >= plan["stop"]):
+        void = "the stock (%s) is already past the plan's stop (%s): the plan is off" % (spot, plan["stop"])
+    elif (call and spot >= plan["target"]) or (not call and spot <= plan["target"]):
+        void = "the stock (%s) is already at the plan's target (%s): nothing left to catch" % (spot, plan["target"])
+    if void:
+        return {"symbol": row["symbol"], "name": row.get("name"), "type": "CE" if call else "PE",
+                "source": row.get("_list"), "rank": row.get("rank"), "score": row.get("score"),
+                "plan": {k: plan.get(k) for k in ("kind", "entry", "stop", "target", "rr", "est_days")},
+                "p_target": (plan.get("odds") or {}).get("p_target"), "spot": spot, "expiry": expiry, "dte": dte,
+                "lot": lot, "pcr": None, "call_wall": None, "put_wall": None, "strikes": [], "best": None,
+                "watch": None, "notes": [void], "void": True}
     est = plan.get("est_days") or 10
     t_hit = calendar_days(est)
     t_stop = calendar_days(max(est // 2, 1))
@@ -184,7 +196,7 @@ def screen(picks, inst, now_utc, cfg, errors):
         res = screen_one(r, plan, chain, expiry, dte, fo[r["symbol"]], today, cfg)
         (out["calls"] if res["type"] == "CE" else out["puts"]).append(res)
     for k in ("calls", "puts"):
-        out[k].sort(key=lambda x: (x["best"] is None, -(x["score"] or 0)))
+        out[k].sort(key=lambda x: (bool(x.get("void")), x["best"] is None, -(x["score"] or 0)))
     out.update(created_ist=market.to_ist(now_utc).strftime("%Y-%m-%d %H:%M"),
                rules={"min_dte": MIN_DTE, "buffer": BUFFER, "delta": DELTA, "max_spread_pct": 100 * MAX_SPREAD,
                       "min_lots": MIN_LOTS, "rate_pct": 100 * RATE})
