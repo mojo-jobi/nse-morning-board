@@ -15,7 +15,7 @@
   "score": 78,
   "status": "waiting for entry",
   "price_at_signal": 316.6,
-  "last_price": 314.95,
+  "last_price": 316.0,
   "last_close": 316.6
  },
  {
@@ -34,7 +34,7 @@
   "score": 76,
   "status": "entered",
   "price_at_signal": 3186.8,
-  "last_price": 3195.7,
+  "last_price": 3197.1,
   "last_close": 3186.8,
   "entered": "2026-10-28",
   "fill": 3200.05
@@ -55,7 +55,7 @@
   "score": 76,
   "status": "entered",
   "price_at_signal": 3793.3,
-  "last_price": 3726.8,
+  "last_price": 3727.4,
   "last_close": 3793.3,
   "entered": "2026-10-28",
   "fill": 3900.05
@@ -76,7 +76,7 @@
   "score": 74,
   "status": "entered",
   "price_at_signal": 2142.0,
-  "last_price": 2183.0,
+  "last_price": 2186.0,
   "last_close": 2142.0,
   "entered": "2026-10-28",
   "fill": 2143.15
@@ -97,7 +97,7 @@
   "score": 74,
   "status": "stop hit",
   "price_at_signal": 189.44,
-  "last_price": 173.27,
+  "last_price": 173.25,
   "last_close": 189.44,
   "entered": "2026-10-28",
   "fill": 190.35,
@@ -122,7 +122,7 @@
   "score": 73,
   "status": "entered",
   "price_at_signal": 2213.9,
-  "last_price": 2175.5,
+  "last_price": 2176.2,
   "last_close": 2213.9,
   "entered": "2026-10-28",
   "fill": 2219.0
@@ -141,10 +141,12 @@
   "est_days": 8,
   "p_target": 0.26,
   "score": 73,
-  "status": "waiting for entry",
+  "status": "entered",
   "price_at_signal": 76.96,
-  "last_price": 77.69,
-  "last_close": 76.96
+  "last_price": 78.31,
+  "last_close": 76.96,
+  "entered": "2026-10-28",
+  "fill": 78.15
  },
  {
   "id": "2026-10-27-HBLENGINE.NS",
@@ -162,7 +164,7 @@
   "score": 72,
   "status": "entered",
   "price_at_signal": 788.0,
-  "last_price": 812.7,
+  "last_price": 812.65,
   "last_close": 788.0,
   "entered": "2026-10-28",
   "fill": 795.5
@@ -183,7 +185,7 @@
   "score": 69,
   "status": "waiting for entry",
   "price_at_signal": 20.61,
-  "last_price": 20.41,
+  "last_price": 20.62,
   "last_close": 20.61
  },
  {
@@ -202,7 +204,7 @@
   "score": 68,
   "status": "entered",
   "price_at_signal": 8254.0,
-  "last_price": 8537.5,
+  "last_price": 8569.5,
   "last_close": 8254.0,
   "entered": "2026-10-28",
   "fill": 8317.05
@@ -223,7 +225,7 @@
   "score": 60,
   "status": "entered",
   "price_at_signal": 165.68,
-  "last_price": 165.53,
+  "last_price": 165.81,
   "last_close": 165.68,
   "entered": "2026-10-28",
   "fill": 165.6
@@ -244,7 +246,7 @@
   "score": 55,
   "status": "entered",
   "price_at_signal": 531.9,
-  "last_price": 526.85,
+  "last_price": 544.0,
   "last_close": 531.9,
   "entered": "2026-10-28",
   "fill": 523.7
@@ -265,7 +267,7 @@
   "score": 54,
   "status": "entered",
   "price_at_signal": 1205.7,
-  "last_price": 1212.4,
+  "last_price": 1215.8,
   "last_close": 1205.7,
   "entered": "2026-10-28",
   "fill": 1205.65
@@ -286,7 +288,7 @@
   "score": 54,
   "status": "entered",
   "price_at_signal": 2277.0,
-  "last_price": 2280.6,
+  "last_price": 2291.7,
   "last_close": 2277.0,
   "entered": "2026-10-28",
   "fill": 2268.65
@@ -307,7 +309,7 @@
   "score": 52,
   "status": "waiting for entry",
   "price_at_signal": 3665.1,
-  "last_price": 3820.0,
+  "last_price": 3823.6,
   "last_close": 3665.1
  }
 ]
