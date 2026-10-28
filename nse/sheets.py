@@ -5,7 +5,7 @@ Needs two GitHub secrets (nothing else changes without them; the run just skips 
   SHEET_ID                      the sheet's id (the long part of its URL between /d/ and /edit)
 and the sheet shared with the service account's e-mail as an Editor.
 
-Tabs (created if missing): Bullish, Breakdowns (F&O), Bottoms, Track record, Live, Read me.
+Tabs (created if missing): Bullish, Breakdowns (F&O), Bottoms, Equity Options, Track record, Live, Read me.
 Each has a "Live (Google)" column, =GOOGLEFINANCE("NSE:SYMBOL"), so the price keeps moving
 between runs (Google's quotes can lag up to 20 minutes).
 
@@ -114,6 +114,28 @@ def live_rows(doc):
     return out
 
 
+def options_rows(opts):
+    out = [["Rules screen, not advice. Expiry 14+ days away and 7+ days after the plan's estimated exit; delta 0.30-0.75; "
+            "spread 3% or less; OI 25+ lots. 'At target / at stop' = one lot's value then, minus the premium (Black-Scholes, "
+            "IV unchanged)."], [],
+           ["Symbol", "Type", "Plan", "Spot", "Expiry", "Days left", "Lot", "PCR", "Most call OI", "Most put OI",
+            "Watch range", "Best", "Strike", "Premium/lot", "Delta", "Theta/lot/day", "Vega/lot", "IV %", "OI lots",
+            "OI chg %", "Build-up", "Gain at target/lot", "Loss at stop/lot", "R:R", "Break-even", "Passes filters",
+            "Notes"]]
+    for o in (opts or {}).get("calls", []) + (opts or {}).get("puts", []):
+        p = o["plan"]
+        plan = "%s: entry %s, stop %s, target %s" % (p.get("kind"), p.get("entry"), p.get("stop"), p.get("target"))
+        watch = "%s - %s" % tuple(o["watch"]) if o.get("watch") else ""
+        for s in o.get("strikes") or []:
+            out.append([o["symbol"].replace(".NS", ""), o["type"], plan, o.get("spot"), o["expiry"], o["dte"], o["lot"],
+                        o.get("pcr"), o.get("call_wall"), o.get("put_wall"), watch,
+                        "best" if s["strike"] == o.get("best") else "", s["strike"], s["premium_lot"], s["delta"],
+                        s["theta_lot_day"], s["vega_lot"], s["iv"], s["oi_lots"], s.get("oi_chg_pct"), s.get("buildup"),
+                        s["gain_lot"], -s["loss_lot"], s["rr"], s["breakeven"], "yes" if s["ok"] else ", ".join(s["why_not"]),
+                        "; ".join(o.get("notes") or [])])
+    return out
+
+
 README = [["NSE swing board"],
           ["Rules screen, not advice. Entries are triggers (above the day's high; below its low for a breakdown), "
            "valid 3 sessions. Stops sit where the setup is proven wrong; targets at the next level 1.5R+ away, else 2R."],
@@ -135,7 +157,8 @@ def write(doc):
     s = AuthorizedSession(creds)
     base = API + sheet.strip()
     tabs = {"Bullish": trade_rows(doc.get("bull") or []), "Breakdowns (F&O)": trade_rows(doc.get("bear") or []),
-            "Bottoms": bottom_rows(doc.get("bottoms") or []), "Track record": record_rows(doc.get("record") or {}),
+            "Bottoms": bottom_rows(doc.get("bottoms") or []), "Equity Options": options_rows(doc.get("options")),
+            "Track record": record_rows(doc.get("record") or {}),
             "Live": live_rows(doc), "Read me": README}
     meta = s.get(base, params={"fields": "sheets.properties.title"})
     meta.raise_for_status()

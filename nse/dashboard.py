@@ -338,7 +338,7 @@ def render_site(intraday=None, swing=None, path=None):
     intraday = intraday if intraday is not None else (_load("data.json") or {})
     swing = swing if swing is not None else _load("swing.json")
     repo = intraday.get("repo") or (swing or {}).get("repo") or _repo()
-    bull, falling, record, top = swing_view.tabs(swing)
+    bull, falling, record, opts, top = swing_view.tabs(swing)
     updated = max(((swing or {}).get("live") or {}).get("created_ist") or "",
                   (swing or {}).get("created_ist") or "", intraday.get("orb_ist") or intraday.get("created_ist") or "")
     page = """<!doctype html><html lang="en"><head><meta charset="utf-8">
@@ -359,13 +359,14 @@ def render_site(intraday=None, swing=None, path=None):
 <div class="note">A rules screen, not advice to buy or sell. Entries are triggers; stops sit where the setup is proven wrong.
 The odds replay each stock's own past, not a forecast: results, news and gaps can do what those days never did. Paper trade first. Nothing here places an order.</div>
 %s
-<nav class="tabs" role="tablist"><a href="#swing" data-tab="swing">Swing</a><a href="#falling" data-tab="falling">Falling market</a><a href="#record" data-tab="record">Track record</a><a href="#intraday" data-tab="intraday">Intraday</a></nav>
+<nav class="tabs" role="tablist"><a href="#swing" data-tab="swing">Swing</a><a href="#falling" data-tab="falling">Falling market</a><a href="#options" data-tab="options">Equity Options</a><a href="#record" data-tab="record">Track record</a><a href="#intraday" data-tab="intraday">Intraday</a></nav>
 <section id="tab-swing" class="tab">%s</section>
 <section id="tab-falling" class="tab" hidden>%s</section>
+<section id="tab-options" class="tab" hidden>%s</section>
 <section id="tab-record" class="tab" hidden>%s</section>
 <section id="tab-intraday" class="tab" hidden>%s</section>
 </div><script>%s</script><script>%s</script></body></html>""" % (
-        CSS, swing_view.CSS, e(updated or "-"), e(repo.split("/")[-1]), e(repo), top, bull, falling, record,
+        CSS, swing_view.CSS, e(updated or "-"), e(repo.split("/")[-1]), e(repo), top, bull, falling, opts, record,
         intraday_body(intraday), REFRESH_JS.replace("__REPO__", json.dumps(repo or None)), swing_view.JS)
     path = path or os.path.join(DOCS, "index.html")
     os.makedirs(os.path.dirname(path), exist_ok=True)

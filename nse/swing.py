@@ -3,6 +3,7 @@
     python nse/swing.py eod            # after the close: full scan, new setups, track record, page, sheet
     python nse/swing.py live           # in the session: prices, entries and exits hit, levels crossed now
     python nse/swing.py fundamentals   # weekly: refresh every liquid stock's fundamentals (Upstox)
+    python nse/swing.py options        # the options screen on the last scan's plans (options.py)
 
 Three lists, each ranked on technicals and fundamentals together:
   Bullish     all liquid stocks: breakouts, pullbacks in an uptrend, bounces off support
@@ -34,6 +35,7 @@ import time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import market  # noqa: E402
+import options  # noqa: E402
 import upstox  # noqa: E402
 
 ROOT = market.ROOT
@@ -934,7 +936,16 @@ def stage_eod(now_utc, force=False):
                            for j in range(max(0, len(S["c"]) - 130), len(S["c"]))]
     write_json(CHARTS, charts, indent=None)
 
-    doc = {"stage": "eod", "created_ist": ist.strftime("%Y-%m-%d %H:%M"), "session": session,
+    # 10. options: the call or put strikes for each F&O stock with a plan (one chain request each)
+    fo_picks, opts = [], None
+    if data.ok:
+        fo_picks = options.fo_plans([(bull, "bullish"), (bear, "breakdown"),
+                                     ([b for b in bots if (b.get("bottom") or {}).get("plan")], "bottom turning up")],
+                                    data.inst)
+        opts = options.screen(fo_picks, data.inst, now_utc, cfg, errors)
+        log("options: %d call and %d put underlyings from %d F&O plans" % (len(opts["calls"]), len(opts["puts"]), len(fo_picks)))
+
+    doc = {"stage": "eod", "fo_plans": fo_picks, "options": opts, "created_ist": ist.strftime("%Y-%m-%d %H:%M"), "session": session,
            "counts": {"universe": len(symbols), "quoted": len(quotes), "with_bars": len(bars), "liquid": len(liquid),
                       "fo": sum(1 for s in liquid if s in fo), "with_fundamentals": len(fscore),
                       "bull": len(bull), "bear": len(bear), "bottoms": len(bots)},
@@ -1013,6 +1024,9 @@ def stage_live(now_utc):
             moves[k] = moves[k][:15]
     page["live"] = {"created_ist": ist.strftime("%Y-%m-%d %H:%M"), "in_session": in_session, "quotes": qsrc,
                     "moves": moves}
+    if in_session and data.ok and page.get("fo_plans"):
+        page["options"] = options.screen(page["fo_plans"], data.inst, now_utc, cfg, errors)
+        log("options: refreshed %d call and %d put underlyings" % (len(page["options"]["calls"]), len(page["options"]["puts"])))
     page["record"] = {"stats": record_stats(records),
                       "rows": sorted(records, key=lambda r: r["created"], reverse=True)[:60]}
     status = {(rec["symbol"], rec["created"]): rec["status"] for rec in records}
@@ -1024,6 +1038,30 @@ def stage_live(now_utc):
     write_json(PAGE, page)
     log("live: %d breaking out, %d breaking down, %d in a bottom's buy zone; %d plans open" % (
         len(moves["breakouts"]), len(moves["breakdowns"]), len(moves["in_zone"]), page["record"]["stats"]["open"]))
+    return page
+
+
+def stage_options(now_utc):
+    """The options screen on the last scan's plans, without rescanning (one chain request a stock)."""
+    cfg, _ = config()
+    page = read_json(PAGE)
+    if not page:
+        log("options: no swing scan yet; run eod first")
+        return None
+    errors = []
+    data = Data(errors)
+    if not data.ok:
+        log("options: needs the Upstox token (%s)" % data.status)
+        return page
+    picks = page.get("fo_plans") or options.fo_plans(
+        [(page.get("bull") or [], "bullish"), (page.get("bear") or [], "breakdown"),
+         ([b for b in page.get("bottoms") or [] if (b.get("bottom") or {}).get("plan")], "bottom turning up")], data.inst)
+    page["fo_plans"] = picks
+    page["options"] = options.screen(picks, data.inst, now_utc, cfg, errors)
+    page["errors"] = list(dict.fromkeys((page.get("errors") or []) + errors))[:30]
+    write_json(PAGE, page)
+    log("options: %d call and %d put underlyings from %d F&O plans" % (
+        len(page["options"]["calls"]), len(page["options"]["puts"]), len(picks)))
     return page
 
 
@@ -1041,7 +1079,8 @@ def publish(doc):
 
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("stage", choices=("eod", "live", "fundamentals", "swing-eod", "swing-live", "swing-fundamentals"))
+    ap.add_argument("stage", choices=("eod", "live", "fundamentals", "options",
+                                      "swing-eod", "swing-live", "swing-fundamentals", "swing-options"))
     ap.add_argument("--now", help='pin the clock, India time: "2026-10-27 15:50"')
     ap.add_argument("--force", action="store_true", help="run on a holiday or weekend anyway")
     a = ap.parse_args(argv)
@@ -1062,8 +1101,12 @@ def main(argv=None):
     if not open_today and not a.force and a.stage == "live":
         log("live: NSE closed today (%s); nothing to update" % why)
         return 0
-    doc = stage_eod(now_utc, a.force) if a.stage == "eod" else stage_live(now_utc)
-    publish(doc)
+    if a.stage == "options":
+        doc = stage_options(now_utc)
+    else:
+        doc = stage_eod(now_utc, a.force) if a.stage == "eod" else stage_live(now_utc)
+    if doc:
+        publish(doc)
     return 0
 
 

@@ -104,15 +104,19 @@ def instruments():
         req = urllib.request.Request(INSTRUMENTS, headers={"User-Agent": market.UA})
         with urllib.request.urlopen(req, timeout=60) as r:
             rows = json.loads(gzip.decompress(r.read()))
-        eq, fo = {}, {}
+        eq, fo, expiries = {}, {}, {}
         for row in rows:
             if row.get("segment") == "NSE_EQ" and row.get("instrument_type") == "EQ":
                 eq[row["trading_symbol"] + ".NS"] = {"key": row["instrument_key"], "isin": row.get("isin"),
                                                      "name": row.get("name")}
-            elif (row.get("segment") == "NSE_FO" and row.get("instrument_type") == "FUT"
-                  and row.get("underlying_type") == "EQUITY"):
-                fo[row["underlying_symbol"] + ".NS"] = row.get("lot_size")
-        _instruments.update(eq=eq, fo=fo)
+            elif row.get("segment") == "NSE_FO" and row.get("underlying_type") == "EQUITY":
+                sym = row["underlying_symbol"] + ".NS"
+                if row.get("instrument_type") == "FUT":
+                    fo[sym] = row.get("lot_size")
+                elif row.get("instrument_type") in ("CE", "PE") and row.get("expiry"):
+                    d = market.to_ist(datetime.datetime(1970, 1, 1) + datetime.timedelta(milliseconds=row["expiry"])).date()
+                    expiries.setdefault(sym, set()).add(d.isoformat())
+        _instruments.update(eq=eq, fo=fo, expiries={s: sorted(v) for s, v in expiries.items()})
     return _instruments
 
 
@@ -226,6 +230,24 @@ def fundamentals(isin):
             out[name] = vals[0]
             out[name + "_chg"] = round(vals[0] - vals[-1], 2) if vals[-1] is not None else None
     return out
+
+
+def option_chain(key, expiry):
+    """Every strike of one expiry: [{"strike", "spot", "pcr", "call": {...}, "put": {...}}], where each
+    side has ltp, bid, ask, volume, oi, prev_oi, close (all per share; oi in shares) and the greeks
+    delta, gamma, theta (Rs a share a calendar day), vega (Rs a share per IV point), iv (% a year)."""
+    out = []
+    for s in _get("/v2/option/chain?instrument_key=%s&expiry_date=%s" % (urllib.parse.quote(key, safe=""), expiry)) or []:
+        row = {"strike": s.get("strike_price"), "spot": s.get("underlying_spot_price"), "pcr": s.get("pcr")}
+        for side, name in (("call_options", "call"), ("put_options", "put")):
+            o = s.get(side) or {}
+            md, g = o.get("market_data") or {}, o.get("option_greeks") or {}
+            row[name] = {"ltp": md.get("ltp"), "bid": md.get("bid_price"), "ask": md.get("ask_price"),
+                         "volume": md.get("volume"), "oi": md.get("oi"), "prev_oi": md.get("prev_oi"),
+                         "close": md.get("close_price"), "delta": g.get("delta"), "gamma": g.get("gamma"),
+                         "theta": g.get("theta"), "vega": g.get("vega"), "iv": g.get("iv"), "pop": g.get("pop")}
+        out.append(row)
+    return sorted(out, key=lambda r: r["strike"] or 0)
 
 
 def news(keys, page_size=100):

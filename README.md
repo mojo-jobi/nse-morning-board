@@ -8,6 +8,14 @@ A web page (phone and desktop) of **swing setups** on NSE, 3 to 15 trading days,
 - **Falling market**: breakdowns and failed rallies on **F&O stocks only** (the ones with stock
   options, for puts), and **bottoms**: stocks 20 %+ off their high sitting on support, with a buy
   zone, the close that would break it, and a plan once the stock turns up.
+- **Equity Options** (`nse/options.py`): for each F&O stock with a swing plan, calls (bullish,
+  bottoms turning up) or puts (breakdowns). Expiry: the nearest monthly one 14+ days away that still
+  leaves 7+ days after the plan's estimated exit. Strikes with delta 0.30-0.75, a bid-ask spread of
+  3% or less and real open interest (25+ lots, a tenth of the busiest tradable strike), each with
+  its premium, greeks (Upstox), OI and its change, the build-up, and what one lot would be worth if
+  the stock reaches the plan's target or stop (Black-Scholes at the strike's own IV), the
+  break-even, the put-call ratio and the OI walls. The strike range to watch is the strikes with a
+  reward:risk of 1.5 or more. A screen, not advice: buying options can lose the whole premium.
 - **Track record**: every plan shown, from the day it appears: entry hit or missed, then target,
   stop or day 15, with the result in R and %.
 - **Intraday**: the original news-and-volume morning board with opening-range plans.

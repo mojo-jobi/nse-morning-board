@@ -222,11 +222,75 @@ def record_block(rec):
                 '<th>Stop</th><th>Target</th><th>Last</th><th>Entered</th><th>Closed</th><th>Result</th></tr>%s</table></div>' % trs)
 
 
+def option_card(o):
+    p = o["plan"]
+    kind = '<span class="kind %s">%s</span>' % ("long" if o["type"] == "CE" else "short",
+                                                "CALL" if o["type"] == "CE" else "PUT")
+    head = ('<div class="top"><span class="sym">%s</span>%s<span class="name">%s</span>'
+            '<span class="px">%s</span></div>' % (e(sym(o["symbol"])), kind, e(o.get("name")), rs(o.get("spot"))))
+    plan = ('<div class="sub">From the %s list (#%s, score %s): %s, stock entry %s %s, stop %s, target %s, ~%s sessions, '
+            'target first in %s of replays.</div>' % (
+                e(o.get("source")), e(o.get("rank")), e(o.get("score")), e(p.get("kind")),
+                "above" if o["type"] == "CE" else "below", rs(p.get("entry")), rs(p.get("stop")), rs(p.get("target")),
+                e(p.get("est_days") or "?"), pct(o.get("p_target"))))
+    chain = ('<div class="sub">Expiry <b>%s</b> (%d days) &middot; lot %s &middot; put-call ratio %s &middot; most call OI '
+             'at %s &middot; most put OI at %s</div>' % (e(o["expiry"]), o["dte"], e(o["lot"]), e(o.get("pcr")),
+                                                       e(o.get("call_wall")), e(o.get("put_wall"))))
+    if o.get("watch"):
+        lo, hi = o["watch"]
+        watch = ('<div class="changes"><b>Strike range to watch: %s%s</b> &middot; best reward:risk by the numbers: '
+                 '<b>%s %s</b></div>' % (e(lo), "" if lo == hi else " to %s" % e(hi), e(o["best"]), e(o["type"])))
+    else:
+        watch = '<div class="changes">No strike passes the liquidity and delta filters for this expiry.</div>'
+    notes = "".join('<div class="note" style="margin:8px 0">%s</div>' % e(n) for n in o.get("notes") or [])
+    trs = ""
+    for s in o.get("strikes") or []:
+        best = s["strike"] == o.get("best")
+        style = ' style="font-weight:700;background:var(--good-bg)"' if best else (
+            ' style="color:var(--muted)"' if not s["ok"] else "")
+        trs += ("<tr%s><td>%s%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s%s</td><td>%s</td>"
+                "<td>%s</td><td>%s</td><td>%s</td><td>%s (%+.1f%%)</td></tr>" % (
+                    style, e(s["strike"]), " (%s)" % e(", ".join(s["why_not"])) if s["why_not"] else "",
+                    rs(s["premium_lot"], 0), e(s["delta"]), rs(s["theta_lot_day"], 0), rs(s["vega_lot"], 0),
+                    "%.1f%%" % s["iv"], format(s["oi_lots"], ","),
+                    " (%+.0f%%)" % s["oi_chg_pct"] if s.get("oi_chg_pct") is not None else "", e(s.get("buildup") or "-"),
+                    '<span class="up">+%s</span>' % rs(s["gain_lot"], 0) if s["gain_lot"] >= 0 else '<span class="dn">%s</span>' % rs(s["gain_lot"], 0),
+                    '<span class="dn">-%s</span>' % rs(s["loss_lot"], 0) if s["loss_lot"] >= 0 else '<span class="up">+%s</span>' % rs(-s["loss_lot"], 0),
+                    e(s["rr"] if s["rr"] is not None else "-"), rs(s["breakeven"]), s["be_move_pct"]))
+    table = ('<div class="tbl"><table><tr><th>Strike</th><th>Premium a lot</th><th>Delta</th><th>Theta a lot/day</th>'
+             '<th>Vega a lot</th><th>IV</th><th>OI lots (chg)</th><th>Build-up</th><th>Stock at target</th>'
+             '<th>Stock at stop</th><th>R:R</th><th>Break-even at expiry (move)</th></tr>%s</table></div>' % trs)
+    return '<div class="card">%s%s%s%s%s%s</div>' % (head, plan, chain, watch, notes, table)
+
+
+def options_block(opts):
+    if not opts:
+        return ('<div class="card empty">The options screen needs the Upstox token and runs with the swing scan. '
+                'It appears after the next scan.</div>')
+    r = opts.get("rules") or {}
+    intro = ('<div class="note">A rules screen, not advice: it lists the strikes that pass these filters, with their '
+             'numbers; whether to trade, and which, is your call. Expiry: the nearest monthly one at least %s days away '
+             'that still leaves %s days after the plan\'s estimated exit. Strikes: delta %.2f to %.2f, bid-ask spread '
+             '%.0f%% or less, open interest of %s+ lots and at least a tenth of the busiest tradable strike. "Stock at target" and '
+             '"Stock at stop" are what one lot would be worth on its estimated day (stop: halfway), from Black-Scholes at '
+             'that strike\'s own IV, minus the premium. IV usually drops after a big move or results, which makes a '
+             'bought option worth less than shown. Buying options can lose the whole premium. Updated %s IST.</div>' % (
+                 e(r.get("min_dte")), e(r.get("buffer")), (r.get("delta") or [0, 0])[0], (r.get("delta") or [0, 0])[1],
+                 r.get("max_spread_pct") or 0, e(r.get("min_lots")), e(opts.get("created_ist"))))
+    calls = "".join(option_card(o) for o in opts.get("calls") or []) or '<div class="card empty">No bullish F&amp;O plan today.</div>'
+    puts = "".join(option_card(o) for o in opts.get("puts") or []) or '<div class="card empty">No bearish F&amp;O plan today.</div>'
+    skipped = ""
+    if opts.get("skipped"):
+        skipped = '<details><summary>%d skipped</summary><ul class="news">%s</ul></details>' % (
+            len(opts["skipped"]), "".join("<li>%s</li>" % e(x) for x in opts["skipped"]))
+    return intro + "<h2>Calls: bullish swing plans</h2>" + calls + "<h2>Puts: breakdown plans</h2>" + puts + skipped
+
+
 def tabs(doc):
-    """(swing tab, falling-market tab, track-record tab, strip above the tabs)."""
+    """(swing tab, falling-market tab, track-record tab, options tab, strip above the tabs)."""
     if not doc:
         none = '<div class="card empty">The first swing scan runs after today\'s close (15:50 IST).</div>'
-        return none, none, none, ""
+        return none, none, none, none, ""
     c, src, nifty = doc.get("counts") or {}, doc.get("sources") or {}, doc.get("nifty") or {}
     tiles = [("NSE stocks quoted", "%s of %s" % (format(c.get("quoted", 0), ","), format(c.get("universe", 0), ","))),
              ("Liquid (20-day turnover %s cr+)" % (doc.get("config") or {}).get("min_turnover_cr", 5), format(c.get("liquid", 0), ",")),
@@ -261,7 +325,7 @@ def tabs(doc):
     if doc.get("errors"):
         record += '<details><summary>%d data problems</summary><ul class="news">%s</ul></details>' % (
             len(doc["errors"]), "".join("<li>%s</li>" % e(x) for x in doc["errors"]))
-    return bull, falling, record, top
+    return bull, falling, record, options_block(doc.get("options")), top
 
 
 JS = r"""
