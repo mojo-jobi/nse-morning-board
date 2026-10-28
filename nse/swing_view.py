@@ -238,9 +238,17 @@ def option_card(o):
                 e(o.get("source")), e(o.get("rank")), e(o.get("score")), e(p.get("kind")),
                 "above" if o["type"] == "CE" else "below", rs(p.get("entry")), rs(p.get("stop")), rs(p.get("target")),
                 e(p.get("est_days") or "?"), pct(o.get("p_target"))))
-    chain = ('<div class="sub">Expiry <b>%s</b> (%d days) &middot; lot %s &middot; put-call ratio %s &middot; most call OI '
-             'at %s &middot; most put OI at %s</div>' % (e(o["expiry"]), o["dte"], e(o["lot"]), e(o.get("pcr")),
-                                                       k(o.get("call_wall")), k(o.get("put_wall"))))
+    chain = ('<div class="sub">Expiry <b>%s</b> (%d days) &middot; lot size <b>%s shares</b> &middot; put-call ratio %s '
+             '&middot; most call OI at %s &middot; most put OI at %s</div>' % (
+                 e(o["expiry"]), o["dte"], format(o["lot"], ","), e(o.get("pcr")), k(o.get("call_wall")), k(o.get("put_wall"))))
+    b = next((s for s in o.get("strikes") or [] if s["strike"] == o.get("best")), None)
+    if b:
+        chain += ('<div class="grid"><div><div class="k">Lot size</div><div class="v">%s shares</div></div>'
+                  '<div><div class="k">%s %s price</div><div class="v">%s a share</div></div>'
+                  '<div><div class="k">Value of 1 lot (price &times; lot)</div><div class="v">%s</div></div>'
+                  '<div><div class="k">Stock exposure of 1 lot (spot &times; lot)</div><div class="v">%s</div></div></div>' % (
+                      format(o["lot"], ","), k(b["strike"]), e(o["type"]), rs(b["ask"]), rs(b["premium_lot"], 0),
+                      rs((o.get("spot") or 0) * o["lot"], 0)))
     if o.get("void"):
         watch = ""
     elif o.get("watch"):
@@ -255,16 +263,17 @@ def option_card(o):
         best = s["strike"] == o.get("best")
         style = ' style="font-weight:700;background:var(--good-bg)"' if best else (
             ' style="color:var(--muted)"' if not s["ok"] else "")
-        trs += ("<tr%s><td>%s%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s%s</td><td>%s</td>"
+        trs += ("<tr%s><td>%s%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s%s</td><td>%s</td>"
                 "<td>%s</td><td>%s</td><td>%s</td><td>%s (%+.1f%%)</td></tr>" % (
                     style, k(s["strike"]), " (%s)" % e(", ".join(s["why_not"])) if s["why_not"] else "",
-                    rs(s["premium_lot"], 0), e(s["delta"]), rs(s["theta_lot_day"], 0), rs(s["vega_lot"], 0),
+                    rs(s["ask"]), rs(s["premium_lot"], 0), e(s["delta"]), rs(s["theta_lot_day"], 0), rs(s["vega_lot"], 0),
                     "%.1f%%" % s["iv"], format(s["oi_lots"], ","),
                     " (%+.0f%%)" % s["oi_chg_pct"] if s.get("oi_chg_pct") is not None else "", e(s.get("buildup") or "-"),
                     '<span class="up">+%s</span>' % rs(s["gain_lot"], 0) if s["gain_lot"] >= 0 else '<span class="dn">%s</span>' % rs(s["gain_lot"], 0),
                     '<span class="dn">-%s</span>' % rs(s["loss_lot"], 0) if s["loss_lot"] >= 0 else '<span class="up">+%s</span>' % rs(-s["loss_lot"], 0),
                     e(s["rr"] if s["rr"] is not None else "-"), rs(s["breakeven"]), s["be_move_pct"]))
-    table = ('<div class="tbl"><table><tr><th>Strike</th><th>Premium a lot</th><th>Delta</th><th>Theta a lot/day</th>'
+    table = ('<div class="tbl"><table><tr><th>Strike</th><th>Price a share</th><th>Value of 1 lot (%s shares)</th>'
+             '<th>Delta</th><th>Theta a lot/day</th>' % format(o["lot"], ",") +
              '<th>Vega a lot</th><th>IV</th><th>OI lots (chg)</th><th>Build-up</th><th>Stock at target</th>'
              '<th>Stock at stop</th><th>R:R</th><th>Break-even at expiry (move)</th></tr>%s</table></div>' % trs)
     return '<div class="card">%s%s%s%s%s%s</div>' % (head, plan, chain, watch, notes, table)
@@ -303,7 +312,9 @@ def options_record_block(rec):
     tiles = [("Tracked", st["tracked"]), ("Waiting or open", st["open"]), ("Closed", st["closed"]),
              ("Entry missed", st["missed"]), ("Closed result, per lot each", rs(st["total_lot"], 0)),
              ("Average closed result", "%+.1f%%" % st["avg_pct"] if st.get("avg_pct") is not None else "-"),
-             ("Win rate", pct(st.get("win_rate"))), ("Open trades now, per lot each", rs(st["open_mark_lot"], 0))]
+             ("Win rate", pct(st.get("win_rate"))), ("Open trades now, per lot each", rs(st["open_mark_lot"], 0)),
+             ("Value of the open lots (at the bid)", rs(sum((r.get("last") or 0) * r["lot"] for r in rec["rows"]
+                                                           if r["status"] == "entered"), 0))]
     t = '<div class="tiles">%s</div>' % "".join('<div class="tile"><b>%s</b><span>%s</span></div>' % (e(v), e(k)) for k, v in tiles)
     trs = ""
     for r in rec["rows"]:
@@ -314,17 +325,24 @@ def options_record_block(rec):
         elif r.get("mark_lot") is not None:
             res = 'now <span class="%s">%s (%+.1f%%)</span>' % ("up" if r["mark_lot"] >= 0 else "dn", rs(r["mark_lot"], 0),
                                                               r.get("mark_pct") or 0)
-        trs += ("<tr><td>%s</td><td><b>%s %s %s</b><br><span class='sub'>exp %s, lot %s</span></td><td>%s</td><td>%s</td>"
-                "<td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>" % (
-                    e(r["created"]), e(sym(r["symbol"])), k(r["strike"]), e(r["type"]), e(r["expiry"]), e(r["lot"]),
-                    status_pill(r["status"]), e(r.get("stock_status")), rs(r["signal_ask"]),
-                    rs(r.get("fill")) if r.get("fill") else "-",
-                    rs(r.get("exit")) if r.get("exit") is not None else (rs(r.get("last")) if r.get("last") else "-"),
+        now = r.get("exit") if r.get("exit") is not None else r.get("last")
+        trs += ("<tr><td>%s</td><td><b>%s %s %s</b><br><span class='sub'>exp %s</span></td><td>%s shares</td><td>%s</td>"
+                "<td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>" % (
+                    e(r["created"]), e(sym(r["symbol"])), k(r["strike"]), e(r["type"]), e(r["expiry"]),
+                    format(r["lot"], ","), status_pill(r["status"]), e(r.get("stock_status")),
+                    per_lot(r["signal_ask"], r["lot"]), per_lot(r.get("fill"), r["lot"]), per_lot(now, r["lot"]),
                     res, e((r.get("closed_ist") or r.get("entered_ist") or r.get("last_ist") or "")[5:])))
-    return head + t + ('<div class="card tbl"><table><tr><th>Signal</th><th>Option</th><th>Status</th><th>Stock plan</th>'
-                       '<th>Premium at signal</th><th>Bought</th><th>Sold / now</th><th>Per lot</th><th>Updated</th></tr>'
-                       '%s</table></div><div class="sub">Bought at the ask, sold at the bid, at the 30-minute update after '
+    return head + t + ('<div class="card tbl"><table><tr><th>Signal</th><th>Option</th><th>Lot size</th><th>Status</th>'
+                       '<th>Stock plan</th><th>At signal</th><th>Bought</th><th>Sold / now</th><th>Result per lot</th>'
+                       '<th>Updated</th></tr>%s</table></div><div class="sub">Prices a share, and the value of one lot '
+                       '(price &times; lot size). Bought at the ask, sold at the bid, at the 30-minute update after '
                        'the stock\'s move, so real fills can differ. One lot each.</div>' % trs)
+
+
+def per_lot(price, lot):
+    if not price:
+        return "-"
+    return "%s<br><b>%s a lot</b>" % (rs(price), rs(price * lot, 0))
 
 
 def tabs(doc):

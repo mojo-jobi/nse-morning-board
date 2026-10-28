@@ -119,7 +119,7 @@ def options_rows(opts):
             "spread 3% or less; OI 25+ lots. 'At target / at stop' = one lot's value then, minus the premium (Black-Scholes, "
             "IV unchanged)."], [],
            ["Symbol", "Type", "Plan", "Spot", "Expiry", "Days left", "Lot", "PCR", "Most call OI", "Most put OI",
-            "Watch range", "Best", "Strike", "Premium/lot", "Delta", "Theta/lot/day", "Vega/lot", "IV %", "OI lots",
+            "Watch range", "Best", "Strike", "Price a share", "Value of 1 lot (price x lot)", "Delta", "Theta/lot/day", "Vega/lot", "IV %", "OI lots",
             "OI chg %", "Build-up", "Gain at target/lot", "Loss at stop/lot", "R:R", "Break-even", "Passes filters",
             "Notes"]]
     for o in (opts or {}).get("calls", []) + (opts or {}).get("puts", []):
@@ -129,7 +129,7 @@ def options_rows(opts):
         for s in o.get("strikes") or []:
             out.append([o["symbol"].replace(".NS", ""), o["type"], plan, o.get("spot"), o["expiry"], o["dte"], o["lot"],
                         o.get("pcr"), o.get("call_wall"), o.get("put_wall"), watch,
-                        "best" if s["strike"] == o.get("best") else "", s["strike"], s["premium_lot"], s["delta"],
+                        "best" if s["strike"] == o.get("best") else "", s["strike"], s["ask"], s["premium_lot"], s["delta"],
                         s["theta_lot_day"], s["vega_lot"], s["iv"], s["oi_lots"], s.get("oi_chg_pct"), s.get("buildup"),
                         s["gain_lot"], -s["loss_lot"], s["rr"], s["breakeven"], "yes" if s["ok"] else ", ".join(s["why_not"]),
                         "; ".join(o.get("notes") or [])])
@@ -143,12 +143,17 @@ def options_record_rows(rec):
                                   st.get("tracked"), st.get("open"), st.get("closed"), st.get("missed"), st.get("total_lot"),
                                   st.get("open_mark_lot"), "-" if st.get("win_rate") is None else "%d%%" % round(100 * st["win_rate"]))],
            ["Bought at the ask, sold at the bid, at the 30-minute update after the stock's move; one lot each."], [],
-           ["Signal date", "Symbol", "Option", "Expiry", "Lot", "Status", "Stock plan", "Premium at signal", "Bought",
-            "Sold / last", "Result per lot", "Result %", "Open now per lot", "Open now %", "Updated"]]
+           ["Signal date", "Symbol", "Option", "Expiry", "Lot size (shares)", "Status", "Stock plan",
+            "Price at signal (a share)", "Value of 1 lot at signal", "Bought (a share)", "Value of 1 lot bought",
+            "Sold / last (a share)", "Value of 1 lot sold / now", "Result per lot", "Result %", "Open now per lot",
+            "Open now %", "Updated"]]
     for r in (rec or {}).get("rows") or []:
+        now = r.get("exit", r.get("last"))
+        lot_val = lambda x: round(x * r["lot"]) if x else ""  # noqa: E731
         out.append([r["created"], r["symbol"].replace(".NS", ""), "%s %s" % (r["strike"], r["type"]), r["expiry"], r["lot"],
-                    r["status"], r.get("stock_status"), r["signal_ask"], r.get("fill", ""),
-                    r.get("exit", r.get("last", "")), r.get("result_lot", ""), r.get("result_pct", ""),
+                    r["status"], r.get("stock_status"), r["signal_ask"], lot_val(r["signal_ask"]), r.get("fill", ""),
+                    lot_val(r.get("fill")), now if now is not None else "", lot_val(now),
+                    r.get("result_lot", ""), r.get("result_pct", ""),
                     r.get("mark_lot", ""), r.get("mark_pct", ""),
                     r.get("closed_ist") or r.get("entered_ist") or r.get("last_ist") or ""])
     return out
