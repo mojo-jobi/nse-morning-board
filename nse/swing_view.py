@@ -114,7 +114,10 @@ def scores(r):
     out = ['<span class="score">Score %s</span>' % e(r.get("score")), '<span class="score">Technical %s</span>' % e(r.get("tech"))]
     out.append('<span class="score">Fundamental %s</span>' % (e(r["fund"]) if r.get("fund") is not None else "n/a"))
     if r.get("rs_pct") is not None:
-        out.append('<span class="score">Strength vs Nifty: top %d%%</span>' % max(1, 100 - r["rs_pct"]))
+        if (r.get("plan") or {}).get("side") == "short":
+            out.append('<span class="score">vs Nifty: weaker than %d%% of stocks</span>' % (100 - r["rs_pct"]))
+        else:
+            out.append('<span class="score">vs Nifty: stronger than %d%% of stocks</span>' % r["rs_pct"])
     return '<div class="scores">%s</div>' % "".join(out)
 
 
