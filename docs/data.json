@@ -1,5 +1,5 @@
 {
- "stage": "pre",
+ "stage": "orb",
  "market": "NSE",
  "created_ist": "2026-10-28 09:44",
  "volume_basis": "today so far",
@@ -26,7 +26,7 @@
   "setups_saved_ist": "2026-10-28 09:44",
   "upstox": "ok",
   "bars": {
-   "Upstox": 0,
+   "Upstox": 20,
    "Yahoo": 0
   }
  },
@@ -111,7 +111,128 @@
     "gap_pct": 0.35,
     "flag": false,
     "yahoo_time": "09:45"
-   }
+   },
+   "trade": {
+    "status": "waiting",
+    "phase": "open",
+    "reason": "last close $10615.00 (10:05 bar), $160.00 under the range high $10775.00 (-1.48%)",
+    "opening_range": {
+     "high": 10775.0,
+     "low": 10552.0,
+     "minutes": 15,
+     "bars": 3,
+     "of": 3,
+     "complete": true,
+     "avg_volume": 76000
+    },
+    "last": {
+     "bar_start": "10:05",
+     "close": 10615.0,
+     "vs_level_pct": -1.48
+    },
+    "bars_source": "Upstox",
+    "entry_kind": "not triggered: plan if a bar closes above 10775.00",
+    "rel_volume": 9.65,
+    "plan": {
+     "symbol": "BAJAJ-AUTO.NS",
+     "side": "buy",
+     "setup": "orb",
+     "date": "2026-10-28",
+     "entry": 10775.05,
+     "stop": 10663.5,
+     "target": 10998.15,
+     "entry_time": "10:10",
+     "entry_bar": 10,
+     "risk_per_share": 111.55,
+     "reward_risk": 2.0,
+     "stop_label": "opening-range midpoint",
+     "target_label": "2R (two times the risk)",
+     "opening_range": {
+      "high": 10775.0,
+      "low": 10552.0,
+      "minutes": 15
+     },
+     "flat_by": "15:15",
+     "interval": "5m"
+    },
+    "timemachine": {
+     "sessions": 57,
+     "p_target": 0.0225,
+     "p_stop": 0.3079,
+     "p_neither": 0.6696,
+     "p_green": 0.4148,
+     "avg_R": -0.133,
+     "median_close": 10756.47,
+     "p5_close": 10602.64,
+     "p95_close": 10922.49,
+     "r_at_target": 2.0,
+     "verdict": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 7 % (target first 2.2 % vs stop first 30.8 %).",
+     "notes": [
+      "67.0 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those."
+     ],
+     "history": {
+      "sessions": 57,
+      "triggered": 27,
+      "target": 4,
+      "stop": 8,
+      "close": 15,
+      "avg_R": 0.177
+     }
+    },
+    "sizing": {
+     "qty": 6,
+     "bound_by": "position cap",
+     "cost": 64650.3,
+     "max_loss": 669.3,
+     "refusal": null,
+     "reward": 1338.6,
+     "replay_avg": -89.02
+    },
+    "risk": {
+     "verdict": "PASS",
+     "reasons": [],
+     "warnings": []
+    },
+    "order": {
+     "symbol": "BAJAJ-AUTO.NS",
+     "side": "buy",
+     "qty": "6",
+     "type": "market",
+     "time_in_force": "day",
+     "order_class": "bracket",
+     "take_profit_limit_price": "10998.15",
+     "stop_loss_stop_price": "10663.50",
+     "why": "opening-range breakout on BAJAJ-AUTO.NS: 6 shares, bound by your position cap (6 x 111.55 = $669.30 at the stop)",
+     "plan": {
+      "entry": 10775.05,
+      "stop": 10663.5,
+      "target": 10998.15,
+      "risk_per_share": 111.55,
+      "max_loss": 669.3,
+      "setup": "orb",
+      "entry_time": "10:10",
+      "flat_by": "15:15"
+     }
+    },
+    "alerts": [
+     {
+      "type": "stop",
+      "price": 10663.5,
+      "at": null
+     },
+     {
+      "type": "target",
+      "price": 10998.15,
+      "at": null
+     },
+     {
+      "type": "time",
+      "price": null,
+      "at": "15:15"
+     }
+    ]
+   },
+   "prev_rank": 1
   },
   {
    "rank": 2,
@@ -187,7 +308,128 @@
     "gap_pct": 0.28,
     "flag": false,
     "yahoo_time": "09:45"
-   }
+   },
+   "trade": {
+    "status": "waiting",
+    "phase": "open",
+    "reason": "last close $11442.00 (10:05 bar), $148.00 under the range high $11590.00 (-1.28%)",
+    "opening_range": {
+     "high": 11590.0,
+     "low": 11332.0,
+     "minutes": 15,
+     "bars": 3,
+     "of": 3,
+     "complete": true,
+     "avg_volume": 35984
+    },
+    "last": {
+     "bar_start": "10:05",
+     "close": 11442.0,
+     "vs_level_pct": -1.28
+    },
+    "bars_source": "Upstox",
+    "entry_kind": "not triggered: plan if a bar closes above 11590.00",
+    "rel_volume": 4.09,
+    "plan": {
+     "symbol": "MARUTI.NS",
+     "side": "buy",
+     "setup": "orb",
+     "date": "2026-10-28",
+     "entry": 11590.05,
+     "stop": 11461.0,
+     "target": 11848.15,
+     "entry_time": "10:10",
+     "entry_bar": 10,
+     "risk_per_share": 129.05,
+     "reward_risk": 2.0,
+     "stop_label": "opening-range midpoint",
+     "target_label": "2R (two times the risk)",
+     "opening_range": {
+      "high": 11590.0,
+      "low": 11332.0,
+      "minutes": 15
+     },
+     "flat_by": "15:15",
+     "interval": "5m"
+    },
+    "timemachine": {
+     "sessions": 57,
+     "p_target": 0.0053,
+     "p_stop": 0.2852,
+     "p_neither": 0.7095,
+     "p_green": 0.3827,
+     "avg_R": -0.203,
+     "median_close": 11562.33,
+     "p5_close": 11393.02,
+     "p95_close": 11722.0,
+     "r_at_target": 2.0,
+     "verdict": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 2 % (target first 0.5 % vs stop first 28.5 %).",
+     "notes": [
+      "71.0 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those."
+     ],
+     "history": {
+      "sessions": 57,
+      "triggered": 28,
+      "target": 4,
+      "stop": 14,
+      "close": 10,
+      "avg_R": -0.061
+     }
+    },
+    "sizing": {
+     "qty": 6,
+     "bound_by": "position cap",
+     "cost": 69540.3,
+     "max_loss": 774.3,
+     "refusal": null,
+     "reward": 1548.6,
+     "replay_avg": -157.18
+    },
+    "risk": {
+     "verdict": "PASS",
+     "reasons": [],
+     "warnings": []
+    },
+    "order": {
+     "symbol": "MARUTI.NS",
+     "side": "buy",
+     "qty": "6",
+     "type": "market",
+     "time_in_force": "day",
+     "order_class": "bracket",
+     "take_profit_limit_price": "11848.15",
+     "stop_loss_stop_price": "11461.00",
+     "why": "opening-range breakout on MARUTI.NS: 6 shares, bound by your position cap (6 x 129.05 = $774.30 at the stop)",
+     "plan": {
+      "entry": 11590.05,
+      "stop": 11461.0,
+      "target": 11848.15,
+      "risk_per_share": 129.05,
+      "max_loss": 774.3,
+      "setup": "orb",
+      "entry_time": "10:10",
+      "flat_by": "15:15"
+     }
+    },
+    "alerts": [
+     {
+      "type": "stop",
+      "price": 11461.0,
+      "at": null
+     },
+     {
+      "type": "target",
+      "price": 11848.15,
+      "at": null
+     },
+     {
+      "type": "time",
+      "price": null,
+      "at": "15:15"
+     }
+    ]
+   },
+   "prev_rank": 2
   },
   {
    "rank": 3,
@@ -267,7 +509,129 @@
     "gap_pct": 1.08,
     "flag": true,
     "yahoo_time": "09:45"
-   }
+   },
+   "trade": {
+    "status": "waiting",
+    "phase": "open",
+    "reason": "last close $3828.70 (10:05 bar), $146.30 under the range high $3975.00 (-3.68%)",
+    "opening_range": {
+     "high": 3975.0,
+     "low": 3840.0,
+     "minutes": 15,
+     "bars": 3,
+     "of": 3,
+     "complete": true,
+     "avg_volume": 243969
+    },
+    "last": {
+     "bar_start": "10:05",
+     "close": 3828.7,
+     "vs_level_pct": -3.68
+    },
+    "bars_source": "Upstox",
+    "entry_kind": "not triggered: plan if a bar closes above 3975.00",
+    "rel_volume": 16.23,
+    "plan": {
+     "symbol": "ACUTAAS.NS",
+     "side": "buy",
+     "setup": "orb",
+     "date": "2026-10-28",
+     "entry": 3975.05,
+     "stop": 3907.5,
+     "target": 4110.15,
+     "entry_time": "10:10",
+     "entry_bar": 10,
+     "risk_per_share": 67.55,
+     "reward_risk": 2.0,
+     "stop_label": "opening-range midpoint",
+     "target_label": "2R (two times the risk)",
+     "opening_range": {
+      "high": 3975.0,
+      "low": 3840.0,
+      "minutes": 15
+     },
+     "flat_by": "15:15",
+     "interval": "5m"
+    },
+    "timemachine": {
+     "sessions": 57,
+     "p_target": 0.0809,
+     "p_stop": 0.3197,
+     "p_neither": 0.5994,
+     "p_green": 0.4793,
+     "avg_R": 0.042,
+     "median_close": 3977.52,
+     "p5_close": 3865.15,
+     "p95_close": 4101.31,
+     "r_at_target": 2.0,
+     "verdict": "Leans toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 20 % (target first 8.1 % vs stop first 32.0 %).",
+     "notes": [
+      "59.9 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those.",
+      "Average R is +0.042 all the same: the replays that hit neither pull it the other way."
+     ],
+     "history": {
+      "sessions": 57,
+      "triggered": 24,
+      "target": 4,
+      "stop": 13,
+      "close": 7,
+      "avg_R": -0.116
+     }
+    },
+    "sizing": {
+     "qty": 14,
+     "bound_by": "max loss",
+     "cost": 55650.7,
+     "max_loss": 945.7,
+     "refusal": null,
+     "reward": 1891.4,
+     "replay_avg": 39.72
+    },
+    "risk": {
+     "verdict": "PASS",
+     "reasons": [],
+     "warnings": []
+    },
+    "order": {
+     "symbol": "ACUTAAS.NS",
+     "side": "buy",
+     "qty": "14",
+     "type": "market",
+     "time_in_force": "day",
+     "order_class": "bracket",
+     "take_profit_limit_price": "4110.15",
+     "stop_loss_stop_price": "3907.50",
+     "why": "opening-range breakout on ACUTAAS.NS: 14 shares, bound by your $1,000 max loss per trade (14 x 67.55 = $945.70 at the stop)",
+     "plan": {
+      "entry": 3975.05,
+      "stop": 3907.5,
+      "target": 4110.15,
+      "risk_per_share": 67.55,
+      "max_loss": 945.7,
+      "setup": "orb",
+      "entry_time": "10:10",
+      "flat_by": "15:15"
+     }
+    },
+    "alerts": [
+     {
+      "type": "stop",
+      "price": 3907.5,
+      "at": null
+     },
+     {
+      "type": "target",
+      "price": 4110.15,
+      "at": null
+     },
+     {
+      "type": "time",
+      "price": null,
+      "at": "15:15"
+     }
+    ]
+   },
+   "prev_rank": 3
   },
   {
    "rank": 4,
@@ -344,7 +708,128 @@
     "gap_pct": 0.15,
     "flag": false,
     "yahoo_time": "09:45"
-   }
+   },
+   "trade": {
+    "status": "triggered",
+    "phase": "open",
+    "reason": "the 9:45 bar closed above the range high",
+    "opening_range": {
+     "high": 223.6,
+     "low": 209.04,
+     "minutes": 15,
+     "bars": 3,
+     "of": 3,
+     "complete": true,
+     "avg_volume": 5116214
+    },
+    "last": {
+     "bar_start": "10:05",
+     "close": 225.79,
+     "vs_level_pct": 0.98
+    },
+    "bars_source": "Upstox",
+    "entry_kind": "triggered at 9:50 AM",
+    "rel_volume": 29.83,
+    "plan": {
+     "symbol": "PPLPHARMA.NS",
+     "side": "buy",
+     "setup": "orb",
+     "date": "2026-10-28",
+     "entry": 224.15,
+     "stop": 216.32,
+     "target": 239.81,
+     "entry_time": "09:50",
+     "entry_bar": 6,
+     "risk_per_share": 7.83,
+     "reward_risk": 2.0,
+     "stop_label": "opening-range midpoint",
+     "target_label": "2R (two times the risk)",
+     "opening_range": {
+      "high": 223.6,
+      "low": 209.04,
+      "minutes": 15
+     },
+     "flat_by": "15:15",
+     "interval": "5m"
+    },
+    "timemachine": {
+     "sessions": 57,
+     "p_target": 0.0002,
+     "p_stop": 0.0459,
+     "p_neither": 0.9539,
+     "p_green": 0.4414,
+     "avg_R": -0.065,
+     "median_close": 223.59,
+     "p5_close": 217.71,
+     "p95_close": 229.75,
+     "r_at_target": 2.0,
+     "verdict": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 0 % (target first 0.0 % vs stop first 4.6 %).",
+     "notes": [
+      "95.4 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those."
+     ],
+     "history": {
+      "sessions": 57,
+      "triggered": 29,
+      "target": 1,
+      "stop": 14,
+      "close": 14,
+      "avg_R": -0.331
+     }
+    },
+    "sizing": {
+     "qty": 127,
+     "bound_by": "max loss",
+     "cost": 28467.05,
+     "max_loss": 994.41,
+     "refusal": null,
+     "reward": 1988.82,
+     "replay_avg": -64.64
+    },
+    "risk": {
+     "verdict": "PASS",
+     "reasons": [],
+     "warnings": []
+    },
+    "order": {
+     "symbol": "PPLPHARMA.NS",
+     "side": "buy",
+     "qty": "127",
+     "type": "market",
+     "time_in_force": "day",
+     "order_class": "bracket",
+     "take_profit_limit_price": "239.81",
+     "stop_loss_stop_price": "216.32",
+     "why": "opening-range breakout on PPLPHARMA.NS: 127 shares, bound by your $1,000 max loss per trade (127 x 7.83 = $994.41 at the stop)",
+     "plan": {
+      "entry": 224.15,
+      "stop": 216.32,
+      "target": 239.81,
+      "risk_per_share": 7.83,
+      "max_loss": 994.41,
+      "setup": "orb",
+      "entry_time": "09:50",
+      "flat_by": "15:15"
+     }
+    },
+    "alerts": [
+     {
+      "type": "stop",
+      "price": 216.32,
+      "at": null
+     },
+     {
+      "type": "target",
+      "price": 239.81,
+      "at": null
+     },
+     {
+      "type": "time",
+      "price": null,
+      "at": "15:15"
+     }
+    ]
+   },
+   "prev_rank": 4
   },
   {
    "rank": 5,
@@ -419,7 +904,128 @@
     "gap_pct": 0.02,
     "flag": false,
     "yahoo_time": "09:45"
-   }
+   },
+   "trade": {
+    "status": "waiting",
+    "phase": "open",
+    "reason": "last close $1935.10 (10:05 bar), $35.70 under the range high $1970.80 (-1.81%)",
+    "opening_range": {
+     "high": 1970.8,
+     "low": 1935.1,
+     "minutes": 15,
+     "bars": 3,
+     "of": 3,
+     "complete": true,
+     "avg_volume": 658613
+    },
+    "last": {
+     "bar_start": "10:05",
+     "close": 1935.1,
+     "vs_level_pct": -1.81
+    },
+    "bars_source": "Upstox",
+    "entry_kind": "not triggered: plan if a bar closes above 1970.80",
+    "rel_volume": 3.67,
+    "plan": {
+     "symbol": "BHARTIARTL.NS",
+     "side": "buy",
+     "setup": "orb",
+     "date": "2026-10-28",
+     "entry": 1970.85,
+     "stop": 1952.95,
+     "target": 2006.65,
+     "entry_time": "10:10",
+     "entry_bar": 10,
+     "risk_per_share": 17.9,
+     "reward_risk": 2.0,
+     "stop_label": "opening-range midpoint",
+     "target_label": "2R (two times the risk)",
+     "opening_range": {
+      "high": 1970.8,
+      "low": 1935.1,
+      "minutes": 15
+     },
+     "flat_by": "15:15",
+     "interval": "5m"
+    },
+    "timemachine": {
+     "sessions": 57,
+     "p_target": 0.0236,
+     "p_stop": 0.2503,
+     "p_neither": 0.7261,
+     "p_green": 0.4626,
+     "avg_R": -0.042,
+     "median_close": 1969.77,
+     "p5_close": 1944.3,
+     "p95_close": 1994.78,
+     "r_at_target": 2.0,
+     "verdict": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 9 % (target first 2.4 % vs stop first 25.0 %).",
+     "notes": [
+      "72.6 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those."
+     ],
+     "history": {
+      "sessions": 57,
+      "triggered": 29,
+      "target": 5,
+      "stop": 14,
+      "close": 10,
+      "avg_R": -0.047
+     }
+    },
+    "sizing": {
+     "qty": 38,
+     "bound_by": "position cap",
+     "cost": 74892.3,
+     "max_loss": 680.2,
+     "refusal": null,
+     "reward": 1360.4,
+     "replay_avg": -28.57
+    },
+    "risk": {
+     "verdict": "PASS",
+     "reasons": [],
+     "warnings": []
+    },
+    "order": {
+     "symbol": "BHARTIARTL.NS",
+     "side": "buy",
+     "qty": "38",
+     "type": "market",
+     "time_in_force": "day",
+     "order_class": "bracket",
+     "take_profit_limit_price": "2006.65",
+     "stop_loss_stop_price": "1952.95",
+     "why": "opening-range breakout on BHARTIARTL.NS: 38 shares, bound by your position cap (38 x 17.90 = $680.20 at the stop)",
+     "plan": {
+      "entry": 1970.85,
+      "stop": 1952.95,
+      "target": 2006.65,
+      "risk_per_share": 17.9,
+      "max_loss": 680.2,
+      "setup": "orb",
+      "entry_time": "10:10",
+      "flat_by": "15:15"
+     }
+    },
+    "alerts": [
+     {
+      "type": "stop",
+      "price": 1952.95,
+      "at": null
+     },
+     {
+      "type": "target",
+      "price": 2006.65,
+      "at": null
+     },
+     {
+      "type": "time",
+      "price": null,
+      "at": "15:15"
+     }
+    ]
+   },
+   "prev_rank": 5
   },
   {
    "rank": 6,
@@ -501,7 +1107,128 @@
     "gap_pct": 0.07,
     "flag": false,
     "yahoo_time": "09:45"
-   }
+   },
+   "trade": {
+    "status": "waiting",
+    "phase": "open",
+    "reason": "last close $1110.50 (10:05 bar), $23.30 under the range high $1133.80 (-2.06%)",
+    "opening_range": {
+     "high": 1133.8,
+     "low": 1106.9,
+     "minutes": 15,
+     "bars": 3,
+     "of": 3,
+     "complete": true,
+     "avg_volume": 731298
+    },
+    "last": {
+     "bar_start": "10:05",
+     "close": 1110.5,
+     "vs_level_pct": -2.06
+    },
+    "bars_source": "Upstox",
+    "entry_kind": "not triggered: plan if a bar closes above 1133.80",
+    "rel_volume": 1.39,
+    "plan": {
+     "symbol": "INFY.NS",
+     "side": "buy",
+     "setup": "orb",
+     "date": "2026-10-28",
+     "entry": 1133.85,
+     "stop": 1120.35,
+     "target": 1160.85,
+     "entry_time": "10:10",
+     "entry_bar": 10,
+     "risk_per_share": 13.5,
+     "reward_risk": 2.0,
+     "stop_label": "opening-range midpoint",
+     "target_label": "2R (two times the risk)",
+     "opening_range": {
+      "high": 1133.8,
+      "low": 1106.9,
+      "minutes": 15
+     },
+     "flat_by": "15:15",
+     "interval": "5m"
+    },
+    "timemachine": {
+     "sessions": 57,
+     "p_target": 0.0077,
+     "p_stop": 0.3516,
+     "p_neither": 0.6407,
+     "p_green": 0.355,
+     "avg_R": -0.254,
+     "median_close": 1130.06,
+     "p5_close": 1112.64,
+     "p95_close": 1148.35,
+     "r_at_target": 2.0,
+     "verdict": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 2 % (target first 0.8 % vs stop first 35.2 %).",
+     "notes": [
+      "64.1 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those."
+     ],
+     "history": {
+      "sessions": 57,
+      "triggered": 19,
+      "target": 1,
+      "stop": 8,
+      "close": 10,
+      "avg_R": -0.332
+     }
+    },
+    "sizing": {
+     "qty": 66,
+     "bound_by": "position cap",
+     "cost": 74834.1,
+     "max_loss": 891.0,
+     "refusal": null,
+     "reward": 1782.0,
+     "replay_avg": -226.31
+    },
+    "risk": {
+     "verdict": "PASS",
+     "reasons": [],
+     "warnings": []
+    },
+    "order": {
+     "symbol": "INFY.NS",
+     "side": "buy",
+     "qty": "66",
+     "type": "market",
+     "time_in_force": "day",
+     "order_class": "bracket",
+     "take_profit_limit_price": "1160.85",
+     "stop_loss_stop_price": "1120.35",
+     "why": "opening-range breakout on INFY.NS: 66 shares, bound by your position cap (66 x 13.50 = $891 at the stop)",
+     "plan": {
+      "entry": 1133.85,
+      "stop": 1120.35,
+      "target": 1160.85,
+      "risk_per_share": 13.5,
+      "max_loss": 891.0,
+      "setup": "orb",
+      "entry_time": "10:10",
+      "flat_by": "15:15"
+     }
+    },
+    "alerts": [
+     {
+      "type": "stop",
+      "price": 1120.35,
+      "at": null
+     },
+     {
+      "type": "target",
+      "price": 1160.85,
+      "at": null
+     },
+     {
+      "type": "time",
+      "price": null,
+      "at": "15:15"
+     }
+    ]
+   },
+   "prev_rank": 6
   },
   {
    "rank": 7,
@@ -574,7 +1301,128 @@
     "gap_pct": 0.19,
     "flag": false,
     "yahoo_time": "09:45"
-   }
+   },
+   "trade": {
+    "status": "triggered",
+    "phase": "open",
+    "reason": "the 9:40 bar closed above the range high",
+    "opening_range": {
+     "high": 677.7,
+     "low": 669.2,
+     "minutes": 15,
+     "bars": 3,
+     "of": 3,
+     "complete": true,
+     "avg_volume": 1646965
+    },
+    "last": {
+     "bar_start": "10:05",
+     "close": 676.55,
+     "vs_level_pct": -0.17
+    },
+    "bars_source": "Upstox",
+    "entry_kind": "triggered at 9:45 AM",
+    "rel_volume": 1.06,
+    "plan": {
+     "symbol": "HDFCBANK.NS",
+     "side": "buy",
+     "setup": "orb",
+     "date": "2026-10-28",
+     "entry": 678.0,
+     "stop": 673.45,
+     "target": 687.1,
+     "entry_time": "09:45",
+     "entry_bar": 5,
+     "risk_per_share": 4.55,
+     "reward_risk": 2.0,
+     "stop_label": "opening-range midpoint",
+     "target_label": "2R (two times the risk)",
+     "opening_range": {
+      "high": 677.7,
+      "low": 669.2,
+      "minutes": 15
+     },
+     "flat_by": "15:15",
+     "interval": "5m"
+    },
+    "timemachine": {
+     "sessions": 57,
+     "p_target": 0.0821,
+     "p_stop": 0.4746,
+     "p_neither": 0.4433,
+     "p_green": 0.397,
+     "avg_R": -0.123,
+     "median_close": 677.31,
+     "p5_close": 668.39,
+     "p95_close": 686.53,
+     "r_at_target": 2.0,
+     "verdict": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 15 % (target first 8.2 % vs stop first 47.5 %).",
+     "notes": [
+      "44.3 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those."
+     ],
+     "history": {
+      "sessions": 57,
+      "triggered": 31,
+      "target": 4,
+      "stop": 16,
+      "close": 11,
+      "avg_R": -0.201
+     }
+    },
+    "sizing": {
+     "qty": 110,
+     "bound_by": "position cap",
+     "cost": 74580.0,
+     "max_loss": 500.5,
+     "refusal": null,
+     "reward": 1001.0,
+     "replay_avg": -61.56
+    },
+    "risk": {
+     "verdict": "PASS",
+     "reasons": [],
+     "warnings": []
+    },
+    "order": {
+     "symbol": "HDFCBANK.NS",
+     "side": "buy",
+     "qty": "110",
+     "type": "market",
+     "time_in_force": "day",
+     "order_class": "bracket",
+     "take_profit_limit_price": "687.10",
+     "stop_loss_stop_price": "673.45",
+     "why": "opening-range breakout on HDFCBANK.NS: 110 shares, bound by your position cap (110 x 4.55 = $500.50 at the stop)",
+     "plan": {
+      "entry": 678.0,
+      "stop": 673.45,
+      "target": 687.1,
+      "risk_per_share": 4.55,
+      "max_loss": 500.5,
+      "setup": "orb",
+      "entry_time": "09:45",
+      "flat_by": "15:15"
+     }
+    },
+    "alerts": [
+     {
+      "type": "stop",
+      "price": 673.45,
+      "at": null
+     },
+     {
+      "type": "target",
+      "price": 687.1,
+      "at": null
+     },
+     {
+      "type": "time",
+      "price": null,
+      "at": "15:15"
+     }
+    ]
+   },
+   "prev_rank": 7
   },
   {
    "rank": 8,
@@ -653,7 +1501,128 @@
     "gap_pct": 0.25,
     "flag": false,
     "yahoo_time": "09:45"
-   }
+   },
+   "trade": {
+    "status": "triggered",
+    "phase": "open",
+    "reason": "the 9:30 bar closed above the range high",
+    "opening_range": {
+     "high": 1635.0,
+     "low": 1596.0,
+     "minutes": 15,
+     "bars": 3,
+     "of": 3,
+     "complete": true,
+     "avg_volume": 252007
+    },
+    "last": {
+     "bar_start": "10:05",
+     "close": 1637.0,
+     "vs_level_pct": 0.12
+    },
+    "bars_source": "Upstox",
+    "entry_kind": "triggered at 9:35 AM",
+    "rel_volume": 45.53,
+    "plan": {
+     "symbol": "ONESOURCE.NS",
+     "side": "buy",
+     "setup": "orb",
+     "date": "2026-10-28",
+     "entry": 1641.4,
+     "stop": 1615.5,
+     "target": 1693.2,
+     "entry_time": "09:35",
+     "entry_bar": 3,
+     "risk_per_share": 25.9,
+     "reward_risk": 2.0,
+     "stop_label": "opening-range midpoint",
+     "target_label": "2R (two times the risk)",
+     "opening_range": {
+      "high": 1635.0,
+      "low": 1596.0,
+      "minutes": 15
+     },
+     "flat_by": "15:15",
+     "interval": "5m"
+    },
+    "timemachine": {
+     "sessions": 57,
+     "p_target": 0.1758,
+     "p_stop": 0.4027,
+     "p_neither": 0.4215,
+     "p_green": 0.4713,
+     "avg_R": 0.115,
+     "median_close": 1641.98,
+     "p5_close": 1582.67,
+     "p95_close": 1703.89,
+     "r_at_target": 2.0,
+     "verdict": "Close to break-even: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 30 % (target first 17.6 % vs stop first 40.3 %).",
+     "notes": [
+      "42.1 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those."
+     ],
+     "history": {
+      "sessions": 57,
+      "triggered": 33,
+      "target": 6,
+      "stop": 18,
+      "close": 9,
+      "avg_R": -0.161
+     }
+    },
+    "sizing": {
+     "qty": 38,
+     "bound_by": "max loss",
+     "cost": 62373.2,
+     "max_loss": 984.2,
+     "refusal": null,
+     "reward": 1968.4,
+     "replay_avg": 113.18
+    },
+    "risk": {
+     "verdict": "PASS",
+     "reasons": [],
+     "warnings": []
+    },
+    "order": {
+     "symbol": "ONESOURCE.NS",
+     "side": "buy",
+     "qty": "38",
+     "type": "market",
+     "time_in_force": "day",
+     "order_class": "bracket",
+     "take_profit_limit_price": "1693.20",
+     "stop_loss_stop_price": "1615.50",
+     "why": "opening-range breakout on ONESOURCE.NS: 38 shares, bound by your $1,000 max loss per trade (38 x 25.90 = $984.20 at the stop)",
+     "plan": {
+      "entry": 1641.4,
+      "stop": 1615.5,
+      "target": 1693.2,
+      "risk_per_share": 25.9,
+      "max_loss": 984.2,
+      "setup": "orb",
+      "entry_time": "09:35",
+      "flat_by": "15:15"
+     }
+    },
+    "alerts": [
+     {
+      "type": "stop",
+      "price": 1615.5,
+      "at": null
+     },
+     {
+      "type": "target",
+      "price": 1693.2,
+      "at": null
+     },
+     {
+      "type": "time",
+      "price": null,
+      "at": "15:15"
+     }
+    ]
+   },
+   "prev_rank": 8
   },
   {
    "rank": 9,
@@ -731,7 +1700,128 @@
     "gap_pct": 0.26,
     "flag": false,
     "yahoo_time": "09:45"
-   }
+   },
+   "trade": {
+    "status": "triggered",
+    "phase": "open",
+    "reason": "the 9:40 bar closed above the range high",
+    "opening_range": {
+     "high": 1195.4,
+     "low": 1187.0,
+     "minutes": 15,
+     "bars": 3,
+     "of": 3,
+     "complete": true,
+     "avg_volume": 406548
+    },
+    "last": {
+     "bar_start": "10:05",
+     "close": 1179.5,
+     "vs_level_pct": -1.33
+    },
+    "bars_source": "Upstox",
+    "entry_kind": "triggered at 9:45 AM",
+    "rel_volume": 2.02,
+    "plan": {
+     "symbol": "RELIANCE.NS",
+     "side": "buy",
+     "setup": "orb",
+     "date": "2026-10-28",
+     "entry": 1199.2,
+     "stop": 1191.2,
+     "target": 1215.2,
+     "entry_time": "09:45",
+     "entry_bar": 5,
+     "risk_per_share": 8.0,
+     "reward_risk": 2.0,
+     "stop_label": "opening-range midpoint",
+     "target_label": "2R (two times the risk)",
+     "opening_range": {
+      "high": 1195.4,
+      "low": 1187.0,
+      "minutes": 15
+     },
+     "flat_by": "15:15",
+     "interval": "5m"
+    },
+    "timemachine": {
+     "sessions": 57,
+     "p_target": 0.1117,
+     "p_stop": 0.4266,
+     "p_neither": 0.4617,
+     "p_green": 0.4342,
+     "avg_R": -0.023,
+     "median_close": 1198.85,
+     "p5_close": 1183.05,
+     "p95_close": 1215.56,
+     "r_at_target": 2.0,
+     "verdict": "Leans toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 21 % (target first 11.2 % vs stop first 42.7 %).",
+     "notes": [
+      "46.2 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those."
+     ],
+     "history": {
+      "sessions": 57,
+      "triggered": 26,
+      "target": 7,
+      "stop": 12,
+      "close": 7,
+      "avg_R": 0.195
+     }
+    },
+    "sizing": {
+     "qty": 62,
+     "bound_by": "position cap",
+     "cost": 74350.4,
+     "max_loss": 496.0,
+     "refusal": null,
+     "reward": 992.0,
+     "replay_avg": -11.41
+    },
+    "risk": {
+     "verdict": "PASS",
+     "reasons": [],
+     "warnings": []
+    },
+    "order": {
+     "symbol": "RELIANCE.NS",
+     "side": "buy",
+     "qty": "62",
+     "type": "market",
+     "time_in_force": "day",
+     "order_class": "bracket",
+     "take_profit_limit_price": "1215.20",
+     "stop_loss_stop_price": "1191.20",
+     "why": "opening-range breakout on RELIANCE.NS: 62 shares, bound by your position cap (62 x 8.00 = $496 at the stop)",
+     "plan": {
+      "entry": 1199.2,
+      "stop": 1191.2,
+      "target": 1215.2,
+      "risk_per_share": 8.0,
+      "max_loss": 496.0,
+      "setup": "orb",
+      "entry_time": "09:45",
+      "flat_by": "15:15"
+     }
+    },
+    "alerts": [
+     {
+      "type": "stop",
+      "price": 1191.2,
+      "at": null
+     },
+     {
+      "type": "target",
+      "price": 1215.2,
+      "at": null
+     },
+     {
+      "type": "time",
+      "price": null,
+      "at": "15:15"
+     }
+    ]
+   },
+   "prev_rank": 9
   },
   {
    "rank": 10,
@@ -808,7 +1898,128 @@
     "gap_pct": 0.34,
     "flag": false,
     "yahoo_time": "09:45"
-   }
+   },
+   "trade": {
+    "status": "waiting",
+    "phase": "open",
+    "reason": "last close $3816.00 (10:05 bar), $78.00 under the range high $3894.00 (-2.00%)",
+    "opening_range": {
+     "high": 3894.0,
+     "low": 3770.0,
+     "minutes": 15,
+     "bars": 3,
+     "of": 3,
+     "complete": true,
+     "avg_volume": 551062
+    },
+    "last": {
+     "bar_start": "10:05",
+     "close": 3816.0,
+     "vs_level_pct": -2.0
+    },
+    "bars_source": "Upstox",
+    "entry_kind": "not triggered: plan if a bar closes above 3894.00",
+    "rel_volume": 10.31,
+    "plan": {
+     "symbol": "LT.NS",
+     "side": "buy",
+     "setup": "orb",
+     "date": "2026-10-28",
+     "entry": 3894.05,
+     "stop": 3832.0,
+     "target": 4018.15,
+     "entry_time": "10:10",
+     "entry_bar": 10,
+     "risk_per_share": 62.05,
+     "reward_risk": 2.0,
+     "stop_label": "opening-range midpoint",
+     "target_label": "2R (two times the risk)",
+     "opening_range": {
+      "high": 3894.0,
+      "low": 3770.0,
+      "minutes": 15
+     },
+     "flat_by": "15:15",
+     "interval": "5m"
+    },
+    "timemachine": {
+     "sessions": 57,
+     "p_target": 0.0002,
+     "p_stop": 0.0497,
+     "p_neither": 0.9501,
+     "p_green": 0.4654,
+     "avg_R": -0.036,
+     "median_close": 3891.14,
+     "p5_close": 3842.3,
+     "p95_close": 3942.82,
+     "r_at_target": 2.0,
+     "verdict": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 0 % (target first 0.0 % vs stop first 5.0 %).",
+     "notes": [
+      "95.0 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those."
+     ],
+     "history": {
+      "sessions": 57,
+      "triggered": 29,
+      "target": 4,
+      "stop": 15,
+      "close": 10,
+      "avg_R": -0.134
+     }
+    },
+    "sizing": {
+     "qty": 16,
+     "bound_by": "max loss",
+     "cost": 62304.8,
+     "max_loss": 992.8,
+     "refusal": null,
+     "reward": 1985.6,
+     "replay_avg": -35.74
+    },
+    "risk": {
+     "verdict": "PASS",
+     "reasons": [],
+     "warnings": []
+    },
+    "order": {
+     "symbol": "LT.NS",
+     "side": "buy",
+     "qty": "16",
+     "type": "market",
+     "time_in_force": "day",
+     "order_class": "bracket",
+     "take_profit_limit_price": "4018.15",
+     "stop_loss_stop_price": "3832.00",
+     "why": "opening-range breakout on LT.NS: 16 shares, bound by your $1,000 max loss per trade (16 x 62.05 = $992.80 at the stop)",
+     "plan": {
+      "entry": 3894.05,
+      "stop": 3832.0,
+      "target": 4018.15,
+      "risk_per_share": 62.05,
+      "max_loss": 992.8,
+      "setup": "orb",
+      "entry_time": "10:10",
+      "flat_by": "15:15"
+     }
+    },
+    "alerts": [
+     {
+      "type": "stop",
+      "price": 3832.0,
+      "at": null
+     },
+     {
+      "type": "target",
+      "price": 4018.15,
+      "at": null
+     },
+     {
+      "type": "time",
+      "price": null,
+      "at": "15:15"
+     }
+    ]
+   },
+   "prev_rank": 10
   },
   {
    "rank": 11,
@@ -888,7 +2099,128 @@
     "gap_pct": 0.11,
     "flag": false,
     "yahoo_time": "09:45"
-   }
+   },
+   "trade": {
+    "status": "waiting",
+    "phase": "open",
+    "reason": "last close $2194.20 (10:05 bar), $53.80 under the range high $2248.00 (-2.39%)",
+    "opening_range": {
+     "high": 2248.0,
+     "low": 2188.1,
+     "minutes": 15,
+     "bars": 3,
+     "of": 3,
+     "complete": true,
+     "avg_volume": 150856
+    },
+    "last": {
+     "bar_start": "10:05",
+     "close": 2194.2,
+     "vs_level_pct": -2.39
+    },
+    "bars_source": "Upstox",
+    "entry_kind": "not triggered: plan if a bar closes above 2248.00",
+    "rel_volume": 5.69,
+    "plan": {
+     "symbol": "WAAREEENER.NS",
+     "side": "buy",
+     "setup": "orb",
+     "date": "2026-10-28",
+     "entry": 2248.05,
+     "stop": 2218.05,
+     "target": 2308.05,
+     "entry_time": "10:10",
+     "entry_bar": 10,
+     "risk_per_share": 30.0,
+     "reward_risk": 2.0,
+     "stop_label": "opening-range midpoint",
+     "target_label": "2R (two times the risk)",
+     "opening_range": {
+      "high": 2248.0,
+      "low": 2188.1,
+      "minutes": 15
+     },
+     "flat_by": "15:15",
+     "interval": "5m"
+    },
+    "timemachine": {
+     "sessions": 57,
+     "p_target": 0.0101,
+     "p_stop": 0.2595,
+     "p_neither": 0.7304,
+     "p_green": 0.3864,
+     "avg_R": -0.173,
+     "median_close": 2241.98,
+     "p5_close": 2205.53,
+     "p95_close": 2281.36,
+     "r_at_target": 2.0,
+     "verdict": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 4 % (target first 1.0 % vs stop first 25.9 %).",
+     "notes": [
+      "73.0 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those."
+     ],
+     "history": {
+      "sessions": 57,
+      "triggered": 26,
+      "target": 8,
+      "stop": 12,
+      "close": 6,
+      "avg_R": 0.167
+     }
+    },
+    "sizing": {
+     "qty": 33,
+     "bound_by": "max loss",
+     "cost": 74185.65,
+     "max_loss": 990.0,
+     "refusal": null,
+     "reward": 1980.0,
+     "replay_avg": -171.27
+    },
+    "risk": {
+     "verdict": "PASS",
+     "reasons": [],
+     "warnings": []
+    },
+    "order": {
+     "symbol": "WAAREEENER.NS",
+     "side": "buy",
+     "qty": "33",
+     "type": "market",
+     "time_in_force": "day",
+     "order_class": "bracket",
+     "take_profit_limit_price": "2308.05",
+     "stop_loss_stop_price": "2218.05",
+     "why": "opening-range breakout on WAAREEENER.NS: 33 shares, bound by your $1,000 max loss per trade (33 x 30.00 = $990 at the stop)",
+     "plan": {
+      "entry": 2248.05,
+      "stop": 2218.05,
+      "target": 2308.05,
+      "risk_per_share": 30.0,
+      "max_loss": 990.0,
+      "setup": "orb",
+      "entry_time": "10:10",
+      "flat_by": "15:15"
+     }
+    },
+    "alerts": [
+     {
+      "type": "stop",
+      "price": 2218.05,
+      "at": null
+     },
+     {
+      "type": "target",
+      "price": 2308.05,
+      "at": null
+     },
+     {
+      "type": "time",
+      "price": null,
+      "at": "15:15"
+     }
+    ]
+   },
+   "prev_rank": 11
   },
   {
    "rank": 12,
@@ -966,7 +2298,129 @@
     "gap_pct": 0.08,
     "flag": false,
     "yahoo_time": "09:45"
-   }
+   },
+   "trade": {
+    "status": "waiting",
+    "phase": "open",
+    "reason": "last close $310.00 (10:05 bar), $5.00 under the range high $315.00 (-1.59%)",
+    "opening_range": {
+     "high": 315.0,
+     "low": 306.25,
+     "minutes": 15,
+     "bars": 3,
+     "of": 3,
+     "complete": true,
+     "avg_volume": 556556
+    },
+    "last": {
+     "bar_start": "10:05",
+     "close": 310.0,
+     "vs_level_pct": -1.59
+    },
+    "bars_source": "Upstox",
+    "entry_kind": "not triggered: plan if a bar closes above 315.00",
+    "rel_volume": 10.05,
+    "plan": {
+     "symbol": "TATACAP.NS",
+     "side": "buy",
+     "setup": "orb",
+     "date": "2026-10-28",
+     "entry": 315.05,
+     "stop": 310.62,
+     "target": 323.91,
+     "entry_time": "10:10",
+     "entry_bar": 10,
+     "risk_per_share": 4.43,
+     "reward_risk": 2.0,
+     "stop_label": "opening-range midpoint",
+     "target_label": "2R (two times the risk)",
+     "opening_range": {
+      "high": 315.0,
+      "low": 306.25,
+      "minutes": 15
+     },
+     "flat_by": "15:15",
+     "interval": "5m"
+    },
+    "timemachine": {
+     "sessions": 57,
+     "p_target": 0.0245,
+     "p_stop": 0.1925,
+     "p_neither": 0.783,
+     "p_green": 0.5178,
+     "avg_R": 0.064,
+     "median_close": 315.32,
+     "p5_close": 309.8,
+     "p95_close": 321.47,
+     "r_at_target": 2.0,
+     "verdict": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 11 % (target first 2.5 % vs stop first 19.2 %).",
+     "notes": [
+      "78.3 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those.",
+      "Average R is +0.064 all the same: the replays that hit neither pull it the other way."
+     ],
+     "history": {
+      "sessions": 57,
+      "triggered": 27,
+      "target": 4,
+      "stop": 12,
+      "close": 11,
+      "avg_R": -0.079
+     }
+    },
+    "sizing": {
+     "qty": 225,
+     "bound_by": "max loss",
+     "cost": 70886.25,
+     "max_loss": 996.75,
+     "refusal": null,
+     "reward": 1993.5,
+     "replay_avg": 63.79
+    },
+    "risk": {
+     "verdict": "PASS",
+     "reasons": [],
+     "warnings": []
+    },
+    "order": {
+     "symbol": "TATACAP.NS",
+     "side": "buy",
+     "qty": "225",
+     "type": "market",
+     "time_in_force": "day",
+     "order_class": "bracket",
+     "take_profit_limit_price": "323.91",
+     "stop_loss_stop_price": "310.62",
+     "why": "opening-range breakout on TATACAP.NS: 225 shares, bound by your $1,000 max loss per trade (225 x 4.43 = $996.75 at the stop)",
+     "plan": {
+      "entry": 315.05,
+      "stop": 310.62,
+      "target": 323.91,
+      "risk_per_share": 4.43,
+      "max_loss": 996.75,
+      "setup": "orb",
+      "entry_time": "10:10",
+      "flat_by": "15:15"
+     }
+    },
+    "alerts": [
+     {
+      "type": "stop",
+      "price": 310.62,
+      "at": null
+     },
+     {
+      "type": "target",
+      "price": 323.91,
+      "at": null
+     },
+     {
+      "type": "time",
+      "price": null,
+      "at": "15:15"
+     }
+    ]
+   },
+   "prev_rank": 12
   },
   {
    "rank": 13,
@@ -1047,7 +2501,126 @@
     "gap_pct": 0.03,
     "flag": false,
     "yahoo_time": "09:45"
-   }
+   },
+   "trade": {
+    "status": "waiting",
+    "phase": "open",
+    "reason": "last close $1616.50 (10:05 bar), $25.30 under the range high $1641.80 (-1.54%)",
+    "opening_range": {
+     "high": 1641.8,
+     "low": 1610.1,
+     "minutes": 15,
+     "bars": 3,
+     "of": 3,
+     "complete": true,
+     "avg_volume": 135376
+    },
+    "last": {
+     "bar_start": "10:05",
+     "close": 1616.5,
+     "vs_level_pct": -1.54
+    },
+    "bars_source": "Upstox",
+    "entry_kind": "not triggered: plan if a bar closes above 1641.80",
+    "rel_volume": 0.88,
+    "plan": {
+     "symbol": "PAYTM.NS",
+     "side": "buy",
+     "setup": "orb",
+     "date": "2026-10-28",
+     "entry": 1641.85,
+     "stop": 1625.95,
+     "target": 1673.65,
+     "entry_time": "10:10",
+     "entry_bar": 10,
+     "risk_per_share": 15.9,
+     "reward_risk": 2.0,
+     "stop_label": "opening-range midpoint",
+     "target_label": "2R (two times the risk)",
+     "opening_range": {
+      "high": 1641.8,
+      "low": 1610.1,
+      "minutes": 15
+     },
+     "flat_by": "15:15",
+     "interval": "5m"
+    },
+    "timemachine": {
+     "sessions": 57,
+     "p_target": 0.2182,
+     "p_stop": 0.4925,
+     "p_neither": 0.2893,
+     "p_green": 0.4233,
+     "avg_R": 0.063,
+     "median_close": 1642.17,
+     "p5_close": 1601.93,
+     "p95_close": 1685.08,
+     "r_at_target": 2.0,
+     "verdict": "Close to break-even: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 31 % (target first 21.8 % vs stop first 49.2 %).",
+     "notes": [],
+     "history": {
+      "sessions": 57,
+      "triggered": 31,
+      "target": 8,
+      "stop": 9,
+      "close": 14,
+      "avg_R": 0.304
+     }
+    },
+    "sizing": {
+     "qty": 45,
+     "bound_by": "position cap",
+     "cost": 73883.25,
+     "max_loss": 715.5,
+     "refusal": null,
+     "reward": 1431.0,
+     "replay_avg": 45.08
+    },
+    "risk": {
+     "verdict": "PASS",
+     "reasons": [],
+     "warnings": []
+    },
+    "order": {
+     "symbol": "PAYTM.NS",
+     "side": "buy",
+     "qty": "45",
+     "type": "market",
+     "time_in_force": "day",
+     "order_class": "bracket",
+     "take_profit_limit_price": "1673.65",
+     "stop_loss_stop_price": "1625.95",
+     "why": "opening-range breakout on PAYTM.NS: 45 shares, bound by your position cap (45 x 15.90 = $715.50 at the stop)",
+     "plan": {
+      "entry": 1641.85,
+      "stop": 1625.95,
+      "target": 1673.65,
+      "risk_per_share": 15.9,
+      "max_loss": 715.5,
+      "setup": "orb",
+      "entry_time": "10:10",
+      "flat_by": "15:15"
+     }
+    },
+    "alerts": [
+     {
+      "type": "stop",
+      "price": 1625.95,
+      "at": null
+     },
+     {
+      "type": "target",
+      "price": 1673.65,
+      "at": null
+     },
+     {
+      "type": "time",
+      "price": null,
+      "at": "15:15"
+     }
+    ]
+   },
+   "prev_rank": 13
   },
   {
    "rank": 14,
@@ -1127,7 +2700,128 @@
     "gap_pct": 0.32,
     "flag": false,
     "yahoo_time": "09:45"
-   }
+   },
+   "trade": {
+    "status": "waiting",
+    "phase": "open",
+    "reason": "last close $1234.90 (10:05 bar), $82.50 under the range high $1317.40 (-6.26%)",
+    "opening_range": {
+     "high": 1317.4,
+     "low": 1211.0,
+     "minutes": 15,
+     "bars": 3,
+     "of": 3,
+     "complete": true,
+     "avg_volume": 438305
+    },
+    "last": {
+     "bar_start": "10:05",
+     "close": 1234.9,
+     "vs_level_pct": -6.26
+    },
+    "bars_source": "Upstox",
+    "entry_kind": "not triggered: plan if a bar closes above 1317.40",
+    "rel_volume": 113.59,
+    "plan": {
+     "symbol": "UBL.NS",
+     "side": "buy",
+     "setup": "orb",
+     "date": "2026-10-28",
+     "entry": 1317.45,
+     "stop": 1264.2,
+     "target": 1423.95,
+     "entry_time": "10:10",
+     "entry_bar": 10,
+     "risk_per_share": 53.25,
+     "reward_risk": 2.0,
+     "stop_label": "opening-range midpoint",
+     "target_label": "2R (two times the risk)",
+     "opening_range": {
+      "high": 1317.4,
+      "low": 1211.0,
+      "minutes": 15
+     },
+     "flat_by": "15:15",
+     "interval": "5m"
+    },
+    "timemachine": {
+     "sessions": 57,
+     "p_target": 0.0,
+     "p_stop": 0.0011,
+     "p_neither": 0.9989,
+     "p_green": 0.4207,
+     "avg_R": -0.05,
+     "median_close": 1314.63,
+     "p5_close": 1290.56,
+     "p95_close": 1340.27,
+     "r_at_target": 2.0,
+     "verdict": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 0 % (target first 0.0 % vs stop first 0.1 %).",
+     "notes": [
+      "99.9 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those."
+     ],
+     "history": {
+      "sessions": 57,
+      "triggered": 23,
+      "target": 5,
+      "stop": 12,
+      "close": 6,
+      "avg_R": -0.005
+     }
+    },
+    "sizing": {
+     "qty": 18,
+     "bound_by": "max loss",
+     "cost": 23714.1,
+     "max_loss": 958.5,
+     "refusal": null,
+     "reward": 1917.0,
+     "replay_avg": -47.93
+    },
+    "risk": {
+     "verdict": "PASS",
+     "reasons": [],
+     "warnings": []
+    },
+    "order": {
+     "symbol": "UBL.NS",
+     "side": "buy",
+     "qty": "18",
+     "type": "market",
+     "time_in_force": "day",
+     "order_class": "bracket",
+     "take_profit_limit_price": "1423.95",
+     "stop_loss_stop_price": "1264.20",
+     "why": "opening-range breakout on UBL.NS: 18 shares, bound by your $1,000 max loss per trade (18 x 53.25 = $958.50 at the stop)",
+     "plan": {
+      "entry": 1317.45,
+      "stop": 1264.2,
+      "target": 1423.95,
+      "risk_per_share": 53.25,
+      "max_loss": 958.5,
+      "setup": "orb",
+      "entry_time": "10:10",
+      "flat_by": "15:15"
+     }
+    },
+    "alerts": [
+     {
+      "type": "stop",
+      "price": 1264.2,
+      "at": null
+     },
+     {
+      "type": "target",
+      "price": 1423.95,
+      "at": null
+     },
+     {
+      "type": "time",
+      "price": null,
+      "at": "15:15"
+     }
+    ]
+   },
+   "prev_rank": 14
   },
   {
    "rank": 15,
@@ -1198,7 +2892,126 @@
     "gap_pct": 0.06,
     "flag": false,
     "yahoo_time": "09:45"
-   }
+   },
+   "trade": {
+    "status": "waiting",
+    "phase": "open",
+    "reason": "last close $2432.40 (10:05 bar), $18.30 under the range high $2450.70 (-0.75%)",
+    "opening_range": {
+     "high": 2450.7,
+     "low": 2413.6,
+     "minutes": 15,
+     "bars": 3,
+     "of": 3,
+     "complete": true,
+     "avg_volume": 165737
+    },
+    "last": {
+     "bar_start": "10:05",
+     "close": 2432.4,
+     "vs_level_pct": -0.75
+    },
+    "bars_source": "Upstox",
+    "entry_kind": "not triggered: plan if a bar closes above 2450.70",
+    "rel_volume": 0.66,
+    "plan": {
+     "symbol": "TCS.NS",
+     "side": "buy",
+     "setup": "orb",
+     "date": "2026-10-28",
+     "entry": 2450.75,
+     "stop": 2432.15,
+     "target": 2487.95,
+     "entry_time": "10:10",
+     "entry_bar": 10,
+     "risk_per_share": 18.6,
+     "reward_risk": 2.0,
+     "stop_label": "opening-range midpoint",
+     "target_label": "2R (two times the risk)",
+     "opening_range": {
+      "high": 2450.7,
+      "low": 2413.6,
+      "minutes": 15
+     },
+     "flat_by": "15:15",
+     "interval": "5m"
+    },
+    "timemachine": {
+     "sessions": 57,
+     "p_target": 0.0771,
+     "p_stop": 0.5665,
+     "p_neither": 0.3564,
+     "p_green": 0.3124,
+     "avg_R": -0.301,
+     "median_close": 2442.09,
+     "p5_close": 2399.59,
+     "p95_close": 2483.15,
+     "r_at_target": 2.0,
+     "verdict": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 12 % (target first 7.7 % vs stop first 56.6 %).",
+     "notes": [],
+     "history": {
+      "sessions": 57,
+      "triggered": 24,
+      "target": 2,
+      "stop": 8,
+      "close": 14,
+      "avg_R": -0.174
+     }
+    },
+    "sizing": {
+     "qty": 30,
+     "bound_by": "position cap",
+     "cost": 73522.5,
+     "max_loss": 558.0,
+     "refusal": null,
+     "reward": 1116.0,
+     "replay_avg": -167.96
+    },
+    "risk": {
+     "verdict": "PASS",
+     "reasons": [],
+     "warnings": []
+    },
+    "order": {
+     "symbol": "TCS.NS",
+     "side": "buy",
+     "qty": "30",
+     "type": "market",
+     "time_in_force": "day",
+     "order_class": "bracket",
+     "take_profit_limit_price": "2487.95",
+     "stop_loss_stop_price": "2432.15",
+     "why": "opening-range breakout on TCS.NS: 30 shares, bound by your position cap (30 x 18.60 = $558 at the stop)",
+     "plan": {
+      "entry": 2450.75,
+      "stop": 2432.15,
+      "target": 2487.95,
+      "risk_per_share": 18.6,
+      "max_loss": 558.0,
+      "setup": "orb",
+      "entry_time": "10:10",
+      "flat_by": "15:15"
+     }
+    },
+    "alerts": [
+     {
+      "type": "stop",
+      "price": 2432.15,
+      "at": null
+     },
+     {
+      "type": "target",
+      "price": 2487.95,
+      "at": null
+     },
+     {
+      "type": "time",
+      "price": null,
+      "at": "15:15"
+     }
+    ]
+   },
+   "prev_rank": 15
   },
   {
    "rank": 16,
@@ -1264,7 +3077,128 @@
     "gap_pct": 0.06,
     "flag": false,
     "yahoo_time": "09:45"
-   }
+   },
+   "trade": {
+    "status": "triggered",
+    "phase": "open",
+    "reason": "the 9:30 bar closed above the range high",
+    "opening_range": {
+     "high": 1750.2,
+     "low": 1690.6,
+     "minutes": 15,
+     "bars": 3,
+     "of": 3,
+     "complete": true,
+     "avg_volume": 194778
+    },
+    "last": {
+     "bar_start": "10:05",
+     "close": 1763.8,
+     "vs_level_pct": 0.78
+    },
+    "bars_source": "Upstox",
+    "entry_kind": "triggered at 9:35 AM",
+    "rel_volume": 5.07,
+    "plan": {
+     "symbol": "MAZDOCK.NS",
+     "side": "buy",
+     "setup": "orb",
+     "date": "2026-10-28",
+     "entry": 1750.5,
+     "stop": 1720.4,
+     "target": 1810.7,
+     "entry_time": "09:35",
+     "entry_bar": 3,
+     "risk_per_share": 30.1,
+     "reward_risk": 2.0,
+     "stop_label": "opening-range midpoint",
+     "target_label": "2R (two times the risk)",
+     "opening_range": {
+      "high": 1750.2,
+      "low": 1690.6,
+      "minutes": 15
+     },
+     "flat_by": "15:15",
+     "interval": "5m"
+    },
+    "timemachine": {
+     "sessions": 57,
+     "p_target": 0.0178,
+     "p_stop": 0.265,
+     "p_neither": 0.7172,
+     "p_green": 0.409,
+     "avg_R": -0.125,
+     "median_close": 1745.65,
+     "p5_close": 1702.49,
+     "p95_close": 1787.8,
+     "r_at_target": 2.0,
+     "verdict": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 6 % (target first 1.8 % vs stop first 26.5 %).",
+     "notes": [
+      "71.7 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those."
+     ],
+     "history": {
+      "sessions": 57,
+      "triggered": 22,
+      "target": 6,
+      "stop": 13,
+      "close": 3,
+      "avg_R": 0.02
+     }
+    },
+    "sizing": {
+     "qty": 33,
+     "bound_by": "max loss",
+     "cost": 57766.5,
+     "max_loss": 993.3,
+     "refusal": null,
+     "reward": 1986.6,
+     "replay_avg": -124.16
+    },
+    "risk": {
+     "verdict": "PASS",
+     "reasons": [],
+     "warnings": []
+    },
+    "order": {
+     "symbol": "MAZDOCK.NS",
+     "side": "buy",
+     "qty": "33",
+     "type": "market",
+     "time_in_force": "day",
+     "order_class": "bracket",
+     "take_profit_limit_price": "1810.70",
+     "stop_loss_stop_price": "1720.40",
+     "why": "opening-range breakout on MAZDOCK.NS: 33 shares, bound by your $1,000 max loss per trade (33 x 30.10 = $993.30 at the stop)",
+     "plan": {
+      "entry": 1750.5,
+      "stop": 1720.4,
+      "target": 1810.7,
+      "risk_per_share": 30.1,
+      "max_loss": 993.3,
+      "setup": "orb",
+      "entry_time": "09:35",
+      "flat_by": "15:15"
+     }
+    },
+    "alerts": [
+     {
+      "type": "stop",
+      "price": 1720.4,
+      "at": null
+     },
+     {
+      "type": "target",
+      "price": 1810.7,
+      "at": null
+     },
+     {
+      "type": "time",
+      "price": null,
+      "at": "15:15"
+     }
+    ]
+   },
+   "prev_rank": 16
   },
   {
    "rank": 17,
@@ -1341,7 +3275,126 @@
     "gap_pct": 0.1,
     "flag": false,
     "yahoo_time": "09:45"
-   }
+   },
+   "trade": {
+    "status": "waiting",
+    "phase": "open",
+    "reason": "last close $2490.00 (10:05 bar), $34.70 under the range high $2524.70 (-1.37%)",
+    "opening_range": {
+     "high": 2524.7,
+     "low": 2485.2,
+     "minutes": 15,
+     "bars": 3,
+     "of": 3,
+     "complete": true,
+     "avg_volume": 40883
+    },
+    "last": {
+     "bar_start": "10:05",
+     "close": 2490.0,
+     "vs_level_pct": -1.37
+    },
+    "bars_source": "Upstox",
+    "entry_kind": "not triggered: plan if a bar closes above 2524.70",
+    "rel_volume": 3.09,
+    "plan": {
+     "symbol": "MANKIND.NS",
+     "side": "buy",
+     "setup": "orb",
+     "date": "2026-10-28",
+     "entry": 2524.75,
+     "stop": 2504.95,
+     "target": 2564.35,
+     "entry_time": "10:10",
+     "entry_bar": 10,
+     "risk_per_share": 19.8,
+     "reward_risk": 2.0,
+     "stop_label": "opening-range midpoint",
+     "target_label": "2R (two times the risk)",
+     "opening_range": {
+      "high": 2524.7,
+      "low": 2485.2,
+      "minutes": 15
+     },
+     "flat_by": "15:15",
+     "interval": "5m"
+    },
+    "timemachine": {
+     "sessions": 57,
+     "p_target": 0.1219,
+     "p_stop": 0.5315,
+     "p_neither": 0.3466,
+     "p_green": 0.3524,
+     "avg_R": -0.166,
+     "median_close": 2519.65,
+     "p5_close": 2476.98,
+     "p95_close": 2565.63,
+     "r_at_target": 2.0,
+     "verdict": "Leans toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 19 % (target first 12.2 % vs stop first 53.1 %).",
+     "notes": [],
+     "history": {
+      "sessions": 57,
+      "triggered": 21,
+      "target": 6,
+      "stop": 6,
+      "close": 9,
+      "avg_R": 0.389
+     }
+    },
+    "sizing": {
+     "qty": 29,
+     "bound_by": "position cap",
+     "cost": 73217.75,
+     "max_loss": 574.2,
+     "refusal": null,
+     "reward": 1148.4,
+     "replay_avg": -95.32
+    },
+    "risk": {
+     "verdict": "PASS",
+     "reasons": [],
+     "warnings": []
+    },
+    "order": {
+     "symbol": "MANKIND.NS",
+     "side": "buy",
+     "qty": "29",
+     "type": "market",
+     "time_in_force": "day",
+     "order_class": "bracket",
+     "take_profit_limit_price": "2564.35",
+     "stop_loss_stop_price": "2504.95",
+     "why": "opening-range breakout on MANKIND.NS: 29 shares, bound by your position cap (29 x 19.80 = $574.20 at the stop)",
+     "plan": {
+      "entry": 2524.75,
+      "stop": 2504.95,
+      "target": 2564.35,
+      "risk_per_share": 19.8,
+      "max_loss": 574.2,
+      "setup": "orb",
+      "entry_time": "10:10",
+      "flat_by": "15:15"
+     }
+    },
+    "alerts": [
+     {
+      "type": "stop",
+      "price": 2504.95,
+      "at": null
+     },
+     {
+      "type": "target",
+      "price": 2564.35,
+      "at": null
+     },
+     {
+      "type": "time",
+      "price": null,
+      "at": "15:15"
+     }
+    ]
+   },
+   "prev_rank": 17
   },
   {
    "rank": 18,
@@ -1419,7 +3472,129 @@
     "gap_pct": 0.74,
     "flag": false,
     "yahoo_time": "09:45"
-   }
+   },
+   "trade": {
+    "status": "waiting",
+    "phase": "open",
+    "reason": "last close $1104.20 (10:05 bar), $56.30 under the range high $1160.50 (-4.85%)",
+    "opening_range": {
+     "high": 1160.5,
+     "low": 1105.1,
+     "minutes": 15,
+     "bars": 3,
+     "of": 3,
+     "complete": true,
+     "avg_volume": 194072
+    },
+    "last": {
+     "bar_start": "10:05",
+     "close": 1104.2,
+     "vs_level_pct": -4.85
+    },
+    "bars_source": "Upstox",
+    "entry_kind": "not triggered: plan if a bar closes above 1160.50",
+    "rel_volume": 1.16,
+    "plan": {
+     "symbol": "RAYMOND.NS",
+     "side": "buy",
+     "setup": "orb",
+     "date": "2026-10-28",
+     "entry": 1160.55,
+     "stop": 1132.8,
+     "target": 1216.05,
+     "entry_time": "10:10",
+     "entry_bar": 10,
+     "risk_per_share": 27.75,
+     "reward_risk": 2.0,
+     "stop_label": "opening-range midpoint",
+     "target_label": "2R (two times the risk)",
+     "opening_range": {
+      "high": 1160.5,
+      "low": 1105.1,
+      "minutes": 15
+     },
+     "flat_by": "15:15",
+     "interval": "5m"
+    },
+    "timemachine": {
+     "sessions": 57,
+     "p_target": 0.1023,
+     "p_stop": 0.3287,
+     "p_neither": 0.569,
+     "p_green": 0.5227,
+     "avg_R": 0.135,
+     "median_close": 1165.06,
+     "p5_close": 1115.82,
+     "p95_close": 1218.16,
+     "r_at_target": 2.0,
+     "verdict": "Leans toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 24 % (target first 10.2 % vs stop first 32.9 %).",
+     "notes": [
+      "56.9 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those.",
+      "Average R is +0.135 all the same: the replays that hit neither pull it the other way."
+     ],
+     "history": {
+      "sessions": 57,
+      "triggered": 28,
+      "target": 9,
+      "stop": 10,
+      "close": 9,
+      "avg_R": 0.475
+     }
+    },
+    "sizing": {
+     "qty": 36,
+     "bound_by": "max loss",
+     "cost": 41779.8,
+     "max_loss": 999.0,
+     "refusal": null,
+     "reward": 1998.0,
+     "replay_avg": 134.87
+    },
+    "risk": {
+     "verdict": "PASS",
+     "reasons": [],
+     "warnings": []
+    },
+    "order": {
+     "symbol": "RAYMOND.NS",
+     "side": "buy",
+     "qty": "36",
+     "type": "market",
+     "time_in_force": "day",
+     "order_class": "bracket",
+     "take_profit_limit_price": "1216.05",
+     "stop_loss_stop_price": "1132.80",
+     "why": "opening-range breakout on RAYMOND.NS: 36 shares, bound by your $1,000 max loss per trade (36 x 27.75 = $999 at the stop)",
+     "plan": {
+      "entry": 1160.55,
+      "stop": 1132.8,
+      "target": 1216.05,
+      "risk_per_share": 27.75,
+      "max_loss": 999.0,
+      "setup": "orb",
+      "entry_time": "10:10",
+      "flat_by": "15:15"
+     }
+    },
+    "alerts": [
+     {
+      "type": "stop",
+      "price": 1132.8,
+      "at": null
+     },
+     {
+      "type": "target",
+      "price": 1216.05,
+      "at": null
+     },
+     {
+      "type": "time",
+      "price": null,
+      "at": "15:15"
+     }
+    ]
+   },
+   "prev_rank": 18
   },
   {
    "rank": 19,
@@ -1490,7 +3665,126 @@
     "gap_pct": 0.06,
     "flag": false,
     "yahoo_time": "09:45"
-   }
+   },
+   "trade": {
+    "status": "triggered",
+    "phase": "open",
+    "reason": "the 9:55 bar closed above the range high",
+    "opening_range": {
+     "high": 861.9,
+     "low": 850.25,
+     "minutes": 15,
+     "bars": 3,
+     "of": 3,
+     "complete": true,
+     "avg_volume": 205921
+    },
+    "last": {
+     "bar_start": "10:05",
+     "close": 862.0,
+     "vs_level_pct": 0.01
+    },
+    "bars_source": "Upstox",
+    "entry_kind": "triggered at 10:00 AM",
+    "rel_volume": 2.63,
+    "plan": {
+     "symbol": "SONACOMS.NS",
+     "side": "buy",
+     "setup": "orb",
+     "date": "2026-10-28",
+     "entry": 863.05,
+     "stop": 856.07,
+     "target": 877.01,
+     "entry_time": "10:00",
+     "entry_bar": 8,
+     "risk_per_share": 6.98,
+     "reward_risk": 2.0,
+     "stop_label": "opening-range midpoint",
+     "target_label": "2R (two times the risk)",
+     "opening_range": {
+      "high": 861.9,
+      "low": 850.25,
+      "minutes": 15
+     },
+     "flat_by": "15:15",
+     "interval": "5m"
+    },
+    "timemachine": {
+     "sessions": 57,
+     "p_target": 0.2615,
+     "p_stop": 0.546,
+     "p_neither": 0.1925,
+     "p_green": 0.4065,
+     "avg_R": 0.075,
+     "median_close": 863.39,
+     "p5_close": 843.07,
+     "p95_close": 884.15,
+     "r_at_target": 2.0,
+     "verdict": "Close to break-even: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 32 % (target first 26.2 % vs stop first 54.6 %).",
+     "notes": [],
+     "history": {
+      "sessions": 57,
+      "triggered": 36,
+      "target": 10,
+      "stop": 18,
+      "close": 8,
+      "avg_R": 0.143
+     }
+    },
+    "sizing": {
+     "qty": 86,
+     "bound_by": "position cap",
+     "cost": 74222.3,
+     "max_loss": 600.28,
+     "refusal": null,
+     "reward": 1200.56,
+     "replay_avg": 45.02
+    },
+    "risk": {
+     "verdict": "PASS",
+     "reasons": [],
+     "warnings": []
+    },
+    "order": {
+     "symbol": "SONACOMS.NS",
+     "side": "buy",
+     "qty": "86",
+     "type": "market",
+     "time_in_force": "day",
+     "order_class": "bracket",
+     "take_profit_limit_price": "877.01",
+     "stop_loss_stop_price": "856.07",
+     "why": "opening-range breakout on SONACOMS.NS: 86 shares, bound by your position cap (86 x 6.98 = $600.28 at the stop)",
+     "plan": {
+      "entry": 863.05,
+      "stop": 856.07,
+      "target": 877.01,
+      "risk_per_share": 6.98,
+      "max_loss": 600.28,
+      "setup": "orb",
+      "entry_time": "10:00",
+      "flat_by": "15:15"
+     }
+    },
+    "alerts": [
+     {
+      "type": "stop",
+      "price": 856.07,
+      "at": null
+     },
+     {
+      "type": "target",
+      "price": 877.01,
+      "at": null
+     },
+     {
+      "type": "time",
+      "price": null,
+      "at": "15:15"
+     }
+    ]
+   },
+   "prev_rank": 19
   },
   {
    "rank": 20,
@@ -1566,13 +3860,139 @@
     "gap_pct": 0.05,
     "flag": false,
     "yahoo_time": "09:45"
-   }
+   },
+   "trade": {
+    "status": "triggered",
+    "phase": "open",
+    "reason": "the 9:40 bar closed above the range high",
+    "opening_range": {
+     "high": 4130.0,
+     "low": 4070.0,
+     "minutes": 15,
+     "bars": 3,
+     "of": 3,
+     "complete": true,
+     "avg_volume": 33320
+    },
+    "last": {
+     "bar_start": "10:05",
+     "close": 4122.8,
+     "vs_level_pct": -0.17
+    },
+    "bars_source": "Upstox",
+    "entry_kind": "triggered at 9:45 AM",
+    "rel_volume": 1.11,
+    "plan": {
+     "symbol": "TVSMOTOR.NS",
+     "side": "buy",
+     "setup": "orb",
+     "date": "2026-10-28",
+     "entry": 4130.3,
+     "stop": 4100.0,
+     "target": 4190.9,
+     "entry_time": "09:45",
+     "entry_bar": 5,
+     "risk_per_share": 30.3,
+     "reward_risk": 2.0,
+     "stop_label": "opening-range midpoint",
+     "target_label": "2R (two times the risk)",
+     "opening_range": {
+      "high": 4130.0,
+      "low": 4070.0,
+      "minutes": 15
+     },
+     "flat_by": "15:15",
+     "interval": "5m"
+    },
+    "timemachine": {
+     "sessions": 57,
+     "p_target": 0.2041,
+     "p_stop": 0.556,
+     "p_neither": 0.2399,
+     "p_green": 0.3802,
+     "avg_R": -0.034,
+     "median_close": 4125.9,
+     "p5_close": 4040.93,
+     "p95_close": 4211.81,
+     "r_at_target": 2.0,
+     "verdict": "Leans toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 27 % (target first 20.4 % vs stop first 55.6 %).",
+     "notes": [],
+     "history": {
+      "sessions": 57,
+      "triggered": 31,
+      "target": 2,
+      "stop": 11,
+      "close": 18,
+      "avg_R": -0.016
+     }
+    },
+    "sizing": {
+     "qty": 18,
+     "bound_by": "position cap",
+     "cost": 74345.4,
+     "max_loss": 545.4,
+     "refusal": null,
+     "reward": 1090.8,
+     "replay_avg": -18.54
+    },
+    "risk": {
+     "verdict": "PASS",
+     "reasons": [],
+     "warnings": []
+    },
+    "order": {
+     "symbol": "TVSMOTOR.NS",
+     "side": "buy",
+     "qty": "18",
+     "type": "market",
+     "time_in_force": "day",
+     "order_class": "bracket",
+     "take_profit_limit_price": "4190.90",
+     "stop_loss_stop_price": "4100.00",
+     "why": "opening-range breakout on TVSMOTOR.NS: 18 shares, bound by your position cap (18 x 30.30 = $545.40 at the stop)",
+     "plan": {
+      "entry": 4130.3,
+      "stop": 4100.0,
+      "target": 4190.9,
+      "risk_per_share": 30.3,
+      "max_loss": 545.4,
+      "setup": "orb",
+      "entry_time": "09:45",
+      "flat_by": "15:15"
+     }
+    },
+    "alerts": [
+     {
+      "type": "stop",
+      "price": 4100.0,
+      "at": null
+     },
+     {
+      "type": "target",
+      "price": 4190.9,
+      "at": null
+     },
+     {
+      "type": "time",
+      "price": null,
+      "at": "15:15"
+     }
+    ]
+   },
+   "prev_rank": 20
   }
  ],
  "errors": [
   "Business Standard feed: HTTP 403 for https://www.business-standard.com/rss/markets-106.rss"
  ],
  "seconds": 70,
+ "orb_ist": "2026-10-28 10:14",
+ "orb_seconds": 65,
+ "previous": {
+  "created_ist": "2026-10-28 09:44",
+  "entered": [],
+  "dropped": []
+ },
  "config": {
   "budget": 100000,
   "max_loss_per_trade_usd": 1000,
