@@ -59,7 +59,21 @@
    "rs_pct": 77,
    "fund": 74,
    "q_period": "Jun 2026",
-   "qualified": false
+   "qualified": false,
+   "news": [
+    {
+     "title": "Cyient, TCS, Infosys: IT stocks power ahead as NIFTY IT surges 16% in a month — what’s driving the rally?",
+     "time_ms": 1792734968755
+    },
+    {
+     "title": "Persistent Systems QIP opens: IT services firm eyes ₹4,265 crore; floor price and other key details",
+     "time_ms": 1792639094682
+    },
+    {
+     "title": "Stocks to watch, Oct 22: Persistent Systems, Eternal, IHCL, PC Jeweller, Swiggy, RIL, oil-sensitives, Havells India",
+     "time_ms": 1792636351581
+    }
+   ]
   },
   {
    "symbol": "SONACOMS.NS",
@@ -104,7 +118,17 @@
    "rs_pct": 90,
    "fund": 57,
    "q_period": "Jun 2026",
-   "qualified": true
+   "qualified": true,
+   "news": [
+    {
+     "title": "Ola Electric, Sona BLW, Onesource Specialty shares surge amid spike in volumes; check full list",
+     "time_ms": 1793086617525
+    },
+    {
+     "title": "Stocks to watch, Oct 27: Waaree Energies, Paytm, L&T, REC, Tata Consumer Products, Maruti, JBM Auto",
+     "time_ms": 1793071806699
+    }
+   ]
   },
   {
    "symbol": "KAYNES.NS",
@@ -149,7 +173,8 @@
    "rs_pct": 60,
    "fund": 41,
    "q_period": "Jun 2026",
-   "qualified": false
+   "qualified": false,
+   "news": []
   },
   {
    "symbol": "GAIL.NS",
@@ -194,7 +219,8 @@
    "rs_pct": 52,
    "fund": 28,
    "q_period": "Jun 2026",
-   "qualified": false
+   "qualified": false,
+   "news": []
   },
   {
    "symbol": "MAHABANK.NS",
@@ -239,7 +265,8 @@
    "rs_pct": 64,
    "fund": 69,
    "q_period": "Jun 2026",
-   "qualified": false
+   "qualified": false,
+   "news": []
   },
   {
    "symbol": "POWERGRID.NS",
@@ -284,7 +311,8 @@
    "rs_pct": 36,
    "fund": 43,
    "q_period": "Jun 2026",
-   "qualified": false
+   "qualified": false,
+   "news": []
   },
   {
    "symbol": "JINDALSTEL.NS",
@@ -329,7 +357,8 @@
    "rs_pct": 63,
    "fund": 32,
    "q_period": "Jun 2026",
-   "qualified": false
+   "qualified": false,
+   "news": []
   },
   {
    "symbol": "PAYTM.NS",
@@ -374,7 +403,29 @@
    "rs_pct": 91,
    "fund": 46,
    "q_period": "Jun 2026",
-   "qualified": false
+   "qualified": false,
+   "news": [
+    {
+     "title": "Stocks to watch, Oct 27: Waaree Energies, Paytm, L&T, REC, Tata Consumer Products, Maruti, JBM Auto",
+     "time_ms": 1793071806699
+    },
+    {
+     "title": "Paytm Q2 results: Revenue jumps 28% YoY and net profit rises to ₹225 crore; EBITDA jumps 90% YoY",
+     "time_ms": 1793034773980
+    },
+    {
+     "title": "Q2 results this week: Ather Energy, IndiGo, L&T, Paytm, Maruti, Mazagon Dock, Adani Enterprises, Vedanta, among others in focus",
+     "time_ms": 1792919425124
+    },
+    {
+     "title": "Paytm Q2 results: Revenue jumps 28% YoY and net profit rises to ₹225 crore; EBITDA jumps 90% YoY",
+     "time_ms": 1793034773980
+    },
+    {
+     "title": "Q2 results this week: Ather Energy, IndiGo, L&T, Paytm, Maruti, Mazagon Dock, Adani Enterprises, Vedanta, among others in focus",
+     "time_ms": 1792919425124
+    }
+   ]
   },
   {
    "symbol": "FEDERALBNK.NS",
@@ -419,7 +470,8 @@
    "rs_pct": 59,
    "fund": 52,
    "q_period": "Jun 2026",
-   "qualified": false
+   "qualified": false,
+   "news": []
   },
   {
    "symbol": "VBL.NS",
@@ -464,7 +516,8 @@
    "rs_pct": 52,
    "fund": 50,
    "q_period": "Jun 2026",
-   "qualified": false
+   "qualified": false,
+   "news": []
   },
   {
    "symbol": "ALKEM.NS",
@@ -509,7 +562,8 @@
    "rs_pct": 40,
    "fund": 52,
    "q_period": "Jun 2026",
-   "qualified": false
+   "qualified": false,
+   "news": []
   },
   {
    "symbol": "SAIL.NS",
@@ -555,7 +609,13 @@
    "rs_pct": 60,
    "fund": 45,
    "q_period": "Jun 2026",
-   "qualified": false
+   "qualified": false,
+   "news": [
+    {
+     "title": "Hindalco, Vedanta Aluminium, SAIL: Metal stocks slide as Nifty Metal sheds 2%; key reasons and Nomura’s latest view",
+     "time_ms": 1792643597418
+    }
+   ]
   },
   {
    "symbol": "ONGC.NS",
@@ -600,7 +660,17 @@
    "rs_pct": 52,
    "fund": 53,
    "q_period": "Jun 2026",
-   "qualified": false
+   "qualified": false,
+   "news": [
+    {
+     "title": "Market wrap today: SENSEX ends 350 pts lower, NIFTY50 closes at 22,698; IT stocks, Reliance among top losers",
+     "time_ms": 1793184106688
+    },
+    {
+     "title": "BPCL, Indian Oil, HPCL: Oil-sensitive stocks fall as crude oil prices jump 2% to $116/barrel; Nifty Oil & Gas down 2.2%",
+     "time_ms": 1793172645841
+    }
+   ]
   },
   {
    "symbol": "KFINTECH.NS",
@@ -645,7 +715,29 @@
    "rs_pct": 36,
    "fund": 57,
    "q_period": "Jun 2026",
-   "qualified": false
+   "qualified": false,
+   "news": [
+    {
+     "title": "SENSEX, NIFTY50 end rangebound session on a flat note; Tata Consumer, Bharti Airtel top gainers",
+     "time_ms": 1793097215862
+    },
+    {
+     "title": "SENSEX falls over 200 pts, NIFTY below 22,750 in noon deals; KFin Tech, TARIL, Tata Consumer Products among buzzing stocks",
+     "time_ms": 1793088089080
+    },
+    {
+     "title": "Ola Electric, Sona BLW, Onesource Specialty shares surge amid spike in volumes; check full list",
+     "time_ms": 1793086617525
+    },
+    {
+     "title": "KFin Technologies shares jump 6.6% after healthy Q2 earnings, Jio Platforms IPO allotment; key factors fuelling the stock",
+     "time_ms": 1793085522914
+    },
+    {
+     "title": "KFin Technologies shares jump 6.6% after healthy Q2 earnings, Jio Platforms IPO allotment; key factors fuelling the stock",
+     "time_ms": 1793085522914
+    }
+   ]
   },
   {
    "symbol": "MOTHERSON.NS",
@@ -690,7 +782,8 @@
    "rs_pct": 78,
    "fund": 47,
    "q_period": "Jun 2026",
-   "qualified": false
+   "qualified": false,
+   "news": []
   },
   {
    "symbol": "BPCL.NS",
@@ -735,7 +828,25 @@
    "rs_pct": 40,
    "fund": 62,
    "q_period": "Jun 2026",
-   "qualified": false
+   "qualified": false,
+   "news": [
+    {
+     "title": "BPCL, Indian Oil, HPCL: Oil-sensitive stocks fall as crude oil prices jump 2% to $116/barrel; Nifty Oil & Gas down 2.2%",
+     "time_ms": 1793172645841
+    },
+    {
+     "title": "BPCL, HPCL and IOC gain, while paints, tyres and chemical stocks fall as crude oil prices drop 2%",
+     "time_ms": 1792996675285
+    },
+    {
+     "title": "HPCL, BPCL, Asian Paints, CEAT: Oil-linked stocks slide as crude prices rise more than $114/barrel",
+     "time_ms": 1792740458137
+    },
+    {
+     "title": "Stocks to watch, Oct 21: PC Jeweller, RIL, Bajaj Finance, Schaeffler India, oil-sensitives, IHCL, SRF, HZL",
+     "time_ms": 1792550603168
+    }
+   ]
   },
   {
    "symbol": "AUROPHARMA.NS",
@@ -780,7 +891,8 @@
    "rs_pct": 75,
    "fund": 39,
    "q_period": "Jun 2026",
-   "qualified": false
+   "qualified": false,
+   "news": []
   },
   {
    "symbol": "IOC.NS",
@@ -825,7 +937,17 @@
    "rs_pct": 47,
    "fund": 70,
    "q_period": "Jun 2026",
-   "qualified": false
+   "qualified": false,
+   "news": [
+    {
+     "title": "BPCL, Indian Oil, HPCL: Oil-sensitive stocks fall as crude oil prices jump 2% to $116/barrel; Nifty Oil & Gas down 2.2%",
+     "time_ms": 1793172645841
+    },
+    {
+     "title": "Stocks to watch, Oct 21: PC Jeweller, RIL, Bajaj Finance, Schaeffler India, oil-sensitives, IHCL, SRF, HZL",
+     "time_ms": 1792550603168
+    }
+   ]
   }
  ],
  "options": {
@@ -1369,7 +1491,7 @@
      {
       "name": "No results due",
       "ok": false,
-      "detail": "Sep 2026 quarter not reported yet (latest is Jun 2026): results are likely within weeks"
+      "detail": "Q2 FY27 results not out yet (latest on file Jun 2026, no results headline): due by 14 Nov"
      }
     ],
     "checks": [
@@ -1396,7 +1518,7 @@
      {
       "name": "No results due",
       "ok": false,
-      "detail": "Sep 2026 quarter not reported yet (latest is Jun 2026): results are likely within weeks"
+      "detail": "Q2 FY27 results not out yet (latest on file Jun 2026, no results headline): due by 14 Nov"
      },
      {
       "name": "A structure fits every option check",
@@ -1853,7 +1975,7 @@
      {
       "name": "No results due",
       "ok": false,
-      "detail": "Sep 2026 quarter not reported yet (latest is Jun 2026): results are likely within weeks"
+      "detail": "Q2 FY27 results not out yet (latest on file Jun 2026, no results headline): due by 14 Nov"
      }
     ],
     "checks": [
@@ -1880,7 +2002,7 @@
      {
       "name": "No results due",
       "ok": false,
-      "detail": "Sep 2026 quarter not reported yet (latest is Jun 2026): results are likely within weeks"
+      "detail": "Q2 FY27 results not out yet (latest on file Jun 2026, no results headline): due by 14 Nov"
      },
      {
       "name": "A structure fits every option check",
@@ -2417,7 +2539,7 @@
      {
       "name": "No results due",
       "ok": false,
-      "detail": "Sep 2026 quarter not reported yet (latest is Jun 2026): results are likely within weeks"
+      "detail": "Q2 FY27 results not out yet (latest on file Jun 2026, no results headline): due by 14 Nov"
      }
     ],
     "checks": [
@@ -2444,7 +2566,7 @@
      {
       "name": "No results due",
       "ok": false,
-      "detail": "Sep 2026 quarter not reported yet (latest is Jun 2026): results are likely within weeks"
+      "detail": "Q2 FY27 results not out yet (latest on file Jun 2026, no results headline): due by 14 Nov"
      },
      {
       "name": "A structure fits every option check",
@@ -3023,7 +3145,7 @@
      {
       "name": "No results due",
       "ok": false,
-      "detail": "Sep 2026 quarter not reported yet (latest is Jun 2026): results are likely within weeks"
+      "detail": "Q2 FY27 results not out yet (latest on file Jun 2026, no results headline): due by 14 Nov"
      }
     ],
     "checks": [
@@ -3050,7 +3172,7 @@
      {
       "name": "No results due",
       "ok": false,
-      "detail": "Sep 2026 quarter not reported yet (latest is Jun 2026): results are likely within weeks"
+      "detail": "Q2 FY27 results not out yet (latest on file Jun 2026, no results headline): due by 14 Nov"
      },
      {
       "name": "A structure fits every option check",
@@ -3630,8 +3752,8 @@
      },
      {
       "name": "No results due",
-      "ok": false,
-      "detail": "Sep 2026 quarter not reported yet (latest is Jun 2026): results are likely within weeks"
+      "ok": true,
+      "detail": "Q2 FY27 results are out (news: Paytm Q2 results: Revenue jumps 28% YoY and net profit rises to ₹225 crore; EBITDA jumps 9)"
      }
     ],
     "checks": [
@@ -3657,8 +3779,8 @@
      },
      {
       "name": "No results due",
-      "ok": false,
-      "detail": "Sep 2026 quarter not reported yet (latest is Jun 2026): results are likely within weeks"
+      "ok": true,
+      "detail": "Q2 FY27 results are out (news: Paytm Q2 results: Revenue jumps 28% YoY and net profit rises to ₹225 crore; EBITDA jumps 9)"
      },
      {
       "name": "A structure fits every option check",
@@ -4074,7 +4196,7 @@
      {
       "name": "No results due",
       "ok": false,
-      "detail": "Sep 2026 quarter not reported yet (latest is Jun 2026): results are likely within weeks"
+      "detail": "Q2 FY27 results not out yet (latest on file Jun 2026, no results headline): due by 14 Nov"
      }
     ],
     "checks": [
@@ -4101,7 +4223,7 @@
      {
       "name": "No results due",
       "ok": false,
-      "detail": "Sep 2026 quarter not reported yet (latest is Jun 2026): results are likely within weeks"
+      "detail": "Q2 FY27 results not out yet (latest on file Jun 2026, no results headline): due by 14 Nov"
      },
      {
       "name": "A structure fits every option check",
@@ -4583,7 +4705,7 @@
      {
       "name": "No results due",
       "ok": false,
-      "detail": "Sep 2026 quarter not reported yet (latest is Jun 2026): results are likely within weeks"
+      "detail": "Q2 FY27 results not out yet (latest on file Jun 2026, no results headline): due by 14 Nov"
      }
     ],
     "checks": [
@@ -4610,7 +4732,7 @@
      {
       "name": "No results due",
       "ok": false,
-      "detail": "Sep 2026 quarter not reported yet (latest is Jun 2026): results are likely within weeks"
+      "detail": "Q2 FY27 results not out yet (latest on file Jun 2026, no results headline): due by 14 Nov"
      },
      {
       "name": "A structure fits every option check",
@@ -5039,7 +5161,7 @@
      {
       "name": "No results due",
       "ok": false,
-      "detail": "Sep 2026 quarter not reported yet (latest is Jun 2026): results are likely within weeks"
+      "detail": "Q2 FY27 results not out yet (latest on file Jun 2026, no results headline): due by 14 Nov"
      }
     ],
     "checks": [
@@ -5066,7 +5188,7 @@
      {
       "name": "No results due",
       "ok": false,
-      "detail": "Sep 2026 quarter not reported yet (latest is Jun 2026): results are likely within weeks"
+      "detail": "Q2 FY27 results not out yet (latest on file Jun 2026, no results headline): due by 14 Nov"
      },
      {
       "name": "A structure fits every option check",
@@ -5640,7 +5762,7 @@
      {
       "name": "No results due",
       "ok": false,
-      "detail": "Sep 2026 quarter not reported yet (latest is Jun 2026): results are likely within weeks"
+      "detail": "Q2 FY27 results not out yet (latest on file Jun 2026, no results headline): due by 14 Nov"
      }
     ],
     "checks": [
@@ -5667,7 +5789,7 @@
      {
       "name": "No results due",
       "ok": false,
-      "detail": "Sep 2026 quarter not reported yet (latest is Jun 2026): results are likely within weeks"
+      "detail": "Q2 FY27 results not out yet (latest on file Jun 2026, no results headline): due by 14 Nov"
      },
      {
       "name": "A structure fits every option check",
@@ -6280,7 +6402,7 @@
      {
       "name": "No results due",
       "ok": false,
-      "detail": "Sep 2026 quarter not reported yet (latest is Jun 2026): results are likely within weeks"
+      "detail": "Q2 FY27 results not out yet (latest on file Jun 2026, no results headline): due by 14 Nov"
      }
     ],
     "checks": [
@@ -6307,7 +6429,7 @@
      {
       "name": "No results due",
       "ok": false,
-      "detail": "Sep 2026 quarter not reported yet (latest is Jun 2026): results are likely within weeks"
+      "detail": "Q2 FY27 results not out yet (latest on file Jun 2026, no results headline): due by 14 Nov"
      },
      {
       "name": "A structure fits every option check",
@@ -6803,7 +6925,7 @@
      {
       "name": "No results due",
       "ok": false,
-      "detail": "Sep 2026 quarter not reported yet (latest is Jun 2026): results are likely within weeks"
+      "detail": "Q2 FY27 results not out yet (latest on file Jun 2026, no results headline): due by 14 Nov"
      }
     ],
     "checks": [
@@ -6830,7 +6952,7 @@
      {
       "name": "No results due",
       "ok": false,
-      "detail": "Sep 2026 quarter not reported yet (latest is Jun 2026): results are likely within weeks"
+      "detail": "Q2 FY27 results not out yet (latest on file Jun 2026, no results headline): due by 14 Nov"
      },
      {
       "name": "A structure fits every option check",
@@ -7315,7 +7437,7 @@
      {
       "name": "No results due",
       "ok": false,
-      "detail": "Sep 2026 quarter not reported yet (latest is Jun 2026): results are likely within weeks"
+      "detail": "Q2 FY27 results not out yet (latest on file Jun 2026, no results headline): due by 14 Nov"
      }
     ],
     "checks": [
@@ -7342,7 +7464,7 @@
      {
       "name": "No results due",
       "ok": false,
-      "detail": "Sep 2026 quarter not reported yet (latest is Jun 2026): results are likely within weeks"
+      "detail": "Q2 FY27 results not out yet (latest on file Jun 2026, no results headline): due by 14 Nov"
      },
      {
       "name": "A structure fits every option check",
@@ -7777,7 +7899,7 @@
      {
       "name": "No results due",
       "ok": false,
-      "detail": "Sep 2026 quarter not reported yet (latest is Jun 2026): results are likely within weeks"
+      "detail": "Q2 FY27 results not out yet (latest on file Jun 2026, no results headline): due by 14 Nov"
      }
     ],
     "checks": [
@@ -7804,7 +7926,7 @@
      {
       "name": "No results due",
       "ok": false,
-      "detail": "Sep 2026 quarter not reported yet (latest is Jun 2026): results are likely within weeks"
+      "detail": "Q2 FY27 results not out yet (latest on file Jun 2026, no results headline): due by 14 Nov"
      },
      {
       "name": "A structure fits every option check",
@@ -8463,7 +8585,7 @@
      {
       "name": "No results due",
       "ok": false,
-      "detail": "Sep 2026 quarter not reported yet (latest is Jun 2026): results are likely within weeks"
+      "detail": "Q2 FY27 results not out yet (latest on file Jun 2026, no results headline): due by 14 Nov"
      }
     ],
     "checks": [
@@ -8490,7 +8612,7 @@
      {
       "name": "No results due",
       "ok": false,
-      "detail": "Sep 2026 quarter not reported yet (latest is Jun 2026): results are likely within weeks"
+      "detail": "Q2 FY27 results not out yet (latest on file Jun 2026, no results headline): due by 14 Nov"
      },
      {
       "name": "A structure fits every option check",
@@ -9098,7 +9220,7 @@
      {
       "name": "No results due",
       "ok": false,
-      "detail": "Sep 2026 quarter not reported yet (latest is Jun 2026): results are likely within weeks"
+      "detail": "Q2 FY27 results not out yet (latest on file Jun 2026, no results headline): due by 14 Nov"
      }
     ],
     "checks": [
@@ -9125,7 +9247,7 @@
      {
       "name": "No results due",
       "ok": false,
-      "detail": "Sep 2026 quarter not reported yet (latest is Jun 2026): results are likely within weeks"
+      "detail": "Q2 FY27 results not out yet (latest on file Jun 2026, no results headline): due by 14 Nov"
      },
      {
       "name": "A structure fits every option check",
@@ -9754,7 +9876,7 @@
      {
       "name": "No results due",
       "ok": false,
-      "detail": "Sep 2026 quarter not reported yet (latest is Jun 2026): results are likely within weeks"
+      "detail": "Q2 FY27 results not out yet (latest on file Jun 2026, no results headline): due by 14 Nov"
      }
     ],
     "checks": [
@@ -9781,7 +9903,7 @@
      {
       "name": "No results due",
       "ok": false,
-      "detail": "Sep 2026 quarter not reported yet (latest is Jun 2026): results are likely within weeks"
+      "detail": "Q2 FY27 results not out yet (latest on file Jun 2026, no results headline): due by 14 Nov"
      },
      {
       "name": "A structure fits every option check",
@@ -9886,7 +10008,7 @@
      {
       "name": "No results due",
       "ok": false,
-      "detail": "Sep 2026 quarter not reported yet (latest is Jun 2026): results are likely within weeks"
+      "detail": "Q2 FY27 results not out yet (latest on file Jun 2026, no results headline): due by 14 Nov"
      }
     ],
     "checks": [
@@ -9913,7 +10035,7 @@
      {
       "name": "No results due",
       "ok": false,
-      "detail": "Sep 2026 quarter not reported yet (latest is Jun 2026): results are likely within weeks"
+      "detail": "Q2 FY27 results not out yet (latest on file Jun 2026, no results headline): due by 14 Nov"
      },
      {
       "name": "A structure fits every option check",
@@ -10338,8 +10460,8 @@
      },
      {
       "name": "No results due",
-      "ok": false,
-      "detail": "Sep 2026 quarter not reported yet (latest is Jun 2026): results are likely within weeks"
+      "ok": true,
+      "detail": "Q2 FY27 results are out (news: KFin Technologies shares jump 6.6% after healthy Q2 earnings, Jio Platforms IPO allotment;)"
      }
     ],
     "checks": [
@@ -10365,8 +10487,8 @@
      },
      {
       "name": "No results due",
-      "ok": false,
-      "detail": "Sep 2026 quarter not reported yet (latest is Jun 2026): results are likely within weeks"
+      "ok": true,
+      "detail": "Q2 FY27 results are out (news: KFin Technologies shares jump 6.6% after healthy Q2 earnings, Jio Platforms IPO allotment;)"
      },
      {
       "name": "A structure fits every option check",
@@ -10379,7 +10501,7 @@
    }
   ],
   "skipped": [],
-  "created_ist": "2026-10-28 18:31",
+  "created_ist": "2026-10-28 18:39",
   "rules": {
    "min_dte": 14,
    "buffer": 7,
@@ -10408,8 +10530,7 @@
     "rs_long_in_down_market": 70,
     "rs_short_max": 50,
     "long_min_fund": 45,
-    "short_max_fund": 60,
-    "results_window_days": 60
+    "short_max_fund": 60
    }
   }
  },
