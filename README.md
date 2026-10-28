@@ -12,7 +12,7 @@ A web page (phone and desktop) of **swing setups** on NSE, 3 to 15 trading days,
   every liquid F&O stock with a swing plan gets its own direction checks (replay edge, the rule not
   losing on that stock, the market, fundamentals, and **no results due**: the last quarter not yet
   reported within 60 days of its end means IV crush ahead). Expiry: the nearest monthly one 14+
-  days away and 7+ days after the plan's estimated exit. Structure inside the budget (Rs 5,000 at
+  days away and 7+ days after the plan's estimated exit. Structure inside the budget (Rs 15,000 at
   risk a trade): a **debit spread** by default (buy delta 0.40-0.65, sell at or before the target,
   pay at most half the width, reward:risk 1.5+, break-even inside the target, both legs liquid,
   at most 25% time decay by the estimated day, no OI wall before the sold strike); a **single**
