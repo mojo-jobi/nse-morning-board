@@ -121,10 +121,11 @@ def live_rows(doc):
 
 
 def options_rows(opts):
-    out = [["Rules screen, not advice. Expiry 14+ days away and 7+ days after the plan's estimated exit; delta 0.30-0.75; "
-            "spread 3% or less; OI 25+ lots. 'At target / at stop' = one lot's value then, minus the premium (Black-Scholes, "
-            "IV unchanged)."], [],
-           ["Recommended", "Failed checks", "Symbol", "Type", "Plan", "Spot", "Expiry", "Days left", "Lot", "PCR", "Most call OI", "Most put OI",
+    out = [["Rules screen, not advice. Options-first: every F&O plan with direction checks (replay edge, not failing on "
+            "the stock, market, fundamentals, no results due); a debit spread by default, a single only when IV is cheap; "
+            "cost within budget; exits +60% / -40% / stock target or stop / 7 days before expiry; max 3 open."], [],
+           ["Recommended", "Failed checks", "The trade", "Cost a lot (max loss)", "Gain at target a lot",
+            "Loss at stop a lot", "Trade R:R", "Symbol", "Type", "Plan", "Spot", "Expiry", "Days left", "Lot", "PCR", "Most call OI", "Most put OI",
             "Watch range", "Best", "Strike", "Price a share", "Value of 1 lot (price x lot)", "Delta", "Theta/lot/day", "Vega/lot", "IV %", "OI lots",
             "OI chg %", "Build-up", "Gain at target/lot", "Loss at stop/lot", "R:R", "Break-even", "Passes filters",
             "Notes"]]
@@ -133,7 +134,11 @@ def options_rows(opts):
         plan = "%s: entry %s, stop %s, target %s" % (p.get("kind"), p.get("entry"), p.get("stop"), p.get("target"))
         watch = "%s - %s" % tuple(o["watch"]) if o.get("watch") else ""
         for s in o.get("strikes") or []:
-            out.append(["yes" if o.get("qualified") else "no", failed(o.get("checks")),
+            t = o.get("trade") or {}
+            name = ("" if not t else "buy %s %s" % (t["buy"], o["type"]) if t["structure"] == "single"
+                    else "buy %s / sell %s %s spread" % (t["buy"], t["sell"], o["type"]))
+            out.append(["yes" if o.get("qualified") else "no", failed(o.get("checks")), name, t.get("cost_lot", ""),
+                        t.get("gain_lot", ""), -t["loss_lot"] if t else "", t.get("rr", ""),
                         o["symbol"].replace(".NS", ""), o["type"], plan, o.get("spot"), o["expiry"], o["dte"], o["lot"],
                         o.get("pcr"), o.get("call_wall"), o.get("put_wall"), watch,
                         "best" if s["strike"] == o.get("best") else "", s["strike"], s["ask"], s["premium_lot"], s["delta"],
@@ -158,7 +163,9 @@ def options_record_rows(rec):
     for r in (rec or {}).get("rows") or []:
         now = r.get("exit", r.get("last"))
         lot_val = lambda x: round(x * r["lot"]) if x else ""  # noqa: E731
-        out.append([r["created"], r["symbol"].replace(".NS", ""), "%s %s" % (r["strike"], r["type"]), r["expiry"], r["lot"],
+        label = ("%s/%s %s spread" % (r["strike"], r["short_strike"], r["type"]) if r.get("short_strike")
+                 else "%s %s" % (r["strike"], r["type"]))
+        out.append([r["created"], r["symbol"].replace(".NS", ""), label, r["expiry"], r["lot"],
                     r["status"], r.get("stock_status"), r["signal_ask"], lot_val(r["signal_ask"]), r.get("fill", ""),
                     lot_val(r.get("fill")), now if now is not None else "", lot_val(now),
                     r.get("result_lot", ""), r.get("result_pct", ""),

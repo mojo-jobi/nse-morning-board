@@ -44,6 +44,7 @@ STATE = os.path.join(ROOT, "trader")
 LEVELS = os.path.join(STATE, "swing-levels.json")
 LOG = os.path.join(STATE, "swing-log.json")
 OPT_LOG = os.path.join(STATE, "options-log.json")
+IV_LOG = os.path.join(STATE, "iv-history.json")
 FUNDS = os.path.join(STATE, "fundamentals.json")
 PAGE = os.path.join(OUT, "swing.json")
 CHARTS = os.path.join(OUT, "swing-charts.json")
@@ -749,16 +750,33 @@ def add_plan_record(records, sym, name, p, session, score, price, prev_close=Non
     return True
 
 
-def track_options(records, opts, data, now_utc, errors):
-    """The option record: new strikes from opts, every open one moved on; saved, summarised for the page."""
+def track_options(records, opts, data, now_utc, errors, full_cfg=None):
+    """The option record: new trades from opts, every open one moved on; saved, summarised for the page."""
     if not data.ok:
         return read_json(OPT_LOG, None) and options.summary(read_json(OPT_LOG, []))
     rows = read_json(OPT_LOG, [])
-    options.track(rows, opts, records, data.inst, now_utc, errors)
+    options.track(rows, opts, records, data.inst, now_utc, errors, full_cfg)
     write_json(OPT_LOG, rows)
     s = options.summary(rows)
     log("options record: %d tracked, %d open, %d closed" % (s["stats"]["tracked"], s["stats"]["open"], s["stats"]["closed"]))
     return s
+
+
+def run_options(picks, data, now_utc, full_cfg, errors, nifty_trend, records, session):
+    """Screen the picks' options, put each qualifying card's stock plan in the stock record (the option
+    follows its entry and exit), and move the option record on. (cards, record summary)."""
+    iv_hist = read_json(IV_LOG, {})
+    opts = options.screen(picks, data.inst, now_utc, full_cfg, errors, nifty_trend, iv_hist)
+    by_sym = {pk["symbol"]: pk for pk in picks}
+    for o in opts["calls"] + opts["puts"]:
+        pk = by_sym.get(o["symbol"])
+        if o.get("qualified") and pk:
+            add_plan_record(records, pk["symbol"], pk["name"], pk["plan"], pk.get("session") or session,
+                            pk["score"], pk["price"])
+    write_json(LOG, records)
+    n_q = sum(1 for o in opts["calls"] + opts["puts"] if o.get("qualified"))
+    log("options: %d of %d F&O plans have a trade that clears every check" % (n_q, len(picks)))
+    return opts, track_options(records, opts, data, now_utc, errors, full_cfg)
 
 
 def record_stats(records):
@@ -962,7 +980,10 @@ def stage_eod(now_utc, force=False):
         return (p and (r.get("turnover_cr") or 0) >= G["min_turnover_cr"] and p["rr"] >= G["min_rr"]
                 and p["odds"]["avg_R"] >= G["min_avg_r"] - 0.1 and p["odds"]["p_target"] >= G["min_p_target"] - 0.05)
     shown, seen = [], set()
-    for r in bull[:show] + bear[:show] + bots[:show] + [r for r in bull + bear + bots if maybe(r)]:
+    # options are screened on their own: every F&O plan with a fair replay edge gets the full numbers too
+    fo_maybe = [r for r in bull + bear + bots if r["symbol"] in fo and plan_of(r)
+                and plan_of(r)["odds"]["p_target"] >= 0.28 and plan_of(r)["odds"]["avg_R"] >= 0.05]
+    for r in bull[:show] + bear[:show] + bots[:show] + [r for r in bull + bear + bots if maybe(r)] + fo_maybe:
         if id(r) not in seen:
             seen.add(id(r))
             shown.append(r)
@@ -1037,20 +1058,20 @@ def stage_eod(now_utc, force=False):
                            for j in range(max(0, len(S["c"]) - 130), len(S["c"]))]
     write_json(CHARTS, charts, indent=None)
 
-    # 10. options: the call or put strikes for each F&O stock with a plan (one chain request each)
-    fo_picks, opts = [], None
+    # 10. options, screened on their own: every F&O plan with the full numbers (one chain request each),
+    # then today's at-the-money IV of every liquid F&O stock for the IV history
+    fo_picks, opts, opt_record = [], None, None
     if data.ok:
-        fo_picks = options.fo_plans([([r for r in bull if r.get("qualified")], "bullish"),
-                                     ([r for r in bear if r.get("qualified")], "breakdown"),
-                                     ([b for b in bots if b.get("qualified")], "bottom turning up")],
-                                    data.inst)
-        opts = options.screen(fo_picks, data.inst, now_utc, cfg, errors)
-        log("options: %d call and %d put underlyings from %d F&O plans" % (len(opts["calls"]), len(opts["puts"]), len(fo_picks)))
-    # every plan behind an option card joins the stock record, so its option can follow it
-    for pk in fo_picks:
-        add_plan_record(records, pk["symbol"], pk["name"], pk["plan"], pk.get("session") or session, pk["score"], pk["price"])
-    write_json(LOG, records)
-    opt_record = track_options(records, opts, data, now_utc, errors)
+        has_numbers = lambda rows: [r for r in rows if (plan_of(r) or {}).get("history") is not None]  # noqa: E731
+        fo_picks = options.fo_plans([(has_numbers(bull), "bullish"), (has_numbers(bear), "breakdown"),
+                                     (has_numbers([b for b in bots if plan_of(b)]), "bottom turning up")],
+                                    data.inst, funds)
+        opts, opt_record = run_options(fo_picks, data, now_utc, full_cfg, errors, nifty.get("trend"), records, session)
+        iv_hist = read_json(IV_LOG, {})
+        n_iv = options.record_iv(iv_hist, [s for s in liquid if s in fo], data.inst, today, errors)
+        write_json(IV_LOG, iv_hist, indent=None)
+        log("IV history: today's at-the-money IV for %d F&O stocks (%d days on file)" % (
+            n_iv, max((len(v) for v in iv_hist.values()), default=0)))
 
     doc = {"stage": "eod", "options_record": opt_record, "fo_plans": fo_picks, "options": opts, "created_ist": ist.strftime("%Y-%m-%d %H:%M"), "session": session,
            "counts": {"universe": len(symbols), "quoted": len(quotes), "with_bars": len(bars), "liquid": len(liquid),
@@ -1132,10 +1153,11 @@ def stage_live(now_utc):
     page["live"] = {"created_ist": ist.strftime("%Y-%m-%d %H:%M"), "in_session": in_session, "quotes": qsrc,
                     "moves": moves}
     if in_session and data.ok and page.get("fo_plans"):
-        page["options"] = options.screen(page["fo_plans"], data.inst, now_utc, cfg, errors)
-        log("options: refreshed %d call and %d put underlyings" % (len(page["options"]["calls"]), len(page["options"]["puts"])))
-    if in_session and data.ok:
-        page["options_record"] = track_options(records, page.get("options"), data, now_utc, errors)
+        page["options"], page["options_record"] = run_options(
+            page["fo_plans"], data, now_utc, full_cfg, errors, (page.get("nifty") or {}).get("trend"), records,
+            page.get("session"))
+    elif in_session and data.ok:
+        page["options_record"] = track_options(records, page.get("options"), data, now_utc, errors, full_cfg)
     page["record"] = {"stats": record_stats(records),
                       "rows": sorted(records, key=lambda r: r["created"], reverse=True)[:60]}
     status = {(rec["symbol"], rec["created"]): rec["status"] for rec in records}
@@ -1152,7 +1174,7 @@ def stage_live(now_utc):
 
 def stage_options(now_utc):
     """The options screen on the last scan's plans, without rescanning (one chain request a stock)."""
-    cfg, _ = config()
+    cfg, full_cfg = config()
     page = read_json(PAGE)
     if not page:
         log("options: no swing scan yet; run eod first")
@@ -1162,22 +1184,20 @@ def stage_options(now_utc):
     if not data.ok:
         log("options: needs the Upstox token (%s)" % data.status)
         return page
-    picks = options.fo_plans([([r for r in page.get(k) or [] if r.get("qualified")], label)
-                              for k, label in (("bull", "bullish"), ("bear", "breakdown"), ("bottoms", "bottom turning up"))],
-                             data.inst)
+    picks = page.get("fo_plans") or options.fo_plans(
+        [([r for r in page.get(k) or [] if (r.get("plan") or (r.get("bottom") or {}).get("plan") or {}).get("history")
+           is not None], label)
+         for k, label in (("bull", "bullish"), ("bear", "breakdown"), ("bottoms", "bottom turning up"))],
+        data.inst, (read_json(FUNDS, {}) or {}).get("stocks"))
     for pk in picks:                                  # plans saved before the record existed carry no session
         if not pk.get("session"):
             pk["session"] = page.get("session")
     page["fo_plans"] = picks
-    page["options"] = options.screen(picks, data.inst, now_utc, cfg, errors)
     records = read_json(LOG, [])
-    for pk in picks:
-        add_plan_record(records, pk["symbol"], pk["name"], pk["plan"], pk.get("session") or page.get("session"),
-                        pk["score"], pk["price"])
-    write_json(LOG, records)
+    page["options"], page["options_record"] = run_options(
+        picks, data, now_utc, full_cfg, errors, (page.get("nifty") or {}).get("trend"), records, page.get("session"))
     page["record"] = {"stats": record_stats(records),
                       "rows": sorted(records, key=lambda r: r["created"], reverse=True)[:60]}
-    page["options_record"] = track_options(records, page["options"], data, now_utc, errors)
     page["errors"] = list(dict.fromkeys((page.get("errors") or []) + errors))[:30]
     write_json(PAGE, page)
     log("options: %d call and %d put underlyings from %d F&O plans" % (

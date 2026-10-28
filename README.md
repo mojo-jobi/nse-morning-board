@@ -8,14 +8,18 @@ A web page (phone and desktop) of **swing setups** on NSE, 3 to 15 trading days,
 - **Falling market**: breakdowns and failed rallies on **F&O stocks only** (the ones with stock
   options, for puts), and **bottoms**: stocks 20 %+ off their high sitting on support, with a buy
   zone, the close that would break it, and a plan once the stock turns up.
-- **Equity Options** (`nse/options.py`): for each F&O stock with a swing plan, calls (bullish,
-  bottoms turning up) or puts (breakdowns). Expiry: the nearest monthly one 14+ days away that still
-  leaves 7+ days after the plan's estimated exit. Strikes with delta 0.30-0.75, a bid-ask spread of
-  3% or less and real open interest (25+ lots, a tenth of the busiest tradable strike), each with
-  its premium, greeks (Upstox), OI and its change, the build-up, and what one lot would be worth if
-  the stock reaches the plan's target or stop (Black-Scholes at the strike's own IV), the
-  break-even, the put-call ratio and the OI walls. The strike range to watch is the strikes with a
-  reward:risk of 1.5 or more. A screen, not advice: buying options can lose the whole premium.
+- **Equity Options** (`nse/options.py`, settings in `config.json` under `options`), options-first:
+  every liquid F&O stock with a swing plan gets its own direction checks (replay edge, the rule not
+  losing on that stock, the market, fundamentals, and **no results due**: the last quarter not yet
+  reported within 60 days of its end means IV crush ahead). Expiry: the nearest monthly one 14+
+  days away and 7+ days after the plan's estimated exit. Structure inside the budget (Rs 5,000 at
+  risk a trade): a **debit spread** by default (buy delta 0.40-0.65, sell at or before the target,
+  pay at most half the width, reward:risk 1.5+, break-even inside the target, both legs liquid,
+  at most 25% time decay by the estimated day, no OI wall before the sold strike); a **single**
+  call/put only if it fits the budget and its IV is at most the stock's realised volatility (or in
+  the lower half of its own IV history once 40+ days are recorded in `trader/iv-history.json`).
+  Exits: +60% / -40% of the cost, the stock's target or stop, or 7 days before expiry. At most 3
+  trades open or waiting. A screen, not advice: a bought option can lose its whole cost.
 - **Track record**: every plan shown (and every F&O plan behind an option card), from the day it
   appears: entry hit or missed, then target, stop or day 15, with the result in R and %. Below
   it, the **options record** (`trader/options-log.json`): each option card's best strike, bought at
