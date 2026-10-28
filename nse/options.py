@@ -11,9 +11,10 @@ A rules screen with its numbers, not advice: whether to trade, and what, is the 
      Market agrees    a long in a falling Nifty must be stronger than 70% of stocks; a put needs a
                       Nifty that is not rising and a stock weaker than average
      Fundamentals     not fighting it: longs 45+, puts 60 or less (missing counts as neutral)
-     No results due   the latest quarter's results are out: within 60 days of a quarter end with
-                      that quarter not reported yet, results are close, and implied volatility
-                      usually collapses right after them, which hurts an option buyer
+     No results due   the last quarter's results are out (in Upstox's fundamentals, or a results
+                      headline in its news since the quarter end), or its deadline has passed (45
+                      days after a quarter end, 60 after March's). Implied volatility usually
+                      collapses right after results, which hurts an option buyer
 
 2. Expiry: the nearest monthly one at least 14 days away that still leaves 7 days after the plan's
    estimated exit.
@@ -37,6 +38,7 @@ A rules screen with its numbers, not advice: whether to trade, and what, is the 
 
 import datetime
 import math
+import re
 
 import market
 import upstox
@@ -56,7 +58,7 @@ MAX_DECAY = 0.25
 DEFAULTS = {"max_loss_per_trade": 5000, "max_open": 3, "take_profit_pct": 60, "stop_pct": 40, "exit_dte": 7,
             "structures": "spreads_first",
             "direction": {"min_p_target": 0.33, "min_avg_r": 0.15, "rs_long_in_down_market": 70, "rs_short_max": 50,
-                          "long_min_fund": 45, "short_max_fund": 60, "results_window_days": 60}}
+                          "long_min_fund": 45, "short_max_fund": 60}}
 
 
 def settings(cfg):
@@ -123,20 +125,50 @@ def quarter_end(text):
     return nxt - datetime.timedelta(days=1)
 
 
-def results_due(q_period, today, window):
-    """(due, why): the last quarter ended within `window` days and is not in the reported results yet."""
+def fiscal_quarter(qe):
+    """India's fiscal quarter of a quarter end: 2026-09-30 -> ("Q2", "FY27")."""
+    q = {6: 1, 9: 2, 12: 3, 3: 4}[qe.month]
+    fy = qe.year + 1 if qe.month > 3 else qe.year
+    return "Q%d" % q, "FY%02d" % (fy % 100)
+
+
+RESULT_WORDS = re.compile(r"result|earning|profit|\bPAT\b|revenue|income|margin|EBITDA|loss", re.I)
+
+
+def reported_in_news(news, qe):
+    """A headline since the quarter end that reports that quarter's results ("Q2 results", "Q2FY27 net
+    profit", "September quarter profit") means the results are out, whatever the fundamentals say."""
+    q, fy = fiscal_quarter(qe)
+    month = qe.strftime("%B")
+    since_ms = (datetime.datetime.combine(qe, datetime.time()) - datetime.datetime(1970, 1, 1)).total_seconds() * 1000
+    pat = re.compile(r"\b%s\s*%s\b|\b%s\b|%s[- ]quarter|quarter ended %s" % (q, fy, q, month, month), re.I)
+    for n in news or []:
+        t = n.get("title") or ""
+        if (n.get("time_ms") or 0) >= since_ms and pat.search(t) and RESULT_WORDS.search(t) \
+                and not re.search(r"\b(preview|ahead of|to announce|date|board meeting|expect|estimate)\b", t, re.I):
+            return t
+    return None
+
+
+def results_due(q_period, today, window=None, news=None):
+    """(due, why): the last quarter is not reported yet (neither in the fundamentals nor in a headline)
+    and its results deadline has not passed: 45 days after a quarter end (60 after March's)."""
     last_qe = max(d for d in (datetime.date(today.year - 1, 12, 31), datetime.date(today.year, 3, 31),
                               datetime.date(today.year, 6, 30), datetime.date(today.year, 9, 30),
                               datetime.date(today.year, 12, 31)) if d < today)
+    deadline = 60 if last_qe.month == 3 else 45
     reported = quarter_end(q_period) if q_period else None
-    if reported is None:
-        return False, "no quarterly results on file"
-    if reported >= last_qe:
+    if reported and reported >= last_qe:
         return False, "%s results are out" % q_period
-    if (today - last_qe).days <= window:
-        return True, "%s quarter not reported yet (latest is %s): results are likely within weeks" % (
-            last_qe.strftime("%b %Y"), q_period)
-    return False, "latest results %s" % q_period
+    head = reported_in_news(news, last_qe)
+    if head:
+        return False, "%s results are out (news: %s)" % ("%s %s" % fiscal_quarter(last_qe), head[:90])
+    if (today - last_qe).days > deadline:
+        return False, "the %s results deadline has passed" % last_qe.strftime("%b %Y")
+    if reported is None and not news:
+        return False, "no quarterly results on file"
+    return True, "%s %s results not out yet (latest on file %s, no results headline): due by %s" % (
+        fiscal_quarter(last_qe) + (q_period or "none", (last_qe + datetime.timedelta(days=deadline)).strftime("%d %b")))
 
 
 def direction_checks(pk, nifty_trend, today, oc):
@@ -168,7 +200,7 @@ def direction_checks(pk, nifty_trend, today, oc):
                 nifty_trend or "?", rs, D["rs_short_max"]))
         add("Fundamentals not against it", fund is None or fund <= D["short_max_fund"],
             "score %s (a put needs %d or less)" % ("n/a" if fund is None else fund, D["short_max_fund"]))
-    due, why = results_due(pk.get("q_period"), today, D["results_window_days"])
+    due, why = results_due(pk.get("q_period"), today, news=pk.get("news"))
     add("No results due", not due, why)
     return out
 

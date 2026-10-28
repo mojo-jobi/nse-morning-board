@@ -30,6 +30,7 @@ import json
 import math
 import os
 import random
+import re
 import sys
 import time
 
@@ -45,6 +46,7 @@ LEVELS = os.path.join(STATE, "swing-levels.json")
 LOG = os.path.join(STATE, "swing-log.json")
 OPT_LOG = os.path.join(STATE, "options-log.json")
 IV_LOG = os.path.join(STATE, "iv-history.json")
+RESULTS_SEEN = os.path.join(STATE, "results-headlines.json")
 FUNDS = os.path.join(STATE, "fundamentals.json")
 PAGE = os.path.join(OUT, "swing.json")
 CHARTS = os.path.join(OUT, "swing-charts.json")
@@ -762,10 +764,34 @@ def track_options(records, opts, data, now_utc, errors, full_cfg=None):
     return s
 
 
+def attach_results_news(picks, data, errors):
+    """Each pick's news (Upstox keeps 7 days), plus every results headline seen before: Upstox's
+    fundamentals can lag a results announcement by weeks, so a remembered "Q2 results" headline is
+    what tells the options screen the results are already out."""
+    seen = read_json(RESULTS_SEEN, {})
+    eq = data.inst.get("eq") or {}
+    keys = {eq[pk["symbol"]]["key"]: pk for pk in picks if pk["symbol"] in eq}
+    try:
+        nws = upstox.news(list(keys)) if keys else {}
+    except Exception as e:                           # noqa: BLE001
+        errors.append("Upstox news for the options screen: %s" % e)
+        nws = {}
+    for key, pk in keys.items():
+        items = [{"title": n["title"], "time_ms": n.get("time_ms")} for n in nws.get(key, [])]
+        for n in items:
+            if n["title"] and options.RESULT_WORDS.search(n["title"]) and re.search(r"\bQ[1-4]\b|quarter", n["title"], re.I):
+                seen.setdefault(pk["symbol"], {})[n["title"][:160]] = n.get("time_ms")
+        pk["news"] = items + [{"title": t, "time_ms": ms} for t, ms in (seen.get(pk["symbol"]) or {}).items()]
+    for sym in list(seen):                           # keep a year of headlines
+        seen[sym] = dict(sorted(seen[sym].items(), key=lambda kv: kv[1] or 0)[-12:])
+    write_json(RESULTS_SEEN, seen)
+
+
 def run_options(picks, data, now_utc, full_cfg, errors, nifty_trend, records, session):
     """Screen the picks' options, put each qualifying card's stock plan in the stock record (the option
     follows its entry and exit), and move the option record on. (cards, record summary)."""
     iv_hist = read_json(IV_LOG, {})
+    attach_results_news(picks, data, errors)
     opts = options.screen(picks, data.inst, now_utc, full_cfg, errors, nifty_trend, iv_hist)
     by_sym = {pk["symbol"]: pk for pk in picks}
     for o in opts["calls"] + opts["puts"]:

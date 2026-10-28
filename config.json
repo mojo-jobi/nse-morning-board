@@ -31,6 +31,6 @@
   "options": {"max_loss_per_trade": 5000, "max_open": 3, "structures": "spreads_first",
               "take_profit_pct": 60, "stop_pct": 40, "exit_dte": 7,
               "direction": {"min_p_target": 0.33, "min_avg_r": 0.15, "rs_long_in_down_market": 70, "rs_short_max": 50,
-                            "long_min_fund": 45, "short_max_fund": 60, "results_window_days": 60}},
+                            "long_min_fund": 45, "short_max_fund": 60}},
   "holidays": []
 }
