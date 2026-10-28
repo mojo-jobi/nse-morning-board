@@ -37,3 +37,12 @@ show("key ratios", "/v2/fundamentals/%s/key-ratios" % ISIN)
 show("income (qtr)", "/v2/fundamentals/%s/income-statement?time_period=quarterly" % ISIN)
 show("share holdings", "/v2/fundamentals/%s/share-holdings" % ISIN)
 show("news", "/v2/news?category=instrument_keys&instrument_keys=%s&page_size=3" % k)
+show("option chain", "/v2/option/chain?instrument_key=%s&expiry_date=next_month" % k)
+try:
+    data = upstox._get("/v2/option/chain?instrument_key=%s&expiry_date=next_month" % k) or []
+    spot = data[0]["underlying_spot_price"] if data else None
+    near = sorted(data, key=lambda s: abs(s["strike_price"] - spot))[:3] if spot else []
+    for s in near:                           # strikes nearest the price, in full
+        print("  strike %s: %s" % (s["strike_price"], json.dumps(s)[:900]))
+except Exception as e:                       # noqa: BLE001
+    print("option chain detail FAIL %s" % e)
