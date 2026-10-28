@@ -293,6 +293,40 @@ def options_block(opts):
     return intro + "<h2>Calls: bullish swing plans</h2>" + calls + "<h2>Puts: breakdown plans</h2>" + puts + skipped
 
 
+def options_record_block(rec):
+    head = '<h2>Equity options</h2>'
+    if not rec or not rec.get("rows"):
+        return head + ('<div class="card empty">The best strike on each Equity Options card is tracked here from the day '
+                       'it appears: bought at the ask once its stock triggers the entry, sold at the bid when the stock '
+                       'plan hits its target or stop, reaches day 15, or at expiry.</div>')
+    st = rec["stats"]
+    tiles = [("Tracked", st["tracked"]), ("Waiting or open", st["open"]), ("Closed", st["closed"]),
+             ("Entry missed", st["missed"]), ("Closed result, per lot each", rs(st["total_lot"], 0)),
+             ("Average closed result", "%+.1f%%" % st["avg_pct"] if st.get("avg_pct") is not None else "-"),
+             ("Win rate", pct(st.get("win_rate"))), ("Open trades now, per lot each", rs(st["open_mark_lot"], 0))]
+    t = '<div class="tiles">%s</div>' % "".join('<div class="tile"><b>%s</b><span>%s</span></div>' % (e(v), e(k)) for k, v in tiles)
+    trs = ""
+    for r in rec["rows"]:
+        res = ""
+        if r.get("result_lot") is not None:
+            res = '<span class="%s">%s (%+.1f%%)</span>' % ("up" if r["result_lot"] >= 0 else "dn", rs(r["result_lot"], 0),
+                                                           r["result_pct"] or 0)
+        elif r.get("mark_lot") is not None:
+            res = 'now <span class="%s">%s (%+.1f%%)</span>' % ("up" if r["mark_lot"] >= 0 else "dn", rs(r["mark_lot"], 0),
+                                                              r.get("mark_pct") or 0)
+        trs += ("<tr><td>%s</td><td><b>%s %s %s</b><br><span class='sub'>exp %s, lot %s</span></td><td>%s</td><td>%s</td>"
+                "<td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>" % (
+                    e(r["created"]), e(sym(r["symbol"])), k(r["strike"]), e(r["type"]), e(r["expiry"]), e(r["lot"]),
+                    status_pill(r["status"]), e(r.get("stock_status")), rs(r["signal_ask"]),
+                    rs(r.get("fill")) if r.get("fill") else "-",
+                    rs(r.get("exit")) if r.get("exit") is not None else (rs(r.get("last")) if r.get("last") else "-"),
+                    res, e((r.get("closed_ist") or r.get("entered_ist") or r.get("last_ist") or "")[5:])))
+    return head + t + ('<div class="card tbl"><table><tr><th>Signal</th><th>Option</th><th>Status</th><th>Stock plan</th>'
+                       '<th>Premium at signal</th><th>Bought</th><th>Sold / now</th><th>Per lot</th><th>Updated</th></tr>'
+                       '%s</table></div><div class="sub">Bought at the ask, sold at the bid, at the 30-minute update after '
+                       'the stock\'s move, so real fills can differ. One lot each.</div>' % trs)
+
+
 def tabs(doc):
     """(swing tab, falling-market tab, track-record tab, options tab, strip above the tabs)."""
     if not doc:
@@ -328,7 +362,8 @@ def tabs(doc):
         "Bottoms: support to watch", "All liquid stocks 20%+ off their 52-week high, sitting on support with RSI 40 or "
         "under or a bullish divergence. 'Turning up' once it closes above its 10-day high and 20-day EMA. Ranked "
         "60% on fundamentals, for a later swing or a long-term buy.", doc.get("bottoms") or [], bottom_card) + sub
-    record = record_block(doc.get("record") or {})
+    record = ("<h2>Stock plans</h2>" + record_block(doc.get("record") or {}) +
+              options_record_block(doc.get("options_record")))
     if doc.get("errors"):
         record += '<details><summary>%d data problems</summary><ul class="news">%s</ul></details>' % (
             len(doc["errors"]), "".join("<li>%s</li>" % e(x) for x in doc["errors"]))

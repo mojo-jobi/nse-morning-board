@@ -95,7 +95,7 @@ def screen_one(row, plan, chain, expiry, dte, lot, today, cfg):
         void = "the stock (%s) is already at the plan's target (%s): nothing left to catch" % (spot, plan["target"])
     if void:
         return {"symbol": row["symbol"], "name": row.get("name"), "type": "CE" if call else "PE",
-                "source": row.get("_list"), "rank": row.get("rank"), "score": row.get("score"),
+                "source": row.get("_list"), "rank": row.get("rank"), "score": row.get("score"), "session": row.get("session"),
                 "plan": {k: plan.get(k) for k in ("kind", "entry", "stop", "target", "rr", "est_days")},
                 "p_target": (plan.get("odds") or {}).get("p_target"), "spot": spot, "expiry": expiry, "dte": dte,
                 "lot": lot, "pcr": None, "call_wall": None, "put_wall": None, "strikes": [], "best": None,
@@ -148,7 +148,7 @@ def screen_one(row, plan, chain, expiry, dte, lot, today, cfg):
                      % (format(best["loss_lot"], ","), format(max_loss, ",")))
     pcr = round(put_oi / call_oi, 2) if call_oi else None
     return {"symbol": row["symbol"], "name": row.get("name"), "type": "CE" if call else "PE",
-            "source": row.get("_list"), "rank": row.get("rank"), "score": row.get("score"),
+            "source": row.get("_list"), "rank": row.get("rank"), "score": row.get("score"), "session": row.get("session"),
             "plan": {k: plan.get(k) for k in ("kind", "entry", "stop", "target", "rr", "est_days")},
             "p_target": (plan.get("odds") or {}).get("p_target"), "spot": spot, "expiry": expiry, "dte": dte,
             "lot": lot, "pcr": pcr, "call_wall": wall_c, "put_wall": wall_p,
@@ -168,7 +168,7 @@ def fo_plans(lists, inst, limit=30):
                 p = dict(plan)
                 p.setdefault("est_days", (p.get("odds") or {}).get("days_to_target"))
                 out.append({"symbol": r["symbol"], "name": r.get("name"), "price": r.get("price"), "rank": r.get("rank"),
-                            "score": r.get("score"), "_list": label, "plan": p})
+                            "score": r.get("score"), "_list": label, "plan": p, "session": r.get("session")})
     return sorted(out, key=lambda x: -(x["score"] or 0))[:limit]
 
 
@@ -186,7 +186,7 @@ def screen(picks, inst, now_utc, cfg, errors):
             out["skipped"].append("%s: no expiry %d+ days away" % (r["symbol"][:-3], need))
             continue
         try:
-            chain = upstox.option_chain(eq[r["symbol"]]["key"], expiry)
+            chain = get_chain(eq[r["symbol"]]["key"], expiry)
         except Exception as e:                       # noqa: BLE001
             errors.append("option chain %s: %s" % (r["symbol"], e))
             continue
@@ -201,3 +201,123 @@ def screen(picks, inst, now_utc, cfg, errors):
                rules={"min_dte": MIN_DTE, "buffer": BUFFER, "delta": DELTA, "max_spread_pct": 100 * MAX_SPREAD,
                       "min_lots": MIN_LOTS, "rate_pct": 100 * RATE})
     return out
+
+
+# ---------------------------------------------------------------- the options track record
+
+_chains = {}
+
+
+def get_chain(key, expiry):
+    """One request per (stock, expiry) a run: the screen and the track record share it."""
+    if (key, expiry) not in _chains:
+        _chains[(key, expiry)] = upstox.option_chain(key, expiry)
+    return _chains[(key, expiry)]
+
+
+OPEN = ("waiting for entry", "entered")
+
+
+def _quote(chain, strike, typ):
+    side = "call" if typ == "CE" else "put"
+    for s in chain:
+        if s["strike"] == strike and s.get(side):
+            return s[side], s.get("spot")
+    return None, None
+
+
+def _buy(q):                                          # what a buyer pays: the ask, else the last trade
+    return q.get("ask") or q.get("ltp")
+
+
+def _sell(q):                                         # what a seller gets: the bid, else the last trade
+    return q.get("bid") or q.get("ltp")
+
+
+def track(rows, opts, stock_records, inst, now_utc, errors):
+    """Move the option record on. A new row for each card's best strike (one per stock and signal
+    session). It follows its stock plan in stock_records: entered when the stock triggers the entry
+    (filled at the option's ask at that update), closed when the stock plan hits its target or stop,
+    reaches day 15 or misses its entry (sold at the bid at that update), or at expiry (intrinsic
+    value). Updates run every 30 minutes, so fills and exits are the prices at the next update after
+    the stock's move, not at the exact moment."""
+    today = market.to_ist(now_utc).date()
+    stamp = market.to_ist(now_utc).strftime("%Y-%m-%d %H:%M")
+    eq = inst.get("eq") or {}
+    have = {r["id"] for r in rows}
+    for o in ((opts or {}).get("calls") or []) + ((opts or {}).get("puts") or []):
+        if o.get("void") or not o.get("best") or not o.get("session"):
+            continue
+        rid = "%s-%s-%s" % (o["session"], o["symbol"], o["type"])
+        if rid in have:
+            continue
+        s = next(x for x in o["strikes"] if x["strike"] == o["best"])
+        rows.append({"id": rid, "stock_id": "%s-%s" % (o["session"], o["symbol"]), "created": o["session"],
+                     "created_ist": stamp, "symbol": o["symbol"], "name": o.get("name"), "type": o["type"],
+                     "strike": o["best"], "expiry": o["expiry"], "lot": o["lot"], "plan": o["plan"],
+                     "signal_ask": s["ask"], "signal_spot": o["spot"], "signal_iv": s["iv"], "signal_delta": s["delta"],
+                     "status": "waiting for entry", "stock_status": "waiting for entry",
+                     "last": s["ask"], "last_ist": stamp})
+        have.add(rid)
+    stocks = {r["id"]: r for r in stock_records}
+    for r in rows:
+        if r["status"] not in OPEN:
+            continue
+        st = stocks.get(r["stock_id"]) or {}
+        r["stock_status"] = st.get("status", r.get("stock_status"))
+        key = (eq.get(r["symbol"]) or {}).get("key")
+        q, spot = None, None
+        if key:
+            try:
+                q, spot = _quote(get_chain(key, r["expiry"]), r["strike"], r["type"])
+            except Exception as e:                   # noqa: BLE001
+                errors.append("option record %s: %s" % (r["id"], e))
+        expired = today >= datetime.date.fromisoformat(r["expiry"])
+        if expired and r["status"] == "entered":
+            px = spot or r.get("last_spot") or r["signal_spot"]
+            val = max(px - r["strike"], 0) if r["type"] == "CE" else max(r["strike"] - px, 0)
+            _close(r, "expired", val, stamp)
+            continue
+        if expired:
+            r.update(status="not entered before expiry", closed_ist=stamp)
+            continue
+        if not q:
+            continue
+        r.update(last=_sell(q), last_ist=stamp, last_spot=spot, last_iv=q.get("iv"), last_delta=q.get("delta"))
+        if r["status"] == "waiting for entry":
+            if r["stock_status"] == "entered":
+                r.update(status="entered", fill=_buy(q), entered_ist=stamp)
+            elif r["stock_status"] in ("target hit", "stop hit") or str(r["stock_status"]).startswith("closed at day"):
+                # the stock plan opened and closed between two updates: no fair option price to show
+                r.update(status="stock plan opened and closed between updates", closed_ist=stamp)
+                continue
+            elif r["stock_status"] == "entry missed":
+                r.update(status="entry missed", closed_ist=stamp)
+                continue
+        if r["status"] == "entered":
+            if r["stock_status"] in ("target hit", "stop hit") or str(r["stock_status"]).startswith("closed at day"):
+                _close(r, "stock " + r["stock_status"], _sell(q), stamp)
+            else:
+                r["mark_lot"] = round((_sell(q) - r["fill"]) * r["lot"])
+                r["mark_pct"] = round((_sell(q) / r["fill"] - 1) * 100, 1) if r["fill"] else None
+    return rows
+
+
+def _close(r, why, price, stamp):
+    r.update(status="closed: " + why, exit=round(price, 2), closed_ist=stamp,
+             result_lot=round((price - r["fill"]) * r["lot"]),
+             result_pct=round((price / r["fill"] - 1) * 100, 1) if r["fill"] else None)
+    r.pop("mark_lot", None)
+    r.pop("mark_pct", None)
+
+
+def summary(rows):
+    done = [r for r in rows if r.get("result_lot") is not None]
+    opened = [r for r in rows if r["status"] == "entered"]
+    st = {"tracked": len(rows), "open": sum(1 for r in rows if r["status"] in OPEN), "entered_now": len(opened),
+          "closed": len(done), "missed": sum(1 for r in rows if r["status"] in ("entry missed", "not entered before expiry")),
+          "wins": sum(1 for r in done if r["result_lot"] > 0),
+          "total_lot": sum(r["result_lot"] for r in done), "open_mark_lot": sum(r.get("mark_lot") or 0 for r in opened)}
+    st["avg_pct"] = round(sum(r["result_pct"] or 0 for r in done) / len(done), 1) if done else None
+    st["win_rate"] = round(st["wins"] / len(done), 3) if done else None
+    return {"stats": st, "rows": sorted(rows, key=lambda r: r["created_ist"], reverse=True)[:60]}

@@ -136,6 +136,24 @@ def options_rows(opts):
     return out
 
 
+def options_record_rows(rec):
+    st = (rec or {}).get("stats") or {}
+    out = [["Options record", "tracked %s, waiting/open %s, closed %s, entry missed %s, closed result %s a lot each, "
+                              "open now %s, win rate %s" % (
+                                  st.get("tracked"), st.get("open"), st.get("closed"), st.get("missed"), st.get("total_lot"),
+                                  st.get("open_mark_lot"), "-" if st.get("win_rate") is None else "%d%%" % round(100 * st["win_rate"]))],
+           ["Bought at the ask, sold at the bid, at the 30-minute update after the stock's move; one lot each."], [],
+           ["Signal date", "Symbol", "Option", "Expiry", "Lot", "Status", "Stock plan", "Premium at signal", "Bought",
+            "Sold / last", "Result per lot", "Result %", "Open now per lot", "Open now %", "Updated"]]
+    for r in (rec or {}).get("rows") or []:
+        out.append([r["created"], r["symbol"].replace(".NS", ""), "%s %s" % (r["strike"], r["type"]), r["expiry"], r["lot"],
+                    r["status"], r.get("stock_status"), r["signal_ask"], r.get("fill", ""),
+                    r.get("exit", r.get("last", "")), r.get("result_lot", ""), r.get("result_pct", ""),
+                    r.get("mark_lot", ""), r.get("mark_pct", ""),
+                    r.get("closed_ist") or r.get("entered_ist") or r.get("last_ist") or ""])
+    return out
+
+
 README = [["NSE swing board"],
           ["Rules screen, not advice. Entries are triggers (above the day's high; below its low for a breakdown), "
            "valid 3 sessions. Stops sit where the setup is proven wrong; targets at the next level 1.5R+ away, else 2R."],
@@ -159,6 +177,7 @@ def write(doc):
     tabs = {"Bullish": trade_rows(doc.get("bull") or []), "Breakdowns (F&O)": trade_rows(doc.get("bear") or []),
             "Bottoms": bottom_rows(doc.get("bottoms") or []), "Equity Options": options_rows(doc.get("options")),
             "Track record": record_rows(doc.get("record") or {}),
+            "Options record": options_record_rows(doc.get("options_record")),
             "Live": live_rows(doc), "Read me": README}
     meta = s.get(base, params={"fields": "sheets.properties.title"})
     meta.raise_for_status()

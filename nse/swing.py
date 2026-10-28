@@ -43,6 +43,7 @@ OUT = os.path.join(ROOT, "docs")
 STATE = os.path.join(ROOT, "trader")
 LEVELS = os.path.join(STATE, "swing-levels.json")
 LOG = os.path.join(STATE, "swing-log.json")
+OPT_LOG = os.path.join(STATE, "options-log.json")
 FUNDS = os.path.join(STATE, "fundamentals.json")
 PAGE = os.path.join(OUT, "swing.json")
 CHARTS = os.path.join(OUT, "swing-charts.json")
@@ -673,6 +674,30 @@ def update_record(rec, day, o, h, l, c, cfg):
                    result_pct=round(((x - fill) if long_ else (fill - x)) / fill * 100, 2))
 
 
+def add_plan_record(records, sym, name, p, session, score, price, prev_close=None):
+    """One record per stock and signal session; False if it is already there."""
+    if any(r["symbol"] == sym and r["created"] == session for r in records):
+        return False
+    records.append({"id": "%s-%s" % (session, sym), "created": session, "symbol": sym, "name": name,
+                    "side": p["side"], "kind": p["kind"], "entry": p["entry"], "stop": p["stop"], "target": p["target"],
+                    "rr": p["rr"], "est_days": p.get("est_days"), "p_target": (p.get("odds") or {}).get("p_target"),
+                    "score": score, "status": "waiting for entry", "price_at_signal": price, "last_price": price,
+                    "last_close": prev_close})
+    return True
+
+
+def track_options(records, opts, data, now_utc, errors):
+    """The option record: new strikes from opts, every open one moved on; saved, summarised for the page."""
+    if not data.ok:
+        return read_json(OPT_LOG, None) and options.summary(read_json(OPT_LOG, []))
+    rows = read_json(OPT_LOG, [])
+    options.track(rows, opts, records, data.inst, now_utc, errors)
+    write_json(OPT_LOG, rows)
+    s = options.summary(rows)
+    log("options record: %d tracked, %d open, %d closed" % (s["stats"]["tracked"], s["stats"]["open"], s["stats"]["closed"]))
+    return s
+
+
 def record_stats(records):
     done = [r for r in records if r.get("result_R") is not None]
     st = {"tracked": len(records), "open": sum(1 for r in records if r["status"] in ("waiting for entry", "entered")),
@@ -898,15 +923,10 @@ def stage_eod(now_utc, force=False):
         if S and S["d"][-1] == session:
             update_record(rec, datetime.date.fromisoformat(session), S["o"][-1], S["h"][-1], S["l"][-1], S["c"][-1], cfg)
             rec["last_price"], rec["last_close"] = S["c"][-1], S["c"][-2]
-    have = {(r["symbol"], r["created"]) for r in records}
     for r in shown:
         p = r.get("plan") or (r.get("bottom") or {}).get("plan")
-        if p and (r["symbol"], session) not in have:
-            records.append({"id": "%s-%s" % (session, r["symbol"]), "created": session, "symbol": r["symbol"],
-                            "name": r["name"], "side": p["side"], "kind": p["kind"], "entry": p["entry"],
-                            "stop": p["stop"], "target": p["target"], "rr": p["rr"], "est_days": p.get("est_days"),
-                            "p_target": p["odds"]["p_target"], "score": r["score"], "status": "waiting for entry",
-                            "price_at_signal": r["price"], "last_price": r["price"], "last_close": r["prev_close"]})
+        if p:
+            add_plan_record(records, r["symbol"], r["name"], p, session, r["score"], r["price"], r["prev_close"])
     write_json(LOG, records)
     status = {(rec["symbol"], rec["created"]): rec for rec in records}
     for r in shown:
@@ -944,8 +964,13 @@ def stage_eod(now_utc, force=False):
                                     data.inst)
         opts = options.screen(fo_picks, data.inst, now_utc, cfg, errors)
         log("options: %d call and %d put underlyings from %d F&O plans" % (len(opts["calls"]), len(opts["puts"]), len(fo_picks)))
+    # every plan behind an option card joins the stock record, so its option can follow it
+    for pk in fo_picks:
+        add_plan_record(records, pk["symbol"], pk["name"], pk["plan"], pk.get("session") or session, pk["score"], pk["price"])
+    write_json(LOG, records)
+    opt_record = track_options(records, opts, data, now_utc, errors)
 
-    doc = {"stage": "eod", "fo_plans": fo_picks, "options": opts, "created_ist": ist.strftime("%Y-%m-%d %H:%M"), "session": session,
+    doc = {"stage": "eod", "options_record": opt_record, "fo_plans": fo_picks, "options": opts, "created_ist": ist.strftime("%Y-%m-%d %H:%M"), "session": session,
            "counts": {"universe": len(symbols), "quoted": len(quotes), "with_bars": len(bars), "liquid": len(liquid),
                       "fo": sum(1 for s in liquid if s in fo), "with_fundamentals": len(fscore),
                       "bull": len(bull), "bear": len(bear), "bottoms": len(bots)},
@@ -1027,6 +1052,8 @@ def stage_live(now_utc):
     if in_session and data.ok and page.get("fo_plans"):
         page["options"] = options.screen(page["fo_plans"], data.inst, now_utc, cfg, errors)
         log("options: refreshed %d call and %d put underlyings" % (len(page["options"]["calls"]), len(page["options"]["puts"])))
+    if in_session and data.ok:
+        page["options_record"] = track_options(records, page.get("options"), data, now_utc, errors)
     page["record"] = {"stats": record_stats(records),
                       "rows": sorted(records, key=lambda r: r["created"], reverse=True)[:60]}
     status = {(rec["symbol"], rec["created"]): rec["status"] for rec in records}
@@ -1056,8 +1083,19 @@ def stage_options(now_utc):
     picks = page.get("fo_plans") or options.fo_plans(
         [(page.get("bull") or [], "bullish"), (page.get("bear") or [], "breakdown"),
          ([b for b in page.get("bottoms") or [] if (b.get("bottom") or {}).get("plan")], "bottom turning up")], data.inst)
+    for pk in picks:                                  # plans saved before the record existed carry no session
+        if not pk.get("session"):
+            pk["session"] = page.get("session")
     page["fo_plans"] = picks
     page["options"] = options.screen(picks, data.inst, now_utc, cfg, errors)
+    records = read_json(LOG, [])
+    for pk in picks:
+        add_plan_record(records, pk["symbol"], pk["name"], pk["plan"], pk.get("session") or page.get("session"),
+                        pk["score"], pk["price"])
+    write_json(LOG, records)
+    page["record"] = {"stats": record_stats(records),
+                      "rows": sorted(records, key=lambda r: r["created"], reverse=True)[:60]}
+    page["options_record"] = track_options(records, page["options"], data, now_utc, errors)
     page["errors"] = list(dict.fromkeys((page.get("errors") or []) + errors))[:30]
     write_json(PAGE, page)
     log("options: %d call and %d put underlyings from %d F&O plans" % (
