@@ -123,7 +123,7 @@ def live_rows(doc):
 def options_rows(opts):
     out = [["Rules screen, not advice. Options-first: every F&O plan with direction checks (replay edge, not failing on "
             "the stock, market, fundamentals, no results due); a debit spread by default, a single only when IV is cheap; "
-            "cost within budget; exits +60% / -40% / stock target or stop / 7 days before expiry; max 3 open."], [],
+            "cost within budget; exits per config.json (now +60% / -10%) / stock target or stop / 7 days before expiry; max 3 open."], [],
            ["Recommended", "Failed checks", "The trade", "Cost a lot (max loss)", "Gain at target a lot",
             "Loss at stop a lot", "Trade R:R", "Symbol", "Type", "Plan", "Spot", "Expiry", "Days left", "Lot", "PCR", "Most call OI", "Most put OI",
             "Watch range", "Best", "Strike", "Price a share", "Value of 1 lot (price x lot)", "Delta", "Theta/lot/day", "Vega/lot", "IV %", "OI lots",

@@ -269,16 +269,20 @@ def option_card(o):
         name = ("Buy %s %s" % (k(t["buy"]), typ) if t["structure"] == "single" else
                 "Buy %s %s, sell %s %s (debit spread)" % (k(t["buy"]), typ, k(t["sell"]), typ))
         budget = o.get("budget") or 0
-        tp, sl = 0.6, 0.4
-        cells = [("Cost, the most it can lose", "%s a share = <b>%s a lot</b>" % (rs(t["cost"]), rs(t["cost_lot"], 0))),
+        tp, sl = (o.get("take_profit_pct") or 60) / 100.0, (o.get("stop_pct") or 40) / 100.0
+        cells = [("Cost (the most a gap can lose)", "%s a share = <b>%s a lot</b>" % (rs(t["cost"]), rs(t["cost_lot"], 0))),
+                 ("Planned loss at the -%d%% stop" % round(100 * sl),
+                  '<span class="dn">-%s a lot</span>' % rs(t["cost_lot"] * sl, 0)),
                  ("Lots within your %s" % rs(budget, 0), e(t.get("lots_in_budget"))),
                  ("If the stock reaches the target", '<span class="up">+%s a lot</span>' % rs(t["gain_lot"], 0)),
-                 ("If it hits the stop", '<span class="dn">-%s a lot</span>' % rs(t["loss_lot"], 0)),
-                 ("Reward : risk", e(t["rr"])), ("Break-even at expiry", rs(t["breakeven"]))]
+                 ("If the stock hits its stop", '<span class="dn">-%s a lot</span>' % rs(t["loss_lot"], 0)),
+                 ("Reward : risk (stock target vs stock stop)", e(t["rr"])), ("Break-even at expiry", rs(t["breakeven"]))]
         if t.get("max_profit_lot"):
-            cells.insert(2, ("Most it can make", "%s a lot" % rs(t["max_profit_lot"], 0)))
-        cells.append(("Exits", "take profit at %s a lot (+60%%), cut at %s (-40%%), or at the stock's target or stop, "
-                               "or 7 days before expiry" % (rs(t["cost_lot"] * (1 + tp), 0), rs(t["cost_lot"] * (1 - sl), 0))))
+            cells.insert(3, ("Most it can make", "%s a lot" % rs(t["max_profit_lot"], 0)))
+        cells.append(("Exits", "take profit at %s a lot (+%d%%), cut at %s (-%d%%), or at the stock's target or stop, "
+                               "or %s days before expiry, whichever comes first" % (
+                                   rs(t["cost_lot"] * (1 + tp), 0), round(100 * tp), rs(t["cost_lot"] * (1 - sl), 0),
+                                   round(100 * sl), e(o.get("exit_dte") or 7))))
         trade = ('<div class="changes"><b>The trade: %s</b></div><div class="grid">%s</div>' % (name, "".join(
             '<div><div class="k">%s</div><div class="v">%s</div></div>' % (e(a), b) for a, b in cells)))
     sp_rows = "".join(

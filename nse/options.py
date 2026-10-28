@@ -229,7 +229,8 @@ def screen_one(pk, chain, expiry, dte, lot, today, oc, nifty_trend, iv_rank=None
             "rank": pk.get("rank"), "score": pk.get("score"), "session": pk.get("session"),
             "plan": {k: plan.get(k) for k in ("kind", "entry", "stop", "target", "rr", "est_days")},
             "p_target": (plan.get("odds") or {}).get("p_target"), "spot": spot, "expiry": expiry, "dte": dte,
-            "lot": lot, "hv20": pk.get("hv20"), "iv_rank": iv_rank, "budget": oc["max_loss_per_trade"]}
+            "lot": lot, "hv20": pk.get("hv20"), "iv_rank": iv_rank, "budget": oc["max_loss_per_trade"],
+            "take_profit_pct": oc["take_profit_pct"], "stop_pct": oc["stop_pct"], "exit_dte": oc["exit_dte"]}
     direction = direction_checks(pk, nifty_trend, today, oc)
     void = None
     if (call and spot <= plan["stop"]) or (not call and spot >= plan["stop"]):
