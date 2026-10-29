@@ -1,4 +1,22 @@
-# NSE Swing Board
+# NSE Trading Desk
+
+**https://mojo-jobi.github.io/nse-morning-board/**: a self-updating webapp (phone and desktop). Every 5
+minutes in market hours GitHub Actions refreshes prices, plans, options, news and the tape; the open
+page fetches them every minute and swaps them in without a reload.
+
+| Tab | What |
+| --- | --- |
+| (1) Options | news movers to watch; intraday breakouts (calls) and breakdowns (puts) on F&O stocks with a strike near delta 0.55; weekly/positional debit spreads (`nse/options.py`) |
+| (2) Swing | momentum swings on liquid stocks incl. mid and small caps, themes (`nse/themes.py`) and good news ranked first |
+| (3) Long term | work in progress: quality stocks at support |
+| News | every F&O company's news with impact tags, confirmed by the day's move and volume (`nse/newsfeed.py`) |
+| Track record | every recommended stock plan and options trade |
+| Filters | the rules in force (`config.json`) and how each setup has done |
+
+The page: `nse/app_view.py` (shell, news, intraday options, filters), `nse/swing_view.py` (cards),
+`nse/dashboard.py` (writes `docs/index.html` and `docs/view.json`).
+
+## Swing (earlier notes)
 
 A web page (phone and desktop) of **swing setups** on NSE, 3 to 15 trading days, ranked on
 **technicals and fundamentals**, with a Google Sheet that tracks every plan. The tabs:
