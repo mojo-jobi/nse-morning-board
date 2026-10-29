@@ -15,7 +15,7 @@
   "score": 75,
   "status": "entered",
   "price_at_signal": 793.9,
-  "last_price": 797.45,
+  "last_price": 789.3,
   "last_close": 793.9,
   "entered": "2026-10-29",
   "fill": 799.05
@@ -36,7 +36,7 @@
   "score": 65,
   "status": "entered",
   "price_at_signal": 879.45,
-  "last_price": 874.8,
+  "last_price": 875.0,
   "last_close": 879.45,
   "entered": "2026-10-29",
   "fill": 884.0
@@ -57,7 +57,7 @@
   "score": 62,
   "status": "waiting for entry",
   "price_at_signal": 6976.5,
-  "last_price": 6935.0,
+  "last_price": 6918.5,
   "last_close": 6976.5
  }
 ]

@@ -1,6 +1,6 @@
 {
  "mode": "nse-morning",
- "as_of": "2026-10-29 09:46",
+ "as_of": "2026-10-29 13:14",
  "hits": [
   {
    "symbol": "ADANIPORTS.NS"
@@ -9,10 +9,22 @@
    "symbol": "TVSMOTOR.NS"
   },
   {
+   "symbol": "BSOFT.NS"
+  },
+  {
    "symbol": "JSWENERGY.NS"
   },
   {
    "symbol": "PPLPHARMA.NS"
+  },
+  {
+   "symbol": "JWL.NS"
+  },
+  {
+   "symbol": "INFY.NS"
+  },
+  {
+   "symbol": "AEROFLEX.NS"
   },
   {
    "symbol": "VEDL.NS"
@@ -21,46 +33,34 @@
    "symbol": "MEESHO.NS"
   },
   {
-   "symbol": "BSOFT.NS"
-  },
-  {
-   "symbol": "RELIANCE.NS"
-  },
-  {
-   "symbol": "INFY.NS"
-  },
-  {
-   "symbol": "HYUNDAI.NS"
-  },
-  {
-   "symbol": "TCS.NS"
-  },
-  {
-   "symbol": "CARTRADE.NS"
-  },
-  {
-   "symbol": "ADANIENT.NS"
-  },
-  {
    "symbol": "PVRINOX.NS"
-  },
-  {
-   "symbol": "LT.NS"
-  },
-  {
-   "symbol": "BHARTIARTL.NS"
-  },
-  {
-   "symbol": "HEROMOTOCO.NS"
-  },
-  {
-   "symbol": "BANDHANBNK.NS"
   },
   {
    "symbol": "PIDILITIND.NS"
   },
   {
-   "symbol": "PNBHOUSING.NS"
+   "symbol": "LT.NS"
+  },
+  {
+   "symbol": "RELIANCE.NS"
+  },
+  {
+   "symbol": "TCS.NS"
+  },
+  {
+   "symbol": "ADANIENT.NS"
+  },
+  {
+   "symbol": "HEROMOTOCO.NS"
+  },
+  {
+   "symbol": "HYUNDAI.NS"
+  },
+  {
+   "symbol": "CARTRADE.NS"
+  },
+  {
+   "symbol": "BANDHANBNK.NS"
   }
  ]
 }
