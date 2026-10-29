@@ -1,6 +1,6 @@
 {
  "mode": "nse-morning",
- "as_of": "2026-10-29 13:14",
+ "as_of": "2026-10-29 14:11",
  "hits": [
   {
    "symbol": "ADANIPORTS.NS"
@@ -15,37 +15,40 @@
    "symbol": "JSWENERGY.NS"
   },
   {
-   "symbol": "PPLPHARMA.NS"
-  },
-  {
    "symbol": "JWL.NS"
-  },
-  {
-   "symbol": "INFY.NS"
-  },
-  {
-   "symbol": "AEROFLEX.NS"
-  },
-  {
-   "symbol": "VEDL.NS"
-  },
-  {
-   "symbol": "MEESHO.NS"
-  },
-  {
-   "symbol": "PVRINOX.NS"
-  },
-  {
-   "symbol": "PIDILITIND.NS"
   },
   {
    "symbol": "LT.NS"
   },
   {
+   "symbol": "AEROFLEX.NS"
+  },
+  {
+   "symbol": "ZENSARTECH.NS"
+  },
+  {
+   "symbol": "MEESHO.NS"
+  },
+  {
+   "symbol": "INFY.NS"
+  },
+  {
+   "symbol": "VEDL.NS"
+  },
+  {
+   "symbol": "PIDILITIND.NS"
+  },
+  {
    "symbol": "RELIANCE.NS"
   },
   {
+   "symbol": "HYUNDAI.NS"
+  },
+  {
    "symbol": "TCS.NS"
+  },
+  {
+   "symbol": "CARTRADE.NS"
   },
   {
    "symbol": "ADANIENT.NS"
@@ -54,10 +57,7 @@
    "symbol": "HEROMOTOCO.NS"
   },
   {
-   "symbol": "HYUNDAI.NS"
-  },
-  {
-   "symbol": "CARTRADE.NS"
+   "symbol": "PINELABS.NS"
   },
   {
    "symbol": "BANDHANBNK.NS"
