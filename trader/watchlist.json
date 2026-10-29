@@ -1,66 +1,66 @@
 {
  "mode": "nse-morning",
- "as_of": "2026-10-28 17:01",
+ "as_of": "2026-10-29 09:46",
  "hits": [
   {
-   "symbol": "MARUTI.NS"
-  },
-  {
-   "symbol": "BHARTIARTL.NS"
-  },
-  {
-   "symbol": "PPLPHARMA.NS"
-  },
-  {
-   "symbol": "INFY.NS"
-  },
-  {
-   "symbol": "LT.NS"
+   "symbol": "ADANIPORTS.NS"
   },
   {
    "symbol": "TVSMOTOR.NS"
   },
   {
-   "symbol": "BAJAJ-AUTO.NS"
+   "symbol": "JSWENERGY.NS"
   },
   {
-   "symbol": "RELIANCE.NS"
+   "symbol": "PPLPHARMA.NS"
   },
   {
    "symbol": "VEDL.NS"
   },
   {
+   "symbol": "MEESHO.NS"
+  },
+  {
+   "symbol": "BSOFT.NS"
+  },
+  {
+   "symbol": "RELIANCE.NS"
+  },
+  {
+   "symbol": "INFY.NS"
+  },
+  {
+   "symbol": "HYUNDAI.NS"
+  },
+  {
    "symbol": "TCS.NS"
-  },
-  {
-   "symbol": "NAUKRI.NS"
-  },
-  {
-   "symbol": "UBL.NS"
-  },
-  {
-   "symbol": "HINDUNILVR.NS"
-  },
-  {
-   "symbol": "ADANIPORTS.NS"
-  },
-  {
-   "symbol": "HDFCBANK.NS"
   },
   {
    "symbol": "CARTRADE.NS"
   },
   {
-   "symbol": "SONACOMS.NS"
+   "symbol": "ADANIENT.NS"
   },
   {
-   "symbol": "PAYTM.NS"
+   "symbol": "PVRINOX.NS"
   },
   {
-   "symbol": "MAZDOCK.NS"
+   "symbol": "LT.NS"
   },
   {
-   "symbol": "TATACAP.NS"
+   "symbol": "BHARTIARTL.NS"
+  },
+  {
+   "symbol": "HEROMOTOCO.NS"
+  },
+  {
+   "symbol": "BANDHANBNK.NS"
+  },
+  {
+   "symbol": "PIDILITIND.NS"
+  },
+  {
+   "symbol": "PNBHOUSING.NS"
   }
  ]
 }
