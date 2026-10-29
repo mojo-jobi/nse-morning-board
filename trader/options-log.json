@@ -1,1 +1,60 @@
-[]
+[
+ {
+  "id": "2026-10-29-ADANIPORTS.NS-CE",
+  "stock_id": "2026-10-29-ADANIPORTS.NS",
+  "created": "2026-10-29",
+  "created_ist": "2026-10-29 16:32",
+  "symbol": "ADANIPORTS.NS",
+  "name": "Adani Ports and Special Economic Zone Limited",
+  "type": "CE",
+  "structure": "spread",
+  "strike": 1900.0,
+  "short_strike": 1960.0,
+  "expiry": "2026-11-23",
+  "lot": 475,
+  "plan": {
+   "kind": "breakout",
+   "entry": 1872.05,
+   "stop": 1814.65,
+   "target": 1986.85,
+   "rr": 2.0,
+   "est_days": 6
+  },
+  "signal_ask": 17.2,
+  "signal_spot": 1872.0,
+  "status": "waiting for entry",
+  "stock_status": "waiting for entry",
+  "last": 16.55,
+  "last_ist": "2026-10-29 16:32",
+  "last_spot": 1872.0
+ },
+ {
+  "id": "2026-10-29-MARUTI.NS-PE",
+  "stock_id": "2026-10-29-MARUTI.NS",
+  "created": "2026-10-29",
+  "created_ist": "2026-10-29 16:32",
+  "symbol": "MARUTI.NS",
+  "name": "Maruti Suzuki India Limited",
+  "type": "PE",
+  "structure": "spread",
+  "strike": 11400.0,
+  "short_strike": 11000.0,
+  "expiry": "2026-11-23",
+  "lot": 50,
+  "plan": {
+   "kind": "failed rally",
+   "entry": 11395.95,
+   "stop": 11679.7,
+   "target": 10828.45,
+   "rr": 2.0,
+   "est_days": 6
+  },
+  "signal_ask": 130.0,
+  "signal_spot": 11426.0,
+  "status": "waiting for entry",
+  "stock_status": "waiting for entry",
+  "last": 124.2,
+  "last_ist": "2026-10-29 16:32",
+  "last_spot": 11426.0
+ }
+]
