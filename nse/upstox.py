@@ -223,6 +223,7 @@ def fundamentals(isin):
                 out[name] = hist[0].get("value")
                 out[name + "_chg"] = _num(hist[0].get("change"))
                 out[name + "_period"] = hist[0].get("period")
+    out.update(profile(isin))
     for cat in _get("/v2/fundamentals/%s/share-holdings" % isin) or []:
         vals = [h.get("value") for h in cat.get("history") or []]        # newest first
         name = "hold_" + (cat.get("category") or "")
@@ -230,6 +231,12 @@ def fundamentals(isin):
             out[name] = vals[0]
             out[name + "_chg"] = round(vals[0] - vals[-1], 2) if vals[-1] is not None else None
     return out
+
+
+def profile(isin):
+    """The company's business description and sector (for theme tags)."""
+    d = _get("/v2/fundamentals/%s/profile" % isin) or {}
+    return {"sector": d.get("sector"), "profile": (d.get("company_profile") or "")[:700]}
 
 
 def option_chain(key, expiry):

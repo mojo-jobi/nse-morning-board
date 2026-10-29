@@ -23,7 +23,7 @@
   "allow_short": false,
 
   "scan": {"min_price": 20, "min_volume": 100000},
-  "rank": {"shortlist": 20, "show": 10, "news_hours": 24},
+  "rank": {"shortlist": 20, "show": 10, "news_hours": 24, "universe": "fo"},
   "plan": {"or_minutes": 15, "stop": "or_mid", "target_r": 2},
   "swing": {"min_price": 20, "min_turnover_cr": 5, "horizon_days": 15, "entry_valid_days": 3,
             "budget": 100000, "max_loss_per_trade": 1000, "max_position_pct": 40, "cash_buffer_pct": 10,

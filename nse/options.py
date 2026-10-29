@@ -650,3 +650,49 @@ def summary(rows):
     st["avg_pct"] = round(sum(r["result_pct"] or 0 for r in done) / len(done), 1) if done else None
     st["win_rate"] = round(st["wins"] / len(done), 3) if done else None
     return {"stats": st, "rows": sorted(rows, key=lambda r: r["created_ist"], reverse=True)[:60]}
+
+
+# ---------------------------------------------------------------- intraday options (profile 1)
+
+INTRADAY_DELTA = (0.45, 0.70)
+
+
+def intraday_option(sym, plan, inst, today, oc):
+    """The option for an intraday plan (opening-range breakout: call; breakdown: put). Nearest expiry at
+    least a day away; the strike with delta closest to 0.55 among liquid ones whose lot fits the budget.
+    Option stop and target come from the stock's through delta, capped by the stop and take-profit
+    percentages; flat by the plan's flat-by time."""
+    call = plan["side"] == "buy"
+    side, typ = ("call", "CE") if call else ("put", "PE")
+    exps = [d for d in (inst.get("expiries") or {}).get(sym, []) if (datetime.date.fromisoformat(d) - today).days >= 1]
+    if not exps:
+        return {"error": "no expiry"}
+    expiry = exps[0]
+    lot = (inst.get("fo") or {}).get(sym)
+    chain = get_chain(inst["eq"][sym]["key"], expiry)
+    spot = next((s["spot"] for s in chain if s.get("spot")), None)
+    L = [x for x in legs(chain, side, lot, spot) if INTRADAY_DELTA[0] <= abs(x["delta"]) <= INTRADAY_DELTA[1]]
+    max_oi = max([x.get("oi") or 0 for x in L] or [0])
+    ok = [x for x in L if x["spread"] <= MAX_SPREAD and x["lots"] >= MIN_LOTS and (x.get("oi") or 0) >= MIN_OI_SHARE * max_oi
+          and x["ask"] * lot <= oc["max_loss_per_trade"]]
+    if not ok:
+        why = "no liquid strike near delta 0.55" if not L else (
+            "the nearest-the-money lot costs Rs %s, over the Rs %s budget" % (
+                format(round(min(x["ask"] for x in L) * lot), ","), format(oc["max_loss_per_trade"], ","))
+            if all(x["ask"] * lot > oc["max_loss_per_trade"] for x in L) else "strikes too thin or too wide")
+        return {"error": why, "expiry": expiry, "lot": lot}
+    x = min(ok, key=lambda x: abs(abs(x["delta"]) - 0.55))
+    d = abs(x["delta"])
+    ask = x["ask"]
+    sl, tp = oc["stop_pct"] / 100.0, oc["take_profit_pct"] / 100.0
+    stop_px = max(ask * (1 - sl), ask - d * abs(plan["entry"] - plan["stop"]))
+    target_px = min(ask * (1 + tp), ask + d * abs(plan["target"] - plan["entry"]))
+    risk, reward = (ask - stop_px) * lot, (target_px - ask) * lot
+    return {"label": "%s %s %s" % (sym[:-3], k_(x["strike"]), typ), "strike": x["strike"], "type": typ, "expiry": expiry,
+            "dte": (datetime.date.fromisoformat(expiry) - today).days, "lot": lot, "ask": ask, "bid": x["bid"],
+            "delta": round(x["delta"], 3), "iv": x["iv"], "theta_lot_day": round((x.get("theta") or 0) * lot),
+            "oi_lots": round(x["lots"]), "cost_lot": round(ask * lot), "stop": round(stop_px, 2),
+            "target": round(target_px, 2), "risk_lot": round(risk), "reward_lot": round(reward),
+            "rr": round(reward / risk, 2) if risk > 0 else None, "lots_in_budget": int(oc["max_loss_per_trade"] // (ask * lot)),
+            "stop_rule": "-%d%%" % round(100 * sl) if stop_px == ask * (1 - sl) else "stock stop via delta",
+            "flat_by": plan.get("flat_by")}

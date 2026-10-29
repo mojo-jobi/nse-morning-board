@@ -332,46 +332,48 @@ def _load(name):
 
 
 def render_site(intraday=None, swing=None, path=None):
-    """docs/index.html: Swing, Falling market, Track record and Intraday tabs from docs/swing.json
-    and docs/data.json (either can be missing)."""
+    """docs/index.html (the app shell, with every tab filled in for the first paint) and docs/view.json
+    (the same tabs, which the open page fetches every minute and swaps in) from docs/swing.json,
+    docs/data.json and docs/data/news.json (any can be missing)."""
+    import datetime
+    import app_view
     import swing_view
     intraday = intraday if intraday is not None else (_load("data.json") or {})
     swing = swing if swing is not None else _load("swing.json")
-    repo = intraday.get("repo") or (swing or {}).get("repo") or _repo()
+    news = _load(os.path.join("data", "news.json")) or {}
+    cfg_all = _config()
+    repo = intraday.get("repo") or (swing or {}).get("repo") or cfg_all.get("repo") or ""
     bull, falling, record, opts, top = swing_view.tabs(swing)
-    updated = max(((swing or {}).get("live") or {}).get("created_ist") or "",
-                  (swing or {}).get("created_ist") or "", intraday.get("orb_ist") or intraday.get("created_ist") or "")
-    page = """<!doctype html><html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1"><title>NSE Swing Board</title>
-<style>%s%s</style></head><body><div class="wrap">
-<div class="head"><div><h1>NSE Swing Board</h1><div class="sub">Updated %s IST &middot; swing setups for 3 to 15 trading days, ranked on technicals and fundamentals</div></div>
-<div><button id="refresh" type="button">Refresh</button><div id="rstatus" class="rstatus">Updates prices, entries, stops and targets, and rescans intraday (about 2 minutes)</div></div></div>
-<div id="rsetup" class="card" hidden><b>Let this page start a rescan on GitHub</b>
-<ol><li>Open <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">GitHub &rarr; new fine-grained token</a>.</li>
-<li>Repository access: <b>Only select repositories</b> &rarr; <b>%s</b>.</li>
-<li>Permissions &rarr; Repository: <b>Actions: Read and write</b> and <b>Contents: Read-only</b>. Nothing else.</li>
-<li>Pick an expiry (30 days is plenty), generate it, and paste it here.</li></ol>
-<input type="password" id="rtoken" placeholder="github_pat_..." autocomplete="off" spellcheck="false">
-<button id="rsave" type="button">Save and refresh</button> <button id="rcancel" type="button" class="ghost">Cancel</button>
-<div class="why">The token is kept only in this browser and sent only to api.github.com. It can start and read runs of this one repository, nothing else.
-<a href="#" id="rforget">Forget the saved token</a>. No token? <a href="https://github.com/%s/actions/workflows/morning.yml" target="_blank" rel="noopener">Run it on GitHub</a>
-(Run workflow &rarr; stage <b>refresh</b>) and reload this page when it finishes.</div></div>
-<div class="note">A rules screen, not advice to buy or sell. Entries are triggers; stops sit where the setup is proven wrong.
-The odds replay each stock's own past, not a forecast: results, news and gaps can do what those days never did. Paper trade first. Nothing here places an order.</div>
-%s
-<nav class="tabs" role="tablist"><a href="#swing" data-tab="swing">Swing</a><a href="#falling" data-tab="falling">Falling market</a><a href="#options" data-tab="options">Equity Options</a><a href="#record" data-tab="record">Track record</a><a href="#intraday" data-tab="intraday">Intraday</a></nav>
-<section id="tab-swing" class="tab">%s</section>
-<section id="tab-falling" class="tab" hidden>%s</section>
-<section id="tab-options" class="tab" hidden>%s</section>
-<section id="tab-record" class="tab" hidden>%s</section>
-<section id="tab-intraday" class="tab" hidden>%s</section>
-</div><script>%s</script><script>%s</script></body></html>""" % (
-        CSS, swing_view.CSS, e(updated or "-"), e(repo.split("/")[-1]), e(repo), top, bull, falling, opts, record,
-        intraday_body(intraday), REFRESH_JS.replace("__REPO__", json.dumps(repo or None)), swing_view.JS)
+    updated = max(((swing or {}).get("live") or {}).get("created_ist") or "", (swing or {}).get("created_ist") or "",
+                  intraday.get("orb_ist") or intraday.get("created_ist") or "", news.get("updated_ist") or "")
+    sections = {
+        "options": app_view.options_tab(swing, intraday, news) +
+        '<details class="watch"><summary>Stock breakdowns behind the puts, and bottoms</summary>%s</details>'
+        '<details class="watch"><summary>The full intraday news-and-volume board</summary>%s</details>' % (
+            falling, intraday_body(intraday)),
+        "swing": app_view.swing_tab(swing, bull),
+        "longterm": app_view.longterm_tab(swing),
+        "news": app_view.news_tab(news),
+        "record": record,
+        "filters": app_view.filters_tab(swing, cfg_all),
+    }
+    generated = datetime.datetime.now(datetime.timezone.utc).strftime("%Y%m%d%H%M%S")
+    with open(os.path.join(DOCS, "view.json"), "w", encoding="utf-8") as fh:
+        json.dump({"generated": generated, "updated": updated, "top": top, "sections": sections}, fh, ensure_ascii=False)
+    page = app_view.shell(sections, top, updated, generated, (repo, repo.split("/")[-1]),
+                          REFRESH_JS.replace("__REPO__", json.dumps(repo or None)), CSS)
     path = path or os.path.join(DOCS, "index.html")
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8") as fh:
         fh.write(page)
+
+
+def _config():
+    try:
+        with open(os.path.join(os.path.dirname(DOCS), "config.json"), encoding="utf-8") as fh:
+            return json.load(fh)
+    except (OSError, ValueError):
+        return {}
 
 
 def _repo():

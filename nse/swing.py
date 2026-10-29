@@ -36,7 +36,9 @@ import time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import market  # noqa: E402
+import newsfeed  # noqa: E402
 import options  # noqa: E402
+import themes  # noqa: E402
 import upstox  # noqa: E402
 
 ROOT = market.ROOT
@@ -50,6 +52,8 @@ RESULTS_SEEN = os.path.join(STATE, "results-headlines.json")
 FUNDS = os.path.join(STATE, "fundamentals.json")
 PAGE = os.path.join(OUT, "swing.json")
 CHARTS = os.path.join(OUT, "swing-charts.json")
+NEWS = os.path.join(OUT, "data", "news.json")
+MARKET = os.path.join(OUT, "data", "market.json")
 
 DEFAULTS = {
     "min_price": 20, "min_turnover_cr": 5,        # liquid: 20-day median turnover of at least 5 crore
@@ -58,8 +62,9 @@ DEFAULTS = {
     "min_reward_risk": 1.5, "target_r": 2, "show": 10, "replays": 10000, "fundamentals_days": 7,
     # a plan is recommended only if it clears every one of these; otherwise it is watchlist only
     "gate": {"min_avg_r": 0.30, "min_p_target": 0.35, "min_hist_trades": 3, "min_hist_avg_r": 0.25,
-             "min_turnover_cr": 20, "min_rr": 2.0, "long_min_fund": 55, "short_max_fund": 50,
-             "bottom_min_fund": 60, "rs_long_in_down_market": 85, "rs_short_max": 50},
+             "min_turnover_cr": 10, "min_rr": 2.0, "long_min_fund": 55, "short_max_fund": 50,
+             "bottom_min_fund": 60, "rs_long_in_down_market": 85, "rs_short_max": 50, "min_atr_pct": 2.0},
+    "themes": ["ai_it", "semis", "defence", "energy"], "theme_boost": 5, "news_boost": 5,
 }
 TICK = 0.05
 PIVOT = 5                                         # a swing high is the top of the 11 bars around it
@@ -128,6 +133,9 @@ def gate(r, p, nifty_trend, cfg):
         add("Market agrees", nifty_trend != "up" and rs <= G["rs_short_max"],
             "Nifty trend %s; stronger than %d%% of stocks (a short needs a Nifty not rising and %d%% or less)" % (
                 nifty_trend or "?", rs, G["rs_short_max"]))
+    if long_ and p["kind"] != "bottom reversal":
+        add("Moves enough", (r.get("atr_pct") or 0) >= G["min_atr_pct"],
+            "average daily range %s%% of the price (needs %s%%+ for momentum)" % (r.get("atr_pct"), G["min_atr_pct"]))
     add("Liquid", (r.get("turnover_cr") or 0) >= G["min_turnover_cr"],
         "Rs %s cr traded a day (needs %s cr+)" % (r.get("turnover_cr"), G["min_turnover_cr"]))
     add("Reward:risk", p["rr"] >= G["min_rr"], "%.1f (needs %.1f+)" % (p["rr"], G["min_rr"]))
@@ -650,6 +658,29 @@ def fund_notes(f):
     return out
 
 
+def fill_profiles(data, symbols, fdoc, limit=900):
+    """Company profiles (sector, business description) for the theme tags, where missing: one request a stock."""
+    stocks = fdoc.setdefault("stocks", {})
+    todo = [s for s in symbols if s in data.inst["eq"] and s in stocks and "sector" not in stocks[s]][:limit]
+    if not todo or not data.ok:
+        return 0
+
+    def one(sym):
+        return sym, upstox.profile(data.inst["eq"][sym]["isin"])
+    got = 0
+    with concurrent.futures.ThreadPoolExecutor(4) as ex:
+        for fut in concurrent.futures.as_completed([ex.submit(one, s) for s in todo]):
+            try:
+                sym, prof = fut.result()
+                stocks[sym].update(prof)
+                got += 1
+            except Exception as e:                   # noqa: BLE001
+                data.errors.append("profile: %s" % e)
+    write_json(FUNDS, fdoc, indent=None)
+    log("profiles: %d filled for the theme tags" % got)
+    return got
+
+
 def refresh_fundamentals(data, symbols, limit=None):
     """Fetch the stalest fundamentals first (4 requests a stock); keep the rest."""
     cfg, _ = config()
@@ -901,7 +932,9 @@ def stage_eod(now_utc, force=False):
 
     # 4. fundamentals: fill the gaps a few hundred at a time; the weekly run refreshes them all
     fdoc, _ = refresh_fundamentals(data, liquid, limit=300)
+    fill_profiles(data, liquid, fdoc)
     funds = fdoc.get("stocks", {})
+    news_now = {x["symbol"]: x for x in (read_json(NEWS, {}) or {}).get("stocks") or []}
     fscore = fund_score(funds, liquid)
 
     # 5. relative strength against the Nifty 50 over 63 sessions
@@ -950,7 +983,9 @@ def stage_eod(now_utc, force=False):
              "support": round(sup[0], 2) if sup else None, "resistance": round(res[0], 2) if res else None,
              "rs_pct": round(rs_pct.get(sym, 0.5) * 100), "fund": fscore.get(sym), "fund_notes": fund_notes(f),
              "fo_lot": fo.get(sym), "turnover_cr": round(sorted(S["turn"][-20:])[10] / 1e7, 1),
-             "hv20": hv20(S)}
+             "hv20": hv20(S), "atr_pct": round(S["atr"][i] / S["c"][i] * 100, 2),
+             "sector": (f or {}).get("sector"),
+             "themes": themes.tags(names.get(sym, ""), (f or {}).get("sector"), (f or {}).get("profile"), cfg.get("themes"))}
         if p and "entry" in p:
             r["plan"] = p
         return r
@@ -970,6 +1005,15 @@ def stage_eod(now_utc, force=False):
             r["tech"] = round(100 * (0.25 * tr + 0.25 * rsv + 0.15 * vol + 0.35 * edge))
             fs = r["fund"] if r["fund"] is not None else 50   # not loaded yet: neutral, and the card says n/a
             r["score"] = round(0.5 * r["tech"] + 0.5 * (fs if side == "long" else 100 - fs))
+            n = news_now.get(sym) or {}
+            if side == "long":
+                r["score"] += cfg["theme_boost"] if r["themes"] else 0
+                if n.get("direction", 0) > 0 and n.get("score", 0) >= 3:
+                    r["score"] += cfg["news_boost"]
+                    r["news_note"] = "in the news: %s" % ", ".join(n.get("tags") or ["good news"])
+            elif n.get("direction", 0) < 0 and n.get("score", 0) >= 3:
+                r["score"] += cfg["news_boost"]
+                r["news_note"] = "in the news: %s" % ", ".join(n.get("tags") or ["bad news"])
             rows.append(r)
         # one row per stock: its best setup
         best = {}
@@ -1109,9 +1153,55 @@ def stage_eod(now_utc, force=False):
            "live": None, "config": cfg, "errors": list(dict.fromkeys(errors))[:30],
            "seconds": round(time.time() - t0)}
     write_json(PAGE, doc)
+    tape(quotes, lv_doc["stocks"], doc, records, data, now_utc, errors)
     log("eod: %d bullish, %d breakdowns, %d bottoms; %d tracked (%d open) in %ds" % (
         len(bull), len(bear), len(bots), len(records), doc["record"]["stats"]["open"], doc["seconds"]))
     return doc
+
+
+INDICES = {"NIFTY 50": "NSE_INDEX|Nifty 50", "NIFTY BANK": "NSE_INDEX|Nifty Bank", "INDIA VIX": "NSE_INDEX|India VIX"}
+
+
+def tape(quotes, levels, page, records, data, now_utc, errors):
+    """docs/data/market.json (indices, every F&O stock and every stock on the page, for the ticker and
+    the live prices on the cards) and docs/data/news.json (the News tab, checked against the tape)."""
+    ist = market.to_ist(now_utc)
+    in_session = market.session_today(now_utc)[0] and market.OPEN <= ist.time() < market.CLOSE
+    elapsed = max(min((ist.hour * 60 + ist.minute - market.OPEN_MIN) / float(market.CLOSE_MIN - market.OPEN_MIN), 1), 0.05)
+    idx = []
+    if data.ok:
+        try:
+            iq = upstox.quotes(list(INDICES), INDICES)
+            idx = [{"name": n, "price": q["price"], "chg_pct": round((q["price"] / q["prev_close"] - 1) * 100, 2)
+                    if q.get("prev_close") else None} for n, q in iq.items()]
+        except Exception as e:                       # noqa: BLE001
+            errors.append("index quotes: %s" % e)
+    watch = {r["symbol"] for k in ("bull", "bear", "bottoms") for r in page.get(k) or []}
+    watch |= {r["symbol"] for r in records if r["status"] in ("waiting for entry", "entered")}
+    watch |= {r["symbol"] for r in page.get("fo_plans") or []}
+    fo = {s for s, L in levels.items() if L.get("fo")}
+    rows = {}
+    for sym, q in quotes.items():
+        if sym not in fo and sym not in watch or not q.get("price"):
+            continue
+        L = levels.get(sym) or {}
+        prev = q.get("prev_close") or L.get("close")
+        pace = (q.get("volume") or 0) / (L["vavg"] * (elapsed if in_session else 1)) if L.get("vavg") else None
+        rows[sym] = {"p": round(q["price"], 2), "c": round((q["price"] / prev - 1) * 100, 2) if prev else None,
+                     "v": round(pace, 1) if pace is not None else None, "fo": sym in fo}
+    write_json(MARKET, {"updated_ist": ist.strftime("%Y-%m-%d %H:%M"), "in_session": in_session, "indices": idx,
+                        "quotes": rows}, indent=None)
+    if not data.ok:
+        return
+    try:
+        names = dict(universe())
+        qn = {s: dict(q, vavg=(levels.get(s) or {}).get("vavg")) for s, q in quotes.items()}
+        doc = newsfeed.build(sorted(fo), names, data.inst, qn, now_utc, read_json(NEWS, {}), errors, sk=market.skills())
+        write_json(NEWS, doc, indent=None)
+        log("news: %d headlines on %d F&O stocks, %d shortlisted" % (
+            doc["counts"]["headlines"], doc["counts"]["stocks"], len(doc["shortlist"])))
+    except Exception as e:                           # noqa: BLE001
+        errors.append("news: %s" % e)
 
 
 # ---------------------------------------------------------------- live: during the session
@@ -1191,6 +1281,7 @@ def stage_live(now_utc):
         for r in page.get(key) or []:
             if (r["symbol"], r.get("session")) in status:
                 r["status"] = status[(r["symbol"], r["session"])]
+    tape(quotes, lv["stocks"], page, records, data, now_utc, errors)
     page["errors"] = list(dict.fromkeys((page.get("errors") or []) + errors))[:30]
     write_json(PAGE, page)
     log("live: %d breaking out, %d breaking down, %d in a bottom's buy zone; %d plans open" % (

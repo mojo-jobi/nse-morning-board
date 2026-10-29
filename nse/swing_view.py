@@ -53,6 +53,11 @@ def sym(s):
     return (s or "").replace(".NS", "")
 
 
+def live(symbol):
+    """A slot the page fills with the latest price (docs/data/market.json)."""
+    return '<span class="lp" data-sym="%s"></span>' % e(symbol)
+
+
 def status_pill(st):
     if not st:
         return ""
@@ -171,7 +176,7 @@ def trade_card(r):
             '<span class="kind %s">%s</span>%s<span class="name">%s</span>%s</div>'
             '<div class="sub">%s</div><ul class="why2">%s</ul>%s%s%s%s</div>' % (
                 e(r.get("rank")), e(sym(r["symbol"])), e(p.get("side")), e(p.get("kind")), status_pill(r.get("status")),
-                e(r.get("name")), price_line(r), tech, "".join("<li>%s</li>" % e(w) for w in p.get("why") or []),
+                e(r.get("name")), price_line(r) + live(r["symbol"]), tech, "".join("<li>%s</li>" % e(w) for w in p.get("why") or []),
                 checks_block(r.get("checks"), r.get("qualified")), plan_block(r, p), scores(r), extras(r, lines)))
 
 
@@ -192,7 +197,7 @@ def bottom_card(r):
     return ('<div class="card"><div class="top"><span class="rank">#%s</span><span class="sym">%s</span>%s%s%s'
             '<span class="name">%s</span>%s</div><ul class="why2">%s</ul>%s%s%s%s</div>' % (
                 e(r.get("rank")), e(sym(r["symbol"])), state, q, status_pill(r.get("status")), e(r.get("name")),
-                price_line(r), "".join("<li>%s</li>" % e(w) for w in b.get("why") or []), grid,
+                price_line(r) + live(r["symbol"]), "".join("<li>%s</li>" % e(w) for w in b.get("why") or []), grid,
                 ('<h3 style="font-size:14px;margin:12px 0 0">Turning up: a plan</h3>' +
                  checks_block(r.get("checks"), r.get("qualified")) + plan_block(r, p)) if p else "",
                 scores(r), extras(r, lines)))
@@ -251,7 +256,8 @@ def option_card(o):
     typ = o["type"]
     kind = '<span class="kind %s">%s</span>' % ("long" if typ == "CE" else "short", "CALL" if typ == "CE" else "PUT")
     head = ('<div class="top"><span class="sym">%s</span>%s<span class="name">%s</span>'
-            '<span class="px">%s</span></div>' % (e(sym(o["symbol"])), kind, e(o.get("name")), rs(o.get("spot"))))
+            '<span class="px">%s</span>%s</div>' % (e(sym(o["symbol"])), kind, e(o.get("name")), rs(o.get("spot")),
+                                                  live(o["symbol"])))
     plan = ('<div class="sub">Stock plan (%s list, score %s): %s, entry %s %s, stop %s, target %s, ~%s sessions, '
             'target first in %s of replays.</div>' % (
                 e(o.get("source")), e(o.get("score")), e(p.get("kind")), "above" if typ == "CE" else "below",
@@ -477,17 +483,18 @@ JS = r"""
 (function(){
 var tabs=document.querySelectorAll("nav.tabs a");
 function show(name){var ok=false;tabs.forEach(function(a){var on=a.dataset.tab===name;a.classList.toggle("on",on);if(on)ok=true});
-  if(!ok)return show("swing");
+  if(!ok)return show(tabs[0].dataset.tab);
   document.querySelectorAll("section.tab").forEach(function(s){s.hidden=s.id!=="tab-"+name})}
 tabs.forEach(function(a){a.addEventListener("click",function(ev){ev.preventDefault();show(a.dataset.tab);
   try{history.replaceState(null,"","#"+a.dataset.tab)}catch(e){}})});
-show((location.hash||"#swing").slice(1));
+show((location.hash||"#").slice(1));
 var data=null,lib=null;
 function loadLib(){if(lib)return lib;lib=new Promise(function(ok,bad){var s=document.createElement("script");
   s.src="__LIB__";s.onload=ok;s.onerror=bad;document.head.appendChild(s)});return lib}
 function loadData(){if(data)return data;data=fetch("swing-charts.json",{cache:"no-store"}).then(function(r){return r.json()});return data}
 function css(v){return getComputedStyle(document.documentElement).getPropertyValue(v).trim()}
-document.querySelectorAll("details.chartbox").forEach(function(d){d.addEventListener("toggle",function(){
+// delegated: the cards are replaced when the page fetches new data
+document.addEventListener("toggle",function(ev){var d=ev.target;if(!d.matches||!d.matches("details.chartbox"))return;
   if(!d.open||d.dataset.done)return;d.dataset.done="1";var box=d.querySelector(".chart");
   Promise.all([loadLib(),loadData()]).then(function(r){var bars=r[1][d.dataset.sym];
     if(!bars){box.textContent="No chart data for this stock.";return}
@@ -504,6 +511,6 @@ document.querySelectorAll("details.chartbox").forEach(function(d){d.addEventList
     lines.forEach(function(l){s.createPriceLine({price:l.p,color:l.c,lineWidth:1,lineStyle:2,
       axisLabelVisible:true,title:l.t})});
     ch.timeScale().fitContent();
-  }).catch(function(){box.textContent="Could not load the chart."})})});
+  }).catch(function(){box.textContent="Could not load the chart."})},true);
 })();
 """.replace("__LIB__", CHART_LIB)

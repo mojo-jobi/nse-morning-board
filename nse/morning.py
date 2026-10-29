@@ -44,6 +44,7 @@ from decimal import Decimal
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import market  # noqa: E402
+import options  # noqa: E402
 import upstox  # noqa: E402
 
 ROOT = market.ROOT
@@ -395,6 +396,13 @@ def stage_pre(now_utc, cfg, sk, src):
     symbols = [s for s, _ in universe]
     scan_cfg = cfg.get("scan", {})
     rank_cfg = cfg.get("rank", {})
+    if rank_cfg.get("universe") == "fo" and upstox.token():
+        try:                                          # the intraday board works on F&O stocks: they have options
+            fo = upstox.instruments()["fo"]
+            symbols = [s for s in symbols if s in fo]
+            log("universe: %d F&O stocks" % len(symbols))
+        except Exception as e:                        # noqa: BLE001
+            errors.append("F&O list: %s; all stocks used" % e)
     ist = market.to_ist(now_utc)
     min_price, min_volume = scan_cfg.get("min_price", 20), scan_cfg.get("min_volume", 100000)
 
@@ -531,6 +539,58 @@ def tick_up(x, tick=0.05):
     return round(math.ceil(round(x / tick, 6)) * tick + tick, 2)
 
 
+def replay(tm, text, sym, now_utc, plan, k, or_min, target_r, side, bars_today, out):
+    """trader-timemachine: 10,000 replays to flat-by, and (for a breakout) the rule on every past session."""
+    result = tm.chart_result(text, sym)
+    _, bars, _ = tm.parse_bars(result, now_utc)
+    sessions, short = tm.full_sessions(tm.split_sessions(bars), plan["date"])
+    fb = plan["flat_by"]
+    last = (int(fb[:2]) * 60 + int(fb[3:]) - market.OPEN_MIN) // 5 - 1
+    tmd = {"sessions": len(sessions)}
+    if len(sessions) >= tm.MIN_SESSIONS and last > k:
+        pool = tm.build_pool(sessions)
+        mc = tm.simulate(pool, plan["entry"], plan["stop"], plan["target"], k, last, 10000, 19, 2, side)
+        mc["until"] = fb
+        tmd.update({k2: mc[k2] for k2 in ("p_target", "p_stop", "p_neither", "p_green", "avg_R", "median_close",
+                                          "p5_close", "p95_close", "r_at_target")})
+        tmd["verdict"] = tm.verdict(mc)
+        tmd["notes"] = tm.verdict_notes(mc)
+        if side == "buy":
+            hist = tm.history_replay(sessions, {"setup": "orb", "or_minutes": or_min, "stop_rule": "or_mid",
+                                                "target_r": float(target_r)}, last, "buy")
+            tmd["history"] = {k2: hist[k2] for k2 in ("sessions", "triggered", "target", "stop", "close", "avg_R")}
+        upto = max(b["slot"] for b in bars_today)            # same stretch of the day: 9:15 to the last closed bar
+        avg_day_vol = sum(sum(b["v"] for b in D[:upto + 1]) for _, D in sessions) / len(sessions)
+        today_vol = sum(b["v"] for b in bars_today)
+        out["rel_volume"] = round(today_vol / avg_day_vol, 2) if avg_day_vol else None
+    else:
+        tmd["skipped"] = "only %d full sessions in 60 days (needs %d)" % (len(sessions), tm.MIN_SESSIONS)
+    return tmd
+
+
+def plan_short(sym, cfg, now_utc, sk, text, out, orr, b, t_close, or_min, target_r, bars_today):
+    """A breakdown below the opening range: stop at the range midpoint, target at 2R, traded with a put
+    (short selling shares stays off: allow_short is false)."""
+    entry = round(b["c"], 2)
+    stop = round(math.ceil(round((orr["high"] + orr["low"]) / 2 / 0.05, 6)) * 0.05, 2)
+    if stop <= entry + 0.05:
+        out["refused"] = "breakdown: the stop (range midpoint) is too close to the entry"
+        return out
+    risk = stop - entry
+    plan = {"symbol": sym, "side": "sell", "setup": "orb breakdown", "date": market.to_ist(now_utc).date().isoformat(),
+            "entry": entry, "stop": stop, "target": round(entry - float(target_r) * risk, 2), "entry_time": t_close,
+            "entry_bar": b["slot"], "risk_per_share": round(risk, 2), "reward_risk": float(target_r),
+            "stop_label": "opening-range midpoint", "target_label": "%gR" % float(target_r),
+            "opening_range": {"high": orr["high"], "low": orr["low"], "minutes": or_min},
+            "flat_by": cfg.get("flat_by", "15:15"), "interval": "5m"}
+    out.update(status="triggered", side="sell", entry_kind="breakdown at %s: closed below %.2f" % (b.get("start") or t_close, orr["low"]))
+    tmd = replay(sk["timemachine"], text, sym, now_utc, plan, b["slot"], or_min, target_r, "sell", bars_today, out)
+    out.update(plan=plan, timemachine=tmd,
+               sizing={"qty": 0, "refusal": "short selling shares is off: this one is for a put (see the option)"},
+               risk={"verdict": "PUT", "reasons": [], "warnings": []}, order=None, alerts=[])
+    return out
+
+
 def plan_one(sym, cfg, now_utc, sk, src, prev_close=None):
     """entry -> exit -> time machine -> budget -> risk -> alerts, for one stock."""
     pc = cfg.get("plan", {})
@@ -549,6 +609,16 @@ def plan_one(sym, cfg, now_utc, sk, src, prev_close=None):
         return out
     bars_today = res["_bars"]
     today_vol = sum(b["v"] for b in bars_today)
+
+    # a breakdown: the first completed bar after the range to close below its low (traded with a put)
+    if res["status"] != "triggered":
+        or_bars = or_min // 5
+        last_entry = ecfg["no_entries_after"]
+        for b in bars_today:
+            t_close = (datetime.datetime.combine(datetime.date.today(), market.OPEN)
+                       + datetime.timedelta(minutes=5 * (b["slot"] + 1))).strftime("%H:%M")
+            if b["slot"] >= or_bars and b["c"] < orr["low"] and t_close <= last_entry:
+                return plan_short(sym, cfg, now_utc, sk, text, out, orr, b, t_close, or_min, target_r, bars_today)
 
     # entry: the breakout bar if it fired, else "if it closes above the high on the next bar"
     if res["status"] == "triggered":
@@ -577,29 +647,7 @@ def plan_one(sym, cfg, now_utc, sk, src, prev_close=None):
             "flat_by": cfg.get("flat_by", "15:15"), "interval": "5m"}
 
     # trader-timemachine: 10,000 replays to flat-by, and the rule on every past session
-    result = tm.chart_result(text, sym)
-    _, bars, _ = tm.parse_bars(result, now_utc)
-    days = tm.split_sessions(bars)
-    sessions, short = tm.full_sessions(days, plan["date"])
-    fb = plan["flat_by"]
-    last = (int(fb[:2]) * 60 + int(fb[3:]) - market.OPEN_MIN) // 5 - 1
-    tmd = {"sessions": len(sessions)}
-    if len(sessions) >= tm.MIN_SESSIONS and last > k:
-        pool = tm.build_pool(sessions)
-        mc = tm.simulate(pool, plan["entry"], plan["stop"], plan["target"], k, last, 10000, 19, 2, "buy")
-        mc["until"] = fb
-        hist = tm.history_replay(sessions, {"setup": "orb", "or_minutes": or_min, "stop_rule": "or_mid",
-                                            "target_r": float(target_r)}, last, "buy")
-        tmd.update({k2: mc[k2] for k2 in ("p_target", "p_stop", "p_neither", "p_green", "avg_R", "median_close",
-                                          "p5_close", "p95_close", "r_at_target")})
-        tmd["verdict"] = tm.verdict(mc)
-        tmd["notes"] = tm.verdict_notes(mc)
-        tmd["history"] = {k2: hist[k2] for k2 in ("sessions", "triggered", "target", "stop", "close", "avg_R")}
-        upto = max(b["slot"] for b in bars_today)            # same stretch of the day: 9:15 to the last closed bar
-        avg_day_vol = sum(sum(b["v"] for b in D[:upto + 1]) for _, D in sessions) / len(sessions)
-        out["rel_volume"] = round(today_vol / avg_day_vol, 2) if avg_day_vol else None
-    else:
-        tmd["skipped"] = "only %d full sessions in 60 days (needs %d)" % (len(sessions), tm.MIN_SESSIONS)
+    tmd = replay(tm, text, sym, now_utc, plan, k, or_min, target_r, "buy", bars_today, out)
 
     # trader-budget: whole shares inside the rupee max loss, position cap and cash
     s = bud.size_trade(plan, cfg)
@@ -631,6 +679,14 @@ def stage_orb(now_utc, cfg, sk, pre, src):
     t0 = time.time()
     rows = pre.get("shortlist") or []
     log("orb: %d stocks from the %s shortlist" % (len(rows), pre.get("created_ist")))
+    inst = None
+    if upstox.token():
+        try:
+            inst = upstox.instruments()
+        except Exception as e:                       # noqa: BLE001
+            log("orb: no Upstox instrument list for the options (%s)" % e)
+    today = market.to_ist(now_utc).date()
+    oc = options.settings(cfg)
     for r in rows:
         prev = None
         if r.get("price") and r.get("chg_pct") is not None:
@@ -639,7 +695,14 @@ def stage_orb(now_utc, cfg, sk, pre, src):
             r["trade"] = plan_one(r["symbol"], cfg, now_utc, sk, src, prev)
         except Exception as e:                       # noqa: BLE001 - one stock failing is a row, not the run
             r["trade"] = {"status": "error", "reason": str(e)}
-        log("  %-16s %s" % (r["symbol"], r["trade"].get("status")))
+        t = r["trade"]
+        if inst and t.get("plan") and t.get("status") in ("triggered", "waiting") and r["symbol"] in (inst.get("fo") or {}):
+            try:
+                t["option"] = options.intraday_option(r["symbol"], t["plan"], inst, today, oc)
+            except Exception as e:                   # noqa: BLE001
+                t["option"] = {"error": str(e)}
+        log("  %-16s %s%s" % (r["symbol"], t.get("status"),
+                              " (%s)" % t["option"].get("label") if (t.get("option") or {}).get("label") else ""))
         time.sleep(0.5)
     doc = dict(pre, stage="orb", orb_ist=market.to_ist(now_utc).strftime("%Y-%m-%d %H:%M"),
                orb_seconds=round(time.time() - t0))

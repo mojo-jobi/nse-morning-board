@@ -2,15 +2,16 @@ name: NSE morning board
 
 on:
   schedule:
-    - cron: "30 3 * * 1-5"       # 9:00 IST: intraday news + daily scan + shortlist
-    - cron: "5 4 * * 1-5"        # 9:35 IST: intraday opening range + trade numbers
-    - cron: "15,45 4-9 * * 1-5"  # 9:45 to 15:15 IST, every 30 min: swing prices, entries, exits, levels crossed
+    - cron: "30 3 * * 1-5"       # 9:00 IST: intraday news + daily scan + F&O shortlist
+    - cron: "45,50,55 3 * * 1-5" # 9:15 to 9:25 IST, every 5 min: prices, news (tick)
+    - cron: "*/5 4-9 * * 1-5"    # 9:30 to 15:25 IST, every 5 min: intraday plans and options, prices, entries,
+                                 # exits, news, levels crossed (tick)
     - cron: "20 10 * * 1-5"      # 15:50 IST: swing end-of-day scan, track record, sheet
     - cron: "30 4 * * 6"         # Saturday 10:00 IST: refresh every liquid stock's fundamentals
   workflow_dispatch:
     inputs:
       stage:
-        description: "pre, orb, all, refresh (the Refresh button), swing-eod, swing-live, swing-fundamentals, or check (Upstox token health, no commit)"
+        description: "pre, orb, all, refresh (the Update now button), tick (the 5-minute run), swing-eod, swing-live, swing-options, swing-fundamentals, or check (Upstox token health, no commit)"
         default: "all"
       request:
         description: "id the dashboard uses to find its own run (leave empty)"
@@ -47,8 +48,7 @@ jobs:
         run: |
           case "${{ github.event.schedule }}" in
             "30 3 * * 1-5") s=pre ;;
-            "5 4 * * 1-5") s=orb ;;
-            "15,45 4-9 * * 1-5") s=swing-live ;;
+            "45,50,55 3 * * 1-5"|"*/5 4-9 * * 1-5") s=tick ;;
             "20 10 * * 1-5") s=swing-eod ;;
             "30 4 * * 6") s=swing-fundamentals ;;
             *) s="${{ github.event.inputs.stage }}" ;;
@@ -74,6 +74,11 @@ jobs:
           case "${{ steps.stage.outputs.stage }}" in
             swing-*) python nse/swing.py "${{ steps.stage.outputs.stage }}" ;;
             refresh) python nse/morning.py refresh; python nse/swing.py live ;;
+            tick)
+              # the opening-range plans while entries are allowed, then everything else
+              hm=$(TZ=Asia/Kolkata date +%-H%M)
+              if [ "$hm" -ge 935 ] && [ "$hm" -le 1450 ]; then python nse/morning.py orb || echo "intraday plans skipped"; fi
+              python nse/swing.py live ;;
             *) python nse/morning.py "${{ steps.stage.outputs.stage }}" ;;
           esac
 
