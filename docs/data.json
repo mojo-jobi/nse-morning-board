@@ -129,13 +129,13 @@
      "avg_volume": 490054
     },
     "last": {
-     "bar_start": "11:30",
-     "close": 2353.0,
-     "vs_level_pct": 0.9
+     "bar_start": "12:20",
+     "close": 2370.6,
+     "vs_level_pct": 1.66
     },
     "bars_source": "Upstox",
     "entry_kind": "triggered at 9:55 AM",
-    "rel_volume": 5.35,
+    "rel_volume": 5.01,
     "plan": {
      "symbol": "LAURUSLABS.NS",
      "side": "buy",
@@ -236,23 +236,23 @@
      }
     ],
     "option": {
-     "label": "LAURUSLABS 2360 CE",
-     "strike": 2360.0,
+     "label": "LAURUSLABS 2380 CE",
+     "strike": 2380.0,
      "type": "CE",
      "expiry": "2026-11-23",
      "dte": 24,
      "lot": 425,
-     "ask": 64.95,
-     "bid": 64.35,
-     "delta": 0.51,
-     "iv": 27.16,
-     "theta_lot_day": -578,
-     "oi_lots": 1629,
-     "cost_lot": 27604,
-     "stop": 58.46,
-     "target": 103.92,
-     "risk_lot": 2760,
-     "reward_lot": 16562,
+     "ask": 67.5,
+     "bid": 67.15,
+     "delta": 0.513,
+     "iv": 27.59,
+     "theta_lot_day": -593,
+     "oi_lots": 447,
+     "cost_lot": 28688,
+     "stop": 60.75,
+     "target": 108.0,
+     "risk_lot": 2869,
+     "reward_lot": 17212,
      "rr": 6.0,
      "lots_in_budget": 1,
      "stop_rule": "-10%",
@@ -267,7 +267,7 @@
      {
       "name": "Option fits the budget and liquidity",
       "ok": true,
-      "detail": "LAURUSLABS 2360 CE"
+      "detail": "LAURUSLABS 2380 CE"
      },
      {
       "name": "Replays lean to the target",
@@ -277,7 +277,7 @@
      {
       "name": "Volume behind it",
       "ok": true,
-      "detail": "5.35x usual volume by now"
+      "detail": "5.01x usual volume by now"
      }
     ],
     "qualified": false
@@ -359,7 +359,7 @@
    "trade": {
     "status": "waiting",
     "phase": "open",
-    "reason": "last close $1843.60 (11:30 bar), $28.00 under the range high $1871.60 (-1.50%)",
+    "reason": "last close $1851.00 (12:20 bar), $20.60 under the range high $1871.60 (-1.10%)",
     "opening_range": {
      "high": 1871.6,
      "low": 1813.7,
@@ -370,13 +370,13 @@
      "avg_volume": 393982
     },
     "last": {
-     "bar_start": "11:30",
-     "close": 1843.6,
-     "vs_level_pct": -1.5
+     "bar_start": "12:20",
+     "close": 1851.0,
+     "vs_level_pct": -1.1
     },
     "bars_source": "Upstox",
     "entry_kind": "not triggered: plan if a bar closes above 1871.60",
-    "rel_volume": 3.59,
+    "rel_volume": 3.41,
     "plan": {
      "symbol": "ADANIPORTS.NS",
      "side": "buy",
@@ -385,8 +385,8 @@
      "entry": 1871.65,
      "stop": 1842.65,
      "target": 1929.65,
-     "entry_time": "11:35",
-     "entry_bar": 27,
+     "entry_time": "12:25",
+     "entry_bar": 37,
      "risk_per_share": 29.0,
      "reward_risk": 2.0,
      "stop_label": "opening-range midpoint",
@@ -401,19 +401,19 @@
     },
     "timemachine": {
      "sessions": 57,
-     "p_target": 0.0004,
-     "p_stop": 0.0388,
-     "p_neither": 0.9608,
-     "p_green": 0.5355,
-     "avg_R": 0.05,
-     "median_close": 1872.95,
-     "p5_close": 1849.31,
-     "p95_close": 1897.49,
+     "p_target": 0.0,
+     "p_stop": 0.023,
+     "p_neither": 0.977,
+     "p_green": 0.5455,
+     "avg_R": 0.052,
+     "median_close": 1873.17,
+     "p5_close": 1851.71,
+     "p95_close": 1894.73,
      "r_at_target": 2.0,
-     "verdict": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 1 % (target first 0.0 % vs stop first 3.9 %).",
+     "verdict": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 0 % (target first 0.0 % vs stop first 2.3 %).",
      "notes": [
-      "96.1 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those.",
-      "Average R is +0.050 all the same: the replays that hit neither pull it the other way."
+      "97.7 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those.",
+      "Average R is +0.052 all the same: the replays that hit neither pull it the other way."
      ],
      "history": {
       "sessions": 57,
@@ -431,7 +431,7 @@
      "max_loss": 986.0,
      "refusal": null,
      "reward": 1972.0,
-     "replay_avg": 49.3
+     "replay_avg": 51.27
     },
     "risk": {
      "verdict": "PASS",
@@ -455,7 +455,7 @@
       "risk_per_share": 29.0,
       "max_loss": 986.0,
       "setup": "orb",
-      "entry_time": "11:35",
+      "entry_time": "12:25",
       "flat_by": "15:15"
      }
     },
@@ -483,17 +483,17 @@
      "expiry": "2026-11-23",
      "dte": 24,
      "lot": 475,
-     "ask": 44.05,
-     "bid": 43.7,
-     "delta": 0.538,
-     "iv": 21.15,
-     "theta_lot_day": -392,
-     "oi_lots": 1067,
-     "cost_lot": 20924,
-     "stop": 39.64,
-     "target": 70.48,
-     "risk_lot": 2092,
-     "reward_lot": 12554,
+     "ask": 49.25,
+     "bid": 48.9,
+     "delta": 0.571,
+     "iv": 21.42,
+     "theta_lot_day": -395,
+     "oi_lots": 1078,
+     "cost_lot": 23394,
+     "stop": 44.33,
+     "target": 78.8,
+     "risk_lot": 2339,
+     "reward_lot": 14036,
      "rr": 6.0,
      "lots_in_budget": 1,
      "stop_rule": "-10%",
@@ -513,12 +513,12 @@
      {
       "name": "Replays lean to the target",
       "ok": false,
-      "detail": "target first 0%, stop first 4%, average +0.05R"
+      "detail": "target first 0%, stop first 2%, average +0.05R"
      },
      {
       "name": "Volume behind it",
       "ok": true,
-      "detail": "3.59x usual volume by now"
+      "detail": "3.41x usual volume by now"
      }
     ],
     "qualified": false
@@ -609,7 +609,7 @@
    "trade": {
     "status": "waiting",
     "phase": "open",
-    "reason": "last close $3033.90 (11:30 bar), $26.10 under the range high $3060.00 (-0.85%)",
+    "reason": "last close $3045.30 (12:20 bar), $14.70 under the range high $3060.00 (-0.48%)",
     "opening_range": {
      "high": 3060.0,
      "low": 2980.0,
@@ -620,13 +620,13 @@
      "avg_volume": 383479
     },
     "last": {
-     "bar_start": "11:30",
-     "close": 3033.9,
-     "vs_level_pct": -0.85
+     "bar_start": "12:20",
+     "close": 3045.3,
+     "vs_level_pct": -0.48
     },
     "bars_source": "Upstox",
     "entry_kind": "not triggered: plan if a bar closes above 3060.00",
-    "rel_volume": 7.5,
+    "rel_volume": 6.62,
     "plan": {
      "symbol": "TRENT.NS",
      "side": "buy",
@@ -635,8 +635,8 @@
      "entry": 3060.05,
      "stop": 3020.0,
      "target": 3140.15,
-     "entry_time": "11:35",
-     "entry_bar": 27,
+     "entry_time": "12:25",
+     "entry_bar": 37,
      "risk_per_share": 40.05,
      "reward_risk": 2.0,
      "stop_label": "opening-range midpoint",
@@ -651,18 +651,18 @@
     },
     "timemachine": {
      "sessions": 57,
-     "p_target": 0.0047,
-     "p_stop": 0.1608,
-     "p_neither": 0.8345,
-     "p_green": 0.4439,
-     "avg_R": -0.081,
-     "median_close": 3056.39,
-     "p5_close": 3013.68,
-     "p95_close": 3101.63,
+     "p_target": 0.0011,
+     "p_stop": 0.1094,
+     "p_neither": 0.8895,
+     "p_green": 0.4413,
+     "avg_R": -0.066,
+     "median_close": 3056.79,
+     "p5_close": 3018.49,
+     "p95_close": 3098.55,
      "r_at_target": 2.0,
-     "verdict": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 3 % (target first 0.5 % vs stop first 16.1 %).",
+     "verdict": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 1 % (target first 0.1 % vs stop first 10.9 %).",
      "notes": [
-      "83.5 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those."
+      "88.9 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those."
      ],
      "history": {
       "sessions": 57,
@@ -680,7 +680,7 @@
      "max_loss": 961.2,
      "refusal": null,
      "reward": 1922.4,
-     "replay_avg": -77.86
+     "replay_avg": -63.44
     },
     "risk": {
      "verdict": "PASS",
@@ -704,7 +704,7 @@
       "risk_per_share": 40.05,
       "max_loss": 961.2,
       "setup": "orb",
-      "entry_time": "11:35",
+      "entry_time": "12:25",
       "flat_by": "15:15"
      }
     },
@@ -732,18 +732,18 @@
      "expiry": "2026-11-23",
      "dte": 24,
      "lot": 225,
-     "ask": 83.45,
-     "bid": 83.05,
+     "ask": 82.95,
+     "bid": 82.5,
      "delta": 0.524,
-     "iv": 25.57,
-     "theta_lot_day": -373,
-     "oi_lots": 2072,
-     "cost_lot": 18776,
-     "stop": 75.11,
-     "target": 125.45,
-     "risk_lot": 1878,
-     "reward_lot": 9451,
-     "rr": 5.03,
+     "iv": 25.63,
+     "theta_lot_day": -374,
+     "oi_lots": 1991,
+     "cost_lot": 18664,
+     "stop": 74.66,
+     "target": 124.91,
+     "risk_lot": 1866,
+     "reward_lot": 9440,
+     "rr": 5.06,
      "lots_in_budget": 1,
      "stop_rule": "-10%",
      "flat_by": "15:15"
@@ -762,12 +762,12 @@
      {
       "name": "Replays lean to the target",
       "ok": false,
-      "detail": "target first 0%, stop first 16%, average -0.08R"
+      "detail": "target first 0%, stop first 11%, average -0.07R"
      },
      {
       "name": "Volume behind it",
       "ok": true,
-      "detail": "7.5x usual volume by now"
+      "detail": "6.62x usual volume by now"
      }
     ],
     "qualified": false
@@ -857,7 +857,7 @@
    "trade": {
     "status": "triggered",
     "phase": "open",
-    "reason": "last close $33.74 (11:30 bar), $2.84 under the range high $36.58 (-7.76%)",
+    "reason": "last close $33.94 (12:20 bar), $2.64 under the range high $36.58 (-7.22%)",
     "opening_range": {
      "high": 36.58,
      "low": 35.02,
@@ -868,14 +868,14 @@
      "avg_volume": 16348178
     },
     "last": {
-     "bar_start": "11:30",
-     "close": 33.74,
-     "vs_level_pct": -7.76
+     "bar_start": "12:20",
+     "close": 33.94,
+     "vs_level_pct": -7.22
     },
     "bars_source": "Upstox",
     "side": "sell",
     "entry_kind": "breakdown at 09:40: closed below 35.02",
-    "rel_volume": 7.84,
+    "rel_volume": 7.42,
     "plan": {
      "symbol": "SUZLON.NS",
      "side": "sell",
@@ -933,17 +933,17 @@
      "expiry": "2026-11-23",
      "dte": 24,
      "lot": 12700,
-     "ask": 2.1,
-     "bid": 2.06,
+     "ask": 1.97,
+     "bid": 1.94,
      "delta": -0.6,
-     "iv": 42.97,
-     "theta_lot_day": -380,
-     "oi_lots": 841,
-     "cost_lot": 26670,
-     "stop": 1.89,
-     "target": 3.36,
-     "risk_lot": 2667,
-     "reward_lot": 16002,
+     "iv": 39.06,
+     "theta_lot_day": -347,
+     "oi_lots": 833,
+     "cost_lot": 25019,
+     "stop": 1.77,
+     "target": 3.15,
+     "risk_lot": 2502,
+     "reward_lot": 15011,
      "rr": 6.0,
      "lots_in_budget": 1,
      "stop_rule": "-10%",
@@ -968,7 +968,7 @@
      {
       "name": "Volume behind it",
       "ok": true,
-      "detail": "7.84x usual volume by now"
+      "detail": "7.42x usual volume by now"
      }
     ],
     "qualified": false
@@ -1052,7 +1052,7 @@
    "trade": {
     "status": "waiting",
     "phase": "open",
-    "reason": "last close $1593.50 (11:30 bar), $40.00 under the range high $1633.50 (-2.45%)",
+    "reason": "last close $1626.50 (12:20 bar), $7.00 under the range high $1633.50 (-0.43%)",
     "opening_range": {
      "high": 1633.5,
      "low": 1551.0,
@@ -1063,13 +1063,13 @@
      "avg_volume": 95968
     },
     "last": {
-     "bar_start": "11:30",
-     "close": 1593.5,
-     "vs_level_pct": -2.45
+     "bar_start": "12:20",
+     "close": 1626.5,
+     "vs_level_pct": -0.43
     },
     "bars_source": "Upstox",
     "entry_kind": "not triggered: plan if a bar closes above 1633.50",
-    "rel_volume": 4.37,
+    "rel_volume": 4.55,
     "plan": {
      "symbol": "BLUESTARCO.NS",
      "side": "buy",
@@ -1078,8 +1078,8 @@
      "entry": 1633.55,
      "stop": 1592.25,
      "target": 1716.15,
-     "entry_time": "11:35",
-     "entry_bar": 27,
+     "entry_time": "12:25",
+     "entry_bar": 37,
      "risk_per_share": 41.3,
      "reward_risk": 2.0,
      "stop_label": "opening-range midpoint",
@@ -1094,19 +1094,19 @@
     },
     "timemachine": {
      "sessions": 57,
-     "p_target": 0.0001,
-     "p_stop": 0.0207,
-     "p_neither": 0.9792,
-     "p_green": 0.5486,
-     "avg_R": 0.059,
-     "median_close": 1635.77,
-     "p5_close": 1605.08,
-     "p95_close": 1667.94,
+     "p_target": 0.0,
+     "p_stop": 0.0068,
+     "p_neither": 0.9932,
+     "p_green": 0.5174,
+     "avg_R": 0.027,
+     "median_close": 1634.32,
+     "p5_close": 1609.57,
+     "p95_close": 1660.78,
      "r_at_target": 2.0,
-     "verdict": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 0 % (target first 0.0 % vs stop first 2.1 %).",
+     "verdict": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 0 % (target first 0.0 % vs stop first 0.7 %).",
      "notes": [
-      "97.9 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those.",
-      "Average R is +0.059 all the same: the replays that hit neither pull it the other way."
+      "99.3 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those.",
+      "Average R is +0.027 all the same: the replays that hit neither pull it the other way."
      ],
      "history": {
       "sessions": 57,
@@ -1124,7 +1124,7 @@
      "max_loss": 991.2,
      "refusal": null,
      "reward": 1982.4,
-     "replay_avg": 58.48
+     "replay_avg": 26.76
     },
     "risk": {
      "verdict": "PASS",
@@ -1148,7 +1148,7 @@
       "risk_per_share": 41.3,
       "max_loss": 991.2,
       "setup": "orb",
-      "entry_time": "11:35",
+      "entry_time": "12:25",
       "flat_by": "15:15"
      }
     },
@@ -1170,23 +1170,23 @@
      }
     ],
     "option": {
-     "label": "BLUESTARCO 1580 CE",
-     "strike": 1580.0,
+     "label": "BLUESTARCO 1620 CE",
+     "strike": 1620.0,
      "type": "CE",
      "expiry": "2026-11-23",
      "dte": 24,
      "lot": 325,
-     "ask": 57.0,
-     "bid": 55.6,
-     "delta": 0.538,
-     "iv": 31.31,
-     "theta_lot_day": -341,
-     "oi_lots": 142,
-     "cost_lot": 18525,
-     "stop": 51.3,
-     "target": 91.2,
-     "risk_lot": 1852,
-     "reward_lot": 11115,
+     "ask": 52.15,
+     "bid": 51.3,
+     "delta": 0.519,
+     "iv": 30.7,
+     "theta_lot_day": -343,
+     "oi_lots": 626,
+     "cost_lot": 16949,
+     "stop": 46.94,
+     "target": 83.44,
+     "risk_lot": 1695,
+     "reward_lot": 10169,
      "rr": 6.0,
      "lots_in_budget": 1,
      "stop_rule": "-10%",
@@ -1201,17 +1201,17 @@
      {
       "name": "Option fits the budget and liquidity",
       "ok": true,
-      "detail": "BLUESTARCO 1580 CE"
+      "detail": "BLUESTARCO 1620 CE"
      },
      {
       "name": "Replays lean to the target",
       "ok": false,
-      "detail": "target first 0%, stop first 2%, average +0.06R"
+      "detail": "target first 0%, stop first 1%, average +0.03R"
      },
      {
       "name": "Volume behind it",
       "ok": true,
-      "detail": "4.37x usual volume by now"
+      "detail": "4.55x usual volume by now"
      }
     ],
     "qualified": false
@@ -1310,13 +1310,13 @@
      "avg_volume": 340460
     },
     "last": {
-     "bar_start": "11:30",
-     "close": 1175.95,
-     "vs_level_pct": 0.52
+     "bar_start": "12:20",
+     "close": 1173.75,
+     "vs_level_pct": 0.33
     },
     "bars_source": "Upstox",
     "entry_kind": "triggered at 11:05 AM",
-    "rel_volume": 0.97,
+    "rel_volume": 0.95,
     "plan": {
      "symbol": "INFY.NS",
      "side": "buy",
@@ -1416,25 +1416,25 @@
      }
     ],
     "option": {
-     "label": "INFY 1180 CE",
-     "strike": 1180.0,
+     "label": "INFY 1160 CE",
+     "strike": 1160.0,
      "type": "CE",
      "expiry": "2026-11-23",
      "dte": 24,
      "lot": 400,
-     "ask": 35.95,
-     "bid": 35.8,
-     "delta": 0.522,
-     "iv": 28.87,
-     "theta_lot_day": -289,
-     "oi_lots": 3777,
-     "cost_lot": 14380,
-     "stop": 32.36,
-     "target": 48.8,
-     "risk_lot": 1438,
-     "reward_lot": 5139,
-     "rr": 3.57,
-     "lots_in_budget": 2,
+     "ask": 43.3,
+     "bid": 43.1,
+     "delta": 0.587,
+     "iv": 29.17,
+     "theta_lot_day": -285,
+     "oi_lots": 5338,
+     "cost_lot": 17320,
+     "stop": 38.97,
+     "target": 57.73,
+     "risk_lot": 1732,
+     "reward_lot": 5771,
+     "rr": 3.33,
+     "lots_in_budget": 1,
      "stop_rule": "-10%",
      "flat_by": "15:15"
     },
@@ -1447,7 +1447,7 @@
      {
       "name": "Option fits the budget and liquidity",
       "ok": true,
-      "detail": "INFY 1180 CE"
+      "detail": "INFY 1160 CE"
      },
      {
       "name": "Replays lean to the target",
@@ -1457,7 +1457,7 @@
      {
       "name": "Volume behind it",
       "ok": false,
-      "detail": "0.97x usual volume by now"
+      "detail": "0.95x usual volume by now"
      }
     ],
     "qualified": false
@@ -1542,7 +1542,7 @@
    "trade": {
     "status": "waiting",
     "phase": "open",
-    "reason": "last close $808.25 (11:30 bar), $6.75 under the range high $815.00 (-0.83%)",
+    "reason": "last close $808.85 (12:20 bar), $6.15 under the range high $815.00 (-0.75%)",
     "opening_range": {
      "high": 815.0,
      "low": 777.2,
@@ -1553,13 +1553,13 @@
      "avg_volume": 764601
     },
     "last": {
-     "bar_start": "11:30",
-     "close": 808.25,
-     "vs_level_pct": -0.83
+     "bar_start": "12:20",
+     "close": 808.85,
+     "vs_level_pct": -0.75
     },
     "bars_source": "Upstox",
     "entry_kind": "not triggered: plan if a bar closes above 815.00",
-    "rel_volume": 8.1,
+    "rel_volume": 7.19,
     "plan": {
      "symbol": "GODREJCP.NS",
      "side": "buy",
@@ -1568,8 +1568,8 @@
      "entry": 815.05,
      "stop": 796.1,
      "target": 852.95,
-     "entry_time": "11:35",
-     "entry_bar": 27,
+     "entry_time": "12:25",
+     "entry_bar": 37,
      "risk_per_share": 18.95,
      "reward_risk": 2.0,
      "stop_label": "opening-range midpoint",
@@ -1585,18 +1585,18 @@
     "timemachine": {
      "sessions": 57,
      "p_target": 0.0,
-     "p_stop": 0.0167,
-     "p_neither": 0.9833,
-     "p_green": 0.5202,
-     "avg_R": 0.009,
-     "median_close": 815.35,
-     "p5_close": 804.26,
-     "p95_close": 825.89,
+     "p_stop": 0.0004,
+     "p_neither": 0.9996,
+     "p_green": 0.5295,
+     "avg_R": 0.018,
+     "median_close": 815.43,
+     "p5_close": 806.43,
+     "p95_close": 824.54,
      "r_at_target": 2.0,
-     "verdict": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 0 % (target first 0.0 % vs stop first 1.7 %).",
+     "verdict": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 0 % (target first 0.0 % vs stop first 0.0 %).",
      "notes": [
-      "98.3 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those.",
-      "Average R is +0.009 all the same: the replays that hit neither pull it the other way."
+      "100.0 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those.",
+      "Average R is +0.018 all the same: the replays that hit neither pull it the other way."
      ],
      "history": {
       "sessions": 57,
@@ -1614,7 +1614,7 @@
      "max_loss": 985.4,
      "refusal": null,
      "reward": 1970.8,
-     "replay_avg": 8.87
+     "replay_avg": 17.74
     },
     "risk": {
      "verdict": "PASS",
@@ -1638,7 +1638,7 @@
       "risk_per_share": 18.95,
       "max_loss": 985.4,
       "setup": "orb",
-      "entry_time": "11:35",
+      "entry_time": "12:25",
       "flat_by": "15:15"
      }
     },
@@ -1666,19 +1666,19 @@
      "expiry": "2026-11-23",
      "dte": 24,
      "lot": 500,
-     "ask": 21.25,
-     "bid": 20.95,
-     "delta": 0.544,
-     "iv": 23.32,
-     "theta_lot_day": -198,
-     "oi_lots": 717,
-     "cost_lot": 10625,
-     "stop": 19.12,
-     "target": 34.0,
-     "risk_lot": 1062,
-     "reward_lot": 6375,
+     "ask": 19.9,
+     "bid": 19.7,
+     "delta": 0.527,
+     "iv": 23.07,
+     "theta_lot_day": -196,
+     "oi_lots": 699,
+     "cost_lot": 9950,
+     "stop": 17.91,
+     "target": 31.84,
+     "risk_lot": 995,
+     "reward_lot": 5970,
      "rr": 6.0,
-     "lots_in_budget": 2,
+     "lots_in_budget": 3,
      "stop_rule": "-10%",
      "flat_by": "15:15"
     },
@@ -1696,12 +1696,12 @@
      {
       "name": "Replays lean to the target",
       "ok": false,
-      "detail": "target first 0%, stop first 2%, average +0.01R"
+      "detail": "target first 0%, stop first 0%, average +0.02R"
      },
      {
       "name": "Volume behind it",
       "ok": true,
-      "detail": "8.1x usual volume by now"
+      "detail": "7.19x usual volume by now"
      }
     ],
     "qualified": false
@@ -1788,7 +1788,7 @@
    "trade": {
     "status": "triggered",
     "phase": "open",
-    "reason": "last close $1163.40 (11:30 bar), $11.20 under the range high $1174.60 (-0.95%)",
+    "reason": "last close $1158.60 (12:20 bar), $16.00 under the range high $1174.60 (-1.36%)",
     "opening_range": {
      "high": 1174.6,
      "low": 1161.5,
@@ -1799,14 +1799,14 @@
      "avg_volume": 412178
     },
     "last": {
-     "bar_start": "11:30",
-     "close": 1163.4,
-     "vs_level_pct": -0.95
+     "bar_start": "12:20",
+     "close": 1158.6,
+     "vs_level_pct": -1.36
     },
     "bars_source": "Upstox",
     "side": "sell",
     "entry_kind": "breakdown at 09:50: closed below 1161.50",
-    "rel_volume": 0.8,
+    "rel_volume": 1.16,
     "plan": {
      "symbol": "RELIANCE.NS",
      "side": "sell",
@@ -1861,17 +1861,17 @@
      "expiry": "2026-11-23",
      "dte": 24,
      "lot": 500,
-     "ask": 38.3,
-     "bid": 38.1,
-     "delta": -0.541,
-     "iv": 26.79,
-     "theta_lot_day": -331,
-     "oi_lots": 5923,
-     "cost_lot": 19150,
-     "stop": 34.7,
-     "target": 45.5,
-     "risk_lot": 1800,
-     "reward_lot": 3600,
+     "ask": 41.1,
+     "bid": 40.9,
+     "delta": -0.561,
+     "iv": 27.4,
+     "theta_lot_day": -335,
+     "oi_lots": 5962,
+     "cost_lot": 20550,
+     "stop": 37.37,
+     "target": 48.56,
+     "risk_lot": 1864,
+     "reward_lot": 3728,
      "rr": 2.0,
      "lots_in_budget": 1,
      "stop_rule": "stock stop via delta",
@@ -1896,7 +1896,7 @@
      {
       "name": "Volume behind it",
       "ok": false,
-      "detail": "0.8x usual volume by now"
+      "detail": "1.16x usual volume by now"
      }
     ],
     "qualified": false
@@ -1990,13 +1990,13 @@
      "avg_volume": 1444853
     },
     "last": {
-     "bar_start": "11:30",
-     "close": 342.75,
-     "vs_level_pct": 0.31
+     "bar_start": "12:20",
+     "close": 345.45,
+     "vs_level_pct": 1.1
     },
     "bars_source": "Upstox",
     "entry_kind": "triggered at 9:40 AM",
-    "rel_volume": 2.11,
+    "rel_volume": 2.05,
     "plan": {
      "symbol": "ETERNAL.NS",
      "side": "buy",
@@ -2103,18 +2103,18 @@
      "expiry": "2026-11-23",
      "dte": 24,
      "lot": 2425,
-     "ask": 8.95,
-     "bid": 8.85,
-     "delta": 0.508,
-     "iv": 25.39,
-     "theta_lot_day": -451,
-     "oi_lots": 2228,
-     "cost_lot": 21704,
-     "stop": 8.05,
-     "target": 13.06,
-     "risk_lot": 2170,
-     "reward_lot": 9972,
-     "rr": 4.59,
+     "ask": 9.6,
+     "bid": 9.5,
+     "delta": 0.53,
+     "iv": 25.63,
+     "theta_lot_day": -456,
+     "oi_lots": 2240,
+     "cost_lot": 23280,
+     "stop": 8.64,
+     "target": 13.89,
+     "risk_lot": 2328,
+     "reward_lot": 10407,
+     "rr": 4.47,
      "lots_in_budget": 1,
      "stop_rule": "-10%",
      "flat_by": "15:15"
@@ -2138,7 +2138,7 @@
      {
       "name": "Volume behind it",
       "ok": true,
-      "detail": "2.11x usual volume by now"
+      "detail": "2.05x usual volume by now"
      }
     ],
     "qualified": false
@@ -2240,13 +2240,13 @@
      "avg_volume": 502116
     },
     "last": {
-     "bar_start": "11:30",
-     "close": 459.95,
-     "vs_level_pct": -0.37
+     "bar_start": "12:20",
+     "close": 461.1,
+     "vs_level_pct": -0.12
     },
     "bars_source": "Upstox",
     "entry_kind": "triggered at 9:55 AM",
-    "rel_volume": 1.06,
+    "rel_volume": 1.01,
     "plan": {
      "symbol": "KOTAKBANK.NS",
      "side": "buy",
@@ -2350,18 +2350,18 @@
      "expiry": "2026-11-23",
      "dte": 24,
      "lot": 2000,
-     "ask": 9.05,
-     "bid": 8.95,
-     "delta": 0.521,
+     "ask": 10.05,
+     "bid": 9.95,
+     "delta": 0.555,
      "iv": 18.31,
-     "theta_lot_day": -358,
-     "oi_lots": 2589,
-     "cost_lot": 18100,
-     "stop": 8.15,
-     "target": 11.76,
-     "risk_lot": 1810,
-     "reward_lot": 5422,
-     "rr": 3.0,
+     "theta_lot_day": -357,
+     "oi_lots": 2487,
+     "cost_lot": 20100,
+     "stop": 9.05,
+     "target": 12.94,
+     "risk_lot": 2010,
+     "reward_lot": 5773,
+     "rr": 2.87,
      "lots_in_budget": 1,
      "stop_rule": "-10%",
      "flat_by": "15:15"
@@ -2385,7 +2385,7 @@
      {
       "name": "Volume behind it",
       "ok": false,
-      "detail": "1.06x usual volume by now"
+      "detail": "1.01x usual volume by now"
      }
     ],
     "qualified": false
@@ -2480,13 +2480,13 @@
      "avg_volume": 826992
     },
     "last": {
-     "bar_start": "11:30",
-     "close": 123.48,
-     "vs_level_pct": -1.13
+     "bar_start": "12:20",
+     "close": 123.87,
+     "vs_level_pct": -0.82
     },
     "bars_source": "Upstox",
     "entry_kind": "triggered at 9:35 AM",
-    "rel_volume": 1.37,
+    "rel_volume": 1.25,
     "plan": {
      "symbol": "PNB.NS",
      "side": "buy",
@@ -2593,18 +2593,18 @@
      "expiry": "2026-11-23",
      "dte": 24,
      "lot": 8000,
-     "ask": 3.31,
-     "bid": 3.26,
-     "delta": 0.504,
-     "iv": 26.86,
-     "theta_lot_day": -565,
-     "oi_lots": 230,
-     "cost_lot": 26480,
-     "stop": 2.98,
-     "target": 4.36,
-     "risk_lot": 2648,
-     "reward_lot": 8387,
-     "rr": 3.17,
+     "ask": 3.54,
+     "bid": 3.5,
+     "delta": 0.527,
+     "iv": 26.37,
+     "theta_lot_day": -556,
+     "oi_lots": 232,
+     "cost_lot": 28320,
+     "stop": 3.19,
+     "target": 4.64,
+     "risk_lot": 2832,
+     "reward_lot": 8773,
+     "rr": 3.1,
      "lots_in_budget": 1,
      "stop_rule": "-10%",
      "flat_by": "15:15"
@@ -2628,7 +2628,7 @@
      {
       "name": "Volume behind it",
       "ok": true,
-      "detail": "1.37x usual volume by now"
+      "detail": "1.25x usual volume by now"
      }
     ],
     "qualified": false
@@ -2720,7 +2720,7 @@
    "trade": {
     "status": "waiting",
     "phase": "open",
-    "reason": "last close $663.40 (11:30 bar), $31.45 under the range high $694.85 (-4.53%)",
+    "reason": "last close $660.30 (12:20 bar), $34.55 under the range high $694.85 (-4.97%)",
     "opening_range": {
      "high": 694.85,
      "low": 657.4,
@@ -2731,13 +2731,13 @@
      "avg_volume": 213539
     },
     "last": {
-     "bar_start": "11:30",
-     "close": 663.4,
-     "vs_level_pct": -4.53
+     "bar_start": "12:20",
+     "close": 660.3,
+     "vs_level_pct": -4.97
     },
     "bars_source": "Upstox",
     "entry_kind": "not triggered: plan if a bar closes above 694.85",
-    "rel_volume": 6.05,
+    "rel_volume": 5.46,
     "plan": {
      "symbol": "CAMS.NS",
      "side": "buy",
@@ -2746,8 +2746,8 @@
      "entry": 694.9,
      "stop": 676.12,
      "target": 732.46,
-     "entry_time": "11:35",
-     "entry_bar": 27,
+     "entry_time": "12:25",
+     "entry_bar": 37,
      "risk_per_share": 18.78,
      "reward_risk": 2.0,
      "stop_label": "opening-range midpoint",
@@ -2763,17 +2763,17 @@
     "timemachine": {
      "sessions": 57,
      "p_target": 0.0,
-     "p_stop": 0.005,
-     "p_neither": 0.995,
-     "p_green": 0.3966,
-     "avg_R": -0.081,
-     "median_close": 693.33,
-     "p5_close": 683.38,
-     "p95_close": 703.49,
+     "p_stop": 0.002,
+     "p_neither": 0.998,
+     "p_green": 0.4105,
+     "avg_R": -0.063,
+     "median_close": 693.69,
+     "p5_close": 684.93,
+     "p95_close": 702.56,
      "r_at_target": 2.0,
-     "verdict": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 0 % (target first 0.0 % vs stop first 0.5 %).",
+     "verdict": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 0 % (target first 0.0 % vs stop first 0.2 %).",
      "notes": [
-      "99.5 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those."
+      "99.8 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those."
      ],
      "history": {
       "sessions": 57,
@@ -2791,7 +2791,7 @@
      "max_loss": 995.34,
      "refusal": null,
      "reward": 1990.68,
-     "replay_avg": -80.62
+     "replay_avg": -62.71
     },
     "risk": {
      "verdict": "PASS",
@@ -2815,7 +2815,7 @@
       "risk_per_share": 18.78,
       "max_loss": 995.34,
       "setup": "orb",
-      "entry_time": "11:35",
+      "entry_time": "12:25",
       "flat_by": "15:15"
      }
     },
@@ -2837,23 +2837,23 @@
      }
     ],
     "option": {
-     "label": "CAMS 660 CE",
-     "strike": 660.0,
+     "label": "CAMS 650 CE",
+     "strike": 650.0,
      "type": "CE",
      "expiry": "2026-11-23",
      "dte": 24,
      "lot": 825,
-     "ask": 23.15,
-     "bid": 22.85,
-     "delta": 0.56,
-     "iv": 28.93,
-     "theta_lot_day": -334,
-     "oi_lots": 280,
-     "cost_lot": 19099,
-     "stop": 20.84,
-     "target": 37.04,
-     "risk_lot": 1910,
-     "reward_lot": 11459,
+     "ask": 24.15,
+     "bid": 23.9,
+     "delta": 0.574,
+     "iv": 30.03,
+     "theta_lot_day": -340,
+     "oi_lots": 163,
+     "cost_lot": 19924,
+     "stop": 21.73,
+     "target": 38.64,
+     "risk_lot": 1992,
+     "reward_lot": 11954,
      "rr": 6.0,
      "lots_in_budget": 1,
      "stop_rule": "-10%",
@@ -2868,17 +2868,17 @@
      {
       "name": "Option fits the budget and liquidity",
       "ok": true,
-      "detail": "CAMS 660 CE"
+      "detail": "CAMS 650 CE"
      },
      {
       "name": "Replays lean to the target",
       "ok": false,
-      "detail": "target first 0%, stop first 0%, average -0.08R"
+      "detail": "target first 0%, stop first 0%, average -0.06R"
      },
      {
       "name": "Volume behind it",
       "ok": true,
-      "detail": "6.05x usual volume by now"
+      "detail": "5.46x usual volume by now"
      }
     ],
     "qualified": false
@@ -2969,7 +2969,7 @@
    "trade": {
     "status": "triggered",
     "phase": "open",
-    "reason": "last close $2510.30 (11:30 bar), $11.30 under the range high $2521.60 (-0.45%)",
+    "reason": "the 12:15 bar closed above the range high",
     "opening_range": {
      "high": 2521.6,
      "low": 2495.2,
@@ -2980,28 +2980,27 @@
      "avg_volume": 130145
     },
     "last": {
-     "bar_start": "11:30",
-     "close": 2510.3,
-     "vs_level_pct": -0.45
+     "bar_start": "12:20",
+     "close": 2518.4,
+     "vs_level_pct": -0.13
     },
     "bars_source": "Upstox",
-    "side": "sell",
-    "entry_kind": "breakdown at 10:35: closed below 2495.20",
-    "rel_volume": 0.64,
+    "entry_kind": "triggered at 12:20 PM",
+    "rel_volume": 0.7,
     "plan": {
      "symbol": "TCS.NS",
-     "side": "sell",
-     "setup": "orb breakdown",
+     "side": "buy",
+     "setup": "orb",
      "date": "2026-10-30",
-     "entry": 2495.1,
+     "entry": 2521.9,
      "stop": 2508.4,
-     "target": 2468.5,
-     "entry_time": "10:35",
-     "entry_bar": 15,
-     "risk_per_share": 13.3,
+     "target": 2548.9,
+     "entry_time": "12:20",
+     "entry_bar": 36,
+     "risk_per_share": 13.5,
      "reward_risk": 2.0,
      "stop_label": "opening-range midpoint",
-     "target_label": "2R",
+     "target_label": "2R (two times the risk)",
      "opening_range": {
       "high": 2521.6,
       "low": 2495.2,
@@ -3012,47 +3011,98 @@
     },
     "timemachine": {
      "sessions": 57,
-     "p_target": 0.3101,
-     "p_stop": 0.4758,
-     "p_neither": 0.2141,
-     "p_green": 0.4799,
-     "avg_R": 0.266,
-     "median_close": 2489.03,
-     "p5_close": 2448.35,
-     "p95_close": 2527.99,
+     "p_target": 0.0877,
+     "p_stop": 0.493,
+     "p_neither": 0.4193,
+     "p_green": 0.37,
+     "avg_R": -0.17,
+     "median_close": 2518.82,
+     "p5_close": 2490.09,
+     "p95_close": 2549.52,
      "r_at_target": 2.0,
-     "verdict": "Leans toward the target: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 39 % (target first 31.0 % vs stop first 47.6 %).",
-     "notes": []
+     "verdict": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 15 % (target first 8.8 % vs stop first 49.3 %).",
+     "notes": [
+      "41.9 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those."
+     ],
+     "history": {
+      "sessions": 57,
+      "triggered": 25,
+      "target": 2,
+      "stop": 8,
+      "close": 15,
+      "avg_R": -0.168
+     }
     },
     "sizing": {
-     "qty": 0,
-     "refusal": "short selling shares is off: this one is for a put (see the option)"
+     "qty": 29,
+     "bound_by": "position cap",
+     "cost": 73135.1,
+     "max_loss": 391.5,
+     "refusal": null,
+     "reward": 783.0,
+     "replay_avg": -66.56
     },
     "risk": {
-     "verdict": "PUT",
+     "verdict": "PASS",
      "reasons": [],
      "warnings": []
     },
-    "order": null,
-    "alerts": [],
+    "order": {
+     "symbol": "TCS.NS",
+     "side": "buy",
+     "qty": "29",
+     "type": "market",
+     "time_in_force": "day",
+     "order_class": "bracket",
+     "take_profit_limit_price": "2548.90",
+     "stop_loss_stop_price": "2508.40",
+     "why": "opening-range breakout on TCS.NS: 29 shares, bound by your position cap (29 x 13.50 = $391.50 at the stop)",
+     "plan": {
+      "entry": 2521.9,
+      "stop": 2508.4,
+      "target": 2548.9,
+      "risk_per_share": 13.5,
+      "max_loss": 391.5,
+      "setup": "orb",
+      "entry_time": "12:20",
+      "flat_by": "15:15"
+     }
+    },
+    "alerts": [
+     {
+      "type": "stop",
+      "price": 2508.4,
+      "at": null
+     },
+     {
+      "type": "target",
+      "price": 2548.9,
+      "at": null
+     },
+     {
+      "type": "time",
+      "price": null,
+      "at": "15:15"
+     }
+    ],
     "option": {
-     "label": "TCS 2560 PE",
-     "strike": 2560.0,
-     "type": "PE",
+     "label": "TCS 2500 CE",
+     "strike": 2500.0,
+     "type": "CE",
      "expiry": "2026-11-23",
      "dte": 24,
      "lot": 225,
-     "ask": 91.35,
-     "bid": 90.9,
-     "delta": -0.569,
-     "iv": 26.98,
-     "theta_lot_day": -320,
-     "oi_lots": 432,
-     "cost_lot": 20554,
-     "stop": 83.78,
-     "target": 106.48,
-     "risk_lot": 1702,
-     "reward_lot": 3404,
+     "ask": 83.4,
+     "bid": 82.95,
+     "delta": 0.564,
+     "iv": 27.8,
+     "theta_lot_day": -331,
+     "oi_lots": 6957,
+     "cost_lot": 18765,
+     "stop": 75.79,
+     "target": 98.63,
+     "risk_lot": 1713,
+     "reward_lot": 3426,
      "rr": 2.0,
      "lots_in_budget": 1,
      "stop_rule": "stock stop via delta",
@@ -3062,22 +3112,22 @@
      {
       "name": "Plan live",
       "ok": true,
-      "detail": "breakdown at 10:35: closed below 2495.20"
+      "detail": "triggered at 12:20 PM"
      },
      {
       "name": "Option fits the budget and liquidity",
       "ok": true,
-      "detail": "TCS 2560 PE"
+      "detail": "TCS 2500 CE"
      },
      {
       "name": "Replays lean to the target",
-      "ok": true,
-      "detail": "target first 31%, stop first 48%, average +0.27R"
+      "ok": false,
+      "detail": "target first 9%, stop first 49%, average -0.17R"
      },
      {
       "name": "Volume behind it",
       "ok": false,
-      "detail": "0.64x usual volume by now"
+      "detail": "0.7x usual volume by now"
      }
     ],
     "qualified": false
@@ -3166,7 +3216,7 @@
    "trade": {
     "status": "triggered",
     "phase": "open",
-    "reason": "last close $42.10 (11:30 bar), $1.54 under the range high $43.64 (-3.53%)",
+    "reason": "last close $42.29 (12:20 bar), $1.35 under the range high $43.64 (-3.09%)",
     "opening_range": {
      "high": 43.64,
      "low": 42.53,
@@ -3177,14 +3227,14 @@
      "avg_volume": 225842109
     },
     "last": {
-     "bar_start": "11:30",
-     "close": 42.1,
-     "vs_level_pct": -3.53
+     "bar_start": "12:20",
+     "close": 42.29,
+     "vs_level_pct": -3.09
     },
     "bars_source": "Upstox",
     "side": "sell",
     "entry_kind": "breakdown at 09:45: closed below 42.53",
-    "rel_volume": 73.22,
+    "rel_volume": 61.68,
     "plan": {
      "symbol": "SAGILITY.NS",
      "side": "sell",
@@ -3242,18 +3292,18 @@
      "expiry": "2026-11-23",
      "dte": 24,
      "lot": 12000,
-     "ask": 2.06,
-     "bid": 2.03,
-     "delta": -0.542,
-     "iv": 39.06,
-     "theta_lot_day": -419,
-     "oi_lots": 272,
-     "cost_lot": 24720,
-     "stop": 1.85,
-     "target": 2.96,
-     "risk_lot": 2472,
-     "reward_lot": 10801,
-     "rr": 4.37,
+     "ask": 2.03,
+     "bid": 1.99,
+     "delta": -0.549,
+     "iv": 37.11,
+     "theta_lot_day": -397,
+     "oi_lots": 297,
+     "cost_lot": 24360,
+     "stop": 1.83,
+     "target": 2.94,
+     "risk_lot": 2436,
+     "reward_lot": 10946,
+     "rr": 4.49,
      "lots_in_budget": 1,
      "stop_rule": "-10%",
      "flat_by": "15:15"
@@ -3277,7 +3327,7 @@
      {
       "name": "Volume behind it",
       "ok": true,
-      "detail": "73.22x usual volume by now"
+      "detail": "61.68x usual volume by now"
      }
     ],
     "qualified": false
@@ -3373,9 +3423,9 @@
     "yahoo_time": "09:46"
    },
    "trade": {
-    "status": "waiting",
+    "status": "triggered",
     "phase": "open",
-    "reason": "last close $2310.00 (11:30 bar), $10.00 under the range high $2320.00 (-0.43%)",
+    "reason": "the 11:40 bar closed above the range high",
     "opening_range": {
      "high": 2320.0,
      "low": 2274.0,
@@ -3386,24 +3436,24 @@
      "avg_volume": 39992
     },
     "last": {
-     "bar_start": "11:30",
-     "close": 2310.0,
-     "vs_level_pct": -0.43
+     "bar_start": "12:20",
+     "close": 2305.7,
+     "vs_level_pct": -0.62
     },
     "bars_source": "Upstox",
-    "entry_kind": "not triggered: plan if a bar closes above 2320.00",
-    "rel_volume": 2.23,
+    "entry_kind": "triggered at 11:45 AM",
+    "rel_volume": 2.46,
     "plan": {
      "symbol": "ASIANPAINT.NS",
      "side": "buy",
      "setup": "orb",
      "date": "2026-10-30",
-     "entry": 2320.05,
+     "entry": 2326.0,
      "stop": 2297.0,
-     "target": 2366.15,
-     "entry_time": "11:35",
-     "entry_bar": 27,
-     "risk_per_share": 23.05,
+     "target": 2384.0,
+     "entry_time": "11:45",
+     "entry_bar": 29,
+     "risk_per_share": 29.0,
      "reward_risk": 2.0,
      "stop_label": "opening-range midpoint",
      "target_label": "2R (two times the risk)",
@@ -3417,18 +3467,18 @@
     },
     "timemachine": {
      "sessions": 57,
-     "p_target": 0.0091,
-     "p_stop": 0.1974,
-     "p_neither": 0.7935,
-     "p_green": 0.483,
-     "avg_R": -0.039,
-     "median_close": 2319.96,
-     "p5_close": 2293.86,
-     "p95_close": 2346.04,
+     "p_target": 0.0004,
+     "p_stop": 0.0919,
+     "p_neither": 0.9077,
+     "p_green": 0.501,
+     "avg_R": -0.008,
+     "median_close": 2326.3,
+     "p5_close": 2301.28,
+     "p95_close": 2351.81,
      "r_at_target": 2.0,
-     "verdict": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 4 % (target first 0.9 % vs stop first 19.7 %).",
+     "verdict": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 0 % (target first 0.0 % vs stop first 9.2 %).",
      "notes": [
-      "79.3 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those."
+      "90.8 % of the replays hit neither by 3:15 PM; the price at 3:15 PM decides those."
      ],
      "history": {
       "sessions": 57,
@@ -3442,11 +3492,11 @@
     "sizing": {
      "qty": 32,
      "bound_by": "position cap",
-     "cost": 74241.6,
-     "max_loss": 737.6,
+     "cost": 74432.0,
+     "max_loss": 928.0,
      "refusal": null,
-     "reward": 1475.2,
-     "replay_avg": -28.77
+     "reward": 1856.0,
+     "replay_avg": -7.42
     },
     "risk": {
      "verdict": "PASS",
@@ -3460,17 +3510,17 @@
      "type": "market",
      "time_in_force": "day",
      "order_class": "bracket",
-     "take_profit_limit_price": "2366.15",
+     "take_profit_limit_price": "2384.00",
      "stop_loss_stop_price": "2297.00",
-     "why": "opening-range breakout on ASIANPAINT.NS: 32 shares, bound by your position cap (32 x 23.05 = $737.60 at the stop)",
+     "why": "opening-range breakout on ASIANPAINT.NS: 32 shares, bound by your position cap (32 x 29.00 = $928 at the stop)",
      "plan": {
-      "entry": 2320.05,
+      "entry": 2326.0,
       "stop": 2297.0,
-      "target": 2366.15,
-      "risk_per_share": 23.05,
-      "max_loss": 737.6,
+      "target": 2384.0,
+      "risk_per_share": 29.0,
+      "max_loss": 928.0,
       "setup": "orb",
-      "entry_time": "11:35",
+      "entry_time": "11:45",
       "flat_by": "15:15"
      }
     },
@@ -3482,7 +3532,7 @@
      },
      {
       "type": "target",
-      "price": 2366.15,
+      "price": 2384.0,
       "at": null
      },
      {
@@ -3498,18 +3548,18 @@
      "expiry": "2026-11-23",
      "dte": 24,
      "lot": 250,
-     "ask": 61.65,
-     "bid": 61.25,
-     "delta": 0.571,
-     "iv": 22.4,
-     "theta_lot_day": -272,
-     "oi_lots": 2381,
-     "cost_lot": 15412,
-     "stop": 55.48,
-     "target": 87.96,
-     "risk_lot": 1541,
-     "reward_lot": 6578,
-     "rr": 4.27,
+     "ask": 62.1,
+     "bid": 61.65,
+     "delta": 0.567,
+     "iv": 21.79,
+     "theta_lot_day": -265,
+     "oi_lots": 2093,
+     "cost_lot": 15525,
+     "stop": 55.89,
+     "target": 94.97,
+     "risk_lot": 1553,
+     "reward_lot": 8217,
+     "rr": 5.29,
      "lots_in_budget": 1,
      "stop_rule": "-10%",
      "flat_by": "15:15"
@@ -3518,7 +3568,7 @@
      {
       "name": "Plan live",
       "ok": true,
-      "detail": "not triggered: plan if a bar closes above 2320.00"
+      "detail": "triggered at 11:45 AM"
      },
      {
       "name": "Option fits the budget and liquidity",
@@ -3528,12 +3578,12 @@
      {
       "name": "Replays lean to the target",
       "ok": false,
-      "detail": "target first 1%, stop first 20%, average -0.04R"
+      "detail": "target first 0%, stop first 9%, average -0.01R"
      },
      {
       "name": "Volume behind it",
       "ok": true,
-      "detail": "2.23x usual volume by now"
+      "detail": "2.46x usual volume by now"
      }
     ],
     "qualified": false
@@ -3604,7 +3654,7 @@
    "trade": {
     "status": "triggered",
     "phase": "open",
-    "reason": "last close $176.80 (11:30 bar), $7.50 under the range high $184.30 (-4.07%)",
+    "reason": "last close $176.75 (12:20 bar), $7.55 under the range high $184.30 (-4.10%)",
     "opening_range": {
      "high": 184.3,
      "low": 179.5,
@@ -3615,14 +3665,14 @@
      "avg_volume": 1223654
     },
     "last": {
-     "bar_start": "11:30",
-     "close": 176.8,
-     "vs_level_pct": -4.07
+     "bar_start": "12:20",
+     "close": 176.75,
+     "vs_level_pct": -4.1
     },
     "bars_source": "Upstox",
     "side": "sell",
     "entry_kind": "breakdown at 09:45: closed below 179.50",
-    "rel_volume": 1.85,
+    "rel_volume": 1.71,
     "plan": {
      "symbol": "SWIGGY.NS",
      "side": "sell",
@@ -3680,17 +3730,17 @@
      "expiry": "2026-11-23",
      "dte": 24,
      "lot": 1825,
-     "ask": 8.25,
-     "bid": 8.1,
-     "delta": -0.542,
-     "iv": 37.11,
-     "theta_lot_day": -254,
-     "oi_lots": 1234,
-     "cost_lot": 15056,
-     "stop": 7.42,
-     "target": 11.99,
-     "risk_lot": 1506,
-     "reward_lot": 6821,
+     "ask": 8.35,
+     "bid": 8.2,
+     "delta": -0.549,
+     "iv": 36.62,
+     "theta_lot_day": -250,
+     "oi_lots": 1224,
+     "cost_lot": 15239,
+     "stop": 7.51,
+     "target": 12.14,
+     "risk_lot": 1524,
+     "reward_lot": 6910,
      "rr": 4.53,
      "lots_in_budget": 1,
      "stop_rule": "-10%",
@@ -3715,7 +3765,7 @@
      {
       "name": "Volume behind it",
       "ok": true,
-      "detail": "1.85x usual volume by now"
+      "detail": "1.71x usual volume by now"
      }
     ],
     "qualified": false
@@ -3809,13 +3859,13 @@
      "avg_volume": 21854
     },
     "last": {
-     "bar_start": "11:30",
-     "close": 5140.5,
-     "vs_level_pct": 0.62
+     "bar_start": "12:20",
+     "close": 5165.0,
+     "vs_level_pct": 1.1
     },
     "bars_source": "Upstox",
     "entry_kind": "triggered at 9:40 AM",
-    "rel_volume": 0.92,
+    "rel_volume": 0.97,
     "plan": {
      "symbol": "HEROMOTOCO.NS",
      "side": "buy",
@@ -3919,18 +3969,18 @@
      "expiry": "2026-11-23",
      "dte": 24,
      "lot": 150,
-     "ask": 144.7,
-     "bid": 143.55,
-     "delta": 0.532,
-     "iv": 25.79,
-     "theta_lot_day": -423,
-     "oi_lots": 653,
-     "cost_lot": 21705,
-     "stop": 130.23,
-     "target": 193.9,
-     "risk_lot": 2170,
-     "reward_lot": 7380,
-     "rr": 3.4,
+     "ask": 157.05,
+     "bid": 155.1,
+     "delta": 0.558,
+     "iv": 25.57,
+     "theta_lot_day": -419,
+     "oi_lots": 522,
+     "cost_lot": 23558,
+     "stop": 141.35,
+     "target": 208.67,
+     "risk_lot": 2356,
+     "reward_lot": 7744,
+     "rr": 3.29,
      "lots_in_budget": 1,
      "stop_rule": "-10%",
      "flat_by": "15:15"
@@ -3954,7 +4004,7 @@
      {
       "name": "Volume behind it",
       "ok": false,
-      "detail": "0.92x usual volume by now"
+      "detail": "0.97x usual volume by now"
      }
     ],
     "qualified": false
@@ -4043,13 +4093,13 @@
      "avg_volume": 66193
     },
     "last": {
-     "bar_start": "11:30",
-     "close": 1437.2,
-     "vs_level_pct": 0.55
+     "bar_start": "12:20",
+     "close": 1448.0,
+     "vs_level_pct": 1.31
     },
     "bars_source": "Upstox",
     "entry_kind": "triggered at 11:15 AM",
-    "rel_volume": 1.03,
+    "rel_volume": 1.42,
     "plan": {
      "symbol": "HCLTECH.NS",
      "side": "buy",
@@ -4155,18 +4205,18 @@
      "expiry": "2026-11-23",
      "dte": 24,
      "lot": 400,
-     "ask": 41.5,
-     "bid": 41.2,
-     "delta": 0.52,
-     "iv": 27.53,
-     "theta_lot_day": -337,
-     "oi_lots": 811,
-     "cost_lot": 16600,
-     "stop": 37.35,
-     "target": 52.78,
-     "risk_lot": 1660,
-     "reward_lot": 4514,
-     "rr": 2.72,
+     "ask": 44.75,
+     "bid": 44.4,
+     "delta": 0.548,
+     "iv": 26.92,
+     "theta_lot_day": -329,
+     "oi_lots": 771,
+     "cost_lot": 17900,
+     "stop": 40.27,
+     "target": 56.64,
+     "risk_lot": 1790,
+     "reward_lot": 4757,
+     "rr": 2.66,
      "lots_in_budget": 1,
      "stop_rule": "-10%",
      "flat_by": "15:15"
@@ -4189,8 +4239,8 @@
      },
      {
       "name": "Volume behind it",
-      "ok": false,
-      "detail": "1.03x usual volume by now"
+      "ok": true,
+      "detail": "1.42x usual volume by now"
      }
     ],
     "qualified": false
@@ -4285,13 +4335,13 @@
      "avg_volume": 415285
     },
     "last": {
-     "bar_start": "11:30",
-     "close": 236.75,
-     "vs_level_pct": 0.57
+     "bar_start": "12:20",
+     "close": 238.35,
+     "vs_level_pct": 1.25
     },
     "bars_source": "Upstox",
     "entry_kind": "triggered at 9:35 AM",
-    "rel_volume": 0.95,
+    "rel_volume": 1.07,
     "plan": {
      "symbol": "VEDL.NS",
      "side": "buy",
@@ -4397,18 +4447,18 @@
      "expiry": "2026-11-23",
      "dte": 24,
      "lot": 1150,
-     "ask": 9.1,
-     "bid": 9.0,
-     "delta": 0.579,
-     "iv": 30.76,
-     "theta_lot_day": -175,
-     "oi_lots": 1374,
-     "cost_lot": 10465,
-     "stop": 8.19,
-     "target": 12.78,
-     "risk_lot": 1047,
-     "reward_lot": 4236,
-     "rr": 4.05,
+     "ask": 9.7,
+     "bid": 9.55,
+     "delta": 0.602,
+     "iv": 30.27,
+     "theta_lot_day": -171,
+     "oi_lots": 1316,
+     "cost_lot": 11155,
+     "stop": 8.73,
+     "target": 13.53,
+     "risk_lot": 1115,
+     "reward_lot": 4403,
+     "rr": 3.95,
      "lots_in_budget": 2,
      "stop_rule": "-10%",
      "flat_by": "15:15"
@@ -4432,7 +4482,7 @@
      {
       "name": "Volume behind it",
       "ok": false,
-      "detail": "0.95x usual volume by now"
+      "detail": "1.07x usual volume by now"
      }
     ],
     "qualified": false
@@ -4508,13 +4558,13 @@
      "avg_volume": 794646
     },
     "last": {
-     "bar_start": "11:30",
-     "close": 194.98,
-     "vs_level_pct": 0.58
+     "bar_start": "12:20",
+     "close": 196.39,
+     "vs_level_pct": 1.31
     },
     "bars_source": "Upstox",
     "entry_kind": "triggered at 9:35 AM",
-    "rel_volume": 1.59,
+    "rel_volume": 1.71,
     "plan": {
      "symbol": "WIPRO.NS",
      "side": "buy",
@@ -4620,18 +4670,18 @@
      "expiry": "2026-11-23",
      "dte": 24,
      "lot": 3000,
-     "ask": 5.8,
-     "bid": 5.77,
-     "delta": 0.539,
+     "ask": 6.66,
+     "bid": 6.61,
+     "delta": 0.581,
      "iv": 26.86,
-     "theta_lot_day": -334,
-     "oi_lots": 846,
-     "cost_lot": 17400,
-     "stop": 5.22,
-     "target": 7.51,
-     "risk_lot": 1740,
-     "reward_lot": 5143,
-     "rr": 2.96,
+     "theta_lot_day": -331,
+     "oi_lots": 840,
+     "cost_lot": 19980,
+     "stop": 5.99,
+     "target": 8.51,
+     "risk_lot": 1998,
+     "reward_lot": 5543,
+     "rr": 2.77,
      "lots_in_budget": 1,
      "stop_rule": "-10%",
      "flat_by": "15:15"
@@ -4655,7 +4705,7 @@
      {
       "name": "Volume behind it",
       "ok": true,
-      "detail": "1.59x usual volume by now"
+      "detail": "1.71x usual volume by now"
      }
     ],
     "qualified": false
@@ -4667,8 +4717,8 @@
   "Business Standard feed: HTTP 403 for https://www.business-standard.com/rss/markets-106.rss"
  ],
  "seconds": 28,
- "orb_ist": "2026-10-30 11:37",
- "orb_seconds": 37,
+ "orb_ist": "2026-10-30 12:29",
+ "orb_seconds": 45,
  "previous": {
   "created_ist": "2026-10-30 09:45",
   "entered": [],
