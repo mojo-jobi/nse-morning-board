@@ -15,8 +15,8 @@
   "score": 75,
   "status": "entered",
   "price_at_signal": 793.9,
-  "last_price": 791.35,
-  "last_close": 793.9,
+  "last_price": 779.35,
+  "last_close": 791.35,
   "entered": "2026-10-29",
   "fill": 799.05
  },
@@ -36,8 +36,8 @@
   "score": 65,
   "status": "entered",
   "price_at_signal": 879.45,
-  "last_price": 873.6,
-  "last_close": 879.45,
+  "last_price": 871.95,
+  "last_close": 873.6,
   "entered": "2026-10-29",
   "fill": 884.0
  },
@@ -57,8 +57,8 @@
   "score": 62,
   "status": "entered",
   "price_at_signal": 6976.5,
-  "last_price": 7158.5,
-  "last_close": 6976.5,
+  "last_price": 6847.5,
+  "last_close": 7158.5,
   "entered": "2026-10-29",
   "fill": 7079.05
  },
@@ -76,10 +76,12 @@
   "est_days": 8,
   "p_target": 0.37,
   "score": 60,
-  "status": "waiting for entry",
+  "status": "entered",
   "price_at_signal": 7158.5,
-  "last_price": 7158.5,
-  "last_close": 6976.5
+  "last_price": 6847.5,
+  "last_close": 7158.5,
+  "entered": "2026-10-30",
+  "fill": 7250.0
  },
  {
   "id": "2026-10-29-ADANIPORTS.NS",
@@ -97,8 +99,8 @@
   "score": 62,
   "status": "waiting for entry",
   "price_at_signal": 1872.0,
-  "last_price": 1872.0,
-  "last_close": 1761.3
+  "last_price": 1846.9,
+  "last_close": 1872.0
  },
  {
   "id": "2026-10-29-MARUTI.NS",
@@ -114,9 +116,11 @@
   "est_days": 6,
   "p_target": 0.392,
   "score": 56,
-  "status": "waiting for entry",
+  "status": "entered",
   "price_at_signal": 11426.0,
-  "last_price": 11426.0,
-  "last_close": 11579.0
+  "last_price": 11430.0,
+  "last_close": 11426.0,
+  "entered": "2026-10-30",
+  "fill": 11395.95
  }
 ]
