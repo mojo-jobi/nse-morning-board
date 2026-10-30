@@ -1,0 +1,1564 @@
+{
+ "stage": "pre",
+ "market": "NSE",
+ "created_ist": "2026-10-30 09:45",
+ "volume_basis": "today so far",
+ "closes_through": "2026-10-29",
+ "scan": {
+  "universe": 218,
+  "fetched": 218,
+  "failed": 0,
+  "liquid": 150,
+  "scanned": 149,
+  "setups": 58,
+  "min_price": 20,
+  "min_volume": 100000
+ },
+ "news": {
+  "feeds": 12,
+  "headlines": 529,
+  "stocks_named": 52,
+  "hours": 24
+ },
+ "sources": {
+  "quotes": "Upstox",
+  "quotes_upstox": 218,
+  "setups_saved_ist": "2026-10-30 09:45"
+ },
+ "shortlist": [
+  {
+   "rank": 1,
+   "symbol": "LAURUSLABS.NS",
+   "name": "Laurus Labs Limited",
+   "score": 94,
+   "price": 2327.0,
+   "chg_pct": 3.7,
+   "volume": 2068001,
+   "turnover_cr": 481.2,
+   "news_count": 27,
+   "news_tags": [
+    "analyst",
+    "capital",
+    "deal",
+    "earnings",
+    "people",
+    "regulatory"
+   ],
+   "news": [
+    {
+     "title": "laurus labs share price",
+     "source": "LatestLY",
+     "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1RSzBXdmJId3htTXo2NHBqc2N4dlR6QXd1ZzkwY004eHJyZmV0b2Nlb1o3OFp1WG83bUQzdkNHLVZQWFlSVHRta1dYS1dGWVo1eW9tVjdxN1FLSS1tOUl0aWI2YXlheGd5YS1semJaTm9hN1Z3dHhZUmNzdGU?oc=5",
+     "time": "30 Oct 09:31",
+     "tags": []
+    },
+    {
+     "title": "Laurus Labs: Goldman Sachs holds Sell with Rs 1,600 target despite Q2 beat",
+     "source": "Business Upturn",
+     "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNX0dhUjFJQUZBazQtQzNreWpobllzckVQcEtfSXdDMVYzUE45ekpocm1fM1d0LVhGTUFjeE92OG96S3gxUEMyS1NId3pxdEhQamcwZ2d5WEt5MWVvblFRazhFR3VqcV91ZHlwQzhoNkV2MlZnWXZCRXhPMGVTRUtReFpISklDYk5FUmpHcXROUTQ4Vkw4QkxDNWNmWjlGSThKM0tKNTZCeVo4ZjZFenNtQW8yWHlDYmlmMzZfanJ1cmtmSGVW?oc=5",
+     "time": "30 Oct 08:50",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "Brokerage calls today, October 30: IndiGo, Trent, Laurus Labs, Apar, Equitas in focus",
+     "source": "Business Upturn",
+     "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPYlFNN0ZCVFBCTGZiWXVWOUg4YWtxLXh6TGg1Q3NMbC1iRnh0dDNsaGl2aXBaYlpYbmc4OTF2WUlrZDl6SWVOank0clBFenByXy1udEtrcUNhSTBxdG82VnJsQ3pkZW5fU3RaQkZIV19xaTNPX1FXMkdfRHRYQ2NUN1NBMGx6RTh3XzFqMTE0b09YU3ZvdmJUSDR1QVFzb2VwUUJVcVZJZWpELWNvODZTZjVBdGo1MUpvNGRKSzRoV0d0bzZhMlJ1d1hGREdrcWgzSGk2VTAxNElHN2lFNkRMbw?oc=5",
+     "time": "30 Oct 08:50",
+     "tags": [
+      "analyst"
+     ]
+    },
+    {
+     "title": "Laurus Labs appoints Kundan Kumar Jha as Joint Company Secretary",
+     "source": "scanx.trade",
+     "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOdG96ckdiNnJCTjc1NnI3NWZsc1RqVTBzamRzZHp2U0g3MDFaOTJuMXFRWEVIcTlkTjFtMl9fa200WVZPTFdKeUJ0Z3BSbE9hXzl4RnMtYksyTE8yUW5YMGtzbThpZlpNZDh6b2M2YU9MNEY2QW9icFhFbVVnQkJScGl6UlB5TERMSjFXV1pRdURMYW9aSVNtRFBVLVpOTUNNb3l1WnpEN3JwRUo4dzlDZk93MkhncHk0dEE?oc=5",
+     "time": "29 Oct 21:12",
+     "tags": [
+      "people"
+     ]
+    },
+    {
+     "title": "Laurus Labs Q2 net profit surges 126% backed by growth in CDMO, affordable medicines businesses",
+     "source": "The Times of India",
+     "link": "https://news.google.com/rss/articles/CBMihAJBVV95cUxPNzJuOXRNbWZ1dHBxbGFfbjRScTBqNzhIbFlMcW1MTmtQV1RJX1A5R3NDc09Tc0d0TXdXRk8xSlVtRnFCaUZaMUFxSVlTRXdORDNUSUE2a0Y4aHFlUzJBMEZzaTZNNUJlbW43X2xhaDdlZWxUVVUyMm1iRnNmcDlOTERGRWFhS0lEX1VxRzZuNnp3cmlaVVBIRFhCME9ybWljSFg3WE5vdmZ3WnVQWFFERmwybUUtWHV5QWFBWG1uaVdZTHB1QV93ZGVOZjg1ekg2cUt5cVNuMF9OeHZiLWRhaks5VzRFdGR2Ti00WHoyTjVMNDFWcHh2UF93Zl9xclZwQ0NGT9IBhAJBVV95cUxPNzJuOXRNbWZ1dHBxbGFfbjRScTBqNzhIbFlMcW1MTmtQV1RJX1A5R3NDc09Tc0d0TXdXRk8xSlVtRnFCaUZaMUFxSVlTRXdORDNUSUE2a0Y4aHFlUzJBMEZzaTZNNUJlbW43X2xhaDdlZWxUVVUyMm1iRnNmcDlOTERGRWFhS0lEX1VxRzZuNnp3cmlaVVBIRFhCME9ybWljSFg3WE5vdmZ3WnVQWFFERmwybUUtWHV5QWFBWG1uaVdZTHB1QV93ZGVOZjg1ekg2cUt5cVNuMF9OeHZiLWRhaks5VzRFdGR2Ti00WHoyTjVMNDFWcHh2UF93Zl9xclZwQ0NGTw?oc=5",
+     "time": "29 Oct 19:11",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "Laurus Labs to acquire 52% stake in Hyderabad-based SI&C Resins for ₹32.5 crore",
+     "source": "The Times of India",
+     "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNUEwyaDFFYWFuS3FkejI2alN4bWF4Ulo5WmdfOFNwdkdnRmhPM3FOcU4walBzZmtZMXFUeEhxeFR6WnIzUE1QeWRQWndiM3VQbm9fSmozZWVGTDh1Ui1IdDRBODFOZDYwaEJ2Uk55Z2tYU29GV3ZlQ0Q4eXVMRlgzal9Da3ZjYXpNY1hPXzBsV2NGSWtyUkhrb0dBNlBoVHcxQnl3blV0UHpRUlZSZ3dDNi02UzNWMDdicHhEYWppa1VzN2pZaUhEVjVTR1hiZnlFYTF0R3lwb3dyX2dpa0xSS0JsNlBPVmxpQ09JZDhR0gHuAUFVX3lxTE1QTDJoMUVhYW5LcWR6MjZqU3htYXhSWjlaZ184U3B2R2dGaE8zcU5xTjBqUHNma1kxcVR4SHF4VHpacjNQTVB5ZFBad2IzdVBub19KajNlZUZMOHVSLUh0NEE4MU5kNjBoQnZSTnlna1hTb0ZXdmVDRDh5dUxGWDNqX0NrdmNhek1jWE9fMGxXY0ZJa3JSSGtvR0E2UGhUdzFCeXduVXRQelFSVlJnd0M2LTZTM1YwN2JweERhamlrVXM3allpSERWNVNHWGJmeUVhMXRHeXBvd3JfZ2lrTFJLQmw2UE9WbGlDT0lkOFE?oc=5",
+     "time": "29 Oct 18:52",
+     "tags": [
+      "deal"
+     ]
+    }
+   ],
+   "setups": [
+    "breakout_20d"
+   ],
+   "rsi": 71.4,
+   "earnings_flag": true,
+   "price_source": "Upstox",
+   "cross_check": {
+    "yahoo": 2326.0,
+    "gap_pct": 0.04,
+    "flag": false,
+    "yahoo_time": "09:46"
+   }
+  },
+  {
+   "rank": 2,
+   "symbol": "ADANIPORTS.NS",
+   "name": "Adani Ports and Special Economic Zone Limited",
+   "score": 89,
+   "price": 1860.8,
+   "chg_pct": -0.6,
+   "volume": 1455074,
+   "turnover_cr": 270.8,
+   "news_count": 25,
+   "news_tags": [
+    "earnings",
+    "macro"
+   ],
+   "news": [
+    {
+     "title": "Stocks to Watch Today, October 30: Reliance Industries, Jio Platforms, Coal India, Trent, Adani Ports and others",
+     "source": "ET Now",
+     "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNdEdMQk5DQUNTc0FFN1YxazF4S0tCbnZuY2NGYTZ4R0hJY1BISkhNMDRBUnZQc2ZnbnNFSXU5SU5hSGtobG1WYzVTQWpRYzJQZTQ4aGhKZ2NSMWNPTmhPUEpqSmFKLWxhMk03dl9TN2NLYkUzcjR1MVV1clFSY2xnMjRnQ0drdEhKLTMwbW1YNTVVMUxZcjFOeGx6a1pUUGJtNURVLUlabzNFOGJQYW5FQllEM0tYSldqZGZYTXNTbDRxaUQ2SWtjOTBIT2ZQVE9senUxN1VSZUFwU0lienVDXzZ6d254Z2hyR20xT1RPMNIB9AFBVV95cUxNVGx0djgwTGd4aDE5NDd1TlJUbHpyRDJwRUc3TkdCM2VXMVFkdjhqWW1zTWVCVmtISG1LaHBQQ2JKcGVnQnpBbDc2NC1ycWZyNEtsYnhiVElQZ3ZjRmk1cEwtcFdUaGFaT3NoNGpjY0cyTVBOT2Y4eWdkejNzdS1kczUwcFlETGVuem5Sa25tOVlBRHNVbG16d1ZlMU9pQjV5YnFxUkE3eS1QZTFidUdiQ0ZycmxFM1JuczZCejhpYXE1MW9uVEVhb0M2S3F0RVpOVFlxQ1JEcGdXblJPOGVuQjFNd0s3ck5QSEpRSVotQnltaEtB?oc=5",
+     "time": "30 Oct 05:37",
+     "tags": []
+    },
+    {
+     "title": "Adani Ports Stock Jumps Over 5%",
+     "source": "India Business Trade",
+     "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE1SN3AwTzA1X3RDLXRQWTF0UlgyNVRUNTdod0JxNWdrTE1RaS1fTWF5T01WWDB2emhVbG4yU2FjcU0yOXdTc2VRQ3hjT083eG4xZndZd19DbkpBZjV1dmFlbEZ6eHgtTE9oZDRGSTRUYnM4UQ?oc=5",
+     "time": "30 Oct 03:30",
+     "tags": []
+    },
+    {
+     "title": "Market Trading Guide: Eternal among 2 stocks to buy for Friday for healthy returns",
+     "source": "Economic Times",
+     "link": "https://economictimes.indiatimes.com/markets/stocks/news/market-trading-guide-eternal-among-2-stocks-to-buy-for-friday-for-healthy-returns/articleshow/135321713.cms",
+     "time": "29 Oct 20:49",
+     "tags": []
+    },
+    {
+     "title": "Analysts raise Adani Ports stock targets after Q2 guidance - ad-hoc-news.de",
+     "source": "Google News",
+     "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNQTFBQ1ZpWnJJeTdEcW55Vm0tT2oyVHMydTBpbkhNeEtJbTNaLWdKd29jLXhWQnRhNVZuNDFEQXVWQVIzdlZuRFAxaDAzb0FpWDFYRkF1SXN1dWZjUlM4M2lmY0RfaWdtbW9wck9nNnRFYlhmTjRLOHFVOGljUjVvWldYTnNZMnBkUFdRQVJKMFdCQjlhSXV6UFpjX29DUU1RYmtkck53Q3Z1N1JfLTlzbEQ3YmJrQ0RYaVV5dE9B?oc=5",
+     "time": "29 Oct 19:58",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "Market wrap:  Adani Ports SEZ, Adani Ent, Trent, Maruti Suzuki top gainers and losers on Nifty and Sensex on Thursday",
+     "source": "Economic Times",
+     "link": "https://economictimes.indiatimes.com/markets/stocks/news/market-wrap-adani-ports-sez-adani-ent-trent-maruti-suzuki-top-gainers-and-losers-on-nifty-and-sensex-on-thursday/articleshow/135307738.cms",
+     "time": "29 Oct 17:37",
+     "tags": []
+    },
+    {
+     "title": "Market wrap: Adani Ports SEZ, Adani Ent, Trent, Maruti Suzuki top gainers and losers on Nifty and Sensex",
+     "source": "The Economic Times",
+     "link": "https://news.google.com/rss/articles/CBMioAJBVV95cUxQTExDS2xDVEJ0RTZvRW9FLTN2bkxpSEYzWTliaW80d0NSdjRLUjZhQS1rX283NjBEdTNlejFVZkpwQVdIbWh0cmpMaE5FdW1VcFJtM1kzUkJQVDB6VW84TWNJQ1cybVd4RU9CLWJBa1FwaWpmMkpjVEg1VHBfZnB3MVFqaWowYXZfWndZdkdpOUV4V3dDQk9BbHl5bDREeUpsZHRFb3JQZ0tGamp5YnBvNVN4SUIxVFBWRnRpVzlmVl9HUDFOd0swb1VkWUpERkxET1dYMzRNM2dGc3Y4eTE5c0FXMWJ6ZU1Ub2tId2d0UlJhcE1qUHlNazU0dHF6TURFNmRwUUpxSl9YS2lkVjVhcTkxZmdLSkxiWmlkeXgwRUHSAZoCQVVfeXFMTUVUZkk1X094YUVObmFiZ2JMOTB5Zkw3RkVSbTluYkpDRDdrRW1GUVh4VjZXNU56OTVnOWxGaTdIOUdfUXl3WEdjRGpUd1dyenZXcnZZSE84anV6NUMyeThKVzkxR0k0UWYxN2ctSURpTkc5bGhpVkdEdlBtcjkyc1VsTVpGYW5GRlRxc2oxNGdDWk50d2prREhfd1B4Z0Jmd3lnWlFVNmFyY3ZUVU1JdEc2ZXFvZTJIU2dmNmtUTlRSaXo2YnZId05xQUdLcmxfZ0ZRaGd1eUJjVmxkSHRPZFhjYnBVQXF4eFEzN3I5NzlsYWNSblhaTF9Ec0kxTFlfMHktdHIxQzBVNjNnV2xfZnRLeDlrengtbktR?oc=5",
+     "time": "29 Oct 17:37",
+     "tags": []
+    }
+   ],
+   "setups": [
+    "breakout_20d"
+   ],
+   "rsi": 65.1,
+   "earnings_flag": true,
+   "price_source": "Upstox",
+   "cross_check": {
+    "yahoo": 1859.9,
+    "gap_pct": 0.05,
+    "flag": false,
+    "yahoo_time": "09:46"
+   }
+  },
+  {
+   "rank": 3,
+   "symbol": "TRENT.NS",
+   "name": "Trent Limited",
+   "score": 88,
+   "price": 3024.1,
+   "chg_pct": 5.67,
+   "volume": 1664633,
+   "turnover_cr": 503.4,
+   "news_count": 37,
+   "news_tags": [
+    "analyst",
+    "earnings",
+    "macro",
+    "people"
+   ],
+   "news": [
+    {
+     "title": "Trent shares soar 7% after Q2 results. Here’s why Elara Capital, Nuvama remain bullish on the Tata stock",
+     "source": "The Economic Times",
+     "link": "https://news.google.com/rss/articles/CBMiigJBVV95cUxNM3hLdmVvRFBjb2lzcS05TW9zODNUU1BfNWg3T2dlbGpGZ2M2OVlVaTV5cW5nYU5JT2F0MjcwMlFZRHJ2ZWlJOXhzUXlnZThyeVYwRjhublY4TlkybE93RWFxR3VFT3VVUUdiZ1BsVXFSUTJzTFExQ3hGTmtNYzFudExrZHhOQXRCbl9TMm9Eam1fMmRVUjFFemlvLUw3MUZiTnhrbFQ3MG8zcFlhZkVJWTdQOE02VEswdktRSkdfSUlxZmtBbWlQb2dxUnJuNC1xSjg2aElHa0VuazFxZjI1OWFFNVFRekdBRHNQVElpMEFDa3puWldmc0tuRFRPNEd3Y0JUbjRQMFFfd9IBigJBVV95cUxNM3hLdmVvRFBjb2lzcS05TW9zODNUU1BfNWg3T2dlbGpGZ2M2OVlVaTV5cW5nYU5JT2F0MjcwMlFZRHJ2ZWlJOXhzUXlnZThyeVYwRjhublY4TlkybE93RWFxR3VFT3VVUUdiZ1BsVXFSUTJzTFExQ3hGTmtNYzFudExrZHhOQXRCbl9TMm9Eam1fMmRVUjFFemlvLUw3MUZiTnhrbFQ3MG8zcFlhZkVJWTdQOE02VEswdktRSkdfSUlxZmtBbWlQb2dxUnJuNC1xSjg2aElHa0VuazFxZjI1OWFFNVFRekdBRHNQVElpMEFDa3puWldmc0tuRFRPNEd3Y0JUbjRQMFFfdw?oc=5",
+     "time": "30 Oct 09:36",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "Trent shares rise 7%, top gainer on Sensex, Nifty; here's why",
+     "source": "Business Today",
+     "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNSUhmU29TU1VrVGZEbV8tbnJQbU9JdGN0dGVpOXY2RmI5RkZ4UGRlQjZ5QWd1RUVFV05VbmsyVGpUc0tjcUs1R05HcXFoXzdub2J2eUpVemNPNXVFdFQ3OHNXZEZwcTgzNDRIclRWM3ZXZzhUTzJEMnVYZW1na1JGSmRwU1BSLTdYMVVPanVBS2pQNEQxVmxvOGttS3l0d2V4MHFFV0VqaUdCRzVPaDhKc1FiMm9WRVNFUWRnYTBTd1gwd3gxaDZYRExFQdIB0AFBVV95cUxNRUdyQUFGd2Z4bjR1NkhpSG1sVE1CNHFIYUgxQ0E2Q3lXZXNoYk9mU2dtU1ZfZWxHTnZkelZqYjQtM1RkYms2QkJpTzlsTW5MMjB1bEVwT1Ztakt0OWk2c1RTZmJkWEtUVndoZ2IwOUYyeE1mc1M0ZU9HbmJiSXVPcHdqLUtvRGp5MHdRaF9vYXh6YnVsSFNUWjkxTlZZUWwtZF9zWF9ONGgyQTc0dmtYSlRwWUxmeHlwRDdFWnQ0UHNTZkw3cVNwaFVxOWNPTXFP?oc=5",
+     "time": "30 Oct 09:34",
+     "tags": []
+    },
+    {
+     "title": "SENSEX, NIFTY50 trade on a flat note; IndiGo, Trent shares surge after Q3 earnings",
+     "source": "Upstox",
+     "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNdXNTQzRjMnIwckNIVHRqc1RxcG42YTROQ21BV2xmY25sTGVqeWJpb240Q2lYNnB4am5xcWViR3hibmZIX1lnYWxWb09FaG9TN281cS01WUV2VE9jNThnTHJMTzVhSUZEOXlsS2NHVGIySWlKcng5TTEzUGZJYVYzRFk2VnE0QVlwUlduczE4SWVtTDJUYWNFNEZ6clBZRWswdFF5dHJuT0lMN3lmMDNIQzJQV0cwMnc1SHJKV3JCOHc3bVNZNWNNVkxlY29FN1psVFNDdERRWQ?oc=5",
+     "time": "30 Oct 09:33",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "Trent shares jump over 6% on strong Q2 nos; brokerages stay bullish",
+     "source": "Business Standard",
+     "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNLTBiUWNCM1hScVR1UDhhVWw1cXZ0NFd2SklDSmh3d2JjVE82NzgxRFZZUTdaTWtCTms1MVV1NnlSVlI1Z3QtbkFwbDdXdnAyWUllai05RmkzQW5adEx6d0JLTkd2VmQyZVU3WjNJd0c1OUZGcTlWVUFrQVlzcnVsUVBlZEltcDVRREwtQWVudDJmZC1ESXA2MXpEcElUWnNvYmtZZjRvWmhFZUh0XzdqaE5kak5wWjVZWE1lU3FkaFE3a053djVxZnpjSUTSAdIBQVVfeXFMTW1vRVp2WjdQNFlQSXVwcHN0Mm1xRlI0dTN4di1Hd2lCMF9xZElWa3pXeUtPNk81WHpUUFdTdnp5c2tRNDdGVWJ6MXU5WC1MTHpvc2FBVE9VbFZBVDRTSnZWVlJUZ3JyVXFvUVREODlkMDFBZTNieGUwWUhSMmhQdUR2MGpXT3dqWTZOeHNFbXpJVHlQQjItZFN4X0trWWNhNi10MTQxejFWOVI3UkJxR1lxQk9pWmVSYUtTZ3IyZHZMSC1Mem4wRzB0T3FZaHB0eEJn?oc=5",
+     "time": "30 Oct 09:22",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "Stock Market Today: Sensex, Nifty 50 Listless; Trent Zooms 6%, Sun Pharma 2%; RIL, Jio Platforms Q2 Results Eyed",
+     "source": "NDTV Profit",
+     "link": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxQZTFyMk9sdFl3QmJnUDd2OGhhdDNIZ3FwcDQwclFmNE1Ba3ZsakV0RzN0RHlKUkRYZnJST19SVDlqZmp5UGV0OGdOYzlLTkNNMTFqaEhNZGQ5cmctT2JzTEtZNzk4N1lfb2lyc2NuVU1ETHNWU0ZBZWpxX29hVWxxNUp4VE5pNndCVFVDeWtmZWNPQkh4U2xFeFp6NEd0am1jV2FBSWZIb215bUxTVnc2LTdhQ0lmM21KSHUtQjVSVlVpajhPdkZYdHQwTEgyc01tMFdxLXZBZkUwSUdGdXNkUjl4NGVMeHNWNzVROXhhSDUxT1BJSXo1enlzR3VVNXpyeWRaeTc4YmLSAZACQVVfeXFMTUltcFpOMzllTWlGSzAweENGY0Nob0tmTk96eV9wOVB1cGlDeTRuN1hRRFI4RS1KTVoyUW5xdWxpU24ySVIzWk9JV2F6bks2bVJ4TlZidVFqQk1LU3pOYlNEV2Qyc1JVSGlhVDhyb19xQlpQbWFmUmdXakhsUDZtSUEzSXlnQVA1SEhXV1BzZURDVnJablhfSk1FUzVCSmEwQmpZczltQVRON3otMzV4MnUzVGxsTlNJMGt3ZU5fWlhrcU53YzdHTE92UGx0QjdBTkdfOUVobGVib3VCcDR2MGZ4Ulk4R1haZkJZdEQxalExRDZqT01DMjlQbEE4RVJ4b0Z0UGh1c05kX1A3bnNOWFQ?oc=5",
+     "time": "30 Oct 09:19",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "Trent brokerage calls after Q2: HSBC Buy, Jefferies Hold, Citi Sell",
+     "source": "Business Upturn",
+     "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxObEo1VFdkOGJEZGR6bTdXWnZGcUpHRXFhTjgwTEFZM2JUdEtMVGM1NDl4SHlDbXpOYzVKbGVUNzN3X1o0eG5BeXJ3Y1d4OWpvVkdUX3J4bkRsalBZSDhzMEFXZF9vdENUdzR1dTdzaHUxOWQxN2pldE5PdDRfcDFZQ2pBN1F4ZW1fbGJTa2JGX1VxLTU0dVVyTWF6UlFOY1k1VGViU3pZNlRTQ1h1RXJ4ZXMxRWNOUS1rZ2RIQXNTamNRZVNpOXo4b09GM0M?oc=5",
+     "time": "30 Oct 08:50",
+     "tags": [
+      "earnings",
+      "analyst"
+     ]
+    }
+   ],
+   "setups": [],
+   "rsi": null,
+   "earnings_flag": true,
+   "price_source": "Upstox",
+   "cross_check": {
+    "yahoo": 3020.6,
+    "gap_pct": 0.12,
+    "flag": false,
+    "yahoo_time": "09:46"
+   }
+  },
+  {
+   "rank": 4,
+   "symbol": "SUZLON.NS",
+   "name": "Suzlon Energy Limited",
+   "score": 84,
+   "price": 34.8,
+   "chg_pct": -5.41,
+   "volume": 81471544,
+   "turnover_cr": 283.5,
+   "news_count": 34,
+   "news_tags": [
+    "analyst",
+    "deal",
+    "earnings",
+    "regulatory"
+   ],
+   "news": [
+    {
+     "title": "Suzlon Energy shares fall 4% as Nuvama, others slash target prices after Q2 margins disappoint. What lies ahead?",
+     "source": "Economic Times",
+     "link": "https://economictimes.indiatimes.com/markets/stocks/news/suzlon-energy-shares-fall-4-as-nuvama-others-slash-target-prices-after-q2-margins-disappoint-what-lies-ahead/articleshow/135342553.cms",
+     "time": "30 Oct 09:30",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "Suzlon Energy shares fall 4% as Nuvama, others slash target prices after Q2 margins disappoint. What lies",
+     "source": "The Economic Times",
+     "link": "https://news.google.com/rss/articles/CBMijwJBVV95cUxQRlNXd3JVRDlRY29FQzE1ZEU5QVRURzdDU3dXTzRsekw2dFFEUEFjcC1WLUR6ZjNoTmxWdEpaUi14Nm5HTWpFaEc4T1Y5cWlxYjRpdnV3NkhRelBLYzJTU3liQ3JZVW1VS2I0ZXZjY190MjhkYmhmQkROZUdYcW5TVTNqQ0FNRl9ISWg4aDJ2U2NRc28wOG5yenRJWFM5RXZGRW5lWWlDX3FULURpWURPZ0YxNFpDUkJTclJiTkp1azN0Z21BWnZYX1ZVazR6QnhST1R3R25BbENFcVdjSlhRZGs0YlZ2ZnVvOHFHSDBrMmo5RkI2U3QycjJjc21GWWJFWC1zQlltY0QyM0hUNFVz0gGUAkFVX3lxTE1KcFZsQ1puQUJNTzNXcU11d2JqWl95OEQ4Z0x1X0ZfRmIyS2JOUHEzRTl4LXd3ZWt6azNLWEg0V01CTEtNOGNOMW1ILWo4MmFpelV1YWwxTlRnSVdxenlrc1Z6N0ZfMUUwTEMtVUR4OHhmUThLXzB2SzlHUjR1TDJCOElCcVk2cHd1aE5JdDFIMjZidmM2M1lWNzhuNGtaY3ZCa3lxYUdXNXoxV0JuTGw5dk9yaWJFRjBrQ0NZdDBuZzV5dzJJYS1objZkQ0k4VmZ4VUJEM3lDWWNsMmtpVXRHbkl5WGVKZ2ljVXNpRnlVU29nWnd5N29IMGwyOUV1WmUybldGTWxBSGlvWkt0b0RPQmVuQw?oc=5",
+     "time": "30 Oct 09:30",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "Suzlon Energy shares fall over 4% after Q2 net profit tumbles 69.2% YoY to Rs 394 crore",
+     "source": "Business Upturn",
+     "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQRVp6NVJDdjF2UDhSbWtUNy1CTFRCM0VrWmtCS0hnWkNYTTR2ZExOZWhBN0pmWlI5Rnl1a2ZSdEZ3SFhxNUJ4VXRLMWNHT3dnRFEtMXB5aHlFSE5oSE9WYnVneXAwNk5OUWFqSTUwX1h5cmlXZUN3dUdtZUt0THdZc1ktTHRkeE4xLVYzZ1BHZnlsbXpFZ09ra0NuSUVzMy1OR2VCak9vVjV3LVRPTU9Ub2JGYjlIeHZ6M3hNclhKNFFJN1hqRGNwSEZVUTBqOWRfeXVkYTJVRG9mU25NV1JfZXYtN0dlMzZxSmpPaQ?oc=5",
+     "time": "30 Oct 09:25",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "Suzlon Energy Q2 Review: Deliveries Jump 26%, But Margins Slide. Why UBS Still Sees 58% Upside",
+     "source": "NDTV Profit",
+     "link": "https://news.google.com/rss/articles/CBMikAJBVV95cUxOc29RaXV3b0EtRGx0RWhPRGFZX0xYNUtKVHZkdFd0TWFGbERZci0tMGJXRktiOExMTlNoZEplM0ZlVE5sX2hDS2w3dTUzTXViNlotbFQtaWNybWdxaldoaUJhRFpEQmh5SkpOLTlpLU0ySGpQOVNWYVlmZ3d3VUI5U3pnOVpFbk9Nb0x5UzUyRHFsUU1jWENiQTFoRnM4VUxtaDQtRmlHcHctbmpKeGNHdV9kNUJyOW0tYnBYUnB2bVpnSmZUZXZ4LURPWEs2UTBtRlVOYXdKVGNJRHduTHpTazh2aURib0s3Um9LZU8zVjF0VndwZzVYOE1jVWF5UFRITFQ5UEEzVzNIOTVXMnlZdNIBmAJBVV95cUxPRTljeHpnaW1kdVRicTd3aFFxS1ozOTllSHNhNmhTSkE5UkhMdlg2M3g3MlJnbU1vTGtmY3ZUUmxqSkpPX0NwTThkc0lYbmk5UEtBbmU3cE9MaF96anhWMXQzMTRNeC1JUEZZUmdnOV9mdEJab2F1cTZILWE1cEN1eURLNnA2MjNocmxzTUN5azJDOXNBdGw0ZjFBZC1wd2prOU9yTUt0WnhRSVhFQnlIMGNnX0czcUNQNU1FbTdkNGRTcUx0aWM5Vnd0UFJsVXF4bzVVRnl4WjhkdlltSU9jQ0puaGZEZklJamVwZ1FRVWdoSFFRMEtCZWVSekZiMmhaQlZkc290UXJtdm5ucEdzUzRXZTJnTkl5?oc=5",
+     "time": "30 Oct 08:42",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "Suzlon Energy Ltd Reports Flat Quarterly Performance Amid Mixed Financial Trends",
+     "source": "MarketsMojo",
+     "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOVWRqcDZkMG1jUXJ0V01tcng4RTljekwxTU43bTBfX0RobWVlVG56QWhRNWd4OEJYcVktU2hBdFdkRWpjREFiYXZKbzVlWEJlLThscmJCMm5rWnJ1NWxlRnhKUXBPTEpYUlVlUDNhQVNwQnBJNDhXRm1NaFIxX1prZWpZVjBEMExMeGlaUWY5Y0Y2SEQycnBRNzhBOUVKZ1dXanpnNU14Ym9VUTdNSThhQ0VLamczSFo1d3R0V0hFanpUU2lxNEVGczctUUtJWU16R2lhRA?oc=5",
+     "time": "30 Oct 08:00",
+     "tags": []
+    },
+    {
+     "title": "Stock Picks Today: Asian Paints, Trent, TCS, Suzlon Energy, And More On Brokerages' Radar",
+     "source": "NDTV Profit",
+     "link": "https://news.google.com/rss/articles/CBMinwJBVV95cUxQNXlDYXJtSzdJQVZndGlIRWNOeGg0OWFWNEx0SERKeHc5UnJiZXF6Q2piQnNLTW9VWVd0UVBvc0tNWHVaTEUwNmUwQmY4WFJ4dUFkMWE5dkQ2bVU3dGwxQ3lOVkZET2VZYjJlNzZ6bU1jMENlUXU1TEVQWXdmZ3ZSQnR6OGxQV0R2SnU2Nl83eEpLNkl3LVAyNTNmaU1CZ0I3aWZjQUhhRVY3U2M0QmEtcEZmTzJDaUh5enVuSnFxOW5pSTQxdEJJRmRnZ214aE13Y1RWZU1nYmk1M3dKUjF6enNiOWljQU5BR3labE5XSjRoZ0VEel9IbXFjVEl2VHFiWkZzcmltVXUxQzdhaGRocFFic3FzVktTZDYzcGdmUdIBpwJBVV95cUxPTjB0b29NR212VWpxdHMwdWJvWXZoQ1JDV19ZTGVGd0JQeEZ2NEstcVNNUXU1ZlZmVDlvNmdrMmc0ZTliX1lQZnpaUFBhNHhIMS1TcnJjVkU1WmZhVTF1QU54WHZkYjRuT3pfZ2lHRURLYWZKcm5LVVJhdTUwQmVYTE5HeE5rZ0E5eUt5Y1JocXJxSlk1WGQtRDlfc3JXY0c2c3RZNDhjT3h5N3ZXdktTaUdJckN5UE5mdDQ0RzRjZHYxWjEwSjNYcEF2WWhkeHMyMC0wb3VjU2FTMm5aLXdfcTdOTGxkbG1iei1iZlZkd0hCaXJMVEU4REt4dGJ1Y0h0WDVOQTVVVDZub0FLWmNuUnM1ZEhHTlhMNjNuNTRHMmN5a1piYzNj?oc=5",
+     "time": "30 Oct 07:29",
+     "tags": [
+      "earnings"
+     ]
+    }
+   ],
+   "setups": [],
+   "rsi": null,
+   "earnings_flag": true,
+   "price_source": "Upstox",
+   "cross_check": {
+    "yahoo": 34.78,
+    "gap_pct": 0.06,
+    "flag": false,
+    "yahoo_time": "09:46"
+   }
+  },
+  {
+   "rank": 5,
+   "symbol": "BLUESTARCO.NS",
+   "name": "Blue Star Limited",
+   "score": 78,
+   "price": 1592.2,
+   "chg_pct": -4.83,
+   "volume": 589088,
+   "turnover_cr": 93.8,
+   "news_count": 19,
+   "news_tags": [
+    "earnings",
+    "people"
+   ],
+   "news": [
+    {
+     "title": "Blue Star Shares Fall 5% After Q2 Results; UBS Maintains Buy, Sees 26% Upside",
+     "source": "NDTV Profit",
+     "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQdTlXeVdRam9lRTFRbzhpYmV4eVB2ZFZpNUdGTl9mNnpSdVd0ekkwZ2NXLThBTjhfMHVNbkt1TVR1V29ZdWs1Z0NzWVAyZTVhUTd0Y0xfQlpKQkR3a055NnBpcDRLdEZKMnVyV2UwWDE1X0FId1RGeF80NGVpazUtdnl6VjVPWldQcDZOUVh3YlFSQ2JSQlZkX0N2R0t0Y1hZWF81ZFR4UnJIdG9vakpwOS1BOGlDckM10gHAAUFVX3lxTE5HYkRqSkdRZ1ZHNkN5eWlJZ1hvcFJ2SU1IdjVyUlJMV1YydDFlSXZZWU85eFIwVlhwLXpCcTVxdDVyRkRfTV9GeFZxSllaaG12cVZjaUpjaGZtdzBUMHpQN3RqVEw5MVVMYm5KNncxUHR5TVp1UXhlOXExT043dEcyekV6b2ZDeFR3X21ZSml5VUJqMERHN09RTVRncFZNVFk5MFRMRGdzdjI4NTJQYmFfeVg3b185S3R4U2NTeXZrcw?oc=5",
+     "time": "30 Oct 09:29",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "Why are Blue Star shares falling over 5% today? Explained",
+     "source": "Business Upturn",
+     "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQTkxRTkUwMF9KejF2eFIxNWNocTdYeGY4YUpIMGE2WENsdXVEWDhXWUMwWC1ua2VHWFpxT25KTnZ5OHo2NFA4OGh2MHgwc2p4ZFNiRDR4bmV4eXdVV1dCX09BemRjWnlaS0J0aEZGUHpWR1BLNHJSWUY5ZnZlTlFSaGJucTNid3RZZkp1QlpvdVZkOEhuX0FHcG1JbmNHRHlTZ0plWHR6TQ?oc=5",
+     "time": "30 Oct 09:25",
+     "tags": []
+    },
+    {
+     "title": "Gas Discoveries, First Helium Sales and Uranium Drilling: What’s Next for D3 Energy (ASX:D3E), Blue Star Helium (ASX:BNLDB) and Cauldron Energy (ASX:CXU)?Category:energy",
+     "source": "Kalkine",
+     "link": "https://news.google.com/rss/articles/CBMipgJBVV95cUxPVDRZeTVNQjQ1ZkxlV0RJdU5kNlNHY3M0Z2xnV0pRR3cwc21EYnBocXZmQ1Fka3d4MmlGWmlTYzF6TXhPVnJPaFdyQUlrZUtXVVpDWThPS0V6QXRZSU1CS1RXYzl3WUpXM2lWTjgtTGtUUWcwVVI3azdING9Wa3RzV3o3cDRtanh1aGt4eUdjR25JM3pMdjUzZU50ZlZZU1VUcVlleEg2elhWd2lNZVZyaHRuV21tNU12RW10TjVKRmY2SU5aTjd1V2U2QkNWWWlzd0wtLWZMeEV4UF9UX3pwMTFlVHplYkRXUDJSQXJwMTlhVXd3dWdKT21tMERSOVJHbE9od0E0Z1pyVFVXeDBYX1RybFZuRDAzank0LWNVZUtyWkVzVUE?oc=5",
+     "time": "30 Oct 06:37",
+     "tags": []
+    },
+    {
+     "title": "Blue Star Helium (ASX:BNLDB) Shares Lose 12% Today as First Helium Sales Are Reported",
+     "source": "Kalkine",
+     "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPb2Q5MGlIQ2Z4cklKQUtDNzJwekZrSWN1clA4UHU2OW10ZEpXYnlyS3NvU2xJUlBfaHBhM2E5WVBtUkJ2OTNTb29mY2tYdkV0Y1dsSGhsRmdITnpXVjE2MDlTNUtEOVNTVm5ldEdxN3E2ZVdjSVRSNXlpZktRMVJ2U2k0NHoxaHNIa0tKYzlDUGRhOVF1dG1rYUItRTB6TnhYanF2QUtyb0ZmSVJUNDR6b3g1SmU0M3YycXlOWkttbmNFUV9K?oc=5",
+     "time": "30 Oct 06:25",
+     "tags": []
+    },
+    {
+     "title": "Stocks to Watch Today: Sagility, Coal India, Trent, InterGlobe, Blue Star, Capital SFB, Brigade...",
+     "source": "Moneycontrol.com",
+     "link": "https://news.google.com/rss/articles/CBMiyAJBVV95cUxNSjBpLUdKQTNWRl9xanNtaGw0bFZvZ3FIckVKSUhfZlUtNGFkdGl2M1hNMXNJS25jQzZPTHkxWVBob05DdDBDTm5YMGdpTEp3SDRaMVhkWEZka0liYXAyVFgyTEVVbzgyVHlXc0FVZm15WjBkSVpaV1JkLV9xNXJDdENkV1hpYTNINWtnMENOUUZuQlViVkZiOXM2NHk4Skl4X0VMbHBKZlF0QlRpYmd4bHdKUWp1M3Uyel81bHBiMHpYTUJKVnc3emNsbFNtb2hkTVFZZFN5a09fQ2lWYnFOdVlYMGIzdWl2TGw1T0ZsX196eHgxVGxYaDE0TWhDU0NheHF2aTRqYWc3TE9uRTdOdGI0SjM2Y3hLaGxfVlU1cEFZUk5xZThxcjNRS252WjN2UWhZWGl4UThqRzYxZTExY2hQWVFoZVhH0gHOAkFVX3lxTE5XTEJiem0zdnZESUxMN0pFeXdINC1CR1Y5N1dyUFhDS2xTSDNFd0dFcE5XMXRLS0d5c2VCVHVEdlNmdDg4amVHYTEzNWtzdGtTemxtcTZmUWtXbExESnN2cEpsbDlzUzdWYzN5RVZOdEt4RVFLWXkwaDdYSUdXeWF5OXVWb2xDSzZkLXJDX19BUmlxUlJyQ1AzcFRFeDItZGFoQUpTZkU3cm9SXzdSTTNmMHlkNmlhcldkSDQ1aEp6aTlMZVlJaTE5MWFZQTFVUWhQWnhLWDZTR1JOVmlObmVYX0UxN1ZwVGtTVzJDT21MQXFjcE5kRE9MWHp5OHQ1ZklqeTE0UG02QzFfRU8wYVItd0dVMER3RWdJemYtZ2hEdDFTVUE1SnlvQ2l2Vjh1a3dEei0zVk9DczZCZXk4ZFZsR0o5ZG05dEh5cmI3VHc?oc=5",
+     "time": "30 Oct 06:15",
+     "tags": []
+    },
+    {
+     "title": "Blue Star Limited Reports Earnings Results for the Second Quarter and Six Months Ended September 30, 2026",
+     "source": "www.marketscreener.com",
+     "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQR085dGliOW4zMUVrRmlGZFZSV243Z0YtTThRQWNYMzU1QTVTM211aExRLTVzdDhrTE9wVGwzQ1pMUDQxdndTSzN0cW9femRqLTE1Xzk1TG9TTWk0b05PNU5jNFNqT1RBTEZOaWY1dnhZZDI0X3RQaFRVeXlQZ2lFb3RJamZpTjZNOHpGaU5MREZFeFNSVldwSXdEenBDaFNFUlN0VjFWT1ZOWWtFcllheU12Yy1QajAxWVdnRUdKVGdYVFlhZzZ6U3FiSGJ5ZVZpQTZfRlFRT2dMMkJCbFIxR1J4Wi1YM2s?oc=5",
+     "time": "29 Oct 23:22",
+     "tags": [
+      "earnings"
+     ]
+    }
+   ],
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "rsi": 56.3,
+   "earnings_flag": true,
+   "price_source": "Upstox",
+   "cross_check": {
+    "yahoo": 1593.4,
+    "gap_pct": 0.08,
+    "flag": false,
+    "yahoo_time": "09:46"
+   }
+  },
+  {
+   "rank": 6,
+   "symbol": "INFY.NS",
+   "name": "Infosys Limited",
+   "score": 76,
+   "price": 1162.65,
+   "chg_pct": 1.41,
+   "volume": 1855427,
+   "turnover_cr": 215.7,
+   "news_count": 11,
+   "news_tags": [
+    "capital",
+    "earnings"
+   ],
+   "news": [
+    {
+     "title": "Sensex Today | Nifty 50 | Stock Market Live Updates: Sensex trades choppy, Nifty above 22,900; Infosys, Sun Pharma jump 2% each",
+     "source": "Economic Times",
+     "link": "https://economictimes.indiatimes.com/markets/stocks/live-blog/bse-sensex-today-nifty50-stock-market-live-updates-gift-nifty-hcl-tech-adani-green-share-price-30-october-2026/liveblog/135338769.cms",
+     "time": "30 Oct 07:19",
+     "tags": []
+    },
+    {
+     "title": "Sensex Today | Nifty 50 | Stock Market Live Updates | Opening Bell: Sensex rises over 50 pts, Nifty above 22,950; Infosys, Sun Pharma jump 2% each",
+     "source": "Economic Times",
+     "link": "https://economictimes.indiatimes.com/markets/stocks/live-blog/bse-sensex-today-nifty50-stock-market-live-updates-gift-nifty-hcl-tech-adani-green-share-price-30-october-2026/liveblog/135338769.cms",
+     "time": "30 Oct 07:19",
+     "tags": []
+    },
+    {
+     "title": "Dividend Alert: Record dates coming up for Infosys, HUL, Mazagon Dock & 5 stocks next week",
+     "source": "The Financial Express",
+     "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQTGhXZUUxN3ozWmRKaGNyZ002OGs3NGtpNmhQcDduS05rcEVhVlctMUxIZXRaT19DXzNEaDAwcGZ3Z25XMjZPMkd4WmZUekNjX0xRellVaGM4ZTBOWHVxa3ZxV3Z3dVJlc00wVjYxZ19WZnhsOERWZ2VTa2QxS2RiWko4VlBoa25rdzcta28yYUNtcGtka1F0Y0hYWFI0Si1LV1J2MDVyNUhlM1RnNHdiQTFrY0lqa1hQQXNrS2Z1WE1nVVdyN1B4SWQ2S0V3a1l6UlhlUkJkSTloXzBpLTJpZTlwb9IB6gFBVV95cUxQTlJ1d3c5dE1tWEhkX21nMERoTUFvYUN2ZjNUWVhYNjc4TmN4SDdCeHhGbmFKa1FBUTNxdzlWeU93endwVktVdVNlZFVkaThReHByVThnYmh0UDhzRHVYTTgzT2xBMDJyRjg3SkJYSUtTRzc0MlFLVTM0eTFBdzdLLUdubzFCelJQV1BEdXdMQWxxdExldTlWU2s1Y2VtVHRWV3otVThfdW1aQTRxR0h0MC1CTlhFa2pLTFJqSHpsS095cWhHMG5IRnhHMWVGbEh5ZEJfckdRZmtHc1NYMThxeWo4YXhzZjctU2c?oc=5",
+     "time": "30 Oct 07:00",
+     "tags": [
+      "capital"
+     ]
+    },
+    {
+     "title": "Q2 October dividend champions: Infosys, Colgate, HUL, CPCL, Coal India | Big payouts - amount, record date",
+     "source": "Mint",
+     "link": "https://www.livemint.com/market/stock-market-news/october-dividend-champions-infosys-colgate-hul-chennai-petro-coal-india-announce-big-payouts-check-amount-record-11793286004751.html",
+     "time": "29 Oct 21:48",
+     "tags": [
+      "earnings",
+      "capital"
+     ]
+    },
+    {
+     "title": "TCS, Infosys, HCL Tech: Anthropic revenue soars 14-fold in H1 2026 - Can Indian IT stocks benefit from AI boom?",
+     "source": "Mint",
+     "link": "https://www.livemint.com/market/stock-market-news/tcs-infosys-hcl-tech-anthropic-revenue-soars-14-fold-in-h1-2026-can-indian-it-stocks-benefit-from-ai-boom-11793272878286.html",
+     "time": "29 Oct 17:18",
+     "tags": [
+      "capital",
+      "earnings"
+     ]
+    },
+    {
+     "title": "Infosys Finacle announces 37 winners of 2026 banking innovation awards",
+     "source": "scanx.trade",
+     "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQa19OdjU3NlhLdFVaaDBwdnpadTJwT1lFd0lqLVpicF9QV0hHZHA4U1JiQUtXTmt4ZTFJcktjbkx1OEZwUEJYNmMtYWQ0YmhaZ2I2cWdYaHhmd1RPMktDWUdlNFNVLXhjTDI4UmZQTnd2YUdaVkRHU19HNHVsTVVWTzRVeWl3MXpCU1ZTOTNBeERGUDR2Tmd4TDZoSG92azQway1DSGRiTEZXUXBUajJfVUVqM3FscXZRVWZEM1FVYUdMdw?oc=5",
+     "time": "29 Oct 15:40",
+     "tags": []
+    }
+   ],
+   "setups": [
+    "bull_flag"
+   ],
+   "rsi": 59.0,
+   "earnings_flag": true,
+   "price_source": "Upstox",
+   "cross_check": {
+    "yahoo": 1162.55,
+    "gap_pct": 0.01,
+    "flag": false,
+    "yahoo_time": "09:46"
+   }
+  },
+  {
+   "rank": 7,
+   "symbol": "GODREJCP.NS",
+   "name": "Godrej Consumer Products Limited",
+   "score": 76,
+   "price": 808.0,
+   "chg_pct": -3.46,
+   "volume": 3624564,
+   "turnover_cr": 292.9,
+   "news_count": 16,
+   "news_tags": [
+    "analyst",
+    "capital",
+    "earnings",
+    "macro"
+   ],
+   "news": [
+    {
+     "title": "Godrej Consumer Products: HSBC Hold at Rs 960, CLSA Underperform at Rs 747",
+     "source": "Business Upturn",
+     "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOSHdUX0lGbzdhRG5ycjI0WTl3WUlEUndlbVBuVjBYb2NnZjFTUUwwaVRuaHFyXzlYdTQxS3NTdzNsSVlpMi1ISVFBMlNYeU1MUm56aWxTMzZNTDc5VGRkRi13X1JpaVNQVjhkX25wcVZqSFl6NDJyMHREYzBaODdGVDlHZkt1eTE3dmFXZEw2dDZNc094TDBkQ0JtNkxNMjNqQnZsX2F6QTVOdF9UcDNvSU5US0NOMXZIRDUwZ0xxc1pQRWxYRC1WU2JrM1FhTWFZMUVoQQ?oc=5",
+     "time": "30 Oct 08:50",
+     "tags": [
+      "analyst"
+     ]
+    },
+    {
+     "title": "Godrej consumer profit rises 14%, weighs calibrated price hikes to offset inflation",
+     "source": "Economic Times",
+     "link": "https://economictimes.indiatimes.com/markets/stocks/earnings/godrej-consumer-profit-rises-14-weighs-calibrated-price-hikes-to-offset-inflation/articleshow/135339162.cms",
+     "time": "30 Oct 07:44",
+     "tags": [
+      "macro",
+      "earnings"
+     ]
+    },
+    {
+     "title": "Stocks to Watch Today, October 30, 2026: Godrej Consumer Products, INDIGO, Suzlon Energy, Thyrocare Technologies and Trent",
+     "source": "scanx.trade",
+     "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPYmNUbGc3dU5uU1MzMnhaZUt5QURYY3YyM2FVRnNOVUF2aC1XTGpTYy1jdHE1YnZHTV96bG9kT3I0bjZRUlkxa0N0RlRJanNrUHhaSVh6a2JDTWs4RFN2NkU2ZVN3WlowUUFyQnUyZmxQMzZOalVCbzNHRXZRTFNGNTVFZmdkU2c4N3VOX1dNRnNJVWpZVzM5UkJ2bzg3MjBSZjVrZ1lIdW1ubjJ2TmVXOVVQOS1PN1kyeEIwWE1B?oc=5",
+     "time": "30 Oct 07:26",
+     "tags": []
+    },
+    {
+     "title": "Godrej Consumer Products Ltd is Rated Sell",
+     "source": "MarketsMojo",
+     "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPaUt2SXZoUGN5cXplcjdUbzI3SDhkOGN6TDcxbmhmb1p5SkZDMFh3NUhIZlNWeFlSaUhUUk05V2FmZEEtcDJPc1pwdW9NbnN2OXJ4TXBxSHBzeVhad0Y3M0FBV25GOWctTVVQdWw3X2REYmF5QkVpUTZTbm80aWhPZ1FCbVZNRXkyLUp3b1NXTEpoaElBclh2azNpalJkUkRTZ0kzM0xvWQ?oc=5",
+     "time": "30 Oct 00:35",
+     "tags": []
+    },
+    {
+     "title": "Five Consecutive Losses Push Godrej Consumer Products Ltd to a New 52-Week Low",
+     "source": "MarketsMojo",
+     "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOMXZpdjItaHBQcVh5aTJWbk4zMWFzM01qdzBCbzdoNnlFY1NKYktHQi1CWUY2SDJ1QWsxZnVOMEowM21QWDNfMHVrOHZkWFVFVkVBS2xzam85eVg0RDh0T2NlMGZwUW5XZV9WMXRoekMtOGRiVVdGYlk1M1JDTXhIT0ZnYmVTRll6T3p2ampfTUxHTlVBQWtfb3dIbThNQmYxT0trT29US1F6dEVIMDlsZVNLOUVXb3lXT1E?oc=5",
+     "time": "30 Oct 00:35",
+     "tags": []
+    },
+    {
+     "title": "Godrej Consumer Products Sees Sharp Open Interest Surge Amid Mixed Market Signals",
+     "source": "MarketsMojo",
+     "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQQVpLdXVDbUMxSlRDSjY2VHYyMDUtaWNkMnlMRTNxdHc5cmhTR1p6LWxZTW8wOWpTR3l5U053Mmw3NWNxdW5hSlM1TDJvZS0tdVdQbG9TcVk5X09KYi1wb1hWcDh2RDZYRWN1c3VNazZOM3dXN1lDRWhfRnR0bUhnWFZoVHBNZm5GbUNZUkFaYW91c3RjS0hmaEdoTjlpcDRhYWVtSU5GdlY3cE83bXhPVTBFTmt2ZVRWaXRKZFU2WUp1bElWUi1EeDBWekpkbDlLb0d6R2Fn?oc=5",
+     "time": "29 Oct 22:23",
+     "tags": []
+    }
+   ],
+   "setups": [],
+   "rsi": null,
+   "earnings_flag": true,
+   "price_source": "Upstox",
+   "cross_check": {
+    "yahoo": 808.2,
+    "gap_pct": 0.02,
+    "flag": false,
+    "yahoo_time": "09:46"
+   }
+  },
+  {
+   "rank": 8,
+   "symbol": "RELIANCE.NS",
+   "name": "Reliance Industries Limited",
+   "score": 76,
+   "price": 1160.5,
+   "chg_pct": -0.59,
+   "volume": 1634892,
+   "turnover_cr": 189.7,
+   "news_count": 26,
+   "news_tags": [
+    "analyst",
+    "capital",
+    "earnings"
+   ],
+   "news": [
+    {
+     "title": "Reliance Industries shares down 26% in 2026: Here’s how to trade RIL stocks on results day",
+     "source": "The Economic Times",
+     "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxQVlExWXVxODZ1V3Q3WlM3RjVybmVab1EyRFpMeVpYeDJzSzJEeUU4MGFHUlVJWVVXQkl2Zm0ySkoya2l3alpWQzNJNFd4WURDd1VVSW4yNUdfaFFGcmxJMUloSmQ0S3FfcWJ2X2ZHQXRhY21zbEJQV3NGUm9OSXRZdHJBb1ZwMzRvVmJycVRSLTNHTzR4MVJ0WWN4N0pQUjNPYmdEby1BZVNURWkyUEtkVnZoTThubm5MeFdjNnBBM0xQNHg2VGh6bDdtb1FFTXdRZUdmelA5c0xqM3ZMa2Y2LVpPZVJsUDA5MEU1N1NxWjhWdnloQ3FxY9IB-AFBVV95cUxQVlExWXVxODZ1V3Q3WlM3RjVybmVab1EyRFpMeVpYeDJzSzJEeUU4MGFHUlVJWVVXQkl2Zm0ySkoya2l3alpWQzNJNFd4WURDd1VVSW4yNUdfaFFGcmxJMUloSmQ0S3FfcWJ2X2ZHQXRhY21zbEJQV3NGUm9OSXRZdHJBb1ZwMzRvVmJycVRSLTNHTzR4MVJ0WWN4N0pQUjNPYmdEby1BZVNURWkyUEtkVnZoTThubm5MeFdjNnBBM0xQNHg2VGh6bDdtb1FFTXdRZUdmelA5c0xqM3ZMa2Y2LVpPZVJsUDA5MEU1N1NxWjhWdnloQ3FxYw?oc=5",
+     "time": "30 Oct 09:38",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "Reliance Industries Q2 results: Profit may top Rs 21,000 crore as refining, Jio drive earnings",
+     "source": "Moneycontrol.com",
+     "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPWExmTzVUc3lYYlE2WUE2dWZOVDRWZWtVOGVMVjFmS2tMTTZHOVZKVnBqcmpaZ0dDLVVRdjVvaGY5bndETTdpcm5CTmZVMnlISDJwX0ZFaXpTOTQ2ZkRxc1NXRnlnX0VqczN1M0ZVU0FuTDgxM0FTaHlzcUoyMWFqM2dONFBHZGlVWm90V2p4M0JMcG9VeS1lVDh2OVJ0cTJQNzFMa2RXV1ZjX2JpYlg0MElDb1l6YkJqc1pBTDRPSFMwb2tIYXdxMWU2Z2x6TVBMOFp4NzhfeEFJOGFJZm1JSkdGMVdPNndCXy1HZG1B0gHzAUFVX3lxTE1tRC1OWHc1d2xWM3gtaVppeWZkamJpQm0ta0pEZDdqam41NXlNeW83RmE1ejJFT3pPdENzTHFWbWdfNmhTTFNQZHI0aHhBVkFRdkIyRzBySzJ4Vnh5ODh3UDJzVnZWVjRLdElZQ25iamVmQWtKTlNJRXM2ZFd4dUQycGdXRlM4QmdrUTNJaUQ3bDFYX0pMaXdid0FiVkpsdVhwX04zMEJqTTNJZC1Ha19SeE1XV1oxVUFGSm5PSWRWaWkyY293M0dMdXV1aUJ1WU9UQVB3bzJxZUxIVndEMXNoeUlyd1l1R3dpTXdyTm5HYnV4UQ?oc=5",
+     "time": "30 Oct 09:36",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "Stock Market Today: Sensex, Nifty 50 Listless; Trent Zooms 6%, Sun Pharma 2%; RIL, Jio Platforms Q2 Results Eyed",
+     "source": "NDTV Profit",
+     "link": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxQZTFyMk9sdFl3QmJnUDd2OGhhdDNIZ3FwcDQwclFmNE1Ba3ZsakV0RzN0RHlKUkRYZnJST19SVDlqZmp5UGV0OGdOYzlLTkNNMTFqaEhNZGQ5cmctT2JzTEtZNzk4N1lfb2lyc2NuVU1ETHNWU0ZBZWpxX29hVWxxNUp4VE5pNndCVFVDeWtmZWNPQkh4U2xFeFp6NEd0am1jV2FBSWZIb215bUxTVnc2LTdhQ0lmM21KSHUtQjVSVlVpajhPdkZYdHQwTEgyc01tMFdxLXZBZkUwSUdGdXNkUjl4NGVMeHNWNzVROXhhSDUxT1BJSXo1enlzR3VVNXpyeWRaeTc4YmLSAZACQVVfeXFMTUltcFpOMzllTWlGSzAweENGY0Nob0tmTk96eV9wOVB1cGlDeTRuN1hRRFI4RS1KTVoyUW5xdWxpU24ySVIzWk9JV2F6bks2bVJ4TlZidVFqQk1LU3pOYlNEV2Qyc1JVSGlhVDhyb19xQlpQbWFmUmdXakhsUDZtSUEzSXlnQVA1SEhXV1BzZURDVnJablhfSk1FUzVCSmEwQmpZczltQVRON3otMzV4MnUzVGxsTlNJMGt3ZU5fWlhrcU53YzdHTE92UGx0QjdBTkdfOUVobGVib3VCcDR2MGZ4Ulk4R1haZkJZdEQxalExRDZqT01DMjlQbEE4RVJ4b0Z0UGh1c05kX1A3bnNOWFQ?oc=5",
+     "time": "30 Oct 09:19",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "Q2 Results, Oct 30: Reliance Industries, Jio Platforms, BEL, IOCL, Varun Beverages, Bank of Baroda, NTPC Green, others to post earnings",
+     "source": "Dailyhunt",
+     "link": "https://news.google.com/rss/articles/CBMisAJBVV95cUxQZHRoeGEzX0RBVHNqOFZMeDA2cmY4R2JnVzJ1M0hxWnNaUW1iOXc4YzlTaUNxek5xcEhfakdEM3J6b21VeEs5aW0zQlBZTno2NFpJSUFKU1cweHhyVnJUNGpuWG5DM1Y5Wm52U1lNNlNuTFIzd3ZhTkxyTF9HS2xTQXpDajd0azRDclQ5THpOcmo5ZjdwN0ItTk5lWmdidHByMmg2UGg3YThMdGRLelJmY05oVWFySFQxU0w2bjNJdEVHRDNEQTc0ZjZxMnR3bGdRajlfc2RNRjVKd2lWakRMOGlacG5ONlFUQTZaYWxDenFWTlp4YWdnTzVPLU1LMHFGQjZGV3R5QWpCYVZNSmJXYURfbVNpSWlwLXlLR1FpYUh3aVhfcHlXWVlsaG9yNDNS?oc=5",
+     "time": "30 Oct 08:46",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "Stocks to watch: RIL, Jio Platforms, BoB, Equitas SFB, Trent, Coal India",
+     "source": "Business Standard",
+     "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPTE9iM3IwZi0tREF4SVA1b2FFUC1rSUF2elk5aHBFcHRtQ1FCRzM4VkR5MUNtZnhzMmVEc1lJNmhvdkRwRGRvVnFMaFVlQjJUUm1LdjZ6Mmx3QWt1aEV2dDBOTmU5bUNZRUVJRThQVFRkRXgybl9fOF8xd0tyMkZCUTZ1bHRLdk5ablJzeEdkVDNFaHkyWkpwWWtjeE5SZkxaeWJNOXV3b05sd3Y0cl85a2M1S3RuQUIzblRyR2FaZ2tYMHNjY09xMlUtVTJLNHJyY2pucTR1YmZwd0c20gHiAUFVX3lxTE9CWUltRE11NUlPNEJMVHVUbEVEcU11WnNGa200N1FKanlHOTZTTDc0dXJfRzlQX296TFN0ZlBrZUEwbklPOWZUeHlIUlZaVWlYUThZeXN2Z2szbVJtYjdwd283UWY1WHYwdXE2MkRHZ1QxZld5WG5RWDNBODBWa2FkSlRVczFPSWFKZEJNczlnREFBMVhLUG9veHRRRFlYeG9UdmM3ajF3Y0FCYlRMZ0JKd21wdy1MMGtBUnBKT0V4WjFFYTNvelktWHF6dndrdDc5S0w5WnJkcTI3M29iUDhjYnc?oc=5",
+     "time": "30 Oct 08:04",
+     "tags": []
+    },
+    {
+     "title": "Stocks to watch, Oct 30: Jio Platforms, Reliance Industries, Trent, IndiGo, IT stocks, IEX, Vedanta Group, PB Fintech",
+     "source": "Upstox",
+     "link": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxQMTBCd2xwUzg2U1FrQktnbXBEYm5CUXRFMi1vd2NsSkpqcGNMcmtZclBXaW5iYnFXN3p4WGJ2XzVPck9YUXZPaGlza1FkOVpEZTdrZU1MTlJ3d1JScXpXc2pmNlBDVEw3bm1MaGdhQnNuUVdWZGZHUkVfUDZidFNyd2w1Y1FMc1U4V0otYVVxZXVrdEJmTEdhZWNuOEV2TlduTFBQZkN4azdMVUVPREhCbnQxVnFzRUVKanNPMXhBdDRGS0tFdC1vdTcxVUtucFRzTnJVWWljcTMwdnFqaWF5dU9meHp3Y2tFSnVEMnEwWTNfTTR3Y09nYjRzOWw?oc=5",
+     "time": "30 Oct 08:01",
+     "tags": []
+    }
+   ],
+   "setups": [],
+   "rsi": null,
+   "earnings_flag": true,
+   "price_source": "Upstox",
+   "cross_check": {
+    "yahoo": 1158.5,
+    "gap_pct": 0.17,
+    "flag": false,
+    "yahoo_time": "09:46"
+   }
+  },
+  {
+   "rank": 9,
+   "symbol": "ETERNAL.NS",
+   "name": "ETERNAL LIMITED",
+   "score": 76,
+   "price": 342.3,
+   "chg_pct": 1.32,
+   "volume": 7390675,
+   "turnover_cr": 253.0,
+   "news_count": 10,
+   "news_tags": [
+    "analyst",
+    "earnings"
+   ],
+   "news": [
+    {
+     "title": "FILTH IS ETERNAL's van was stolen from Capitol Hill area in Washington St., seek help locating",
+     "source": "Lambgoat",
+     "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOekhnQ2tXRnlzaDZoTVZHMWFnM1pIR1dwTTNTRTVQRm5CS0FBT3NrbnBfSkdoWjVKeU1LQ05aMWlqb09ERjZ4SklJV0JHd0FYQVNUNXVDZG51Q2tTRG1reEd1a0hIVWlreGNfdEF0VDUxNEdlWXpZY3k3cWNSRm1qUnFjUFhDaFYtbllxOU1QTWxPRzFqc0tIZUlfUVQ1MGlIWWltTzR2VUxLYWhic01vVlgtSFJTRTRfVVQyTnUtbjFUUQ?oc=5",
+     "time": "30 Oct 08:35",
+     "tags": []
+    },
+    {
+     "title": "Filth Is Eternal report band van stolen in Seattle, ask fans for help",
+     "source": "NextMosh",
+     "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOa25WSTBSVnhBendpeTduU1B1ZnRmejA4UkpFdG9QOXA0YmxYcllvSDZ1S0l0cms0cW51aUJXRVd5TGtERUlWcXpWZ0FVd2Z1akJuS0g4UF96MU9VeUZOYkNsbEhtRHMyVTJFSGFEVnVxSFluVUJxc2NWR0U4T29ZcTlwZGxsSlA3SUh0UUpJNnRVeG1f?oc=5",
+     "time": "30 Oct 07:15",
+     "tags": []
+    },
+    {
+     "title": "Market Trading Guide: Eternal among 2 stocks to buy for Friday for healthy returns",
+     "source": "Economic Times",
+     "link": "https://economictimes.indiatimes.com/markets/stocks/news/market-trading-guide-eternal-among-2-stocks-to-buy-for-friday-for-healthy-returns/articleshow/135321713.cms",
+     "time": "29 Oct 20:49",
+     "tags": []
+    },
+    {
+     "title": "Namit Malhotra’s Ramayana Celebrates the Eternal Bond of Lord Rama and Maa Sita with ‘Judi Jodi’, Out on Karwa Chauth",
+     "source": "Urban Asian",
+     "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPM1NPaUpsdUlTTmVaR3hoaXJkNHFLVVVsejVZMFhxc29FWHpqOEU5a3RJb1dKSGlFYklWOU1IZXJWQUJERWRVQ1VfQk83OGh4SHRsT1haRkJ4RGhLY1pPZ2tUWEVLNEtvdGJ0dEVvNWd3VXdfSDY3QnhnRUhid0NSbnFHVklRSEhUYzc1MVM2bVlxWHVPT2Y5Mmt4dVRSTmZJTEJWRktBekJfOWtsVGdZRlB5dk9STld1MXBlSkV5ZlRvRFFxT3hxNjB1NUl4SURpcjhyRS11ZjZtRXM2VmNrZ3VEVjJsWl9GTGVJUzVWazA?oc=5",
+     "time": "29 Oct 19:02",
+     "tags": []
+    },
+    {
+     "title": "Top 3 stocks to buy tomorrow: Kotak Mahindra Bank, Nykaa, Eternal by market expert; check stop-loss, target price",
+     "source": "Mint",
+     "link": "https://www.livemint.com/market/stock-market-news/top-3-stocks-to-buy-tomorrow-kotak-mahindra-bank-nykaa-eternal-by-market-expert-check-stop-loss-target-price-11793275019681.html",
+     "time": "29 Oct 18:00",
+     "tags": [
+      "earnings",
+      "analyst"
+     ]
+    },
+    {
+     "title": "The Eternal (Amorphis, Flat Earth) Share Their New Single and Video for “Obscured Horizons”",
+     "source": "Ghost Cult Magazine",
+     "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNVTNLUG9QcXd5YlFNUlo1MUF4YVNhTk0xa1MycnRRUThDY2ZPbUVkRktZQTBnSDRPNGwycVFrNWlHSjI2QlcyRjM3REdMYXh6eWozTVFBNGh2NTV2MW1wbGpsdXVQU1M2RkEtN0ptTU9DQ1pOUThBaldZNmt2MEd5ZnNxSzRIa0piNGI2SGIxYnlFM0ZyVklUWUZ5bjBiWHhJNzNrdVVEQkRFYzZNdkt4MTlR?oc=5",
+     "time": "29 Oct 17:25",
+     "tags": []
+    }
+   ],
+   "setups": [
+    "breakout_20d"
+   ],
+   "rsi": 59.2,
+   "earnings_flag": true,
+   "price_source": "Upstox",
+   "cross_check": {
+    "yahoo": 342.5,
+    "gap_pct": 0.06,
+    "flag": false,
+    "yahoo_time": "09:46"
+   }
+  },
+  {
+   "rank": 10,
+   "symbol": "KOTAKBANK.NS",
+   "name": "Kotak Mahindra Bank Limited",
+   "score": 73,
+   "price": 460.55,
+   "chg_pct": 0.34,
+   "volume": 2218698,
+   "turnover_cr": 102.2,
+   "news_count": 11,
+   "news_tags": [
+    "analyst",
+    "earnings"
+   ],
+   "news": [
+    {
+     "title": "Kotak Bank shares gain 30% since April as earnings outlook brightens",
+     "source": "Economic Times",
+     "link": "https://economictimes.indiatimes.com/markets/stocks/news/kotak-mahindra-bank-shares-soar-to-record-high-amid-improving-growth-prospects-earnings-expectations/articleshow/135336078.cms",
+     "time": "30 Oct 05:55",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "Five Stocks To Buy Today, October 30: Dalmia Bharat Sugar, Waaree Energies, Kotak Bank, And More",
+     "source": "NDTV Profit",
+     "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQOThweWltZVNVTmsyclp1ZkMyMVlnalRLOVgzNTdGWVRtT1V2NEVUZ1ZXYUVtVGs2cnJiMGp3UVAtajBMckt6bzJ0bWtXeWJXWGp0TnZtSUxQOWY0a19SalRQMWY2cGVXaHh2UlhabUlrQTJ6VDJncjV6Q1RDcUlmWDQxYnFDa2t5TnpoSElMNmllMHNGY1hDY0xuQXR3SVlFWGhydjdrLWYwTnk5Ui1qd21QVTNCWFBPaFl0dDZLUjhWaUJNRFR3anplVGl3MEJOb0HSAdoBQVVfeXFMUGZScGtxdm5VRTZ4UzFUaG14SFU1blg4RTNTV3FZUk5BQm5Md0dwQTE2allOUjFjZFZDcmNhVkZvdEFTb00zUEhPM2dfQ2lZQTgxdWczakRBWkExWVRSdkdLTEotSERhMGNiTnhvMVJqZXlDN2N1TUdEYU1aV2E5Z2QzR2xqclZTekFMUjRzWHBqeFZwaExRT2U5dzVOZTl5WUNBLVVrT25vbXczTWcyNjFTckRrbzFfTmRrNlZYYWxzMDlpYW5MaDVoMU1GdE5JTm1RaEtYcHBQQlE?oc=5",
+     "time": "30 Oct 05:09",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "Top 3 stocks to buy tomorrow: Kotak Mahindra Bank, Nykaa, Eternal by market expert; check stop-loss, target price",
+     "source": "Mint",
+     "link": "https://www.livemint.com/market/stock-market-news/top-3-stocks-to-buy-tomorrow-kotak-mahindra-bank-nykaa-eternal-by-market-expert-check-stop-loss-target-price-11793275019681.html",
+     "time": "29 Oct 18:00",
+     "tags": [
+      "earnings",
+      "analyst"
+     ]
+    },
+    {
+     "title": "Kotak Mahindra Bank Target Price After 4% Jump to Rs 459",
+     "source": "Univest",
+     "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPTGNQXzRDb2xRYmJZRWdQaVBEclo5elk5cFpvTmNKQVdJbjBXc0NuRVFKMU4zU3ZzQkdUeV82VUNzc1ZWcFZsSFY1Y1BUdDVPN2pWQlE3SGZXRXZqWGN0aWRHUWtzU25NZnBzWlZVTm5NNlpZMXVkTFo4N0NyLU83dmNwVXNyLVBVWXpudFlrNVJ6S3YzS0lqQlZpMWlycmNHUXcyb0ZfcWZrUkFIMXY0RXlBNmJZRXhNNTFOUXdkRkoza2IydllvbEVYTWVwbzRubWxSTmNhUEw2bTVFd2NudlFFY0ozYXJqWXc?oc=5",
+     "time": "29 Oct 17:09",
+     "tags": [
+      "analyst"
+     ]
+    },
+    {
+     "title": "Kotak Mahindra Bank stock jumps 4.3% after September ₹5,645cr profit",
+     "source": "NewsBytes",
+     "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQUHgzaG9pems2dklYOHdPMmFuTHFnWm1xRmd5UkVPNldPNXltSWxqVnhLRWEzRFZ2d24xeXY3MzlERElCZ2NvM1U4Vm9LYnJEaHB6blZNOElkclFjMUR3N01jU0JtU3BpWmFaNGxPcVY1Mi1IMUJRRkZIMWJaUmwtQTJ6dHJrYlp1ZU9BeHJINWd0QWgyV2J1X1prY0JweEptM1M2Q3BLcHRMaDJxQUQwbm1PdDk?oc=5",
+     "time": "29 Oct 16:58",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "Kotak Mahindra Bank shares gain over 4%, hit highest level since April 2025; here’s what you should know",
+     "source": "Livemint",
+     "link": "https://news.google.com/rss/articles/CBMigAJBVV95cUxOVXV3ckxrc0Yta1lSekxsVGhDTUVDZUZvM0tmTGltWVF3YThtVjN6QjYxcXM5ZTZxUk1rM0tWVU5zREIzbGg2WVNnWUVxSUljM28tM1Nkdk9YVXk5LUpxQ3lBaTNFMHVxNFdiblBmM1V5NEEyanlYTFhzRzg3QUdTcm9CcFl2THltalRUMlBmYmlVWDktMC1fdVl3R1B4MmNZTWFSbHhLM0pPSlY2MXE3T2xDTmVYdVc0bE5oUkdnOHNaYl9qNDVReFRKUTZBaUNXdXZZTFZnZ1ZCZ3NKbkdaZGxUVloyVE5Jd05EbjRVam5oSG1JYU5iVkJQdjlTdmVU0gGGAkFVX3lxTFBnUExwNkhTRnhWNzNjeFZTSEpnU3FQaWx1dXZLUlBCcXNrTXduNmhVQmJBWFU4S0F2bFdVZEZJNXVZb0s4YmlINFNiYVVsbUhtQS1RSTdoYlRLSUtBMENyRndmeUVQejZaVHd4RDJnUF9LMlpSVG1iWnBJNVZodmlGck5qOUhwaEtYQnZCY0ExaGVGeDBIQXVOUV9RVVNqdEV5YWtjOFAxbGsyS2hibTRpTDZxVHlGbjBOVC1mZDM2M1BNd0xHY25CeTdpTUFNWEI5YlVaWU1DeVRBWGVtT0xySjBMa0Z6YjcyZDJzMGZsdktxTHBaNHJPRnVPYkN0dHp4WFpCY0E?oc=5",
+     "time": "29 Oct 16:01",
+     "tags": []
+    }
+   ],
+   "setups": [
+    "breakout_20d"
+   ],
+   "rsi": 68.1,
+   "earnings_flag": true,
+   "price_source": "Upstox",
+   "cross_check": {
+    "yahoo": 460.65,
+    "gap_pct": 0.02,
+    "flag": false,
+    "yahoo_time": "09:46"
+   }
+  },
+  {
+   "rank": 11,
+   "symbol": "PNB.NS",
+   "name": "Punjab National Bank",
+   "score": 73,
+   "price": 124.02,
+   "chg_pct": 0.1,
+   "volume": 5516975,
+   "turnover_cr": 68.4,
+   "news_count": 20,
+   "news_tags": [
+    "earnings",
+    "regulatory"
+   ],
+   "news": [
+    {
+     "title": "Punjab National Bank suspends 12 employees over a fraud : Refers case to CBI",
+     "source": "Cross Town News",
+     "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOdWFKaEo0NFdRUWNtTm8xZ0dZNEhLTHVkay1hc1liQTFpakFQUjZGc2lqQ3VwTHRXQzZUeFB3bGRLMlpXV3YwVzlFMmNwajMwOTVNWnRqQkJuY2NVMHRDeDU4S2EwS3UwTUc1X3hhcE5mUFk3aGRnaEE3Vk5jRktTbm9JZVdDeUhYSlFEUlBvYUR0dVVlMWxBeHJWWnpkUURnbFBtU1FNaC1tMXFrQ0ZBcE5NUS1nQlVCcmY1Wg?oc=5",
+     "time": "30 Oct 08:12",
+     "tags": []
+    },
+    {
+     "title": "Greater Noida PNB branch fraud: Punjab National Bank says all genuine claims to be settled",
+     "source": "Moneycontrol.com",
+     "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPbEh3QnJoZzQxS09yRFk5TjQxX3NBR05jN2pxMjhMMHgyT00wODR6N25UaVdKWjQwY2ltclBTY18xT18yWDNyX25SN3hvVDBUcTk4dHlTdzBqaVh4aHZjVkJIemdBWnk1SUZ5cl81NjJuY0NVZTQzanBOaUJIVlBFb0hNS1o5dHNGcWh6eHVJZjJWbHo3b25XWFJBTjhoLTVuTVAyb0ZQdzJqd3JMWl9yOVItMmpqR2pFNXpkcjFLTUREUG4xVGJPUGRNZEJOdDBHcFdPVVdqVFdId2EybVhj0gHfAUFVX3lxTE9sSHdCcmhnNDFLT3JEWTlONDFfc0FHTmM3anEyOEwweDJPTTA4NHo3blRpV0paNDBjaW1yUFNjXzFPXzJYM3JfblI3eG9UMFRxOTh0eVN3MGppWHhodmNWQkh6Z0FaeTVJRnlyXzU2Mm5jQ1VlNDNqcE5pQkhWUEVvSE1LWjl0c0ZxaHp4dUlmMlZsejdvbldYUkFOOGgtNW5NUDJvRlB3Mmp3ckxaX3I5Ui0yampHakU1emRyMUtNRERQbjFUYk9QZE1kQk50MEdwV09VV2pUV0h3YTJtWGM?oc=5",
+     "time": "30 Oct 08:00",
+     "tags": []
+    },
+    {
+     "title": "Punjab National Bank Faces Rs 1.56 Crore RBI Penalty for Non-Compliance",
+     "source": "Indian PSU",
+     "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1VWVZKYllTa3NOSlI3RWNoQ2tXQzZDQ1ItdGxiMEhXMDRMM2l0clVqUzJRckFud0FwdGloZ1ZQNUw0MHA4R3dYQTBvd1VPZ0JNMXRHV0xrVDNzZ0xPX0w5S2FJMG9iR0ZvV0s1S1ZKSE5rRkg5TXBB?oc=5",
+     "time": "30 Oct 07:03",
+     "tags": [
+      "regulatory"
+     ]
+    },
+    {
+     "title": "Will RBI direct PNB to credit back customers' lost money?: Rights of PNB bank a/c holders & steps for full ...",
+     "source": "Bhaskar English",
+     "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQaE10VE9tTmlUdDB3TWlCYmNWcW9waEExUGE3WUYxY0F6UFJhNk55QzRfekpCZllYcFNYcUc0RjhuZEVmQ2NnUHZwN3RxREJ3VGdxTkRjbFBHSVN5aExvcTJpTFFBZG9hWVpZM2pRbWg2UWtTby1GelFGbXN2cUNMODhVZ1h3Um5WRjc5VjBrUmxDRFN3NEZHOWY5T0syOEFTY29FTmFTSFF3Z2lwWTd0Sk5IRjJjRTBVVFdOcDRuRdIBvwFBVV95cUxQaE10VE9tTmlUdDB3TWlCYmNWcW9waEExUGE3WUYxY0F6UFJhNk55QzRfekpCZllYcFNYcUc0RjhuZEVmQ2NnUHZwN3RxREJ3VGdxTkRjbFBHSVN5aExvcTJpTFFBZG9hWVpZM2pRbWg2UWtTby1GelFGbXN2cUNMODhVZ1h3Um5WRjc5VjBrUmxDRFN3NEZHOWY5T0syOEFTY29FTmFTSFF3Z2lwWTd0Sk5IRjJjRTBVVFdOcDRuRQ?oc=5",
+     "time": "30 Oct 05:30",
+     "tags": [
+      "regulatory"
+     ]
+    },
+    {
+     "title": "Money from PNB’s Greater Noida branch accounts diverted to six accounts in Goa, Mumbai, Jharkhand",
+     "source": "The Times of India",
+     "link": "https://news.google.com/rss/articles/CBMigAJBVV95cUxQS1ZpQW9nVzNFekxXTEpKWWtJdEJUcVJNRjZyV2FhekNlWktlQUhjdFNqRDF5ZGpmTjFJQXpDSVJrczRLb2t5NmxiVG9WWk40QS1BdW1OZ0NCdWVZR1ZLOEdDTWh3V2pmWnM4enBRT1BYMGxaZnFjLWxtYnZnYmYyelJWR0ZuOVk3TjM5azJWMVQ4UDlGMXRPN3ItTkJ4Y1hjNVRnVG5JVXZSYWNxRmZ0c2FYbzZSaS1fd2dxVlBaLVlCTHVtWmFxMUZpTU8yUnQzekY4ZWJDSnI5NmpOdHRNUElZMXpScUF5TkNvNmg2RllnajNYV3lqN2lfMHh1VUhZ0gGAAkFVX3lxTFBLVmlBb2dXM0V6TFdMSkpZa0l0QlRxUk1GNnJXYWF6Q2VaS2VBSGN0U2pEMXlkamZOMUlBekNJUmtzNEtva3k2bGJUb1ZaTjRBLUF1bU5nQ0J1ZVlHVks4R0NNaHdXamZaczh6cFFPUFgwbFpmcWMtbG1idmdiZjJ6UlZHRm45WTdOMzlrMlYxVDhQOUYxdE83ci1OQnhjWGM1VGdUbklVdlJhY3FGZnRzYVhvNlJpLV93Z3FWUFotWUJMdW1aYXExRmlNTzJSdDN6RjhlYkNKcjk2ak50dE1QSVkxelJxQXlOQ282aDZGWWdqM1hXeWo3aV8weHVVSFk?oc=5",
+     "time": "30 Oct 00:51",
+     "tags": []
+    },
+    {
+     "title": "PNB settles three claims worth Rs 43 lakh over Greater Noida branch account irregularities",
+     "source": "bfsi.economictimes.indiatimes.com",
+     "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxOaVVWTzdfVTN4Ykd5SFVJejk3RWlQTGlPVGRYSWk4eTlzMk5hSVNTX1VuSnNjanJMb0o3dnhzYXByMXhkSFcxbnpCV3hkRE54dGZoYldpYWhDaVFweTBZVHRWSkw5WTd1Wm5XcndyX2t2WXpJcU83d3ZGVHREdnVEcFFleUR5eml3bFVGMHRCMTFmMGZKUm1JZkVOdzY5Y2lLa0dNTFRnLTZGUVVMRmdKU2lVYU9Ba00xUXpLVUNaQklVOTV1S0toOTAzR2JwMjlYY1pNelBqWk9tcmZ2UHlwR1VOZTFBV29USnh30gHrAUFVX3lxTE5pVVZPN19VM3hiR3lIVUl6OTdFaVBMaU9UZFhJaTh5OXMyTmFJU1NfVW5Kc2NqckxvSjd2eHNhcHIxeGRIVzFuekJXeGRETnh0ZmhiV2lhaENpUXB5MFlUdFZKTDlZN3Vabldyd3Jfa3ZZeklxTzd3dkZUdER2dURwUWV5RHl6aXdsVUYwdEIxMWYwZkpSbUlmRU53NjljaUtrR01MVGctNkZRVUxGZ0pTaVVhT0FrTTFRektVQ1pCSVU5NXVLS2g5MDNHYnAyOVhjWk16UGpaT21yZnZQeXBHVU5lMUFXb1RKeHc?oc=5",
+     "time": "30 Oct 00:08",
+     "tags": []
+    }
+   ],
+   "setups": [
+    "breakout_20d"
+   ],
+   "rsi": 64.0,
+   "earnings_flag": true,
+   "price_source": "Upstox",
+   "cross_check": {
+    "yahoo": 124.05,
+    "gap_pct": 0.02,
+    "flag": false,
+    "yahoo_time": "09:46"
+   }
+  },
+  {
+   "rank": 12,
+   "symbol": "CAMS.NS",
+   "name": "Computer Age Management Services Limited",
+   "score": 69,
+   "price": 660.55,
+   "chg_pct": -5.22,
+   "volume": 1654846,
+   "turnover_cr": 109.3,
+   "news_count": 6,
+   "news_tags": [
+    "capital",
+    "earnings"
+   ],
+   "news": [
+    {
+     "title": "Why are CAMS shares falling over 5% today? Explained",
+     "source": "Business Upturn",
+     "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPWVpiczdXQjBQbFRlS0ZCS0hOckZtSXZlSXhWY1YwZEhFYmRfMUFsaVg5eEV2SzROdUN0STAwdkNrZFR0ekVUNFZSa1ZoNHRHeUItRFRHaXY4ZjhOMHExVm1rTXdWZ0FjMXNTUE5NRmdYME9kYXpjdEN4UmkySlYtNmtYM1FhUXBhRVFJalVpQnYwVVFXdzNHVmUzS3AyUUNi?oc=5",
+     "time": "30 Oct 09:40",
+     "tags": []
+    },
+    {
+     "title": "CAMS: Q2 growth paired stronger margins with faster non-MF diversification",
+     "source": "TradingView",
+     "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQNEtjcXNMOHpXbFdqSWZ2YTJ5bFRQMkgwVFhhempzVnVkZ004ZnItSnRpempxTWNiUzRQVnVTZ1JHVzBRTEhfckNfSGE5azVzT3F3MDlxT1gyektnZWsydERZOVFpYzQ3UDE3bFMwLWJoSGt0ZjVCMS1SVXdqNlRla1BNYzdFcm0zd1BPRTlHVTc5UDN1d1ozMF9IUk5QbTRJQTNaeXNqOVRQTlg2LXYxZjBGVnlHV0JTUS03VHBYY05Fd3VlR2Z4QUtBRlFjNXV4aW1rVWJaTzZvYnJValREamY2UnlrcHUxazlOeA?oc=5",
+     "time": "29 Oct 20:06",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "CAMS Q2 FY27 Profit Surges 14.4% to ₹131.49 Crore",
+     "source": "InvestyWise",
+     "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPUHNBLXNMTmc2akJUTnhWUXJla1dGb3dyaVZzQlpCYXREOUFQZnh2RkpPdVVrdWlrQzBVSEV2V1pLd1pGaEZKRElFdEg5NEFobzZyMlVqWjBtSG14QTBGaWxDUEUtSldXVndoWHpyeldNa0RFUmROcGNqU0IxNWZ0VTRod3BiNk9pdm1ZQnYwMkNoa3ZpYlBNb3k3WlY0YXNIZ0E?oc=5",
+     "time": "29 Oct 20:02",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "CAMS Q2 Results: Net profit rises 15.1% to ₹131.4 crore, ₹3.25 dividend declared; check record date",
+     "source": "CNBC TV18",
+     "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNcHQtTmxsTEFGclpLZ1lWZzNBOGI4dnJabEhoMjE2UnBWOThydDVHSUx1QTg5NXFRRHVybkRzUWlNTnM3OGt4cnFCM0ctUThZYW1tR0p5SnZ2eUE4c09odUxBU1poODhTN3pZMjBWQ3ZVMW0yLXZadFJ1RFo2SUFPZ2RzVE5FdkJVOG1lV056YW1ZaVUzcFRDQ1ZZVS1xS0lHcWtYNTgtREJzZDNEWWJvTi1MdWE5dVl4Q0JwN3U0MUZSMFkySlpTc212T0tjVGI1RWJNMTFYZ2VicG44dERVMFdaSC00aGZkSmZZbTc1TkbSAfYBQVVfeXFMTV9TVVhNMjhWT1VqMnBoY3piWXB1NXhOV0d3TWhqSEJLdWlwWlc3MGdkaFhWVV9ONWpHMEE0R29xcksxdFZ0akg4ZVNaT3E0U0FzM3B4ZmdzVGtPTENjUnhZa0N1VC1jUXBQbkt2Y3ZyOWxldE1hTDQtMGJ3WFdNNlowUl9mUzNkN1lWMFM5SDBQalpOZTdIb0xOaHZGUFJ2WlVJVWlvMlZlNXcxTV9uN3Z0T1p4YmhFb3E1OUJZejk5SFNvdlpuYlpKZTk3MS1GVEZyUmhhY0FKeDBFaTVfOTdjQndlQk1Sc1NRM1A2TUU1cFlpUUp3?oc=5",
+     "time": "29 Oct 19:18",
+     "tags": [
+      "earnings",
+      "capital"
+     ]
+    },
+    {
+     "title": "CAMS Q2 Results: Net Profit Rises, Rs 3.25 Interim Dividend Declared; Check Record Date",
+     "source": "NDTV Profit",
+     "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPV0gtR2dHNUdEYXNXMURLTWNmbVJFVWVnR2VmZEJybDJnMDBmQkJPRVl4ajJHUkhXb2N3cno1dVBqRHZpOE5Ic3huVEN0bDYxd1BNeWRpNk5Wd3hPdWNkS0szMUJ5eG9yR25hMmdpVEhXVEN2a19nMGpFZ25LZm16Uk5HZXF5bFk2OS1UNEY0cjNaZFl6aXRnOFJRRVdFeURsMzZ2cnVBSTVtSVBSVmhzYWZaTWFXTGpTWHhhb0ktaFRJTVUzTmlB0gHPAUFVX3lxTE9McEh0QkstZF91dlduWXY4RXZZeEdMMTRzY2ZtWjBHTTFBenNPaWRoRS1tZFhMaEJjRFZmeF9naFI2cnFLZ1luZFhTZ3JrLXdCYmVIR3BtWlFGZjdsOTRVeHlOdUJIRi03SEFoVmJmeEo1TlFCWWJ6UUdWWVRDVC1PbG5OMHBlX1VMWTJRWjVtMnBlZlJCaFR4WlNCWXZjN1FQQlRIRVZNdUF5M3ZVVHEyWHZiZ2dTOFVXNWk3eUFjbnBxUmx5Mlo5WEE3NVpLRQ?oc=5",
+     "time": "29 Oct 18:19",
+     "tags": [
+      "earnings",
+      "capital"
+     ]
+    },
+    {
+     "title": "CAMS: Declares Interim Dividend of ₹3.25 Per Share",
+     "source": "InvestyWise",
+     "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5mVFNiLVl0X01zM1Fla2ZEU2NXWjdVNVRLRDFMQm9rdmJjM0lVSzZxdlExOFNEVHBXb3o4S1otbkI2Tm92V3YySUpMbzl1d3htdW12dDJxWktvR1M1SG5lM3paaExSMEQ4RjZpUlBLWm1hVFYt?oc=5",
+     "time": "29 Oct 18:01",
+     "tags": [
+      "capital"
+     ]
+    }
+   ],
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "rsi": 52.1,
+   "earnings_flag": true,
+   "price_source": "Upstox",
+   "cross_check": {
+    "yahoo": 662.25,
+    "gap_pct": 0.26,
+    "flag": false,
+    "yahoo_time": "09:46"
+   }
+  },
+  {
+   "rank": 13,
+   "symbol": "TCS.NS",
+   "name": "Tata Consultancy Services Limited",
+   "score": 69,
+   "price": 2510.3,
+   "chg_pct": 1.3,
+   "volume": 623158,
+   "turnover_cr": 156.4,
+   "news_count": 6,
+   "news_tags": [
+    "analyst",
+    "capital",
+    "earnings"
+   ],
+   "news": [
+    {
+     "title": "TCS share price target: Nomura retains 'Buy' after management meet, says this",
+     "source": "Business Today",
+     "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQWlVwWV9wNWVsVTYxbjlXVS1iaGJXYjA5Yzh2bWNWUEhyNjltSkxZMEVWd3A0bFR2SlpXSXBDVWlibE5RMHcwaTJTVENpZE9Qd1dtNk1NZV9CaVNBQU5pVUp1UGxvY3JsNWIyQnJrZnlWNHYwdzNGLUNtNWlleVZVYjQ0ZE1qQkxhanBKQlVyQU4xYWNxQ0FTN0NncXFnV3JpdVRDTjB0bllkamZMTkVqZ245cHdIdHA5dmRMdFFWSUxNSm40WUdFYTI3UGx6TUZBc0VZVmtha0bSAd4BQVVfeXFMT2dOWXNwUklMajRLRkhGYWRzTzRnWGZSN2hnUURudkM3Q181WUo2VUFCVjk5RVBPYXYzQWhWZ1lMQjBSbnJ4NzEyRlBQZDdUMHRMSEpVdFJrcjhzeXFkNE5vYTRFTms5YjBUQUFQWTZpemcwbFdYSEV1WENFS05EZkxiVktVT2tfMVEwR2oyQlR0Y3dGWEptU2pVbVdZOTYwNkdUWjQ5QS1NY2pHLUVTQzlWSzlQQ2dITlY5RkQzLTVwb3Q3aF9fSzluWW94NzBxTXg2MFVpaE1tQTJaNExR?oc=5",
+     "time": "30 Oct 08:36",
+     "tags": [
+      "analyst"
+     ]
+    },
+    {
+     "title": "Stock Picks Today: Asian Paints, Trent, TCS, Suzlon Energy, And More On Brokerages' Radar",
+     "source": "NDTV Profit",
+     "link": "https://news.google.com/rss/articles/CBMinwJBVV95cUxQNXlDYXJtSzdJQVZndGlIRWNOeGg0OWFWNEx0SERKeHc5UnJiZXF6Q2piQnNLTW9VWVd0UVBvc0tNWHVaTEUwNmUwQmY4WFJ4dUFkMWE5dkQ2bVU3dGwxQ3lOVkZET2VZYjJlNzZ6bU1jMENlUXU1TEVQWXdmZ3ZSQnR6OGxQV0R2SnU2Nl83eEpLNkl3LVAyNTNmaU1CZ0I3aWZjQUhhRVY3U2M0QmEtcEZmTzJDaUh5enVuSnFxOW5pSTQxdEJJRmRnZ214aE13Y1RWZU1nYmk1M3dKUjF6enNiOWljQU5BR3labE5XSjRoZ0VEel9IbXFjVEl2VHFiWkZzcmltVXUxQzdhaGRocFFic3FzVktTZDYzcGdmUdIBpwJBVV95cUxPTjB0b29NR212VWpxdHMwdWJvWXZoQ1JDV19ZTGVGd0JQeEZ2NEstcVNNUXU1ZlZmVDlvNmdrMmc0ZTliX1lQZnpaUFBhNHhIMS1TcnJjVkU1WmZhVTF1QU54WHZkYjRuT3pfZ2lHRURLYWZKcm5LVVJhdTUwQmVYTE5HeE5rZ0E5eUt5Y1JocXJxSlk1WGQtRDlfc3JXY0c2c3RZNDhjT3h5N3ZXdktTaUdJckN5UE5mdDQ0RzRjZHYxWjEwSjNYcEF2WWhkeHMyMC0wb3VjU2FTMm5aLXdfcTdOTGxkbG1iei1iZlZkd0hCaXJMVEU4REt4dGJ1Y0h0WDVOQTVVVDZub0FLWmNuUnM1ZEhHTlhMNjNuNTRHMmN5a1piYzNj?oc=5",
+     "time": "30 Oct 07:29",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "TCS, Infosys, HCL Tech: Anthropic revenue soars 14-fold in H1 2026 - Can Indian IT stocks benefit from AI boom?",
+     "source": "Mint",
+     "link": "https://www.livemint.com/market/stock-market-news/tcs-infosys-hcl-tech-anthropic-revenue-soars-14-fold-in-h1-2026-can-indian-it-stocks-benefit-from-ai-boom-11793272878286.html",
+     "time": "29 Oct 17:18",
+     "tags": [
+      "capital",
+      "earnings"
+     ]
+    },
+    {
+     "title": "TCS, HCL, Wipro, Infosys Bleeding: Why Are IT Stocks Down? Check Q1 Result Dates, Preview, Dividend Rewards",
+     "source": "Goodreturns",
+     "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOWUdTTWs3X1ZIWEpOMHFsTktxcHA3cFFYc2J2TGk0Q0RHZDU5R3c5cWt4dzExb0YxUUhOVmhoZXNrb2kyRjBZLU9nMDluTklIUURlU0dkeE5VWkpDM1FnazZzY1Z0V0ZMRlM5Z1QxZWtIZHFrb1poVnpDOERBVG9SYTlDbDRRWDR6d0JEMEVtWS1RdFJWVlc4VUszLVdraUtlZWtXaDFCVlJ0VWl2WE1HekhyWm03bjBudENKWkMxNlQ1aXlDTjF2RkhQWFVva1JZTmNrRHkyMEE?oc=5",
+     "time": "29 Oct 15:28",
+     "tags": [
+      "capital",
+      "earnings"
+     ]
+    },
+    {
+     "title": "Tata Consultancy Services Limited (TCS.NS) stock price, news, quote and history",
+     "source": "Yahoo Finance Australia",
+     "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBWdmdOZjZMMXdyaFpFaVUwSzlid08zSng2ZzZZNnA3eG1LS2xpQnF6anhfbDhiaUFjZ2VMZ3dldnRGSUlONGN2SUtENk9nQ2E5TDhseA?oc=5",
+     "time": "29 Oct 15:17",
+     "tags": []
+    },
+    {
+     "title": "TCS Stock Price Recovers as IT Shares Gain After Wednesday’s Sell-Off",
+     "source": "Coinpedia",
+     "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOcW9XaFJDSkM1QTFVMHV3VzNtOHFJZ004dk1MSG1hLTZ1SGtGSDdnMlVpS2hTYi0xY2E2UF9iSzZMZWh4RE5VaXk0anBuMVdHOVctNjlDMGgzQ1lndUNhVWNKcWpNeVBJSmZ3VnNGMTdnc3F5OWJMZXJtZGIxck5ZZ0toRGlKMFdnM3lvX2lfbUZTT2FIOURMVEs3QTVUSEg0UXRoUzFkSFdWTHE3cHhIb2pn0gGyAUFVX3lxTE5xb1doUkNKQzVBMVUwdXdXM204cUlnTTh2TUxIbWEtNnVIa0ZIN2cyVWlLaFNiLTFjYTZQX2JLNkxlaHhETlVpeTRqcG4xV0c5Vy02OUMwaDNDWWd1Q2FVY0pxak15UElKZndWc0YxN2dzcXk5Ykxlcm1kYjFyTllnS2hEaUowV2czeW9faV9tRlNPYUg5RExUSzdBNVRISDRRdGhTMWRIV1ZMcTdweEhvamc?oc=5",
+     "time": "29 Oct 14:23",
+     "tags": []
+    }
+   ],
+   "setups": [
+    "bull_flag"
+   ],
+   "rsi": 65.0,
+   "earnings_flag": true,
+   "price_source": "Upstox",
+   "cross_check": {
+    "yahoo": 2510.8,
+    "gap_pct": 0.02,
+    "flag": false,
+    "yahoo_time": "09:46"
+   }
+  },
+  {
+   "rank": 14,
+   "symbol": "SAGILITY.NS",
+   "name": "SAGILITY LIMITED",
+   "score": 68,
+   "price": 42.38,
+   "chg_pct": -5.11,
+   "volume": 693126957,
+   "turnover_cr": 2937.5,
+   "news_count": 6,
+   "news_tags": [
+    "deal",
+    "earnings"
+   ],
+   "news": [
+    {
+     "title": "Sagility BV to cut stake in India arm",
+     "source": "The Times of India",
+     "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOc0ZoR1ZFQ2VEUUJFODV6S2FXZEhBRlJ2bmdxZjItdkdYbFN5WFNsdFNfOE1oSmI1eTZYSWFNQ2l6SFRHaDVNT0ppZk9OVnZRQllVQVNxVDlpLVJIOG9EVmh6Y1Q5UzdSSmRHWXRBVExkd1hZQlFWZWFWWWRkMkdaT3h2Uk5qaUpCcUdTblRMYkF5VjlUYktLYXdhdFJyVnp3WXBjcEloTHVhTFRXYjJ2YzZscWk1YnhoRWJvYjFnSEHSAcYBQVVfeXFMT0l4eDllSkFJTlJGY0o3RVZIWGRSMzdhenVvN1BDMTh2NXpjNE5GWVhNTGpMSExNZlVrN0xJWkpYc29XRk41TjJ1dTR2R3BfQVdwM3U5MDV4UlhzUDJIdGNoYThHNS15Mkp1MTRDRlFFTk9FOW51VzgxQ191RG52ZlVNQnNhVnF0UjRUdGloZTlweVFWQjJMVkFTbWFzRVBMRWJNR3dUYk9QLUJMMmFzSnozSktsUjlfVlc2RFcyVG9sVjF2XzZ3?oc=5",
+     "time": "30 Oct 07:48",
+     "tags": [
+      "deal"
+     ]
+    },
+    {
+     "title": "Stocks to Watch Today: Sagility, Coal India, Trent, InterGlobe, Blue Star, Capital SFB, Brigade...",
+     "source": "Moneycontrol.com",
+     "link": "https://news.google.com/rss/articles/CBMiyAJBVV95cUxNSjBpLUdKQTNWRl9xanNtaGw0bFZvZ3FIckVKSUhfZlUtNGFkdGl2M1hNMXNJS25jQzZPTHkxWVBob05DdDBDTm5YMGdpTEp3SDRaMVhkWEZka0liYXAyVFgyTEVVbzgyVHlXc0FVZm15WjBkSVpaV1JkLV9xNXJDdENkV1hpYTNINWtnMENOUUZuQlViVkZiOXM2NHk4Skl4X0VMbHBKZlF0QlRpYmd4bHdKUWp1M3Uyel81bHBiMHpYTUJKVnc3emNsbFNtb2hkTVFZZFN5a09fQ2lWYnFOdVlYMGIzdWl2TGw1T0ZsX196eHgxVGxYaDE0TWhDU0NheHF2aTRqYWc3TE9uRTdOdGI0SjM2Y3hLaGxfVlU1cEFZUk5xZThxcjNRS252WjN2UWhZWGl4UThqRzYxZTExY2hQWVFoZVhH0gHOAkFVX3lxTE5XTEJiem0zdnZESUxMN0pFeXdINC1CR1Y5N1dyUFhDS2xTSDNFd0dFcE5XMXRLS0d5c2VCVHVEdlNmdDg4amVHYTEzNWtzdGtTemxtcTZmUWtXbExESnN2cEpsbDlzUzdWYzN5RVZOdEt4RVFLWXkwaDdYSUdXeWF5OXVWb2xDSzZkLXJDX19BUmlxUlJyQ1AzcFRFeDItZGFoQUpTZkU3cm9SXzdSTTNmMHlkNmlhcldkSDQ1aEp6aTlMZVlJaTE5MWFZQTFVUWhQWnhLWDZTR1JOVmlObmVYX0UxN1ZwVGtTVzJDT21MQXFjcE5kRE9MWHp5OHQ1ZklqeTE0UG02QzFfRU8wYVItd0dVMER3RWdJemYtZ2hEdDFTVUE1SnlvQ2l2Vjh1a3dEei0zVk9DczZCZXk4ZFZsR0o5ZG05dEh5cmI3VHc?oc=5",
+     "time": "30 Oct 06:15",
+     "tags": []
+    },
+    {
+     "title": "Sagility block deal: Promoter to offload 12% stake at  ₹42.45 apiece; deal size  ₹2,377 crore",
+     "source": "Mint",
+     "link": "https://www.livemint.com/market/stock-market-news/sagility-block-deal-promoter-to-offload-12-stake-at-rs-42-45-apiece-deal-size-rs-2-377-crore-11793296092921.html",
+     "time": "29 Oct 23:28",
+     "tags": [
+      "deal"
+     ]
+    },
+    {
+     "title": "Sagility block deal: Parent Sagility BV to offload 12% stake for ₹2,377 crore; Floor price at ₹42.45",
+     "source": "CNBC TV18",
+     "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQYzZXcnBEZ1VnWWFlNElfUzNtQ01oRjFNZ2dWQVJlNl9mZWI5d0FxejBnbVpPTXZ0cEVHZWRvVFg2bkdRZmpZbERSZGd3eGY2LVRNTHJIZW8tcHA3Skl1M2RVQ2JjNXM0VmZLbU1OQ1cxR2JaS3lUQ2x5WG5hbDduZXBtUW9tYTRfLTVRWUFGdDhVTGVPWjlaZF9tNTVNbFFQX2JDSGVPNjZtWGfSAbABQVVfeXFMTTRna2dJaWJEb2tVU1NvblV6SjI3YVpQRW1ibGFIVFFLNERaV0ZFYWxkaHhEVWhDYm5EcmtGajFMRmtYRGM1OFFORFJMcXhqUGI5el8waGVPM3NXTE51RlNWTVk0SGJsUVhlNzl4LVR1WFhkZTJOV19ySjVLRXVlXzQ3Q1ZTVnJ3RDJlUE11b2ZJN0dCaWlRY2gtbzdkeXFZWmR1MU8zMXVCdGRVX1lRQ2o?oc=5",
+     "time": "29 Oct 21:33",
+     "tags": [
+      "deal"
+     ]
+    },
+    {
+     "title": "Sagility block deal: Promoter Sagility BV likely to sell 12% stake for Rs 2,377 crore",
+     "source": "Economic Times",
+     "link": "https://economictimes.indiatimes.com/markets/stocks/news/sagility-block-deal-promoter-sagility-bv-likely-to-sell-12-stake-for-rs-2377-crore/articleshow/135322817.cms",
+     "time": "29 Oct 21:26",
+     "tags": [
+      "deal",
+      "earnings"
+     ]
+    },
+    {
+     "title": "IIFL Capital launches up to $250 million block deal in Sagility",
+     "source": "Moneycontrol.com",
+     "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPXzNiaU82eXQ0aGt6a2M1QW82UnBJRjlLbFM2SEc4UndTZjdkY0FGdGxIeWpwSDhhVmRMbHotaENheVJoRXYyMFBGQmJBTE15dEdCNmJhVEdKTGpMWlRQMlVhVGJsRzk1Zi1DeU15QkNXYWNyOFZ0Vmk0R3NJMTN5ZHloSlRJXzFwOUJNQTBqcm84M3dmWkItZWlWd3lVTGNQYUxhNEtTZHpsQ0lCQ01FVk5ETUxTeUdyTEpqazhTWXluaHA0azQyaGhma9IBywFBVV95cUxPXzNiaU82eXQ0aGt6a2M1QW82UnBJRjlLbFM2SEc4UndTZjdkY0FGdGxIeWpwSDhhVmRMbHotaENheVJoRXYyMFBGQmJBTE15dEdCNmJhVEdKTGpMWlRQMlVhVGJsRzk1Zi1DeU15QkNXYWNyOFZ0Vmk0R3NJMTN5ZHloSlRJXzFwOUJNQTBqcm84M3dmWkItZWlWd3lVTGNQYUxhNEtTZHpsQ0lCQ01FVk5ETUxTeUdyTEpqazhTWXluaHA0azQyaGhmaw?oc=5",
+     "time": "29 Oct 21:00",
+     "tags": [
+      "deal"
+     ]
+    }
+   ],
+   "setups": [],
+   "rsi": null,
+   "earnings_flag": true,
+   "price_source": "Upstox",
+   "cross_check": {
+    "yahoo": 42.24,
+    "gap_pct": 0.33,
+    "flag": false,
+    "yahoo_time": "09:46"
+   }
+  },
+  {
+   "rank": 15,
+   "symbol": "ASIANPAINT.NS",
+   "name": "Asian Paints Limited",
+   "score": 66,
+   "price": 2301.0,
+   "chg_pct": -0.04,
+   "volume": 220067,
+   "turnover_cr": 50.6,
+   "news_count": 29,
+   "news_tags": [
+    "analyst",
+    "capital",
+    "earnings",
+    "macro",
+    "people",
+    "regulatory"
+   ],
+   "news": [
+    {
+     "title": "Asian Paints share price target cut by multiple analysts citing margin concerns, competition",
+     "source": "CNBC TV18",
+     "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxOYVhtejJZRVMya21XM2pKZ3FLa09ZN2dHMzdjcXd3QzduRDQ5Z2V2T2c0LUJzeWF6T3hDa2VxT3NyZzZ6RWxybGFhRnowZlIxSjZIY1plX0lTZjJvY2hlckdBS2FNZWlKU0JnVi1HY09Xam9pTmxRSGR5aHdzU2pTLUpZT1lpd0gxcTl6eDdhTzY3TkkxOVFQVEk0Sk9WbkhCd3ZvbEdTTWpEWmJVOHcySERSSDdoSHhFbXRUZUtMa1hHa211dTJnR2JhWVBjenJ5dUtBMkQwR24tZ0RyeU9nOE5Bbk9iN3V2ek9Hd3FCTW7SAfYBQVVfeXFMTUdTUXVNSUVya3NTTlYwQV92N05EcDlLUHVzN0lkOWhFYmxIbjNhMDBWS2ZIaGticXRwWnp3TTlBeFZIUnNEVG1aaG82NUVKOHJBcG00TkFIODJGTVdmNFBJWW1uNk03dG5XSVJNcDlIYzFteXJUSkUxUlZPQ3R2NllQZGU1YXpWY2JLSUN1ektzUXFKWXQ0SHdHVEdOZHNJRjA3ajJWSUFjR0NfaXQ1STBadTd4Q3ZwSmc3Uklpb0tRcFRSSkd5cGQ1RElGdlpXbmtLMFZXdWRPVlNWLTJWWlQwU0oxbG56eGtPalIzeWhPXzAyODhB?oc=5",
+     "time": "30 Oct 09:34",
+     "tags": [
+      "analyst",
+      "earnings"
+     ]
+    },
+    {
+     "title": "Asian Paints shares in focus as Jefferies, Goldman Sachs, other brokerages cut target prices after Q2 results. Buy, sell or hold?",
+     "source": "Economic Times",
+     "link": "https://economictimes.indiatimes.com/markets/stocks/news/asian-paints-shares-in-focus-as-jefferies-goldman-sachs-other-brokerages-cut-target-prices-after-q2-results-buy-sell-or-hold/articleshow/135342271.cms",
+     "time": "30 Oct 09:27",
+     "tags": [
+      "earnings",
+      "people",
+      "macro",
+      "analyst"
+     ]
+    },
+    {
+     "title": "Asian Paints Q2 Review: Brokerages split after Q2 earnings; check revised target prices",
+     "source": "Zee Business",
+     "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxORGYycXZXR25DLXp1NXVnTU13cEhxWHJlTm1XclRQWEU2djJhUGR3ZDREQ2YxOU92TVA5cUVKcjQzbzdKcVk3ME10aG9CRjJCTDJzU1E3T1NwRm4tNi14UXJBcVczRmxYQnZ5N3hiMVlieUVVUTNZRjZWakFfVGZrcWRRS0lQbVpLZkhpTE4zanNMdFRWZUx6RWJ1QWppZXN3QjdzVmxBY196NFY5WlZieG9XM1kxRGxlTDFzNnUxSkUtQTV6WVBNTVlQa1c?oc=5",
+     "time": "30 Oct 08:42",
+     "tags": [
+      "earnings",
+      "capital"
+     ]
+    },
+    {
+     "title": "Stock Picks Today: Asian Paints, Trent, TCS, Suzlon Energy, And More On Brokerages' Radar",
+     "source": "NDTV Profit",
+     "link": "https://news.google.com/rss/articles/CBMinwJBVV95cUxQNXlDYXJtSzdJQVZndGlIRWNOeGg0OWFWNEx0SERKeHc5UnJiZXF6Q2piQnNLTW9VWVd0UVBvc0tNWHVaTEUwNmUwQmY4WFJ4dUFkMWE5dkQ2bVU3dGwxQ3lOVkZET2VZYjJlNzZ6bU1jMENlUXU1TEVQWXdmZ3ZSQnR6OGxQV0R2SnU2Nl83eEpLNkl3LVAyNTNmaU1CZ0I3aWZjQUhhRVY3U2M0QmEtcEZmTzJDaUh5enVuSnFxOW5pSTQxdEJJRmRnZ214aE13Y1RWZU1nYmk1M3dKUjF6enNiOWljQU5BR3labE5XSjRoZ0VEel9IbXFjVEl2VHFiWkZzcmltVXUxQzdhaGRocFFic3FzVktTZDYzcGdmUdIBpwJBVV95cUxPTjB0b29NR212VWpxdHMwdWJvWXZoQ1JDV19ZTGVGd0JQeEZ2NEstcVNNUXU1ZlZmVDlvNmdrMmc0ZTliX1lQZnpaUFBhNHhIMS1TcnJjVkU1WmZhVTF1QU54WHZkYjRuT3pfZ2lHRURLYWZKcm5LVVJhdTUwQmVYTE5HeE5rZ0E5eUt5Y1JocXJxSlk1WGQtRDlfc3JXY0c2c3RZNDhjT3h5N3ZXdktTaUdJckN5UE5mdDQ0RzRjZHYxWjEwSjNYcEF2WWhkeHMyMC0wb3VjU2FTMm5aLXdfcTdOTGxkbG1iei1iZlZkd0hCaXJMVEU4REt4dGJ1Y0h0WDVOQTVVVDZub0FLWmNuUnM1ZEhHTlhMNjNuNTRHMmN5a1piYzNj?oc=5",
+     "time": "30 Oct 07:29",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "Asian Paints profit up 7.5%; inflation squeezes margins",
+     "source": "The Times of India",
+     "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNNzNMdHU0ck01VDRYZDVXWXZyQ0EzbXZDYzF6QTlMSGprMEVzTTNIY1lleWM2R2VpckV3NzNSdWNTVHdZSnFwa1BSODE1d1hxOWcwSnREUUZEa044MDliampJMUMxdWxvbGYzU1JfdnlRYVNGMFVCd2hKUFkzNmpOM0FoMDdhd2xDQWZtSGdYZzY0ZHQ3YXRtSm80eEROUlc1VHU3dHJWWmJ1MkJnZ21fbkx5eVRqRHFPbVZhY25HdkZvOUpjRjRKQUk5WkJHSURlUUJMeEd6VEZWZDjSAdsBQVVfeXFMTTczTHR1NHJNNVQ0WGQ1V1l2ckNBM212Q2MxekE5TEhqazBFc00zSGNZZXljNkdlaXJFdzczUnVjU1R3WUpxcGtQUjgxNXdYcTlnMEp0RFFGRGtOODA5YmpqSTFDMXVsb2xmM1NSX3Z5UWFTRjBVQndoSlBZMzZqTjNBaDA3YXdsQ0FmbUhnWGc2NGR0N2F0bUpvNHhETlJXNVR1N3RyVlpidTJCZ2dtX25MeXlUakRxT21WYWNuR3ZGbzlKY0Y0SkFJOVpCR0lEZVFCTHhHelRGVmQ4?oc=5",
+     "time": "30 Oct 07:21",
+     "tags": [
+      "macro",
+      "earnings"
+     ]
+    },
+    {
+     "title": "Asian Paints Limited (ASIANPAINT) share price — eduinvesting",
+     "source": "Howl.Link",
+     "link": "https://news.google.com/rss/articles/CBMiO0FVX3lxTE15RzQ3dnFlTnZfMV9fSXdiRGR3WUljY0RNZVM1OW5ZSW5FcXNtNjliZ002Z05hdmU3N3NN?oc=5",
+     "time": "30 Oct 06:47",
+     "tags": []
+    }
+   ],
+   "setups": [],
+   "rsi": null,
+   "earnings_flag": true,
+   "price_source": "Upstox",
+   "cross_check": {
+    "yahoo": 2302.0,
+    "gap_pct": 0.04,
+    "flag": false,
+    "yahoo_time": "09:46"
+   }
+  },
+  {
+   "rank": 16,
+   "symbol": "SWIGGY.NS",
+   "name": "Swiggy Limited",
+   "score": 64,
+   "price": 178.95,
+   "chg_pct": -3.4,
+   "volume": 5568192,
+   "turnover_cr": 99.6,
+   "news_count": 4,
+   "news_tags": [
+    "deal",
+    "earnings"
+   ],
+   "news": [
+    {
+     "title": "Swiggy block deal: Rs 982 crore worth shares change hands; key details",
+     "source": "Business Today",
+     "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPT09NdEZ1NTU3ZFNyRHBDT2dLeGVkVnY2YmdfX3ZxR0VqQ0VsRU9yOUQ0S0x2eDFEazlyVE9saWFKQ0JBQ002U1BqVElaazhTZ0tVbVdHNXJtTGF3TmVkZ3lxeDNpT09rS1NJVHNUemdPcHFENnBSZHA5STJFTkw5cWxSN3VvWDZTdUhuY19acjBqOGdWY0pudTJ1bTVJMW5YdHNCTG81eXpyT0VrNVlrTjVmeEkxMFl0cGY3TlBHdVZ6SGJLcjl4VmpHNmwtVGpKUVHSAdcBQVVfeXFMTklodUNqdTRfc1kwRjh4LWN1QmFxN0lpcHg4dkFXOWZzbUQwaXEyMHI0QXVhaXFqT0RmMms2eGRMY05ZWDlLYUtMVnpOVFNRZFhyNUtrd3BwQ1BXdWNqNmZ6dU9TQmM2em9HVFNDSjF2UVM4RGZvdFFQSVAyQ0VXeVRTUkhhcjVEN29TSE9lSmxGdU04Ykd1YzNHb0NJc2JKZTJpOHUzcWpORW0tVmJHYzBybUprTWNyRVloc2pvVGpxcGdTN2NFRWZZbl9qbzktU09YcnYyNU0?oc=5",
+     "time": "30 Oct 09:08",
+     "tags": [
+      "deal"
+     ]
+    },
+    {
+     "title": "ITC, Mazagon Dock, Swiggy, L&T among top Diwali picks for Samvat 2083 for upto 115% upside",
+     "source": "Business Today",
+     "link": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOWXdTM2s4TUNWRGpteDIxbDhjX3I2Ykg3bkVVMFl5OUNOSC1MU0lQZzRwM3B3SWNTenpMNVlDRV83SC1fYzRuNWw1SkhEN3FNMW5oMGpXbEsyMnNUZGtyXzEzdF9kQjBOaExVYzZIbjhQb3RtRC1pVGRnTGRVSndheXA0SmxWQk1veFd1ZGMyNnM4dE90Nk53ai1EQ3BKSHIzLTY1X21KaHdnMGtCanZOelYybGNUR0pzZVlnVWwtcVYxdl9HRzhZU2J5d3RnSS1HQU9DRnVzbDFiT3lYS2VZeklKdmdfandWZlR1S210em1pTGpvM01PSVdn0gH6AUFVX3lxTE5Zd1MzazhNQ1ZEam14MjFsOGNfcjZiSDduRVUwWXk5Q05ILUxTSVBnNHAzcHdJY1N6ekw1WUNFXzdILV9jNG41bDVKSEQ3cU0xbmgwaldsSzIyc1Rka3JfMTN0X2RCME5oTFVjNkhuOFBvdG1ELWlUZGdMZFVKd2F5cDRKbFZCTW94V3VkYzI2czh0T3Q2TndqLURDcEpIcjMtNjVfbUpod2cwa0Jqdk56VjJsY1RHSnNlWWdVbC1xVjF2X0dHOFlTYnl3dGdJLUdBT0NGdXNsMWJPeVhLZVl6SUp2Z19qd1ZmVHVLbXR6bWlMam8zTU9JV2c?oc=5",
+     "time": "29 Oct 16:18",
+     "tags": []
+    },
+    {
+     "title": "Swiggy NSE:SWIGGY Q2 FY27 Earnings Call Key Takeaways",
+     "source": "Kalkine India",
+     "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQMHJEZE5rQmFmUUh4V215am8wd3c0T0NlTk1aVmJuakRQbjl2THBHRXFDWEZHY0VIaTJWaUNOM0RwclhwVjZYZjdqSGlkR1k3WHVLMjU3SmxXMjZteHhsMlBMZ21IQ1B5YXFDbnAwMmd5aGszOFZzcFUwc1J2ZXFEUU9OYzI4T2ctZlgxQWl4YnpZN0wtOEV5SFZqSjBFMTF5UXRyN2F2clBXVXN6MmluOEo4cw?oc=5",
+     "time": "29 Oct 15:38",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "From diyas to dry fruits in minutes: How Blinkit, Zepto, Swiggy Instamart and Amazon are rewriting India's last-minute Diwali shopping habits",
+     "source": "ET Now",
+     "link": "https://news.google.com/rss/articles/CBMimwJBVV95cUxOSE1pRUwwNFdrWkZ1QXZWNVRsUzFPUDdkakpHWEJRaEh5cGhrN2RUSzI0Z3Z6dmtXZHFqUmFycjNTNUdfRFJvVjRTOWIzM0tZc3JJRk9mMVVETWJYM3NZblVqSDU5UTFtNDc0SDYwTTZ0aWNQbWF3WHdaV29vQlBNbWE0VG9URTVMcDFHRU51bTVWNGg4dlN2RFozajQ0b1dIM01jRHNZYVJXQlQ4NFRPcXpDaW5aMjEtMjBmZVVvd2tCUnNVeFZTRTNKeHQ3Smd0dXVYaXJaQ3R2UEZ0WDNRSGFJa1ZwR244UE0zZlVJaDd6QjBCSmdieFpyYnV6Y2RCZmc5MlN0VTlFVHZmY2UwZFZIX3p3V3pBLTNJ0gGgAkFVX3lxTFBLOERieXJHYXZWTTVzZUUwQ3JQR3dhRDRLLUh3OVlwd2FBUnZBbnZTcnV0Z1FfU2RuaDd5d2tRNHhBdS1lUnc0ZjhuY3B5WHZFd1I3M3IxeGVRaEpJcXRpMFo5ZW5qNlk1NWU2empFcW1lVURaU1cxLWRvUU9UVVVkRm43R1FRSElfcVlYZFJEd0Z2dnVSSUlETGVRbXhFZXEzZGtHN21PLUQ5dHRKVVg1bFJlNDdqUEM4QnhvUklIcWpIeGhCQ3VlYm1oUHNtOWlUZEpueUZFeVhlNFFqT2ZSbl9nSmo1bjBZZjlZZ0FmWEVYSXZ1cmRtaHE0MGF4cFJEaEhNOXRCRUxFUmsxRDJvNXlBeEZCLW1Ral9PcEFDOA?oc=5",
+     "time": "29 Oct 14:42",
+     "tags": []
+    }
+   ],
+   "setups": [
+    "oversold",
+    "oversold_bounce"
+   ],
+   "rsi": 25.6,
+   "earnings_flag": true,
+   "price_source": "Upstox",
+   "cross_check": {
+    "yahoo": 179.0,
+    "gap_pct": 0.03,
+    "flag": false,
+    "yahoo_time": "09:46"
+   }
+  },
+  {
+   "rank": 17,
+   "symbol": "HEROMOTOCO.NS",
+   "name": "Hero MotoCorp Limited",
+   "score": 62,
+   "price": 5127.0,
+   "chg_pct": 0.43,
+   "volume": 113150,
+   "turnover_cr": 58.0,
+   "news_count": 19,
+   "news_tags": [
+    "earnings"
+   ],
+   "news": [
+    {
+     "title": "Hero MotoCorp among 4 stocks that closed below VWAP",
+     "source": "Economic Times",
+     "link": "https://economictimes.indiatimes.com/markets/stocks/news/hero-motocorp-among-4-stocks-that-closed-below-vwap/slideshow/135342406.cms",
+     "time": "30 Oct 09:19",
+     "tags": []
+    },
+    {
+     "title": "Hero MotoCorp Share Price Live Updates: Hero MotoCorp Moves Above 20-Day SMA",
+     "source": "Economic Times",
+     "link": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/hero-motocorp-share-price-live-30-oct-2026/liveblog/135340851.cms",
+     "time": "30 Oct 08:36",
+     "tags": []
+    },
+    {
+     "title": "Hero MotoCorp bets on premiumisation, EVs to sustain growth momentum",
+     "source": "Economic Times",
+     "link": "https://economictimes.indiatimes.com/markets/stocks/earnings/hero-motocorp-faces-margin-pressure-despite-strong-q2-growth/articleshow/135337599.cms",
+     "time": "30 Oct 06:30",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "Hero MotoCorp to increase EV capacity to 80,000 units per month by Q2 FY28",
+     "source": "The Economic Times",
+     "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOZ3VETWExTWFpRUx5RWQyTzYtbUNUekxhYllPVFo4QWcxUUxVWnNvUG5LdE5vMDFtZGFWZlZqa0ZrSVNwd096Zk1yWkRSUllTMVV2UlpTMGVRYWlQbmlhR1ljUmJ4UzNNMUZMdGxiRk5CTzFHVjFnbF9DTHFGalBBM2Y0bXoyVWthQUVDVFNKOFc2SjVFRU5hc0cteFhBeU1BTENrNUNUaThJV1h1TDZwN0ZmRDM4MVR3MkM2aF9SVC1vUk82WmotbVd3Z1dMekxBb21Ed21oUDh2N0dWdTc2SdIB5gFBVV95cUxPNi1CWXlSLW1SSnc1SGRQUkRNMTQzRXp5ZW5IeFQ0QTgwTW9qcjRZUXpKakhDR21janowVVpnSTJMaVVJZVNBeVlERlZXNjJHcGJmdThKdXUzUmd2YlcxbXhBdTNBWkdxeGFnNlA2Zll5bVRCT1dGWjlXb19waUZFcmh0ZEdqamxvNWlxZVlhYkpBMUFpd3phVThtU1AxOXRTYXEwNy11V1ZBWWw0ZVNPV1FXeC1zX1JxT2xjVWdWaHhrRnhScjFJV0VvalJVbnlueFNDZzlUOUNLbTNnWFp1X3h6MWE0UQ?oc=5",
+     "time": "29 Oct 22:00",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "Hero MotoCorp Investment Holds Firm as EV Sales Rise",
+     "source": "Urban Acres",
+     "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQemJJeG5fd0hDUmE2WVZ5anljTUxmZm9GR3dNNl91bmZWUDU1d2xVcWRVTGlRQll6YlFFaktnRXdNZmtoZC1WbF9iaWFZZkxJc0I0R2EwQ3owNUthSGpjVFdNMkVMRG5CTkxPcjUxQWd1N3BTeENTWGVQSFBkZVVDdzFWQXd2ejJtTkRN?oc=5",
+     "time": "29 Oct 21:12",
+     "tags": []
+    },
+    {
+     "title": "Hero MotoCorp Ltd (BOM:500182) (Q2 2027) Earnings Call Highlight",
+     "source": "GuruFocus",
+     "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQU3JZbTZrLUxVaURkdlZoaFBueHphempIazhINGR3dEVmWk16YUhUS2NURFV1YVFSU3dmZlRRSng5dl9qdmtTTDZTUTU5eThmRXl2SDRnc1pXeFJFSkVDaU54WHE1b3U2Q1RaTmZEbDYyZnpnc1AzMDV5U0M1NVRESUN1cU1YRmNWMUJuNTRPNkRZaUkwU1hhVWRUbXdwY2x6bm8yZlFUcEU4QzBfZjdfZi1fOVN3QXdwLVF0ZGhoQ1pHM21CSGZpZzNIM3dQYlJfQm1RYzhrN08wZVhDNk8wNzdDTkNVSEVKbTRRQmdCWXU?oc=5",
+     "time": "29 Oct 20:43",
+     "tags": [
+      "earnings"
+     ]
+    }
+   ],
+   "setups": [],
+   "rsi": null,
+   "earnings_flag": true,
+   "price_source": "Upstox",
+   "cross_check": {
+    "yahoo": 5122.5,
+    "gap_pct": 0.09,
+    "flag": false,
+    "yahoo_time": "09:46"
+   }
+  },
+  {
+   "rank": 18,
+   "symbol": "HCLTECH.NS",
+   "name": "HCL Technologies Limited",
+   "score": 62,
+   "price": 1421.1,
+   "chg_pct": 1.23,
+   "volume": 559241,
+   "turnover_cr": 79.5,
+   "news_count": 5,
+   "news_tags": [
+    "capital",
+    "earnings"
+   ],
+   "news": [
+    {
+     "title": "TCS, Infosys, HCL Tech: Anthropic revenue soars 14-fold in H1 2026 - Can Indian IT stocks benefit from AI boom?",
+     "source": "Mint",
+     "link": "https://www.livemint.com/market/stock-market-news/tcs-infosys-hcl-tech-anthropic-revenue-soars-14-fold-in-h1-2026-can-indian-it-stocks-benefit-from-ai-boom-11793272878286.html",
+     "time": "29 Oct 17:18",
+     "tags": [
+      "capital",
+      "earnings"
+     ]
+    },
+    {
+     "title": "HCLTech launches AI-powered nano GCC to help enterprises scale AI beyond pilots",
+     "source": "https://www.indiagazette.com/",
+     "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOdTd1SDVxZzg0M2JncTQ2MWUxWTFjYzRtS2lQcDZTLWRqWHdsbGlpTHhyaEtXSnpudXZNb2g2aDlJQ1FtSmUxVGNEV3BMMGlrMFlrUmY5VXZTaDMzWF9fVjhwZjJ2UWhLREV4UC1PQW92bENZbTdXaFdYdHNjRHZRM3BGMVRUS0xFd1VwdmlMS2JXVzdJTkRWNjFTRlJEcUpGUDRUUGhoZU5CZDQyTjdkYUhKc29uaXNHeWFFQ292REE?oc=5",
+     "time": "29 Oct 15:35",
+     "tags": []
+    },
+    {
+     "title": "HCL Tech rises on launching AI-Powered Nano GCC offering on AWS to help enterprises scale AI",
+     "source": "Udaipur Kiran",
+     "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQTzZ0dmZyQjhFWmRhbEZBMW9jbTM5eTFBU1RYb0FLSEVMY0tyRThFTmlkbWlQYkJMRHF4Z0F1RXZTNGE2R05NOW1CcnlCYVhpb3I4bWtGcUlUaFZWTXFYTlBrMG1BTFFGVDZjYzBjaTcyS3lJWUhZZWNZVzVhQWhEejFBX0xKemo4a3FibGFnWWxuOUR3SU05QThyMDladi10M0ZuRVJVeHpHVTFTcXdzcnVDX0g4UUhSSGc?oc=5",
+     "time": "29 Oct 12:52",
+     "tags": [
+      "capital"
+     ]
+    },
+    {
+     "title": "HCL Technologies Share Price - Live NSE: HCLTECH Stock Price & Chart",
+     "source": "Upstox",
+     "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5VakFpRExUYldXMkNsOENVSHQ2NUIyNDhRZklKbjVtZGJBMzFsSXpfRGJyVzdQWkxCb0oyYnZIMTRBblBmZl9WRmlRVTZ3Qm8tR1dJS21pQkl6WGpWOWJ0dllEMVpKZEJTaE8w?oc=5",
+     "time": "29 Oct 11:28",
+     "tags": []
+    },
+    {
+     "title": "HCLTech and AWS launch nano GCC model to move enterprise AI beyond pilots",
+     "source": "CRN Asia",
+     "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOWTkwejEzbjlQcl9OUXJKTlBscjhaX3ZydWZfLU1INWdjcDZWbFR3cWRGUEIxMk5WeUxkWkFaOC1BUGY0eV9UdDJxZHJWU3kyME1PRU14ellWejg0ZzY1R0FMQkozeVVwcXBlbU9OUk1xNUhFWDN2a1ZwVWc1a1VHQURDbDZodjZWcVl2RjhibnVmdW9zT3VaRV9Sdmg5YUxzSGoyUVR2MnNpeGlHUUdkakF3RQ?oc=5",
+     "time": "29 Oct 11:27",
+     "tags": []
+    }
+   ],
+   "setups": [
+    "bull_flag"
+   ],
+   "rsi": 66.2,
+   "earnings_flag": true,
+   "price_source": "Upstox",
+   "cross_check": {
+    "yahoo": 1421.0,
+    "gap_pct": 0.01,
+    "flag": false,
+    "yahoo_time": "09:46"
+   }
+  },
+  {
+   "rank": 19,
+   "symbol": "VEDL.NS",
+   "name": "Vedanta Limited",
+   "score": 62,
+   "price": 235.6,
+   "chg_pct": 0.45,
+   "volume": 2267709,
+   "turnover_cr": 53.4,
+   "news_count": 24,
+   "news_tags": [
+    "analyst",
+    "capital",
+    "earnings"
+   ],
+   "news": [
+    {
+     "title": "Vedanta Oil and Gas Share Price Surges 10%: Here’s Why the Stock Is Rallying",
+     "source": "Dalal Street Investment Journal",
+     "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQZWVIRmh0NVZPN25VbHlrY25xeVc3a2JlUlVpUk45eVhGN1ZUQTBXcGxIQmtrWWY0MmhlNjhtQ0dXeWVWOEhPVHREN0toV3BueVYwWjRGLVRHVVFpMGd2ZE5PdWJrbjNVU2g3Nm04QTVhM19BcGF0NTBfZDBqbUZhRzZUeUktOVZDYmgtdkZOYTdLVXI2bXVHWEd3Mks1UXM5Y19kYXMxM0V4ajFkOGVKRkRfSThTemM?oc=5",
+     "time": "30 Oct 09:37",
+     "tags": []
+    },
+    {
+     "title": "Why are Vedanta Power shares rallying over 8% today? Explained",
+     "source": "Business Upturn",
+     "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPRUpxYmdVYTVoc0pBVU4xMGh1RkExZUhmYnZpdWZQdWU4dXg2UGhWeGFiQXlTZGlScDRyN2xqNWVIYXpyTGdDQlp5aEVkS1h2RE9sY2hqTmFnYmlmUWlMNHV1OTR3aGZIZmZ6bktKTk5XemUzZHc1TEVuWVJsWEw2bklPSXpFRDQzYVIxS0gtSk13UHlzWlRCbHNicXhfb1pzTDZ6Q3hXUDcxQzI5QjdGd1oxbw?oc=5",
+     "time": "30 Oct 09:35",
+     "tags": []
+    },
+    {
+     "title": "Why are Vedanta Oil shares up over 10% today? Explained",
+     "source": "Business Upturn",
+     "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPdnlmNERHNnQ4ejRfdVlhaGllLS1mX1JMMUhpaHJ3aVNYaFVpNkRLRFVTMF83djFpTDdnRHg1R1Ytd2dFVkp3X2xyUHZqSFVnRlRkSTdVVXljVFdxaTE1NU1NSmlueUZBWXhDckxzM2ktZjJZTzBBZWtWOGJQUHRGZWhPX1N5QlZ1ZUxWY2lqaHlTSllZUjVmV0dsU1ZwN0Y2V0hkVnFoREtIYmhnNHdRamx5LWVEdkZDQjBqcTRNOWNmdw?oc=5",
+     "time": "30 Oct 09:30",
+     "tags": []
+    },
+    {
+     "title": "Vedanta Power stock in focus after firm returns to black in Q2",
+     "source": "Business Today",
+     "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPcGNfTDBZUzgydFlZcW9UM3h0cE5Cd05uc0x4U1h2N0h0eFJUaldhdGRpQnFYZjA1UWVEZFN3bjZEb3Q1dHZyNy1teUFqMFpZNHoyRzJnbEpxMkhLTHA5U2EtdTRtTTQ2djQwSmNzZXI0MG93OUFOSG96TlhpYS1NdHNpeW5Wb1otaWhRM05GdzFZUjlQX2dtN2VGUDZKbzE4YV9zbHo0OXhkbzZZNDhQQi12cEN2aGoyMEI1WVVtZzZDODQtSWEzYnh30gHPAUFVX3lxTE1WRUQ1ZlpvYlhpelhac1U2Tllvc2dDWXpOX210cnR0cTBpcmgycnY0cFBQQXdza0c2OTczb3QzMG1xb3poWDA2NE45XzFHUWJkVzdnQ3U3SU9QZFZDUms3ZnpOZ0Vua3dZdGxUeFV0QTVkTktDbG85YUhjenpma0hDUlNhczB5NG91R2RrcC12d2thOHgweWNEUG9Bajc4dkR4cTFuelhDRHBqYldmYTNkMW9pc2VWU0twcmxwdDRMOTdDYkhwekxDTGxtWFlRSQ?oc=5",
+     "time": "30 Oct 08:58",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "Top stocks to watch today: Reliance, Jio Platforms, Trent, BEL, RVNL shares in focus on Friday, 30 Oct | Full list",
+     "source": "Mint",
+     "link": "https://www.livemint.com/market/stock-market-news/top-stocks-to-watch-today-reliance-jio-platforms-trent-bel-rvnl-shares-in-focus-on-friday-30-oct-full-list-11793323032394.html",
+     "time": "30 Oct 07:21",
+     "tags": []
+    },
+    {
+     "title": "Stocks in news: RIL, Jio, Trent, Suzlon Energy, IndiGo, Vedanta Power and RVNL",
+     "source": "Economic Times",
+     "link": "https://economictimes.indiatimes.com/markets/stocks/news/stocks-in-news-ril-jio-trent-suzlon-energy-indigo-vedanta-power-and-rvnl/articleshow/135324704.cms",
+     "time": "30 Oct 06:00",
+     "tags": [
+      "earnings",
+      "analyst"
+     ]
+    }
+   ],
+   "setups": [],
+   "rsi": null,
+   "earnings_flag": true,
+   "price_source": "Upstox",
+   "cross_check": {
+    "yahoo": 235.4,
+    "gap_pct": 0.08,
+    "flag": false,
+    "yahoo_time": "09:46"
+   }
+  },
+  {
+   "rank": 20,
+   "symbol": "WIPRO.NS",
+   "name": "Wipro Limited",
+   "score": 59,
+   "price": 193.74,
+   "chg_pct": 1.91,
+   "volume": 3912396,
+   "turnover_cr": 75.8,
+   "news_count": 3,
+   "news_tags": [
+    "capital",
+    "deal",
+    "earnings"
+   ],
+   "news": [
+    {
+     "title": "Stocks to watch today, October 30: GRSE corvette clearance, Coal India, IndiGo, Wipro in focus",
+     "source": "Business Upturn",
+     "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOWkR3THlzYkpVcllFTU9jcHZtdm5kcV9HOV9oYmRLdmRici0yenBfUkpkcHVUSHBBbkpTVnN6UXVsalo1RGctc2wzbFc5bDFKQmhBY3J0LUtWeFhqdlZfLU93LWlqTmZKbDd2NHlMcmg3bHJnSjkyZElTN3Q0MlVYUlZhOTVuaFdRc1loNVRHalB2TGlPWkZCc1RXaTVIQzZ3ZHp3dWV3MTQ5RUlpNjlJVWVEWEZ4NzhCX0Z5bUpROW9CTHlUSDNHMGZJSQ?oc=5",
+     "time": "30 Oct 08:40",
+     "tags": []
+    },
+    {
+     "title": "Wipro completes 20% stake acquisition in FLARRE.AI via subsidiary",
+     "source": "scanx.trade",
+     "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQSlFEZXFoUzFBZ000T2F3ZTNNc1k5SGIwVnd0TU9HZjBITEVQUXBRdTA0V3c2NHc2cUpXS1pvZHU1R01UTjhneG1DNzZreTBMeW9YS085TThjd2J3ZDBtMnUxekNTTmlocFBFWi1TMGdETFhIaUliUXpiZWZvMWJYQ3lPdEtxbXEwUlVFbUFHZUY0ekRBQW9MNHhwYWxZekhPdnZZbE9GVXFUQUVBTUJZYWFjZWZEZXEwbEE?oc=5",
+     "time": "29 Oct 16:18",
+     "tags": [
+      "deal"
+     ]
+    },
+    {
+     "title": "TCS, HCL, Wipro, Infosys Bleeding: Why Are IT Stocks Down? Check Q1 Result Dates, Preview, Dividend Rewards",
+     "source": "Goodreturns",
+     "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOWUdTTWs3X1ZIWEpOMHFsTktxcHA3cFFYc2J2TGk0Q0RHZDU5R3c5cWt4dzExb0YxUUhOVmhoZXNrb2kyRjBZLU9nMDluTklIUURlU0dkeE5VWkpDM1FnazZzY1Z0V0ZMRlM5Z1QxZWtIZHFrb1poVnpDOERBVG9SYTlDbDRRWDR6d0JEMEVtWS1RdFJWVlc4VUszLVdraUtlZWtXaDFCVlJ0VWl2WE1HekhyWm03bjBudENKWkMxNlQ1aXlDTjF2RkhQWFVva1JZTmNrRHkyMEE?oc=5",
+     "time": "29 Oct 15:28",
+     "tags": [
+      "capital",
+      "earnings"
+     ]
+    }
+   ],
+   "setups": [
+    "bull_flag"
+   ],
+   "rsi": 67.7,
+   "earnings_flag": true,
+   "price_source": "Upstox",
+   "cross_check": {
+    "yahoo": 193.68,
+    "gap_pct": 0.03,
+    "flag": false,
+    "yahoo_time": "09:46"
+   }
+  }
+ ],
+ "errors": [
+  "Business Standard feed: HTTP 403 for https://www.business-standard.com/rss/markets-106.rss"
+ ],
+ "seconds": 28
+}

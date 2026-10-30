@@ -1,0 +1,1457 @@
+{
+ "created_ist": "2026-10-30 09:45",
+ "closes_through": "2026-10-29",
+ "counts": {
+  "fetched": 218,
+  "scanned": 149
+ },
+ "failed": 0,
+ "hits": {
+  "LAURUSLABS.NS": {
+   "setups": [
+    "breakout_20d"
+   ],
+   "rsi": 71.4
+  },
+  "ADANIPORTS.NS": {
+   "setups": [
+    "breakout_20d"
+   ],
+   "rsi": 65.1
+  },
+  "BSE.NS": {
+   "setups": [
+    "breakout_20d"
+   ],
+   "rsi": 60.9
+  },
+  "ETERNAL.NS": {
+   "setups": [
+    "breakout_20d"
+   ],
+   "rsi": 59.2
+  },
+  "INFY.NS": {
+   "setups": [
+    "bull_flag"
+   ],
+   "rsi": 59.0
+  },
+  "DIXON.NS": {
+   "setups": [
+    "oversold_bounce"
+   ],
+   "rsi": 31.1
+  },
+  "TCS.NS": {
+   "setups": [
+    "bull_flag"
+   ],
+   "rsi": 65.0
+  },
+  "CAMS.NS": {
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "rsi": 52.1
+  },
+  "SWIGGY.NS": {
+   "setups": [
+    "oversold",
+    "oversold_bounce"
+   ],
+   "rsi": 25.6
+  },
+  "KOTAKBANK.NS": {
+   "setups": [
+    "breakout_20d"
+   ],
+   "rsi": 68.1
+  },
+  "BLUESTARCO.NS": {
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "rsi": 56.3
+  },
+  "SBIN.NS": {
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "rsi": 51.4
+  },
+  "HCLTECH.NS": {
+   "setups": [
+    "bull_flag"
+   ],
+   "rsi": 66.2
+  },
+  "WIPRO.NS": {
+   "setups": [
+    "bull_flag"
+   ],
+   "rsi": 67.7
+  },
+  "PNB.NS": {
+   "setups": [
+    "breakout_20d"
+   ],
+   "rsi": 64.0
+  },
+  "PAYTM.NS": {
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "rsi": 52.1
+  },
+  "MCX.NS": {
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "rsi": 52.0
+  },
+  "LT.NS": {
+   "setups": [
+    "breakout_20d"
+   ],
+   "rsi": 59.1
+  },
+  "TECHM.NS": {
+   "setups": [
+    "bull_flag"
+   ],
+   "rsi": 64.8
+  },
+  "SYRMA.NS": {
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "rsi": 55.6
+  },
+  "VOLTAS.NS": {
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "rsi": 48.8
+  },
+  "SHRIRAMFIN.NS": {
+   "setups": [
+    "oversold_bounce"
+   ],
+   "rsi": 31.3
+  },
+  "MAZDOCK.NS": {
+   "setups": [
+    "oversold",
+    "oversold_bounce"
+   ],
+   "rsi": 25.1
+  },
+  "ADANIGREEN.NS": {
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "rsi": 53.6
+  },
+  "DLF.NS": {
+   "setups": [
+    "breakout_20d"
+   ],
+   "rsi": 62.0
+  },
+  "INDUSTOWER.NS": {
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "rsi": 52.5
+  },
+  "AUBANK.NS": {
+   "setups": [
+    "oversold_bounce"
+   ],
+   "rsi": 31.1
+  },
+  "PATANJALI.NS": {
+   "setups": [
+    "breakout_20d"
+   ],
+   "rsi": 60.3
+  },
+  "UNIONBANK.NS": {
+   "setups": [
+    "breakout_20d"
+   ],
+   "rsi": 62.8
+  },
+  "BANKBARODA.NS": {
+   "setups": [
+    "breakout_20d",
+    "reclaim_ma20"
+   ],
+   "rsi": 58.7
+  },
+  "CHOLAFIN.NS": {
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "rsi": 50.9
+  },
+  "ITC.NS": {
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "rsi": 52.3
+  },
+  "CDSL.NS": {
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "rsi": 51.9
+  },
+  "CANBK.NS": {
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "rsi": 49.1
+  },
+  "COCHINSHIP.NS": {
+   "setups": [
+    "oversold_bounce"
+   ],
+   "rsi": 33.1
+  },
+  "HINDUNILVR.NS": {
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "rsi": 46.8
+  },
+  "POWERGRID.NS": {
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "rsi": 56.8
+  },
+  "MAHABANK.NS": {
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "rsi": 51.1
+  },
+  "MARICO.NS": {
+   "setups": [
+    "breakout_20d",
+    "reclaim_ma20"
+   ],
+   "rsi": 55.4
+  },
+  "PIDILITIND.NS": {
+   "setups": [
+    "oversold_bounce"
+   ],
+   "rsi": 35.8
+  },
+  "KPITTECH.NS": {
+   "setups": [
+    "bull_flag"
+   ],
+   "rsi": 54.8
+  },
+  "JSWENERGY.NS": {
+   "setups": [
+    "breakout_20d"
+   ],
+   "rsi": 58.5
+  },
+  "TMPV.NS": {
+   "setups": [
+    "oversold_bounce"
+   ],
+   "rsi": 34.3
+  },
+  "BDL.NS": {
+   "setups": [
+    "oversold_bounce"
+   ],
+   "rsi": 33.6
+  },
+  "DRREDDY.NS": {
+   "setups": [
+    "breakout_20d"
+   ],
+   "rsi": 74.9
+  },
+  "NYKAA.NS": {
+   "setups": [
+    "breakout_20d"
+   ],
+   "rsi": 60.9
+  },
+  "INDUSINDBK.NS": {
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "rsi": 45.2
+  },
+  "KFINTECH.NS": {
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "rsi": 48.2
+  },
+  "NATIONALUM.NS": {
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "rsi": 47.3
+  },
+  "TATACONSUM.NS": {
+   "setups": [
+    "breakout_20d"
+   ],
+   "rsi": 60.2
+  },
+  "JINDALSTEL.NS": {
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "rsi": 48.5
+  },
+  "PGEL.NS": {
+   "setups": [
+    "breakout_20d",
+    "reclaim_ma20"
+   ],
+   "rsi": 57.1
+  },
+  "NAM-INDIA.NS": {
+   "setups": [
+    "oversold",
+    "oversold_bounce"
+   ],
+   "rsi": 28.7
+  },
+  "NHPC.NS": {
+   "setups": [
+    "breakout_20d"
+   ],
+   "rsi": 62.3
+  },
+  "VMM.NS": {
+   "setups": [
+    "oversold"
+   ],
+   "rsi": 26.6
+  },
+  "IEX.NS": {
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "rsi": 44.6
+  },
+  "SBICARD.NS": {
+   "setups": [
+    "oversold_bounce"
+   ],
+   "rsi": 36.5
+  },
+  "CUB.NS": {
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "rsi": 52.3
+  }
+ },
+ "last": {
+  "360ONE.NS": {
+   "price": 998.3,
+   "volume": 65266,
+   "prev_close": 1022.7
+  },
+  "ABB.NS": {
+   "price": 6421.0,
+   "volume": 22813,
+   "prev_close": 6490.0
+  },
+  "ABCAPITAL.NS": {
+   "price": 356.65,
+   "volume": 177356,
+   "prev_close": 358.35
+  },
+  "ADANIENSOL.NS": {
+   "price": 1345.1,
+   "volume": 150922,
+   "prev_close": 1294.0
+  },
+  "ADANIENT.NS": {
+   "price": 2591.8,
+   "volume": 218271,
+   "prev_close": 2607.9
+  },
+  "ADANIGREEN.NS": {
+   "price": 1307.0,
+   "volume": 289360,
+   "prev_close": 1307.0
+  },
+  "ADANIPORTS.NS": {
+   "price": 1860.8,
+   "volume": 1455179,
+   "prev_close": 1872.0
+  },
+  "ADANIPOWER.NS": {
+   "price": 189.43,
+   "volume": 2732691,
+   "prev_close": 191.2
+  },
+  "ALKEM.NS": {
+   "price": 5050.0,
+   "volume": 4781,
+   "prev_close": 5079.0
+  },
+  "AMBER.NS": {
+   "price": 6028.5,
+   "volume": 32019,
+   "prev_close": 6205.0
+  },
+  "AMBUJACEM.NS": {
+   "price": 355.9,
+   "volume": 915740,
+   "prev_close": 354.7
+  },
+  "ANANDRATHI.NS": {
+   "price": 2273.8,
+   "volume": 25131,
+   "prev_close": 2264.6
+  },
+  "ANGELONE.NS": {
+   "price": 288.95,
+   "volume": 380565,
+   "prev_close": 293.65
+  },
+  "APLAPOLLO.NS": {
+   "price": 2195.9,
+   "volume": 321114,
+   "prev_close": 2165.3
+  },
+  "APOLLOHOSP.NS": {
+   "price": 8260.0,
+   "volume": 43051,
+   "prev_close": 8200.0
+  },
+  "ASHOKLEY.NS": {
+   "price": 144.34,
+   "volume": 776505,
+   "prev_close": 145.0
+  },
+  "ASIANPAINT.NS": {
+   "price": 2301.0,
+   "volume": 220068,
+   "prev_close": 2302.0
+  },
+  "ASTRAL.NS": {
+   "price": 1347.2,
+   "volume": 57193,
+   "prev_close": 1365.4
+  },
+  "ATHERENERG.NS": {
+   "price": 1692.7,
+   "volume": 852617,
+   "prev_close": 1663.0
+  },
+  "AUBANK.NS": {
+   "price": 865.2,
+   "volume": 398777,
+   "prev_close": 879.1
+  },
+  "AUROPHARMA.NS": {
+   "price": 1658.7,
+   "volume": 69479,
+   "prev_close": 1644.8
+  },
+  "AXISBANK.NS": {
+   "price": 1224.7,
+   "volume": 836242,
+   "prev_close": 1225.0
+  },
+  "BAJAJ-AUTO.NS": {
+   "price": 10403.0,
+   "volume": 26045,
+   "prev_close": 10383.0
+  },
+  "BAJAJFINSV.NS": {
+   "price": 1666.3,
+   "volume": 44189,
+   "prev_close": 1652.4
+  },
+  "BAJFINANCE.NS": {
+   "price": 942.5,
+   "volume": 677338,
+   "prev_close": 938.9
+  },
+  "BANDHANBNK.NS": {
+   "price": 158.61,
+   "volume": 1382149,
+   "prev_close": 161.84
+  },
+  "BANKBARODA.NS": {
+   "price": 241.16,
+   "volume": 1269894,
+   "prev_close": 241.31
+  },
+  "BANKINDIA.NS": {
+   "price": 135.37,
+   "volume": 1248339,
+   "prev_close": 135.7
+  },
+  "BDL.NS": {
+   "price": 989.5,
+   "volume": 163330,
+   "prev_close": 1011.0
+  },
+  "BEL.NS": {
+   "price": 365.75,
+   "volume": 1920078,
+   "prev_close": 370.0
+  },
+  "BHARATFORG.NS": {
+   "price": 1729.8,
+   "volume": 33386,
+   "prev_close": 1766.3
+  },
+  "BHARTIARTL.NS": {
+   "price": 1967.8,
+   "volume": 1585848,
+   "prev_close": 1972.1
+  },
+  "BHEL.NS": {
+   "price": 393.45,
+   "volume": 1622409,
+   "prev_close": 401.95
+  },
+  "BIOCON.NS": {
+   "price": 349.0,
+   "volume": 171577,
+   "prev_close": 351.9
+  },
+  "BLUESTARCO.NS": {
+   "price": 1592.2,
+   "volume": 589116,
+   "prev_close": 1598.0
+  },
+  "BOSCHLTD.NS": {
+   "price": 47405.0,
+   "volume": 1698,
+   "prev_close": 47565.0
+  },
+  "BPCL.NS": {
+   "price": 285.6,
+   "volume": 293832,
+   "prev_close": 289.2
+  },
+  "BRITANNIA.NS": {
+   "price": 4580.6,
+   "volume": 17768,
+   "prev_close": 4567.3
+  },
+  "BSE.NS": {
+   "price": 3473.6,
+   "volume": 765919,
+   "prev_close": 3502.0
+  },
+  "CAMS.NS": {
+   "price": 660.55,
+   "volume": 1654866,
+   "prev_close": 696.95
+  },
+  "CANBK.NS": {
+   "price": 119.17,
+   "volume": 2309226,
+   "prev_close": 119.79
+  },
+  "CDSL.NS": {
+   "price": 1267.0,
+   "volume": 227356,
+   "prev_close": 1282.0
+  },
+  "CGPOWER.NS": {
+   "price": 809.15,
+   "volume": 449858,
+   "prev_close": 829.8
+  },
+  "CHOLAFIN.NS": {
+   "price": 1611.5,
+   "volume": 190197,
+   "prev_close": 1604.2
+  },
+  "CIPLA.NS": {
+   "price": 1368.0,
+   "volume": 82576,
+   "prev_close": 1358.0
+  },
+  "COALINDIA.NS": {
+   "price": 383.4,
+   "volume": 7994677,
+   "prev_close": 393.1
+  },
+  "COCHINSHIP.NS": {
+   "price": 1130.6,
+   "volume": 217430,
+   "prev_close": 1155.8
+  },
+  "COFORGE.NS": {
+   "price": 2015.6,
+   "volume": 1738526,
+   "prev_close": 1962.0
+  },
+  "COLPAL.NS": {
+   "price": 1598.1,
+   "volume": 108870,
+   "prev_close": 1629.8
+  },
+  "CONCOR.NS": {
+   "price": 417.0,
+   "volume": 131416,
+   "prev_close": 421.05
+  },
+  "COROMANDEL.NS": {
+   "price": 1693.2,
+   "volume": 11990,
+   "prev_close": 1703.5
+  },
+  "CROMPTON.NS": {
+   "price": 194.77,
+   "volume": 607930,
+   "prev_close": 200.0
+  },
+  "CUB.NS": {
+   "price": 221.94,
+   "volume": 232067,
+   "prev_close": 226.9
+  },
+  "CUMMINSIND.NS": {
+   "price": 4392.9,
+   "volume": 83839,
+   "prev_close": 4620.0
+  },
+  "DABUR.NS": {
+   "price": 367.05,
+   "volume": 74152,
+   "prev_close": 360.0
+  },
+  "DATAPATTNS.NS": {
+   "price": 3952.8,
+   "volume": 65489,
+   "prev_close": 4021.5
+  },
+  "DELHIVERY.NS": {
+   "price": 394.25,
+   "volume": 494974,
+   "prev_close": 385.0
+  },
+  "DIVISLAB.NS": {
+   "price": 9788.5,
+   "volume": 157527,
+   "prev_close": 9558.5
+  },
+  "DIXON.NS": {
+   "price": 10969.0,
+   "volume": 172939,
+   "prev_close": 11488.0
+  },
+  "DLF.NS": {
+   "price": 697.0,
+   "volume": 544210,
+   "prev_close": 694.35
+  },
+  "DMART.NS": {
+   "price": 3169.9,
+   "volume": 47840,
+   "prev_close": 3175.0
+  },
+  "DRREDDY.NS": {
+   "price": 1349.6,
+   "volume": 118137,
+   "prev_close": 1345.0
+  },
+  "EICHERMOT.NS": {
+   "price": 7268.5,
+   "volume": 35801,
+   "prev_close": 7238.0
+  },
+  "ENRIN.NS": {
+   "price": 2784.0,
+   "volume": 58729,
+   "prev_close": 2840.0
+  },
+  "ETERNAL.NS": {
+   "price": 342.15,
+   "volume": 7391441,
+   "prev_close": 337.85
+  },
+  "FEDERALBNK.NS": {
+   "price": 345.9,
+   "volume": 431943,
+   "prev_close": 347.75
+  },
+  "FORCEMOT.NS": {
+   "price": 16901.0,
+   "volume": 16330,
+   "prev_close": 16856.0
+  },
+  "FORTIS.NS": {
+   "price": 751.35,
+   "volume": 73310,
+   "prev_close": 754.9
+  },
+  "GAIL.NS": {
+   "price": 168.07,
+   "volume": 1543094,
+   "prev_close": 164.78
+  },
+  "GLENMARK.NS": {
+   "price": 2314.4,
+   "volume": 37766,
+   "prev_close": 2300.0
+  },
+  "GMRAIRPORT.NS": {
+   "price": 87.72,
+   "volume": 2898998,
+   "prev_close": 89.71
+  },
+  "GODFRYPHLP.NS": {
+   "price": 1712.2,
+   "volume": 26684,
+   "prev_close": 1714.4
+  },
+  "GODREJCP.NS": {
+   "price": 808.0,
+   "volume": 3625056,
+   "prev_close": 837.0
+  },
+  "GODREJPROP.NS": {
+   "price": 1602.0,
+   "volume": 48422,
+   "prev_close": 1600.0
+  },
+  "GRASIM.NS": {
+   "price": 2924.4,
+   "volume": 20844,
+   "prev_close": 2900.0
+  },
+  "GVT&D.NS": {
+   "price": 4014.6,
+   "volume": 120728,
+   "prev_close": 4060.0
+  },
+  "HAL.NS": {
+   "price": 4828.0,
+   "volume": 88862,
+   "prev_close": 4869.9
+  },
+  "HAVELLS.NS": {
+   "price": 1008.1,
+   "volume": 64663,
+   "prev_close": 1025.4
+  },
+  "HCLTECH.NS": {
+   "price": 1420.5,
+   "volume": 559247,
+   "prev_close": 1403.9
+  },
+  "HDFCAMC.NS": {
+   "price": 2296.2,
+   "volume": 56604,
+   "prev_close": 2300.0
+  },
+  "HDFCBANK.NS": {
+   "price": 684.1,
+   "volume": 2186328,
+   "prev_close": 683.3
+  },
+  "HDFCLIFE.NS": {
+   "price": 515.25,
+   "volume": 138813,
+   "prev_close": 517.0
+  },
+  "HEROMOTOCO.NS": {
+   "price": 5121.5,
+   "volume": 113281,
+   "prev_close": 5105.0
+  },
+  "HINDALCO.NS": {
+   "price": 880.7,
+   "volume": 199026,
+   "prev_close": 886.3
+  },
+  "HINDPETRO.NS": {
+   "price": 340.55,
+   "volume": 684774,
+   "prev_close": 342.3
+  },
+  "HINDUNILVR.NS": {
+   "price": 1851.1,
+   "volume": 134748,
+   "prev_close": 1858.2
+  },
+  "HINDZINC.NS": {
+   "price": 502.5,
+   "volume": 436841,
+   "prev_close": 516.5
+  },
+  "HYUNDAI.NS": {
+   "price": 1918.8,
+   "volume": 45329,
+   "prev_close": 1922.0
+  },
+  "ICICIBANK.NS": {
+   "price": 1393.2,
+   "volume": 1365764,
+   "prev_close": 1386.6
+  },
+  "ICICIGI.NS": {
+   "price": 1566.4,
+   "volume": 15188,
+   "prev_close": 1583.8
+  },
+  "ICICILIFE.NS": {
+   "price": 408.15,
+   "volume": 118306,
+   "prev_close": 411.95
+  },
+  "IDEA.NS": {
+   "price": 11.96,
+   "volume": 36570719,
+   "prev_close": 12.12
+  },
+  "IDFCFIRSTB.NS": {
+   "price": 71.7,
+   "volume": 4490708,
+   "prev_close": 73.38
+  },
+  "IEX.NS": {
+   "price": 102.81,
+   "volume": 690005,
+   "prev_close": 105.35
+  },
+  "INDHOTEL.NS": {
+   "price": 817.7,
+   "volume": 952222,
+   "prev_close": 805.2
+  },
+  "INDIANB.NS": {
+   "price": 868.1,
+   "volume": 308927,
+   "prev_close": 839.8
+  },
+  "INDIGO.NS": {
+   "price": 4851.0,
+   "volume": 382743,
+   "prev_close": 4690.0
+  },
+  "INDUSINDBK.NS": {
+   "price": 855.65,
+   "volume": 173482,
+   "prev_close": 868.0
+  },
+  "INDUSTOWER.NS": {
+   "price": 380.5,
+   "volume": 938739,
+   "prev_close": 384.0
+  },
+  "INFY.NS": {
+   "price": 1162.65,
+   "volume": 1855447,
+   "prev_close": 1146.5
+  },
+  "INOXWIND.NS": {
+   "price": 57.15,
+   "volume": 2335411,
+   "prev_close": 59.18
+  },
+  "IOC.NS": {
+   "price": 129.49,
+   "volume": 1241202,
+   "prev_close": 130.41
+  },
+  "IREDA.NS": {
+   "price": 99.98,
+   "volume": 727591,
+   "prev_close": 101.2
+  },
+  "IRFC.NS": {
+   "price": 74.49,
+   "volume": 1276182,
+   "prev_close": 75.71
+  },
+  "ITC.NS": {
+   "price": 264.05,
+   "volume": 1141195,
+   "prev_close": 265.0
+  },
+  "JINDALSTEL.NS": {
+   "price": 1058.2,
+   "volume": 108246,
+   "prev_close": 1060.0
+  },
+  "JIOFIN.NS": {
+   "price": 205.75,
+   "volume": 1305207,
+   "prev_close": 207.0
+  },
+  "JSWENERGY.NS": {
+   "price": 503.3,
+   "volume": 372791,
+   "prev_close": 510.0
+  },
+  "JSWSTEEL.NS": {
+   "price": 1256.8,
+   "volume": 120125,
+   "prev_close": 1241.2
+  },
+  "JUBLFOOD.NS": {
+   "price": 421.6,
+   "volume": 128311,
+   "prev_close": 421.35
+  },
+  "KALYANKJIL.NS": {
+   "price": 504.65,
+   "volume": 665892,
+   "prev_close": 515.0
+  },
+  "KARURVYSYA.NS": {
+   "price": 358.0,
+   "volume": 242402,
+   "prev_close": 350.2
+  },
+  "KAYNES.NS": {
+   "price": 3151.1,
+   "volume": 84605,
+   "prev_close": 3187.5
+  },
+  "KEI.NS": {
+   "price": 3764.8,
+   "volume": 50791,
+   "prev_close": 3830.8
+  },
+  "KFINTECH.NS": {
+   "price": 852.0,
+   "volume": 167637,
+   "prev_close": 859.8
+  },
+  "KOTAKBANK.NS": {
+   "price": 460.55,
+   "volume": 2218708,
+   "prev_close": 459.0
+  },
+  "KPITTECH.NS": {
+   "price": 537.7,
+   "volume": 367340,
+   "prev_close": 543.7
+  },
+  "LAURUSLABS.NS": {
+   "price": 2326.0,
+   "volume": 2068606,
+   "prev_close": 2244.0
+  },
+  "LICHSGFIN.NS": {
+   "price": 508.5,
+   "volume": 131408,
+   "prev_close": 514.0
+  },
+  "LICI.NS": {
+   "price": 389.8,
+   "volume": 562225,
+   "prev_close": 396.0
+  },
+  "LODHA.NS": {
+   "price": 1038.2,
+   "volume": 190866,
+   "prev_close": 1007.1
+  },
+  "LT.NS": {
+   "price": 3829.6,
+   "volume": 157297,
+   "prev_close": 3837.1
+  },
+  "LTF.NS": {
+   "price": 247.7,
+   "volume": 331092,
+   "prev_close": 251.05
+  },
+  "LTM.NS": {
+   "price": 4121.0,
+   "volume": 54409,
+   "prev_close": 4094.7
+  },
+  "LUPIN.NS": {
+   "price": 1986.0,
+   "volume": 46566,
+   "prev_close": 1989.9
+  },
+  "M&M.NS": {
+   "price": 2884.7,
+   "volume": 127682,
+   "prev_close": 2890.0
+  },
+  "MAHABANK.NS": {
+   "price": 81.73,
+   "volume": 2811742,
+   "prev_close": 81.0
+  },
+  "MANAPPURAM.NS": {
+   "price": 295.9,
+   "volume": 556782,
+   "prev_close": 302.1
+  },
+  "MANKIND.NS": {
+   "price": 2494.9,
+   "volume": 56732,
+   "prev_close": 2490.0
+  },
+  "MARICO.NS": {
+   "price": 802.05,
+   "volume": 272955,
+   "prev_close": 802.9
+  },
+  "MARUTI.NS": {
+   "price": 11429.0,
+   "volume": 27440,
+   "prev_close": 11426.0
+  },
+  "MAXHEALTH.NS": {
+   "price": 854.15,
+   "volume": 366099,
+   "prev_close": 851.15
+  },
+  "MAZDOCK.NS": {
+   "price": 1724.0,
+   "volume": 216465,
+   "prev_close": 1762.7
+  },
+  "MCX.NS": {
+   "price": 3220.4,
+   "volume": 190362,
+   "prev_close": 3231.0
+  },
+  "MFSL.NS": {
+   "price": 1198.1,
+   "volume": 28262,
+   "prev_close": 1212.0
+  },
+  "MOTHERSON.NS": {
+   "price": 158.08,
+   "volume": 869269,
+   "prev_close": 160.0
+  },
+  "MOTILALOFS.NS": {
+   "price": 966.0,
+   "volume": 457125,
+   "prev_close": 986.1
+  },
+  "MPHASIS.NS": {
+   "price": 2564.6,
+   "volume": 105935,
+   "prev_close": 2561.3
+  },
+  "MUTHOOTFIN.NS": {
+   "price": 2451.5,
+   "volume": 50067,
+   "prev_close": 2497.1
+  },
+  "NAM-INDIA.NS": {
+   "price": 904.8,
+   "volume": 104111,
+   "prev_close": 923.9
+  },
+  "NATIONALUM.NS": {
+   "price": 316.75,
+   "volume": 442616,
+   "prev_close": 323.5
+  },
+  "NAUKRI.NS": {
+   "price": 1165.6,
+   "volume": 176936,
+   "prev_close": 1190.0
+  },
+  "NAVINFLUOR.NS": {
+   "price": 8513.5,
+   "volume": 45381,
+   "prev_close": 8260.5
+  },
+  "NBCC.NS": {
+   "price": 70.53,
+   "volume": 1874908,
+   "prev_close": 71.95
+  },
+  "NESTLEIND.NS": {
+   "price": 1176.5,
+   "volume": 98237,
+   "prev_close": 1168.0
+  },
+  "NHPC.NS": {
+   "price": 76.99,
+   "volume": 1220536,
+   "prev_close": 77.2
+  },
+  "NMDC.NS": {
+   "price": 67.1,
+   "volume": 1527768,
+   "prev_close": 67.54
+  },
+  "NTPC.NS": {
+   "price": 311.7,
+   "volume": 1313003,
+   "prev_close": 310.5
+  },
+  "NYKAA.NS": {
+   "price": 350.3,
+   "volume": 429946,
+   "prev_close": 352.9
+  },
+  "OBEROIRLTY.NS": {
+   "price": 1638.7,
+   "volume": 34617,
+   "prev_close": 1640.0
+  },
+  "OFSS.NS": {
+   "price": 9936.0,
+   "volume": 20120,
+   "prev_close": 9986.0
+  },
+  "OIL.NS": {
+   "price": 449.3,
+   "volume": 117550,
+   "prev_close": 447.5
+  },
+  "ONGC.NS": {
+   "price": 225.48,
+   "volume": 649253,
+   "prev_close": 225.79
+  },
+  "PAGEIND.NS": {
+   "price": 34015.0,
+   "volume": 1180,
+   "prev_close": 33845.0
+  },
+  "PATANJALI.NS": {
+   "price": 374.6,
+   "volume": 895019,
+   "prev_close": 378.8
+  },
+  "PAYTM.NS": {
+   "price": 1667.5,
+   "volume": 368780,
+   "prev_close": 1686.5
+  },
+  "PERSISTENT.NS": {
+   "price": 5978.5,
+   "volume": 227433,
+   "prev_close": 5848.0
+  },
+  "PETRONET.NS": {
+   "price": 287.5,
+   "volume": 178330,
+   "prev_close": 289.15
+  },
+  "PFC.NS": {
+   "price": 317.85,
+   "volume": 418386,
+   "prev_close": 320.6
+  },
+  "PGEL.NS": {
+   "price": 530.7,
+   "volume": 201731,
+   "prev_close": 536.4
+  },
+  "PHOENIXLTD.NS": {
+   "price": 1986.3,
+   "volume": 59328,
+   "prev_close": 1899.3
+  },
+  "PIDILITIND.NS": {
+   "price": 1426.5,
+   "volume": 144507,
+   "prev_close": 1422.0
+  },
+  "PIIND.NS": {
+   "price": 2075.9,
+   "volume": 20404,
+   "prev_close": 2110.0
+  },
+  "PNB.NS": {
+   "price": 124.02,
+   "volume": 5517225,
+   "prev_close": 123.9
+  },
+  "PNBHOUSING.NS": {
+   "price": 1097.6,
+   "volume": 88124,
+   "prev_close": 1110.0
+  },
+  "POLICYBZR.NS": {
+   "price": 1009.4,
+   "volume": 157028,
+   "prev_close": 1018.2
+  },
+  "POLYCAB.NS": {
+   "price": 7620.0,
+   "volume": 32259,
+   "prev_close": 7745.0
+  },
+  "POWERGRID.NS": {
+   "price": 262.75,
+   "volume": 952021,
+   "prev_close": 260.0
+  },
+  "POWERINDIA.NS": {
+   "price": 27655.0,
+   "volume": 18609,
+   "prev_close": 28125.0
+  },
+  "PREMIERENE.NS": {
+   "price": 855.45,
+   "volume": 55643,
+   "prev_close": 865.1
+  },
+  "PRESTIGE.NS": {
+   "price": 1439.4,
+   "volume": 34462,
+   "prev_close": 1439.0
+  },
+  "RADICO.NS": {
+   "price": 4216.2,
+   "volume": 41326,
+   "prev_close": 4235.0
+  },
+  "RBLBANK.NS": {
+   "price": 355.05,
+   "volume": 364805,
+   "prev_close": 360.9
+  },
+  "RECLTD.NS": {
+   "price": 288.7,
+   "volume": 579864,
+   "prev_close": 296.15
+  },
+  "RELIANCE.NS": {
+   "price": 1160.6,
+   "volume": 1637399,
+   "prev_close": 1167.4
+  },
+  "RVNL.NS": {
+   "price": 182.29,
+   "volume": 587965,
+   "prev_close": 186.0
+  },
+  "SAGILITY.NS": {
+   "price": 42.29,
+   "volume": 693239273,
+   "prev_close": 44.66
+  },
+  "SAIL.NS": {
+   "price": 161.56,
+   "volume": 1108672,
+   "prev_close": 161.0
+  },
+  "SBICARD.NS": {
+   "price": 533.65,
+   "volume": 133080,
+   "prev_close": 540.0
+  },
+  "SBILIFE.NS": {
+   "price": 1658.1,
+   "volume": 51525,
+   "prev_close": 1652.0
+  },
+  "SBIN.NS": {
+   "price": 967.1,
+   "volume": 880165,
+   "prev_close": 971.9
+  },
+  "SHREECEM.NS": {
+   "price": 22850.0,
+   "volume": 2538,
+   "prev_close": 23020.0
+  },
+  "SHRIRAMFIN.NS": {
+   "price": 832.55,
+   "volume": 510765,
+   "prev_close": 841.1
+  },
+  "SIEMENS.NS": {
+   "price": 3314.0,
+   "volume": 17228,
+   "prev_close": 3366.0
+  },
+  "SOLARINDS.NS": {
+   "price": 19086.0,
+   "volume": 13292,
+   "prev_close": 19430.0
+  },
+  "SONACOMS.NS": {
+   "price": 872.0,
+   "volume": 263089,
+   "prev_close": 873.6
+  },
+  "SRF.NS": {
+   "price": 2334.4,
+   "volume": 15139,
+   "prev_close": 2358.6
+  },
+  "SUNPHARMA.NS": {
+   "price": 1793.2,
+   "volume": 329631,
+   "prev_close": 1757.5
+  },
+  "SUPREMEIND.NS": {
+   "price": 3167.9,
+   "volume": 18152,
+   "prev_close": 3210.0
+  },
+  "SUZLON.NS": {
+   "price": 34.8,
+   "volume": 81490903,
+   "prev_close": 36.79
+  },
+  "SWIGGY.NS": {
+   "price": 178.75,
+   "volume": 5581938,
+   "prev_close": 185.25
+  },
+  "SYRMA.NS": {
+   "price": 1639.1,
+   "volume": 279332,
+   "prev_close": 1669.0
+  },
+  "TATACONSUM.NS": {
+   "price": 1015.5,
+   "volume": 113987,
+   "prev_close": 1021.0
+  },
+  "TATAELXSI.NS": {
+   "price": 3794.4,
+   "volume": 49794,
+   "prev_close": 3804.0
+  },
+  "TATAPOWER.NS": {
+   "price": 342.9,
+   "volume": 173989,
+   "prev_close": 344.55
+  },
+  "TATASTEEL.NS": {
+   "price": 167.98,
+   "volume": 2386478,
+   "prev_close": 169.46
+  },
+  "TCS.NS": {
+   "price": 2510.3,
+   "volume": 623159,
+   "prev_close": 2478.0
+  },
+  "TECHM.NS": {
+   "price": 1786.5,
+   "volume": 306507,
+   "prev_close": 1776.6
+  },
+  "TIINDIA.NS": {
+   "price": 2131.6,
+   "volume": 30798,
+   "prev_close": 2135.0
+  },
+  "TITAN.NS": {
+   "price": 4430.8,
+   "volume": 54028,
+   "prev_close": 4434.0
+  },
+  "TMPV.NS": {
+   "price": 265.35,
+   "volume": 666542,
+   "prev_close": 266.0
+  },
+  "TORNTPHARM.NS": {
+   "price": 4590.1,
+   "volume": 22913,
+   "prev_close": 4557.0
+  },
+  "TRENT.NS": {
+   "price": 3023.5,
+   "volume": 1665419,
+   "prev_close": 2861.7
+  },
+  "TVSMOTOR.NS": {
+   "price": 4261.2,
+   "volume": 83982,
+   "prev_close": 4280.0
+  },
+  "UJJIVANSFB.NS": {
+   "price": 54.98,
+   "volume": 3003580,
+   "prev_close": 56.13
+  },
+  "ULTRACEMCO.NS": {
+   "price": 11093.0,
+   "volume": 13002,
+   "prev_close": 11175.0
+  },
+  "UNIONBANK.NS": {
+   "price": 186.46,
+   "volume": 1733189,
+   "prev_close": 186.5
+  },
+  "UNITDSPR.NS": {
+   "price": 1320.9,
+   "volume": 335469,
+   "prev_close": 1227.4
+  },
+  "UNOMINDA.NS": {
+   "price": 1078.0,
+   "volume": 39133,
+   "prev_close": 1087.4
+  },
+  "UPL.NS": {
+   "price": 531.1,
+   "volume": 333122,
+   "prev_close": 536.4
+  },
+  "VBL.NS": {
+   "price": 414.15,
+   "volume": 432016,
+   "prev_close": 414.8
+  },
+  "VEDL.NS": {
+   "price": 235.6,
+   "volume": 2267770,
+   "prev_close": 234.55
+  },
+  "VMM.NS": {
+   "price": 85.09,
+   "volume": 897646,
+   "prev_close": 86.6
+  },
+  "VOLTAS.NS": {
+   "price": 1013.6,
+   "volume": 435893,
+   "prev_close": 1041.0
+  },
+  "WAAREEENER.NS": {
+   "price": 2296.7,
+   "volume": 173335,
+   "prev_close": 2318.0
+  },
+  "WIPRO.NS": {
+   "price": 193.73,
+   "volume": 3912560,
+   "prev_close": 190.1
+  },
+  "YESBANK.NS": {
+   "price": 15.34,
+   "volume": 19177329,
+   "prev_close": 15.43
+  },
+  "ZYDUSLIFE.NS": {
+   "price": 1201.3,
+   "volume": 196413,
+   "prev_close": 1175.5
+  }
+ }
+}

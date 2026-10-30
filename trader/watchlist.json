@@ -1,66 +1,66 @@
 {
  "mode": "nse-morning",
- "as_of": "2026-10-29 14:11",
+ "as_of": "2026-10-30 09:45",
  "hits": [
+  {
+   "symbol": "LAURUSLABS.NS"
+  },
   {
    "symbol": "ADANIPORTS.NS"
   },
   {
-   "symbol": "TVSMOTOR.NS"
+   "symbol": "TRENT.NS"
   },
   {
-   "symbol": "BSOFT.NS"
+   "symbol": "SUZLON.NS"
   },
   {
-   "symbol": "JSWENERGY.NS"
-  },
-  {
-   "symbol": "JWL.NS"
-  },
-  {
-   "symbol": "LT.NS"
-  },
-  {
-   "symbol": "AEROFLEX.NS"
-  },
-  {
-   "symbol": "ZENSARTECH.NS"
-  },
-  {
-   "symbol": "MEESHO.NS"
+   "symbol": "BLUESTARCO.NS"
   },
   {
    "symbol": "INFY.NS"
   },
   {
-   "symbol": "VEDL.NS"
-  },
-  {
-   "symbol": "PIDILITIND.NS"
+   "symbol": "GODREJCP.NS"
   },
   {
    "symbol": "RELIANCE.NS"
   },
   {
-   "symbol": "HYUNDAI.NS"
+   "symbol": "ETERNAL.NS"
+  },
+  {
+   "symbol": "KOTAKBANK.NS"
+  },
+  {
+   "symbol": "PNB.NS"
+  },
+  {
+   "symbol": "CAMS.NS"
   },
   {
    "symbol": "TCS.NS"
   },
   {
-   "symbol": "CARTRADE.NS"
+   "symbol": "SAGILITY.NS"
   },
   {
-   "symbol": "ADANIENT.NS"
+   "symbol": "ASIANPAINT.NS"
+  },
+  {
+   "symbol": "SWIGGY.NS"
   },
   {
    "symbol": "HEROMOTOCO.NS"
   },
   {
-   "symbol": "PINELABS.NS"
+   "symbol": "HCLTECH.NS"
   },
   {
-   "symbol": "BANDHANBNK.NS"
+   "symbol": "VEDL.NS"
+  },
+  {
+   "symbol": "WIPRO.NS"
   }
  ]
 }
