@@ -24,9 +24,9 @@
   "signal_spot": 1872.0,
   "status": "waiting for entry",
   "stock_status": "waiting for entry",
-  "last": 12.05,
-  "last_ist": "2026-10-30 13:29",
-  "last_spot": 1848.1
+  "last": 10.8,
+  "last_ist": "2026-10-30 14:21",
+  "last_spot": 1835.6
  },
  {
   "id": "2026-10-29-MARUTI.NS-PE",
@@ -53,12 +53,12 @@
   "signal_spot": 11426.0,
   "status": "entered",
   "stock_status": "entered",
-  "last": 135.75,
-  "last_ist": "2026-10-30 13:29",
-  "last_spot": 11410.0,
+  "last": 144.9,
+  "last_ist": "2026-10-30 14:21",
+  "last_spot": 11353.0,
   "fill": 133.7,
   "entered_ist": "2026-10-30 09:57",
-  "mark_lot": 103,
-  "mark_pct": 1.5
+  "mark_lot": 560,
+  "mark_pct": 8.4
  }
 ]
