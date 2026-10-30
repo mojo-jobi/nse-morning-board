@@ -701,6 +701,9 @@ def stage_orb(now_utc, cfg, sk, pre, src):
                 t["option"] = options.intraday_option(r["symbol"], t["plan"], inst, today, oc)
             except Exception as e:                   # noqa: BLE001
                 t["option"] = {"error": str(e)}
+        if t.get("plan"):
+            t["checks"] = options.intraday_checks(t)
+            t["qualified"] = all(c["ok"] for c in t["checks"])
         log("  %-16s %s%s" % (r["symbol"], t.get("status"),
                               " (%s)" % t["option"].get("label") if (t.get("option") or {}).get("label") else ""))
         time.sleep(0.5)

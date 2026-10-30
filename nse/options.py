@@ -696,3 +696,117 @@ def intraday_option(sym, plan, inst, today, oc):
             "rr": round(reward / risk, 2) if risk > 0 else None, "lots_in_budget": int(oc["max_loss_per_trade"] // (ask * lot)),
             "stop_rule": "-%d%%" % round(100 * sl) if stop_px == ask * (1 - sl) else "stock stop via delta",
             "flat_by": plan.get("flat_by")}
+
+
+def intraday_checks(t):
+    """An intraday option is recommended only with a live plan, an option that fits the budget and
+    liquidity, the replays leaning to the target, and the volume behind the move."""
+    tm, o = t.get("timemachine") or {}, t.get("option") or {}
+    p100 = lambda x: "-" if x is None else "%d%%" % round(100 * x)  # noqa: E731
+    checks = [("Plan live", t.get("status") in ("triggered", "waiting"), t.get("entry_kind") or t.get("status")),
+              ("Option fits the budget and liquidity", bool(o.get("label")), o.get("error") or o.get("label")),
+              ("Replays lean to the target", (tm.get("p_target") or 0) >= 0.30 and (tm.get("avg_R") or -9) >= 0.10,
+               "target first %s, stop first %s, average %+.2fR" % (p100(tm.get("p_target")), p100(tm.get("p_stop")),
+                                                                  tm.get("avg_R") or 0)
+               if "p_target" in tm else tm.get("skipped", "no replays")),
+              ("Volume behind it", (t.get("rel_volume") or 0) >= 1.2, "%sx usual volume by now" % (t.get("rel_volume") or "-"))]
+    return [{"name": a, "ok": bool(b), "detail": c or ""} for a, b, c in checks]
+
+
+# ---------------------------------------------------------------- the intraday options record
+
+I_OPEN = ("waiting for entry", "entered")
+
+
+def track_intraday(rows, intraday, inst, now_utc, errors, cfg=None):
+    """Move the intraday options record on (every 5 minutes in market hours).
+    New: each qualifying intraday plan's option, one per stock a day, while fewer than intraday_max_open
+    are open or waiting. Entry: at the option's ask, at once if the stock has triggered, else when it
+    does; "entry missed" if the plan expires first. Exit, first of: the option's stop, its target, the
+    stock through its own stop, or the flat-by time (15:15); at the bid. A trade left open past the
+    close (a missed run) is closed at the last price seen."""
+    oc = settings(cfg or {})
+    cap = (cfg or {}).get("options", {}).get("intraday_max_open", oc["max_open"])
+    ist = market.to_ist(now_utc)
+    today, hm = ist.date().isoformat(), ist.strftime("%H:%M")
+    stamp = ist.strftime("%Y-%m-%d %H:%M")
+    eq = inst.get("eq") or {}
+    plans = {r["symbol"]: r for r in (intraday or {}).get("shortlist") or [] if (r.get("trade") or {}).get("plan")}
+    day = (intraday or {}).get("created_ist", "")[:10]
+    have = {r["id"] for r in rows}
+    for sym, r in plans.items():
+        t, o = r["trade"], r["trade"].get("option") or {}
+        rid = "%s-%s-%s" % (day, sym, o.get("type"))
+        if day != today or not t.get("qualified") or not o.get("label") or rid in have:
+            continue
+        if sum(1 for x in rows if x["status"] in I_OPEN) >= cap:
+            t["capacity"] = True
+            continue
+        p = t["plan"]
+        rows.append({"id": rid, "date": day, "created_ist": stamp, "symbol": sym, "name": r.get("name"),
+                     "type": o["type"], "strike": o["strike"], "expiry": o["expiry"], "lot": o["lot"],
+                     "side": p["side"], "stock_entry": p["entry"], "stock_stop": p["stop"], "stock_target": p["target"],
+                     "opt_stop": o["stop"], "opt_target": o["target"], "signal_ask": o["ask"], "flat_by": p.get("flat_by") or "15:15",
+                     "status": "waiting for entry", "last": o["ask"], "last_ist": stamp})
+        have.add(rid)
+    for x in rows:
+        if x["status"] not in I_OPEN:
+            continue
+        if x["date"] < today:                         # still open after its day: the close was missed
+            if x["status"] == "entered":
+                _iclose(x, "flat (closed at the last price seen)", x.get("last") or x["fill"], stamp)
+            else:
+                x.update(status="entry missed", closed_ist=stamp)
+            continue
+        key = (eq.get(x["symbol"]) or {}).get("key")
+        q, spot = None, None
+        if key:
+            try:
+                q, spot = _q(get_chain(key, x["expiry"]), x["strike"], x["type"])
+            except Exception as e:                   # noqa: BLE001
+                errors.append("intraday option %s: %s" % (x["id"], e))
+        if not q:
+            continue
+        bid, ask = q.get("bid") or q.get("ltp"), q.get("ask") or q.get("ltp")
+        x.update(last=round(bid, 2), last_ist=stamp, last_spot=spot)
+        t = (plans.get(x["symbol"]) or {}).get("trade") or {}
+        call = x["type"] == "CE"
+        if x["status"] == "waiting for entry":
+            if hm >= x["flat_by"] or t.get("status") == "expired":
+                x.update(status="entry missed", closed_ist=stamp)
+                continue
+            if t.get("status") == "triggered":
+                x.update(status="entered", fill=round(ask, 2), entered_ist=stamp)
+            else:
+                continue
+        stock_out = spot is not None and ((call and spot <= x["stock_stop"]) or (not call and spot >= x["stock_stop"]))
+        if bid <= x["opt_stop"]:
+            _iclose(x, "option stop", bid, stamp)
+        elif bid >= x["opt_target"]:
+            _iclose(x, "option target", bid, stamp)
+        elif stock_out:
+            _iclose(x, "stock stop", bid, stamp)
+        elif hm >= x["flat_by"]:
+            _iclose(x, "flat by %s" % x["flat_by"], bid, stamp)
+        else:
+            x["mark_lot"] = round((bid - x["fill"]) * x["lot"])
+            x["mark_pct"] = round((bid / x["fill"] - 1) * 100, 1)
+    return rows
+
+
+def _iclose(x, why, price, stamp):
+    x.update(status="closed: " + why, exit=round(price, 2), closed_ist=stamp,
+             result_lot=round((price - x["fill"]) * x["lot"]), result_pct=round((price / x["fill"] - 1) * 100, 1))
+    x.pop("mark_lot", None)
+    x.pop("mark_pct", None)
+
+
+def intraday_summary(rows):
+    done = [r for r in rows if r.get("result_lot") is not None]
+    st = {"tracked": len(rows), "open": sum(1 for r in rows if r["status"] in I_OPEN), "closed": len(done),
+          "missed": sum(1 for r in rows if r["status"] == "entry missed"), "wins": sum(1 for r in done if r["result_lot"] > 0),
+          "total_lot": sum(r["result_lot"] for r in done),
+          "open_mark_lot": sum(r.get("mark_lot") or 0 for r in rows if r["status"] == "entered")}
+    st["avg_pct"] = round(sum(r["result_pct"] for r in done) / len(done), 1) if done else None
+    st["win_rate"] = round(st["wins"] / len(done), 3) if done else None
+    return {"stats": st, "rows": sorted(rows, key=lambda r: r["created_ist"], reverse=True)[:80]}

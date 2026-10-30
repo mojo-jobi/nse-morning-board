@@ -49,6 +49,7 @@ LOG = os.path.join(STATE, "swing-log.json")
 OPT_LOG = os.path.join(STATE, "options-log.json")
 IV_LOG = os.path.join(STATE, "iv-history.json")
 RESULTS_SEEN = os.path.join(STATE, "results-headlines.json")
+INTRADAY_LOG = os.path.join(STATE, "intraday-options-log.json")
 FUNDS = os.path.join(STATE, "fundamentals.json")
 PAGE = os.path.join(OUT, "swing.json")
 CHARTS = os.path.join(OUT, "swing-charts.json")
@@ -818,6 +819,17 @@ def attach_results_news(picks, data, errors):
     write_json(RESULTS_SEEN, seen)
 
 
+def track_intraday_options(data, now_utc, errors, full_cfg):
+    """The intraday options record, moved on from today's intraday board (docs/data.json)."""
+    rows = read_json(INTRADAY_LOG, [])
+    if data.ok:
+        options.track_intraday(rows, read_json(os.path.join(OUT, "data.json"), {}), data.inst, now_utc, errors, full_cfg)
+        write_json(INTRADAY_LOG, rows)
+    s = options.intraday_summary(rows)
+    log("intraday options record: %d tracked, %d open, %d closed" % (s["stats"]["tracked"], s["stats"]["open"], s["stats"]["closed"]))
+    return s
+
+
 def run_options(picks, data, now_utc, full_cfg, errors, nifty_trend, records, session):
     """Screen the picks' options, put each qualifying card's stock plan in the stock record (the option
     follows its entry and exit), and move the option record on. (cards, record summary)."""
@@ -1143,7 +1155,8 @@ def stage_eod(now_utc, force=False):
         log("IV history: today's at-the-money IV for %d F&O stocks (%d days on file)" % (
             n_iv, max((len(v) for v in iv_hist.values()), default=0)))
 
-    doc = {"stage": "eod", "options_record": opt_record, "fo_plans": fo_picks, "options": opts, "created_ist": ist.strftime("%Y-%m-%d %H:%M"), "session": session,
+    doc = {"stage": "eod", "options_record": opt_record,
+           "intraday_record": track_intraday_options(data, now_utc, errors, full_cfg), "fo_plans": fo_picks, "options": opts, "created_ist": ist.strftime("%Y-%m-%d %H:%M"), "session": session,
            "counts": {"universe": len(symbols), "quoted": len(quotes), "with_bars": len(bars), "liquid": len(liquid),
                       "fo": sum(1 for s in liquid if s in fo), "with_fundamentals": len(fscore),
                       "bull": len(bull), "bear": len(bear), "bottoms": len(bots)},
@@ -1281,6 +1294,8 @@ def stage_live(now_utc):
         for r in page.get(key) or []:
             if (r["symbol"], r.get("session")) in status:
                 r["status"] = status[(r["symbol"], r["session"])]
+    if in_session:
+        page["intraday_record"] = track_intraday_options(data, now_utc, errors, full_cfg)
     tape(quotes, lv["stocks"], page, records, data, now_utc, errors)
     page["errors"] = list(dict.fromkeys((page.get("errors") or []) + errors))[:30]
     write_json(PAGE, page)

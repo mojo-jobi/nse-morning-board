@@ -354,7 +354,7 @@ def render_site(intraday=None, swing=None, path=None):
         "swing": app_view.swing_tab(swing, bull),
         "longterm": app_view.longterm_tab(swing),
         "news": app_view.news_tab(news),
-        "record": record,
+        "record": record + app_view.intraday_record_block((swing or {}).get("intraday_record")),
         "filters": app_view.filters_tab(swing, cfg_all),
     }
     generated = datetime.datetime.now(datetime.timezone.utc).strftime("%Y%m%d%H%M%S")

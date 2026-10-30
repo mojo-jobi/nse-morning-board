@@ -10,6 +10,7 @@ term (work in progress); News; Track record; Filters (the rules in force and how
 import html
 import json
 
+import options
 import swing_view as sv
 
 e, rs, pct, sym = sv.e, sv.rs, sv.pct, sv.sym
@@ -108,23 +109,10 @@ def lp(symbol):
 
 # ---------------------------------------------------------------- (1) options: intraday
 
-def intraday_ok(t):
-    """An intraday option is recommended only with a live plan, an option that fits, the replays leaning to
-    the target and the volume behind it."""
-    tm, o = t.get("timemachine") or {}, t.get("option") or {}
-    checks = [("Plan live", t.get("status") in ("triggered", "waiting"), t.get("entry_kind") or t.get("status")),
-              ("Option fits the budget and liquidity", bool(o.get("label")), o.get("error") or o.get("label")),
-              ("Replays lean to the target", (tm.get("p_target") or 0) >= 0.30 and (tm.get("avg_R") or -9) >= 0.10,
-               "target first %s, stop first %s, average %+.2fR" % (pct(tm.get("p_target")), pct(tm.get("p_stop")), tm.get("avg_R") or 0)
-               if "p_target" in tm else tm.get("skipped", "no replays")),
-              ("Volume behind it", (t.get("rel_volume") or 0) >= 1.2, "%sx usual volume by now" % (t.get("rel_volume") or "-"))]
-    return [{"name": a, "ok": bool(b), "detail": c or ""} for a, b, c in checks]
-
-
 def intraday_card(r):
     t = r.get("trade") or {}
     p, o = t.get("plan") or {}, t.get("option") or {}
-    checks = intraday_ok(t)
+    checks = t.get("checks") or options.intraday_checks(t)
     q = all(c["ok"] for c in checks)
     side = "CALL" if p.get("side") == "buy" else "PUT"
     head = ('<div class="top"><span class="sym">%s</span><span class="kind %s">%s</span>%s<span class="name">%s</span>'
@@ -145,7 +133,9 @@ def intraday_card(r):
                                                       for a, b in cells)
     elif o.get("error"):
         opt = '<div class="why">Option: %s</div>' % e(o["error"])
-    return q, '<div class="card">%s%s%s%s</div>' % (head, stock, sv.checks_block(checks, q), opt)
+    cap = ('<div class="note" style="margin:8px 0">Clears every check, but the intraday slots are full: shown, not taken.</div>'
+           if t.get("capacity") else "")
+    return q, '<div class="card">%s%s%s%s%s</div>' % (head, stock, sv.checks_block(checks, q), cap, opt)
 
 
 def intraday_block(doc):
@@ -311,3 +301,35 @@ Nothing here places an order.</div></div>
 <script>%s</script><script>%s</script><script>%s</script></body></html>""" % (
         FONTS, css_base, sv.CSS, CSS, e(generated), e(updated), e(repo_js[1]), top, nav, secs,
         refresh_js, sv.JS, JS)
+
+
+def intraday_record_block(rec):
+    head = '<h2>Intraday options</h2>'
+    if not rec or not rec.get("rows"):
+        return head + ('<div class="card empty">Every intraday option that clears every check is tracked here: bought at the '
+                       'ask when its stock triggers, sold at the bid at the option\'s stop or target, the stock\'s stop, '
+                       'or flat by 15:15. One lot each.</div>')
+    st = rec["stats"]
+    tiles = [("Tracked", st["tracked"]), ("Waiting or open", st["open"]), ("Closed", st["closed"]),
+             ("Entry missed", st["missed"]), ("Closed result, per lot each", rs(st["total_lot"], 0)),
+             ("Average closed result", "%+.1f%%" % st["avg_pct"] if st.get("avg_pct") is not None else "-"),
+             ("Win rate", pct(st.get("win_rate"))), ("Open now, per lot each", rs(st["open_mark_lot"], 0))]
+    t = '<div class="tiles">%s</div>' % "".join('<div class="tile"><b>%s</b><span>%s</span></div>' % (e(v), e(n)) for n, v in tiles)
+    trs = ""
+    for r in rec["rows"]:
+        res = ""
+        if r.get("result_lot") is not None:
+            res = '<span class="%s">%s (%+.1f%%)</span>' % ("up" if r["result_lot"] >= 0 else "dn", rs(r["result_lot"], 0), r["result_pct"])
+        elif r.get("mark_lot") is not None:
+            res = 'now <span class="%s">%s (%+.1f%%)</span>' % ("up" if r["mark_lot"] >= 0 else "dn", rs(r["mark_lot"], 0), r["mark_pct"])
+        now = r.get("exit") if r.get("exit") is not None else r.get("last")
+        trs += ("<tr><td>%s</td><td><b>%s %s %s</b><br><span class='sub'>exp %s, lot %s</span></td><td>%s</td>"
+                "<td>%s / %s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>" % (
+                    e(r["date"]), e(sym(r["symbol"])), sv.k(r["strike"]), e(r["type"]), e(r["expiry"]), format(r["lot"], ","),
+                    sv.status_pill(r["status"]), rs(r["opt_stop"]), rs(r["opt_target"]),
+                    sv.per_lot(r.get("fill"), r["lot"]), sv.per_lot(now, r["lot"]), res,
+                    e((r.get("closed_ist") or r.get("entered_ist") or r.get("last_ist") or "")[11:])))
+    return head + t + ('<div class="card tbl"><table><tr><th>Day</th><th>Option</th><th>Status</th><th>Option stop / target</th>'
+                       '<th>Bought</th><th>Sold / now</th><th>Result per lot</th><th>At</th></tr>%s</table></div>'
+                       '<div class="sub">Bought at the ask and sold at the bid at the 5-minute update after the move, so real '
+                       'fills differ. One lot each.</div>' % trs)

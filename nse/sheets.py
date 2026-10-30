@@ -174,6 +174,20 @@ def options_record_rows(rec):
     return out
 
 
+def intraday_rows(rec):
+    st = (rec or {}).get("stats") or {}
+    out = [["Intraday options", "tracked %s, open %s, closed %s, missed %s, closed result %s a lot each" % (
+        st.get("tracked"), st.get("open"), st.get("closed"), st.get("missed"), st.get("total_lot"))], [],
+           ["Day", "Symbol", "Option", "Expiry", "Lot", "Status", "Option stop", "Option target", "Bought", "Sold / last",
+            "Result per lot", "Result %", "Open now per lot", "At"]]
+    for r in (rec or {}).get("rows") or []:
+        out.append([r["date"], r["symbol"].replace(".NS", ""), "%s %s" % (r["strike"], r["type"]), r["expiry"], r["lot"],
+                    r["status"], r["opt_stop"], r["opt_target"], r.get("fill", ""), r.get("exit", r.get("last", "")),
+                    r.get("result_lot", ""), r.get("result_pct", ""), r.get("mark_lot", ""),
+                    r.get("closed_ist") or r.get("entered_ist") or r.get("last_ist") or ""])
+    return out
+
+
 README = [["NSE swing board"],
           ["Rules screen, not advice. Entries are triggers (above the day's high; below its low for a breakdown), "
            "valid 3 sessions. Stops sit where the setup is proven wrong; targets at the next level 1.5R+ away, else 2R."],
@@ -198,6 +212,7 @@ def write(doc):
             "Bottoms": bottom_rows(doc.get("bottoms") or []), "Equity Options": options_rows(doc.get("options")),
             "Track record": record_rows(doc.get("record") or {}),
             "Options record": options_record_rows(doc.get("options_record")),
+            "Intraday options": intraday_rows(doc.get("intraday_record")),
             "Live": live_rows(doc), "Read me": README}
     meta = s.get(base, params={"fields": "sheets.properties.title"})
     meta.raise_for_status()
