@@ -25,7 +25,7 @@
   "status": "waiting for entry",
   "stock_status": "waiting for entry",
   "last": 11.7,
-  "last_ist": "2026-10-30 15:56",
+  "last_ist": "2026-10-30 16:29",
   "last_spot": 1850.0
  },
  {
@@ -62,5 +62,63 @@
   "closed_ist": "2026-10-30 15:56",
   "result_lot": -1237,
   "result_pct": -18.5
+ },
+ {
+  "id": "2026-10-30-ATHERENERG.NS-CE",
+  "stock_id": "2026-10-30-ATHERENERG.NS",
+  "created": "2026-10-30",
+  "created_ist": "2026-10-30 16:29",
+  "symbol": "ATHERENERG.NS",
+  "name": "Ather Energy Limited",
+  "type": "CE",
+  "structure": "spread",
+  "strike": 1760.0,
+  "short_strike": 1800.0,
+  "expiry": "2026-11-23",
+  "lot": 375,
+  "plan": {
+   "kind": "breakout",
+   "entry": 1784.55,
+   "stop": 1705.25,
+   "target": 1943.15,
+   "rr": 2.0,
+   "est_days": 5
+  },
+  "signal_ask": 18.9,
+  "signal_spot": 1756.0,
+  "status": "waiting for entry",
+  "stock_status": "waiting for entry",
+  "last": 16.35,
+  "last_ist": "2026-10-30 16:29",
+  "last_spot": 1756.0
+ },
+ {
+  "id": "2026-10-30-MARUTI.NS-PE",
+  "stock_id": "2026-10-30-MARUTI.NS",
+  "created": "2026-10-30",
+  "created_ist": "2026-10-30 16:29",
+  "symbol": "MARUTI.NS",
+  "name": "Maruti Suzuki India Limited",
+  "type": "PE",
+  "structure": "spread",
+  "strike": 11600.0,
+  "short_strike": 10700.0,
+  "expiry": "2026-11-23",
+  "lot": 50,
+  "plan": {
+   "kind": "failed rally",
+   "entry": 11341.95,
+   "stop": 11677.5,
+   "target": 10670.85,
+   "rr": 2.0,
+   "est_days": 8
+  },
+  "signal_ask": 246.75,
+  "signal_spot": 11397.0,
+  "status": "waiting for entry",
+  "stock_status": "waiting for entry",
+  "last": 241.4,
+  "last_ist": "2026-10-30 16:29",
+  "last_spot": 11397.0
  }
 ]
